@@ -7,6 +7,7 @@ This file is your **Map**, not your encyclopedia. For deep context, always refer
 ## 1. Core Beliefs & Operating Principles
 * **The Sandwich Pattern:** The LLM never solves mathematical routing problems directly! The LLM translates text into JSON parameters (Artifact) -> A deterministic OR solver (SCIP) validates them -> The LLM analyzes error logs (IIS) and corrects the JSON.
 * **YAAM is the Law:** To manage decision states, use *only* the `yaam` library tools (`artifact_save_draft`, `artifact_attach_feedback`, `artifact_create_revision`, `artifact_commit_final`). Do not invent local databases or state files.
+* **YAAM is a Read-Only Dependency:** The yaam package is an external library installed in the virtual environment. You are strictly forbidden from attempting to navigate to or modify any YAAM source code. You must interact with YAAM solely by importing its public interfaces (e.g., yaam.agents.tools) inside src/memory/yaam_facade.py.
 * **External Ground Truth:** To check port statuses, the agent must always make an HTTP request to the external API (`maritime-port-sandbox`), rather than relying on its internal parametric knowledge.
 * **Mechanical Enforcement:** Rely on `ruff`, `mypy`, and `pytest`. If a linter or test fails, read the traceback and fix the code yourself. Ignoring strict typing is forbidden.
 
