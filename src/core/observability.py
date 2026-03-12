@@ -1,14 +1,19 @@
 import os
-from dotenv import load_dotenv
-from openinference.instrumentation.langchain import LangChainInstrumentor
-from opentelemetry import trace as trace_api
-from opentelemetry.exporter.otlp.proto.http.trace_exporter import OTLPSpanExporter
-from opentelemetry.sdk import trace as trace_sdk
-from opentelemetry.sdk.trace.export import SimpleSpanProcessor
+from pathlib import Path
 
-load_dotenv()
+from dotenv import find_dotenv, load_dotenv
+
+# Load .env early so OpenTelemetry/OpenInference sees env vars.
+_dotenv_path = find_dotenv(usecwd=True) or str(Path(__file__).resolve().parents[2] / ".env")
+load_dotenv(_dotenv_path, override=True)
 
 def setup_observability():
+    from openinference.instrumentation.langchain import LangChainInstrumentor
+    from opentelemetry import trace as trace_api
+    from opentelemetry.exporter.otlp.proto.http.trace_exporter import OTLPSpanExporter
+    from opentelemetry.sdk import trace as trace_sdk
+    from opentelemetry.sdk.trace.export import SimpleSpanProcessor
+
     endpoint = os.environ.get("PHOENIX_COLLECTOR_ENDPOINT")
     project_name = os.environ.get("PHOENIX_PROJECT_NAME")
 
@@ -17,6 +22,7 @@ def setup_observability():
         return
 
     # Set project name for Phoenix
+    os.environ["PHOENIX_PROJECT_NAME"] = project_name
     os.environ["OTEL_SERVICE_NAME"] = project_name
 
     tracer_provider = trace_sdk.TracerProvider()

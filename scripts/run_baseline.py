@@ -1,20 +1,24 @@
-from dotenv import load_dotenv
-load_dotenv()
-
-import sys
-import os
 import argparse
+import os
+import sys
+from pathlib import Path
+
+from dotenv import find_dotenv, load_dotenv
 
 # Ensure src directory is in path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
 
-from core.observability import setup_observability
-from agents.graph import graph
-from agents.state import GraphState, RoutingParameters, SolverResult
-from langgraph.errors import GraphRecursionError
+# Load .env before any internal imports that read env vars.
+_dotenv_path = find_dotenv(usecwd=True) or str(Path(__file__).resolve().parents[1] / ".env")
+load_dotenv(_dotenv_path, override=True)
 
 
 def main():
+    from core.observability import setup_observability
+    from agents.graph import graph
+    from agents.state import GraphState, RoutingParameters, SolverResult
+    from langgraph.errors import GraphRecursionError
+
     setup_observability()
 
     parser = argparse.ArgumentParser(description="Run the Baseline Cognitive Sandwich Graph.")
