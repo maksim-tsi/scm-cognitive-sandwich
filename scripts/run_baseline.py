@@ -62,6 +62,10 @@ def main():
                     if "revisions_count" in state_update and isinstance(state_update["revisions_count"], int):
                         revisions_count = state_update["revisions_count"]
 
+                    if "port_capacities" in state_update and isinstance(state_update["port_capacities"], dict):
+                        print("\n=== Port Capacities (from sandbox) ===")
+                        print(state_update["port_capacities"])
+
                     if "routing_parameters" in state_update and isinstance(
                         state_update["routing_parameters"], RoutingParameters
                     ):
