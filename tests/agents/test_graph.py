@@ -33,12 +33,15 @@ def test_graph_execution(mock_get_llm, mock_get_capacities):
         "port_capacities": {},
         "routing_parameters": None,
         "solver_result": None,
+        "solver_error_logs": [],
         "revisions_count": 0
     }
     
-    result_state = graph.invoke(initial_state)
+    result_state = graph.invoke(initial_state, config={"recursion_limit": 10})
     
     assert result_state["solver_result"].status == "FEASIBLE"
     assert result_state["revisions_count"] == 1
+    assert len(result_state["solver_error_logs"]) == 1
+    assert "Conflict detected" in result_state["solver_error_logs"][0]
     assert result_state["routing_parameters"].allocations[0].teu_amount == 6000
     assert result_state["routing_parameters"].allocations[1].teu_amount == 4000

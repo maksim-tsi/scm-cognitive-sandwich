@@ -59,10 +59,13 @@ When the LangGraph state machine detects an `INFEASIBLE` result from the solver,
 **Downstream LLM Logic (System Prompt Directives):**
 
 * Read the IIS log.
-* Identify which port's capacity was exceeded.
-* Subtract the excess TEU from that port.
-* Reallocate the excess TEU to the other available port in the triad (e.g., if NLRTM is full, move the rest to BEANR).
+* Identify which port's capacity was exceeded (the port is explicitly named in the IIS log).
+* Decrease the `teu_amount` for the port mentioned in the IIS log.
+* Shift that TEU to another available port (do not drop TEU; reallocate it).
 * Output `Artifact v2` using the exact same JSON schema.
+
+**State History (Debugging):**
+* The graph retains a cumulative `solver_error_logs: list[str]` in state, appending each IIS log from every `INFEASIBLE` solver run. This prevents overwriting prior failure context across repair iterations.
 
 ## 6. YAAM Artifact Tool Integration
 

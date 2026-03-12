@@ -1,6 +1,6 @@
 import httpx
 
-def get_port_capacities(ports: list[str] = None) -> dict[str, int]:
+def get_port_capacities(ports: list[str] | None = None) -> dict[str, int]:
     """
     HTTP client to fetch ground truth from maritime-port-sandbox.
     Provides actual availableCapacityTEU for destination ports.

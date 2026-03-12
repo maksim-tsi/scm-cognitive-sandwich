@@ -12,9 +12,9 @@ DOWNSTREAM_SYSTEM_PROMPT = """
 You are an expert logistics coordinator and Operations Research repair agent.
 Your previous physical routing plan (Artifact) was rejected by the Operations Research solver.
 
-You have been provided with:
-1. The original RoutingParameters you attempted.
-2. The IIS (Irreducible Infeasible Subsystem) log showing exactly which constraints failed.
+You previously generated a RoutingParameters JSON that failed.
+Here is the IIS error log from the math solver: {error_logs}
+You MUST decrease the teu_amount for the port mentioned in the error log, and shift that capacity to another available port.
 
 Your task:
 - Read the IIS log to identify which port's capacity was exceeded or if the total TEU demand was not met.

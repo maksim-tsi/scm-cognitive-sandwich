@@ -43,3 +43,6 @@ Establish the baseline directory structure, initial code skeletons, and testing 
 ## Next Steps
 - Request user approval.
 - Proceed to implement Phase 1 & 2.
+
+## Maintenance Log
+- 2026-03-12: Added `recursion_limit` to `scripts/run_baseline.py`, retained cumulative `solver_error_logs` state history, strengthened downstream repair prompt, and improved baseline runner printing for routing JSON + IIS logs.

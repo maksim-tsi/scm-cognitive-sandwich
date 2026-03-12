@@ -1,4 +1,5 @@
-from typing import TypedDict
+import operator
+from typing import Annotated, TypedDict
 from pydantic import BaseModel, Field
 
 class PortAllocation(BaseModel):
@@ -19,4 +20,14 @@ class GraphState(TypedDict):
     port_capacities: dict[str, int]
     routing_parameters: RoutingParameters | None
     solver_result: SolverResult | None
+    solver_error_logs: Annotated[list[str], operator.add]
+    revisions_count: int
+
+
+class GraphStateUpdate(TypedDict, total=False):
+    alert_text: str
+    port_capacities: dict[str, int]
+    routing_parameters: RoutingParameters | None
+    solver_result: SolverResult | None
+    solver_error_logs: Annotated[list[str], operator.add]
     revisions_count: int
