@@ -1,11 +1,33 @@
+from unittest.mock import patch, MagicMock
 from agents.graph import graph
+from agents.state import RoutingParameters, PortAllocation
 
-def test_graph_execution():
-    # Test that graph executes from start to end without infinite looping
-    # In our mocked setup, node_draft_artifact routes to NLRTM=10000, which causes infeasible,
-    # then node_repair_artifact fixes it to NLRTM=6000 and BEANR=4000 which is feasible,
-    # then routes to end.
+@patch('agents.graph.get_port_capacities')
+@patch('agents.graph._get_llm')
+def test_graph_execution(mock_get_llm, mock_get_capacities):
+    mock_get_capacities.return_value = {"NLRTM": 6000, "BEANR": 8000}
+
+    mock_llm = MagicMock()
+    mock_chain = MagicMock()
     
+    infeasible_params = RoutingParameters(
+        original_destination="DEHAM",
+        total_teu_to_reroute=10000,
+        allocations=[PortAllocation(port_code="NLRTM", teu_amount=10000)]
+    )
+    feasible_params = RoutingParameters(
+        original_destination="DEHAM",
+        total_teu_to_reroute=10000,
+        allocations=[
+            PortAllocation(port_code="NLRTM", teu_amount=6000),
+            PortAllocation(port_code="BEANR", teu_amount=4000)
+        ]
+    )
+    
+    mock_chain.invoke.side_effect = [infeasible_params, feasible_params]
+    mock_llm.with_structured_output.return_value = mock_chain
+    mock_get_llm.return_value = mock_llm
+
     initial_state = {
         "alert_text": "Storm hit Hamburg, reroute cargo",
         "port_capacities": {},
