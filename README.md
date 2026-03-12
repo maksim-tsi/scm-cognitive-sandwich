@@ -34,7 +34,7 @@ This agent relies heavily on **[YAAM (Yet Another Agents Memory)](https://github
 
 ```bash
 # Clone the repository
-git clone [https://github.com/maksim-tsi/scm-cognitive-sandwich.git](https://github.com/maksim-tsi/scm-cognitive-sandwich.git)
+git clone https://github.com/maksim-tsi/scm-cognitive-sandwich.git
 cd scm-cognitive-sandwich
 
 # Install dependencies using Poetry
