@@ -19,7 +19,7 @@ def check_groq():
             print_result("Groq", False)
             return
 
-        llm = ChatGroq(model="llama3-8b-8192", temperature=0, max_retries=0)
+        llm = ChatGroq(model="openai/gpt-oss-120b", temperature=0, max_retries=0)
         response = llm.invoke("Reply with OK")
         if response and response.content:
             print_result("Groq", True)
@@ -35,7 +35,7 @@ def check_google():
             print_result("Google", False)
             return
 
-        llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0, max_retries=0)
+        llm = ChatGoogleGenerativeAI(model="gemini-3.1-flash-lite-preview", temperature=0, max_retries=0)
         response = llm.invoke("Reply with OK")
         if response and response.content:
             print_result("Google", True)
@@ -50,7 +50,7 @@ def check_mistral():
             print_result("Mistral", False)
             return
 
-        llm = ChatMistralAI(model="open-mistral-7b", temperature=0, max_retries=0)
+        llm = ChatMistralAI(model="mistral-medium-2508", temperature=0, max_retries=0)
         response = llm.invoke("Reply with OK")
         if response and response.content:
             print_result("Mistral", True)

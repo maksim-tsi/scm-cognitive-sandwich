@@ -12,15 +12,19 @@ from solver.routing_model import evaluate_routing_feasibility
 from clients.port_sandbox import get_port_capacities
 from memory import yaam_facade
 
+from langchain_mistralai import ChatMistralAI
+
 def _get_llm():
     # Use Gemini by default as specified by user
     if os.environ.get("GOOGLE_API_KEY"):
-        return ChatGoogleGenerativeAI(model="gemini-3.1-flash", temperature=0)
+        return ChatGoogleGenerativeAI(model="gemini-3.1-flash-lite-preview", temperature=0)
+    elif os.environ.get("MISTRAL_API_KEY"):
+        return ChatMistralAI(model="mistral-medium-2508", temperature=0)
     elif os.environ.get("GROQ_API_KEY"):
         # fallback to Groq
-        return ChatGroq(model="llama3-8b-8192", temperature=0)
+        return ChatGroq(model="openai/gpt-oss-120b", temperature=0)
     else:
-        raise ValueError("No active API keys found for Google or Groq in environment.")
+        raise ValueError("No active API keys found for Google, Mistral, or Groq in environment.")
 
 def node_ingest_alert(state: GraphState) -> GraphState:
     capacities = get_port_capacities()
