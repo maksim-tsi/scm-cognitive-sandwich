@@ -66,6 +66,12 @@ def main():
                 for node_name, state_update in output.items():
                     print(f"\n[NODE COMPLETED] {node_name}")
 
+                    if state_update is None:
+                        state_update = {}
+                    if not isinstance(state_update, dict):
+                        print(f"Unexpected node update type: {type(state_update)}")
+                        continue
+
                     if "revisions_count" in state_update and isinstance(state_update["revisions_count"], int):
                         revisions_count = state_update["revisions_count"]
 
