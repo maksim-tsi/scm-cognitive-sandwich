@@ -1,4 +1,4 @@
-# Domain Knowledge: The Sandwich Loop & OR Math 🥪
+# Domain Knowledge: The Sandwich Loop & OR Math
 
 As an autonomous agent, you must understand the exact payload structures, the mathematical constraints of the Operations Research (OR) model, and the concept of an Irreducible Infeasible Subsystem (IIS). This document is your guide for building `src/solver/routing_model.py` and the LLM prompts.
 
@@ -39,9 +39,9 @@ The solver (`src/solver/routing_model.py`) takes the `RoutingParameters` and the
 
 If the LLM violates the **Capacity Constraint** (e.g., routes 10,000 TEU to NLRTM, but Sandbox API says NLRTM capacity is 6,000), the Pyomo model will be mathematically `INFEASIBLE`.
 
-When using the SCIP solver, you must catch this infeasibility and extract the **IIS log**.
+When the solver detects infeasibility, you must return an **IIS-style conflict log**.
 An IIS log is a minimal set of constraints that contradict each other.
-Your SCIP extraction logic should return a human-readable (and LLM-readable) string like this:
+In this project, we generate a deterministic human-readable (and LLM-readable) conflict payload from violated constraints, for example:
 
 ```text
 SOLVER FAILED: INFEASIBLE
@@ -51,6 +51,11 @@ Maximum Available Capacity: 6000 TEU.
 Difference: -4000 TEU.
 
 ```
+
+Current backend behavior in `src/solver/routing_model.py`:
+* Prefer `appsi_highs` when available.
+* Fallback to `scip` if HiGHS is unavailable.
+* Keep conflict reporting deterministic and schema-stable for the repair LLM.
 
 ## 5. The Downstream LLM (Repair Loop)
 
@@ -66,6 +71,20 @@ When the LangGraph state machine detects an `INFEASIBLE` result from the solver,
 
 **State History (Debugging):**
 * The graph retains a cumulative `solver_error_logs: list[str]` in state, appending each IIS log from every `INFEASIBLE` solver run. This prevents overwriting prior failure context across repair iterations.
+
+## 7. Observability in the Sandwich Loop
+
+The baseline runner initializes tracing before graph execution and prints env diagnostics to simplify attribution debugging.
+
+Project attribution requirements for Phoenix:
+* Preferred: `openinference.project.name` in `OTEL_RESOURCE_ATTRIBUTES`.
+* Backward compatibility: `project.name` is normalized at startup.
+
+Recommended single-line env value:
+
+`OTEL_RESOURCE_ATTRIBUTES=openinference.project.name=scm-cognitive-sandwich-idwl,service.name=scm-cognitive-sandwich-idwl`
+
+Avoid duplicate `OTEL_RESOURCE_ATTRIBUTES` declarations in `.env`; the last one overrides earlier entries.
 
 ## 6. YAAM Artifact Tool Integration
 

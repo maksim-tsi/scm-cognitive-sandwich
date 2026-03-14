@@ -1,4 +1,4 @@
-# Architecture & System Design 🏗️
+# Architecture & System Design
 
 This document defines the architectural boundaries for the **SCM Cognitive Sandwich**. As an autonomous agent, you must strictly adhere to these patterns. Do not blur the lines between semantic reasoning (LLM) and mathematical optimization (OR Solver).
 
@@ -55,7 +55,13 @@ The solver in `src/solver/routing_model.py` must be strictly deterministic.
 
 * **Rule 1:** The LLM does NOT write or execute Python code at runtime. The Pyomo model is pre-written by you (the AI coder) during development.
 * **Rule 2:** The solver accepts a strict Pydantic model (`RoutingParameters`) and returns a strict Pydantic model (`SolverResult`).
-* **Rule 3:** If the Pyomo model is mathematically infeasible, you must extract the IIS (Irreducible Infeasible Subsystem) using SCIP's built-in conflict analysis and return it as a string for the Downstream LLM to read.
+* **Rule 3:** If the Pyomo model is mathematically infeasible, return a deterministic, human-readable IIS-style conflict payload for the Downstream LLM.
+
+### Current solver backend behavior
+
+* The implementation attempts `appsi_highs` first (pip-installable via `highspy`) and falls back to `scip` when available.
+* The conflict payload is generated deterministically from violated demand/capacity constraints.
+* This keeps the repair loop stable even when native SCIP conflict extraction is unavailable in the runtime.
 
 ## 5. YAAM Integration (Memory Subsystem)
 
@@ -78,3 +84,34 @@ We use YAAM (`Yet Another Agents Memory`) as an external library to maintain the
 
 * **Solver Tests:** `src/solver/routing_model.py` must have 100% test coverage using `pytest`. You must write tests that intentionally pass mathematically impossible JSON payloads to verify that the IIS extraction works correctly.
 * **Graph Tests:** Use `langchain_core.messages` to mock LLM responses and test the LangGraph routing logic (ensuring the loop terminates on `FEASIBLE`).
+
+## 7. Observability Architecture (OpenTelemetry + Phoenix)
+
+Tracing initialization is centralized in `src/core/observability.py` and executed by `scripts/run_baseline.py` before graph execution.
+
+### Startup and resource attribution contract
+
+* `.env` is loaded before tracing setup.
+* Project routing is resolved in this order:
+1. `OTEL_RESOURCE_ATTRIBUTES` `openinference.project.name`
+2. `OTEL_RESOURCE_ATTRIBUTES` legacy `project.name` (normalized)
+3. `PHOENIX_PROJECT_NAME`
+* `TracerProvider` is created with an explicit `Resource`.
+* `OTEL_RESOURCE_ATTRIBUTES` is rewritten in-process to include normalized attributes for downstream instrumentors.
+
+### Required attributes for stable Phoenix routing
+
+Preferred environment value:
+
+`OTEL_RESOURCE_ATTRIBUTES=openinference.project.name=<project>,service.name=<service>`
+
+Notes:
+* Defining `OTEL_RESOURCE_ATTRIBUTES` multiple times in `.env` is discouraged.
+* If duplicates exist, the last declaration wins.
+* The code keeps backward compatibility for `project.name` by mapping it to `openinference.project.name`.
+
+### Instrumentation scope
+
+* `openinference.instrumentation.langchain` is always instrumented.
+* `opentelemetry-instrumentation-httpx` is optional and enabled when installed.
+* HTTP spans can appear as separate root traces depending on library/runtime context boundaries; project attribution still remains correct.

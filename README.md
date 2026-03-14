@@ -1,68 +1,96 @@
-# SCM Sandwich Agent: LLM-Solver-LLM Orchestrator 🥪
+# SCM Cognitive Sandwich
 
-This repository contains the core orchestration logic for the **Artifact-Centric "Sandwich" Cognitive Architecture**, designed for autonomous supply chain disruption management. It bridges the semantic reasoning capabilities of Large Language Models (LLMs) with the mathematical rigor of Operations Research (OR) solvers.
+This repository implements an Artifact-Centric "Sandwich" agent for maritime disruption rerouting.
 
-This codebase is the experimental foundation for our IDWL 2026 paper: *"Artifact-Centric Cognitive Architecture for Freight Forwarders: Enhancing Climate Resilience through LLM-Solver Integration."*
+The loop is deterministic where it must be and adaptive where it helps:
+1. Upstream LLM translates disruption text into a strict routing JSON artifact.
+2. OR solver validates feasibility against port capacities.
+3. Downstream LLM repairs the artifact using solver feedback when infeasible.
 
-## 🧠 The "Sandwich" Concept
-Pure LLM agents hallucinate under strict mathematical constraints, while pure OR solvers fail when handling unstructured real-world chaos. This orchestrator solves this by explicitly separating concerns:
+## Core Components
 
-1. **Upstream LLM (Synthesizer):** Translates unstructured disruption alerts into a structured routing JSON (Artifact v1).
-2. **Core Solver (Pyomo + SCIP):** Attempts to solve the capacity/routing matrix. If it fails (e.g., alternative port capacity exceeded), it generates an **Irreducible Infeasible Subsystem (IIS)** log.
-3. **Downstream LLM (Interpreter/Repair):** Reads the mathematical IIS log, corrects the routing parameters, and iterates until the artifact is physically feasible (Artifact v2).
+- `src/agents/`: LangGraph nodes, routing logic, prompts, and typed state.
+- `src/solver/`: Pyomo feasibility checker plus deterministic IIS-style conflict payload generation.
+- `src/clients/`: External API clients (for example maritime port sandbox).
+- `src/memory/`: YAAM artifact facade, YAAM consolidation client, and checkpointer factory.
+- `src/core/`: Cross-cutting services such as observability bootstrap.
+- `scripts/run_baseline.py`: Main runnable baseline scenario.
 
-## 🗄️ Integration with YAAM
-This agent relies heavily on **[YAAM (Yet Another Agents Memory)](https://github.com/maksim-tsi/yet-another-agents-memory)** for strict cognitive auditability. Using YAAM's artifact subsystem, the agent ensures that:
-* Failed routing attempts and IIS logs are kept in transient Working Memory (L1/L2).
-* The causal lineage (DAG) between v1, the solver's error, and v2 is explicitly mapped.
-* Only the final, mathematically verified decision is committed to Semantic Memory (L4).
+## Quick Start
 
-## ⚙️ Installation & Setup
-
-### Prerequisites
-* Python 3.11+
-* **YAAM infrastructure running** (Redis, Postgres, Typesense, Neo4j).
-* **SCIP Optimization Suite:** Open-source OR solver required for IIS extraction.
+### 1) Create environment
 
 ```bash
-  # Linux/macOS
-  pip install pyscipopt
-
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -e ".[dev]"
 ```
 
-### Running the Baseline Experiment
+### 2) Configure environment variables
+
+Create `.env` in repository root. Recommended observability block:
 
 ```bash
-# Clone the repository
-git clone https://github.com/maksim-tsi/scm-cognitive-sandwich.git
-cd scm-cognitive-sandwich
-
-# Install dependencies using Poetry
-poetry install
-
-# Run the IDWL 2026 Baseline Scenario
-poetry run python scripts/run_idwl_baseline.py
-
+# --- OBSERVABILITY (Arize Phoenix) ---
+PHOENIX_COLLECTOR_ENDPOINT=http://192.168.107.172:6006/v1/traces
+PHOENIX_PROJECT_NAME=scm-cognitive-sandwich-idwl
+OTEL_RESOURCE_ATTRIBUTES=openinference.project.name=scm-cognitive-sandwich-idwl,service.name=scm-cognitive-sandwich-idwl
 ```
 
-## 📊 Expected Output (Baseline Scenario)
+Important:
+- Do not define `OTEL_RESOURCE_ATTRIBUTES` twice in `.env`.
+- If duplicated, the last assignment wins and may cause confusing attribution behavior.
+- Legacy `project.name=...` is still accepted by this repo and normalized to `openinference.project.name` during startup.
 
-Running the baseline script will demonstrate the following loop:
+### 3) Run baseline
 
-1. Agent initializes with an alert: `"Hamburg port closed due to storm."`
-2. Agent routes 100% of cargo to Rotterdam (Artifact v1).
-3. SCIP Solver rejects v1 -> `IIS: Capacity of NLRTM exceeded by 500 TEU`.
-4. Agent reads feedback, splits cargo between Rotterdam and Antwerp (Artifact v2).
-5. SCIP Solver validates v2 -> `FEASIBLE`.
-6. Artifact v2 and its lineage are committed to YAAM L4.
+```bash
+python scripts/run_baseline.py --thread-id baseline-session
+```
 
-## 🤝 Architecture
+The runner prints tracing env diagnostics before tracing initialization, then streams node-level updates and final routing output.
 
-* `src/agents/` - LangGraph definitions and prompt templates.
-* `src/solver/` - Pyomo formulations and SCIP IIS extraction logic.
-* `src/orchestrator/` - The loop tying the LLM, Solver, and YAAM memory tools together.
+## Observability Notes (Phoenix + OpenTelemetry)
 
-## 📝 License
+Tracing setup lives in `src/core/observability.py` and currently:
+- Loads env vars early from `.env`.
+- Resolves project name from resource attributes first, then `PHOENIX_PROJECT_NAME`.
+- Normalizes `project.name` into `openinference.project.name` for Phoenix routing.
+- Builds an explicit `TracerProvider(resource=...)` before instrumenting LangChain.
+- Optionally instruments HTTPX when `opentelemetry-instrumentation-httpx` is installed.
 
-MIT License.
+### Verify trace routing quickly
+
+```bash
+# Phoenix projects (CLI)
+export PHOENIX_HOST="${PHOENIX_COLLECTOR_ENDPOINT%/v1/traces}"
+npx @arizeai/phoenix-cli projects --format raw --no-progress
+
+# Recent traces in target project (CLI)
+export PHOENIX_PROJECT="scm-cognitive-sandwich-idwl"
+npx @arizeai/phoenix-cli traces --limit 5 --last-n-minutes 15 --format raw --no-progress
+
+# Projects via Phoenix API (curl)
+curl -sS "${PHOENIX_HOST}/v1/projects" | jq '.data | map(.name)'
+```
+
+## Test and Quality Commands
+
+```bash
+ruff check .
+python -m mypy src
+python -m pytest -q
+```
+
+## Documentation Map
+
+- `docs/architecture/index.md`: system boundaries, LangGraph flow, memory and tracing integration.
+- `docs/domain/sandwich-loop.md`: domain model, constraints, IIS loop semantics.
+- `docs/decisions/`: architecture and implementation ADRs.
+- `docs/exec-plans/`: active execution plans and maintenance logs.
+
+## License
+
+MIT.
 
