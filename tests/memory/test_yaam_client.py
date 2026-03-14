@@ -5,7 +5,7 @@ from opentelemetry import context as context_api
 from opentelemetry import trace as trace_api
 from opentelemetry.trace import NonRecordingSpan, SpanContext, TraceFlags
 
-from memory.yaam_client import DEFAULT_YAAM_API_URL, YAAMClient, _build_traceparent
+from memory.yaam_client import DEFAULT_AGENT_ID, DEFAULT_YAAM_API_URL, YAAMClient, _build_traceparent
 
 
 class DummyResponse:
@@ -48,11 +48,23 @@ def test_base_url_without_path_is_normalized_to_endpoint():
 def test_consolidate_episode_success_includes_traceparent_header():
     dummy = DummyAsyncClient(response=DummyResponse())
     client = YAAMClient(base_url="http://localhost:8002", client=dummy)
+    final_state = {
+        "prompt": "storm alert",
+        "drafts": [],
+        "solver_iis_logs": [],
+        "final_routing_parameters": {},
+    }
+    metadata = {
+        "status": "success",
+        "duration_seconds": 0.0,
+        "solver_attempts": 1,
+    }
 
     success = asyncio.run(
         client.consolidate_episode(
             session_id="session-1",
-            episode_state={"status": "FEASIBLE"},
+            final_state=final_state,
+            metadata=metadata,
         )
     )
 
@@ -63,13 +75,31 @@ def test_consolidate_episode_success_includes_traceparent_header():
     assert isinstance(headers, dict)
     assert "traceparent" in headers
     assert str(headers["traceparent"]).startswith("00-")
+    payload = call["json"]
+    assert payload == {
+        "session_id": "session-1",
+        "agent_id": DEFAULT_AGENT_ID,
+        "final_state": final_state,
+        "metadata": metadata,
+    }
 
 
 def test_consolidate_episode_returns_false_on_http_status_error():
     dummy = DummyAsyncClient(response=DummyResponse(should_raise=True))
     client = YAAMClient(base_url="http://localhost:8002", client=dummy)
 
-    success = asyncio.run(client.consolidate_episode("session-1", {"a": 1}))
+    success = asyncio.run(
+        client.consolidate_episode(
+            "session-1",
+            {
+                "prompt": None,
+                "drafts": [],
+                "solver_iis_logs": [],
+                "final_routing_parameters": {},
+            },
+            {"status": "success", "duration_seconds": 0.0, "solver_attempts": 1},
+        )
+    )
 
     assert success is False
 
@@ -78,7 +108,18 @@ def test_consolidate_episode_returns_false_on_transport_error():
     dummy = DummyAsyncClient(response=httpx.ConnectError("boom"))
     client = YAAMClient(base_url="http://localhost:8002", client=dummy)
 
-    success = asyncio.run(client.consolidate_episode("session-1", {"a": 1}))
+    success = asyncio.run(
+        client.consolidate_episode(
+            "session-1",
+            {
+                "prompt": None,
+                "drafts": [],
+                "solver_iis_logs": [],
+                "final_routing_parameters": {},
+            },
+            {"status": "success", "duration_seconds": 0.0, "solver_attempts": 1},
+        )
+    )
 
     assert success is False
 

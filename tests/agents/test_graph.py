@@ -1,6 +1,6 @@
 from unittest.mock import patch, MagicMock
-from agents.graph import graph
-from agents.state import RoutingParameters, PortAllocation
+from agents.graph import _build_final_state, _build_metadata, graph
+from agents.state import PortAllocation, RoutingParameters, SolverResult
 
 @patch('agents.graph.get_port_capacities')
 @patch('agents.graph._get_llm')
@@ -50,3 +50,68 @@ def test_graph_execution(mock_consolidate_episode, mock_get_llm, mock_get_capaci
     assert "Conflict detected" in result_state["solver_error_logs"][0]
     assert result_state["routing_parameters"].allocations[0].teu_amount == 6000
     assert result_state["routing_parameters"].allocations[1].teu_amount == 4000
+
+
+def test_build_final_state_maps_graph_fields_to_yaam_contract():
+    params = RoutingParameters(
+        original_destination="DEHAM",
+        total_teu_to_reroute=10000,
+        allocations=[PortAllocation(port_code="NLRTM", teu_amount=6000)],
+    )
+    state = {
+        "alert_text": "Port closure alert",
+        "port_capacities": {"NLRTM": 6000},
+        "routing_parameters": params,
+        "solver_result": SolverResult(status="FEASIBLE", iis_log=None),
+        "solver_error_logs": ["log-1"],
+        "revisions_count": 2,
+    }
+
+    final_state = _build_final_state(state)
+
+    assert final_state["prompt"] == "Port closure alert"
+    assert final_state["solver_iis_logs"] == ["log-1"]
+    assert isinstance(final_state["drafts"], list)
+    assert final_state["drafts"][0]["revision"] == 2
+    assert final_state["final_routing_parameters"] == params.model_dump()
+
+
+def test_build_metadata_derives_allowed_status_and_attempts():
+    success_state = {
+        "alert_text": "a",
+        "port_capacities": {},
+        "routing_parameters": None,
+        "solver_result": SolverResult(status="FEASIBLE", iis_log=None),
+        "solver_error_logs": [],
+        "revisions_count": 0,
+    }
+    infeasible_state = {
+        "alert_text": "a",
+        "port_capacities": {},
+        "routing_parameters": None,
+        "solver_result": SolverResult(status="INFEASIBLE", iis_log="x"),
+        "solver_error_logs": ["x"],
+        "revisions_count": 1,
+    }
+    timeout_state = {
+        "alert_text": "a",
+        "port_capacities": {},
+        "routing_parameters": None,
+        "solver_result": SolverResult(status="TIMEOUT", iis_log=None),
+        "solver_error_logs": [],
+        "revisions_count": 3,
+    }
+
+    success_metadata = _build_metadata(success_state)
+    infeasible_metadata = _build_metadata(infeasible_state)
+    timeout_metadata = _build_metadata(timeout_state)
+
+    assert success_metadata == {
+        "status": "success",
+        "duration_seconds": 0.0,
+        "solver_attempts": 1,
+    }
+    assert infeasible_metadata["status"] == "infeasible"
+    assert infeasible_metadata["solver_attempts"] == 2
+    assert timeout_metadata["status"] == "timeout"
+    assert timeout_metadata["solver_attempts"] == 4

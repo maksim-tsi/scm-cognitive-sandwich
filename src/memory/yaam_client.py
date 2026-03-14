@@ -10,6 +10,7 @@ from opentelemetry import trace as trace_api
 LOGGER = logging.getLogger(__name__)
 
 DEFAULT_YAAM_API_URL = "http://localhost:8002/v1/memory/episode/consolidate"
+DEFAULT_AGENT_ID = "scm-sandwich-v1"
 
 
 def _normalize_endpoint(raw_url: str) -> str:
@@ -53,10 +54,17 @@ class YAAMClient:
     def endpoint(self) -> str:
         return self._endpoint
 
-    async def consolidate_episode(self, session_id: str, episode_state: dict[str, Any]) -> bool:
+    async def consolidate_episode(
+        self,
+        session_id: str,
+        final_state: dict[str, Any],
+        metadata: dict[str, Any],
+    ) -> bool:
         payload = {
             "session_id": session_id,
-            "episode_state": episode_state,
+            "agent_id": DEFAULT_AGENT_ID,
+            "final_state": final_state,
+            "metadata": metadata,
         }
         headers = {
             "traceparent": _build_traceparent(),

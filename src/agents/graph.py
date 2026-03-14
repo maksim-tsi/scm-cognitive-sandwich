@@ -68,23 +68,41 @@ def _extract_session_id(config: RunnableConfig | None) -> str:
     return DEFAULT_THREAD_ID
 
 
-def _serialize_episode_state(state: GraphState) -> dict[str, Any]:
+def _build_final_state(state: GraphState) -> dict[str, Any]:
     routing_parameters = state.get("routing_parameters")
-    solver_result = state.get("solver_result")
+    revisions_count = state.get("revisions_count", 0)
+
+    drafts: list[dict[str, Any]] = []
+    if routing_parameters is not None:
+        drafts.append(
+            {
+                "revision": revisions_count,
+                "routing_parameters": routing_parameters.model_dump(),
+            }
+        )
 
     return {
-        "alert_text": state.get("alert_text", ""),
-        "prompts": {
-            "upstream_system_prompt": UPSTREAM_SYSTEM_PROMPT,
-            "downstream_system_prompt": DOWNSTREAM_SYSTEM_PROMPT,
-        },
-        "drafts": {
-            "revisions_count": state.get("revisions_count", 0),
-            "latest_routing_parameters": routing_parameters.model_dump() if routing_parameters else None,
-        },
+        "prompt": state.get("alert_text") or None,
+        "drafts": drafts,
         "solver_iis_logs": list(state.get("solver_error_logs", [])),
-        "final_result": solver_result.model_dump() if solver_result else None,
-        "port_capacities": dict(state.get("port_capacities", {})),
+        "final_routing_parameters": routing_parameters.model_dump() if routing_parameters else {},
+    }
+
+
+def _build_metadata(state: GraphState) -> dict[str, Any]:
+    solver_result = state.get("solver_result")
+    solver_status = (solver_result.status if solver_result else "").upper()
+
+    status = "success"
+    if solver_status == "INFEASIBLE":
+        status = "infeasible"
+    elif solver_status in {"TIMEOUT", "TIMED_OUT"}:
+        status = "timeout"
+
+    return {
+        "status": status,
+        "duration_seconds": 0.0,
+        "solver_attempts": max(1, state.get("revisions_count", 0) + 1),
     }
 
 
@@ -94,7 +112,8 @@ def _consolidate_episode(config: RunnableConfig | None, state: GraphState) -> bo
     return _run_async_from_sync(
         client.consolidate_episode(
             session_id=session_id,
-            episode_state=_serialize_episode_state(state),
+            final_state=_build_final_state(state),
+            metadata=_build_metadata(state),
         )
     )
 
