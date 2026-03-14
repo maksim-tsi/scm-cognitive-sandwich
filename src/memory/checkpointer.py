@@ -81,6 +81,14 @@ def _set_prefix_if_supported(saver: Any, key_prefix: str) -> None:
                 continue
 
 
+def _setup_saver_if_supported(saver: Any) -> None:
+    setup = getattr(saver, "setup", None)
+    if not callable(setup):
+        return
+
+    _resolve_awaitable(setup())
+
+
 def _try_build_saver(
     saver_cls: type[Any],
     redis_url: str,
@@ -107,6 +115,7 @@ def _try_build_saver(
                 continue
 
             _set_prefix_if_supported(saver, key_prefix)
+            _setup_saver_if_supported(saver)
             return saver
 
     for kwargs in (
@@ -125,6 +134,7 @@ def _try_build_saver(
         saver = _resolve_awaitable(saver)
 
         _set_prefix_if_supported(saver, key_prefix)
+        _setup_saver_if_supported(saver)
         return saver
 
     raise RuntimeError(
