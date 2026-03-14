@@ -1,3 +1,5 @@
+from contextlib import asynccontextmanager
+
 from langgraph.checkpoint.memory import MemorySaver
 
 from memory.checkpointer import DEFAULT_CHECKPOINT_PREFIX, create_checkpointer
@@ -73,3 +75,26 @@ def test_create_checkpointer_supports_awaitable_builder(monkeypatch):
     assert not isinstance(checkpointer, MemorySaver)
     assert calls["redis_url"] == "redis://localhost:6379/1"
     assert calls["key_prefix"] == DEFAULT_CHECKPOINT_PREFIX
+
+
+def test_create_checkpointer_skips_async_context_manager_builder(monkeypatch):
+    class FakeRedisSaver:
+        def __init__(self, redis_url: str, key_prefix: str | None = None):
+            self.redis_url = redis_url
+            self.key_prefix = key_prefix
+
+        @classmethod
+        def from_conn_string(cls, redis_url: str, key_prefix: str):
+            @asynccontextmanager
+            async def _manager():
+                yield cls(redis_url=redis_url, key_prefix=key_prefix)
+
+            return _manager()
+
+    monkeypatch.setattr("memory.checkpointer._load_redis_saver_class", lambda: FakeRedisSaver)
+
+    checkpointer = create_checkpointer(redis_url="redis://localhost:6379/1")
+
+    assert isinstance(checkpointer, FakeRedisSaver)
+    assert checkpointer.redis_url == "redis://localhost:6379/1"
+    assert checkpointer.key_prefix == DEFAULT_CHECKPOINT_PREFIX

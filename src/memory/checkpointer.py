@@ -46,7 +46,14 @@ def _resolve_awaitable(value: Any) -> Any:
 
 
 def _load_redis_saver_class() -> type[Any] | None:
-    """Return the best available Redis saver class, preferring async implementations."""
+    """Return the best available Redis saver class for sync graph compilation."""
+    try:
+        from langgraph.checkpoint.redis import RedisSaver
+
+        return RedisSaver
+    except Exception:
+        pass
+
     try:
         from langgraph.checkpoint.redis.aio import AsyncRedisSaver
 
@@ -61,12 +68,7 @@ def _load_redis_saver_class() -> type[Any] | None:
     except Exception:
         pass
 
-    try:
-        from langgraph.checkpoint.redis import RedisSaver
-
-        return RedisSaver
-    except Exception:
-        return None
+    return None
 
 
 def _set_prefix_if_supported(saver: Any, key_prefix: str) -> None:
@@ -101,6 +103,8 @@ def _try_build_saver(
                 continue
 
             saver = _resolve_awaitable(saver)
+            if not isinstance(saver, saver_cls):
+                continue
 
             _set_prefix_if_supported(saver, key_prefix)
             return saver
