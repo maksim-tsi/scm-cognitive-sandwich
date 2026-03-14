@@ -1,5 +1,6 @@
+import asyncio
 from unittest.mock import patch, MagicMock
-from agents.graph import _build_final_state, _build_metadata, graph
+from agents.graph import _build_final_state, _build_metadata, _run_async_from_sync, graph
 from agents.state import PortAllocation, RoutingParameters, SolverResult
 
 @patch('agents.graph.get_port_capacities')
@@ -115,3 +116,23 @@ def test_build_metadata_derives_allowed_status_and_attempts():
     assert infeasible_metadata["solver_attempts"] == 2
     assert timeout_metadata["status"] == "timeout"
     assert timeout_metadata["solver_attempts"] == 4
+
+
+@patch("agents.graph.otel_context")
+def test_run_async_from_sync_propagates_otel_context(mock_otel_context):
+    sentinel_context = object()
+    sentinel_token = object()
+    mock_otel_context.get_current.return_value = sentinel_context
+    mock_otel_context.attach.return_value = sentinel_token
+
+    async def _returns_true() -> bool:
+        return True
+
+    async def _runner() -> bool:
+        return _run_async_from_sync(_returns_true())
+
+    result = asyncio.run(_runner())
+
+    assert result is True
+    mock_otel_context.attach.assert_called_once_with(sentinel_context)
+    mock_otel_context.detach.assert_called_once_with(sentinel_token)

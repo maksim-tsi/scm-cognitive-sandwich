@@ -22,6 +22,7 @@ dependencies = [
     "langgraph-checkpoint-redis",
     "arize-phoenix",
     "openinference-instrumentation-langchain",
+    "opentelemetry-instrumentation-httpx",
     "python-dotenv",
 ]
 

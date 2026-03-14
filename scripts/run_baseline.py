@@ -19,6 +19,12 @@ def main():
     from agents.state import GraphState, RoutingParameters, SolverResult
     from langgraph.errors import GraphRecursionError
 
+    print("Tracing environment before setup:")
+    print(f"  OTEL_RESOURCE_ATTRIBUTES={os.environ.get('OTEL_RESOURCE_ATTRIBUTES')}")
+    print(f"  OTEL_SERVICE_NAME={os.environ.get('OTEL_SERVICE_NAME')}")
+    print(f"  PHOENIX_PROJECT_NAME={os.environ.get('PHOENIX_PROJECT_NAME')}")
+    print(f"  PHOENIX_COLLECTOR_ENDPOINT={os.environ.get('PHOENIX_COLLECTOR_ENDPOINT')}")
+
     setup_observability()
 
     parser = argparse.ArgumentParser(description="Run the Baseline Cognitive Sandwich Graph.")

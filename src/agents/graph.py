@@ -6,6 +6,7 @@ from collections.abc import Coroutine
 from typing import Any
 from typing import Literal
 from langgraph.graph import StateGraph, START, END
+from opentelemetry import context as otel_context
 
 from langchain_core.messages import SystemMessage, HumanMessage
 from langchain_core.runnables import RunnableConfig
@@ -37,12 +38,16 @@ def _run_async_from_sync(coro: Coroutine[Any, Any, bool]) -> bool:
     # thread to avoid RuntimeError("asyncio.run() cannot be called...").
     result: dict[str, bool] = {"value": False}
     error: dict[str, BaseException] = {}
+    active_context = otel_context.get_current()
 
     def _target() -> None:
+        token = otel_context.attach(active_context)
         try:
             result["value"] = asyncio.run(coro)
         except BaseException as exc:  # pragma: no cover - defensive safety net
             error["value"] = exc
+        finally:
+            otel_context.detach(token)
 
     thread = threading.Thread(target=_target, daemon=True)
     thread.start()
