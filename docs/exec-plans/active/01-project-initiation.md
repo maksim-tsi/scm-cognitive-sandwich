@@ -46,3 +46,4 @@ Establish the baseline directory structure, initial code skeletons, and testing 
 
 ## Maintenance Log
 - 2026-03-12: Added `recursion_limit` to `scripts/run_baseline.py`, retained cumulative `solver_error_logs` state history, strengthened downstream repair prompt, and improved baseline runner printing for routing JSON + IIS logs.
+- 2026-03-14: Implemented adaptive LangGraph checkpointer factory (`REDIS_URL` with Redis saver and `MemorySaver` fallback), wired graph compilation through the factory, added async YAAM episode consolidation client with `traceparent` propagation, updated local default service ports (`SANDBOX_API_URL` 8001 and `YAAM_API_URL` 8002), and added memory module tests.

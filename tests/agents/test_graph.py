@@ -4,8 +4,10 @@ from agents.state import RoutingParameters, PortAllocation
 
 @patch('agents.graph.get_port_capacities')
 @patch('agents.graph._get_llm')
-def test_graph_execution(mock_get_llm, mock_get_capacities):
+@patch('agents.graph._consolidate_episode')
+def test_graph_execution(mock_consolidate_episode, mock_get_llm, mock_get_capacities):
     mock_get_capacities.return_value = {"NLRTM": 6000, "BEANR": 8000}
+    mock_consolidate_episode.return_value = True
 
     mock_llm = MagicMock()
     mock_chain = MagicMock()
@@ -37,7 +39,10 @@ def test_graph_execution(mock_get_llm, mock_get_capacities):
         "revisions_count": 0
     }
     
-    result_state = graph.invoke(initial_state, config={"recursion_limit": 10})
+    result_state = graph.invoke(
+        initial_state,
+        config={"recursion_limit": 10, "configurable": {"thread_id": "test-session"}},
+    )
     
     assert result_state["solver_result"].status == "FEASIBLE"
     assert result_state["revisions_count"] == 1

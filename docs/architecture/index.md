@@ -26,6 +26,8 @@ src/
 ├── clients/              # External integrations
 │   └── port_sandbox.py   # HTTP client to fetch ground truth from maritime-port-sandbox
 └── memory/               # YAAM integration wrappers
+    ├── checkpointer.py   # Adaptive L1 checkpointer factory (Redis or in-memory)
+    ├── yaam_client.py    # Async HTTP client for episode consolidation to YAAM
     └── yaam_facade.py    # Helper functions invoking YAAM's artifact_tools
 
 ```
@@ -62,6 +64,14 @@ We use YAAM (`Yet Another Agents Memory`) as an external library to maintain the
 * Do not create SQL tables or local JSON files for state persistence.
 * Import the artifact tools directly from the YAAM package.
 * **Lineage Requirement:** Every time `node_repair_artifact` creates a new revision, it MUST link it to the previous revision and attach the IIS log using `artifact_attach_feedback`.
+
+### L1/LTM Separation
+
+* The graph owns short-lived Working Memory (L1) via a LangGraph checkpointer factory in `src/memory/checkpointer.py`.
+* If `REDIS_URL` is set (for example `redis://host:6379/1`), the graph uses a Redis-backed saver with prefix `sandwich:checkpoint:` to avoid key collisions on shared Redis infrastructure.
+* If `REDIS_URL` is absent or Redis initialization fails, the graph falls back to LangGraph `MemorySaver` for local development.
+* Long-term consolidation is decoupled and performed by `src/memory/yaam_client.py`, which posts the final episode state to `YAAM_API_URL`.
+* `consolidate_episode` propagates tracing context through the W3C `traceparent` header so local and remote traces can be stitched in Phoenix.
 
 ## 6. Testing Requirements
 
