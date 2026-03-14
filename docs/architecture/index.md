@@ -68,7 +68,8 @@ We use YAAM (`Yet Another Agents Memory`) as an external library to maintain the
 ### L1/LTM Separation
 
 * The graph owns short-lived Working Memory (L1) via a LangGraph checkpointer factory in `src/memory/checkpointer.py`.
-* If `REDIS_URL` is set (for example `redis://host:6379/1`), the graph uses a Redis-backed saver with prefix `sandwich:checkpoint:` to avoid key collisions on shared Redis infrastructure.
+* If `REDIS_URL` is set (for example `redis://host:6379/0`), the graph uses a Redis-backed saver with prefix `sandwich:checkpoint:` to avoid key collisions on shared Redis infrastructure.
+* Redis can be shared with YAAM on the same DB when namespaces are kept distinct (for example via key prefixes and non-overlapping RediSearch index names).
 * If `REDIS_URL` is absent or Redis initialization fails, the graph falls back to LangGraph `MemorySaver` for local development.
 * Long-term consolidation is decoupled and performed by `src/memory/yaam_client.py`, which posts the final episode state to `YAAM_API_URL`.
 * `consolidate_episode` propagates tracing context through the W3C `traceparent` header so local and remote traces can be stitched in Phoenix.

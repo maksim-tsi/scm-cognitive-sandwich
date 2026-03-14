@@ -150,7 +150,9 @@ def create_checkpointer(
     """Create an adaptive LangGraph checkpointer.
 
     Behavior:
-    - If REDIS_URL is set (for example redis://host:6379/1), attempt Redis saver.
+        - If REDIS_URL is set (for example redis://host:6379/0), attempt Redis saver.
+        - If the saver exposes setup(), run it before returning the saver to initialize
+            required Redis indices.
     - If REDIS_URL is missing or Redis saver initialization fails, fall back to MemorySaver.
 
     The Redis database index isolation is intentionally URL-driven.
