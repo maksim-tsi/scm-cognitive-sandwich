@@ -21,7 +21,7 @@ def get_port_capacities(ports: list[str] | None = None) -> dict[str, int]:
     if ports is None:
         ports = ["NLRTM", "BEANR", "DEBRV"]
         
-    base_url = os.getenv("SANDBOX_API_URL", "http://localhost:8000").rstrip("/")
+    base_url = os.getenv("SANDBOX_API_URL", "http://localhost:8001").rstrip("/")
     capacities = {}
     with httpx.Client() as client:
         for port in ports:

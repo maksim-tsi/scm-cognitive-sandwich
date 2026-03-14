@@ -19,8 +19,10 @@ dependencies = [
     "langchain-google-genai",
     "langchain-mistralai",
     "httpx",
+    "langgraph-checkpoint-redis",
     "arize-phoenix",
     "openinference-instrumentation-langchain",
+    "opentelemetry-instrumentation-httpx",
     "python-dotenv",
 ]
 

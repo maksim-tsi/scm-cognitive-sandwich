@@ -19,6 +19,12 @@ def main():
     from agents.state import GraphState, RoutingParameters, SolverResult
     from langgraph.errors import GraphRecursionError
 
+    print("Tracing environment before setup:")
+    print(f"  OTEL_RESOURCE_ATTRIBUTES={os.environ.get('OTEL_RESOURCE_ATTRIBUTES')}")
+    print(f"  OTEL_SERVICE_NAME={os.environ.get('OTEL_SERVICE_NAME')}")
+    print(f"  PHOENIX_PROJECT_NAME={os.environ.get('PHOENIX_PROJECT_NAME')}")
+    print(f"  PHOENIX_COLLECTOR_ENDPOINT={os.environ.get('PHOENIX_COLLECTOR_ENDPOINT')}")
+
     setup_observability()
 
     parser = argparse.ArgumentParser(description="Run the Baseline Cognitive Sandwich Graph.")
@@ -26,6 +32,11 @@ def main():
         "--invoke",
         action="store_true",
         help="Run graph.invoke() instead of graph.stream() (still enforces recursion_limit).",
+    )
+    parser.add_argument(
+        "--thread-id",
+        default="baseline-session",
+        help="LangGraph thread id used for checkpoint and YAAM session continuity.",
     )
     args = parser.parse_args()
 
@@ -43,11 +54,15 @@ def main():
 
     try:
         print("\n--- Starting Execution ---")
+        graph_config = {
+            "recursion_limit": 10,
+            "configurable": {"thread_id": args.thread_id},
+        }
 
         latest_parameters: RoutingParameters | None = None
         revisions_count = initial_state["revisions_count"]
         if args.invoke:
-            final_state = graph.invoke(initial_state, config={"recursion_limit": 10})
+            final_state = graph.invoke(initial_state, config=graph_config)
             latest_parameters = final_state.get("routing_parameters")
             revisions_count = final_state.get("revisions_count", revisions_count)
             solver_result = final_state.get("solver_result")
@@ -60,7 +75,7 @@ def main():
             # Use stream instead of invoke to print each graph step.
             for output in graph.stream(
                 initial_state,
-                config={"recursion_limit": 10},
+                config=graph_config,
                 stream_mode="updates",
             ):
                 for node_name, state_update in output.items():

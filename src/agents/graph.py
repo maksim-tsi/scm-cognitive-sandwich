@@ -1,8 +1,15 @@
+import asyncio
+import logging
 import os
+import threading
+from collections.abc import Coroutine
+from typing import Any
 from typing import Literal
 from langgraph.graph import StateGraph, START, END
+from opentelemetry import context as otel_context
 
 from langchain_core.messages import SystemMessage, HumanMessage
+from langchain_core.runnables import RunnableConfig
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_groq import ChatGroq
 
@@ -10,9 +17,110 @@ from agents.state import GraphState, GraphStateUpdate, RoutingParameters
 from agents.prompts import UPSTREAM_SYSTEM_PROMPT, DOWNSTREAM_SYSTEM_PROMPT
 from solver.routing_model import evaluate_routing_feasibility
 from clients.port_sandbox import get_port_capacities
+from memory.checkpointer import create_checkpointer
+from memory.yaam_client import YAAMClient
 from memory import yaam_facade
 
 from langchain_mistralai import ChatMistralAI
+
+LOGGER = logging.getLogger(__name__)
+
+DEFAULT_THREAD_ID = "sandwich-local-thread"
+
+
+def _run_async_from_sync(coro: Coroutine[Any, Any, bool]) -> bool:
+    try:
+        asyncio.get_running_loop()
+    except RuntimeError:
+        return asyncio.run(coro)
+
+    # If we are already inside an event loop, run the coroutine in a dedicated
+    # thread to avoid RuntimeError("asyncio.run() cannot be called...").
+    result: dict[str, bool] = {"value": False}
+    error: dict[str, BaseException] = {}
+    active_context = otel_context.get_current()
+
+    def _target() -> None:
+        token = otel_context.attach(active_context)
+        try:
+            result["value"] = asyncio.run(coro)
+        except BaseException as exc:  # pragma: no cover - defensive safety net
+            error["value"] = exc
+        finally:
+            otel_context.detach(token)
+
+    thread = threading.Thread(target=_target, daemon=True)
+    thread.start()
+    thread.join()
+
+    if "value" in error:
+        raise error["value"]
+
+    return result["value"]
+
+
+def _extract_session_id(config: RunnableConfig | None) -> str:
+    configurable = (config or {}).get("configurable", {})
+    thread_id = configurable.get("thread_id") if isinstance(configurable, dict) else None
+    if isinstance(thread_id, str) and thread_id.strip():
+        return thread_id
+
+    LOGGER.warning(
+        "No configurable.thread_id was provided to the graph run. "
+        "Using fallback session_id=%s for YAAM consolidation.",
+        DEFAULT_THREAD_ID,
+    )
+    return DEFAULT_THREAD_ID
+
+
+def _build_final_state(state: GraphState) -> dict[str, Any]:
+    routing_parameters = state.get("routing_parameters")
+    revisions_count = state.get("revisions_count", 0)
+
+    drafts: list[dict[str, Any]] = []
+    if routing_parameters is not None:
+        drafts.append(
+            {
+                "revision": revisions_count,
+                "routing_parameters": routing_parameters.model_dump(),
+            }
+        )
+
+    return {
+        "prompt": state.get("alert_text") or None,
+        "drafts": drafts,
+        "solver_iis_logs": list(state.get("solver_error_logs", [])),
+        "final_routing_parameters": routing_parameters.model_dump() if routing_parameters else {},
+    }
+
+
+def _build_metadata(state: GraphState) -> dict[str, Any]:
+    solver_result = state.get("solver_result")
+    solver_status = (solver_result.status if solver_result else "").upper()
+
+    status = "success"
+    if solver_status == "INFEASIBLE":
+        status = "infeasible"
+    elif solver_status in {"TIMEOUT", "TIMED_OUT"}:
+        status = "timeout"
+
+    return {
+        "status": status,
+        "duration_seconds": 0.0,
+        "solver_attempts": max(1, state.get("revisions_count", 0) + 1),
+    }
+
+
+def _consolidate_episode(config: RunnableConfig | None, state: GraphState) -> bool:
+    session_id = _extract_session_id(config=config)
+    client = YAAMClient()
+    return _run_async_from_sync(
+        client.consolidate_episode(
+            session_id=session_id,
+            final_state=_build_final_state(state),
+            metadata=_build_metadata(state),
+        )
+    )
 
 def _get_llm():
     # Use Gemini by default as specified by user
@@ -93,8 +201,10 @@ def node_repair_artifact(state: GraphState) -> GraphStateUpdate:
     
     return {"routing_parameters": new_params, "revisions_count": revisions}
 
-def node_commit_final(state: GraphState) -> GraphStateUpdate:
+def node_commit_final(state: GraphState, config: RunnableConfig | None = None) -> GraphStateUpdate:
     yaam_facade.artifact_commit_final(artifact_id="revision_id_mock")
+    if not _consolidate_episode(config=config, state=state):
+        LOGGER.warning("Episode consolidation to YAAM failed.")
     return {}
 
 def route_after_solver(state: GraphState) -> Literal["node_commit_final", "node_repair_artifact"]:
@@ -126,4 +236,10 @@ workflow.add_conditional_edges(
 workflow.add_edge("node_repair_artifact", "node_run_solver")
 workflow.add_edge("node_commit_final", END)
 
-graph = workflow.compile()
+
+def compile_graph_with_adaptive_checkpointer():
+    checkpointer = create_checkpointer()
+    return workflow.compile(checkpointer=checkpointer)
+
+
+graph = compile_graph_with_adaptive_checkpointer()
