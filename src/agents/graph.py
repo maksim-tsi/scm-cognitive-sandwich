@@ -13,9 +13,9 @@ from langchain_core.runnables import RunnableConfig
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_groq import ChatGroq
 
-from agents.state import GraphState, GraphStateUpdate, RoutingParameters
+from agents.state import GraphState, GraphStateUpdate, PortAllocation, RoutingParameters
 from agents.prompts import UPSTREAM_SYSTEM_PROMPT, DOWNSTREAM_SYSTEM_PROMPT
-from solver.routing_model import evaluate_routing_feasibility
+from solver.routing_model import ALLOWED_PORTS, evaluate_routing_feasibility, is_terminal_infeasible_log
 from clients.port_sandbox import get_port_capacities
 from memory.checkpointer import create_checkpointer
 from memory.yaam_client import DEFAULT_AGENT_ID, YAAMClient
@@ -169,6 +169,76 @@ def node_run_solver(state: GraphState) -> GraphStateUpdate:
         return {"solver_result": result, "solver_error_logs": [result.iis_log]}
     return {"solver_result": result}
 
+
+def _build_capacity_breakdown(
+    params: RoutingParameters,
+    capacities: dict[str, int],
+) -> tuple[str, list[str]]:
+    allocated_by_port: dict[str, int] = {port: 0 for port in ALLOWED_PORTS}
+    for alloc in params.allocations:
+        allocated_by_port[alloc.port_code] = allocated_by_port.get(alloc.port_code, 0) + alloc.teu_amount
+
+    zero_capacity_ports = [port for port in ALLOWED_PORTS if capacities.get(port, 0) <= 0]
+    total_available_capacity = sum(max(capacities.get(port, 0), 0) for port in ALLOWED_PORTS)
+    demand = params.total_teu_to_reroute
+    deficit = demand - total_available_capacity
+
+    lines = ["Per-port capacity and current allocation:"]
+    for port in ALLOWED_PORTS:
+        capacity = capacities.get(port, 0)
+        allocated = allocated_by_port.get(port, 0)
+        headroom = capacity - allocated
+        lines.append(
+            f"- {port}: capacity={capacity} TEU, allocated={allocated} TEU, headroom={headroom} TEU"
+        )
+
+    lines.append(f"Total available capacity across allowed ports: {total_available_capacity} TEU")
+    lines.append(f"Total TEU demand: {demand} TEU")
+    lines.append(f"Demand minus total available capacity: {deficit} TEU")
+    lines.append(
+        f"Zero-capacity ports: {', '.join(zero_capacity_ports) if zero_capacity_ports else 'none'}"
+    )
+
+    return "\n".join(lines), zero_capacity_ports
+
+
+def _format_recent_solver_history(error_logs: list[str], limit: int = 3) -> str:
+    if not error_logs:
+        return "No prior solver errors recorded."
+
+    recent_logs = error_logs[-limit:]
+    formatted: list[str] = []
+    for index, log in enumerate(recent_logs, start=1):
+        formatted.append(f"Attempt -{len(recent_logs) - index + 1}: {log}")
+    return "\n---\n".join(formatted)
+
+
+def _sanitize_allocations_for_capacity(
+    params: RoutingParameters,
+    capacities: dict[str, int],
+) -> tuple[RoutingParameters, list[str]]:
+    aggregated: dict[str, int] = {}
+    removed_ports: list[str] = []
+
+    for alloc in params.allocations:
+        if capacities.get(alloc.port_code, 0) <= 0:
+            if alloc.port_code not in removed_ports:
+                removed_ports.append(alloc.port_code)
+            continue
+        aggregated[alloc.port_code] = aggregated.get(alloc.port_code, 0) + alloc.teu_amount
+
+    sanitized_allocations = [
+        PortAllocation(port_code=port, teu_amount=amount)
+        for port, amount in aggregated.items()
+    ]
+
+    sanitized_params = RoutingParameters(
+        original_destination=params.original_destination,
+        total_teu_to_reroute=params.total_teu_to_reroute,
+        allocations=sanitized_allocations,
+    )
+    return sanitized_params, removed_ports
+
 def node_repair_artifact(state: GraphState) -> GraphStateUpdate:
     params = state["routing_parameters"]
     if params is None:
@@ -182,26 +252,49 @@ def node_repair_artifact(state: GraphState) -> GraphStateUpdate:
         if state.get("solver_error_logs")
         else (iis_log or "")
     )
+    capacities = state.get("port_capacities", {})
+    capacity_breakdown, _ = _build_capacity_breakdown(params, capacities)
+    recent_error_history = _format_recent_solver_history(state.get("solver_error_logs", []))
     
     # YAAM Integration: Attach Feedback
     yaam_facade.artifact_attach_feedback(artifact_id="draft_id_mock", feedback=latest_log)
     
     llm = _get_llm().with_structured_output(RoutingParameters)
     
-    system_msg = SystemMessage(content=DOWNSTREAM_SYSTEM_PROMPT.format(error_logs=latest_log))
+    system_msg = SystemMessage(
+        content=DOWNSTREAM_SYSTEM_PROMPT.format(
+            error_logs=latest_log,
+            total_teu_to_reroute=params.total_teu_to_reroute,
+            allowed_ports=", ".join(ALLOWED_PORTS),
+            capacity_breakdown=capacity_breakdown,
+            recent_error_history=recent_error_history,
+        )
+    )
     human_content = (
         f"Original Routing Parameters:\n{params.model_dump_json(indent=2)}\n\n"
         f"IIS Log (Solver Feedback):\n{latest_log}\n\n"
-        f"Port Capacities:\n{state.get('port_capacities', {})}\n"
+        f"Allowed ports: {', '.join(ALLOWED_PORTS)}\n"
+        f"Port capacities (raw):\n{capacities}\n\n"
+        f"Capacity analysis for repair:\n{capacity_breakdown}\n\n"
+        f"Recent solver errors:\n{recent_error_history}\n"
     )
     human_msg = HumanMessage(content=human_content)
     
     new_params = llm.invoke([system_msg, human_msg])
+    sanitized_params, removed_ports = _sanitize_allocations_for_capacity(new_params, capacities)
+    if removed_ports:
+        LOGGER.info(
+            "Removed allocations to zero-capacity ports in repair output: %s",
+            ", ".join(removed_ports),
+        )
     
-    yaam_facade.artifact_create_revision(previous_artifact_id="draft_id_mock", new_artifact_data=new_params.model_dump())
+    yaam_facade.artifact_create_revision(
+        previous_artifact_id="draft_id_mock",
+        new_artifact_data=sanitized_params.model_dump(),
+    )
     revisions = state.get("revisions_count", 0) + 1
     
-    return {"routing_parameters": new_params, "revisions_count": revisions}
+    return {"routing_parameters": sanitized_params, "revisions_count": revisions}
 
 def node_commit_final(state: GraphState, config: RunnableConfig | None = None) -> GraphStateUpdate:
     yaam_facade.artifact_commit_final(artifact_id="revision_id_mock")
@@ -214,6 +307,8 @@ def route_after_solver(state: GraphState) -> Literal["node_commit_final", "node_
     if solver_result is None:
         raise ValueError("solver_result must be set before routing")
     if solver_result.status == "FEASIBLE":
+        return "node_commit_final"
+    if solver_result.status == "INFEASIBLE" and is_terminal_infeasible_log(solver_result.iis_log):
         return "node_commit_final"
     return "node_repair_artifact"
 
