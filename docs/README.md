@@ -8,6 +8,7 @@ This directory is the repository source of truth. Keep AGENTS concise and keep d
 2. `domain/`: business semantics and solver-facing constraints.
 3. `decisions/`: ADRs for durable architecture choices.
 4. `exec-plans/`: active work plans and maintenance logs.
+5. `reports/`: dated run analyses and experiment diagnostics.
 
 ## Read Order
 
@@ -31,3 +32,4 @@ This directory is the repository source of truth. Keep AGENTS concise and keep d
 - Phoenix OpenAPI feedback-loop guide is available at `architecture/phoenix-openapi-feedback-loop.md`.
 - Batch pipeline supports gradient disruptions and optional dual-disruption scenarios.
 - Script contracts are covered by tests under `tests/scripts/`.
+- Run analysis reports are cataloged under `reports/README.md`.
