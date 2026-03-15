@@ -58,6 +58,37 @@ class RetriableGraphInvokeError(Exception):
     pass
 
 
+def _normalize_run_id(value: str) -> str:
+    candidate = value.strip()
+    if not candidate:
+        raise ValueError("run_id values must not be empty")
+    if not candidate.isdigit():
+        raise ValueError(f"run_id must be numeric, got: {value}")
+    return candidate.zfill(3)
+
+
+def _parse_run_ids_argument(raw_run_ids: str) -> list[str]:
+    parsed = [_normalize_run_id(part) for part in raw_run_ids.split(",")]
+    if not parsed:
+        raise ValueError("--run-ids must contain at least one run id")
+    return parsed
+
+
+def _filter_scenarios_by_run_ids(
+    scenarios: list[dict[str, str]],
+    run_ids: list[str],
+) -> list[dict[str, str]]:
+    scenarios_by_run_id = {
+        _normalize_run_id(str(row["run_id"])): row
+        for row in scenarios
+    }
+    missing_run_ids = [run_id for run_id in run_ids if run_id not in scenarios_by_run_id]
+    if missing_run_ids:
+        raise ValueError(f"run_ids not found in scenarios dataset: {missing_run_ids}")
+
+    return [scenarios_by_run_id[run_id] for run_id in run_ids]
+
+
 def _initialize_observability() -> None:
     from core.observability import setup_observability  # noqa: WPS433
 
@@ -340,6 +371,12 @@ def main() -> None:
 
     parser = argparse.ArgumentParser(description="Run deterministic IDWL batch experiments.")
     parser.add_argument("--limit", type=int, default=None, help="Optional limit for trial runs.")
+    parser.add_argument(
+        "--run-ids",
+        type=str,
+        default=None,
+        help="Comma-separated run_ids to execute (e.g. 007,020,041).",
+    )
     args = parser.parse_args()
 
     root_dir = Path(__file__).resolve().parents[1]
@@ -353,6 +390,12 @@ def main() -> None:
         )
 
     scenarios = _load_scenarios(scenarios_path)
+    if args.run_ids is not None:
+        if args.limit is not None:
+            raise ValueError("--limit and --run-ids are mutually exclusive")
+        selected_run_ids = _parse_run_ids_argument(args.run_ids)
+        scenarios = _filter_scenarios_by_run_ids(scenarios, selected_run_ids)
+
     if args.limit is not None:
         if args.limit <= 0:
             raise ValueError("--limit must be greater than 0 when provided")

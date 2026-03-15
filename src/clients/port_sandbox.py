@@ -4,6 +4,7 @@ import httpx
 MOCK_CAPACITIES: dict[str, int] = {
     "NLRTM": 25000,
     "BEANR": 15000,
+    "DEHAM": 12000,
     "DEBRV": 10000,
 }
 
@@ -19,7 +20,7 @@ def get_port_capacities(ports: list[str] | None = None) -> dict[str, int]:
         return {port: MOCK_CAPACITIES.get(port, 0) for port in ports}
 
     if ports is None:
-        ports = ["NLRTM", "BEANR", "DEBRV"]
+        ports = ["NLRTM", "BEANR", "DEHAM", "DEBRV"]
         
     base_url = os.getenv("SANDBOX_API_URL", "http://localhost:8001").rstrip("/")
     capacities = {}
@@ -30,7 +31,10 @@ def get_port_capacities(ports: list[str] | None = None) -> dict[str, int]:
                 response = client.get(url, timeout=5.0)
                 response.raise_for_status()
                 data = response.json()
-                capacities[port] = data.get("availableCapacityTEU", 0)
+                available_capacity = data.get("availableCapacityTEU")
+                if available_capacity is None and isinstance(data.get("metrics"), dict):
+                    available_capacity = data["metrics"].get("availableCapacityTEU")
+                capacities[port] = int(available_capacity or 0)
             except Exception as e:
                 print(f"[Port Sandbox] Error fetching {port} from {url}: {e}")
                 if port in MOCK_CAPACITIES:

@@ -189,3 +189,38 @@ def test_serialize_error_json_includes_solver_diagnostics():
     assert '"error_type": "ERROR_RECURSION"' in payload
     assert '"solver_status": "INFEASIBLE"' in payload
     assert '"latest_solver_error_log": "constraint violated"' in payload
+
+
+def test_parse_run_ids_argument_normalizes_values():
+    module = _load_script_module("batch_runner.py")
+
+    parsed = module._parse_run_ids_argument("7,020,41")
+
+    assert parsed == ["007", "020", "041"]
+
+
+def test_filter_scenarios_by_run_ids_preserves_requested_order():
+    module = _load_script_module("batch_runner.py")
+
+    scenarios = [
+        {"run_id": "001", "alert_text": "a"},
+        {"run_id": "007", "alert_text": "b"},
+        {"run_id": "020", "alert_text": "c"},
+    ]
+
+    filtered = module._filter_scenarios_by_run_ids(scenarios, ["020", "007"])
+
+    assert [row["run_id"] for row in filtered] == ["020", "007"]
+
+
+def test_filter_scenarios_by_run_ids_raises_for_unknown_ids():
+    module = _load_script_module("batch_runner.py")
+
+    scenarios = [{"run_id": "001", "alert_text": "a"}]
+
+    try:
+        module._filter_scenarios_by_run_ids(scenarios, ["999"])
+    except ValueError as exc:
+        assert "run_ids not found" in str(exc)
+    else:
+        raise AssertionError("Expected ValueError for unknown run_id")
