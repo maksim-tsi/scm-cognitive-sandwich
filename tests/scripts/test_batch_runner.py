@@ -5,7 +5,7 @@ from types import ModuleType
 import httpx
 from langchain_core.messages import AIMessage
 
-from agents.state import PortAllocation, RoutingParameters
+from agents.state import PortAllocation, RoutingParameters, SolverResult
 
 
 def _load_script_module(script_name: str) -> ModuleType:
@@ -125,3 +125,67 @@ def test_serialize_final_json_handles_routing_parameters_model():
 
     assert '"original_destination": "DEHAM"' in result
     assert '"total_teu_to_reroute": 10000' in result
+
+
+def test_merge_graph_state_appends_solver_error_logs():
+    module = _load_script_module("batch_runner.py")
+
+    state = {
+        "solver_error_logs": ["first error"],
+        "revisions_count": 0,
+    }
+
+    module._merge_graph_state(
+        state,
+        {
+            "solver_error_logs": ["second error"],
+            "revisions_count": 1,
+        },
+    )
+
+    assert state["solver_error_logs"] == ["first error", "second error"]
+    assert state["revisions_count"] == 1
+
+
+def test_derive_final_status_uses_solver_result_when_present():
+    module = _load_script_module("batch_runner.py")
+
+    feasible = {"solver_result": SolverResult(status="FEASIBLE", iis_log=None)}
+    infeasible = {"solver_result": SolverResult(status="INFEASIBLE", iis_log="iis")}
+    missing = {"solver_result": None}
+
+    assert module._derive_final_status(feasible) == "FEASIBLE"
+    assert module._derive_final_status(infeasible) == "INFEASIBLE"
+    assert module._derive_final_status(missing) == "ERROR"
+
+
+def test_recover_state_from_exception_prefers_attached_state():
+    module = _load_script_module("batch_runner.py")
+
+    fallback = {"revisions_count": 0}
+    attached = {"revisions_count": 3}
+    exc = RuntimeError("boom")
+    setattr(exc, "running_state", attached)
+
+    recovered = module._recover_state_from_exception(exc, fallback)
+
+    assert recovered is attached
+
+
+def test_serialize_error_json_includes_solver_diagnostics():
+    module = _load_script_module("batch_runner.py")
+
+    state = {
+        "solver_result": SolverResult(status="INFEASIBLE", iis_log="constraint violated"),
+        "solver_error_logs": ["constraint violated"],
+    }
+
+    payload = module._serialize_error_json(
+        exc=RuntimeError("graph failed"),
+        state=state,
+        error_type="ERROR_RECURSION",
+    )
+
+    assert '"error_type": "ERROR_RECURSION"' in payload
+    assert '"solver_status": "INFEASIBLE"' in payload
+    assert '"latest_solver_error_log": "constraint violated"' in payload

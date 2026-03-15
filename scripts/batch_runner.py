@@ -19,6 +19,7 @@ load_dotenv(_dotenv_path, override=True)
 
 from agents.state import GraphState, RoutingParameters, SolverResult  # noqa: E402
 from langchain_core.messages import AIMessage  # noqa: E402
+from langgraph.errors import GraphRecursionError  # noqa: E402
 
 ALL_PORTS = ["NLRTM", "BEANR", "DEHAM", "DEBRV"]
 BASE_CAPACITY = 15000
@@ -55,6 +56,17 @@ RESULT_COLUMNS = [
 
 class RetriableGraphInvokeError(Exception):
     pass
+
+
+def _initialize_observability() -> None:
+    from core.observability import setup_observability  # noqa: WPS433
+
+    print("Tracing environment before setup:")
+    print(f"  OTEL_RESOURCE_ATTRIBUTES={os.environ.get('OTEL_RESOURCE_ATTRIBUTES')}")
+    print(f"  OTEL_SERVICE_NAME={os.environ.get('OTEL_SERVICE_NAME')}")
+    print(f"  PHOENIX_PROJECT_NAME={os.environ.get('PHOENIX_PROJECT_NAME')}")
+    print(f"  PHOENIX_COLLECTOR_ENDPOINT={os.environ.get('PHOENIX_COLLECTOR_ENDPOINT')}")
+    setup_observability()
 
 
 def _iter_exception_chain(exc: BaseException) -> list[BaseException]:
@@ -96,13 +108,115 @@ def _get_graph():
     stop=stop_after_attempt(5),
     reraise=True,
 )
-def _invoke_graph_with_retry(initial_state: GraphState, config: dict[str, Any]) -> GraphState:
+def _stream_graph_with_retry(
+    initial_state: GraphState,
+    config: dict[str, Any],
+    run_id: str,
+) -> GraphState:
+    running_state: dict[str, Any] = dict(initial_state)
+
     try:
-        return _get_graph().invoke(initial_state, config=config)
+        for output in _get_graph().stream(initial_state, config=config, stream_mode="updates"):
+            if not isinstance(output, dict):
+                continue
+
+            for node_name, state_update in output.items():
+                print(f"[STREAM run={run_id}] node={node_name}")
+
+                if state_update is None:
+                    state_update = {}
+                if not isinstance(state_update, dict):
+                    continue
+
+                _merge_graph_state(running_state, state_update)
+
+                if node_name in {"node_run_solver", "node_repair_artifact"}:
+                    solver_result = running_state.get("solver_result")
+                    solver_status = (
+                        solver_result.status
+                        if isinstance(solver_result, SolverResult)
+                        else "UNKNOWN"
+                    )
+                    latest_error_log = _latest_solver_error_log(running_state) or "<none>"
+                    print(
+                        "  "
+                        f"solver_status={solver_status} "
+                        f"latest_solver_error={latest_error_log}"
+                    )
+
+        # Running state now reflects the updates from the final streamed chunk.
+        return running_state
     except Exception as exc:
+        setattr(exc, "running_state", running_state)
         if _is_retriable_error(exc):
             raise RetriableGraphInvokeError(str(exc)) from exc
         raise
+
+
+def _merge_graph_state(current_state: dict[str, Any], state_update: dict[str, Any]) -> None:
+    for key, value in state_update.items():
+        if key == "solver_error_logs" and isinstance(value, list):
+            existing_value = current_state.get(key)
+            if isinstance(existing_value, list):
+                current_state[key] = [*existing_value, *value]
+            else:
+                current_state[key] = list(value)
+            continue
+        current_state[key] = value
+
+
+def _latest_solver_error_log(state: GraphState | dict[str, Any]) -> str | None:
+    logs = state.get("solver_error_logs")
+    if isinstance(logs, list) and logs:
+        return str(logs[-1])
+    return None
+
+
+def _derive_final_status(state: GraphState | dict[str, Any]) -> str:
+    solver_result = state.get("solver_result")
+    if isinstance(solver_result, SolverResult):
+        if solver_result.status.upper() == "FEASIBLE":
+            return "FEASIBLE"
+        if solver_result.status.upper() == "INFEASIBLE":
+            return "INFEASIBLE"
+    return "ERROR"
+
+
+def _recover_state_from_exception(
+    exc: BaseException,
+    fallback_state: GraphState | dict[str, Any],
+) -> GraphState | dict[str, Any]:
+    candidate_attributes = ["last_state", "state", "running_state", "graph_state", "values"]
+    for attr in candidate_attributes:
+        candidate = getattr(exc, attr, None)
+        if isinstance(candidate, dict):
+            return candidate
+
+    for arg in exc.args:
+        if isinstance(arg, dict):
+            return arg
+
+    return fallback_state
+
+
+def _serialize_error_json(
+    exc: BaseException,
+    state: GraphState | dict[str, Any],
+    error_type: str,
+) -> str:
+    solver_result = state.get("solver_result")
+    payload: dict[str, Any] = {
+        "error_type": error_type,
+        "error": str(exc),
+    }
+    if isinstance(solver_result, SolverResult):
+        payload["solver_status"] = solver_result.status
+
+    latest_error_log = _latest_solver_error_log(state)
+    if latest_error_log:
+        payload["latest_solver_error_log"] = latest_error_log
+
+    return json.dumps(payload, sort_keys=True)
 
 
 def _load_scenarios(path: Path) -> list[dict[str, str]]:
@@ -222,6 +336,8 @@ def _format_teu_short(total_teu: int) -> str:
 
 
 def main() -> None:
+    _initialize_observability()
+
     parser = argparse.ArgumentParser(description="Run deterministic IDWL batch experiments.")
     parser.add_argument("--limit", type=int, default=None, help="Optional limit for trial runs.")
     args = parser.parse_args()
@@ -291,21 +407,43 @@ def main() -> None:
             }
 
             started_at = time.perf_counter()
-            status = "INFEASIBLE"
+            status = "ERROR"
             revisions = 0
             token_count = 0
             final_json = "{}"
+            running_state: GraphState | dict[str, Any] = dict(initial_state)
 
             try:
-                final_state = _invoke_graph_with_retry(initial_state=initial_state, config=config)
-                solver_result = final_state.get("solver_result")
-                if isinstance(solver_result, SolverResult) and solver_result.status.upper() == "FEASIBLE":
-                    status = "FEASIBLE"
+                final_state = _stream_graph_with_retry(
+                    initial_state=initial_state,
+                    config=config,
+                    run_id=run_id,
+                )
+                running_state = final_state
+                status = _derive_final_status(final_state)
                 revisions = int(final_state.get("revisions_count", 0))
                 token_count = _extract_token_count(final_state)
                 final_json = _serialize_final_json(final_state)
+            except GraphRecursionError as exc:
+                recovered_state = _recover_state_from_exception(exc, running_state)
+                revisions = int(recovered_state.get("revisions_count", 0))
+                token_count = _extract_token_count(recovered_state)
+                status = "ERROR_RECURSION"
+                final_json = _serialize_error_json(
+                    exc=exc,
+                    state=recovered_state,
+                    error_type="ERROR_RECURSION",
+                )
             except Exception as exc:
-                final_json = json.dumps({"error": str(exc)})
+                recovered_state = _recover_state_from_exception(exc, running_state)
+                revisions = int(recovered_state.get("revisions_count", 0))
+                token_count = _extract_token_count(recovered_state)
+                status = "ERROR"
+                final_json = _serialize_error_json(
+                    exc=exc,
+                    state=recovered_state,
+                    error_type="ERROR",
+                )
 
             elapsed = time.perf_counter() - started_at
             result_row = {
