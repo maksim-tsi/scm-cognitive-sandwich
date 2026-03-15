@@ -1,101 +1,101 @@
-run_id,total_teu,closed_port,capacity_multiplier,alert_text
-001,46905,NLRTM,0.5175,Port of NLRTM is closed. 46905 TEU must be rerouted.
-002,23024,BEANR,0.6562,Port of BEANR is closed. 23024 TEU must be rerouted.
-003,11717,NLRTM,0.9133,Port of NLRTM is closed. 11717 TEU must be rerouted.
-004,7082,NLRTM,0.5656,Port of NLRTM is closed. 7082 TEU must be rerouted.
-005,20247,NLRTM,0.8929,Port of NLRTM is closed. 20247 TEU must be rerouted.
-006,47590,DEBRV,0.6543,Port of DEBRV is closed. 47590 TEU must be rerouted.
-007,43618,DEHAM,1.0666,Port of DEHAM is closed. 43618 TEU must be rerouted.
-008,5425,BEANR,0.9887,Port of BEANR is closed. 5425 TEU must be rerouted.
-009,27298,DEHAM,0.6088,Port of DEHAM is closed. 27298 TEU must be rerouted.
-010,27059,NLRTM,0.5649,Port of NLRTM is closed. 27059 TEU must be rerouted.
-011,11338,DEHAM,1.0932,Port of DEHAM is closed. 11338 TEU must be rerouted.
-012,44565,DEHAM,1.065,Port of DEHAM is closed. 44565 TEU must be rerouted.
-013,35108,NLRTM,1.1812,Port of NLRTM is closed. 35108 TEU must be rerouted.
-014,29807,NLRTM,0.8864,Port of NLRTM is closed. 29807 TEU must be rerouted.
-015,46198,DEHAM,0.9041,Port of DEHAM is closed. 46198 TEU must be rerouted.
-016,9558,NLRTM,0.9629,Port of NLRTM is closed. 9558 TEU must be rerouted.
-017,23965,NLRTM,1.0987,Port of NLRTM is closed. 23965 TEU must be rerouted.
-018,11619,DEBRV,0.6946,Port of DEBRV is closed. 11619 TEU must be rerouted.
-019,46660,DEHAM,0.6139,Port of DEHAM is closed. 46660 TEU must be rerouted.
-020,28283,BEANR,0.9691,Port of BEANR is closed. 28283 TEU must be rerouted.
-021,49796,NLRTM,0.9264,Port of NLRTM is closed. 49796 TEU must be rerouted.
-022,16215,BEANR,0.6144,Port of BEANR is closed. 16215 TEU must be rerouted.
-023,29867,DEHAM,1.1927,Port of DEHAM is closed. 29867 TEU must be rerouted.
-024,46943,BEANR,0.9792,Port of BEANR is closed. 46943 TEU must be rerouted.
-025,8665,BEANR,1.0753,Port of BEANR is closed. 8665 TEU must be rerouted.
-026,25673,DEBRV,0.6874,Port of DEBRV is closed. 25673 TEU must be rerouted.
-027,18826,DEHAM,0.6488,Port of DEHAM is closed. 18826 TEU must be rerouted.
-028,37717,DEBRV,1.1193,Port of DEBRV is closed. 37717 TEU must be rerouted.
-029,47129,DEBRV,0.6,Port of DEBRV is closed. 47129 TEU must be rerouted.
-030,14150,BEANR,1.0215,Port of BEANR is closed. 14150 TEU must be rerouted.
-031,40322,DEHAM,1.0229,Port of DEHAM is closed. 40322 TEU must be rerouted.
-032,33077,DEBRV,0.7534,Port of DEBRV is closed. 33077 TEU must be rerouted.
-033,14065,DEBRV,0.5636,Port of DEBRV is closed. 14065 TEU must be rerouted.
-034,8087,NLRTM,0.607,Port of NLRTM is closed. 8087 TEU must be rerouted.
-035,15484,DEBRV,0.9175,Port of DEBRV is closed. 15484 TEU must be rerouted.
-036,30216,DEBRV,0.9171,Port of DEBRV is closed. 30216 TEU must be rerouted.
-037,35674,DEHAM,1.1798,Port of DEHAM is closed. 35674 TEU must be rerouted.
-038,5752,NLRTM,0.9772,Port of NLRTM is closed. 5752 TEU must be rerouted.
-039,40190,DEHAM,1.038,Port of DEHAM is closed. 40190 TEU must be rerouted.
-040,27293,NLRTM,0.7055,Port of NLRTM is closed. 27293 TEU must be rerouted.
-041,15365,DEBRV,0.5023,Port of DEBRV is closed. 15365 TEU must be rerouted.
-042,22261,BEANR,0.8554,Port of BEANR is closed. 22261 TEU must be rerouted.
-043,11973,DEHAM,1.0892,Port of DEHAM is closed. 11973 TEU must be rerouted.
-044,38270,BEANR,0.607,Port of BEANR is closed. 38270 TEU must be rerouted.
-045,15587,NLRTM,0.9193,Port of NLRTM is closed. 15587 TEU must be rerouted.
-046,37021,NLRTM,0.5783,Port of NLRTM is closed. 37021 TEU must be rerouted.
-047,28788,DEHAM,0.6676,Port of DEHAM is closed. 28788 TEU must be rerouted.
-048,20785,NLRTM,0.56,Port of NLRTM is closed. 20785 TEU must be rerouted.
-049,36849,NLRTM,1.1846,Port of NLRTM is closed. 36849 TEU must be rerouted.
-050,39911,BEANR,0.5899,Port of BEANR is closed. 39911 TEU must be rerouted.
-051,36148,BEANR,0.6855,Port of BEANR is closed. 36148 TEU must be rerouted.
-052,44753,DEBRV,1.1751,Port of DEBRV is closed. 44753 TEU must be rerouted.
-053,40343,BEANR,0.9991,Port of BEANR is closed. 40343 TEU must be rerouted.
-054,31148,DEHAM,0.8067,Port of DEHAM is closed. 31148 TEU must be rerouted.
-055,38919,DEBRV,0.5847,Port of DEBRV is closed. 38919 TEU must be rerouted.
-056,19725,NLRTM,0.7367,Port of NLRTM is closed. 19725 TEU must be rerouted.
-057,43555,BEANR,0.9119,Port of BEANR is closed. 43555 TEU must be rerouted.
-058,5471,NLRTM,0.9955,Port of NLRTM is closed. 5471 TEU must be rerouted.
-059,8858,BEANR,0.5472,Port of BEANR is closed. 8858 TEU must be rerouted.
-060,7058,DEHAM,0.5496,Port of DEHAM is closed. 7058 TEU must be rerouted.
-061,20597,DEHAM,0.9683,Port of DEHAM is closed. 20597 TEU must be rerouted.
-062,19040,BEANR,1.0063,Port of BEANR is closed. 19040 TEU must be rerouted.
-063,42423,DEBRV,0.6701,Port of DEBRV is closed. 42423 TEU must be rerouted.
-064,35996,DEBRV,0.6333,Port of DEBRV is closed. 35996 TEU must be rerouted.
-065,11352,DEBRV,0.748,Port of DEBRV is closed. 11352 TEU must be rerouted.
-066,31941,DEBRV,1.1047,Port of DEBRV is closed. 31941 TEU must be rerouted.
-067,8550,NLRTM,0.5424,Port of NLRTM is closed. 8550 TEU must be rerouted.
-068,27236,NLRTM,0.6741,Port of NLRTM is closed. 27236 TEU must be rerouted.
-069,17465,DEBRV,0.5981,Port of DEBRV is closed. 17465 TEU must be rerouted.
-070,17025,DEHAM,0.8238,Port of DEHAM is closed. 17025 TEU must be rerouted.
-071,9940,DEBRV,1.0656,Port of DEBRV is closed. 9940 TEU must be rerouted.
-072,41066,NLRTM,0.5354,Port of NLRTM is closed. 41066 TEU must be rerouted.
-073,40427,NLRTM,1.1783,Port of NLRTM is closed. 40427 TEU must be rerouted.
-074,20491,BEANR,0.7845,Port of BEANR is closed. 20491 TEU must be rerouted.
-075,36546,BEANR,1.1053,Port of BEANR is closed. 36546 TEU must be rerouted.
-076,8842,BEANR,0.7653,Port of BEANR is closed. 8842 TEU must be rerouted.
-077,30586,DEHAM,1.1486,Port of DEHAM is closed. 30586 TEU must be rerouted.
-078,34819,DEHAM,0.7961,Port of DEHAM is closed. 34819 TEU must be rerouted.
-079,41422,DEBRV,0.6084,Port of DEBRV is closed. 41422 TEU must be rerouted.
-080,24445,BEANR,1.1781,Port of BEANR is closed. 24445 TEU must be rerouted.
-081,42957,NLRTM,1.0236,Port of NLRTM is closed. 42957 TEU must be rerouted.
-082,8746,NLRTM,0.9089,Port of NLRTM is closed. 8746 TEU must be rerouted.
-083,37954,BEANR,0.5398,Port of BEANR is closed. 37954 TEU must be rerouted.
-084,38281,NLRTM,1.0959,Port of NLRTM is closed. 38281 TEU must be rerouted.
-085,9490,NLRTM,0.9726,Port of NLRTM is closed. 9490 TEU must be rerouted.
-086,20414,DEBRV,0.5839,Port of DEBRV is closed. 20414 TEU must be rerouted.
-087,42334,BEANR,0.9052,Port of BEANR is closed. 42334 TEU must be rerouted.
-088,7604,NLRTM,0.7935,Port of NLRTM is closed. 7604 TEU must be rerouted.
-089,43251,DEHAM,1.1543,Port of DEHAM is closed. 43251 TEU must be rerouted.
-090,18386,DEHAM,0.6671,Port of DEHAM is closed. 18386 TEU must be rerouted.
-091,30938,BEANR,0.9702,Port of BEANR is closed. 30938 TEU must be rerouted.
-092,24660,DEBRV,0.7213,Port of DEBRV is closed. 24660 TEU must be rerouted.
-093,9754,NLRTM,0.8208,Port of NLRTM is closed. 9754 TEU must be rerouted.
-094,41896,NLRTM,0.5513,Port of NLRTM is closed. 41896 TEU must be rerouted.
-095,18969,DEHAM,0.5927,Port of DEHAM is closed. 18969 TEU must be rerouted.
-096,27872,NLRTM,1.1155,Port of NLRTM is closed. 27872 TEU must be rerouted.
-097,29217,DEHAM,0.6104,Port of DEHAM is closed. 29217 TEU must be rerouted.
-098,40600,DEHAM,0.9282,Port of DEHAM is closed. 40600 TEU must be rerouted.
-099,47858,NLRTM,0.9675,Port of NLRTM is closed. 47858 TEU must be rerouted.
-100,41346,DEHAM,1.1522,Port of DEHAM is closed. 41346 TEU must be rerouted.
+run_id,total_teu,primary_port,primary_event,secondary_port,secondary_event,capacity_multiplier,alert_text
+001,46905,NLRTM,TOTAL_CLOSURE,,,0.6714,46905 TEU must be rerouted. NLRTM is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+002,14144,NLRTM,OPERATIONAL_RESTRICTION,,,0.8818,14144 TEU must be rerouted. NLRTM maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+003,43698,DEBRV,TOTAL_CLOSURE,NLRTM,TOTAL_CLOSURE,0.8537,43698 TEU must be rerouted. DEBRV is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately. NLRTM is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+004,6739,BEANR,OPERATIONAL_RESTRICTION,,,0.8815,6739 TEU must be rerouted. BEANR maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+005,19446,DEBRV,OPERATIONAL_RESTRICTION,NLRTM,TOTAL_CLOSURE,0.9887,19446 TEU must be rerouted. DEBRV maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours. NLRTM is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+006,27298,DEHAM,TOTAL_CLOSURE,BEANR,TOTAL_CLOSURE,0.5649,27298 TEU must be rerouted. DEHAM is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately. BEANR is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+007,11338,DEHAM,SEVERE_CONGESTION,,,1.065,11338 TEU must be rerouted. DEHAM reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock.
+008,35108,NLRTM,SEVERE_CONGESTION,DEHAM,OPERATIONAL_RESTRICTION,0.933,35108 TEU must be rerouted. NLRTM reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock. DEHAM maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+009,28700,BEANR,OPERATIONAL_RESTRICTION,DEBRV,TOTAL_CLOSURE,1.0411,28700 TEU must be rerouted. BEANR maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours. DEBRV is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+010,10229,BEANR,TOTAL_CLOSURE,,,0.8174,10229 TEU must be rerouted. BEANR is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+011,28909,BEANR,SEVERE_CONGESTION,,,0.9691,28909 TEU must be rerouted. BEANR reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock.
+012,49796,NLRTM,OPERATIONAL_RESTRICTION,,,0.8739,49796 TEU must be rerouted. NLRTM maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+013,21043,BEANR,SEVERE_CONGESTION,,,1.1927,21043 TEU must be rerouted. BEANR reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock.
+014,46943,BEANR,OPERATIONAL_RESTRICTION,,,1.0378,46943 TEU must be rerouted. BEANR maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+015,8665,BEANR,TOTAL_CLOSURE,,,0.7808,8665 TEU must be rerouted. BEANR is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+016,9337,BEANR,OPERATIONAL_RESTRICTION,,,0.7203,9337 TEU must be rerouted. BEANR maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+017,47954,DEBRV,SEVERE_CONGESTION,,,0.95,47954 TEU must be rerouted. DEBRV reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock.
+018,14363,DEHAM,TOTAL_CLOSURE,DEBRV,OPERATIONAL_RESTRICTION,0.6839,14363 TEU must be rerouted. DEHAM is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately. DEBRV maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+019,43311,DEBRV,OPERATIONAL_RESTRICTION,,,0.6535,43311 TEU must be rerouted. DEBRV maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+020,14065,DEBRV,TOTAL_CLOSURE,,,1.1028,14065 TEU must be rerouted. DEBRV is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+021,15016,BEANR,OPERATIONAL_RESTRICTION,,,0.5445,15016 TEU must be rerouted. BEANR maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+022,30009,DEBRV,OPERATIONAL_RESTRICTION,DEHAM,TOTAL_CLOSURE,0.9762,30009 TEU must be rerouted. DEBRV maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours. DEHAM is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+023,12507,DEHAM,OPERATIONAL_RESTRICTION,,,0.7055,12507 TEU must be rerouted. DEHAM maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+024,15365,DEBRV,TOTAL_CLOSURE,,,1.1131,15365 TEU must be rerouted. DEBRV is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+025,22261,BEANR,OPERATIONAL_RESTRICTION,,,1.1094,22261 TEU must be rerouted. BEANR maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+026,24558,BEANR,TOTAL_CLOSURE,,,0.6131,24558 TEU must be rerouted. BEANR is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+027,39757,NLRTM,OPERATIONAL_RESTRICTION,,,0.5136,39757 TEU must be rerouted. NLRTM maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+028,28788,DEHAM,TOTAL_CLOSURE,DEBRV,TOTAL_CLOSURE,0.56,28788 TEU must be rerouted. DEHAM is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately. DEBRV is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+029,36849,NLRTM,OPERATIONAL_RESTRICTION,,,0.5899,36849 TEU must be rerouted. NLRTM maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+030,36148,BEANR,SEVERE_CONGESTION,,,0.9246,36148 TEU must be rerouted. BEANR reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock.
+031,18880,BEANR,OPERATIONAL_RESTRICTION,,,1.1966,18880 TEU must be rerouted. BEANR maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+032,47590,DEHAM,SEVERE_CONGESTION,,,0.816,47590 TEU must be rerouted. DEHAM reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock.
+033,21246,BEANR,TOTAL_CLOSURE,,,0.9118,21246 TEU must be rerouted. BEANR is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+034,20080,BEANR,TOTAL_CLOSURE,DEBRV,TOTAL_CLOSURE,0.6603,20080 TEU must be rerouted. BEANR is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately. DEBRV is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+035,7058,DEHAM,TOTAL_CLOSURE,,,0.6949,7058 TEU must be rerouted. DEHAM is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+036,36812,BEANR,OPERATIONAL_RESTRICTION,DEBRV,OPERATIONAL_RESTRICTION,0.8309,36812 TEU must be rerouted. BEANR maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours. DEBRV maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+037,35996,DEBRV,TOTAL_CLOSURE,DEHAM,SEVERE_CONGESTION,0.748,35996 TEU must be rerouted. DEBRV is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately. DEHAM reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock.
+038,31941,DEBRV,OPERATIONAL_RESTRICTION,DEHAM,OPERATIONAL_RESTRICTION,0.5689,31941 TEU must be rerouted. DEBRV maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours. DEHAM maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+039,31386,DEHAM,TOTAL_CLOSURE,NLRTM,OPERATIONAL_RESTRICTION,0.814,31386 TEU must be rerouted. DEHAM is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately. NLRTM maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+040,32648,BEANR,SEVERE_CONGESTION,,,1.1121,32648 TEU must be rerouted. BEANR reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock.
+041,9940,DEBRV,OPERATIONAL_RESTRICTION,DEHAM,OPERATIONAL_RESTRICTION,1.0852,9940 TEU must be rerouted. DEBRV maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours. DEHAM maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+042,11112,BEANR,TOTAL_CLOSURE,,,0.837,11112 TEU must be rerouted. BEANR is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+043,31282,NLRTM,TOTAL_CLOSURE,,,1.1897,31282 TEU must be rerouted. NLRTM is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+044,22380,DEBRV,SEVERE_CONGESTION,,,1.1701,22380 TEU must be rerouted. DEBRV reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock.
+045,41422,DEBRV,TOTAL_CLOSURE,NLRTM,TOTAL_CLOSURE,0.9054,41422 TEU must be rerouted. DEBRV is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately. NLRTM is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+046,40533,NLRTM,OPERATIONAL_RESTRICTION,,,0.5351,40533 TEU must be rerouted. NLRTM maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+047,36246,BEANR,TOTAL_CLOSURE,,,0.5561,36246 TEU must be rerouted. BEANR is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+048,17178,NLRTM,OPERATIONAL_RESTRICTION,BEANR,SEVERE_CONGESTION,0.5839,17178 TEU must be rerouted. NLRTM maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours. BEANR reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock.
+049,42334,BEANR,OPERATIONAL_RESTRICTION,,,0.9336,42334 TEU must be rerouted. BEANR maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+050,32474,DEHAM,SEVERE_CONGESTION,DEBRV,SEVERE_CONGESTION,0.6671,32474 TEU must be rerouted. DEHAM reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock. DEBRV reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock.
+051,30938,BEANR,OPERATIONAL_RESTRICTION,,,0.8201,30938 TEU must be rerouted. BEANR maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+052,9754,NLRTM,SEVERE_CONGESTION,,,0.8941,9754 TEU must be rerouted. NLRTM reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock.
+053,11552,NLRTM,OPERATIONAL_RESTRICTION,DEHAM,TOTAL_CLOSURE,1.1533,11552 TEU must be rerouted. NLRTM maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours. DEHAM is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+054,9508,BEANR,SEVERE_CONGESTION,DEHAM,OPERATIONAL_RESTRICTION,0.9925,9508 TEU must be rerouted. BEANR reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock. DEHAM maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+055,45086,NLRTM,OPERATIONAL_RESTRICTION,,,0.7096,45086 TEU must be rerouted. NLRTM maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+056,48475,NLRTM,TOTAL_CLOSURE,BEANR,OPERATIONAL_RESTRICTION,0.8873,48475 TEU must be rerouted. NLRTM is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately. BEANR maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+057,22848,DEHAM,OPERATIONAL_RESTRICTION,BEANR,TOTAL_CLOSURE,0.9812,22848 TEU must be rerouted. DEHAM maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours. BEANR is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+058,22300,DEBRV,SEVERE_CONGESTION,,,1.0923,22300 TEU must be rerouted. DEBRV reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock.
+059,11048,DEBRV,SEVERE_CONGESTION,BEANR,TOTAL_CLOSURE,0.946,11048 TEU must be rerouted. DEBRV reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock. BEANR is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+060,22167,BEANR,OPERATIONAL_RESTRICTION,,,0.994,22167 TEU must be rerouted. BEANR maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+061,41759,NLRTM,TOTAL_CLOSURE,DEBRV,TOTAL_CLOSURE,0.8819,41759 TEU must be rerouted. NLRTM is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately. DEBRV is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+062,29196,BEANR,SEVERE_CONGESTION,DEHAM,SEVERE_CONGESTION,1.1293,29196 TEU must be rerouted. BEANR reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock. DEHAM reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock.
+063,7614,DEHAM,TOTAL_CLOSURE,,,0.9669,7614 TEU must be rerouted. DEHAM is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+064,28178,DEBRV,OPERATIONAL_RESTRICTION,,,1.148,28178 TEU must be rerouted. DEBRV maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+065,20514,BEANR,TOTAL_CLOSURE,,,0.5174,20514 TEU must be rerouted. BEANR is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+066,26770,DEBRV,OPERATIONAL_RESTRICTION,,,1.0675,26770 TEU must be rerouted. DEBRV maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+067,22485,BEANR,OPERATIONAL_RESTRICTION,NLRTM,SEVERE_CONGESTION,0.6557,22485 TEU must be rerouted. BEANR maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours. NLRTM reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock.
+068,35166,DEHAM,SEVERE_CONGESTION,,,1.1099,35166 TEU must be rerouted. DEHAM reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock.
+069,19609,NLRTM,OPERATIONAL_RESTRICTION,DEHAM,SEVERE_CONGESTION,1.105,19609 TEU must be rerouted. NLRTM maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours. DEHAM reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock.
+070,23292,DEHAM,OPERATIONAL_RESTRICTION,,,0.9757,23292 TEU must be rerouted. DEHAM maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+071,40141,DEHAM,TOTAL_CLOSURE,BEANR,TOTAL_CLOSURE,0.9064,40141 TEU must be rerouted. DEHAM is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately. BEANR is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+072,22397,NLRTM,TOTAL_CLOSURE,,,0.742,22397 TEU must be rerouted. NLRTM is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+073,25557,DEBRV,OPERATIONAL_RESTRICTION,,,0.581,25557 TEU must be rerouted. DEBRV maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+074,42787,BEANR,SEVERE_CONGESTION,DEHAM,TOTAL_CLOSURE,0.8639,42787 TEU must be rerouted. BEANR reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock. DEHAM is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+075,40287,BEANR,SEVERE_CONGESTION,,,1.1642,40287 TEU must be rerouted. BEANR reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock.
+076,26639,DEHAM,OPERATIONAL_RESTRICTION,,,1.0038,26639 TEU must be rerouted. DEHAM maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+077,24681,DEHAM,OPERATIONAL_RESTRICTION,,,0.7817,24681 TEU must be rerouted. DEHAM maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+078,24376,BEANR,TOTAL_CLOSURE,,,1.1583,24376 TEU must be rerouted. BEANR is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+079,49388,BEANR,OPERATIONAL_RESTRICTION,,,0.7843,49388 TEU must be rerouted. BEANR maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+080,5026,DEHAM,SEVERE_CONGESTION,DEBRV,OPERATIONAL_RESTRICTION,0.9583,5026 TEU must be rerouted. DEHAM reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock. DEBRV maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+081,35473,DEBRV,SEVERE_CONGESTION,,,0.8578,35473 TEU must be rerouted. DEBRV reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock.
+082,16120,NLRTM,SEVERE_CONGESTION,,,0.9431,16120 TEU must be rerouted. NLRTM reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock.
+083,26966,NLRTM,TOTAL_CLOSURE,,,0.6572,26966 TEU must be rerouted. NLRTM is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+084,18050,BEANR,TOTAL_CLOSURE,DEHAM,OPERATIONAL_RESTRICTION,1.0948,18050 TEU must be rerouted. BEANR is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately. DEHAM maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+085,9772,DEBRV,SEVERE_CONGESTION,,,0.903,9772 TEU must be rerouted. DEBRV reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock.
+086,30164,DEBRV,SEVERE_CONGESTION,DEHAM,OPERATIONAL_RESTRICTION,0.5039,30164 TEU must be rerouted. DEBRV reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock. DEHAM maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+087,11985,DEBRV,TOTAL_CLOSURE,DEHAM,OPERATIONAL_RESTRICTION,0.8252,11985 TEU must be rerouted. DEBRV is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately. DEHAM maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+088,41530,BEANR,TOTAL_CLOSURE,,,1.061,41530 TEU must be rerouted. BEANR is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+089,48750,DEHAM,SEVERE_CONGESTION,,,1.0035,48750 TEU must be rerouted. DEHAM reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock.
+090,38081,DEBRV,OPERATIONAL_RESTRICTION,,,0.6114,38081 TEU must be rerouted. DEBRV maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+091,36108,DEBRV,SEVERE_CONGESTION,,,1.0879,36108 TEU must be rerouted. DEBRV reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock.
+092,23173,DEBRV,OPERATIONAL_RESTRICTION,BEANR,TOTAL_CLOSURE,0.9995,23173 TEU must be rerouted. DEBRV maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours. BEANR is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+093,20367,DEHAM,SEVERE_CONGESTION,,,0.8781,20367 TEU must be rerouted. DEHAM reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock.
+094,14068,BEANR,TOTAL_CLOSURE,,,0.607,14068 TEU must be rerouted. BEANR is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+095,19021,NLRTM,SEVERE_CONGESTION,,,0.8798,19021 TEU must be rerouted. NLRTM reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock.
+096,32248,NLRTM,TOTAL_CLOSURE,,,0.7726,32248 TEU must be rerouted. NLRTM is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.
+097,43278,NLRTM,OPERATIONAL_RESTRICTION,,,0.5041,43278 TEU must be rerouted. NLRTM maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours.
+098,28052,DEHAM,SEVERE_CONGESTION,,,1.1674,28052 TEU must be rerouted. DEHAM reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock.
+099,32460,BEANR,SEVERE_CONGESTION,DEHAM,SEVERE_CONGESTION,0.5203,32460 TEU must be rerouted. BEANR reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock. DEHAM reports 92% yard utilization. Severe congestion at terminal gates. Recommended throughput capped at 20% to prevent total gridlock.
+100,27028,DEBRV,OPERATIONAL_RESTRICTION,BEANR,TOTAL_CLOSURE,1.1865,27028 TEU must be rerouted. DEBRV maintenance alert: Two STS cranes are offline for emergency repair. Berth capacity reduced by 50% for the next 72 hours. BEANR is completely inaccessible due to a 48-hour labor strike. All operations suspended immediately.

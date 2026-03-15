@@ -19,20 +19,42 @@ def _load_script_module(script_name: str) -> ModuleType:
     return module
 
 
-def test_compute_capacities_scales_non_closed_ports_and_closes_target_port():
+def test_compute_world_state_applies_base_multiplier_and_disruptions():
     module = _load_script_module("batch_runner.py")
 
-    baseline = {"NLRTM": 10000, "BEANR": 8000, "DEHAM": 9000, "DEBRV": 7000}
-    capacities = module._compute_capacities(
-        baseline=baseline,
-        closed_port="DEHAM",
+    closed_ports, capacities = module._compute_world_state(
+        primary_port="NLRTM",
+        primary_event="SEVERE_CONGESTION",
+        secondary_port="DEHAM",
+        secondary_event="OPERATIONAL_RESTRICTION",
         capacity_multiplier=0.5,
     )
 
-    assert capacities["DEHAM"] == 0
-    assert capacities["NLRTM"] == 5000
-    assert capacities["BEANR"] == 4000
-    assert capacities["DEBRV"] == 3500
+    assert closed_ports == []
+    assert capacities["NLRTM"] == 3000
+    assert capacities["DEHAM"] == 7500
+    assert capacities["BEANR"] == 7500
+    assert capacities["DEBRV"] == 7500
+
+
+def test_compute_world_state_collects_closed_ports_for_total_closure():
+    module = _load_script_module("batch_runner.py")
+
+    closed_ports, capacities = module._compute_world_state(
+        primary_port="DEBRV",
+        primary_event="TOTAL_CLOSURE",
+        secondary_port="",
+        secondary_event="",
+        capacity_multiplier=0.8,
+    )
+
+    assert closed_ports == ["DEBRV"]
+    assert capacities == {
+        "NLRTM": 12000,
+        "BEANR": 12000,
+        "DEHAM": 12000,
+        "DEBRV": 0,
+    }
 
 
 def test_is_retriable_error_detects_transport_and_429():
@@ -45,6 +67,31 @@ def test_is_retriable_error_detects_transport_and_429():
     response = httpx.Response(429, request=request)
     status_error = httpx.HTTPStatusError("rate limited", request=request, response=response)
     assert module._is_retriable_error(status_error) is True
+
+
+def test_schema_columns_match_new_pipeline_contract():
+    module = _load_script_module("batch_runner.py")
+
+    assert module.SCENARIO_COLUMNS == [
+        "run_id",
+        "total_teu",
+        "primary_port",
+        "primary_event",
+        "secondary_port",
+        "secondary_event",
+        "capacity_multiplier",
+        "alert_text",
+    ]
+    assert module.RESULT_COLUMNS == [
+        "run_id",
+        "primary_event",
+        "secondary_event",
+        "final_status",
+        "revisions_count",
+        "total_time_sec",
+        "llm_token_count",
+        "final_json",
+    ]
 
 
 def test_extract_token_count_sums_usage_metadata_when_present():
@@ -65,7 +112,7 @@ def test_extract_token_count_sums_usage_metadata_when_present():
     assert module._extract_token_count(state) == 16
 
 
-def test_serialize_final_json_dump_handles_routing_parameters_model():
+def test_serialize_final_json_handles_routing_parameters_model():
     module = _load_script_module("batch_runner.py")
 
     routing = RoutingParameters(
@@ -74,7 +121,7 @@ def test_serialize_final_json_dump_handles_routing_parameters_model():
         allocations=[PortAllocation(port_code="NLRTM", teu_amount=10000)],
     )
 
-    result = module._serialize_final_json_dump({"routing_parameters": routing})
+    result = module._serialize_final_json({"routing_parameters": routing})
 
     assert '"original_destination": "DEHAM"' in result
     assert '"total_teu_to_reroute": 10000' in result

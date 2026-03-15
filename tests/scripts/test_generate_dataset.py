@@ -30,7 +30,23 @@ def test_build_rows_is_deterministic_and_schema_compliant():
 
     for row in rows_first:
         assert set(row.keys()) == set(module.OUTPUT_COLUMNS)
-        assert row["closed_port"] in set(module.PORT_CHOICES)
+        assert row["primary_port"] in set(module.PORT_CHOICES)
+        assert row["primary_event"] in set(module.EVENT_CHOICES)
         assert 5000 <= int(row["total_teu"]) <= 50000
         assert 0.5 <= float(row["capacity_multiplier"]) <= 1.2
-        assert row["alert_text"].startswith(f"Port of {row['closed_port']} is closed.")
+        secondary_port = str(row["secondary_port"])
+        secondary_event = str(row["secondary_event"])
+        if secondary_port:
+            assert secondary_port in set(module.PORT_CHOICES)
+            assert secondary_port != row["primary_port"]
+            assert secondary_event in set(module.EVENT_CHOICES)
+        else:
+            assert secondary_event == ""
+
+        expected_primary = module.EVENT_TEMPLATES[row["primary_event"]].format(port=row["primary_port"])
+        assert row["alert_text"].startswith(f"{row['total_teu']} TEU must be rerouted. ")
+        assert expected_primary in row["alert_text"]
+
+        if secondary_port:
+            expected_secondary = module.EVENT_TEMPLATES[secondary_event].format(port=secondary_port)
+            assert expected_secondary in row["alert_text"]

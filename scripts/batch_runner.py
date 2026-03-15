@@ -1,7 +1,6 @@
 import argparse
 import csv
 import json
-import math
 import os
 import sys
 import time
@@ -18,19 +17,39 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..",
 _dotenv_path = find_dotenv(usecwd=True) or str(Path(__file__).resolve().parents[1] / ".env")
 load_dotenv(_dotenv_path, override=True)
 
-from agents.graph import graph  # noqa: E402
 from agents.state import GraphState, RoutingParameters, SolverResult  # noqa: E402
 from langchain_core.messages import AIMessage  # noqa: E402
 
 ALL_PORTS = ["NLRTM", "BEANR", "DEHAM", "DEBRV"]
-SCENARIO_COLUMNS = ["run_id", "total_teu", "closed_port", "capacity_multiplier", "alert_text"]
+BASE_CAPACITY = 15000
+EVENT_TOTAL_CLOSURE = "TOTAL_CLOSURE"
+EVENT_SEVERE_CONGESTION = "SEVERE_CONGESTION"
+EVENT_OPERATIONAL_RESTRICTION = "OPERATIONAL_RESTRICTION"
+DISRUPTION_EVENTS = {
+    EVENT_TOTAL_CLOSURE,
+    EVENT_SEVERE_CONGESTION,
+    EVENT_OPERATIONAL_RESTRICTION,
+}
+
+SCENARIO_COLUMNS = [
+    "run_id",
+    "total_teu",
+    "primary_port",
+    "primary_event",
+    "secondary_port",
+    "secondary_event",
+    "capacity_multiplier",
+    "alert_text",
+]
 RESULT_COLUMNS = [
     "run_id",
+    "primary_event",
+    "secondary_event",
     "final_status",
     "revisions_count",
     "total_time_sec",
     "llm_token_count",
-    "final_json_dump",
+    "final_json",
 ]
 
 
@@ -64,6 +83,13 @@ def _is_retriable_error(exc: BaseException) -> bool:
     return False
 
 
+def _get_graph():
+    # Import lazily so helper tests can run without LangGraph dependency installed.
+    from agents.graph import graph  # noqa: WPS433
+
+    return graph
+
+
 @retry(
     retry=retry_if_exception(_is_retriable_error),
     wait=wait_exponential(min=2, max=20),
@@ -72,7 +98,7 @@ def _is_retriable_error(exc: BaseException) -> bool:
 )
 def _invoke_graph_with_retry(initial_state: GraphState, config: dict[str, Any]) -> GraphState:
     try:
-        return graph.invoke(initial_state, config=config)
+        return _get_graph().invoke(initial_state, config=config)
     except Exception as exc:
         if _is_retriable_error(exc):
             raise RetriableGraphInvokeError(str(exc)) from exc
@@ -91,41 +117,51 @@ def _load_scenarios(path: Path) -> list[dict[str, str]]:
     return rows
 
 
-def _fetch_baseline_capacities(client: httpx.Client, base_url: str) -> dict[str, int]:
-    capacities: dict[str, int] = {}
-    for port in ALL_PORTS:
-        url = f"{base_url}/api/v1/pcs/terminals/{port}/status"
-        response = client.get(url, timeout=10.0)
-        response.raise_for_status()
-        payload = response.json()
-        capacities[port] = int(payload.get("availableCapacityTEU", 0))
-    return capacities
-
-
-def _compute_capacities(
-    baseline: dict[str, int],
-    closed_port: str,
+def _compute_world_state(
+    primary_port: str,
+    primary_event: str,
+    secondary_port: str,
+    secondary_event: str,
     capacity_multiplier: float,
-) -> dict[str, int]:
-    capacities: dict[str, int] = {}
-    for port, base_value in baseline.items():
-        if port == closed_port:
+) -> tuple[list[str], dict[str, int]]:
+    capacities = {port: int(BASE_CAPACITY * capacity_multiplier) for port in ALL_PORTS}
+    closed_ports: list[str] = []
+
+    disruptions = [
+        (primary_port.strip().upper(), primary_event.strip().upper()),
+        (secondary_port.strip().upper(), secondary_event.strip().upper()),
+    ]
+    for port, event in disruptions:
+        if not port or not event:
+            continue
+        if port not in ALL_PORTS:
+            raise ValueError(f"Unsupported port code in scenario: {port}")
+        if event not in DISRUPTION_EVENTS:
+            raise ValueError(f"Unsupported disruption event in scenario: {event}")
+
+        if event == EVENT_TOTAL_CLOSURE:
+            if port not in closed_ports:
+                closed_ports.append(port)
             capacities[port] = 0
             continue
-        scaled = math.floor(base_value * capacity_multiplier)
-        capacities[port] = max(0, int(scaled))
-    return capacities
+        if event == EVENT_SEVERE_CONGESTION:
+            capacities[port] = int(BASE_CAPACITY * 0.2)
+            continue
+        if event == EVENT_OPERATIONAL_RESTRICTION:
+            capacities[port] = int(BASE_CAPACITY * 0.5)
+
+    return closed_ports, capacities
 
 
 def _set_world_state(
     client: httpx.Client,
     base_url: str,
-    closed_port: str,
+    closed_ports: list[str],
     capacities: dict[str, int],
 ) -> None:
     url = f"{base_url}/api/v1/admin/set-state"
     payload = {
-        "closed_ports": [closed_port],
+        "closed_ports": closed_ports,
         "capacities": capacities,
     }
     response = client.post(url, json=payload, timeout=15.0)
@@ -163,7 +199,7 @@ def _extract_token_count(final_state: GraphState | dict[str, Any]) -> int:
     return total
 
 
-def _serialize_final_json_dump(final_state: GraphState | dict[str, Any]) -> str:
+def _serialize_final_json(final_state: GraphState | dict[str, Any]) -> str:
     routing = final_state.get("routing_parameters")
     if isinstance(routing, RoutingParameters):
         return json.dumps(routing.model_dump(), sort_keys=True)
@@ -215,25 +251,28 @@ def main() -> None:
     sandbox_api_url = os.getenv("SANDBOX_API_URL", "http://localhost:8001").rstrip("/")
 
     with httpx.Client() as client:
-        baseline_capacities = _fetch_baseline_capacities(client=client, base_url=sandbox_api_url)
-
         total_runs = len(scenarios)
         for index, scenario in enumerate(scenarios, start=1):
             run_id = str(scenario["run_id"]).zfill(3)
             total_teu = int(scenario["total_teu"])
-            closed_port = str(scenario["closed_port"])
+            primary_port = str(scenario["primary_port"])
+            primary_event = str(scenario["primary_event"])
+            secondary_port = str(scenario.get("secondary_port", ""))
+            secondary_event = str(scenario.get("secondary_event", ""))
             capacity_multiplier = float(scenario["capacity_multiplier"])
             alert_text = str(scenario["alert_text"])
 
-            capacities = _compute_capacities(
-                baseline=baseline_capacities,
-                closed_port=closed_port,
+            closed_ports, capacities = _compute_world_state(
+                primary_port=primary_port,
+                primary_event=primary_event,
+                secondary_port=secondary_port,
+                secondary_event=secondary_event,
                 capacity_multiplier=capacity_multiplier,
             )
             _set_world_state(
                 client=client,
                 base_url=sandbox_api_url,
-                closed_port=closed_port,
+                closed_ports=closed_ports,
                 capacities=capacities,
             )
 
@@ -255,7 +294,7 @@ def main() -> None:
             status = "INFEASIBLE"
             revisions = 0
             token_count = 0
-            final_json_dump = "{}"
+            final_json = "{}"
 
             try:
                 final_state = _invoke_graph_with_retry(initial_state=initial_state, config=config)
@@ -264,23 +303,25 @@ def main() -> None:
                     status = "FEASIBLE"
                 revisions = int(final_state.get("revisions_count", 0))
                 token_count = _extract_token_count(final_state)
-                final_json_dump = _serialize_final_json_dump(final_state)
+                final_json = _serialize_final_json(final_state)
             except Exception as exc:
-                final_json_dump = json.dumps({"error": str(exc)})
+                final_json = json.dumps({"error": str(exc)})
 
             elapsed = time.perf_counter() - started_at
             result_row = {
                 "run_id": run_id,
+                "primary_event": primary_event,
+                "secondary_event": secondary_event,
                 "final_status": status,
                 "revisions_count": revisions,
                 "total_time_sec": f"{elapsed:.4f}",
                 "llm_token_count": token_count,
-                "final_json_dump": final_json_dump,
+                "final_json": final_json,
             }
             _append_result_row(results_path=results_path, row=result_row)
 
             print(
-                f"[RUN {index:03d}/{total_runs:03d}] {closed_port} Closed | "
+                f"[RUN {index:03d}/{total_runs:03d}] {primary_port} {primary_event} | "
                 f"{_format_teu_short(total_teu)} TEU | Time: {elapsed:.1f}s | "
                 f"Result: {status} | Revisions: {revisions}"
             )
