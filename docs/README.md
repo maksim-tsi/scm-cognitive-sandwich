@@ -28,5 +28,6 @@ This directory is the repository source of truth. Keep AGENTS concise and keep d
 ## Current Highlights
 
 - Phoenix attribution normalizes to `openinference.project.name` during startup.
+- Phoenix OpenAPI feedback-loop guide is available at `architecture/phoenix-openapi-feedback-loop.md`.
 - Batch pipeline supports gradient disruptions and optional dual-disruption scenarios.
 - Script contracts are covered by tests under `tests/scripts/`.

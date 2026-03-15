@@ -87,6 +87,9 @@ We use YAAM (`Yet Another Agents Memory`) as an external library to maintain the
 
 ## 7. Observability Architecture (OpenTelemetry + Phoenix)
 
+Operational playbook for API-first trace verification and annotation-driven refinement:
+`docs/architecture/phoenix-openapi-feedback-loop.md`.
+
 Tracing initialization is centralized in `src/core/observability.py` and executed by `scripts/run_baseline.py` before graph execution.
 
 ### Startup and resource attribution contract

@@ -5,6 +5,7 @@ This directory documents the technical boundaries and implementation contracts o
 ## Files
 
 - `index.md`: primary architecture guide.
+- `phoenix-openapi-feedback-loop.md`: operational guide for Phoenix OpenAPI trace queries, annotations, and continuous refinement loops.
 
 ## Harness Rule
 
