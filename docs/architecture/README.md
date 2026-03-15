@@ -6,6 +6,11 @@ This directory documents the technical boundaries and implementation contracts o
 
 - `index.md`: primary architecture guide.
 
+## Harness Rule
+
+- Treat this directory as the canonical runtime contract.
+- Execute verification commands from repository `.venv` to keep dependency resolution consistent.
+
 ## What changed recently
 
 - Added explicit OpenTelemetry resource attribution guidance for Phoenix routing.
