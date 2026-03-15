@@ -1,7 +1,19 @@
 import asyncio
 from unittest.mock import patch, MagicMock
-from agents.graph import _build_final_state, _build_metadata, _run_async_from_sync, graph
+from agents.graph import (
+    _build_final_state,
+    _build_metadata,
+    _run_async_from_sync,
+    graph,
+    node_run_solver,
+)
 from agents.state import PortAllocation, RoutingParameters, SolverResult
+
+
+UNKNOWN_PORT_ERROR = (
+    "SOLVER ERROR: Port FRLEH is not recognized in the current network topology. "
+    "Allowed ports are: NLRTM, BEANR, DEHAM, DEBRV."
+)
 
 @patch('agents.graph.get_port_capacities')
 @patch('agents.graph._get_llm')
@@ -55,6 +67,28 @@ def test_graph_execution(mock_consolidate_episode, mock_get_llm, mock_get_capaci
     mock_consolidate_episode.assert_called_once()
     _, call_kwargs = mock_consolidate_episode.call_args
     assert call_kwargs["state"]["agent_id"] == "scm-sandwich-experiment-v1"
+
+
+def test_node_run_solver_records_unknown_port_error_for_repair_feedback():
+    params = RoutingParameters(
+        original_destination="DEHAM",
+        total_teu_to_reroute=10000,
+        allocations=[PortAllocation(port_code="FRLEH", teu_amount=10000)],
+    )
+    state = {
+        "alert_text": "Port closure alert",
+        "port_capacities": {"NLRTM": 6000, "BEANR": 8000, "DEHAM": 9000, "DEBRV": 7000},
+        "routing_parameters": params,
+        "solver_result": None,
+        "solver_error_logs": [],
+        "revisions_count": 0,
+    }
+
+    update = node_run_solver(state)
+
+    assert update["solver_result"].status == "INFEASIBLE"
+    assert update["solver_result"].iis_log == UNKNOWN_PORT_ERROR
+    assert update["solver_error_logs"] == [UNKNOWN_PORT_ERROR]
 
 
 def test_build_final_state_maps_graph_fields_to_yaam_contract():

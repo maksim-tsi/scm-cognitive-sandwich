@@ -6,6 +6,15 @@ from agents.state import RoutingParameters, SolverResult
 
 logger = logging.getLogger(__name__)
 
+ALLOWED_PORTS = ["NLRTM", "BEANR", "DEHAM", "DEBRV"]
+
+
+def _build_unknown_port_error_message(bad_port: str) -> str:
+    return (
+        f"SOLVER ERROR: Port {bad_port} is not recognized in the current network topology. "
+        f"Allowed ports are: {', '.join(ALLOWED_PORTS)}."
+    )
+
 def evaluate_routing_feasibility(params: RoutingParameters, capacities: dict[str, int]) -> SolverResult:
     """
     Builds a Pyomo model to mathematically verify if the LLM-proposed 
@@ -13,6 +22,17 @@ def evaluate_routing_feasibility(params: RoutingParameters, capacities: dict[str
     Uses the SCIP solver.
     Extracts an Irreducible Infeasible Subsystem (IIS) log on failure.
     """
+    unknown_ports = [
+        alloc.port_code
+        for alloc in params.allocations
+        if alloc.port_code not in ALLOWED_PORTS
+    ]
+    if unknown_ports:
+        return SolverResult(
+            status="INFEASIBLE",
+            iis_log=_build_unknown_port_error_message(unknown_ports[0]),
+        )
+
     model = pyo.ConcreteModel()
 
     # Sets
