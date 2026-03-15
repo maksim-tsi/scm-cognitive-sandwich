@@ -37,7 +37,8 @@ def test_graph_execution(mock_consolidate_episode, mock_get_llm, mock_get_capaci
         "routing_parameters": None,
         "solver_result": None,
         "solver_error_logs": [],
-        "revisions_count": 0
+        "revisions_count": 0,
+        "agent_id": "scm-sandwich-experiment-v1",
     }
     
     result_state = graph.invoke(
@@ -51,6 +52,9 @@ def test_graph_execution(mock_consolidate_episode, mock_get_llm, mock_get_capaci
     assert "Conflict detected" in result_state["solver_error_logs"][0]
     assert result_state["routing_parameters"].allocations[0].teu_amount == 6000
     assert result_state["routing_parameters"].allocations[1].teu_amount == 4000
+    mock_consolidate_episode.assert_called_once()
+    _, call_kwargs = mock_consolidate_episode.call_args
+    assert call_kwargs["state"]["agent_id"] == "scm-sandwich-experiment-v1"
 
 
 def test_build_final_state_maps_graph_fields_to_yaam_contract():

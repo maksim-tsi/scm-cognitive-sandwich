@@ -59,10 +59,11 @@ class YAAMClient:
         session_id: str,
         final_state: dict[str, Any],
         metadata: dict[str, Any],
+        agent_id: str = DEFAULT_AGENT_ID,
     ) -> bool:
         payload = {
             "session_id": session_id,
-            "agent_id": DEFAULT_AGENT_ID,
+            "agent_id": agent_id,
             "final_state": final_state,
             "metadata": metadata,
         }

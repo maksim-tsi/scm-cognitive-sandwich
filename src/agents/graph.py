@@ -18,7 +18,7 @@ from agents.prompts import UPSTREAM_SYSTEM_PROMPT, DOWNSTREAM_SYSTEM_PROMPT
 from solver.routing_model import evaluate_routing_feasibility
 from clients.port_sandbox import get_port_capacities
 from memory.checkpointer import create_checkpointer
-from memory.yaam_client import YAAMClient
+from memory.yaam_client import DEFAULT_AGENT_ID, YAAMClient
 from memory import yaam_facade
 
 from langchain_mistralai import ChatMistralAI
@@ -113,12 +113,14 @@ def _build_metadata(state: GraphState) -> dict[str, Any]:
 
 def _consolidate_episode(config: RunnableConfig | None, state: GraphState) -> bool:
     session_id = _extract_session_id(config=config)
+    agent_id = state.get("agent_id") or DEFAULT_AGENT_ID
     client = YAAMClient()
     return _run_async_from_sync(
         client.consolidate_episode(
             session_id=session_id,
             final_state=_build_final_state(state),
             metadata=_build_metadata(state),
+            agent_id=agent_id,
         )
     )
 

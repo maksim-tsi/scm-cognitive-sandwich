@@ -49,7 +49,8 @@ def main():
         "solver_result": None,
         "solver_error_logs": [],
         "revisions_count": 0,
-        "port_capacities": {}
+        "port_capacities": {},
+        "agent_id": "scm-sandwich-v1",
     }
 
     try:
