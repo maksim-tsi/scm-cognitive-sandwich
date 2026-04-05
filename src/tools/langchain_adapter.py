@@ -21,6 +21,19 @@ def _is_pydantic_model(value: Any) -> bool:
     return isinstance(value, type) and issubclass(value, BaseModel)
 
 
+def _compact_description(raw: str, *, fallback: str) -> str:
+    """Keep tool descriptions short to avoid bloating model context."""
+    normalized = (raw or "").strip()
+    if not normalized:
+        return fallback
+
+    first_line = normalized.splitlines()[0].strip()
+    if first_line:
+        return first_line
+
+    return fallback
+
+
 def _find_module_input_model(tool_fn: Callable[..., Any]) -> type[BaseModel] | None:
     module = inspect.getmodule(tool_fn)
     if module is None:
@@ -97,7 +110,10 @@ def load_active_tool_specs() -> list[ToolSpec]:
         if not callable(value):
             continue
         input_model, executor = _infer_input_model_and_executor(value)
-        desc = (inspect.getdoc(value) or "").strip() or f"Deterministic tool: {name}"
+        desc = _compact_description(
+            inspect.getdoc(value) or "",
+            fallback=f"Deterministic tool: {name}",
+        )
         specs.append(ToolSpec(name=name, fn=executor, input_model=input_model, description=desc))
 
     if not specs:
