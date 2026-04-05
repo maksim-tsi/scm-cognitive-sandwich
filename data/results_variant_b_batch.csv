@@ -75,3 +75,6 @@ affected_nodes.0
 cargo_demand
   Input should be a valid integer [type=int_type, input_value={'disrupted_teu': 7500, '...RAL', 'priority': 'LOW'}, input_type=dict]
     For further information visit https://errors.pydantic.dev/2.12/v/int_type"
+incident_001.json,INC-2026-001-NLRTM-CONG,INC-2026-001-NLRTM-CONG,SUCCESS,,0,29.41,
+incident_002.json,INC-2026-002-DEHAM-WEAT,INC-2026-002-DEHAM-WEAT,SUCCESS,,0,31.16,
+incident_003.json,INC-2026-003-BEANR-EQUP,INC-2026-003-BEANR-EQUP,SUCCESS,,0,43.16,
