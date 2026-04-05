@@ -31,6 +31,11 @@ def main() -> None:
     parser.add_argument("--incident-json", required=True, help="Path to IncidentTrigger JSON file.")
     parser.add_argument("--thread-id", default="variant-b-session", help="LangGraph thread id.")
     parser.add_argument("--run-id", default=None, help="Optional run id override.")
+    parser.add_argument(
+        "--demo-clarifying-loop",
+        action="store_true",
+        help="First generation attempt intentionally includes a flawed scenario to demonstrate REJECT loop.",
+    )
     args = parser.parse_args()
 
     assert_no_localhost_services()
@@ -48,6 +53,8 @@ def main() -> None:
         "scenarios": [],
         "judge_verdict": None,
         "judge_feedback": [],
+        "judge_findings": [],
+        "tool_ledger": [],
         "sandbox_results": [],
         "final_report_md": None,
         "fatal_status": None,
@@ -60,6 +67,9 @@ def main() -> None:
     }
 
     graph = get_variant_b_graph()
+
+    if args.demo_clarifying_loop:
+        os.environ["VARIANT_B_DEMO_CLARIFYING_LOOP"] = "true"
 
     print("--- Starting Variant B Execution (stubbed) ---")
     print(f"run_id={run_id} thread_id={args.thread_id}")
@@ -77,6 +87,14 @@ def main() -> None:
                 last_retry = state_update["retry_count"]
                 print(f"  retry_count={last_retry}")
 
+            if node_name == "node_judge_validation":
+                verdict = state_update.get("judge_verdict")
+                if isinstance(verdict, str) and verdict:
+                    print(f"  judge_verdict={verdict}")
+                fb = state_update.get("judge_feedback")
+                if isinstance(fb, list) and fb:
+                    print(f"  judge_feedback={fb[-1]}")
+
             if isinstance(state_update.get("fatal_status"), str):
                 fatal_status = state_update["fatal_status"]
                 print(f"  fatal_status={fatal_status}")
@@ -90,4 +108,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

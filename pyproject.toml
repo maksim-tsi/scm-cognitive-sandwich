@@ -25,6 +25,8 @@ dependencies = [
     "opentelemetry-instrumentation-httpx",
     "python-dotenv",
     "tenacity",
+    "pulp>=3.3.0",
+    "langchain-openrouter>=0.2.1",
 ]
 
 [project.optional-dependencies]

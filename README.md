@@ -50,6 +50,9 @@ Environment variables quick reference:
 | `GOOGLE_API_KEY` | One LLM key required | Use local secret value; do not commit |
 | `MISTRAL_API_KEY` | One LLM key required | Use local secret value; do not commit |
 | `GROQ_API_KEY` | One LLM key required | Use local secret value; do not commit |
+| `OPENROUTER_API_KEY` | Required (Variant B) | OpenRouter API key for Exec Plan 2 |
+| `LLM_MODEL` | Required (Variant B) | Example: `x-ai/grok-4.1-fast` |
+| `OPENROUTER_BASE_URL` | Optional | Example: `https://openrouter.ai/api/v1` |
 
 Safe copy/paste starter block (placeholder-only for secrets):
 
@@ -66,6 +69,11 @@ OTEL_RESOURCE_ATTRIBUTES=openinference.project.name=scm-cognitive-sandwich-idwl,
 # GOOGLE_API_KEY=<set-locally>
 # MISTRAL_API_KEY=<set-locally>
 # GROQ_API_KEY=<set-locally>
+
+# OpenRouter (Variant B / Exec Plan 2)
+# OPENROUTER_API_KEY=<set-locally>
+# LLM_MODEL=x-ai/grok-4.1-fast
+# OPENROUTER_BASE_URL=https://openrouter.ai/api/v1
 ```
 
 Important:
