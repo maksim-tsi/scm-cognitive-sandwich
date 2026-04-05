@@ -12,6 +12,12 @@ from agents.variant_b.state import (
     JudgeSemanticVerdict,
     VariantBState,
 )
+from schemas.sandbox import (
+    SandboxExecutionOutput,
+    ScenarioExecutionResult,
+    ScenarioMetrics,
+    SimulationEvent,
+)
 
 T = TypeVar("T")
 
@@ -43,6 +49,7 @@ def _initial_state(incident: IncidentTrigger) -> VariantBState:
         "incident": incident,
         "run_id": incident.incident_id,
         "retry_count": 0,
+        "thread_id": "test-thread",
         "incident_context": {},
         "scenarios": [],
         "judge_verdict": None,
@@ -52,12 +59,20 @@ def _initial_state(incident: IncidentTrigger) -> VariantBState:
         "sandbox_results": [],
         "final_report_md": None,
         "fatal_status": None,
+        "embedding_model": None,
+        "embedding_latency_ms": None,
+        "pareto_frontier_ids": [],
+        "yaam_l3_status": None,
+        "yaam_l4_status": None,
         "agent_id": "scm-sandwich-variantb-test",
     }
 
 
 def test_variant_b_accept_path_runs_to_synthesize(monkeypatch) -> None:
     monkeypatch.delenv("REDIS_URL", raising=False)
+    monkeypatch.setenv("SANDBOX_API_URL", "http://sandbox.test")
+    monkeypatch.setenv("QDRANT_COLLECTION", "test-qdrant")
+    monkeypatch.setenv("TYPESENSE_COLLECTION", "test-typesense")
 
     incident = IncidentTrigger(
         incident_id="inc-1",
@@ -102,22 +117,66 @@ def test_variant_b_accept_path_runs_to_synthesize(monkeypatch) -> None:
 
     # Patch generator and judge separately by intercepting in module under test.
     import agents.variant_b.graph as graph_mod  # noqa: WPS433
+    import core.sandbox_client as sandbox_client_mod  # noqa: WPS433
+
+    def _fake_execute_simulation(*args: Any, **kwargs: Any) -> SandboxExecutionOutput:  # noqa: ARG001
+        metrics = ScenarioMetrics(
+            total_lead_time_hours=120.0,
+            average_queue_time_hours=10.0,
+            sla_breach_probability=0.05,
+            total_cost_usd=50000.0,
+            penalty_cost_usd=0.0,
+            max_yard_utilization_pct=80.0,
+            bottleneck_severity=0.2,
+        )
+        return SandboxExecutionOutput(
+            run_id="inc-1",
+            simulated_scenarios=[
+                ScenarioExecutionResult(
+                    scenario_id="inc-1-S1",
+                    execution_status="SUCCESS",
+                    metrics=metrics,
+                    critical_events=[
+                        SimulationEvent(timestamp=0.0, event_type="VERIFY", details="ok"),
+                    ],
+                    failure_reason=None,
+                ),
+                ScenarioExecutionResult(
+                    scenario_id="inc-1-S2",
+                    execution_status="SUCCESS",
+                    metrics=metrics,
+                    critical_events=[],
+                    failure_reason=None,
+                ),
+                ScenarioExecutionResult(
+                    scenario_id="inc-1-S3",
+                    execution_status="SUCCESS",
+                    metrics=metrics,
+                    critical_events=[],
+                    failure_reason=None,
+                ),
+            ],
+        )
 
     monkeypatch.setattr(graph_mod, "get_openrouter_chat", _fake_openrouter_chat)
     monkeypatch.setattr(graph_mod, "build_langchain_tools", lambda: [])
     monkeypatch.setattr(graph_mod, "resolve_tool_specs_by_name", lambda: {})
     monkeypatch.setattr(graph_mod, "_pass1_deterministic_checks", lambda s: (True, [], []))
+    monkeypatch.setattr(sandbox_client_mod, "execute_simulation", _fake_execute_simulation)
+    monkeypatch.setattr(graph_mod, "embed_text", lambda *a, **k: ([0.0] * 4096, 1.0))
 
     graph = get_variant_b_graph()
     final_state = graph.invoke(
-        _initial_state(incident),
+        _initial_state(incident) | {"thread_id": "test-variantb-accept"},
         config={"recursion_limit": 50, "configurable": {"thread_id": "test-variantb-accept"}},
     )
 
     assert final_state["fatal_status"] is None
     assert final_state["judge_verdict"] == "ACCEPT"
     assert isinstance(final_state["final_report_md"], str)
-    assert "Variant B Report (Stub)" in final_state["final_report_md"]
+    assert "# Variant B Report" in final_state["final_report_md"]
+    assert "## Pareto Frontier" in final_state["final_report_md"]
+    assert isinstance(final_state["embedding_latency_ms"], (int, float))
 
 
 def test_variant_b_reject_path_triggers_fatal_circuit_breaker(monkeypatch) -> None:

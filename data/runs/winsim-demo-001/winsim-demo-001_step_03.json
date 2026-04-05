@@ -1,0 +1,116 @@
+{
+  "node": "node_judge_validation",
+  "run_id": "winsim-demo-001",
+  "state": {
+    "agent_id": "scm-sandwich-variantb-v1",
+    "embedding_latency_ms": null,
+    "embedding_model": null,
+    "fatal_status": null,
+    "final_report_md": null,
+    "incident": {
+      "affected_nodes": [
+        "DEHAM"
+      ],
+      "cargo_demand": 10000,
+      "incident_id": "winsim-demo-001",
+      "raw_alert_text": "WinterSim demo incident: Port of Hamburg (DEHAM) is closed due to storm surge. Reroute 10,000 TEU."
+    },
+    "incident_context": {
+      "affected_nodes": [
+        "DEHAM"
+      ],
+      "cargo_demand": 10000,
+      "forbidden_ports": [
+        "DEHAM"
+      ],
+      "incident_id": "winsim-demo-001",
+      "port_capacities": {
+        "BEANR": 15000,
+        "DEBRV": 10000,
+        "DEHAM": 12000,
+        "NLRTM": 25000
+      },
+      "raw_alert_text": "WinterSim demo incident: Port of Hamburg (DEHAM) is closed due to storm surge. Reroute 10,000 TEU."
+    },
+    "judge_feedback": [
+      "Ensure allocations sum EXACTLY to 10000 TEU in winsim-demo-001-S1."
+    ],
+    "judge_findings": [
+      "MASS_BALANCE(winsim-demo-001-S1): allocations sum 9000 != cargo_demand 10000."
+    ],
+    "judge_verdict": "REJECT",
+    "pareto_frontier_ids": [],
+    "retry_count": 1,
+    "run_id": "winsim-demo-001",
+    "sandbox_results": [],
+    "scenarios": [
+      {
+        "allocations": [
+          {
+            "port_code": "NLRTM",
+            "teu_amount": 6000
+          },
+          {
+            "port_code": "BEANR",
+            "teu_amount": 3000
+          }
+        ],
+        "claimed_metrics": {},
+        "claimed_metrics_evidence": {},
+        "rationale": "Intentionally under-allocates TEU to primary alternatives for demo mass balance violation testing.",
+        "revision": 0,
+        "scenario_id": "winsim-demo-001-S1",
+        "title": "winsim-demo-001-S1",
+        "tool_calls": []
+      },
+      {
+        "allocations": [
+          {
+            "port_code": "NLRTM",
+            "teu_amount": 4000
+          },
+          {
+            "port_code": "BEANR",
+            "teu_amount": 3000
+          },
+          {
+            "port_code": "DEBRV",
+            "teu_amount": 3000
+          }
+        ],
+        "claimed_metrics": {},
+        "claimed_metrics_evidence": {},
+        "rationale": "Diversifies cargo across the three main alternative ports with balanced capacities to spread risk.",
+        "revision": 0,
+        "scenario_id": "winsim-demo-001-S2",
+        "title": "winsim-demo-001-S2",
+        "tool_calls": []
+      },
+      {
+        "allocations": [
+          {
+            "port_code": "NLRTM",
+            "teu_amount": 5000
+          },
+          {
+            "port_code": "BEANR",
+            "teu_amount": 5000
+          }
+        ],
+        "claimed_metrics": {},
+        "claimed_metrics_evidence": {},
+        "rationale": "Concentrates allocation on the two highest-capacity ports closest to Hamburg for minimal rerouting distance.",
+        "revision": 0,
+        "scenario_id": "winsim-demo-001-S3",
+        "title": "winsim-demo-001-S3",
+        "tool_calls": []
+      }
+    ],
+    "thread_id": "variantb-demo",
+    "tool_ledger": [],
+    "yaam_l3_status": null,
+    "yaam_l4_status": null
+  },
+  "step": 3,
+  "thread_id": "variantb-demo"
+}

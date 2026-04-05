@@ -1,7 +1,7 @@
 # Exec Plan 1: Core Variant B State & Graph Skeleton (P0)
 
 - **Date**: 2026-04-05
-- **Status**: Active
+- **Status**: Completed
 - **Target**: Variant B (MVP) readiness scaffolding per RFC-001/RFC-002/RFC-004 (structure-only; mocked execution)
 
 ## Objective

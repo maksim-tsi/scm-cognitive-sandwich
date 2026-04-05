@@ -84,6 +84,7 @@ class VariantBState(TypedDict):
     incident: IncidentTrigger
     run_id: str
     retry_count: int
+    thread_id: str
 
     incident_context: dict[str, Any]
     scenarios: list[dict[str, Any]]
@@ -96,6 +97,12 @@ class VariantBState(TypedDict):
     sandbox_results: list[dict[str, Any]]
     final_report_md: str | None
     fatal_status: str | None
+
+    embedding_model: str | None
+    embedding_latency_ms: float | None
+    pareto_frontier_ids: list[str]
+    yaam_l3_status: str | None
+    yaam_l4_status: str | None
 
     agent_id: NotRequired[str]
 
@@ -104,6 +111,7 @@ class VariantBStateUpdate(TypedDict, total=False):
     incident: IncidentTrigger
     run_id: str
     retry_count: int
+    thread_id: str
 
     incident_context: dict[str, Any]
     scenarios: list[dict[str, Any]]
@@ -116,5 +124,11 @@ class VariantBStateUpdate(TypedDict, total=False):
     sandbox_results: list[dict[str, Any]]
     final_report_md: str | None
     fatal_status: str | None
+
+    embedding_model: str | None
+    embedding_latency_ms: float | None
+    pareto_frontier_ids: list[str]
+    yaam_l3_status: str | None
+    yaam_l4_status: str | None
 
     agent_id: str

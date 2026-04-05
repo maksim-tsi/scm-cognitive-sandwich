@@ -37,5 +37,13 @@ A full end-to-end run that:
 - Quality gates: `ruff check .`, `python -m mypy src`, `python -m pytest`.
 
 ## Maintenance Log
-- (fill in as changes land)
-
+- 2026-04-05:
+  - Implemented Phase 0 component verification scripts:
+    - `scripts/verify_sandbox.py` (strict schema parse via `src/schemas/sandbox.py`)
+    - `scripts/verify_embeddings.py` (Qwen3 4096-d embedding + `embedding_latency_ms`)
+    - `scripts/verify_yaam.py` (Qdrant + Typesense REST connectivity and collection readiness)
+  - Implemented real Sandbox client `src/core/sandbox_client.py` and integrated into Variant B `node_execute_sandbox`.
+  - Implemented OpenRouter embeddings client `src/llm/openrouter_embeddings.py` and recorded `embedding_latency_ms` in Episode metadata + JSON dumps.
+  - Implemented lightweight YAAM adapters `src/memory/adapters/qdrant_http.py` and `src/memory/adapters/typesense_http.py`, plus facade wrappers `YAAMFacade.l3_upsert_episode()` and `YAAMFacade.l4_upsert_document()`.
+  - Implemented RFC-004 open science dumps under `data/runs/<run_id>/` and Phoenix span ingestion verification in `scripts/run_variant_b.py`.
+  - Validated: `./.venv/bin/ruff check .`, `./.venv/bin/python -m mypy src`, `./.venv/bin/python -m pytest`.

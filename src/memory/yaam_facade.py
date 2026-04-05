@@ -22,6 +22,8 @@ from dataclasses import dataclass
 from typing import Coroutine
 from typing import Any, cast
 
+from memory.models import Episode, KnowledgeDocument
+
 
 def _run_awaitable(value: Awaitable[Any]) -> Any:
     return asyncio.run(cast(Coroutine[Any, Any, Any], value))
@@ -156,6 +158,42 @@ class YAAMFacade:
 
         raise RuntimeError("Qdrant client is injected but does not implement upsert().")
 
+    def l3_upsert_episode(
+        self,
+        *,
+        episode: Episode,
+        embedding: list[float],
+        collection: str,
+    ) -> None:
+        """Upsert a single Episode into Qdrant (L3) using the configured adapter.
+
+        Enforces 4096-dimensional vectors (Qwen3 embeddings).
+        """
+        if len(embedding) != 4096:
+            raise ValueError(f"Episode embedding must be 4096-d, got {len(embedding)}.")
+
+        vector_payload: list[float] | dict[str, list[float]] = embedding
+        qdrant = self._qdrant
+        get_vector_params = getattr(qdrant, "get_vector_params", None) if qdrant is not None else None
+        if callable(get_vector_params):
+            size, name = get_vector_params(collection=collection)
+            if int(size) != 4096:
+                raise ValueError(
+                    f"Qdrant collection vector size mismatch: expected 4096, got {int(size)}."
+                )
+            if name is not None:
+                vector_payload = {str(name): embedding}
+
+        payload = episode.to_qdrant_payload()
+        payload["metadata"] = dict(episode.metadata)
+
+        point = {
+            "id": episode.episode_id,
+            "vector": vector_payload,
+            "payload": payload,
+        }
+        self.l3_upsert(collection, points=[point])
+
     def l3_search(
         self,
         collection: str,
@@ -195,6 +233,10 @@ class YAAMFacade:
             return
 
         raise RuntimeError("Typesense client is injected but does not implement upsert().")
+
+    def l4_upsert_document(self, *, doc: KnowledgeDocument, collection: str) -> None:
+        """Upsert a KnowledgeDocument into Typesense (L4) using the configured adapter."""
+        self.l4_upsert(collection, document=doc.to_typesense_document())
 
     def l4_search(self, collection: str, query: str, *, limit: int = 10) -> list[dict[str, Any]]:
         if self._typesense is None:
