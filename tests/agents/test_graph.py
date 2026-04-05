@@ -1,4 +1,5 @@
 import asyncio
+import uuid
 from unittest.mock import patch, MagicMock
 from agents.graph import (
     _build_final_state,
@@ -55,9 +56,11 @@ def test_graph_execution(mock_consolidate_episode, mock_get_llm, mock_get_capaci
         "agent_id": "scm-sandwich-experiment-v1",
     }
     
+    thread_id = f"test-session-{uuid.uuid4()}"
+
     result_state = graph.invoke(
         initial_state,
-        config={"recursion_limit": 10, "configurable": {"thread_id": "test-session"}},
+        config={"recursion_limit": 10, "configurable": {"thread_id": thread_id}},
     )
     
     assert result_state["solver_result"].status == "FEASIBLE"

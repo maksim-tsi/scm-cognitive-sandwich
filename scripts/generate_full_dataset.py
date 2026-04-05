@@ -1,6 +1,5 @@
 import json
 import random
-import uuid
 from datetime import datetime, timedelta
 import os
 
