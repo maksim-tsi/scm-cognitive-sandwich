@@ -4,16 +4,9 @@
   "event_type": "INFRASTRUCTURE_FAILURE",
   "severity_level": "L1_SEVERE_CONGESTION",
   "affected_nodes": [
-    {
-      "port_code": "MYPKG",
-      "impact_type": "CAPACITY_DROP"
-    }
+    "MYPKG"
   ],
-  "cargo_demand": {
-    "disrupted_teu": 10522,
-    "cargo_type": "REEFER",
-    "priority": "HIGH"
-  },
+  "cargo_demand": 10522,
   "estimated_duration_hours": 24,
   "raw_alert_text": "Major fault in the newly installed shore power (cold ironing) infrastructure at Hamburg (MYPKG) Container Terminal. Vessels requiring shore power to meet EU emissions regulations cannot berth. 9,000 TEU affected. Route must be optimized for ports with operational shore power capabilities to avoid environmental fines."
 }

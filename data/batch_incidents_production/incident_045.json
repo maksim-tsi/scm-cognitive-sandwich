@@ -4,16 +4,9 @@
   "event_type": "WEATHER_DELAY",
   "severity_level": "L0_TOTAL_CLOSURE",
   "affected_nodes": [
-    {
-      "port_code": "NLRTM",
-      "impact_type": "TOTAL_CLOSURE"
-    }
+    "NLRTM"
   ],
-  "cargo_demand": {
-    "disrupted_teu": 9623,
-    "cargo_type": "HAZMAT",
-    "priority": "MEDIUM"
-  },
+  "cargo_demand": 9623,
   "estimated_duration_hours": 96,
   "raw_alert_text": "Typhoon warning escalated to Level Red. Port of Shanghai (NLRTM) has suspended all vessel operations and gate movements. 15,000 TEU bound for the Asia-Europe loop are trapped offshore. Orchestrator must evaluate buffering strategies (DBR) to prevent bullwhip effect on destination ports in Northern Europe."
 }

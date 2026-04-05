@@ -4,16 +4,9 @@
   "event_type": "EQUIPMENT_FAILURE",
   "severity_level": "L2_MODERATE_DELAY",
   "affected_nodes": [
-    {
-      "port_code": "BEANR",
-      "impact_type": "CAPACITY_DROP"
-    }
+    "BEANR"
   ],
-  "cargo_demand": {
-    "disrupted_teu": 8500,
-    "cargo_type": "HAZMAT",
-    "priority": "HIGH"
-  },
+  "cargo_demand": 8500,
   "estimated_duration_hours": 120,
   "raw_alert_text": "Automation systems failure at Antwerp's Europa Terminal (BEANR) during ongoing hyper-efficiency upgrades. STS crane productivity dropped by 45%. 8,500 TEU of HAZMAT cargo scheduled for unloading. Rerouting options must account for strict European HAZMAT handling certifications and maximum draft limits of the Scheldt estuary."
 }

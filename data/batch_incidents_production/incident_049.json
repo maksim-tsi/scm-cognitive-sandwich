@@ -4,16 +4,9 @@
   "event_type": "LABOR_STRIKE",
   "severity_level": "L1_SEVERE_CONGESTION",
   "affected_nodes": [
-    {
-      "port_code": "DEBRV",
-      "impact_type": "CAPACITY_DROP"
-    }
+    "DEBRV"
   ],
-  "cargo_demand": {
-    "disrupted_teu": 15319,
-    "cargo_type": "REEFER",
-    "priority": "HIGH"
-  },
+  "cargo_demand": 15319,
   "estimated_duration_hours": 96,
   "raw_alert_text": "Unplanned 'work-to-rule' strike by crane operators at Port of Singapore (DEBRV). The primary transshipment constraint (Drum) is compromised. Average container dwell time has spiked from 9.5 days to over 14 days. 18,000 TEU network WIP needs redistribution to MYPKG or MYTPP to prevent starvation of the Asia-Europe service loop."
 }

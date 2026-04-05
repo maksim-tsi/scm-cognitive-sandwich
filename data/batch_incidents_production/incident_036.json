@@ -4,16 +4,9 @@
   "event_type": "CONGESTION_SPIKE",
   "severity_level": "L1_SEVERE_CONGESTION",
   "affected_nodes": [
-    {
-      "port_code": "MYPKG",
-      "impact_type": "CAPACITY_DROP"
-    }
+    "MYPKG"
   ],
-  "cargo_demand": {
-    "disrupted_teu": 7387,
-    "cargo_type": "HAZMAT",
-    "priority": "LOW"
-  },
+  "cargo_demand": 7387,
   "estimated_duration_hours": 48,
   "raw_alert_text": "Critical congestion at Port of Rotterdam (MYPKG) Maasvlakte 2. Despite deep-water advantages, terminal yard density has exceeded 92% due to cascading delays. Inland barge and rail connections are severely backlogged. 12,000 TEU en route require dynamic rerouting. Note: Alternate port must support ULCV draft."
 }

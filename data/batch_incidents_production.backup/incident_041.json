@@ -1,0 +1,19 @@
+{
+  "incident_id": "INC-2026-041-MYTPP-CONG",
+  "timestamp": "2026-06-05T03:00:00Z",
+  "event_type": "CONGESTION_SPIKE",
+  "severity_level": "L2_MODERATE_DELAY",
+  "affected_nodes": [
+    {
+      "port_code": "MYTPP",
+      "impact_type": "CAPACITY_DROP"
+    }
+  ],
+  "cargo_demand": {
+    "disrupted_teu": 11219,
+    "cargo_type": "GENERAL",
+    "priority": "MEDIUM"
+  },
+  "estimated_duration_hours": 168,
+  "raw_alert_text": "Spillover congestion from Singapore has overwhelmed Port Klang (MYTPP). Yard utilization is at 98%, causing severe bottlenecks for truck turn times. 7,500 TEU of low-priority general cargo is delayed. Orchestrator should evaluate anchoring offshore vs slow-steaming to destination to minimize penalty costs."
+}

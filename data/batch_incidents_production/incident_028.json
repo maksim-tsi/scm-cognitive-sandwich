@@ -4,16 +4,9 @@
   "event_type": "LABOR_STRIKE",
   "severity_level": "L0_TOTAL_CLOSURE",
   "affected_nodes": [
-    {
-      "port_code": "DEHAM",
-      "impact_type": "TOTAL_CLOSURE"
-    }
+    "DEHAM"
   ],
-  "cargo_demand": {
-    "disrupted_teu": 6871,
-    "cargo_type": "HAZMAT",
-    "priority": "CRITICAL"
-  },
+  "cargo_demand": 6871,
   "estimated_duration_hours": 96,
   "raw_alert_text": "Flash strike by customs and agricultural inspectors at Antwerp (DEHAM). All HAZMAT and regulated cargo processing frozen. 11,500 TEU of chemical imports halted. Customer strict constraint: Cargo cannot be diverted to non-EU ports. Find alternate routing via NLRTM or DEBRV with available HAZMAT yard capacity."
 }

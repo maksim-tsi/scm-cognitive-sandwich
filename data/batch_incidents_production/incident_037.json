@@ -4,16 +4,9 @@
   "event_type": "LABOR_STRIKE",
   "severity_level": "L1_SEVERE_CONGESTION",
   "affected_nodes": [
-    {
-      "port_code": "SGSIN",
-      "impact_type": "CAPACITY_DROP"
-    }
+    "SGSIN"
   ],
-  "cargo_demand": {
-    "disrupted_teu": 4624,
-    "cargo_type": "GENERAL",
-    "priority": "CRITICAL"
-  },
+  "cargo_demand": 4624,
   "estimated_duration_hours": 24,
   "raw_alert_text": "Unplanned 'work-to-rule' strike by crane operators at Port of Singapore (SGSIN). The primary transshipment constraint (Drum) is compromised. Average container dwell time has spiked from 9.5 days to over 14 days. 18,000 TEU network WIP needs redistribution to MYPKG or MYTPP to prevent starvation of the Asia-Europe service loop."
 }

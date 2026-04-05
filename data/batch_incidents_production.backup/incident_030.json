@@ -1,0 +1,19 @@
+{
+  "incident_id": "INC-2026-030-DEBRV-EQUI",
+  "timestamp": "2026-05-30T11:00:00Z",
+  "event_type": "EQUIPMENT_FAILURE",
+  "severity_level": "L2_MODERATE_DELAY",
+  "affected_nodes": [
+    {
+      "port_code": "DEBRV",
+      "impact_type": "CAPACITY_DROP"
+    }
+  ],
+  "cargo_demand": {
+    "disrupted_teu": 15463,
+    "cargo_type": "GENERAL",
+    "priority": "CRITICAL"
+  },
+  "estimated_duration_hours": 240,
+  "raw_alert_text": "Automation systems failure at Antwerp's Europa Terminal (DEBRV) during ongoing hyper-efficiency upgrades. STS crane productivity dropped by 45%. 8,500 TEU of HAZMAT cargo scheduled for unloading. Rerouting options must account for strict European HAZMAT handling certifications and maximum draft limits of the Scheldt estuary."
+}

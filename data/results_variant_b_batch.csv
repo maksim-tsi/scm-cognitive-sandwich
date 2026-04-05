@@ -5,3 +5,73 @@ cargo_demand
     For further information visit https://errors.pydantic.dev/2.12/v/missing"
 incident_nominal_001.json,batch-demo-001,batch-demo-001,SUCCESS,,0,28.65,
 incident_stress_002.json,batch-demo-002,batch-demo-002,SUCCESS,,0,28.59,
+incident_001.json,incident_001,incident_001,FATAL_VALIDATION,,0,0.00,"ValidationError: 2 validation errors for IncidentTrigger
+affected_nodes.0
+  Input should be a valid string [type=string_type, input_value={'port_code': 'NLRTM', 'i..._type': 'CAPACITY_DROP'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+cargo_demand
+  Input should be a valid integer [type=int_type, input_value={'disrupted_teu': 12000, ...AL', 'priority': 'HIGH'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/int_type"
+incident_002.json,incident_002,incident_002,FATAL_VALIDATION,,0,0.00,"ValidationError: 2 validation errors for IncidentTrigger
+affected_nodes.0
+  Input should be a valid string [type=string_type, input_value={'port_code': 'DEHAM', 'i..._type': 'TOTAL_CLOSURE'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+cargo_demand
+  Input should be a valid integer [type=int_type, input_value={'disrupted_teu': 4500, '... 'priority': 'CRITICAL'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/int_type"
+incident_003.json,incident_003,incident_003,FATAL_VALIDATION,,0,0.00,"ValidationError: 2 validation errors for IncidentTrigger
+affected_nodes.0
+  Input should be a valid string [type=string_type, input_value={'port_code': 'BEANR', 'i..._type': 'CAPACITY_DROP'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+cargo_demand
+  Input should be a valid integer [type=int_type, input_value={'disrupted_teu': 8500, '...AT', 'priority': 'HIGH'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/int_type"
+incident_004.json,incident_004,incident_004,FATAL_VALIDATION,,0,0.00,"ValidationError: 2 validation errors for IncidentTrigger
+affected_nodes.0
+  Input should be a valid string [type=string_type, input_value={'port_code': 'SGSIN', 'i..._type': 'CAPACITY_DROP'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+cargo_demand
+  Input should be a valid integer [type=int_type, input_value={'disrupted_teu': 18000, ...', 'priority': 'MEDIUM'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/int_type"
+incident_005.json,incident_005,incident_005,FATAL_VALIDATION,,0,0.00,"ValidationError: 2 validation errors for IncidentTrigger
+affected_nodes.0
+  Input should be a valid string [type=string_type, input_value={'port_code': 'GBFXT', 'i..._type': 'CAPACITY_DROP'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+cargo_demand
+  Input should be a valid integer [type=int_type, input_value={'disrupted_teu': 3200, '...', 'priority': 'MEDIUM'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/int_type"
+incident_006.json,incident_006,incident_006,FATAL_VALIDATION,,0,0.00,"ValidationError: 2 validation errors for IncidentTrigger
+affected_nodes.0
+  Input should be a valid string [type=string_type, input_value={'port_code': 'MYTPP', 'i..._type': 'TOTAL_CLOSURE'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+cargo_demand
+  Input should be a valid integer [type=int_type, input_value={'disrupted_teu': 6000, '... 'priority': 'CRITICAL'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/int_type"
+incident_007.json,incident_007,incident_007,FATAL_VALIDATION,,0,0.00,"ValidationError: 2 validation errors for IncidentTrigger
+affected_nodes.0
+  Input should be a valid string [type=string_type, input_value={'port_code': 'CNSHA', 'i..._type': 'TOTAL_CLOSURE'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+cargo_demand
+  Input should be a valid integer [type=int_type, input_value={'disrupted_teu': 15000, ...AL', 'priority': 'HIGH'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/int_type"
+incident_008.json,incident_008,incident_008,FATAL_VALIDATION,,0,0.00,"ValidationError: 2 validation errors for IncidentTrigger
+affected_nodes.0
+  Input should be a valid string [type=string_type, input_value={'port_code': 'DEHAM', 'i..._type': 'CAPACITY_DROP'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+cargo_demand
+  Input should be a valid integer [type=int_type, input_value={'disrupted_teu': 9000, '...', 'priority': 'MEDIUM'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/int_type"
+incident_009.json,incident_009,incident_009,FATAL_VALIDATION,,0,0.00,"ValidationError: 2 validation errors for IncidentTrigger
+affected_nodes.0
+  Input should be a valid string [type=string_type, input_value={'port_code': 'BEANR', 'i..._type': 'TOTAL_CLOSURE'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+cargo_demand
+  Input should be a valid integer [type=int_type, input_value={'disrupted_teu': 11500, ... 'priority': 'CRITICAL'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/int_type"
+incident_010.json,incident_010,incident_010,FATAL_VALIDATION,,0,0.00,"ValidationError: 2 validation errors for IncidentTrigger
+affected_nodes.0
+  Input should be a valid string [type=string_type, input_value={'port_code': 'MYPKG', 'i..._type': 'CAPACITY_DROP'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+cargo_demand
+  Input should be a valid integer [type=int_type, input_value={'disrupted_teu': 7500, '...RAL', 'priority': 'LOW'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/int_type"

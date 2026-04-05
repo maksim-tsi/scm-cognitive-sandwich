@@ -1,0 +1,19 @@
+{
+  "incident_id": "INC-2026-001-NLRTM-CONG",
+  "timestamp": "2026-04-10T08:00:00Z",
+  "event_type": "CONGESTION_SPIKE",
+  "severity_level": "L1_SEVERE_CONGESTION",
+  "affected_nodes": [
+    {
+      "port_code": "NLRTM",
+      "impact_type": "CAPACITY_DROP"
+    }
+  ],
+  "cargo_demand": {
+    "disrupted_teu": 12000,
+    "cargo_type": "GENERAL",
+    "priority": "HIGH"
+  },
+  "estimated_duration_hours": 96,
+  "raw_alert_text": "Critical congestion at Port of Rotterdam (NLRTM) Maasvlakte 2. Despite deep-water advantages, terminal yard density has exceeded 92% due to cascading delays. Inland barge and rail connections are severely backlogged. 12,000 TEU en route require dynamic rerouting. Note: Alternate port must support ULCV draft."
+}

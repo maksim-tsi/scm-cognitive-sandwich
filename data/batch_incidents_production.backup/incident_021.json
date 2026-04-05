@@ -1,0 +1,19 @@
+{
+  "incident_id": "INC-2026-021-DEBRV-INFR",
+  "timestamp": "2026-06-02T16:00:00Z",
+  "event_type": "INFRASTRUCTURE_FAILURE",
+  "severity_level": "L0_TOTAL_CLOSURE",
+  "affected_nodes": [
+    {
+      "port_code": "DEBRV",
+      "impact_type": "TOTAL_CLOSURE"
+    }
+  ],
+  "cargo_demand": {
+    "disrupted_teu": 3424,
+    "cargo_type": "GENERAL",
+    "priority": "HIGH"
+  },
+  "estimated_duration_hours": 96,
+  "raw_alert_text": "Catastrophic power grid failure at Tanjung Pelepas (DEBRV) affecting the dedicated reefer terminal blocks. Backup generators failing. 6,000 TEU of perishable goods approaching. Immediate diversion to SGSIN or MYPKG mandated. High risk of complete cargo spoilage if not plugged in within 36 hours."
+}

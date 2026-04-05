@@ -4,16 +4,9 @@
   "event_type": "LABOR_STRIKE",
   "severity_level": "L1_SEVERE_CONGESTION",
   "affected_nodes": [
-    {
-      "port_code": "MYTPP",
-      "impact_type": "CAPACITY_DROP"
-    }
+    "MYTPP"
   ],
-  "cargo_demand": {
-    "disrupted_teu": 6540,
-    "cargo_type": "HAZMAT",
-    "priority": "HIGH"
-  },
+  "cargo_demand": 6540,
   "estimated_duration_hours": 168,
   "raw_alert_text": "Unplanned 'work-to-rule' strike by crane operators at Port of Singapore (MYTPP). The primary transshipment constraint (Drum) is compromised. Average container dwell time has spiked from 9.5 days to over 14 days. 18,000 TEU network WIP needs redistribution to MYPKG or MYTPP to prevent starvation of the Asia-Europe service loop."
 }
