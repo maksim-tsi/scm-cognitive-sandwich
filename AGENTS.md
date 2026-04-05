@@ -11,7 +11,7 @@ This file is a routing map. Keep it concise and defer deep details to `/docs`.
 
 ## Workflow Loop
 1. Discover: read task + relevant docs.
-2. Plan: create/update plan in `/docs/exec-plans/active/` for complex work.
+2. Plan: create/update plan in `/docs/exec-plans/` for complex work.
 3. Execute: implement code and tests.
 4. Validate: pass lint, typing, and tests.
 5. Document: update `/docs` when behavior/contracts change.
@@ -21,4 +21,5 @@ This file is a routing map. Keep it concise and defer deep details to `/docs`.
 - `/docs/architecture/index.md`: system boundaries, LangGraph, solver, memory, observability, and runtime harness.
 - `/docs/domain/sandwich-loop.md`: artifact schema and feasibility-repair loop semantics.
 - `/docs/decisions/`: ADRs for durable architecture choices.
-- `/docs/exec-plans/active/`: active implementation plans and maintenance log.
+- `/docs/exec-plans/`: active implementation plans and maintenance log.
+- `/docs/exec-plans/completed/`: completed plan archive.

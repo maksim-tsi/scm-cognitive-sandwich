@@ -15,15 +15,19 @@ This directory is the repository source of truth. Keep AGENTS concise and keep d
 1. `architecture/index.md`
 2. `domain/sandwich-loop.md`
 3. `decisions/`
-4. `exec-plans/active/`
+4. `exec-plans/`
+   - Completed plans are archived under `exec-plans/completed/`.
 
 ## Engineering Harness
 
+- Create/update the repository environment using `uv` (Python 3.13):
+	- `uv venv --python /usr/local/bin/python3.13`
+	- `uv lock`
+	- `uv sync --extra dev`
 - Run repository commands from `.venv`:
-	- `source .venv/bin/activate`
-	- `python -m pytest`
-	- `ruff check .`
-	- `python -m mypy src`
+	- `./.venv/bin/python -m pytest`
+	- `./.venv/bin/ruff check .`
+	- `./.venv/bin/python -m mypy src`
 - Script execution should also use `.venv` Python (for example `python scripts/run_baseline.py`).
 
 ## Current Highlights

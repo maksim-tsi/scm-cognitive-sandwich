@@ -1,0 +1,7 @@
+{
+  "incident_id": "winsim-demo-001",
+  "affected_nodes": ["DEHAM"],
+  "cargo_demand": 10000,
+  "raw_alert_text": "WinterSim demo incident: Port of Hamburg (DEHAM) is closed due to storm surge. Reroute 10,000 TEU."
+}
+

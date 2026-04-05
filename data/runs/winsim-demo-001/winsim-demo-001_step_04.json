@@ -1,0 +1,112 @@
+{
+  "node": "node_generate_scenarios",
+  "run_id": "winsim-demo-001",
+  "state": {
+    "agent_id": "scm-sandwich-variantb-v1",
+    "embedding_latency_ms": null,
+    "embedding_model": null,
+    "fatal_status": null,
+    "final_report_md": null,
+    "incident": {
+      "affected_nodes": [
+        "DEHAM"
+      ],
+      "cargo_demand": 10000,
+      "incident_id": "winsim-demo-001",
+      "raw_alert_text": "WinterSim demo incident: Port of Hamburg (DEHAM) is closed due to storm surge. Reroute 10,000 TEU."
+    },
+    "incident_context": {
+      "affected_nodes": [
+        "DEHAM"
+      ],
+      "cargo_demand": 10000,
+      "forbidden_ports": [
+        "DEHAM"
+      ],
+      "incident_id": "winsim-demo-001",
+      "port_capacities": {
+        "BEANR": 15000,
+        "DEBRV": 10000,
+        "DEHAM": 12000,
+        "NLRTM": 25000
+      },
+      "raw_alert_text": "WinterSim demo incident: Port of Hamburg (DEHAM) is closed due to storm surge. Reroute 10,000 TEU."
+    },
+    "judge_feedback": [
+      "Ensure allocations sum EXACTLY to 10000 TEU in winsim-demo-001-S1."
+    ],
+    "judge_findings": [
+      "MASS_BALANCE(winsim-demo-001-S1): allocations sum 9000 != cargo_demand 10000."
+    ],
+    "judge_verdict": "REJECT",
+    "pareto_frontier_ids": [],
+    "retry_count": 1,
+    "run_id": "winsim-demo-001",
+    "sandbox_results": [],
+    "scenarios": [
+      {
+        "allocations": [
+          {
+            "port_code": "NLRTM",
+            "teu_amount": 10000
+          }
+        ],
+        "claimed_metrics": {},
+        "claimed_metrics_evidence": {},
+        "rationale": "Diverts entire cargo to NLRTM, the highest capacity nearby port, simplifying logistics with single destination.",
+        "revision": 1,
+        "scenario_id": "winsim-demo-001-S1",
+        "title": "Rotterdam Full Reroute",
+        "tool_calls": []
+      },
+      {
+        "allocations": [
+          {
+            "port_code": "BEANR",
+            "teu_amount": 6000
+          },
+          {
+            "port_code": "DEBRV",
+            "teu_amount": 4000
+          }
+        ],
+        "claimed_metrics": {},
+        "claimed_metrics_evidence": {},
+        "rationale": "Splits between BEANR and DEBRV, leveraging proximity to Hamburg while avoiding overload on one port.",
+        "revision": 1,
+        "scenario_id": "winsim-demo-001-S2",
+        "title": "Antwerp-Bremerhaven Shift",
+        "tool_calls": []
+      },
+      {
+        "allocations": [
+          {
+            "port_code": "NLRTM",
+            "teu_amount": 3000
+          },
+          {
+            "port_code": "BEANR",
+            "teu_amount": 3000
+          },
+          {
+            "port_code": "DEBRV",
+            "teu_amount": 4000
+          }
+        ],
+        "claimed_metrics": {},
+        "claimed_metrics_evidence": {},
+        "rationale": "Evenly distributes across all three available ports to minimize concentration risk and enhance resilience.",
+        "revision": 1,
+        "scenario_id": "winsim-demo-001-S3",
+        "title": "Balanced Tri-Port Diversion",
+        "tool_calls": []
+      }
+    ],
+    "thread_id": "variantb-demo",
+    "tool_ledger": [],
+    "yaam_l3_status": null,
+    "yaam_l4_status": null
+  },
+  "step": 4,
+  "thread_id": "variantb-demo"
+}

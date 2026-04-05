@@ -5,7 +5,7 @@ from opentelemetry import context as context_api
 from opentelemetry import trace as trace_api
 from opentelemetry.trace import NonRecordingSpan, SpanContext, TraceFlags
 
-from memory.yaam_client import DEFAULT_AGENT_ID, DEFAULT_YAAM_API_URL, YAAMClient, _build_traceparent
+from memory.yaam_client import DEFAULT_AGENT_ID, YAAMClient, _build_traceparent
 
 
 class DummyResponse:
@@ -31,18 +31,35 @@ class DummyAsyncClient:
         return self.response
 
 
-def test_default_endpoint_uses_yaam_port_8002(monkeypatch):
-    monkeypatch.delenv("YAAM_API_URL", raising=False)
-
+def test_default_endpoint_is_disabled_by_default():
     client = YAAMClient()
 
-    assert client.endpoint == DEFAULT_YAAM_API_URL
+    assert client.endpoint is None
 
 
 def test_base_url_without_path_is_normalized_to_endpoint():
     client = YAAMClient(base_url="http://localhost:8002")
 
-    assert client.endpoint == DEFAULT_YAAM_API_URL
+    assert client.endpoint == "http://localhost:8002/v1/memory/episode/consolidate"
+
+
+def test_consolidate_episode_returns_false_when_disabled(monkeypatch):
+    client = YAAMClient()
+
+    success = asyncio.run(
+        client.consolidate_episode(
+            session_id="session-1",
+            final_state={
+                "prompt": None,
+                "drafts": [],
+                "solver_iis_logs": [],
+                "final_routing_parameters": {},
+            },
+            metadata={"status": "success", "duration_seconds": 0.0, "solver_attempts": 1},
+        )
+    )
+
+    assert success is False
 
 
 def test_consolidate_episode_success_includes_traceparent_header():

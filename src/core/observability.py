@@ -59,6 +59,10 @@ def _build_resource_attributes(project_name: str, raw_resource_attributes: str |
     return resource_attributes
 
 def setup_observability():
+    if os.environ.get("DISABLE_OBSERVABILITY", "").strip().lower() in {"1", "true", "yes", "y", "on"}:
+        print("Observability disabled via DISABLE_OBSERVABILITY. Skipping Phoenix setup.")
+        return
+
     from openinference.instrumentation.langchain import LangChainInstrumentor
     from opentelemetry import trace as trace_api
     from opentelemetry.exporter.otlp.proto.http.trace_exporter import OTLPSpanExporter

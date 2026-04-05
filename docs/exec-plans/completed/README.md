@@ -1,10 +1,11 @@
-# Active Plans
+# Completed Plans
 
-Current active plan documents:
+Archived execution plan documents:
 
 - `01-project-initiation.md`
+- `02-exec-plan-variant-b-core-state-graph-skeleton.md`
 
-This plan includes a maintenance log that now tracks March 2026 updates for:
+This plan includes a maintenance log tracking March 2026 updates for:
 
 - adaptive checkpointer behavior,
 - YAAM consolidation integration,

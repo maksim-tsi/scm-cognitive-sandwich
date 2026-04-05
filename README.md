@@ -21,10 +21,9 @@ The loop is deterministic where it must be and adaptive where it helps:
 ### 1) Create environment
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -e ".[dev]"
+uv venv --python /usr/local/bin/python3.13
+uv lock
+uv sync --extra dev
 ```
 
 ### 2) Configure environment variables
@@ -47,11 +46,13 @@ Environment variables quick reference:
 | `OTEL_RESOURCE_ATTRIBUTES` | Yes (for stable Phoenix routing) | `openinference.project.name=scm-cognitive-sandwich-idwl,service.name=scm-cognitive-sandwich-idwl` |
 | `OTEL_SERVICE_NAME` | Optional | If unset, defaults to project name in startup code |
 | `SANDBOX_API_URL` | Optional | Defaults to local sandbox URL when unset |
-| `YAAM_API_URL` | Optional | Defaults to local YAAM URL when unset |
 | `REDIS_URL` | Optional | Enables Redis-backed LangGraph checkpointer |
 | `GOOGLE_API_KEY` | One LLM key required | Use local secret value; do not commit |
 | `MISTRAL_API_KEY` | One LLM key required | Use local secret value; do not commit |
 | `GROQ_API_KEY` | One LLM key required | Use local secret value; do not commit |
+| `OPENROUTER_API_KEY` | Required (Variant B) | OpenRouter API key for Exec Plan 2 |
+| `LLM_MODEL` | Required (Variant B) | Example: `x-ai/grok-4.1-fast` |
+| `OPENROUTER_BASE_URL` | Optional | Example: `https://openrouter.ai/api/v1` |
 
 Safe copy/paste starter block (placeholder-only for secrets):
 
@@ -61,14 +62,18 @@ PHOENIX_PROJECT_NAME=scm-cognitive-sandwich-idwl
 OTEL_RESOURCE_ATTRIBUTES=openinference.project.name=scm-cognitive-sandwich-idwl,service.name=scm-cognitive-sandwich-idwl
 
 # Optional integration endpoints
-# SANDBOX_API_URL=http://localhost:8001
-# YAAM_API_URL=http://localhost:8002
-# REDIS_URL=redis://localhost:6379/0
+# SANDBOX_API_URL=http://192.168.107.172:8001
+# REDIS_URL=redis://192.168.107.172:6379/0
 
 # LLM credentials (set locally; never commit real values)
 # GOOGLE_API_KEY=<set-locally>
 # MISTRAL_API_KEY=<set-locally>
 # GROQ_API_KEY=<set-locally>
+
+# OpenRouter (Variant B / Exec Plan 2)
+# OPENROUTER_API_KEY=<set-locally>
+# LLM_MODEL=x-ai/grok-4.1-fast
+# OPENROUTER_BASE_URL=https://openrouter.ai/api/v1
 ```
 
 Important:
@@ -111,9 +116,9 @@ curl -sS "${PHOENIX_HOST}/v1/projects" | jq '.data | map(.name)'
 ## Test and Quality Commands
 
 ```bash
-ruff check .
-python -m mypy src
-python -m pytest -q
+./.venv/bin/ruff check .
+./.venv/bin/python -m mypy src
+./.venv/bin/python -m pytest -q
 ```
 
 ## Documentation Map
@@ -126,4 +131,3 @@ python -m pytest -q
 ## License
 
 MIT.
-

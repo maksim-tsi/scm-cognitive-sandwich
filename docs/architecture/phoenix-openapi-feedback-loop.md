@@ -29,7 +29,7 @@ Example:
 ```bash
 PHOENIX_COLLECTOR_ENDPOINT=http://192.168.107.172:6006/v1/traces
 PHOENIX_BASE=${PHOENIX_COLLECTOR_ENDPOINT%/v1/traces}
-PROJECT=scm-cognitive-sandwich-idwl
+PROJECT=scm-cognitive-sandwich-winsim
 ```
 
 ## Step 1: Confirm API Surface
@@ -87,6 +87,39 @@ Pass criteria:
 1. `data` count is greater than zero.
 2. Expected graph nodes appear (for example `LangGraph`, `node_run_solver`, `node_repair_artifact`).
 3. Expected thread IDs appear for the run.
+
+### If windowed queries return 0 spans
+
+Phoenix supports omitting the time window and simply requesting the most recent spans within a project. This is a fast sanity check when ingestion delay or timestamp formatting issues are suspected.
+
+```bash
+curl -sS \
+  "$PHOENIX_BASE/v1/projects/$PROJECT/spans?limit=200" \
+  > /tmp/phoenix_spans_recent.json
+
+jq '.data | length' /tmp/phoenix_spans_recent.json
+jq -r '.data[].attributes["metadata.thread_id"] // empty' /tmp/phoenix_spans_recent.json | sort | uniq -c
+jq -r '.data[].name' /tmp/phoenix_spans_recent.json | sort | uniq -c
+```
+
+### Recommended timestamp format (RFC3339 with milliseconds)
+
+The REST API accepts `start_time` and `end_time` as `date-time` strings. In practice, using millisecond precision avoids ambiguity when runs start/end within the same second.
+
+macOS / BSD `date` example:
+
+```bash
+START_TS=$(date -u -v-15M +%Y-%m-%dT%H:%M:%S.000Z)
+END_TS=$(date -u +%Y-%m-%dT%H:%M:%S.000Z)
+```
+
+Then query:
+
+```bash
+curl -sS \
+  "$PHOENIX_BASE/v1/projects/$PROJECT/spans?start_time=$START_TS&end_time=$END_TS&limit=1000" \
+  > /tmp/phoenix_spans_window.json
+```
 
 ## Step 4: Validate Project Attribution
 

@@ -6,7 +6,7 @@ import threading
 from collections.abc import Awaitable
 from typing import Any
 
-from langgraph.checkpoint.memory import MemorySaver
+from langgraph.checkpoint.memory import MemorySaver  # type: ignore[attr-defined]
 
 LOGGER = logging.getLogger(__name__)
 
@@ -48,23 +48,32 @@ def _resolve_awaitable(value: Any) -> Any:
 def _load_redis_saver_class() -> type[Any] | None:
     """Return the best available Redis saver class for sync graph compilation."""
     try:
-        from langgraph.checkpoint.redis import RedisSaver
+        import importlib
 
-        return RedisSaver
+        module = importlib.import_module("langgraph.checkpoint.redis")
+        saver = getattr(module, "RedisSaver", None)
+        if isinstance(saver, type):
+            return saver
     except Exception:
         pass
 
     try:
-        from langgraph.checkpoint.redis.aio import AsyncRedisSaver
+        import importlib
 
-        return AsyncRedisSaver
+        module = importlib.import_module("langgraph.checkpoint.redis.aio")
+        saver = getattr(module, "AsyncRedisSaver", None)
+        if isinstance(saver, type):
+            return saver
     except Exception:
         pass
 
     try:
-        from langgraph.checkpoint.redis import AsyncRedisSaver
+        import importlib
 
-        return AsyncRedisSaver
+        module = importlib.import_module("langgraph.checkpoint.redis")
+        saver = getattr(module, "AsyncRedisSaver", None)
+        if isinstance(saver, type):
+            return saver
     except Exception:
         pass
 

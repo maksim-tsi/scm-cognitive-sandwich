@@ -1,0 +1,50 @@
+{
+  "node": "node_gather_context",
+  "run_id": "winsim-demo-001",
+  "state": {
+    "agent_id": "scm-sandwich-variantb-v1",
+    "embedding_latency_ms": null,
+    "embedding_model": null,
+    "fatal_status": null,
+    "final_report_md": null,
+    "incident": {
+      "affected_nodes": [
+        "DEHAM"
+      ],
+      "cargo_demand": 10000,
+      "incident_id": "winsim-demo-001",
+      "raw_alert_text": "WinterSim demo incident: Port of Hamburg (DEHAM) is closed due to storm surge. Reroute 10,000 TEU."
+    },
+    "incident_context": {
+      "affected_nodes": [
+        "DEHAM"
+      ],
+      "cargo_demand": 10000,
+      "forbidden_ports": [
+        "DEHAM"
+      ],
+      "incident_id": "winsim-demo-001",
+      "port_capacities": {
+        "BEANR": 15000,
+        "DEBRV": 10000,
+        "DEHAM": 12000,
+        "NLRTM": 25000
+      },
+      "raw_alert_text": "WinterSim demo incident: Port of Hamburg (DEHAM) is closed due to storm surge. Reroute 10,000 TEU."
+    },
+    "judge_feedback": [],
+    "judge_findings": [],
+    "judge_verdict": null,
+    "pareto_frontier_ids": [],
+    "retry_count": 0,
+    "run_id": "winsim-demo-001",
+    "sandbox_results": [],
+    "scenarios": [],
+    "thread_id": "variantb-demo",
+    "tool_ledger": [],
+    "yaam_l3_status": null,
+    "yaam_l4_status": null
+  },
+  "step": 1,
+  "thread_id": "variantb-demo"
+}

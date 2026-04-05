@@ -7,7 +7,7 @@ name = "scm-cognitive-sandwich"
 version = "0.1.0"
 description = "SCM Cognitive Sandwich - LLM and OR Solver Integration"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.13"
 dependencies = [
     "langgraph",
     "langchain",
@@ -25,6 +25,8 @@ dependencies = [
     "opentelemetry-instrumentation-httpx",
     "python-dotenv",
     "tenacity",
+    "pulp>=3.3.0",
+    "langchain-openrouter>=0.2.1",
 ]
 
 [project.optional-dependencies]
@@ -32,10 +34,14 @@ dev = [
     "pytest",
     "ruff",
     "mypy",
+    "types-PyYAML",
 ]
+
+[tool.ruff]
+target-version = "py313"
 
 [tool.mypy]
 mypy_path = ["src"]
-namespace_packages = true
-explicit_package_bases = true
+python_version = "3.13"
+namespace_packages = false
 ignore_missing_imports = true
