@@ -9,7 +9,7 @@ import logging
 from datetime import UTC, datetime
 from typing import Any
 
-from src.memory.artifacts.models import (
+from .models import (
     Artifact,
     ArtifactCommit,
     ArtifactFeedback,
@@ -18,7 +18,7 @@ from src.memory.artifacts.models import (
     ArtifactLineageResult,
     ArtifactRevision,
 )
-from src.memory.models import Fact, FactCategory, FactType, KnowledgeDocument, TurnData
+from ..models import Fact, FactCategory, FactType, KnowledgeDocument, TurnData
 
 logger = logging.getLogger(__name__)
 
@@ -631,4 +631,3 @@ class ArtifactRepository:
         if isinstance(value, str):
             return datetime.fromisoformat(value)
         return None
-

@@ -1,20 +1,21 @@
-# file: knowledge_store_manager.py
+from __future__ import annotations
 
 from typing import Any, Literal
-
-from qdrant_client import models as qdrant_models
-
-from src.storage.graph_store_client import Neo4jGraphStore
-from src.storage.vector_store_client import QdrantVectorStore
 
 
 class KnowledgeStoreManager:
     def __init__(
         self,
-        vector_store: QdrantVectorStore,
-        graph_store: Neo4jGraphStore,
-    ):
-        """Initializes with instances of all specialized store clients."""
+        vector_store: Any | None = None,
+        graph_store: Any | None = None,
+    ) -> None:
+        """Initialize with injected store clients.
+
+        The upstream YAAM implementation used specialized storage adapters under
+        `src.storage.*`. Those are intentionally excluded from this repository
+        per RFC-005, so this manager is now a lightweight dispatcher around
+        injected clients (typically Qdrant for L3 and Typesense for L4).
+        """
         self.vector_store = vector_store
         self.graph_store = graph_store
 
@@ -24,11 +25,14 @@ class KnowledgeStoreManager:
         Note: Graph store additions are typically done via query.
         """
         if store_type == "vector":
-            return self.vector_store.add_documents(documents)
-        else:
-            raise ValueError(
-                f"Adding documents to '{store_type}' is not supported via this method."
-            )
+            if self.vector_store is None:
+                raise RuntimeError("Vector store is not configured.")
+            add_documents = getattr(self.vector_store, "add_documents", None)
+            if not callable(add_documents):
+                raise RuntimeError("Vector store client does not support add_documents().")
+            return add_documents(documents)
+
+        raise ValueError(f"Adding documents to '{store_type}' is not supported via this method.")
 
     def query(
         self,
@@ -50,22 +54,26 @@ class KnowledgeStoreManager:
             A list of result dictionaries.
         """
         if store_type == "vector":
-            qdrant_filter = self._build_qdrant_filter(filters) if filters else None
-            return self.vector_store.query_similar(
-                query_text=query_text, top_k=top_k, filters=qdrant_filter
-            )
+            if self.vector_store is None:
+                raise RuntimeError("Vector store is not configured.")
+            query_similar = getattr(self.vector_store, "query_similar", None)
+            if not callable(query_similar):
+                raise RuntimeError("Vector store client does not support query_similar().")
+
+            normalized_filters = self._normalize_vector_filters(filters) if filters else None
+            return query_similar(query_text=query_text, top_k=top_k, filters=normalized_filters)
 
         elif store_type == "graph":
-            return self.graph_store.query(cypher_query=query_text, params=filters)
+            if self.graph_store is None:
+                raise RuntimeError("Graph store is not configured.")
+            query = getattr(self.graph_store, "query", None)
+            if not callable(query):
+                raise RuntimeError("Graph store client does not support query().")
+            return query(cypher_query=query_text, params=filters)
 
         else:
             raise ValueError(f"Unknown store_type: {store_type}")
 
-    def _build_qdrant_filter(self, filters: dict[str, Any]) -> qdrant_models.Filter:
-        """Helper to convert a simple dict to a Qdrant filter."""
-        return qdrant_models.Filter(
-            must=[
-                qdrant_models.FieldCondition(key=key, match=qdrant_models.MatchValue(value=value))
-                for key, value in filters.items()
-            ]
-        )
+    def _normalize_vector_filters(self, filters: dict[str, Any]) -> dict[str, Any]:
+        """Normalize vector-store filters into an adapter-agnostic dictionary."""
+        return dict(filters)

@@ -23,16 +23,14 @@ from typing import Any
 
 from pydantic import ValidationError
 
-from src.memory.ciar_formula import (
+from ..ciar_formula import (
     DEFAULT_AGE_DECAY_LAMBDA,
     DEFAULT_RECENCY_ALPHA,
     calculate_ciar_score,
 )
-from src.memory.models import Fact, FactType
-from src.memory.tiers.base_tier import BaseTier, TierOperationError
-from src.storage.metrics.collector import MetricsCollector
-from src.storage.metrics.timer import OperationTimer
-from src.storage.postgres_adapter import PostgresAdapter
+from ..metrics import MetricsCollector, OperationTimer
+from ..models import Fact, FactType
+from .base_tier import BaseTier, TierOperationError
 
 logger = logging.getLogger(__name__)
 
@@ -84,7 +82,7 @@ class WorkingMemoryTier(BaseTier[Fact]):
 
     def __init__(
         self,
-        postgres_adapter: PostgresAdapter,
+        postgres_adapter: Any,
         metrics_collector: MetricsCollector | None = None,
         config: dict[str, Any] | None = None,
         telemetry_stream: Any | None = None,
@@ -339,7 +337,7 @@ class WorkingMemoryTier(BaseTier[Fact]):
                 # Enforce CIAR threshold unless explicitly disabled
                 if not kwargs.get("include_low_ciar", False):
                     min_ciar = query_filters.pop("min_ciar_score", self.ciar_threshold)
-                    # Note: PostgresAdapter needs to support __gte suffix
+                    # Note: postgres adapter needs to support __gte suffix
                     # For now, we'll filter in-memory
                     query_filters["tier"] = "L2"
 
@@ -615,13 +613,14 @@ class WorkingMemoryTier(BaseTier[Fact]):
         async with OperationTimer(self.metrics, "l2_delete"):
             start_time = time.perf_counter()
             try:
-                if isinstance(self.postgres, PostgresAdapter):
-                    result = await self.postgres.delete_by_filters(
-                        "working_memory",
-                        filters={"fact_id": fact_id},
-                    )
+                delete_by_filters = getattr(self.postgres, "delete_by_filters", None)
+                if callable(delete_by_filters):
+                    result = await delete_by_filters("working_memory", filters={"fact_id": fact_id})
                 else:
-                    result = await self.postgres.delete(fact_id)
+                    delete = getattr(self.postgres, "delete", None)
+                    if not callable(delete):
+                        raise TierOperationError("Postgres adapter does not support delete operations")
+                    result = await delete(fact_id)
 
                 result = bool(result)
 

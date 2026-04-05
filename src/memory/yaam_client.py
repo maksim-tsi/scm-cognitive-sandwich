@@ -1,11 +1,10 @@
 import logging
-import os
 import secrets
 from typing import Any
 from urllib.parse import urlparse
 
 import httpx
-from opentelemetry import trace as trace_api
+from opentelemetry import trace as trace_api  # type: ignore[attr-defined]
 
 LOGGER = logging.getLogger(__name__)
 
@@ -43,7 +42,7 @@ class YAAMClient:
         timeout_seconds: float = 10.0,
         client: httpx.AsyncClient | None = None,
     ) -> None:
-        raw_url = base_url if base_url is not None else os.getenv("YAAM_API_URL")
+        raw_url = base_url
         configured_url = (raw_url or "").strip()
         self._endpoint = _normalize_endpoint(configured_url) if configured_url else None
         self._timeout_seconds = timeout_seconds
@@ -65,7 +64,7 @@ class YAAMClient:
         agent_id: str = DEFAULT_AGENT_ID,
     ) -> bool:
         if not self._endpoint:
-            LOGGER.info("YAAM consolidation disabled (YAAM_API_URL not configured).")
+            LOGGER.info("YAAM consolidation disabled (no consolidation endpoint configured).")
             return False
 
         payload = {

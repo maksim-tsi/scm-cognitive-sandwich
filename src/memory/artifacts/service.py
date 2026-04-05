@@ -9,7 +9,7 @@ from datetime import UTC, datetime
 from typing import Any, ClassVar
 from uuid import uuid4
 
-from src.memory.artifacts.models import (
+from .models import (
     Artifact,
     ArtifactCommit,
     ArtifactFeedback,
@@ -17,7 +17,7 @@ from src.memory.artifacts.models import (
     ArtifactLineageResult,
     ArtifactRevision,
 )
-from src.memory.artifacts.repository import ArtifactRepository
+from .repository import ArtifactRepository
 
 logger = logging.getLogger(__name__)
 

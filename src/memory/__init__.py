@@ -2,7 +2,7 @@
 Memory system module.
 """
 
-from src.memory.artifacts import (
+from .artifacts import (
     Artifact,
     ArtifactCommit,
     ArtifactFeedback,
@@ -11,7 +11,7 @@ from src.memory.artifacts import (
     ArtifactLineageResult,
     ArtifactRevision,
 )
-from src.memory.models import (
+from .models import (
     Episode,
     EpisodeQuery,
     Fact,

@@ -11,11 +11,9 @@ import warnings
 from datetime import UTC, datetime
 from typing import Any
 
-from src.memory.models import KnowledgeDocument
-from src.memory.tiers.base_tier import BaseTier
-from src.storage.metrics.collector import MetricsCollector
-from src.storage.metrics.timer import OperationTimer
-from src.storage.typesense_adapter import TypesenseAdapter
+from ..models import KnowledgeDocument
+from ..metrics import MetricsCollector, OperationTimer
+from .base_tier import BaseTier
 
 logger = logging.getLogger(__name__)
 
@@ -32,7 +30,7 @@ class SemanticMemoryTier(BaseTier[KnowledgeDocument]):
 
     def __init__(
         self,
-        typesense_adapter: TypesenseAdapter,
+        typesense_adapter: Any,
         metrics_collector: MetricsCollector | None = None,
         config: dict[str, Any] | None = None,
         telemetry_stream: Any | None = None,

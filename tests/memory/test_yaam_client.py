@@ -31,9 +31,7 @@ class DummyAsyncClient:
         return self.response
 
 
-def test_default_endpoint_uses_yaam_port_8002(monkeypatch):
-    monkeypatch.delenv("YAAM_API_URL", raising=False)
-
+def test_default_endpoint_is_disabled_by_default():
     client = YAAMClient()
 
     assert client.endpoint is None
@@ -46,7 +44,6 @@ def test_base_url_without_path_is_normalized_to_endpoint():
 
 
 def test_consolidate_episode_returns_false_when_disabled(monkeypatch):
-    monkeypatch.delenv("YAAM_API_URL", raising=False)
     client = YAAMClient()
 
     success = asyncio.run(

@@ -21,10 +21,9 @@ The loop is deterministic where it must be and adaptive where it helps:
 ### 1) Create environment
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -e ".[dev]"
+uv venv --python /usr/local/bin/python3.13
+uv lock
+uv sync --extra dev
 ```
 
 ### 2) Configure environment variables
@@ -60,8 +59,8 @@ PHOENIX_PROJECT_NAME=scm-cognitive-sandwich-idwl
 OTEL_RESOURCE_ATTRIBUTES=openinference.project.name=scm-cognitive-sandwich-idwl,service.name=scm-cognitive-sandwich-idwl
 
 # Optional integration endpoints
-# SANDBOX_API_URL=http://localhost:8001
-# REDIS_URL=redis://localhost:6379/0
+# SANDBOX_API_URL=http://192.168.107.172:8001
+# REDIS_URL=redis://192.168.107.172:6379/0
 
 # LLM credentials (set locally; never commit real values)
 # GOOGLE_API_KEY=<set-locally>
@@ -109,9 +108,9 @@ curl -sS "${PHOENIX_HOST}/v1/projects" | jq '.data | map(.name)'
 ## Test and Quality Commands
 
 ```bash
-ruff check .
-python -m mypy src
-python -m pytest -q
+./.venv/bin/ruff check .
+./.venv/bin/python -m mypy src
+./.venv/bin/python -m pytest -q
 ```
 
 ## Documentation Map

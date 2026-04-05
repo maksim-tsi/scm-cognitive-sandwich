@@ -15,8 +15,7 @@ from typing import Any, Self
 
 from pydantic import BaseModel
 
-from src.storage.base import StorageAdapter
-from src.storage.metrics.collector import MetricsCollector
+from ..metrics import MetricsCollector
 
 logger = logging.getLogger(__name__)
 
@@ -73,7 +72,7 @@ class BaseTier[TModel: BaseModel](ABC):
 
     def __init__(
         self,
-        storage_adapters: Mapping[str, StorageAdapter],
+        storage_adapters: Mapping[str, Any],
         metrics_collector: MetricsCollector | None = None,
         config: dict[str, Any] | None = None,
         telemetry_stream: Any | None = None,
@@ -361,7 +360,7 @@ class BaseTier[TModel: BaseModel](ABC):
         """Check if tier is initialized and ready for use."""
         return self._initialized
 
-    def get_storage_adapter(self, name: str) -> StorageAdapter | None:
+    def get_storage_adapter(self, name: str) -> Any | None:
         """
         Get a specific storage adapter by name.
 

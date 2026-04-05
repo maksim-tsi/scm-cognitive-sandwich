@@ -105,11 +105,11 @@ A runnable (mocked/stubbed) LangGraph pipeline where you can inject an `Incident
   - forced REJECT loops and terminates at `retry_count == 3` with `fatal_status="FATAL_VALIDATION_ERROR"`.
 
 ## Test Plan (must-pass quality gates)
-Run using the repo virtual environment (path may be `.venv/` or `venv/` depending on local setup):
+Run using the repo virtual environment (`.venv/`):
 
-- `ruff check .`
-- `python -m mypy src`
-- `python -m pytest`
+- `./.venv/bin/ruff check .`
+- `./.venv/bin/python -m mypy src`
+- `./.venv/bin/python -m pytest`
 
 ## Acceptance Criteria
 - `python scripts/run_variant_b.py` runs end-to-end without contacting external services (stubbed execute) while still enforcing env guards.

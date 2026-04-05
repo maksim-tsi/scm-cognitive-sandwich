@@ -22,7 +22,7 @@ from typing import Any, cast
 
 import yaml
 
-from src.memory.ciar_formula import (
+from .ciar_formula import (
     DEFAULT_AGE_DECAY_LAMBDA,
     DEFAULT_CIAR_THRESHOLD,
     DEFAULT_RECENCY_ALPHA,
@@ -31,7 +31,7 @@ from src.memory.ciar_formula import (
     calculate_recency_boost,
     resolve_created_at,
 )
-from src.memory.models import Fact
+from .models import Fact
 
 
 class CIARScorer:

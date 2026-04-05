@@ -20,13 +20,9 @@ from typing import Any
 
 from pydantic import ValidationError
 
-from src.memory.models import TurnData
-from src.memory.tiers.base_tier import BaseTier, TierOperationError
-from src.storage.base import StorageDataError, validate_required_fields
-from src.storage.metrics.collector import MetricsCollector
-from src.storage.metrics.timer import OperationTimer
-from src.storage.postgres_adapter import PostgresAdapter
-from src.storage.redis_adapter import RedisAdapter
+from ..models import TurnData
+from ..metrics import MetricsCollector, OperationTimer
+from .base_tier import BaseTier, TierOperationError
 
 logger = logging.getLogger(__name__)
 
@@ -76,8 +72,8 @@ class ActiveContextTier(BaseTier[TurnData]):
 
     def __init__(
         self,
-        redis_adapter: RedisAdapter,
-        postgres_adapter: PostgresAdapter,
+        redis_adapter: Any,
+        postgres_adapter: Any,
         metrics_collector: MetricsCollector | None = None,
         config: dict[str, Any] | None = None,
         telemetry_stream: Any | None = None,
@@ -136,8 +132,7 @@ class ActiveContextTier(BaseTier[TurnData]):
             Unique turn identifier (turn_id)
 
         Raises:
-            TierOperationError: If storage operation fails
-            StorageDataError: If required fields are missing
+            TierOperationError: If required fields are missing or storage fails
         """
         async with OperationTimer(self.metrics, "l1_store"):
             try:
@@ -149,9 +144,10 @@ class ActiveContextTier(BaseTier[TurnData]):
                         DeprecationWarning,
                         stacklevel=2,
                     )
-                    # Validate required fields for dict input
-                    required = ["session_id", "turn_id", "role", "content"]
-                    validate_required_fields(data, required)
+                    required_fields = ("session_id", "turn_id", "role", "content")
+                    missing_fields = [field for field in required_fields if not data.get(field)]
+                    if missing_fields:
+                        raise TierOperationError(f"Missing required fields: {missing_fields}")
                     turn = TurnData.model_validate(data)
                 else:
                     turn = data
@@ -221,9 +217,6 @@ class ActiveContextTier(BaseTier[TurnData]):
                 return turn_id
 
             except ValidationError:
-                raise
-            except StorageDataError:
-                # Re-raise validation errors as-is
                 raise
             except Exception as e:
                 logger.error(f"Failed to store turn in L1: {e}")
@@ -518,13 +511,18 @@ class ActiveContextTier(BaseTier[TurnData]):
 
                 # Delete from PostgreSQL
                 if self.enable_postgres_backup:
-                    if isinstance(self.postgres, PostgresAdapter):
-                        postgres_result = await self.postgres.delete_by_filters(
-                            "active_context",
-                            filters={"session_id": session_id, "tier": "L1"},
+                    delete_by_filters = getattr(self.postgres, "delete_by_filters", None)
+                    if callable(delete_by_filters):
+                        postgres_result = await delete_by_filters(
+                            "active_context", filters={"session_id": session_id, "tier": "L1"}
                         )
                     else:
-                        postgres_result = await self.postgres.delete(session_id)
+                        delete = getattr(self.postgres, "delete", None)
+                        if not callable(delete):
+                            raise TierOperationError(
+                                "Postgres adapter does not support delete operations"
+                            )
+                        postgres_result = await delete(session_id)
 
                     if bool(postgres_result):
                         deleted = True

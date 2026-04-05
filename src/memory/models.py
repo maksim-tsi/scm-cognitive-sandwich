@@ -11,7 +11,7 @@ from typing import Any, Literal
 
 from pydantic import BaseModel, Field, ValidationInfo, field_validator
 
-from src.memory.ciar_formula import (
+from .ciar_formula import (
     DEFAULT_AGE_DECAY_LAMBDA,
     DEFAULT_RECENCY_ALPHA,
     calculate_age_decay,

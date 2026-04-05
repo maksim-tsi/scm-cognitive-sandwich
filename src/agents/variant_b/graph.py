@@ -3,7 +3,7 @@ from __future__ import annotations
 import os
 from typing import Any, Literal
 
-from langgraph.graph import END, START, StateGraph
+from langgraph.graph import END, START, StateGraph  # type: ignore[attr-defined]
 
 from agents.variant_b.state import VariantBState, VariantBStateUpdate
 from memory.checkpointer import create_checkpointer

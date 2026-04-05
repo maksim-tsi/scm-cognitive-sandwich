@@ -5,7 +5,7 @@ import threading
 from collections.abc import Coroutine
 from typing import Any
 from typing import Literal
-from langgraph.graph import StateGraph, START, END
+from langgraph.graph import END, START, StateGraph  # type: ignore[attr-defined]
 from opentelemetry import context as otel_context
 
 from langchain_core.messages import SystemMessage, HumanMessage
