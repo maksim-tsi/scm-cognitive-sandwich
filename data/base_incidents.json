@@ -1,0 +1,102 @@
+[
+  {
+    "incident_id": "INC-2026-001-NLRTM-CONG",
+    "timestamp": "2026-04-10T08:00:00Z",
+    "event_type": "CONGESTION_SPIKE",
+    "severity_level": "L1_SEVERE_CONGESTION",
+    "affected_nodes": [{"port_code": "NLRTM", "impact_type": "CAPACITY_DROP"}],
+    "cargo_demand": {"disrupted_teu": 12000, "cargo_type": "GENERAL", "priority": "HIGH"},
+    "estimated_duration_hours": 96,
+    "raw_alert_text": "Critical congestion at Port of Rotterdam (NLRTM) Maasvlakte 2. Despite deep-water advantages, terminal yard density has exceeded 92% due to cascading delays. Inland barge and rail connections are severely backlogged. 12,000 TEU en route require dynamic rerouting. Note: Alternate port must support ULCV draft."
+  },
+  {
+    "incident_id": "INC-2026-002-DEHAM-WEAT",
+    "timestamp": "2026-04-12T14:30:00Z",
+    "event_type": "WEATHER_DELAY",
+    "severity_level": "L0_TOTAL_CLOSURE",
+    "affected_nodes": [{"port_code": "DEHAM", "impact_type": "TOTAL_CLOSURE"}],
+    "cargo_demand": {"disrupted_teu": 4500, "cargo_type": "REEFER", "priority": "CRITICAL"},
+    "estimated_duration_hours": 48,
+    "raw_alert_text": "Severe fog on the Elbe River has forced the closure of the fairway 'passing box' leading to the Port of Hamburg (DEHAM). All ULCV pilotage suspended. Vessel carrying 4,500 TEU, including critical REEFER cargo, is drifting in the German Bight. Immediate diversion required to avoid SLA breach on temperature-controlled goods."
+  },
+  {
+    "incident_id": "INC-2026-003-BEANR-EQUP",
+    "timestamp": "2026-04-15T09:15:00Z",
+    "event_type": "EQUIPMENT_FAILURE",
+    "severity_level": "L2_MODERATE_DELAY",
+    "affected_nodes": [{"port_code": "BEANR", "impact_type": "CAPACITY_DROP"}],
+    "cargo_demand": {"disrupted_teu": 8500, "cargo_type": "HAZMAT", "priority": "HIGH"},
+    "estimated_duration_hours": 120,
+    "raw_alert_text": "Automation systems failure at Antwerp's Europa Terminal (BEANR) during ongoing hyper-efficiency upgrades. STS crane productivity dropped by 45%. 8,500 TEU of HAZMAT cargo scheduled for unloading. Rerouting options must account for strict European HAZMAT handling certifications and maximum draft limits of the Scheldt estuary."
+  },
+  {
+    "incident_id": "INC-2026-004-SGSIN-LABR",
+    "timestamp": "2026-04-18T22:00:00Z",
+    "event_type": "LABOR_STRIKE",
+    "severity_level": "L1_SEVERE_CONGESTION",
+    "affected_nodes": [{"port_code": "SGSIN", "impact_type": "CAPACITY_DROP"}],
+    "cargo_demand": {"disrupted_teu": 18000, "cargo_type": "GENERAL", "priority": "MEDIUM"},
+    "estimated_duration_hours": 168,
+    "raw_alert_text": "Unplanned 'work-to-rule' strike by crane operators at Port of Singapore (SGSIN). The primary transshipment constraint (Drum) is compromised. Average container dwell time has spiked from 9.5 days to over 14 days. 18,000 TEU network WIP needs redistribution to MYPKG or MYTPP to prevent starvation of the Asia-Europe service loop."
+  },
+  {
+    "incident_id": "INC-2026-005-GBFXT-EQUP",
+    "timestamp": "2026-04-20T06:45:00Z",
+    "event_type": "EQUIPMENT_FAILURE",
+    "severity_level": "L2_MODERATE_DELAY",
+    "affected_nodes": [{"port_code": "GBFXT", "impact_type": "CAPACITY_DROP"}],
+    "cargo_demand": {"disrupted_teu": 3200, "cargo_type": "GENERAL", "priority": "MEDIUM"},
+    "estimated_duration_hours": 72,
+    "raw_alert_text": "Post-Panamax crane mechanical failures at Port of Felixstowe (GBFXT). Grand average productivity has plummeted from 28.5 moves per hour to 14.2 moves per hour, violating statistical process control (SPC) lower limits. 3,200 TEU delayed. Assess cost-benefit of waiting vs. diverting to alternative UK/North Sea ports."
+  },
+  {
+    "incident_id": "INC-2026-006-MYTPP-POWR",
+    "timestamp": "2026-04-22T11:00:00Z",
+    "event_type": "INFRASTRUCTURE_FAILURE",
+    "severity_level": "L0_TOTAL_CLOSURE",
+    "affected_nodes": [{"port_code": "MYTPP", "impact_type": "TOTAL_CLOSURE"}],
+    "cargo_demand": {"disrupted_teu": 6000, "cargo_type": "REEFER", "priority": "CRITICAL"},
+    "estimated_duration_hours": 36,
+    "raw_alert_text": "Catastrophic power grid failure at Tanjung Pelepas (MYTPP) affecting the dedicated reefer terminal blocks. Backup generators failing. 6,000 TEU of perishable goods approaching. Immediate diversion to SGSIN or MYPKG mandated. High risk of complete cargo spoilage if not plugged in within 36 hours."
+  },
+  {
+    "incident_id": "INC-2026-007-CNSHA-WEAT",
+    "timestamp": "2026-04-25T00:30:00Z",
+    "event_type": "WEATHER_DELAY",
+    "severity_level": "L0_TOTAL_CLOSURE",
+    "affected_nodes": [{"port_code": "CNSHA", "impact_type": "TOTAL_CLOSURE"}],
+    "cargo_demand": {"disrupted_teu": 15000, "cargo_type": "GENERAL", "priority": "HIGH"},
+    "estimated_duration_hours": 84,
+    "raw_alert_text": "Typhoon warning escalated to Level Red. Port of Shanghai (CNSHA) has suspended all vessel operations and gate movements. 15,000 TEU bound for the Asia-Europe loop are trapped offshore. Orchestrator must evaluate buffering strategies (DBR) to prevent bullwhip effect on destination ports in Northern Europe."
+  },
+  {
+    "incident_id": "INC-2026-008-DEHAM-SHOR",
+    "timestamp": "2026-04-28T16:20:00Z",
+    "event_type": "INFRASTRUCTURE_FAILURE",
+    "severity_level": "L1_SEVERE_CONGESTION",
+    "affected_nodes": [{"port_code": "DEHAM", "impact_type": "CAPACITY_DROP"}],
+    "cargo_demand": {"disrupted_teu": 9000, "cargo_type": "GENERAL", "priority": "MEDIUM"},
+    "estimated_duration_hours": 120,
+    "raw_alert_text": "Major fault in the newly installed shore power (cold ironing) infrastructure at Hamburg (DEHAM) Container Terminal. Vessels requiring shore power to meet EU emissions regulations cannot berth. 9,000 TEU affected. Route must be optimized for ports with operational shore power capabilities to avoid environmental fines."
+  },
+  {
+    "incident_id": "INC-2026-009-BEANR-LABR",
+    "timestamp": "2026-05-02T05:00:00Z",
+    "event_type": "LABOR_STRIKE",
+    "severity_level": "L0_TOTAL_CLOSURE",
+    "affected_nodes": [{"port_code": "BEANR", "impact_type": "TOTAL_CLOSURE"}],
+    "cargo_demand": {"disrupted_teu": 11500, "cargo_type": "HAZMAT", "priority": "CRITICAL"},
+    "estimated_duration_hours": 48,
+    "raw_alert_text": "Flash strike by customs and agricultural inspectors at Antwerp (BEANR). All HAZMAT and regulated cargo processing frozen. 11,500 TEU of chemical imports halted. Customer strict constraint: Cargo cannot be diverted to non-EU ports. Find alternate routing via NLRTM or DEBRV with available HAZMAT yard capacity."
+  },
+  {
+    "incident_id": "INC-2026-010-MYPKG-CONG",
+    "timestamp": "2026-05-05T19:45:00Z",
+    "event_type": "CONGESTION_SPIKE",
+    "severity_level": "L2_MODERATE_DELAY",
+    "affected_nodes": [{"port_code": "MYPKG", "impact_type": "CAPACITY_DROP"}],
+    "cargo_demand": {"disrupted_teu": 7500, "cargo_type": "GENERAL", "priority": "LOW"},
+    "estimated_duration_hours": 240,
+    "raw_alert_text": "Spillover congestion from Singapore has overwhelmed Port Klang (MYPKG). Yard utilization is at 98%, causing severe bottlenecks for truck turn times. 7,500 TEU of low-priority general cargo is delayed. Orchestrator should evaluate anchoring offshore vs slow-steaming to destination to minimize penalty costs."
+  }
+]
