@@ -1,0 +1,6 @@
+{
+  "incident_id": "batch-demo-001",
+  "affected_nodes": ["NLRTM"],
+  "cargo_demand": 14000,
+  "raw_alert_text": "Berth outage at Rotterdam terminal due to crane malfunction."
+}

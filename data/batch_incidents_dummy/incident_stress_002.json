@@ -1,0 +1,6 @@
+{
+  "incident_id": "batch-demo-002",
+  "affected_nodes": ["NLRTM", "BEANR"],
+  "cargo_demand": 20000,
+  "raw_alert_text": "Simultaneous disruption at Rotterdam and Antwerp with high demand spike."
+}

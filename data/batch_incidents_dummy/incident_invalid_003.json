@@ -1,0 +1,5 @@
+{
+  "incident_id": "batch-demo-003",
+  "affected_nodes": ["DEHAM"],
+  "raw_alert_text": "Malformed payload without cargo_demand for validation failure path."
+}

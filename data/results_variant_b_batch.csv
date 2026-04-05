@@ -1,0 +1,7 @@
+incident_file,run_id,incident_id,status,fatal_status,retry_count,elapsed_sec,error
+incident_invalid_003.json,incident_invalid_003,incident_invalid_003,FATAL_VALIDATION,,0,0.00,"ValidationError: 1 validation error for IncidentTrigger
+cargo_demand
+  Field required [type=missing, input_value={'incident_id': 'batch-de...lidation failure path.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+incident_nominal_001.json,batch-demo-001,batch-demo-001,SUCCESS,,0,28.65,
+incident_stress_002.json,batch-demo-002,batch-demo-002,SUCCESS,,0,28.59,
