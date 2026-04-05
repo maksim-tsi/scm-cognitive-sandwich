@@ -15,7 +15,8 @@ This directory is the repository source of truth. Keep AGENTS concise and keep d
 1. `architecture/index.md`
 2. `domain/sandwich-loop.md`
 3. `decisions/`
-4. `exec-plans/active/`
+4. `exec-plans/`
+   - Completed plans are archived under `exec-plans/completed/`.
 
 ## Engineering Harness
 

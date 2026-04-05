@@ -4,7 +4,14 @@ Execution plans describe implementation steps and maintain a running maintenance
 
 ## Structure
 
-- `active/`: currently relevant plans.
+- Active plans: stored directly in this directory.
+- Completed plans: archived under `completed/`.
+
+## Active Plans
+
+- `02-exec-plan-variant-b-core-state-graph-skeleton.md`
+- `03-exec-plan-cognitive-sandwich-core.md`
+- `04-exec-plan-env-integration-yaam-open-science.md`
 
 ## How to use
 
