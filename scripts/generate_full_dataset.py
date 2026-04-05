@@ -4,15 +4,19 @@ import uuid
 from datetime import datetime, timedelta
 import os
 
+# Resolve paths relative to repository root so script works locally and in CI.
+REPO_ROOT = os.path.dirname(os.path.dirname(__file__))
+DATA_DIR = os.path.join(REPO_ROOT, "data")
+
 # Загружаем 10 базовых сюжетов (сохрани JSON выше в base_incidents.json)
-with open("base_incidents.json", "r") as f:
+with open(os.path.join(DATA_DIR, "base_incidents.json"), "r") as f:
     base_incidents = json.load(f)
 
 PORTS = ["NLRTM", "DEHAM", "BEANR", "GBFXT", "DEBRV", "SGSIN", "MYPKG", "MYTPP", "CNSHA"]
 CARGO_TYPES = ["GENERAL", "REEFER", "HAZMAT"]
 PRIORITIES = ["LOW", "MEDIUM", "HIGH", "CRITICAL"]
 
-output_dir = "data/batch_incidents_production"
+output_dir = os.path.join(DATA_DIR, "batch_incidents_production")
 os.makedirs(output_dir, exist_ok=True)
 
 # Сначала сохраняем 10 золотых инцидентов

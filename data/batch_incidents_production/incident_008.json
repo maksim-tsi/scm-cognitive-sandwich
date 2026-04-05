@@ -1,0 +1,19 @@
+{
+  "incident_id": "INC-2026-008-DEHAM-SHOR",
+  "timestamp": "2026-04-28T16:20:00Z",
+  "event_type": "INFRASTRUCTURE_FAILURE",
+  "severity_level": "L1_SEVERE_CONGESTION",
+  "affected_nodes": [
+    {
+      "port_code": "DEHAM",
+      "impact_type": "CAPACITY_DROP"
+    }
+  ],
+  "cargo_demand": {
+    "disrupted_teu": 9000,
+    "cargo_type": "GENERAL",
+    "priority": "MEDIUM"
+  },
+  "estimated_duration_hours": 120,
+  "raw_alert_text": "Major fault in the newly installed shore power (cold ironing) infrastructure at Hamburg (DEHAM) Container Terminal. Vessels requiring shore power to meet EU emissions regulations cannot berth. 9,000 TEU affected. Route must be optimized for ports with operational shore power capabilities to avoid environmental fines."
+}

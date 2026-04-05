@@ -1,0 +1,19 @@
+{
+  "incident_id": "INC-2026-050-CNSHA-EQUI",
+  "timestamp": "2026-05-21T14:00:00Z",
+  "event_type": "EQUIPMENT_FAILURE",
+  "severity_level": "L2_MODERATE_DELAY",
+  "affected_nodes": [
+    {
+      "port_code": "CNSHA",
+      "impact_type": "CAPACITY_DROP"
+    }
+  ],
+  "cargo_demand": {
+    "disrupted_teu": 17460,
+    "cargo_type": "GENERAL",
+    "priority": "HIGH"
+  },
+  "estimated_duration_hours": 168,
+  "raw_alert_text": "Post-Panamax crane mechanical failures at Port of Felixstowe (CNSHA). Grand average productivity has plummeted from 28.5 moves per hour to 14.2 moves per hour, violating statistical process control (SPC) lower limits. 3,200 TEU delayed. Assess cost-benefit of waiting vs. diverting to alternative UK/North Sea ports."
+}

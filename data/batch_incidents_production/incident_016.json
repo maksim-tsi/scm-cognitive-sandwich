@@ -1,0 +1,19 @@
+{
+  "incident_id": "INC-2026-016-CNSHA-EQUI",
+  "timestamp": "2026-05-11T04:00:00Z",
+  "event_type": "EQUIPMENT_FAILURE",
+  "severity_level": "L2_MODERATE_DELAY",
+  "affected_nodes": [
+    {
+      "port_code": "CNSHA",
+      "impact_type": "CAPACITY_DROP"
+    }
+  ],
+  "cargo_demand": {
+    "disrupted_teu": 14219,
+    "cargo_type": "HAZMAT",
+    "priority": "CRITICAL"
+  },
+  "estimated_duration_hours": 240,
+  "raw_alert_text": "Automation systems failure at Antwerp's Europa Terminal (CNSHA) during ongoing hyper-efficiency upgrades. STS crane productivity dropped by 45%. 8,500 TEU of HAZMAT cargo scheduled for unloading. Rerouting options must account for strict European HAZMAT handling certifications and maximum draft limits of the Scheldt estuary."
+}

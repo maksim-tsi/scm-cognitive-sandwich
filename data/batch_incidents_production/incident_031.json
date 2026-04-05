@@ -1,0 +1,19 @@
+{
+  "incident_id": "INC-2026-031-GBFXT-CONG",
+  "timestamp": "2026-05-13T10:00:00Z",
+  "event_type": "CONGESTION_SPIKE",
+  "severity_level": "L2_MODERATE_DELAY",
+  "affected_nodes": [
+    {
+      "port_code": "GBFXT",
+      "impact_type": "CAPACITY_DROP"
+    }
+  ],
+  "cargo_demand": {
+    "disrupted_teu": 4097,
+    "cargo_type": "GENERAL",
+    "priority": "HIGH"
+  },
+  "estimated_duration_hours": 96,
+  "raw_alert_text": "Spillover congestion from Singapore has overwhelmed Port Klang (GBFXT). Yard utilization is at 98%, causing severe bottlenecks for truck turn times. 7,500 TEU of low-priority general cargo is delayed. Orchestrator should evaluate anchoring offshore vs slow-steaming to destination to minimize penalty costs."
+}
