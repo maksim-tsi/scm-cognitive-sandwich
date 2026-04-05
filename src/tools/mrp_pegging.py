@@ -1,22 +1,22 @@
-from typing import Dict, List, Any, Union, Optional
+from typing import Any, Dict, List
 from decimal import Decimal
 from pydantic import BaseModel, ConfigDict
 
 
 class InputSchema(BaseModel):
     model_config = ConfigDict(strict=True)
-    component: Optional[str] = None
-    gross_requirements: Optional[Dict[str, float]] = None
-    parent_items: Optional[List[str]] = None
-    current_demand_sources: Optional[Dict[str, Dict[str, float]]] = None
+    component: str
+    gross_requirements: Dict[str, float]
+    parent_items: List[str]
+    current_demand_sources: Dict[str, Dict[str, float]]
 
 
 class OutputSchema(BaseModel):
     model_config = ConfigDict(strict=True)
-    pegging_traces: Optional[Dict[str, Dict[str, float]]] = None
-    untraced_requirements: Optional[Dict[str, float]] = None
-    parent_contribution_summary: Optional[Dict[str, float]] = None
-    demand_coverage_analysis: Optional[float] = None
+    pegging_traces: Dict[str, Dict[str, float]]
+    untraced_requirements: Dict[str, float]
+    parent_contribution_summary: Dict[str, float]
+    demand_coverage_analysis: float
 
 
 def mrp_pegging_tracing(

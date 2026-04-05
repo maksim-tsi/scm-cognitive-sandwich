@@ -1,5 +1,5 @@
 import scipy.stats as stats
-from pydantic import BaseModel, ConfigDict, field_validator
+from pydantic import BaseModel, ConfigDict, ValidationInfo, field_validator
 from typing import Optional
 
 
@@ -17,8 +17,9 @@ class Input(BaseModel):
     
     @field_validator('production_cost', 'selling_price', 'salvage_value', 'mean_demand')
     @classmethod
-    def validate_non_negative(cls, v: float, field_name: str) -> float:
+    def validate_non_negative(cls, v: float, info: ValidationInfo) -> float:
         if v < 0:
+            field_name = info.field_name or "value"
             raise ValueError(f'{field_name} must be non-negative')
         return v
     

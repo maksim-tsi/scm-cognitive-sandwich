@@ -204,7 +204,7 @@ def solve_aggregate_planning(input_data: Input) -> Output:
 
     if result.success:
         # Extract decision variables
-        decision_vars = {
+        decision_vars: dict[str, list[float]] = {
             'workers': [],
             'overtime': [],
             'hiring': [],
@@ -216,14 +216,14 @@ def solve_aggregate_planning(input_data: Input) -> Output:
         }
         for t in range(periods):
             base_idx = n_vars_per_period * t
-            decision_vars['workers'].append(result.x[base_idx])
-            decision_vars['overtime'].append(result.x[base_idx + 1])
-            decision_vars['hiring'].append(result.x[base_idx + 2])
-            decision_vars['layoff'].append(result.x[base_idx + 3])
-            decision_vars['inventory'].append(result.x[base_idx + 4])
-            decision_vars['stockout'].append(result.x[base_idx + 5])
-            decision_vars['production'].append(result.x[base_idx + 6])
-            decision_vars['subcontract'].append(result.x[base_idx + 7])
+            decision_vars['workers'].append(float(result.x[base_idx]))
+            decision_vars['overtime'].append(float(result.x[base_idx + 1]))
+            decision_vars['hiring'].append(float(result.x[base_idx + 2]))
+            decision_vars['layoff'].append(float(result.x[base_idx + 3]))
+            decision_vars['inventory'].append(float(result.x[base_idx + 4]))
+            decision_vars['stockout'].append(float(result.x[base_idx + 5]))
+            decision_vars['production'].append(float(result.x[base_idx + 6]))
+            decision_vars['subcontract'].append(float(result.x[base_idx + 7]))
 
         return Output(success=True, total_cost=float(result.fun), decision_variables=decision_vars, message='Optimization successful.')
     else:

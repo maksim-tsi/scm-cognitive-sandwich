@@ -49,8 +49,8 @@ def apply_pareto_principle(input: InputSchema) -> OutputSchema:
     sorted_indexed_freq = sorted(indexed_freq, key=lambda x: x[0], reverse=True)
     
     # Compute cumulative sum and percentages
-    cumulative_sum = 0
-    vital_indices = []
+    cumulative_sum: float = 0.0
+    vital_indices: list[int] = []
     for freq, original_index in sorted_indexed_freq:
         cumulative_sum += freq
         cum_pct = (cumulative_sum / total_occurrences) * 100

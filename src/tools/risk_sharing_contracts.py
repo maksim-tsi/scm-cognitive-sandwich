@@ -1,4 +1,3 @@
-import numpy as np
 from scipy.optimize import minimize
 from pydantic import BaseModel, ConfigDict
 from typing import Dict

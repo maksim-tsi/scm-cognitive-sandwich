@@ -1,5 +1,5 @@
 from pydantic import BaseModel, ConfigDict, field_validator, model_validator
-from typing import List, Dict, Any, Optional
+from typing import List, Dict
 
 
 class InventoryItem(BaseModel):
@@ -119,14 +119,16 @@ def abc_inventory_categorization(input_data: Input) -> Output:
     b_threshold = input_data.b_threshold
     
     # Calculate annual cost volume usage for each item
-    enriched_items = []
-    for item in items:
-        annual_cost_volume_usage = item.unit_purchase_cost * item.annual_demand
-        enriched_items.append({
-            'unit_purchase_cost': item.unit_purchase_cost,
-            'annual_demand': item.annual_demand,
-            'annual_cost_volume_usage': annual_cost_volume_usage
-        })
+    enriched_items: list[dict[str, float]] = []
+    for inventory_item in items:
+        annual_cost_volume_usage = inventory_item.unit_purchase_cost * inventory_item.annual_demand
+        enriched_items.append(
+            {
+                'unit_purchase_cost': inventory_item.unit_purchase_cost,
+                'annual_demand': inventory_item.annual_demand,
+                'annual_cost_volume_usage': annual_cost_volume_usage,
+            }
+        )
     
     # Sort by annual_cost_volume_usage in descending order
     enriched_items.sort(key=lambda x: x['annual_cost_volume_usage'], reverse=True)
@@ -135,13 +137,14 @@ def abc_inventory_categorization(input_data: Input) -> Output:
     total_value = sum(item['annual_cost_volume_usage'] for item in enriched_items)
     
     # Handle edge case where total value is zero
+    category_summary: Dict[str, CategorySummary]
     if total_value == 0:
         categorized_items = []
-        for item in enriched_items:
+        for enriched_item in enriched_items:
             categorized_items.append(CategorizationResult(
-                unit_purchase_cost=item['unit_purchase_cost'],
-                annual_demand=item['annual_demand'],
-                annual_cost_volume_usage=item['annual_cost_volume_usage'],
+                unit_purchase_cost=enriched_item['unit_purchase_cost'],
+                annual_demand=enriched_item['annual_demand'],
+                annual_cost_volume_usage=enriched_item['annual_cost_volume_usage'],
                 abc_category='C',
                 cumulative_percentage=0.0
             ))
@@ -164,8 +167,8 @@ def abc_inventory_categorization(input_data: Input) -> Output:
     cumulative_value = 0.0
     categorized_items = []
     
-    for item in enriched_items:
-        cumulative_value += item['annual_cost_volume_usage']
+    for enriched_item in enriched_items:
+        cumulative_value += enriched_item['annual_cost_volume_usage']
         cumulative_percentage = cumulative_value / total_value
         
         if cumulative_percentage <= a_threshold:
@@ -176,9 +179,9 @@ def abc_inventory_categorization(input_data: Input) -> Output:
             abc_category = 'C'
         
         categorized_items.append(CategorizationResult(
-            unit_purchase_cost=item['unit_purchase_cost'],
-            annual_demand=item['annual_demand'],
-            annual_cost_volume_usage=item['annual_cost_volume_usage'],
+            unit_purchase_cost=enriched_item['unit_purchase_cost'],
+            annual_demand=enriched_item['annual_demand'],
+            annual_cost_volume_usage=enriched_item['annual_cost_volume_usage'],
             abc_category=abc_category,
             cumulative_percentage=cumulative_percentage
         ))

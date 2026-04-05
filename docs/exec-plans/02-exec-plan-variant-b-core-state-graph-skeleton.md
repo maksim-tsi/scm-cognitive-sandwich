@@ -116,5 +116,7 @@ Run using the repo virtual environment (path may be `.venv/` or `venv/` dependin
 - Baseline graph (`src/agents/graph.py`) remains intact and runnable.
 
 ## Maintenance Log
-- (fill in as changes land)
-
+- 2026-04-05:
+  - Green baseline gates: fixed `ruff` unused imports and `mypy` type errors in `src/tools/*`.
+  - Implemented Variant B Exec Plan 1 skeleton: `IncidentTrigger` + `VariantBState`, `assert_no_localhost_services()` guard, stubbed 5-node LangGraph, CLI runner `scripts/run_variant_b.py`, and unit tests.
+  - Validated: `ruff check .`, `python -m mypy src`, `python -m pytest`.
