@@ -1,24 +1,35 @@
 # Documentation Index
 
-This folder is the source of truth for system intent, constraints, and current execution plans.
+This directory is the repository source of truth. Keep AGENTS concise and keep details here.
 
-## Sections
+## Hierarchy
 
-- `architecture/`: system boundaries, component responsibilities, and tracing architecture.
-- `domain/`: business semantics and deterministic solver constraints.
-- `decisions/`: architectural decision records (ADRs).
-- `exec-plans/`: active implementation plans and maintenance logs.
+1. `architecture/`: technical boundaries, runtime contracts, and environment harness.
+2. `domain/`: business semantics and solver-facing constraints.
+3. `decisions/`: ADRs for durable architecture choices.
+4. `exec-plans/`: active work plans and maintenance logs.
+5. `reports/`: dated run analyses and experiment diagnostics.
 
-## Start Here
+## Read Order
 
-1. Read `architecture/index.md` for component boundaries.
-2. Read `domain/sandwich-loop.md` for artifact schema and feasibility loop semantics.
-3. Review `decisions/` for pinned model and architecture choices.
-4. Check `exec-plans/active/` for current implementation history.
+1. `architecture/index.md`
+2. `domain/sandwich-loop.md`
+3. `decisions/`
+4. `exec-plans/active/`
 
-## Recent Highlights (March 2026)
+## Engineering Harness
 
-- OpenTelemetry/Phoenix project attribution is now normalized to `openinference.project.name` at startup.
-- Baseline runner prints tracing env values before tracing initialization for easier diagnostics.
-- Optional HTTPX instrumentation is available to capture external HTTP spans.
-- Documentation now standardizes one `OTEL_RESOURCE_ATTRIBUTES` declaration in `.env`.
+- Run repository commands from `.venv`:
+	- `source .venv/bin/activate`
+	- `python -m pytest`
+	- `ruff check .`
+	- `python -m mypy src`
+- Script execution should also use `.venv` Python (for example `python scripts/run_baseline.py`).
+
+## Current Highlights
+
+- Phoenix attribution normalizes to `openinference.project.name` during startup.
+- Phoenix OpenAPI feedback-loop guide is available at `architecture/phoenix-openapi-feedback-loop.md`.
+- Batch pipeline supports gradient disruptions and optional dual-disruption scenarios.
+- Script contracts are covered by tests under `tests/scripts/`.
+- Run analysis reports are cataloged under `reports/README.md`.

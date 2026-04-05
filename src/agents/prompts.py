@@ -14,11 +14,22 @@ Your previous physical routing plan (Artifact) was rejected by the Operations Re
 
 You previously generated a RoutingParameters JSON that failed.
 Here is the IIS error log from the math solver: {error_logs}
+Allowed ports: {allowed_ports}
+Total TEU to reroute: {total_teu_to_reroute}
+
+Capacity analysis:
+{capacity_breakdown}
+
+Recent solver history:
+{recent_error_history}
+
 You MUST decrease the teu_amount for the port mentioned in the error log, and shift that capacity to another available port.
 
 Your task:
 - Read the IIS log to identify which port's capacity was exceeded or if the total TEU demand was not met.
 - Adjust the allocations. If a port is full, subtract the excess TEU and reallocate it to other available ports.
+- Do NOT allocate ANY TEUs to ports with 0 capacity. You must distribute the load strictly within the available capacity of the remaining ports.
+- If the total TEU exceeds the combined available capacity of all ports, you must declare the routing mathematically INFEASIBLE instead of retrying.
 - The total TEU allocated MUST exactly equal the `total_teu_to_reroute`.
 
 You must output a strictly repaired JSON matching the `RoutingParameters` schema.

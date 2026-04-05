@@ -87,6 +87,9 @@ We use YAAM (`Yet Another Agents Memory`) as an external library to maintain the
 
 ## 7. Observability Architecture (OpenTelemetry + Phoenix)
 
+Operational playbook for API-first trace verification and annotation-driven refinement:
+`docs/architecture/phoenix-openapi-feedback-loop.md`.
+
 Tracing initialization is centralized in `src/core/observability.py` and executed by `scripts/run_baseline.py` before graph execution.
 
 ### Startup and resource attribution contract
@@ -148,3 +151,21 @@ OTEL_RESOURCE_ATTRIBUTES=openinference.project.name=scm-cognitive-sandwich-idwl,
 * `openinference.instrumentation.langchain` is always instrumented.
 * `opentelemetry-instrumentation-httpx` is optional and enabled when installed.
 * HTTP spans can appear as separate root traces depending on library/runtime context boundaries; project attribution still remains correct.
+
+## 8. Runtime Harness (Engineering Practice)
+
+All repository validation and script execution should run from the project virtual environment.
+
+Recommended command pattern:
+
+```bash
+source .venv/bin/activate
+python -m pytest
+ruff check .
+python -m mypy src
+python scripts/run_baseline.py --thread-id baseline-session
+```
+
+Rationale:
+* Ensures agent/runtime dependencies (LangGraph, LangChain providers, Pyomo stack) resolve consistently.
+* Avoids false negatives caused by system Python or globally installed tools.

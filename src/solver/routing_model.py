@@ -6,6 +6,29 @@ from agents.state import RoutingParameters, SolverResult
 
 logger = logging.getLogger(__name__)
 
+ALLOWED_PORTS = ["NLRTM", "BEANR", "DEHAM", "DEBRV"]
+TERMINAL_INFEASIBLE_PREFIX = "SOLVER TERMINAL: MATHEMATICALLY INFEASIBLE."
+
+
+def _build_unknown_port_error_message(bad_port: str) -> str:
+    return (
+        f"SOLVER ERROR: Port {bad_port} is not recognized in the current network topology. "
+        f"Allowed ports are: {', '.join(ALLOWED_PORTS)}."
+    )
+
+
+def _build_terminal_infeasible_error_message(total_required: int, total_available: int) -> str:
+    deficit = total_required - total_available
+    return (
+        f"{TERMINAL_INFEASIBLE_PREFIX} Total required TEU is {total_required}, "
+        f"but combined available capacity across allowed ports is {total_available} TEU "
+        f"(deficit: {deficit} TEU). Allowed ports are: {', '.join(ALLOWED_PORTS)}."
+    )
+
+
+def is_terminal_infeasible_log(iis_log: str | None) -> bool:
+    return bool(iis_log and iis_log.startswith(TERMINAL_INFEASIBLE_PREFIX))
+
 def evaluate_routing_feasibility(params: RoutingParameters, capacities: dict[str, int]) -> SolverResult:
     """
     Builds a Pyomo model to mathematically verify if the LLM-proposed 
@@ -13,6 +36,27 @@ def evaluate_routing_feasibility(params: RoutingParameters, capacities: dict[str
     Uses the SCIP solver.
     Extracts an Irreducible Infeasible Subsystem (IIS) log on failure.
     """
+    unknown_ports = [
+        alloc.port_code
+        for alloc in params.allocations
+        if alloc.port_code not in ALLOWED_PORTS
+    ]
+    if unknown_ports:
+        return SolverResult(
+            status="INFEASIBLE",
+            iis_log=_build_unknown_port_error_message(unknown_ports[0]),
+        )
+
+    total_available_capacity = sum(max(capacities.get(port, 0), 0) for port in ALLOWED_PORTS)
+    if params.total_teu_to_reroute > total_available_capacity:
+        return SolverResult(
+            status="INFEASIBLE",
+            iis_log=_build_terminal_infeasible_error_message(
+                total_required=params.total_teu_to_reroute,
+                total_available=total_available_capacity,
+            ),
+        )
+
     model = pyo.ConcreteModel()
 
     # Sets

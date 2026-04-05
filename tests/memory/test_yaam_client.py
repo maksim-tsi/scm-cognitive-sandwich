@@ -65,6 +65,7 @@ def test_consolidate_episode_success_includes_traceparent_header():
             session_id="session-1",
             final_state=final_state,
             metadata=metadata,
+            agent_id="scm-sandwich-experiment-v1",
         )
     )
 
@@ -78,10 +79,33 @@ def test_consolidate_episode_success_includes_traceparent_header():
     payload = call["json"]
     assert payload == {
         "session_id": "session-1",
-        "agent_id": DEFAULT_AGENT_ID,
+        "agent_id": "scm-sandwich-experiment-v1",
         "final_state": final_state,
         "metadata": metadata,
     }
+
+
+def test_consolidate_episode_uses_default_agent_id_when_omitted():
+    dummy = DummyAsyncClient(response=DummyResponse())
+    client = YAAMClient(base_url="http://localhost:8002", client=dummy)
+
+    success = asyncio.run(
+        client.consolidate_episode(
+            session_id="session-1",
+            final_state={
+                "prompt": None,
+                "drafts": [],
+                "solver_iis_logs": [],
+                "final_routing_parameters": {},
+            },
+            metadata={"status": "success", "duration_seconds": 0.0, "solver_attempts": 1},
+        )
+    )
+
+    assert success is True
+    assert len(dummy.calls) == 1
+    payload = dummy.calls[0]["json"]
+    assert payload["agent_id"] == DEFAULT_AGENT_ID
 
 
 def test_consolidate_episode_returns_false_on_http_status_error():

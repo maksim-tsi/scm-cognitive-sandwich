@@ -7,6 +7,7 @@ def test_get_port_capacities_mock(monkeypatch):
     capacities = get_port_capacities()
     assert capacities["NLRTM"] == 25000
     assert capacities["BEANR"] == 15000
+    assert capacities["DEHAM"] == 12000
     assert capacities["DEBRV"] == 10000
 
 
@@ -51,7 +52,33 @@ def test_get_port_capacities_http_failure_falls_back_to_mock(monkeypatch):
     monkeypatch.setenv("SANDBOX_API_URL", "http://example.invalid")
     monkeypatch.setattr("clients.port_sandbox.httpx.Client", _FailingClient)
 
-    capacities = get_port_capacities(["NLRTM", "BEANR", "DEBRV"])
+    capacities = get_port_capacities(["NLRTM", "BEANR", "DEHAM", "DEBRV"])
     assert capacities["NLRTM"] == 25000
     assert capacities["BEANR"] == 15000
+    assert capacities["DEHAM"] == 12000
     assert capacities["DEBRV"] == 10000
+
+
+def test_get_port_capacities_reads_nested_metrics_capacity(monkeypatch):
+    class _Response:
+        def raise_for_status(self):
+            return None
+
+        def json(self):
+            return {"metrics": {"availableCapacityTEU": 4321}}
+
+    class _Client:
+        def __enter__(self):
+            return self
+
+        def __exit__(self, exc_type, exc, tb):
+            return False
+
+        def get(self, url: str, timeout: float = 5.0):  # noqa: ARG002
+            return _Response()
+
+    monkeypatch.setenv("USE_MOCK_SANDBOX", "false")
+    monkeypatch.setattr("clients.port_sandbox.httpx.Client", _Client)
+
+    capacities = get_port_capacities(["NLRTM"])
+    assert capacities == {"NLRTM": 4321}

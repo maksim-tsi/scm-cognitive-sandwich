@@ -1,5 +1,11 @@
 from agents.state import RoutingParameters, PortAllocation
-from solver.routing_model import evaluate_routing_feasibility
+from solver.routing_model import evaluate_routing_feasibility, is_terminal_infeasible_log
+
+
+UNKNOWN_PORT_ERROR = (
+    "SOLVER ERROR: Port FRLEH is not recognized in the current network topology. "
+    "Allowed ports are: NLRTM, BEANR, DEHAM, DEBRV."
+)
 
 def test_routing_model_feasible():
     params = RoutingParameters(
@@ -42,3 +48,39 @@ def test_routing_model_infeasible_demand():
     assert result.status == "INFEASIBLE"
     assert "Conflict detected in Demand Satisfaction Constraint" in result.iis_log
     assert "Difference: 5000 TEU" in result.iis_log
+
+
+def test_routing_model_rejects_unknown_port_with_explicit_message():
+    params = RoutingParameters(
+        original_destination="DEHAM",
+        total_teu_to_reroute=10000,
+        allocations=[
+            PortAllocation(port_code="FRLEH", teu_amount=10000)
+        ],
+    )
+    capacities = {"NLRTM": 6000, "BEANR": 8000, "DEHAM": 9000, "DEBRV": 7000}
+
+    result = evaluate_routing_feasibility(params, capacities)
+
+    assert result.status == "INFEASIBLE"
+    assert result.iis_log == UNKNOWN_PORT_ERROR
+
+
+def test_routing_model_marks_terminal_infeasible_when_network_capacity_is_too_low():
+    params = RoutingParameters(
+        original_destination="DEHAM",
+        total_teu_to_reroute=20000,
+        allocations=[
+            PortAllocation(port_code="NLRTM", teu_amount=10000),
+            PortAllocation(port_code="BEANR", teu_amount=10000),
+        ],
+    )
+    capacities = {"NLRTM": 0, "BEANR": 7000, "DEHAM": 3000, "DEBRV": 2000}
+
+    result = evaluate_routing_feasibility(params, capacities)
+
+    assert result.status == "INFEASIBLE"
+    assert is_terminal_infeasible_log(result.iis_log)
+    assert "Total required TEU is 20000" in result.iis_log
+    assert "combined available capacity across allowed ports is 12000 TEU" in result.iis_log
+    assert "deficit: 8000 TEU" in result.iis_log
