@@ -7,7 +7,11 @@
 │   ├── architecture
 │   │   ├── index.md
 │   │   ├── phoenix-openapi-feedback-loop.md
-│   │   └── README.md
+│   │   ├── README.md
+│   │   ├── RFC-001-LangGraph-Pipeline.md
+│   │   ├── RFC-002-LLM-as-a-Judge.md
+│   │   ├── RFC-003-Tool-Integration-MCP.md
+│   │   └── RFC-004-YAAM-Artifact-Logging.md
 │   ├── decisions
 │   │   ├── 001-llm-models-selection.md
 │   │   ├── 002-otel-phoenix-project-attribution.md
@@ -16,7 +20,10 @@
 │   │   ├── README.md
 │   │   └── sandwich-loop.md
 │   ├── exec-plans
-│   │   ├── active
+│   │   ├── 02-exec-plan-variant-b-core-state-graph-skeleton.md
+│   │   ├── 03-exec-plan-cognitive-sandwich-core.md
+│   │   ├── 04-exec-plan-env-integration-yaam-open-science.md
+│   │   ├── completed
 │   │   │   ├── 01-project-initiation.md
 │   │   │   └── README.md
 │   │   └── README.md
@@ -25,17 +32,24 @@
 │       ├── 2026-03-15-idwl-batch-limit10-refined-run-analysis.md
 │       ├── 2026-03-15-idwl-batch-limit10-run-analysis.md
 │       ├── 2026-03-15-perturbation-coverage-run8.md
+│       ├── 2026-04-05-RFC-001-004-Orchestrator-Readiness.md
 │       └── README.md
 ├── LICENSE
 ├── pyproject.toml
 ├── README.md
 ├── scripts
+│   ├── __pycache__
+│   │   ├── batch_runner.cpython-312.pyc
+│   │   ├── generate_dataset.cpython-312.pyc
+│   │   └── run_perturbation_coverage.cpython-312.pyc
 │   ├── batch_runner.py
+│   ├── bootstrap_active_tools.py
 │   ├── check_llm_health.py
 │   ├── find_feasible_scenarios.py
 │   ├── generate_dataset.py
 │   ├── run_baseline.py
-│   └── run_perturbation_coverage.py
+│   ├── run_perturbation_coverage.py
+│   └── run_variant_b.py
 ├── src
 │   ├── agents
 │   │   ├── __init__.py
@@ -46,7 +60,15 @@
 │   │   │   └── state.cpython-312.pyc
 │   │   ├── graph.py
 │   │   ├── prompts.py
-│   │   └── state.py
+│   │   ├── state.py
+│   │   └── variant_b
+│   │       ├── __init__.py
+│   │       ├── __pycache__
+│   │       │   ├── __init__.cpython-312.pyc
+│   │       │   ├── graph.cpython-312.pyc
+│   │       │   └── state.cpython-312.pyc
+│   │       ├── graph.py
+│   │       └── state.py
 │   ├── clients
 │   │   ├── __init__.py
 │   │   ├── __pycache__
@@ -57,12 +79,16 @@
 │   │   ├── __init__.py
 │   │   ├── __pycache__
 │   │   │   ├── __init__.cpython-312.pyc
+│   │   │   ├── env_guard.cpython-312.pyc
 │   │   │   └── observability.cpython-312.pyc
+│   │   ├── env_guard.py
 │   │   └── observability.py
 │   ├── memory
 │   │   ├── __init__.py
 │   │   ├── __pycache__
 │   │   │   ├── __init__.cpython-312.pyc
+│   │   │   ├── checkpointer.cpython-312.pyc
+│   │   │   ├── yaam_client.cpython-312.pyc
 │   │   │   └── yaam_facade.cpython-312.pyc
 │   │   ├── checkpointer.py
 │   │   ├── yaam_client.py
@@ -73,30 +99,82 @@
 │   │   ├── requires.txt
 │   │   ├── SOURCES.txt
 │   │   └── top_level.txt
-│   └── solver
+│   ├── solver
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-312.pyc
+│   │   │   └── routing_model.cpython-312.pyc
+│   │   └── routing_model.py
+│   └── tools
 │       ├── __init__.py
-│       ├── __pycache__
-│       │   ├── __init__.cpython-312.pyc
-│       │   └── routing_model.cpython-312.pyc
-│       └── routing_model.py
+│       ├── abc_classification.py
+│       ├── active_tools_manifest.json
+│       ├── aggregate_planning_optimizer.py
+│       ├── apics_rule_check.py
+│       ├── bullwhip_effect.py
+│       ├── centroid_location.py
+│       ├── economic_order_quantity.py
+│       ├── edd_dispatching.py
+│       ├── facility_location_optimizer.py
+│       ├── fmea_rpn.py
+│       ├── inventory_turnover.py
+│       ├── kraljic_matrix.py
+│       ├── linear_trend_forecast.py
+│       ├── make_or_buy.py
+│       ├── moving_average.py
+│       ├── mps_projected_available_balance.py
+│       ├── mrp_net_requirements.py
+│       ├── mrp_pegging.py
+│       ├── newsvendor_model.py
+│       ├── ocean_freight_costing.py
+│       ├── p_chart_ucl.py
+│       ├── pareto_analysis.py
+│       ├── pert_cpm_variance.py
+│       ├── pestel_analysis.py
+│       ├── pricing_optimization.py
+│       ├── process_capability_cpk.py
+│       ├── README.md
+│       ├── reorder_point_safety_stock.py
+│       ├── return_on_assets.py
+│       ├── risk_pooling.py
+│       ├── risk_sharing_contracts.py
+│       ├── seasonal_decomposition.py
+│       ├── terminal_throughput.py
+│       ├── toc_bottleneck_analysis.py
+│       ├── transport_route_savings.py
+│       ├── work_center_load.py
+│       └── xbar_s_control_charts.py
 ├── tests
 │   ├── __pycache__
 │   │   └── conftest.cpython-312-pytest-9.0.2.pyc
 │   ├── agents
 │   │   ├── __pycache__
-│   │   │   └── test_graph.cpython-312-pytest-9.0.2.pyc
-│   │   └── test_graph.py
+│   │   │   ├── test_graph.cpython-312-pytest-9.0.2.pyc
+│   │   │   └── test_variant_b_graph.cpython-312-pytest-9.0.2.pyc
+│   │   ├── test_graph.py
+│   │   └── test_variant_b_graph.py
 │   ├── clients
 │   │   ├── __pycache__
 │   │   │   └── test_port_sandbox.cpython-312-pytest-9.0.2.pyc
 │   │   └── test_port_sandbox.py
 │   ├── conftest.py
 │   ├── core
+│   │   ├── __pycache__
+│   │   │   ├── test_env_guard.cpython-312-pytest-9.0.2.pyc
+│   │   │   └── test_observability.cpython-312-pytest-9.0.2.pyc
+│   │   ├── test_env_guard.py
 │   │   └── test_observability.py
 │   ├── memory
+│   │   ├── __pycache__
+│   │   │   ├── test_checkpointer.cpython-312-pytest-9.0.2.pyc
+│   │   │   └── test_yaam_client.cpython-312-pytest-9.0.2.pyc
 │   │   ├── test_checkpointer.py
 │   │   └── test_yaam_client.py
 │   ├── scripts
+│   │   ├── __pycache__
+│   │   │   ├── test_batch_runner.cpython-312-pytest-9.0.2.pyc
+│   │   │   ├── test_generate_dataset.cpython-312-pytest-9.0.2.pyc
+│   │   │   └── test_run_perturbation_coverage.cpython-312-pytest-9.0.2.pyc
 │   │   ├── test_batch_runner.py
 │   │   ├── test_generate_dataset.py
 │   │   └── test_run_perturbation_coverage.py
@@ -30427,4 +30505,4 @@
     │               └── WHEEL
     └── pyvenv.cfg
 
-3446 directories, 26982 files
+3453 directories, 27053 files

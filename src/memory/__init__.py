@@ -1,5 +1,41 @@
-from memory.checkpointer import create_checkpointer
-from memory.yaam_client import YAAMClient
+"""
+Memory system module.
+"""
 
-__all__ = ["create_checkpointer", "YAAMClient"]
+from src.memory.artifacts import (
+    Artifact,
+    ArtifactCommit,
+    ArtifactFeedback,
+    ArtifactLineageNode,
+    ArtifactLineageQuery,
+    ArtifactLineageResult,
+    ArtifactRevision,
+)
+from src.memory.models import (
+    Episode,
+    EpisodeQuery,
+    Fact,
+    FactCategory,
+    FactQuery,
+    FactType,
+    KnowledgeDocument,
+    KnowledgeQuery,
+)
 
+__all__ = [
+    "Artifact",
+    "ArtifactCommit",
+    "ArtifactFeedback",
+    "ArtifactLineageNode",
+    "ArtifactLineageQuery",
+    "ArtifactLineageResult",
+    "ArtifactRevision",
+    "Episode",
+    "EpisodeQuery",
+    "Fact",
+    "FactCategory",
+    "FactQuery",
+    "FactType",
+    "KnowledgeDocument",
+    "KnowledgeQuery",
+]
