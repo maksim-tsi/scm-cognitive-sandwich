@@ -3,9 +3,8 @@ import pytest
 from core.env_guard import assert_no_localhost_services
 
 
-def _set_required_env(monkeypatch, *, sandbox: str, yaam: str, phoenix: str) -> None:
+def _set_required_env(monkeypatch, *, sandbox: str, phoenix: str) -> None:
     monkeypatch.setenv("SANDBOX_API_URL", sandbox)
-    monkeypatch.setenv("YAAM_API_URL", yaam)
     monkeypatch.setenv("PHOENIX_COLLECTOR_ENDPOINT", phoenix)
 
 
@@ -14,7 +13,6 @@ def test_env_guard_rejects_localhost_endpoints(monkeypatch) -> None:
     _set_required_env(
         monkeypatch,
         sandbox="http://localhost:8001",
-        yaam="http://127.0.0.1:8002/v1/memory/episode/consolidate",
         phoenix="http://localhost:6006/v1/traces",
     )
 
@@ -27,7 +25,6 @@ def test_env_guard_accepts_remote_endpoints(monkeypatch) -> None:
     _set_required_env(
         monkeypatch,
         sandbox="http://192.168.107.172:8001",
-        yaam="http://192.168.107.172:8002/v1/memory/episode/consolidate",
         phoenix="http://192.168.107.172:6006/v1/traces",
     )
 
@@ -39,9 +36,7 @@ def test_env_guard_bypass_allows_localhost(monkeypatch) -> None:
     _set_required_env(
         monkeypatch,
         sandbox="http://localhost:8001",
-        yaam="http://localhost:8002/v1/memory/episode/consolidate",
         phoenix="http://localhost:6006/v1/traces",
     )
 
     assert_no_localhost_services()
-

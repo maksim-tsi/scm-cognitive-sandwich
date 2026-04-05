@@ -20,6 +20,8 @@
 
 ## As-Is State (Current Repository Reality)
 
+> Infra note (2026-04-05): YAAM frontgate (`YAAM_API_URL`, port 8002) is deprecated per infrastructure audit. Variant B memory will target PostgreSQL/Qdrant/Typesense directly.
+
 ### A) LangGraph implementation (vs RFC-001)
 **What exists now**
 - A baseline LangGraph “sandwich loop” with nodes:
@@ -44,7 +46,7 @@
   - Adaptive checkpointer uses `REDIS_URL` when set; otherwise in-memory `MemorySaver`.  
   Evidence: `src/memory/checkpointer.py`, `.env.example` (Redis remote host + `REDIS_URL`).
 - **Episode consolidation**:
-  - `YAAMClient.consolidate_episode()` posts final state to `YAAM_API_URL` and propagates `traceparent`.  
+  - Legacy: `YAAMClient.consolidate_episode()` posts final state via an HTTP endpoint and propagates `traceparent` (frontgate now deprecated).  
   Evidence: `src/memory/yaam_client.py`, `src/agents/graph.py` (`_consolidate_episode` call in `node_commit_final`).
 - **Artifact tool facade exists but is non-functional**:
   - `artifact_save_draft()` returns `"draft_id_mock"`, and other functions are no-ops/mocks.  
@@ -130,7 +132,6 @@ Missing / not yet implemented:
 ### Cross-cutting operational gap (infra constraint: “no localhost”)
 - Several codepaths default to `http://localhost:*` when env vars are missing:
   - `src/clients/port_sandbox.py` defaults `SANDBOX_API_URL` to `http://localhost:8001`.
-  - `src/memory/yaam_client.py` defaults `YAAM_API_URL` to `http://localhost:8002/...`.
   - `scripts/batch_runner.py` defaults `SANDBOX_API_URL` to `http://localhost:8001`.  
 - `.env.example` is correctly configured for remote nodes, but the runtime should fail fast (or at least warn loudly) if a non-local environment is expected.
 
@@ -193,7 +194,7 @@ Missing / not yet implemented:
 - [ ] Keep Phoenix project attribution rules unchanged (ADR 002); add regression tests if new attributes are introduced.
 
 ### P2 — Operational guardrails (“no localhost”)
-- [ ] Add startup validation that rejects or loudly warns when `SANDBOX_API_URL` / `YAAM_API_URL` / `PHOENIX_COLLECTOR_ENDPOINT` resolve to `localhost` in non-dev runs.
+- [ ] Add startup validation that rejects or loudly warns when `SANDBOX_API_URL` / `PHOENIX_COLLECTOR_ENDPOINT` resolve to `localhost` in non-dev runs.
 - [ ] Document the required `.env` settings for remote nodes (keep `.env.example` as the source of truth).
 
 ---

@@ -67,8 +67,10 @@ The solver in `src/solver/routing_model.py` must be strictly deterministic.
 
 We use YAAM (`Yet Another Agents Memory`) as an external library to maintain the cognitive audit trail.
 
-* Do not create SQL tables or local JSON files for state persistence.
-* Import the artifact tools directly from the YAAM package.
+**Infrastructure update (WinterSim)**: the YAAM frontgate service is deprecated; Variant B will manage memory directly via database drivers (PostgreSQL, Qdrant, Typesense). Do not use `YAAM_API_URL`.
+
+* Avoid ad-hoc local JSON files for persistence; use configured backends and stable schemas.
+* If YAAM artifact tooling is used, access it only through `src/memory/yaam_facade.py` (do not modify YAAM internals).
 * **Lineage Requirement:** Every time `node_repair_artifact` creates a new revision, it MUST link it to the previous revision and attach the IIS log using `artifact_attach_feedback`.
 
 ### L1/LTM Separation
@@ -77,7 +79,7 @@ We use YAAM (`Yet Another Agents Memory`) as an external library to maintain the
 * If `REDIS_URL` is set (for example `redis://host:6379/0`), the graph uses a Redis-backed saver with prefix `sandwich:checkpoint:` to avoid key collisions on shared Redis infrastructure.
 * Redis can be shared with YAAM on the same DB when namespaces are kept distinct (for example via key prefixes and non-overlapping RediSearch index names).
 * If `REDIS_URL` is absent or Redis initialization fails, the graph falls back to LangGraph `MemorySaver` for local development.
-* Long-term consolidation is decoupled and performed by `src/memory/yaam_client.py`, which posts the final episode state to `YAAM_API_URL`.
+* Legacy: `src/memory/yaam_client.py` previously posted final episode state to a YAAM frontgate endpoint; this is deprecated in WinterSim infrastructure.
 * `consolidate_episode` propagates tracing context through the W3C `traceparent` header so local and remote traces can be stitched in Phoenix.
 
 ## 6. Testing Requirements
@@ -122,7 +124,6 @@ Notes:
 | `OTEL_RESOURCE_ATTRIBUTES` | Yes (for stable Phoenix routing) | `openinference.project.name=scm-cognitive-sandwich-idwl,service.name=scm-cognitive-sandwich-idwl` |
 | `OTEL_SERVICE_NAME` | Optional | If unset, defaults to project name in startup code |
 | `SANDBOX_API_URL` | Optional | Defaults to local sandbox URL when unset |
-| `YAAM_API_URL` | Optional | Defaults to local YAAM URL when unset |
 | `REDIS_URL` | Optional | Enables Redis-backed LangGraph checkpointer |
 | `GOOGLE_API_KEY` | One LLM key required | Use local secret value; do not commit |
 | `MISTRAL_API_KEY` | One LLM key required | Use local secret value; do not commit |
@@ -137,7 +138,6 @@ OTEL_RESOURCE_ATTRIBUTES=openinference.project.name=scm-cognitive-sandwich-idwl,
 
 # Optional integration endpoints
 # SANDBOX_API_URL=http://localhost:8001
-# YAAM_API_URL=http://localhost:8002
 # REDIS_URL=redis://localhost:6379/0
 
 # LLM credentials (set locally; never commit real values)

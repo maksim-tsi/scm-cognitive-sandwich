@@ -47,7 +47,6 @@ Environment variables quick reference:
 | `OTEL_RESOURCE_ATTRIBUTES` | Yes (for stable Phoenix routing) | `openinference.project.name=scm-cognitive-sandwich-idwl,service.name=scm-cognitive-sandwich-idwl` |
 | `OTEL_SERVICE_NAME` | Optional | If unset, defaults to project name in startup code |
 | `SANDBOX_API_URL` | Optional | Defaults to local sandbox URL when unset |
-| `YAAM_API_URL` | Optional | Defaults to local YAAM URL when unset |
 | `REDIS_URL` | Optional | Enables Redis-backed LangGraph checkpointer |
 | `GOOGLE_API_KEY` | One LLM key required | Use local secret value; do not commit |
 | `MISTRAL_API_KEY` | One LLM key required | Use local secret value; do not commit |
@@ -62,7 +61,6 @@ OTEL_RESOURCE_ATTRIBUTES=openinference.project.name=scm-cognitive-sandwich-idwl,
 
 # Optional integration endpoints
 # SANDBOX_API_URL=http://localhost:8001
-# YAAM_API_URL=http://localhost:8002
 # REDIS_URL=redis://localhost:6379/0
 
 # LLM credentials (set locally; never commit real values)
@@ -126,4 +124,3 @@ python -m pytest -q
 ## License
 
 MIT.
-

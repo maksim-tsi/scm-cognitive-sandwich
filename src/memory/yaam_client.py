@@ -9,7 +9,6 @@ from opentelemetry import trace as trace_api
 
 LOGGER = logging.getLogger(__name__)
 
-DEFAULT_YAAM_API_URL = "http://localhost:8002/v1/memory/episode/consolidate"
 DEFAULT_AGENT_ID = "scm-sandwich-v1"
 
 
@@ -45,14 +44,18 @@ class YAAMClient:
         client: httpx.AsyncClient | None = None,
     ) -> None:
         raw_url = base_url if base_url is not None else os.getenv("YAAM_API_URL")
-        configured_url = (raw_url or DEFAULT_YAAM_API_URL).strip()
-        self._endpoint = _normalize_endpoint(configured_url)
+        configured_url = (raw_url or "").strip()
+        self._endpoint = _normalize_endpoint(configured_url) if configured_url else None
         self._timeout_seconds = timeout_seconds
         self._client = client
 
     @property
-    def endpoint(self) -> str:
+    def endpoint(self) -> str | None:
         return self._endpoint
+
+    @property
+    def enabled(self) -> bool:
+        return bool(self._endpoint)
 
     async def consolidate_episode(
         self,
@@ -61,6 +64,10 @@ class YAAMClient:
         metadata: dict[str, Any],
         agent_id: str = DEFAULT_AGENT_ID,
     ) -> bool:
+        if not self._endpoint:
+            LOGGER.info("YAAM consolidation disabled (YAAM_API_URL not configured).")
+            return False
+
         payload = {
             "session_id": session_id,
             "agent_id": agent_id,

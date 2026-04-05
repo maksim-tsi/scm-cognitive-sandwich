@@ -13,10 +13,14 @@ LOCALHOST_HOSTNAMES = {"localhost", "127.0.0.1", "::1", "0.0.0.0"}
 class EnvGuardConfig:
     required_keys: tuple[str, ...] = (
         "SANDBOX_API_URL",
-        "YAAM_API_URL",
         "PHOENIX_COLLECTOR_ENDPOINT",
     )
-    optional_keys: tuple[str, ...] = ("REDIS_URL",)
+    optional_keys: tuple[str, ...] = (
+        "REDIS_URL",
+        "POSTGRES_HOST",
+        "QDRANT_URL",
+        "TYPESENSE_URL",
+    )
     allow_localhost_env_key: str = "ALLOW_LOCALHOST"
 
 
@@ -88,4 +92,3 @@ def assert_no_localhost_services(config: EnvGuardConfig | None = None) -> None:
             f"{joined}\n\n"
             f"Set {resolved_config.allow_localhost_env_key}=true to bypass for local dev/testing only."
         )
-

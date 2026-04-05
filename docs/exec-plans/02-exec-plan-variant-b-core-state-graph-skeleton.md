@@ -52,9 +52,11 @@ A runnable (mocked/stubbed) LangGraph pipeline where you can inject an `Incident
 - Create `src/core/env_guard.py`:
   - `assert_no_localhost_services(...)` validates:
     - `SANDBOX_API_URL`
-    - `YAAM_API_URL`
     - `PHOENIX_COLLECTOR_ENDPOINT`
     - `REDIS_URL`
+    - `POSTGRES_HOST` (if set)
+    - `QDRANT_URL` (if set)
+    - `TYPESENSE_URL` (if set)
   - Reject hostnames/IPs in `{localhost, 127.0.0.1, ::1, 0.0.0.0}`.
   - Allow explicit bypass for local dev/test only via `ALLOW_LOCALHOST=true`.
   - Error messages must be actionable (print the offending env var and value).
