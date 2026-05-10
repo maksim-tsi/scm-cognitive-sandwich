@@ -1,17 +1,139 @@
 .
 ├── AGENTS.md
 ├── data
+│   ├── base_incidents.json
+│   ├── batch_incidents_dummy
+│   │   ├── incident_invalid_003.json
+│   │   ├── incident_nominal_001.json
+│   │   └── incident_stress_002.json
+│   ├── batch_incidents_production
+│   │   ├── incident_001.json
+│   │   ├── incident_002.json
+│   │   ├── incident_003.json
+│   │   ├── incident_004.json
+│   │   ├── incident_005.json
+│   │   ├── incident_006.json
+│   │   ├── incident_007.json
+│   │   ├── incident_008.json
+│   │   ├── incident_009.json
+│   │   ├── incident_010.json
+│   │   ├── incident_011.json
+│   │   ├── incident_012.json
+│   │   ├── incident_013.json
+│   │   ├── incident_014.json
+│   │   ├── incident_015.json
+│   │   ├── incident_016.json
+│   │   ├── incident_017.json
+│   │   ├── incident_018.json
+│   │   ├── incident_019.json
+│   │   ├── incident_020.json
+│   │   ├── incident_021.json
+│   │   ├── incident_022.json
+│   │   ├── incident_023.json
+│   │   ├── incident_024.json
+│   │   ├── incident_025.json
+│   │   ├── incident_026.json
+│   │   ├── incident_027.json
+│   │   ├── incident_028.json
+│   │   ├── incident_029.json
+│   │   ├── incident_030.json
+│   │   ├── incident_031.json
+│   │   ├── incident_032.json
+│   │   ├── incident_033.json
+│   │   ├── incident_034.json
+│   │   ├── incident_035.json
+│   │   ├── incident_036.json
+│   │   ├── incident_037.json
+│   │   ├── incident_038.json
+│   │   ├── incident_039.json
+│   │   ├── incident_040.json
+│   │   ├── incident_041.json
+│   │   ├── incident_042.json
+│   │   ├── incident_043.json
+│   │   ├── incident_044.json
+│   │   ├── incident_045.json
+│   │   ├── incident_046.json
+│   │   ├── incident_047.json
+│   │   ├── incident_048.json
+│   │   ├── incident_049.json
+│   │   └── incident_050.json
+│   ├── batch_incidents_production.backup
+│   │   ├── incident_001.json
+│   │   ├── incident_002.json
+│   │   ├── incident_003.json
+│   │   ├── incident_004.json
+│   │   ├── incident_005.json
+│   │   ├── incident_006.json
+│   │   ├── incident_007.json
+│   │   ├── incident_008.json
+│   │   ├── incident_009.json
+│   │   ├── incident_010.json
+│   │   ├── incident_011.json
+│   │   ├── incident_012.json
+│   │   ├── incident_013.json
+│   │   ├── incident_014.json
+│   │   ├── incident_015.json
+│   │   ├── incident_016.json
+│   │   ├── incident_017.json
+│   │   ├── incident_018.json
+│   │   ├── incident_019.json
+│   │   ├── incident_020.json
+│   │   ├── incident_021.json
+│   │   ├── incident_022.json
+│   │   ├── incident_023.json
+│   │   ├── incident_024.json
+│   │   ├── incident_025.json
+│   │   ├── incident_026.json
+│   │   ├── incident_027.json
+│   │   ├── incident_028.json
+│   │   ├── incident_029.json
+│   │   ├── incident_030.json
+│   │   ├── incident_031.json
+│   │   ├── incident_032.json
+│   │   ├── incident_033.json
+│   │   ├── incident_034.json
+│   │   ├── incident_035.json
+│   │   ├── incident_036.json
+│   │   ├── incident_037.json
+│   │   ├── incident_038.json
+│   │   ├── incident_039.json
+│   │   ├── incident_040.json
+│   │   ├── incident_041.json
+│   │   ├── incident_042.json
+│   │   ├── incident_043.json
+│   │   ├── incident_044.json
+│   │   ├── incident_045.json
+│   │   ├── incident_046.json
+│   │   ├── incident_047.json
+│   │   ├── incident_048.json
+│   │   ├── incident_049.json
+│   │   └── incident_050.json
+│   ├── incident_variant_b_demo.json
 │   ├── results_idwl_v1.csv
+│   ├── results_variant_b_batch.csv
+│   ├── runs
+│   │   ├── full_batch_run_2026-04-05.log
+│   │   └── winsim-demo-001
+│   │       ├── report_winsim-demo-001.md
+│   │       ├── winsim-demo-001_step_01.json
+│   │       ├── winsim-demo-001_step_02.json
+│   │       ├── winsim-demo-001_step_03.json
+│   │       ├── winsim-demo-001_step_04.json
+│   │       ├── winsim-demo-001_step_05.json
+│   │       ├── winsim-demo-001_step_06.json
+│   │       └── winsim-demo-001_step_07.json
 │   └── scenarios_idwl_v1.csv
 ├── docs
 │   ├── architecture
+│   │   ├── cognitive-sandwich-flow.md
 │   │   ├── index.md
 │   │   ├── phoenix-openapi-feedback-loop.md
 │   │   ├── README.md
 │   │   ├── RFC-001-LangGraph-Pipeline.md
 │   │   ├── RFC-002-LLM-as-a-Judge.md
 │   │   ├── RFC-003-Tool-Integration-MCP.md
-│   │   └── RFC-004-YAAM-Artifact-Logging.md
+│   │   ├── RFC-004-YAAM-Artifact-Logging.md
+│   │   └── RFC-006-YAAM-Data-Contracts.md
 │   ├── decisions
 │   │   ├── 001-llm-models-selection.md
 │   │   ├── 002-otel-phoenix-project-attribution.md
@@ -20,11 +142,11 @@
 │   │   ├── README.md
 │   │   └── sandwich-loop.md
 │   ├── exec-plans
-│   │   ├── 02-exec-plan-variant-b-core-state-graph-skeleton.md
 │   │   ├── 03-exec-plan-cognitive-sandwich-core.md
 │   │   ├── 04-exec-plan-env-integration-yaam-open-science.md
 │   │   ├── completed
 │   │   │   ├── 01-project-initiation.md
+│   │   │   ├── 02-exec-plan-variant-b-core-state-graph-skeleton.md
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── README.md
@@ -33,6 +155,8 @@
 │       ├── 2026-03-15-idwl-batch-limit10-run-analysis.md
 │       ├── 2026-03-15-perturbation-coverage-run8.md
 │       ├── 2026-04-05-RFC-001-004-Orchestrator-Readiness.md
+│       ├── 2026-04-05-variant-b-batch-runner-smoke-test.md
+│       ├── experimental-setup-summary.md
 │       └── README.md
 ├── LICENSE
 ├── pyproject.toml
@@ -40,24 +164,40 @@
 ├── scripts
 │   ├── __pycache__
 │   │   ├── batch_runner.cpython-312.pyc
+│   │   ├── batch_runner.cpython-313.pyc
 │   │   ├── generate_dataset.cpython-312.pyc
-│   │   └── run_perturbation_coverage.cpython-312.pyc
+│   │   ├── generate_dataset.cpython-313.pyc
+│   │   ├── run_perturbation_coverage.cpython-312.pyc
+│   │   ├── run_perturbation_coverage.cpython-313.pyc
+│   │   └── test_openrouter_connectivity.cpython-313-pytest-9.0.2.pyc
 │   ├── batch_runner.py
 │   ├── bootstrap_active_tools.py
 │   ├── check_llm_health.py
 │   ├── find_feasible_scenarios.py
 │   ├── generate_dataset.py
+│   ├── generate_full_dataset.py
+│   ├── patch_incident_schema.py
 │   ├── run_baseline.py
+│   ├── run_batch.py
 │   ├── run_perturbation_coverage.py
-│   └── run_variant_b.py
+│   ├── run_variant_b.py
+│   ├── test_openrouter_connectivity.py
+│   ├── validate_generated_dataset.py
+│   ├── verify_embeddings.py
+│   ├── verify_sandbox.py
+│   └── verify_yaam.py
 ├── src
 │   ├── agents
 │   │   ├── __init__.py
 │   │   ├── __pycache__
 │   │   │   ├── __init__.cpython-312.pyc
+│   │   │   ├── __init__.cpython-313.pyc
 │   │   │   ├── graph.cpython-312.pyc
+│   │   │   ├── graph.cpython-313.pyc
 │   │   │   ├── prompts.cpython-312.pyc
-│   │   │   └── state.cpython-312.pyc
+│   │   │   ├── prompts.cpython-313.pyc
+│   │   │   ├── state.cpython-312.pyc
+│   │   │   └── state.cpython-313.pyc
 │   │   ├── graph.py
 │   │   ├── prompts.py
 │   │   ├── state.py
@@ -65,34 +205,115 @@
 │   │       ├── __init__.py
 │   │       ├── __pycache__
 │   │       │   ├── __init__.cpython-312.pyc
+│   │       │   ├── __init__.cpython-313.pyc
 │   │       │   ├── graph.cpython-312.pyc
-│   │       │   └── state.cpython-312.pyc
+│   │       │   ├── graph.cpython-313.pyc
+│   │       │   ├── state.cpython-312.pyc
+│   │       │   └── state.cpython-313.pyc
 │   │       ├── graph.py
 │   │       └── state.py
 │   ├── clients
 │   │   ├── __init__.py
 │   │   ├── __pycache__
 │   │   │   ├── __init__.cpython-312.pyc
-│   │   │   └── port_sandbox.cpython-312.pyc
+│   │   │   ├── __init__.cpython-313.pyc
+│   │   │   ├── port_sandbox.cpython-312.pyc
+│   │   │   └── port_sandbox.cpython-313.pyc
 │   │   └── port_sandbox.py
 │   ├── core
 │   │   ├── __init__.py
 │   │   ├── __pycache__
 │   │   │   ├── __init__.cpython-312.pyc
+│   │   │   ├── __init__.cpython-313.pyc
 │   │   │   ├── env_guard.cpython-312.pyc
-│   │   │   └── observability.cpython-312.pyc
+│   │   │   ├── env_guard.cpython-313.pyc
+│   │   │   ├── observability.cpython-312.pyc
+│   │   │   ├── observability.cpython-313.pyc
+│   │   │   ├── pareto_frontier.cpython-313.pyc
+│   │   │   └── sandbox_client.cpython-313.pyc
 │   │   ├── env_guard.py
-│   │   └── observability.py
+│   │   ├── observability.py
+│   │   ├── pareto_frontier.py
+│   │   └── sandbox_client.py
+│   ├── llm
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-313.pyc
+│   │   │   ├── call_llm.cpython-313.pyc
+│   │   │   └── openrouter_embeddings.cpython-313.pyc
+│   │   ├── call_llm.py
+│   │   └── openrouter_embeddings.py
 │   ├── memory
 │   │   ├── __init__.py
 │   │   ├── __pycache__
 │   │   │   ├── __init__.cpython-312.pyc
+│   │   │   ├── __init__.cpython-313.pyc
 │   │   │   ├── checkpointer.cpython-312.pyc
+│   │   │   ├── checkpointer.cpython-313.pyc
+│   │   │   ├── ciar_formula.cpython-313.pyc
+│   │   │   ├── models.cpython-313.pyc
 │   │   │   ├── yaam_client.cpython-312.pyc
-│   │   │   └── yaam_facade.cpython-312.pyc
+│   │   │   ├── yaam_client.cpython-313.pyc
+│   │   │   ├── yaam_facade.cpython-312.pyc
+│   │   │   └── yaam_facade.cpython-313.pyc
+│   │   ├── adapters
+│   │   │   ├── __init__.py
+│   │   │   ├── __pycache__
+│   │   │   │   ├── __init__.cpython-313.pyc
+│   │   │   │   ├── qdrant_http.cpython-313.pyc
+│   │   │   │   └── typesense_http.cpython-313.pyc
+│   │   │   ├── qdrant_http.py
+│   │   │   └── typesense_http.py
+│   │   ├── artifacts
+│   │   │   ├── __init__.py
+│   │   │   ├── __pycache__
+│   │   │   │   ├── __init__.cpython-312.pyc
+│   │   │   │   ├── __init__.cpython-313.pyc
+│   │   │   │   ├── models.cpython-312.pyc
+│   │   │   │   ├── models.cpython-313.pyc
+│   │   │   │   ├── repository.cpython-312.pyc
+│   │   │   │   ├── repository.cpython-313.pyc
+│   │   │   │   ├── service.cpython-312.pyc
+│   │   │   │   └── service.cpython-313.pyc
+│   │   │   ├── models.py
+│   │   │   ├── repository.py
+│   │   │   └── service.py
 │   │   ├── checkpointer.py
+│   │   ├── ciar_formula.py
+│   │   ├── ciar_scorer.py
+│   │   ├── knowledge_store_manager.py
+│   │   ├── lua
+│   │   │   ├── atomic_promotion.lua
+│   │   │   ├── smart_append.lua
+│   │   │   └── workspace_update.lua
+│   │   ├── lua_manager.py
+│   │   ├── metrics.py
+│   │   ├── models.py
+│   │   ├── namespace.py
+│   │   ├── system.py
+│   │   ├── tiers
+│   │   │   ├── __init__.py
+│   │   │   ├── __pycache__
+│   │   │   │   ├── __init__.cpython-312.pyc
+│   │   │   │   ├── active_context_tier.cpython-312.pyc
+│   │   │   │   ├── base_tier.cpython-312.pyc
+│   │   │   │   ├── episodic_memory_tier.cpython-312.pyc
+│   │   │   │   ├── semantic_memory_tier.cpython-312.pyc
+│   │   │   │   └── working_memory_tier.cpython-312.pyc
+│   │   │   ├── active_context_tier.py
+│   │   │   ├── base_tier.py
+│   │   │   ├── DEVLOG.md
+│   │   │   ├── episodic_memory_tier.py
+│   │   │   ├── README.md
+│   │   │   ├── semantic_memory_tier.py
+│   │   │   └── working_memory_tier.py
+│   │   ├── unified_memory_system.py
 │   │   ├── yaam_client.py
 │   │   └── yaam_facade.py
+│   ├── schemas
+│   │   ├── __pycache__
+│   │   │   └── sandbox.cpython-313.pyc
+│   │   └── sandbox.py
 │   ├── scm_cognitive_sandwich.egg-info
 │   │   ├── dependency_links.txt
 │   │   ├── PKG-INFO
@@ -103,10 +324,50 @@
 │   │   ├── __init__.py
 │   │   ├── __pycache__
 │   │   │   ├── __init__.cpython-312.pyc
-│   │   │   └── routing_model.cpython-312.pyc
+│   │   │   ├── __init__.cpython-313.pyc
+│   │   │   ├── routing_model.cpython-312.pyc
+│   │   │   └── routing_model.cpython-313.pyc
 │   │   └── routing_model.py
 │   └── tools
 │       ├── __init__.py
+│       ├── __pycache__
+│       │   ├── __init__.cpython-313.pyc
+│       │   ├── abc_classification.cpython-313.pyc
+│       │   ├── aggregate_planning_optimizer.cpython-313.pyc
+│       │   ├── apics_rule_check.cpython-313.pyc
+│       │   ├── bullwhip_effect.cpython-313.pyc
+│       │   ├── centroid_location.cpython-313.pyc
+│       │   ├── economic_order_quantity.cpython-313.pyc
+│       │   ├── edd_dispatching.cpython-313.pyc
+│       │   ├── facility_location_optimizer.cpython-313.pyc
+│       │   ├── fmea_rpn.cpython-313.pyc
+│       │   ├── inventory_turnover.cpython-313.pyc
+│       │   ├── kraljic_matrix.cpython-313.pyc
+│       │   ├── langchain_adapter.cpython-313.pyc
+│       │   ├── linear_trend_forecast.cpython-313.pyc
+│       │   ├── make_or_buy.cpython-313.pyc
+│       │   ├── moving_average.cpython-313.pyc
+│       │   ├── mps_projected_available_balance.cpython-313.pyc
+│       │   ├── mrp_net_requirements.cpython-313.pyc
+│       │   ├── mrp_pegging.cpython-313.pyc
+│       │   ├── newsvendor_model.cpython-313.pyc
+│       │   ├── ocean_freight_costing.cpython-313.pyc
+│       │   ├── p_chart_ucl.cpython-313.pyc
+│       │   ├── pareto_analysis.cpython-313.pyc
+│       │   ├── pert_cpm_variance.cpython-313.pyc
+│       │   ├── pestel_analysis.cpython-313.pyc
+│       │   ├── pricing_optimization.cpython-313.pyc
+│       │   ├── process_capability_cpk.cpython-313.pyc
+│       │   ├── reorder_point_safety_stock.cpython-313.pyc
+│       │   ├── return_on_assets.cpython-313.pyc
+│       │   ├── risk_pooling.cpython-313.pyc
+│       │   ├── risk_sharing_contracts.cpython-313.pyc
+│       │   ├── seasonal_decomposition.cpython-313.pyc
+│       │   ├── terminal_throughput.cpython-313.pyc
+│       │   ├── toc_bottleneck_analysis.cpython-313.pyc
+│       │   ├── transport_route_savings.cpython-313.pyc
+│       │   ├── work_center_load.cpython-313.pyc
+│       │   └── xbar_s_control_charts.cpython-313.pyc
 │       ├── abc_classification.py
 │       ├── active_tools_manifest.json
 │       ├── aggregate_planning_optimizer.py
@@ -119,6 +380,7 @@
 │       ├── fmea_rpn.py
 │       ├── inventory_turnover.py
 │       ├── kraljic_matrix.py
+│       ├── langchain_adapter.py
 │       ├── linear_trend_forecast.py
 │       ├── make_or_buy.py
 │       ├── moving_average.py
@@ -146,43 +408,60 @@
 │       └── xbar_s_control_charts.py
 ├── tests
 │   ├── __pycache__
-│   │   └── conftest.cpython-312-pytest-9.0.2.pyc
+│   │   ├── conftest.cpython-312-pytest-9.0.2.pyc
+│   │   └── conftest.cpython-313-pytest-9.0.2.pyc
 │   ├── agents
 │   │   ├── __pycache__
 │   │   │   ├── test_graph.cpython-312-pytest-9.0.2.pyc
-│   │   │   └── test_variant_b_graph.cpython-312-pytest-9.0.2.pyc
+│   │   │   ├── test_graph.cpython-313-pytest-9.0.2.pyc
+│   │   │   ├── test_variant_b_graph.cpython-312-pytest-9.0.2.pyc
+│   │   │   ├── test_variant_b_graph.cpython-313-pytest-9.0.2.pyc
+│   │   │   └── test_variant_b_judge_pass1.cpython-313-pytest-9.0.2.pyc
 │   │   ├── test_graph.py
-│   │   └── test_variant_b_graph.py
+│   │   ├── test_variant_b_graph.py
+│   │   └── test_variant_b_judge_pass1.py
 │   ├── clients
 │   │   ├── __pycache__
-│   │   │   └── test_port_sandbox.cpython-312-pytest-9.0.2.pyc
+│   │   │   ├── test_port_sandbox.cpython-312-pytest-9.0.2.pyc
+│   │   │   └── test_port_sandbox.cpython-313-pytest-9.0.2.pyc
 │   │   └── test_port_sandbox.py
 │   ├── conftest.py
 │   ├── core
 │   │   ├── __pycache__
 │   │   │   ├── test_env_guard.cpython-312-pytest-9.0.2.pyc
-│   │   │   └── test_observability.cpython-312-pytest-9.0.2.pyc
+│   │   │   ├── test_env_guard.cpython-313-pytest-9.0.2.pyc
+│   │   │   ├── test_observability.cpython-312-pytest-9.0.2.pyc
+│   │   │   ├── test_observability.cpython-313-pytest-9.0.2.pyc
+│   │   │   └── test_pareto_frontier.cpython-313-pytest-9.0.2.pyc
 │   │   ├── test_env_guard.py
-│   │   └── test_observability.py
+│   │   ├── test_observability.py
+│   │   └── test_pareto_frontier.py
 │   ├── memory
 │   │   ├── __pycache__
 │   │   │   ├── test_checkpointer.cpython-312-pytest-9.0.2.pyc
-│   │   │   └── test_yaam_client.cpython-312-pytest-9.0.2.pyc
+│   │   │   ├── test_checkpointer.cpython-313-pytest-9.0.2.pyc
+│   │   │   ├── test_yaam_client.cpython-312-pytest-9.0.2.pyc
+│   │   │   └── test_yaam_client.cpython-313-pytest-9.0.2.pyc
 │   │   ├── test_checkpointer.py
 │   │   └── test_yaam_client.py
 │   ├── scripts
 │   │   ├── __pycache__
 │   │   │   ├── test_batch_runner.cpython-312-pytest-9.0.2.pyc
+│   │   │   ├── test_batch_runner.cpython-313-pytest-9.0.2.pyc
 │   │   │   ├── test_generate_dataset.cpython-312-pytest-9.0.2.pyc
-│   │   │   └── test_run_perturbation_coverage.cpython-312-pytest-9.0.2.pyc
+│   │   │   ├── test_generate_dataset.cpython-313-pytest-9.0.2.pyc
+│   │   │   ├── test_run_perturbation_coverage.cpython-312-pytest-9.0.2.pyc
+│   │   │   └── test_run_perturbation_coverage.cpython-313-pytest-9.0.2.pyc
 │   │   ├── test_batch_runner.py
 │   │   ├── test_generate_dataset.py
 │   │   └── test_run_perturbation_coverage.py
 │   └── solver
 │       ├── __pycache__
-│       │   └── test_routing_model.cpython-312-pytest-9.0.2.pyc
+│       │   ├── test_routing_model.cpython-312-pytest-9.0.2.pyc
+│       │   └── test_routing_model.cpython-313-pytest-9.0.2.pyc
 │       └── test_routing_model.py
 ├── tree.txt
+├── uv.lock
 └── venv
     ├── bin
     │   ├── __pycache__
@@ -30505,4 +30784,4 @@
     │               └── WHEEL
     └── pyvenv.cfg
 
-3453 directories, 27053 files
+3470 directories, 27315 files
