@@ -7,15 +7,17 @@ This directory is the repository source of truth. Keep AGENTS concise and keep d
 1. `architecture/`: technical boundaries, runtime contracts, and environment harness.
 2. `domain/`: business semantics and solver-facing constraints.
 3. `decisions/`: ADRs for durable architecture choices.
-4. `exec-plans/`: active work plans and maintenance logs.
-5. `reports/`: dated run analyses and experiment diagnostics.
+4. `requirements/`: customer-facing integration requirements and interface requests.
+5. `exec-plans/`: active work plans and maintenance logs.
+6. `reports/`: dated run analyses and experiment diagnostics.
 
 ## Read Order
 
 1. `architecture/index.md`
 2. `domain/sandwich-loop.md`
 3. `decisions/`
-4. `exec-plans/`
+4. `requirements/`
+5. `exec-plans/`
    - Completed plans are archived under `exec-plans/completed/`.
 
 ## Engineering Harness
@@ -32,6 +34,7 @@ This directory is the repository source of truth. Keep AGENTS concise and keep d
 
 ## Current Highlights
 
+- YAAM customer interface requirements are captured under `requirements/`.
 - Phoenix attribution normalizes to `openinference.project.name` during startup.
 - Phoenix OpenAPI feedback-loop guide is available at `architecture/phoenix-openapi-feedback-loop.md`.
 - Batch pipeline supports gradient disruptions and optional dual-disruption scenarios.
