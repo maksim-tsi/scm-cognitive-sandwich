@@ -70,11 +70,23 @@ def _phoenix_base_url(collector_endpoint: str) -> str:
     return endpoint.rstrip("/")
 
 
+def _require_phoenix_collector_endpoint() -> str:
+    endpoint = _strip_quotes(_require_env("PHOENIX_COLLECTOR_ENDPOINT"))
+    if not endpoint.startswith(("http://", "https://")):
+        raise RuntimeError(f"PHOENIX_COLLECTOR_ENDPOINT must be an HTTP URL: {endpoint!r}")
+    if not endpoint.rstrip("/").endswith("/v1/traces"):
+        raise RuntimeError(
+            "PHOENIX_COLLECTOR_ENDPOINT must point at the OTLP traces endpoint "
+            f"(.../v1/traces), got {endpoint!r}."
+        )
+    return endpoint
+
+
 def _verify_phoenix_spans(*, thread_id: str, run_id: str) -> None:
     import httpx  # noqa: WPS433
 
-    collector = _require_env("PHOENIX_COLLECTOR_ENDPOINT")
-    project = _require_env("PHOENIX_PROJECT_NAME")
+    collector = _require_phoenix_collector_endpoint()
+    project = _strip_quotes(_require_env("PHOENIX_PROJECT_NAME"))
     base = _phoenix_base_url(collector)
 
     url = f"{base}/v1/projects/{project}/spans"
@@ -153,13 +165,9 @@ def main() -> None:
     _require_env("QDRANT_COLLECTION")
     _require_env("TYPESENSE_COLLECTION")
 
-    # Require Phoenix env to be present (observability feedback loop).
-    phoenix_endpoint = _require_env("PHOENIX_COLLECTOR_ENDPOINT")
-    phoenix_project = _require_env("PHOENIX_PROJECT_NAME")
-    if phoenix_endpoint != "http://192.168.107.172:6006/v1/traces":
-        raise RuntimeError(f"PHOENIX_COLLECTOR_ENDPOINT mismatch: {phoenix_endpoint!r}")
-    if phoenix_project != "scm-cognitive-sandwich-winsim":
-        raise RuntimeError(f"PHOENIX_PROJECT_NAME mismatch: {phoenix_project!r}")
+    # Require Phoenix env to be present and well-formed (observability feedback loop).
+    _require_phoenix_collector_endpoint()
+    phoenix_project = _strip_quotes(_require_env("PHOENIX_PROJECT_NAME"))
 
     assert_no_localhost_services()
     setup_observability()

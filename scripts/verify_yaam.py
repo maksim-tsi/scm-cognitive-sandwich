@@ -1,3 +1,10 @@
+"""Write-capable YAAM backend connectivity check.
+
+This script creates/upserts synthetic records in Qdrant and Typesense. Do not
+use it for the read-only YAAM consumer readiness run; use
+scripts/verify_yaam_readiness.py instead.
+"""
+
 import os
 import sys
 from datetime import UTC, datetime
