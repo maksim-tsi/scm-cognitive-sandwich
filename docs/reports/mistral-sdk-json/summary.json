@@ -1,0 +1,150 @@
+{
+  "attempts": 11,
+  "successful_completions": 7,
+  "http400": 4,
+  "usage_reported": {
+    "prompt_tokens": 440,
+    "completion_tokens": 244
+  },
+  "usage_tariff_estimate_usd": 0.0002124,
+  "invoice_verified": false,
+  "failed_request_usage_or_charge": "not reported",
+  "new_reservations_usd": 0.55,
+  "prior_reservations_usd": 0.34,
+  "combined_reservations_usd": 0.89,
+  "remaining_reserve_usd": 1.11,
+  "minimum_completion_to_next_dispatch_seconds": 15.080134868621826,
+  "generations_are_independent_synthetic_development": true,
+  "scientific_cohort_attempts": 0,
+  "rows": [
+    {
+      "attempt": "attempt-01",
+      "fixture": "tiny",
+      "variant": "tiny",
+      "http": 200,
+      "status": "complete",
+      "validation": {
+        "canonical_P8_valid": false,
+        "errors": [
+          "{'ok': True} is not valid under any of the given schemas"
+        ],
+        "wire_valid": true,
+        "fixture_exact": true
+      }
+    },
+    {
+      "attempt": "attempt-02",
+      "fixture": "null",
+      "variant": "canonical",
+      "http": 400,
+      "status": "schema_rejected",
+      "validation": null
+    },
+    {
+      "attempt": "attempt-03",
+      "fixture": "null",
+      "variant": "root-object",
+      "http": 400,
+      "status": "schema_rejected",
+      "validation": null
+    },
+    {
+      "attempt": "attempt-04",
+      "fixture": "null",
+      "variant": "anyof",
+      "http": 400,
+      "status": "schema_rejected",
+      "validation": null
+    },
+    {
+      "attempt": "attempt-05",
+      "fixture": "action-only",
+      "variant": "tiny-oneof",
+      "http": 200,
+      "status": "complete",
+      "validation": {
+        "canonical_P8_valid": false,
+        "errors": [
+          "{'action': 'FINAL'} is not valid under any of the given schemas"
+        ],
+        "wire_valid": true,
+        "fixture_exact": true
+      }
+    },
+    {
+      "attempt": "attempt-06",
+      "fixture": "null",
+      "variant": "no-unique",
+      "http": 200,
+      "status": "complete",
+      "validation": {
+        "canonical_P8_valid": true,
+        "errors": [],
+        "wire_valid": true,
+        "fixture_exact": true
+      }
+    },
+    {
+      "attempt": "attempt-07",
+      "fixture": "numeric",
+      "variant": "no-unique",
+      "http": 200,
+      "status": "complete",
+      "validation": {
+        "canonical_P8_valid": true,
+        "errors": [],
+        "wire_valid": true,
+        "fixture_exact": true
+      }
+    },
+    {
+      "attempt": "attempt-08",
+      "fixture": "ask",
+      "variant": "no-unique",
+      "http": 200,
+      "status": "complete",
+      "validation": {
+        "canonical_P8_valid": true,
+        "errors": [],
+        "wire_valid": true,
+        "fixture_exact": true
+      }
+    },
+    {
+      "attempt": "attempt-09",
+      "fixture": "tool",
+      "variant": "no-unique",
+      "http": 200,
+      "status": "complete",
+      "validation": {
+        "canonical_P8_valid": true,
+        "errors": [],
+        "wire_valid": true,
+        "fixture_exact": true
+      }
+    },
+    {
+      "attempt": "attempt-10",
+      "fixture": "evidence-only",
+      "variant": "tiny-unique",
+      "http": 400,
+      "status": "schema_rejected",
+      "validation": null
+    },
+    {
+      "attempt": "attempt-11",
+      "fixture": "evidence-only",
+      "variant": "tiny-array",
+      "http": 200,
+      "status": "complete",
+      "validation": {
+        "canonical_P8_valid": false,
+        "errors": [
+          "{'evidence': ['DEV-A', 'DEV-B']} is not valid under any of the given schemas"
+        ],
+        "wire_valid": true,
+        "fixture_exact": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "at": "2026-10-28T19:15:12.605469+00:00",
+  "fixture": "action-only",
+  "variant": "tiny-oneof",
+  "mode": "json_schema",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Return one JSON object for an independent synthetic development serialization test. No tools or search."
+    },
+    {
+      "role": "user",
+      "content": "Serialize this development artifact as JSON: {\"action\": \"FINAL\"}"
+    }
+  ],
+  "schema_source": "/Users/max/Documents/papers/ltx-mdpi-optimizing-urban-freight-2026/.local-worktrees/publication-mistral/tools/p5_interactive/operational.py",
+  "source_sha256": "f76fa05fa12546937d1c5f4bbdded151978cd727695181f408abf9e1b8a2d1e1",
+  "wire_schema": {
+    "type": "object",
+    "oneOf": [
+      {
+        "type": "object",
+        "properties": {
+          "action": {
+            "const": "ASK_USER"
+          }
+        },
+        "required": [
+          "action"
+        ],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "action": {
+            "const": "CALL_TOOL"
+          }
+        },
+        "required": [
+          "action"
+        ],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "action": {
+            "const": "FINAL"
+          }
+        },
+        "required": [
+          "action"
+        ],
+        "additionalProperties": false
+      }
+    ]
+  },
+  "reservation_usd": 0.05,
+  "prior_reservations_usd": 0.34,
+  "sdk_version": "2.10.1",
+  "difference": "tiny-oneof"
+}

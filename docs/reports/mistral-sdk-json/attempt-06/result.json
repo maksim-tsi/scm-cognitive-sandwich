@@ -1,0 +1,27 @@
+{
+  "status": "complete",
+  "validation": {
+    "canonical_P8_valid": true,
+    "errors": [],
+    "wire_valid": true,
+    "fixture_exact": true
+  },
+  "model": "mistral-small-latest",
+  "usage": {
+    "prompt_tokens": 74,
+    "completion_tokens": 46,
+    "total_tokens": 120,
+    "service_tier": "standard",
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "finished_at": "2026-10-28T19:15:28.907170+00:00",
+  "finished_epoch": 1793214928.907182,
+  "posted": 1,
+  "reservation_usd": 0.05
+}

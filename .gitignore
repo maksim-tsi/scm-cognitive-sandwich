@@ -205,3 +205,6 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Local lock for the standalone Mistral SDK diagnostic
+/docs/reports/mistral-sdk-json/probe.lock

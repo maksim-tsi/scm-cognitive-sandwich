@@ -1,0 +1,29 @@
+{
+  "status": "complete",
+  "validation": {
+    "canonical_P8_valid": false,
+    "errors": [
+      "{'evidence': ['DEV-A', 'DEV-B']} is not valid under any of the given schemas"
+    ],
+    "wire_valid": true,
+    "fixture_exact": true
+  },
+  "model": "mistral-small-latest",
+  "usage": {
+    "prompt_tokens": 44,
+    "completion_tokens": 16,
+    "total_tokens": 60,
+    "service_tier": "standard",
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "finished_at": "2026-10-28T19:16:51.057449+00:00",
+  "finished_epoch": 1793215011.057454,
+  "posted": 1,
+  "reservation_usd": 0.05
+}

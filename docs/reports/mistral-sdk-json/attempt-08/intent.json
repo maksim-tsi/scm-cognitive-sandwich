@@ -1,0 +1,197 @@
+{
+  "at": "2026-10-28T19:16:00.126295+00:00",
+  "fixture": "ask",
+  "variant": "no-unique",
+  "mode": "json_schema",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Return one JSON object for an independent synthetic development serialization test. No tools or search."
+    },
+    {
+      "role": "user",
+      "content": "Serialize this development artifact as JSON: {\"action\": \"ASK_USER\", \"questions\": [{\"wording\": \"Development value?\", \"entity\": \"DEV\", \"field\": \"dev_slot\", \"scope\": \"DEV\", \"owner\": \"dispatcher\", \"kind\": \"indispensable\"}]}"
+    }
+  ],
+  "schema_source": "/Users/max/Documents/papers/ltx-mdpi-optimizing-urban-freight-2026/.local-worktrees/publication-mistral/tools/p5_interactive/operational.py",
+  "source_sha256": "f76fa05fa12546937d1c5f4bbdded151978cd727695181f408abf9e1b8a2d1e1",
+  "wire_schema": {
+    "oneOf": [
+      {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "action",
+          "questions"
+        ],
+        "properties": {
+          "action": {
+            "const": "ASK_USER"
+          },
+          "questions": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "wording",
+                "entity",
+                "field",
+                "scope",
+                "owner",
+                "kind"
+              ],
+              "properties": {
+                "wording": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "entity": {
+                  "type": "string"
+                },
+                "field": {
+                  "type": "string"
+                },
+                "scope": {
+                  "type": "string"
+                },
+                "owner": {
+                  "enum": [
+                    "dispatcher",
+                    "receiver"
+                  ]
+                },
+                "kind": {
+                  "enum": [
+                    "indispensable",
+                    "optional"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "action",
+          "tool",
+          "arguments"
+        ],
+        "properties": {
+          "action": {
+            "const": "CALL_TOOL"
+          },
+          "tool": {
+            "type": "string"
+          },
+          "arguments": {
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "action",
+          "decision"
+        ],
+        "properties": {
+          "action": {
+            "const": "FINAL"
+          },
+          "decision": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "action",
+              "parameters",
+              "plan",
+              "evidence",
+              "missing_slots"
+            ],
+            "properties": {
+              "action": {
+                "enum": [
+                  "UPDATE",
+                  "RETAIN",
+                  "INSUFFICIENT",
+                  "INFEASIBLE",
+                  "CLARIFY"
+                ]
+              },
+              "parameters": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 86400
+                }
+              },
+              "plan": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "required": [
+                  "status",
+                  "routes"
+                ],
+                "properties": {
+                  "status": {
+                    "const": "FEASIBLE"
+                  },
+                  "routes": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "vehicle",
+                        "nodes"
+                      ],
+                      "properties": {
+                        "vehicle": {
+                          "type": "integer",
+                          "minimum": 0
+                        },
+                        "nodes": {
+                          "type": "array",
+                          "minItems": 2,
+                          "items": {
+                            "type": "integer",
+                            "minimum": 0
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "missing_slots": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "reservation_usd": 0.05,
+  "prior_reservations_usd": 0.34,
+  "sdk_version": "2.10.1",
+  "difference": "no-unique"
+}

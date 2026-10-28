@@ -1,0 +1,29 @@
+{
+  "status": "complete",
+  "validation": {
+    "canonical_P8_valid": false,
+    "errors": [
+      "{'ok': True} is not valid under any of the given schemas"
+    ],
+    "wire_valid": true,
+    "fixture_exact": true
+  },
+  "model": "mistral-small-latest",
+  "usage": {
+    "prompt_tokens": 34,
+    "completion_tokens": 6,
+    "total_tokens": 40,
+    "service_tier": "standard",
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "finished_at": "2026-10-28T19:13:48.897885+00:00",
+  "finished_epoch": 1793214828.897897,
+  "posted": 1,
+  "reservation_usd": 0.05
+}

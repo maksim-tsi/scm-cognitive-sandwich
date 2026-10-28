@@ -1,0 +1,1 @@
+{"action": "ASK_USER", "questions": [{"wording": "Development value?", "entity": "DEV", "field": "dev_slot", "scope": "DEV", "owner": "dispatcher", "kind": "indispensable"}]}

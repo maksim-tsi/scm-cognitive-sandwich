@@ -1,0 +1,9 @@
+{
+  "status": "schema_rejected",
+  "validation": null,
+  "exception_type": "SDKError",
+  "finished_at": "2026-10-28T19:14:34.812107+00:00",
+  "finished_epoch": 1793214874.812117,
+  "posted": 1,
+  "reservation_usd": 0.05
+}

@@ -4,6 +4,8 @@ This directory contains dated run analyses, experiment summaries, and post-run d
 
 ## Available Reports
 
+- 2026-10-28: [Mistral SDK v2 native JSON Schema compatibility](mistral-sdk-json/report.md)
+
 - 2026-03-15: [IDWL Batch Limit-10 Run Analysis](2026-03-15-idwl-batch-limit10-run-analysis.md)
 - 2026-03-15: [IDWL Batch Limit-10 Refined Run Analysis](2026-03-15-idwl-batch-limit10-refined-run-analysis.md)
 - 2026-03-15: [Perturbation Coverage Run (8 IDs)](2026-03-15-perturbation-coverage-run8.md)

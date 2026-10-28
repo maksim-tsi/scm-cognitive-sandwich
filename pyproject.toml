@@ -30,6 +30,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+mistral-experiment = ["mistralai>=2,<3", "jsonschema>=4.26,<5"]
 dev = [
     "pytest",
     "ruff",

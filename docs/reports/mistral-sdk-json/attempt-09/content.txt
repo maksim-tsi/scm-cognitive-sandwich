@@ -1,0 +1,1 @@
+{"action": "CALL_TOOL", "tool": "plan_route", "arguments": {"parameters": {"dev_slot": 7}}}

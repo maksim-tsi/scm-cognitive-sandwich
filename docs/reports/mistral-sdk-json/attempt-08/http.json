@@ -1,0 +1,8 @@
+{
+  "at": "2026-10-28T19:16:01.111140+00:00",
+  "status": 200,
+  "headers": {
+    "content-type": "application/json",
+    "mistral-correlation-id": "01a183f0-d273-72c9-ab03-ccae4c6caebd"
+  }
+}
