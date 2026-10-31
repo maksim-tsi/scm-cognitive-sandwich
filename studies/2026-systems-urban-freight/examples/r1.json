@@ -1,0 +1,266 @@
+[
+  {
+    "route": "qwen",
+    "assignment_id": "OPV2-01-C",
+    "selection_stratum": [
+      "qwen",
+      "RETAIN",
+      true
+    ],
+    "original_final_text": "{\"action\":\"FINAL\",\"decision\":{\"action\":\"RETAIN\",\"parameters\":{\"service_A_s\":300},\"plan\":{\"status\":\"FEASIBLE\",\"routes\":[{\"vehicle\":0,\"nodes\":[0,3,2,1,0]}]},\"evidence\":[\"OPV2-01-RELEASE\"],\"missing_slots\":[]}}",
+    "text_sha256": "9562fa07fcb0305d5d58fbbb642fd4a3cd9aa2ec7e1c9fe4fe0f478e31fbb72f",
+    "source_response_sha256": "d1788fc2db87c7a3648ce42ba8691148b8e0e7193fbfaadb161c2953c34708b5"
+  },
+  {
+    "route": "qwen",
+    "assignment_id": "OPV2-01-E",
+    "selection_stratum": [
+      "qwen",
+      "UPDATE",
+      false
+    ],
+    "original_final_text": "{\"action\":\"FINAL\",\"decision\":{\"action\":\"UPDATE\",\"parameters\":{\"service_A_s\":300},\"plan\":{\"status\":\"FEASIBLE\",\"routes\":[{\"vehicle\":0,\"nodes\":[0,3,2,1,0]}]},\"evidence\":[\"OPV2-01-RELEASE\"],\"missing_slots\":[]}}",
+    "text_sha256": "e45086e633daffb10ff08633b4f3f192dfeb5cc18c408b523ff6e371af1d5193",
+    "source_response_sha256": "b9388e0bfae187220c2b8ef526a0ac208128144fda9142d731400a30e9f5025f"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "OPV2-01-C",
+    "selection_stratum": [
+      "deepseek",
+      "RETAIN",
+      true
+    ],
+    "original_final_text": "{\"action\":\"FINAL\",\"decision\":{\"action\":\"RETAIN\",\"parameters\":{\"service_A_s\":300},\"plan\":{\"status\":\"FEASIBLE\",\"routes\":[{\"vehicle\":0,\"nodes\":[0,3,2,1,0]}]},\"evidence\":[\"OPV2-01-RELEASE\"],\"missing_slots\":[]}}",
+    "text_sha256": "9562fa07fcb0305d5d58fbbb642fd4a3cd9aa2ec7e1c9fe4fe0f478e31fbb72f",
+    "source_response_sha256": "1cba3e9fd15f3d1548ebe9eab04a7aa8aee7a0e59be655589cb227bc22a42170"
+  },
+  {
+    "route": "mistral",
+    "assignment_id": "OPV2-01-E",
+    "selection_stratum": [
+      "mistral",
+      "INSUFFICIENT",
+      false
+    ],
+    "original_final_text": "{\"action\": \"FINAL\", \"decision\": {\"action\": \"INSUFFICIENT\", \"evidence\": [\"Channel 'service_A_s' is unavailable for authoritative confirmation of dispatcher-owned certified run-specific service time for site A (service_A_s).\"], \"missing_slots\": [\"service_A_s\"], \"parameters\": {}, \"plan\": null}}",
+    "text_sha256": "a370c80a4a462fd5b68ac1e40adda978866376e6aad7de3bbf018b2c16ea285c",
+    "source_response_sha256": "61b4bd7fd2df424beec27fcec8684758a00407f0227dab2eec33e55c25563dc1"
+  },
+  {
+    "route": "openai",
+    "assignment_id": "OPV2-01-E",
+    "selection_stratum": [
+      "openai",
+      "UPDATE",
+      false
+    ],
+    "original_final_text": "{\"action\":\"FINAL\",\"decision\":{\"action\":\"UPDATE\",\"parameters\":{\"service_A_s\":300},\"plan\":{\"status\":\"FEASIBLE\",\"routes\":[{\"vehicle\":0,\"nodes\":[0,3,2,1,0]}]},\"evidence\":[\"OPV2-01-RELEASE\"],\"missing_slots\":[]}}",
+    "text_sha256": "e45086e633daffb10ff08633b4f3f192dfeb5cc18c408b523ff6e371af1d5193",
+    "source_response_sha256": "2371f74ce6ab4857d95bea6fe1234741843bd6fa87bf336b7013fa72aec3e0aa"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "OPV2-02-E",
+    "selection_stratum": [
+      "deepseek",
+      "UPDATE",
+      false
+    ],
+    "original_final_text": "{\"action\":\"FINAL\",\"decision\":{\"action\":\"UPDATE\",\"parameters\":{\"service_A_s\":300},\"plan\":{\"status\":\"FEASIBLE\",\"routes\":[{\"vehicle\":0,\"nodes\":[0,1,2,0]},{\"vehicle\":1,\"nodes\":[0,3,0]}]},\"evidence\":[\"OPV2-02-RELEASE\"],\"missing_slots\":[]}}",
+    "text_sha256": "50b0c7de49389d2597c09dcddd9856a6a76f6dc2e6e177cacfd5a0797b8ce252",
+    "source_response_sha256": "869e26b53093d955a919fc4d33d3bbacbd3ab190b1fb5c7f1b432f41a844437a"
+  },
+  {
+    "route": "mistral",
+    "assignment_id": "OPV2-02-C",
+    "selection_stratum": [
+      "mistral",
+      "UPDATE",
+      false
+    ],
+    "original_final_text": "{\"action\": \"FINAL\", \"decision\": {\"action\": \"UPDATE\", \"evidence\": [\"Synthetic issuer-owned run-specific release: service or planning allowance for service_A_s is 420 seconds. This is a hypothetical scenario document, not a real receiver statement.\"], \"missing_slots\": [], \"parameters\": {\"service_A_s\": 420}, \"plan\": {\"routes\": [{\"nodes\": [0, 1, 2, 0], \"vehicle\": 0}, {\"nodes\": [0, 3, 0], \"vehicle\": 1}], \"status\": \"FEASIBLE\"}} }",
+    "text_sha256": "7a54a89c912a5e0f0791626facdd7ff66e363dd792b396b76f3a272f6acf3da7",
+    "source_response_sha256": "a87c5387eb3fbb2c60434e7809a0b2ae6a635dbd0f6810712e6584e8fb4522b2"
+  },
+  {
+    "route": "openai",
+    "assignment_id": "OPV2-02-E",
+    "selection_stratum": [
+      "openai",
+      "INSUFFICIENT",
+      false
+    ],
+    "original_final_text": "{\"action\":\"FINAL\",\"decision\":{\"action\":\"INSUFFICIENT\",\"parameters\":{},\"plan\":null,\"evidence\":[\"OPV2-02-RELEASE is a verified dispatcher certified fact for service_A_s, but its validity is effective only from epoch 210 through 260; target epoch 220 is within that interval.\",\"The service_A_s channel is publicly marked unavailable, so it cannot be queried. The user channel is unknown and has not been probed.\"],\"missing_slots\":[\"service_A_s\"]}}",
+    "text_sha256": "5347c936595a846195fddaaa341b4f31e9a26989de3ddb0f74eecd36b5000202",
+    "source_response_sha256": "339b5ec172bfd9e1bd6562cd1c51f49de224513e36257cc89f09741534971f32"
+  },
+  {
+    "route": "qwen",
+    "assignment_id": "OPV2-02-E",
+    "selection_stratum": [
+      "qwen",
+      "UPDATE",
+      true
+    ],
+    "original_final_text": "{\"action\":\"FINAL\",\"decision\":{\"action\":\"UPDATE\",\"parameters\":{\"service_A_s\":420},\"plan\":{\"status\":\"FEASIBLE\",\"routes\":[{\"nodes\":[0,1,2,0],\"vehicle\":0},{\"nodes\":[0,3,0],\"vehicle\":1}]},\"evidence\":[\"OPV2-02-RELEASE\"],\"missing_slots\":[]}}",
+    "text_sha256": "4d9c6b439525c8d2fcb3db4cc8bbf7190ed26c8a927d5ce522b9befd3bc0a5bd",
+    "source_response_sha256": "7a7f751ed277fbbafa3adfc9d580b7ea1960a851f69386fe26e6518527d75efc"
+  },
+  {
+    "route": "mistral",
+    "assignment_id": "OPV2-03-E",
+    "selection_stratum": [
+      "mistral",
+      "INSUFFICIENT",
+      true
+    ],
+    "original_final_text": "{\"action\": \"FINAL\", \"decision\": {\"action\": \"INSUFFICIENT\", \"evidence\": [\"PUBLIC_CHANNEL_UNAVAILABLE for service_A_s (dispatcher-owned, required_assertion_kind=certified_fact)\", \"No verified applicable same-owner/slot record supersedes current_parameters.service_A_s=300\"], \"missing_slots\": [\"service_A_s\"], \"parameters\": {}, \"plan\": null}}",
+    "text_sha256": "05307618f96c07f53d21a29386f286f7e1e6195065410fe27a10cc1d5a48318a",
+    "source_response_sha256": "625012dbefe1f91877b88cb382bb9de2d6981a12ffbebfd66c1a493938f96bfc"
+  },
+  {
+    "route": "openai",
+    "assignment_id": "OPV2-03-E",
+    "selection_stratum": [
+      "openai",
+      "INSUFFICIENT",
+      true
+    ],
+    "original_final_text": "{\"action\":\"FINAL\",\"decision\":{\"action\":\"INSUFFICIENT\",\"parameters\":{},\"plan\":null,\"evidence\":[],\"missing_slots\":[\"service_A_s\"]}}",
+    "text_sha256": "cad25353fa32eb002a3478054d2c2a5fb5207d9366387ba2a1005cdf93ab12c0",
+    "source_response_sha256": "d5728fcdb82f72a2f2aa687bfd804058b9fe387c4ada036779357d4241001b8a"
+  },
+  {
+    "route": "qwen",
+    "assignment_id": "OPV2-03-C",
+    "selection_stratum": [
+      "qwen",
+      "INSUFFICIENT",
+      true
+    ],
+    "original_final_text": "{\"action\":\"FINAL\",\"decision\":{\"action\":\"INSUFFICIENT\",\"parameters\":{},\"plan\":null,\"evidence\":[\"service_A_s channel is marked unavailable for both tool and user\",\"No verified dispatcher-certified service time for site A is present in released records\"],\"missing_slots\":[\"service_A_s\"]}}",
+    "text_sha256": "0cea6c350ac665531b3fafbca61df544c151fb0269a7f7b0164cea40f5564298",
+    "source_response_sha256": "4980a5444c77b53c251c1fa5229bb93e257510038c5d78f3ade07ecc465af0e2"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "OPV2-03-C",
+    "selection_stratum": [
+      "deepseek",
+      "INSUFFICIENT",
+      true
+    ],
+    "original_final_text": "{\"action\":\"FINAL\",\"decision\":{\"action\":\"INSUFFICIENT\",\"parameters\":{},\"plan\":null,\"evidence\":[\"bindings.service_A_s: owner=dispatcher, required_assertion_kind=certified_fact, permitted_issuer_roles=[dispatcher]\",\"channels.service_A_s: tool=unavailable, user=unavailable\",\"current_parameters.service_A_s=300 is provisional and unsupported by any certified dispatcher record; records=[]\"],\"missing_slots\":[\"service_A_s\"]}}",
+    "text_sha256": "a233d760da9350247acc14db88be06ca91ed8d0e41bf3033a4f67c8bcacc9ce2",
+    "source_response_sha256": "5ce93346d54fd9a1871149eec5ecc06dae0656d7fa031d1096892473c8a7c80e"
+  },
+  {
+    "route": "qwen",
+    "assignment_id": "OPV2-04-E",
+    "selection_stratum": [
+      "qwen",
+      "INSUFFICIENT",
+      false
+    ],
+    "original_final_text": "{\"action\":\"FINAL\",\"decision\":{\"action\":\"INSUFFICIENT\",\"parameters\":{},\"plan\":null,\"evidence\":[\"OPV2-04-RELEASE\"],\"missing_slots\":[\"service_A_s\"]}}",
+    "text_sha256": "e754ed7590eee43bff208f2d3d26259f001e9ac104899d177dc48c0747556716",
+    "source_response_sha256": "a9c2c79e5a370595c435296d3f380f55e80056e670a1889c441a05dab4f14a09"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "OPV2-04-E",
+    "selection_stratum": [
+      "deepseek",
+      "UPDATE",
+      true
+    ],
+    "original_final_text": "{\"action\":\"FINAL\",\"decision\":{\"action\":\"UPDATE\",\"parameters\":{\"service_A_s\":480},\"plan\":{\"status\":\"FEASIBLE\",\"routes\":[{\"vehicle\":0,\"nodes\":[0,1,2,0]},{\"vehicle\":1,\"nodes\":[0,3,0]}]},\"evidence\":[\"OPV2-04-RELEASE\"],\"missing_slots\":[]}}",
+    "text_sha256": "d3c7329eefdd3ab96c21693a82fce59af8e18b9dd91ace92c4aed6e125cd06d6",
+    "source_response_sha256": "c131657d421dcb0ffd29f05907ac0adae29d03f836a168e7455488c38b408de3"
+  },
+  {
+    "route": "qwen",
+    "assignment_id": "OPV2-05-E",
+    "selection_stratum": [
+      "qwen",
+      "RETAIN",
+      false
+    ],
+    "original_final_text": "{\n  \"action\": \"FINAL\",\n  \"decision\": {\n    \"action\": \"RETAIN\",\n    \"parameters\": {\n      \"service_A_s\": 300,\n      \"width_A_mm\": 1000\n    },\n    \"plan\": {\n      \"status\": \"FEASIBLE\",\n      \"routes\": [\n        {\n          \"vehicle\": 0,\n          \"nodes\": [\n            0,\n            1,\n            2,\n            0\n          ]\n        },\n        {\n          \"vehicle\": 1,\n          \"nodes\": [\n            0,\n            3,\n            0\n          ]\n        }\n      ]\n    },\n    \"evidence\": [\n      \"OPV2-05-RELEASE\",\n      \"OPV2-05-PACKAGE\"\n    ],\n    \"missing_slots\": []\n  }\n}",
+    "text_sha256": "51d327a6bfdaeba1ee203f7b68c40c89175c8082e064fb10eae9031eea76b667",
+    "source_response_sha256": "1ab4f870b56aaa0d0500e6d81461a881ce8029fae61dcabc0c1ca4bd81fc4729"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "OPV2-06-E",
+    "selection_stratum": [
+      "deepseek",
+      "RETAIN",
+      false
+    ],
+    "original_final_text": "{\"action\":\"FINAL\",\"decision\":{\"action\":\"RETAIN\",\"parameters\":{\"service_A_s\":300,\"load_A_kg\":150},\"plan\":{\"status\":\"FEASIBLE\",\"routes\":[{\"vehicle\":0,\"nodes\":[0,1,0]},{\"vehicle\":1,\"nodes\":[0,2,3,0]}]},\"evidence\":[\"OPV2-06-RELEASE\",\"OPV2-06-MASS\"],\"missing_slots\":[]}}",
+    "text_sha256": "1f7049effe3b9ee9466e74257ae35513345ef69460a4aed5130eb6f391b2fd08",
+    "source_response_sha256": "035673d07b9159c235a714c1fdae4be5c4ac5daa86504984d381b3c044d8de4d"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "OPV2-08-E",
+    "selection_stratum": [
+      "deepseek",
+      "CLARIFY",
+      false
+    ],
+    "original_final_text": "{\"action\":\"FINAL\",\"decision\":{\"action\":\"CLARIFY\",\"parameters\":{},\"plan\":null,\"evidence\":[\"OPV2-08-RELEASE1\",\"OPV2-08-RELEASE2\"],\"missing_slots\":[\"service_A_s\"]}}",
+    "text_sha256": "14ccff553201125e07f18a7be23b7bdb6cb4cdc9ec9269895fe52fb04ab0e611",
+    "source_response_sha256": "c1f698d858ca3ebc883a61db23524b69e237968fa8936d6e634a22b2397134b7"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "OPV2-08-C",
+    "selection_stratum": [
+      "deepseek",
+      "invalid_model_event",
+      false
+    ],
+    "original_final_text": "{\"action\":\"FINAL\",\"decision\":{\"action\":\"CLARIFY\",\"parameters\":{},\"plan\":null,\"evidence\":[\"OPV2-08-RELEASE1\",\"OPV2-08-RELEASE2\"],\"missing_slots\":[\"service_A_s\"],\"reasoning\":\"Two verified dispatcher-owned certified_fact records (RELEASE1=300s, RELEASE2=540s) both apply to slot service_A_s in scope OPV2-08-RUN, both effective 210-260 covering target_effective_time 220, and neither supersedes the other. They conflict, so no single confirmed value can be committed. The declared channels for service_A_s are marked unavailable (tool and user), so the conflict cannot be resolved through accessible authoritative channels. This is a deferral, not infeasibility: the slot remains obtainable in principle via a dispatcher-issued superseding release, so CLARIFY with the unresolved indispensable slot.\"}}",
+    "text_sha256": "ae09b55931fbc4c1a871cbbec105a013b3a22f8f10a5fb0feb3becd4002b3c46",
+    "source_response_sha256": "94c12a7a8b0aa2cc95185eb935af2e5633de127e49fa308610e5036af0da1bf1"
+  },
+  {
+    "route": "openai",
+    "assignment_id": "OPV2-09-E",
+    "selection_stratum": [
+      "openai",
+      "UPDATE",
+      true
+    ],
+    "original_final_text": "{\"action\":\"FINAL\",\"decision\":{\"action\":\"UPDATE\",\"parameters\":{\"service_A_s\":300},\"plan\":{\"status\":\"FEASIBLE\",\"routes\":[{\"vehicle\":0,\"nodes\":[0,2,3,0]},{\"vehicle\":1,\"nodes\":[0,1,0]}]},\"evidence\":[\"OPV2-09-RELEASE\"],\"missing_slots\":[]}}",
+    "text_sha256": "e911a7b36dd2cc4e8f5647d1b1a5bd5b3378aae847ba3c1d8a4a3847383867cd",
+    "source_response_sha256": "238d75d0d3844f15aba5ba90878114b75a8aea8b71c62e1295b82eb92b43592a"
+  },
+  {
+    "route": "openai",
+    "assignment_id": "OPV2-14-E",
+    "selection_stratum": [
+      "openai",
+      "model_output_failure",
+      false
+    ],
+    "original_final_text": "{\"action\":\"FINAL\",\"decision\":{\"action\":\"INSUFFICIENT\",\"parameters\":{},\"plan\":null,\"evidence\":[\"OPV2-14-UNSIGNED is unverified and therefore does not satisfy the binding requirement for a dispatcher-issued certified_fact.\",\"The service_A_s channel is publicly marked unavailable, so it cannot be queried; the visible current value is provisional and is not supported by an applicable verified release.\"],\"missing_slots\":[\"service_A_s\"],\"plan\":null}}",
+    "text_sha256": "7105409af7cf7afbd86aa4c4f8ad000088f0588d0ea06b13542b3de2dbe1ac81",
+    "source_response_sha256": "b9f135e681c95107f1138eac4fcf1ffffdc71ea3a5eb075f99d963854b1ee981"
+  },
+  {
+    "route": "mistral",
+    "assignment_id": "OPV2-16-E",
+    "selection_stratum": [
+      "mistral",
+      "CLARIFY",
+      false
+    ],
+    "original_final_text": "{\"action\": \"FINAL\", \"decision\": {\"action\": \"CLARIFY\", \"evidence\": [\"PUBLIC_CHANNEL_UNAVAILABLE for service_A_s channel\", \"No accessible authoritative record for updated service_A_s value beyond OPV2-16-OLD (300 s)\", \"Dispatcher-owned certified fact OPV2-16-OLD remains unverified superseded\"], \"missing_slots\": [\"service_A_s\"], \"parameters\": {}, \"plan\": null}}",
+    "text_sha256": "ebec40baa316152b97fc9f5ca8750213c8aefabe874044dda156a925b09d3aa4",
+    "source_response_sha256": "b122c3cedb485a843fdd34d3aa471d537a9de3e776d69b780c9c23d03c3ac780"
+  }
+]

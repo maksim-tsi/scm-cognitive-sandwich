@@ -1,0 +1,275 @@
+[
+  {
+    "poi_uuid": "0a26de47-78e8-4d8e-8050-26577765688f",
+    "name": "Prix",
+    "retailer_type": "supermarket",
+    "classification": "conditionally_plausible",
+    "classification_status": "provisional_contact_sheet_only",
+    "confidence": "low",
+    "visual_observation": "Prix sign and paved parking/approach visible; a truck is visible at edge of one view. Receiving entrance is not identified.",
+    "supporting_screenshots": [
+      "Screenshot 2026-10-29 at 20.33.17.png"
+    ],
+    "all_candidate_screenshots": [
+      "Screenshot 2026-10-29 at 20.33.17.png",
+      "Screenshot 2026-10-29 at 20.33.31.png",
+      "Screenshot 2026-10-29 at 20.33.58.png"
+    ],
+    "evidence_completeness": "limited",
+    "evidence_gaps": "Unverified rear access, vehicle clearance and receiving permission.",
+    "authoritative_check": "pending",
+    "researcher_review": "pending",
+    "camera_coordinates": null
+  },
+  {
+    "poi_uuid": "cef0a2a1-3341-4278-b734-fc5457dfa81b",
+    "name": "Interspar Pontevigodarzere",
+    "retailer_type": "supermarket",
+    "classification": "conditionally_plausible",
+    "classification_status": "provisional_contact_sheet_only",
+    "confidence": "low",
+    "visual_observation": "Interspar sign, parking and approach visible; no-entry sign appears on one circulation lane. Receiving location remains unidentified.",
+    "supporting_screenshots": [
+      "Screenshot 2026-10-29 at 20.35.02.png"
+    ],
+    "all_candidate_screenshots": [
+      "Screenshot 2026-10-29 at 20.34.21.png",
+      "Screenshot 2026-10-29 at 20.34.38.png",
+      "Screenshot 2026-10-29 at 20.35.02.png",
+      "Screenshot 2026-10-29 at 20.35.24.png",
+      "Screenshot 2026-10-29 at 20.35.50.png"
+    ],
+    "evidence_completeness": "limited",
+    "evidence_gaps": "Lane direction and actual delivery access require authoritative confirmation.",
+    "authoritative_check": "pending",
+    "researcher_review": "pending",
+    "camera_coordinates": null
+  },
+  {
+    "poi_uuid": "ee71fa3e-82e5-46b9-9752-4a584a4c4255",
+    "name": "ALDI Italia",
+    "retailer_type": "supermarket",
+    "classification": "conditionally_plausible",
+    "classification_status": "provisional_contact_sheet_only",
+    "confidence": "low",
+    "visual_observation": "ALDI sign and parking complex visible; approach viewed from across road. Rear receiving entrance is not established.",
+    "supporting_screenshots": [
+      "Screenshot 2026-10-29 at 20.36.50.png"
+    ],
+    "all_candidate_screenshots": [
+      "Screenshot 2026-10-29 at 20.36.32.png",
+      "Screenshot 2026-10-29 at 20.36.50.png",
+      "Screenshot 2026-10-29 at 20.37.05.png",
+      "Screenshot 2026-10-29 at 20.37.24.png"
+    ],
+    "evidence_completeness": "limited",
+    "evidence_gaps": "Verify specific service entrance, manoeuvre and restrictions.",
+    "authoritative_check": "pending",
+    "researcher_review": "pending",
+    "camera_coordinates": null
+  },
+  {
+    "poi_uuid": "407d018c-7f6b-4ab1-976e-247e2df9faec",
+    "name": "Lidl Italia",
+    "retailer_type": "supermarket",
+    "classification": "conditionally_plausible",
+    "classification_status": "provisional_contact_sheet_only",
+    "confidence": "low",
+    "visual_observation": "Lidl sign, parking and surrounding road visible; receiving location is not established.",
+    "supporting_screenshots": [
+      "Screenshot 2026-10-29 at 20.37.43.png"
+    ],
+    "all_candidate_screenshots": [
+      "Screenshot 2026-10-29 at 20.37.43.png",
+      "Screenshot 2026-10-29 at 20.38.13.png"
+    ],
+    "evidence_completeness": "limited",
+    "evidence_gaps": "Confirm delivery entrance, truck approach and restrictions.",
+    "authoritative_check": "pending",
+    "researcher_review": "pending",
+    "camera_coordinates": null
+  },
+  {
+    "poi_uuid": "fa6afb7d-8518-415a-89c4-85b6860ef1d8",
+    "name": "EUROSPAR Altichiero",
+    "retailer_type": "supermarket",
+    "classification": "conditionally_plausible",
+    "classification_status": "provisional_contact_sheet_only",
+    "confidence": "low",
+    "visual_observation": "EUROSPAR frontage and side street visible; truck near another building is not proof of store receiving.",
+    "supporting_screenshots": [
+      "Screenshot 2026-10-29 at 20.39.35.png"
+    ],
+    "all_candidate_screenshots": [
+      "Screenshot 2026-10-29 at 20.38.38.png",
+      "Screenshot 2026-10-29 at 20.39.03.png",
+      "Screenshot 2026-10-29 at 20.39.35.png"
+    ],
+    "evidence_completeness": "limited",
+    "evidence_gaps": "Verify which doorway serves this retailer and whether vehicle may use street.",
+    "authoritative_check": "pending",
+    "researcher_review": "pending",
+    "camera_coordinates": null,
+    "panorama_date_for_supporting_screenshot": "2026-08"
+  },
+  {
+    "poi_uuid": "8d4b3790-a925-43f0-a369-ee77dc4076bf",
+    "name": "Komok",
+    "retailer_type": "grocery_store",
+    "classification": "insufficient_visual_evidence",
+    "classification_status": "provisional_contact_sheet_only",
+    "confidence": "low",
+    "visual_observation": "Mixed-use building, parking and several storefronts are visible; the retailer identity and receiving point are not established at this resolution.",
+    "supporting_screenshots": [
+      "Screenshot 2026-10-29 at 20.40.18.png"
+    ],
+    "all_candidate_screenshots": [
+      "Screenshot 2026-10-29 at 20.40.04.png",
+      "Screenshot 2026-10-29 at 20.40.18.png"
+    ],
+    "evidence_completeness": "insufficient",
+    "evidence_gaps": "Verify storefront identity and capture receiving approach.",
+    "authoritative_check": "pending",
+    "researcher_review": "pending",
+    "camera_coordinates": null
+  },
+  {
+    "poi_uuid": "8a5f5233-9e7b-478f-bd1e-62801722936d",
+    "name": "Alimentari, Pane e Salumi Antonella e Katiuscia",
+    "retailer_type": "grocery_store",
+    "classification": "potentially_constrained",
+    "classification_status": "provisional_contact_sheet_only",
+    "confidence": "low",
+    "visual_observation": "Small frontage with closed shutters, canopy and limited roadside space visible; current shop identity and receiving access not established.",
+    "supporting_screenshots": [
+      "Screenshot 2026-10-29 at 20.41.13.png"
+    ],
+    "all_candidate_screenshots": [
+      "Screenshot 2026-10-29 at 20.41.13.png",
+      "Screenshot 2026-10-29 at 20.42.13.png"
+    ],
+    "evidence_completeness": "limited",
+    "evidence_gaps": "Confirm business identity, loading point, curb permission and vehicle size; shutters do not prove closure.",
+    "authoritative_check": "pending",
+    "researcher_review": "pending",
+    "camera_coordinates": null,
+    "panorama_date_for_supporting_screenshot": "2026-09"
+  },
+  {
+    "poi_uuid": "5fd41848-bff2-462f-9816-df38299e1e74",
+    "name": "Ali Supermercati",
+    "retailer_type": "supermarket",
+    "classification": "conditionally_plausible",
+    "classification_status": "provisional_contact_sheet_only",
+    "confidence": "low",
+    "visual_observation": "Alì signage and parking adjacent to a mixed-use building are visible. A dead-end sign is visible in another view; receiving entrance is unconfirmed.",
+    "supporting_screenshots": [
+      "Screenshot 2026-10-29 at 20.42.56.png"
+    ],
+    "all_candidate_screenshots": [
+      "Screenshot 2026-10-29 at 20.42.42.png",
+      "Screenshot 2026-10-29 at 20.42.56.png",
+      "Screenshot 2026-10-29 at 20.43.09.png"
+    ],
+    "evidence_completeness": "limited",
+    "evidence_gaps": "Verify delivery route, manoeuvre and receiving entrance.",
+    "authoritative_check": "pending",
+    "researcher_review": "pending",
+    "camera_coordinates": null
+  },
+  {
+    "poi_uuid": "c45a0c5e-1cf4-452e-917e-494256a7270b",
+    "name": "Magazinul Romanesc Bacania cu Suflet",
+    "retailer_type": "grocery_store",
+    "classification": "insufficient_visual_evidence",
+    "classification_status": "provisional_contact_sheet_only",
+    "confidence": "low",
+    "visual_observation": "Street corner and shopfronts visible, but the named retailer and receiving entrance cannot be established from overview.",
+    "supporting_screenshots": [
+      "Screenshot 2026-10-29 at 20.43.44.png"
+    ],
+    "all_candidate_screenshots": [
+      "Screenshot 2026-10-29 at 20.43.36.png",
+      "Screenshot 2026-10-29 at 20.43.44.png",
+      "Screenshot 2026-10-29 at 20.43.57.png"
+    ],
+    "evidence_completeness": "insufficient",
+    "evidence_gaps": "Verify identity, curb access and receiving position.",
+    "authoritative_check": "pending",
+    "researcher_review": "pending",
+    "camera_coordinates": null
+  },
+  {
+    "poi_uuid": "6937e1ed-12f6-48e2-b2f7-fa9c092c0f58",
+    "name": "Alì",
+    "retailer_type": "supermarket",
+    "classification": "conditionally_plausible",
+    "classification_status": "provisional_contact_sheet_only",
+    "confidence": "low",
+    "visual_observation": "Alì sign, parking, vehicle entrance and public approach are visible; specific receiving access is not identified.",
+    "supporting_screenshots": [
+      "Screenshot 2026-10-29 at 20.45.25.png"
+    ],
+    "all_candidate_screenshots": [
+      "Screenshot 2026-10-29 at 20.44.19.png",
+      "Screenshot 2026-10-29 at 20.44.36.png",
+      "Screenshot 2026-10-29 at 20.45.00.png",
+      "Screenshot 2026-10-29 at 20.45.25.png"
+    ],
+    "evidence_completeness": "limited",
+    "evidence_gaps": "Confirm service entrance and authorised truck movement.",
+    "authoritative_check": "pending",
+    "researcher_review": "pending",
+    "camera_coordinates": null
+  },
+  {
+    "poi_uuid": "2fadb7f2-b5b3-4723-8a71-ead1ff13427e",
+    "name": "Pam Padova San Carlo",
+    "retailer_type": "supermarket",
+    "classification": "insufficient_visual_evidence",
+    "classification_status": "provisional_contact_sheet_only",
+    "confidence": "low",
+    "visual_observation": "A 2022 panorama shows Pam advertising on the complex, customer parking ramp and a large adjacent door; the actual receiving location is not established. Other screenshots show additional frontages.",
+    "supporting_screenshots": [
+      "Screenshot 2026-10-29 at 20.46.28.png"
+    ],
+    "all_candidate_screenshots": [
+      "Screenshot 2026-10-29 at 20.46.28.png",
+      "Screenshot 2026-10-29 at 20.46.41.png",
+      "Screenshot 2026-10-29 at 20.47.03.png",
+      "Screenshot 2026-10-29 at 20.47.42.png",
+      "Screenshot 2026-10-29 at 20.48.02.png",
+      "Screenshot 2026-10-29 at 20.48.22.png"
+    ],
+    "evidence_completeness": "insufficient",
+    "evidence_gaps": "Verify current retailer identity, delivery entrance and vehicle restrictions; customer parking is not proven freight access.",
+    "authoritative_check": "pending",
+    "researcher_review": "pending",
+    "camera_coordinates": null,
+    "panorama_date_for_supporting_screenshot": "2022-11"
+  },
+  {
+    "poi_uuid": "d7d47f5a-c634-42cd-b83e-d9f5683afe4a",
+    "name": "Alìper",
+    "retailer_type": "grocery_store",
+    "classification": "potentially_constrained",
+    "classification_status": "provisional_contact_sheet_only",
+    "confidence": "low",
+    "visual_observation": "Alìper frontage and a gated side/service area are visible. The gate and side doors are potential constraints; their connection to receiving is unverified.",
+    "supporting_screenshots": [
+      "Screenshot 2026-10-29 at 20.50.04.png"
+    ],
+    "all_candidate_screenshots": [
+      "Screenshot 2026-10-29 at 20.48.44.png",
+      "Screenshot 2026-10-29 at 20.48.54.png",
+      "Screenshot 2026-10-29 at 20.49.56.png",
+      "Screenshot 2026-10-29 at 20.50.04.png"
+    ],
+    "evidence_completeness": "limited",
+    "evidence_gaps": "Verify gate operation, authorised service access and receiving location.",
+    "authoritative_check": "pending",
+    "researcher_review": "pending",
+    "camera_coordinates": null,
+    "panorama_date_for_supporting_screenshot": "2026-09"
+  }
+]

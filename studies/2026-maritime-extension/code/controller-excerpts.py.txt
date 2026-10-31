@@ -1,0 +1,912 @@
+# Source excerpts for inspection, NOT a standalone executable module.
+# Source: tools/r4_phase_b_v5_pipeline.py
+# Whole-source SHA-256: b94d247b7fbc544313a510e4cb1abcf9b879420c6c245dfa7cfff43820e34fac
+# Dependencies and live launch/governance code intentionally not exported.
+
+def canonical(value: object) -> str:
+    return json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
+
+
+def sha_bytes(value: bytes) -> str:
+    return hashlib.sha256(value).hexdigest()
+
+
+def atomic_json(path: Path, value: dict[str, Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_name(f".{path.name}.{os.getpid()}.tmp")
+    fd = os.open(temporary, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as handle:
+            handle.write(canonical(value) + "\n")
+            handle.flush()
+            os.fsync(handle.fileno())
+        os.replace(temporary, path)
+        directory = os.open(path.parent, os.O_RDONLY)
+        try:
+            os.fsync(directory)
+        finally:
+            os.close(directory)
+    finally:
+        if temporary.exists():
+            temporary.unlink()
+
+
+def append_event(path: Path, value: dict[str, Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("a", encoding="utf-8") as handle:
+        handle.write(canonical(value) + "\n")
+        handle.flush()
+        os.fsync(handle.fileno())
+
+
+@dataclass(frozen=True)
+class ConditionTerminal:
+    condition: str
+    accepted: bool
+    schema_valid: bool
+    semantic_valid: bool
+    evaluator_feasible: bool
+    des_admitted: bool
+    repaired: bool
+    repair_count: int
+    artifact_sha256: str | None
+    response_attributed: bool
+    usage_cost_recorded: bool
+    validation_outcome_recorded: bool
+    provider_acceptance_state: str
+    primary_provider_reason: str
+    observability_reason: str | None
+    unit_terminal_reason: str
+    operation_count: int
+    conservative_cost_usd: float
+
+    @property
+    def science_outcome_available(self) -> bool:
+        return self.unit_terminal_reason in {
+            "ACCEPTED",
+            "FAIL_CLOSED_VALIDATION",
+        }
+
+
+@dataclass(frozen=True)
+class InvocationResult:
+    reply: Any | None
+    outcome: Any | None
+    artifact: dict[str, Any] | None
+    provider_acceptance_state: str
+    primary_provider_reason: str
+    observability_reason: str | None
+    response_attributed: bool
+    usage_cost_recorded: bool
+    validation_outcome_recorded: bool
+
+
+def missing_terminal(
+    condition: str,
+    *,
+    provider_reason: str,
+    acceptance: str,
+    observability_reason: str | None = None,
+    operations: int = 0,
+) -> ConditionTerminal:
+    return ConditionTerminal(
+        condition=condition,
+        accepted=False,
+        schema_valid=False,
+        semantic_valid=False,
+        evaluator_feasible=False,
+        des_admitted=False,
+        repaired=False,
+        repair_count=0,
+        artifact_sha256=None,
+        response_attributed=False,
+        usage_cost_recorded=False,
+        validation_outcome_recorded=False,
+        provider_acceptance_state=acceptance,
+        primary_provider_reason=provider_reason,
+        observability_reason=observability_reason,
+        unit_terminal_reason="PROVIDER_OR_INFRASTRUCTURE_MISSING",
+        operation_count=operations,
+        conservative_cost_usd=0.0,
+    )
+
+
+class Controller:
+    def __init__(
+        self,
+        *,
+        provider: Provider,
+        traces: TraceSink,
+        authority: Any,
+        checkpoint: CheckpointStore,
+        state: dict[str, Any],
+        ledger_path: Path,
+        output_dir: Path,
+    ) -> None:
+        self.provider = provider
+        self.traces = traces
+        self.authority = authority
+        self.checkpoint = checkpoint
+        self.state = state
+        self.ledger_path = ledger_path
+        self.output_dir = output_dir
+        self.terminals_path = output_dir / "terminals.jsonl"
+        self.des_path = output_dir / "des-replications.jsonl"
+
+    def _save(self) -> None:
+        self.checkpoint.save(self.state)
+
+    def _event(self, event: str, **values: Any) -> None:
+        append_event(
+            self.ledger_path,
+            {"event": event, "run_id": RUN_ID, **values},
+        )
+
+    def _acceptance(self, state: str) -> None:
+        key = {
+            "CONFIRMED": "provider_acceptance_confirmed",
+            "UNKNOWN": "provider_acceptance_unknown",
+            "NOT_ACCEPTED": "provider_not_accepted",
+        }[state]
+        self.state["accounting"][key] += 1
+
+    def _pre_attribution_failure(self, reason: str) -> None:
+        accounting = self.state["accounting"]
+        if accounting["consecutive_pre_attribution_reason"] == reason:
+            accounting["consecutive_pre_attribution_failures"] += 1
+        else:
+            accounting["consecutive_pre_attribution_reason"] = reason
+            accounting["consecutive_pre_attribution_failures"] = 1
+        self._save()
+        if (
+            accounting["consecutive_pre_attribution_failures"]
+            >= PRE_ATTRIBUTION_STREAK_STOP
+        ):
+            raise PipelineStop(f"THREE_CONSECUTIVE_PRE_ATTRIBUTION:{reason}")
+
+    def _reset_pre_attribution_streak(self) -> None:
+        accounting = self.state["accounting"]
+        accounting["consecutive_pre_attribution_reason"] = None
+        accounting["consecutive_pre_attribution_failures"] = 0
+
+    def _invoke(
+        self,
+        unit: dict[str, Any],
+        condition: str,
+        attempt: int,
+        violations: list[str],
+        trace: Any,
+    ) -> InvocationResult:
+        accounting = self.state["accounting"]
+        if accounting["dispatch_intents"] >= MAX_PROVIDER_OPERATIONS:
+            raise PipelineStop("PROTECTED_PROVIDER_OPERATION_BUDGET")
+        prompt, schema = v4_base.build_prompt(
+            unit["input"], condition, attempt, violations
+        )
+        operation_id = f"{RUN_ID}:{unit['unit_id']}:{condition}:{attempt}"
+        accounting["dispatch_intents"] += 1
+        current = {
+            "durable_stage": "DISPATCH_INTENT",
+            "operation_id": operation_id,
+            "unit_id": unit["unit_id"],
+            "condition": condition,
+            "attempt": attempt,
+            "prompt_sha256": sha_bytes(prompt.encode()),
+            "http_request_started": False,
+            "response_attributed": False,
+            "provider_acceptance_state": "PENDING",
+            "primary_provider_reason": None,
+            "observability_reason": None,
+            "replay_permitted": False,
+            "trace_snapshot": trace_snapshot(trace),
+        }
+        self.state["current_operation"] = current
+        self._acceptance("NOT_ACCEPTED")
+        self._save()
+        self._event("DISPATCH_INTENT", operation_id=operation_id)
+
+        def on_http_started() -> None:
+            if current["http_request_started"]:
+                raise PipelineStop("DUPLICATE_HTTP_BOUNDARY")
+            current["durable_stage"] = "HTTP_REQUEST_STARTED"
+            current["http_request_started"] = True
+            accounting["http_requests_started"] += 1
+            accounting["provider_not_accepted"] -= 1
+            self._acceptance("UNKNOWN")
+            self._save()
+            self._event("HTTP_REQUEST_STARTED", operation_id=operation_id)
+
+        try:
+            with self.traces.child(
+                trace,
+                "llm_operation",
+                {
+                    "operation_id": operation_id,
+                    "condition": condition,
+                    "attempt": attempt,
+                },
+            ):
+                reply = self.provider.generate(
+                    prompt=prompt,
+                    schema=schema,
+                    unit=unit,
+                    condition=condition,
+                    attempt=attempt,
+                    on_http_started=on_http_started,
+                )
+        except PipelineStop:
+            raise
+        except BaseException as exc:
+            reason = exc.reason if isinstance(exc, ProviderFault) else type(exc).__name__
+            protected = bool(isinstance(exc, ProviderFault) and exc.protected)
+            acceptance = "UNKNOWN" if current["http_request_started"] else "NOT_ACCEPTED"
+            current.update(
+                {
+                    "durable_stage": "PROVIDER_FAILURE_RECORDED",
+                    "provider_acceptance_state": acceptance,
+                    "primary_provider_reason": reason,
+                }
+            )
+            self._save()
+            self._event(
+                "PROVIDER_FAILURE_RECORDED",
+                operation_id=operation_id,
+                provider_acceptance_state=acceptance,
+                primary_provider_reason=reason,
+            )
+            self.state["current_operation"] = None
+            self._save()
+            if protected:
+                raise PipelineStop(f"PROTECTED_PROVIDER_FAILURE:{reason}") from exc
+            self._pre_attribution_failure(reason)
+            return InvocationResult(
+                None,
+                None,
+                None,
+                acceptance,
+                reason,
+                None,
+                False,
+                False,
+                False,
+            )
+
+        if not isinstance(getattr(reply, "response_id_sha256", None), str) or len(
+            reply.response_id_sha256
+        ) != 64:
+            reason = "UNATTRIBUTED_RESPONSE_ID"
+            current.update(
+                {
+                    "durable_stage": "PROVIDER_FAILURE_RECORDED",
+                    "provider_acceptance_state": "UNKNOWN",
+                    "primary_provider_reason": reason,
+                }
+            )
+            self._save()
+            self.state["current_operation"] = None
+            self._save()
+            self._pre_attribution_failure(reason)
+            return InvocationResult(
+                None, None, None, "UNKNOWN", reason, None, False, False, False
+            )
+
+        current.update(
+            {
+                "durable_stage": "RESPONSE_ATTRIBUTED",
+                "response_attributed": True,
+                "response_id_sha256": reply.response_id_sha256,
+                "response_sha256": reply.response_sha256,
+                "response_text": reply.text,
+                "exact_model": reply.exact_model,
+                "status": reply.status,
+                "reasoning_present": reply.reasoning_present,
+                "trace_snapshot": trace_snapshot(trace),
+            }
+        )
+        accounting["responses_attributed"] += 1
+        self._reset_pre_attribution_streak()
+        self._save()
+        self._event(
+            "RESPONSE_ATTRIBUTED",
+            operation_id=operation_id,
+            response_id_sha256=reply.response_id_sha256,
+            response_sha256=reply.response_sha256,
+        )
+
+        accounting["provider_acceptance_unknown"] -= 1
+        self._acceptance("CONFIRMED")
+        current.update(
+            {
+                "durable_stage": "PROVIDER_ACCEPTANCE_RECORDED",
+                "provider_acceptance_state": "CONFIRMED",
+                "primary_provider_reason": "ATTRIBUTED_PROVIDER_RESPONSE",
+            }
+        )
+        self._save()
+        self._event(
+            "PROVIDER_ACCEPTANCE_RECORDED",
+            operation_id=operation_id,
+            provider_acceptance_state="CONFIRMED",
+        )
+
+        input_tokens = getattr(reply, "input_tokens", None)
+        output_tokens = getattr(reply, "output_tokens", None)
+        cost = getattr(reply, "conservative_cost_usd", None)
+        if (
+            type(input_tokens) is not int
+            or type(output_tokens) is not int
+            or input_tokens < 0
+            or output_tokens < 0
+            or not isinstance(cost, (int, float))
+            or not math.isfinite(float(cost))
+            or not 0 <= float(cost) <= MAX_OPERATION_EXPOSURE_USD
+        ):
+            raise PipelineStop("PROTECTED_USAGE_OR_COST_DRIFT")
+        accounting["usage_cost_records"] += 1
+        accounting["conservative_cost_usd"] += float(cost)
+        if accounting["conservative_cost_usd"] > HARD_CEILING_USD:
+            raise PipelineStop("PROTECTED_COST_BUDGET")
+        current.update(
+            {
+                "durable_stage": "USAGE_COST_RECORDED",
+                "input_tokens": input_tokens,
+                "output_tokens": output_tokens,
+                "conservative_cost_usd": float(cost),
+            }
+        )
+        self._save()
+        self._event("USAGE_COST_RECORDED", operation_id=operation_id)
+
+        if (
+            reply.exact_model != MODEL_ID
+            or reply.status != "completed"
+            or bool(reply.reasoning_present)
+        ):
+            raise PipelineStop("PROTECTED_PROVIDER_CONTRACT_DRIFT")
+        outcome = self.authority.evaluate(
+            reply.text, unit["input"], condition, attempt
+        )
+        artifact = (
+            json.loads(reply.text)
+            if outcome.schema_valid and outcome.semantic_valid
+            else None
+        )
+        accounting["validation_outcomes"] += 1
+        current.update(
+            {
+                "durable_stage": "VALIDATION_RECORDED",
+                "schema_valid": bool(outcome.schema_valid),
+                "semantic_valid": bool(outcome.semantic_valid),
+                "evaluator_feasible": bool(outcome.evaluator_feasible),
+                "accepted": bool(outcome.accepted),
+                "violations": list(outcome.violations),
+            }
+        )
+        self._save()
+        self._event(
+            "VALIDATION_RECORDED",
+            operation_id=operation_id,
+            accepted=bool(outcome.accepted),
+        )
+
+        observability_reason: str | None = None
+        exports_before = int(getattr(self.traces, "exports", 0))
+        try:
+            observed = self.traces.reconcile(trace, operation_id)
+            if not observed.get("exported") or not observed.get("reconciled"):
+                raise RuntimeError("Phoenix result was not exact and exported")
+            accounting["phoenix_reconciliations"] += 1
+            current["durable_stage"] = "PHOENIX_RECONCILED"
+            current["trace_snapshot"] = trace_snapshot(trace)
+        except BaseException:
+            observability_reason = "PHOENIX_RECONCILIATION_FAILURE"
+            current["durable_stage"] = "PHOENIX_FAILED"
+            current["observability_reason"] = observability_reason
+            current["trace_snapshot"] = trace_snapshot(trace)
+        finally:
+            accounting["phoenix_exports"] += max(
+                0, int(getattr(self.traces, "exports", 0)) - exports_before
+            )
+        self._save()
+        self._event(
+            current["durable_stage"],
+            operation_id=operation_id,
+            observability_reason=observability_reason,
+        )
+        self.state["current_operation"] = None
+        self._save()
+        return InvocationResult(
+            reply,
+            outcome,
+            artifact,
+            "CONFIRMED",
+            "ATTRIBUTED_PROVIDER_RESPONSE",
+            observability_reason,
+            True,
+            True,
+            True,
+        )
+
+    def _terminal(
+        self,
+        *,
+        condition: str,
+        invocation: InvocationResult,
+        repair_count: int,
+        operation_count: int,
+    ) -> ConditionTerminal:
+        if invocation.reply is None or invocation.outcome is None:
+            return missing_terminal(
+                condition,
+                provider_reason=invocation.primary_provider_reason,
+                acceptance=invocation.provider_acceptance_state,
+                observability_reason=invocation.observability_reason,
+                operations=operation_count,
+            )
+        outcome = invocation.outcome
+        admitted = False
+        if condition in {"gate_only", "structured_repair"} and outcome.accepted:
+            admitted = bool(self.authority.terminal_admission(outcome))
+        artifact_hash = (
+            sha_bytes(canonical(invocation.artifact).encode())
+            if invocation.artifact is not None
+            else None
+        )
+        if invocation.observability_reason:
+            terminal_reason = "OBSERVABILITY_INCOMPLETE"
+        else:
+            terminal_reason = (
+                "ACCEPTED" if outcome.accepted else "FAIL_CLOSED_VALIDATION"
+            )
+        return ConditionTerminal(
+            condition=condition,
+            accepted=bool(outcome.accepted),
+            schema_valid=bool(outcome.schema_valid),
+            semantic_valid=bool(outcome.semantic_valid),
+            evaluator_feasible=bool(outcome.evaluator_feasible),
+            des_admitted=bool(outcome.accepted and admitted),
+            repaired=bool(outcome.accepted and repair_count),
+            repair_count=repair_count,
+            artifact_sha256=artifact_hash,
+            response_attributed=invocation.response_attributed,
+            usage_cost_recorded=invocation.usage_cost_recorded,
+            validation_outcome_recorded=invocation.validation_outcome_recorded,
+            provider_acceptance_state=invocation.provider_acceptance_state,
+            primary_provider_reason=invocation.primary_provider_reason,
+            observability_reason=invocation.observability_reason,
+            unit_terminal_reason=terminal_reason,
+            operation_count=operation_count,
+            conservative_cost_usd=float(invocation.reply.conservative_cost_usd),
+        )
+
+    def _repair(
+        self,
+        unit: dict[str, Any],
+        condition: str,
+        initial: InvocationResult,
+        trace: Any,
+    ) -> tuple[ConditionTerminal, dict[str, Any] | None]:
+        if initial.outcome is not None and initial.outcome.accepted:
+            terminal = self._terminal(
+                condition=condition,
+                invocation=initial,
+                repair_count=0,
+                operation_count=0,
+            )
+            return terminal, self._prepare_des_artifact(
+                initial.artifact, condition, int(unit["generation_id"])
+            )
+        violations = (
+            list(initial.outcome.violations) if initial.outcome is not None else []
+        )
+        last = initial
+        for attempt in range(1, MAX_REPAIRS + 1):
+            last = self._invoke(unit, condition, attempt, violations, trace)
+            if last.outcome is None:
+                return (
+                    self._terminal(
+                        condition=condition,
+                        invocation=last,
+                        repair_count=attempt,
+                        operation_count=attempt,
+                    ),
+                    None,
+                )
+            violations = list(last.outcome.violations)
+            if last.outcome.accepted:
+                return (
+                    self._terminal(
+                        condition=condition,
+                        invocation=last,
+                        repair_count=attempt,
+                        operation_count=attempt,
+                    ),
+                    self._prepare_des_artifact(
+                        last.artifact, condition, int(unit["generation_id"])
+                    ),
+                )
+        return (
+            self._terminal(
+                condition=condition,
+                invocation=last,
+                repair_count=MAX_REPAIRS,
+                operation_count=MAX_REPAIRS,
+            ),
+            None,
+        )
+
+    @staticmethod
+    def _prepare_des_artifact(
+        artifact: dict[str, Any] | None, condition: str, generation_id: int
+    ) -> dict[str, Any] | None:
+        if artifact is None:
+            return None
+        projected = json.loads(canonical(artifact))
+        projected["condition"] = condition
+        projected["generation_id"] = generation_id
+        return projected
+
+    @staticmethod
+    def _with_annotation_failure(
+        terminal: ConditionTerminal,
+    ) -> ConditionTerminal:
+        return replace(
+            terminal,
+            observability_reason="PHOENIX_ANNOTATION_FAILURE",
+            unit_terminal_reason="OBSERVABILITY_INCOMPLETE",
+        )
+
+    def run_unit(
+        self, unit: dict[str, Any]
+    ) -> tuple[dict[str, Any], dict[str, dict[str, Any] | None]]:
+        attributes = {
+            "program_id": "WSC-RP1",
+            "stage_id": "R4-v5-PIPELINE",
+            "run_id": RUN_ID,
+            "scenario_id": unit["unit_id"],
+            "incident_id": unit["incident_id"],
+            "condition": "unit_root",
+        }
+        with self.traces.unit(attributes) as trace:
+            initial = self._invoke(unit, "llm_only", 0, [], trace)
+            llm = self._terminal(
+                condition="llm_only",
+                invocation=initial,
+                repair_count=0,
+                operation_count=1,
+            )
+            if initial.outcome is None or initial.observability_reason is not None:
+                reason = (
+                    initial.primary_provider_reason
+                    if initial.outcome is None
+                    else "UPSTREAM_INITIAL_OBSERVABILITY_FAILURE"
+                )
+                gate = missing_terminal(
+                    "gate_only", provider_reason=reason, acceptance="NOT_DISPATCHED"
+                )
+                structured = missing_terminal(
+                    "structured_repair",
+                    provider_reason=reason,
+                    acceptance="NOT_DISPATCHED",
+                )
+                artifacts = {"gate_only": None, "structured_repair": None}
+            else:
+                gate, gate_artifact = self._repair(
+                    unit, "gate_only", initial, trace
+                )
+                structured, structured_artifact = self._repair(
+                    unit, "structured_repair", initial, trace
+                )
+                artifacts = {
+                    "gate_only": gate_artifact,
+                    "structured_repair": structured_artifact,
+                }
+                operation_terminals = (llm, gate, structured)
+                if all(item.observability_reason is None for item in operation_terminals):
+                    try:
+                        self.traces.annotate(trace)
+                        self.state["accounting"]["phoenix_annotations"] += 1
+                    except BaseException:
+                        llm = self._with_annotation_failure(llm)
+                        gate = self._with_annotation_failure(gate)
+                        structured = self._with_annotation_failure(structured)
+                        artifacts = {"gate_only": None, "structured_repair": None}
+            record = {
+                "unit_id": unit["unit_id"],
+                "incident_id": unit["incident_id"],
+                "generation_id": 1,
+                "conditions": {
+                    "llm_only": {**asdict(llm), "science_outcome_available": llm.science_outcome_available},
+                    "gate_only": {**asdict(gate), "science_outcome_available": gate.science_outcome_available},
+                    "structured_repair": {**asdict(structured), "science_outcome_available": structured.science_outcome_available},
+                },
+                "jointly_des_admitted": bool(
+                    gate.des_admitted and structured.des_admitted
+                ),
+            }
+        return record, artifacts
+
+    def _materialize_terminals(self) -> None:
+        """Derive terminal JSONL only from the canonical fsynced checkpoint."""
+        if len(self.state["terminal_units"]) != EXPECTED_INCIDENTS:
+            raise PipelineStop("INCOMPLETE_TERMINAL_CHECKPOINT")
+        rows = [
+            self.state["terminal_units"][identity]
+            for identity in sorted(self.state["terminal_units"])
+        ]
+        self.terminals_path.parent.mkdir(parents=True, exist_ok=True)
+        temporary = self.terminals_path.with_name(
+            f".{self.terminals_path.name}.{os.getpid()}.tmp"
+        )
+        fd = os.open(temporary, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
+        try:
+            with os.fdopen(fd, "w", encoding="utf-8") as handle:
+                for row in rows:
+                    handle.write(canonical(row) + "\n")
+                handle.flush()
+                os.fsync(handle.fileno())
+            os.replace(temporary, self.terminals_path)
+            directory = os.open(self.terminals_path.parent, os.O_RDONLY)
+            try:
+                os.fsync(directory)
+            finally:
+                os.close(directory)
+        finally:
+            if temporary.exists():
+                temporary.unlink()
+
+    def _block(self, reason: str) -> None:
+        self.state["status"] = "BLOCKED"
+        self.state["stop_reason"] = reason
+        self.state["accounting"]["systemic_stops"] += 1
+        self._save()
+        self._event("SYSTEMIC_STOP", reason=reason)
+
+    def run_pipeline(self, units: list[dict[str, Any]]) -> dict[str, Any]:
+        self.output_dir.mkdir(parents=True, exist_ok=True)
+        terminal_ids = set(self.state["terminal_units"])
+        try:
+            for batch_index, batch in enumerate(balanced_batches(units)):
+                batch_id = f"R4-V5-BATCH-{batch_index + 1:02d}"
+                if batch_id in self.state["completed_batches"]:
+                    continue
+                attributed_before = self.state["accounting"]["responses_attributed"]
+                for unit in batch:
+                    if unit["unit_id"] in terminal_ids:
+                        continue
+                    record, artifacts = self.run_unit(unit)
+                    self.state["terminal_units"][unit["unit_id"]] = record
+                    self.state["des_artifacts"][unit["unit_id"]] = artifacts
+                    self._save()
+                self.state["completed_batches"].append(batch_id)
+                self._save()
+                if (
+                    batch_index == 0
+                    and self.state["accounting"]["responses_attributed"]
+                    == attributed_before
+                ):
+                    raise PipelineStop("FIRST_BALANCED_BATCH_FULLY_UNSUCCESSFUL")
+            self.state["status"] = "PIPELINE_COMPLETE"
+            self._save()
+            self._materialize_terminals()
+        except PipelineStop as exc:
+            self._block(str(exc))
+        return self.summary()
+
+    def summary(self) -> dict[str, Any]:
+        terminals = list(self.state["terminal_units"].values())
+        generated = sum(
+            bool(
+                row["conditions"]["llm_only"]["response_attributed"]
+                and row["conditions"]["llm_only"]["artifact_sha256"]
+            )
+            for row in terminals
+        )
+        return {
+            "status": self.state["status"],
+            "frozen_incidents": EXPECTED_INCIDENTS,
+            "attempted_incidents": len(terminals),
+            "generated_initial_artifacts": generated,
+            "completed_batches": len(self.state["completed_batches"]),
+            "stop_reason": self.state["stop_reason"],
+            "accounting": dict(self.state["accounting"]),
+            "provider_calls": 0,
+            "network_calls": 0,
+            "phoenix_contacts": 0,
+            "scientific_calls": 0,
+        }
+
+    def simulate(
+        self,
+        *,
+        replications: int,
+        variants: tuple[str, ...],
+        mode: str = "offline_fixture",
+    ) -> int:
+        if self.state["status"] != "PIPELINE_COMPLETE":
+            raise RuntimeError("DES fixture requires complete provider-free pipeline")
+        if self.des_path.exists():
+            raise PipelineStop("DES_OUTPUT_NAMESPACE_NON_REPLAYABLE")
+        des = v4_base.sandbox_des()
+        keys: set[tuple[str, str, str, int]] = set()
+        self.des_path.parent.mkdir(parents=True, exist_ok=True)
+        with self.des_path.open("w", encoding="utf-8") as handle:
+            for unit in population():
+                artifacts = self.state["des_artifacts"].get(unit["unit_id"], {})
+                if not all(artifacts.get(condition) for condition in ("gate_only", "structured_repair")):
+                    continue
+                for variant in variants:
+                    for replication in range(1, replications + 1):
+                        for condition in ("gate_only", "structured_repair"):
+                            result = asdict(
+                                des.run_replication(
+                                    unit["input"],
+                                    artifacts[condition],
+                                    replication_id=replication,
+                                    mode=mode,
+                                    variant_id=variant,
+                                )
+                            )
+                            result["condition"] = condition
+                            key = (
+                                str(result["incident_id"]),
+                                condition,
+                                str(result["variant_id"]),
+                                int(result["replication_id"]),
+                            )
+                            if key in keys:
+                                raise PipelineStop("DUPLICATE_DES_REPLICATION_ROW")
+                            keys.add(key)
+                            handle.write(canonical(result) + "\n")
+            handle.flush()
+            os.fsync(handle.fileno())
+        if len(keys) > MAX_DES_ROWS:
+            raise PipelineStop("DES_ROW_BUDGET")
+        validate_des_rows(self.des_path)
+        self.state["status"] = "DES_COMPLETE"
+        self.state["des_rows"] = len(keys)
+        self._save()
+        return len(keys)
+
+    def analyze(self) -> dict[str, Any]:
+        result = analysis.analyze(
+            terminal_path=self.terminals_path,
+            output_path=self.output_dir / "analysis.json",
+        )
+        analysis.validate_numeric_result(result)
+        self.state["status"] = "ANALYZED"
+        self.state["analysis_status"] = result["status"]
+        self._save()
+        return result
+
+
+def _whole_unit_missing(
+    unit: dict[str, Any], *, provider_reason: str, acceptance: str, obs: str | None
+) -> dict[str, Any]:
+    return {
+        "unit_id": unit["unit_id"],
+        "incident_id": unit["incident_id"],
+        "generation_id": 1,
+        "conditions": {
+            condition: {
+                **asdict(
+                    missing_terminal(
+                        condition,
+                        provider_reason=provider_reason,
+                        acceptance=acceptance,
+                        observability_reason=obs,
+                        operations=1 if condition == "llm_only" else 0,
+                    )
+                ),
+                "science_outcome_available": False,
+            }
+            for condition in CONDITIONS
+        },
+        "jointly_des_admitted": False,
+    }
+
+
+def validate_des_rows(path: Path) -> int:
+    """Validate the exact one-generation v5 DES uniqueness key."""
+    keys: set[tuple[str, str, str, int]] = set()
+    count = 0
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        row = json.loads(line)
+        key = (
+            str(row["incident_id"]),
+            str(row["condition"]),
+            str(row["variant_id"]),
+            int(row["replication_id"]),
+        )
+        if key in keys:
+            raise PipelineStop("DUPLICATE_DES_REPLICATION_ROW")
+        keys.add(key)
+        count += 1
+    if count > MAX_DES_ROWS:
+        raise PipelineStop("DES_ROW_BUDGET")
+    return count
+
+
+def recover_interrupted_operation(
+    *,
+    state: dict[str, Any],
+    checkpoint: CheckpointStore,
+    traces: TraceSink,
+    authority: Any,
+    ledger_path: Path,
+) -> str:
+    """Terminalize an interrupted operation without provider replay."""
+    disposition = validate_checkpoint(state)
+    if disposition == "NEXT_FRESH_UNIT":
+        return disposition
+    current = state["current_operation"]
+    unit = next(
+        item for item in population() if item["unit_id"] == current["unit_id"]
+    )
+    obs: str | None = None
+    if disposition == "PRE_HTTP_NO_REPLAY_TERMINAL":
+        reason, acceptance = "CRASH_BEFORE_HTTP_BOUNDARY", "NOT_ACCEPTED"
+    elif disposition == "AMBIGUOUS_NO_REPLAY_TERMINAL":
+        reason, acceptance = "AMBIGUOUS_AFTER_HTTP_BOUNDARY", "UNKNOWN"
+    else:
+        reason = str(current.get("primary_provider_reason") or "ATTRIBUTED_PROVIDER_RESPONSE")
+        acceptance = "CONFIRMED"
+        if current.get("provider_acceptance_state") != "CONFIRMED":
+            state["accounting"]["provider_acceptance_unknown"] -= 1
+            state["accounting"]["provider_acceptance_confirmed"] += 1
+            current["provider_acceptance_state"] = "CONFIRMED"
+            current["primary_provider_reason"] = "ATTRIBUTED_PROVIDER_RESPONSE"
+        if current["durable_stage"] not in {"PHOENIX_RECONCILED", "PHOENIX_FAILED"}:
+            trace = trace_from_snapshot(current["trace_snapshot"])
+            exports_before = int(getattr(traces, "exports", 0))
+            try:
+                observed = traces.reconcile(trace, current["operation_id"])
+                if not observed.get("exported") or not observed.get("reconciled"):
+                    raise RuntimeError("reconciliation did not exactly match")
+                state["accounting"]["phoenix_reconciliations"] += 1
+            except BaseException:
+                obs = "PHOENIX_RECONCILIATION_FAILURE_AFTER_CRASH"
+            finally:
+                state["accounting"]["phoenix_exports"] += max(
+                    0, int(getattr(traces, "exports", 0)) - exports_before
+                )
+        elif current["durable_stage"] == "PHOENIX_FAILED":
+            obs = str(current.get("observability_reason"))
+        if current["durable_stage"] in {
+            "RESPONSE_ATTRIBUTED",
+            "PROVIDER_ACCEPTANCE_RECORDED",
+        }:
+            # Attribution is durable but the usage/cost transition did not
+            # complete.  Preserve provider acceptance and do not invent usage.
+            reason = "ATTRIBUTED_USAGE_INCOMPLETE_AFTER_CRASH"
+        elif current["durable_stage"] == "USAGE_COST_RECORDED":
+            outcome = authority.evaluate(
+                current["response_text"], unit["input"], current["condition"], int(current["attempt"])
+            )
+            if outcome is not None:
+                state["accounting"]["validation_outcomes"] += 1
+    record = _whole_unit_missing(
+        unit, provider_reason=reason, acceptance=acceptance, obs=obs
+    )
+    state["terminal_units"][unit["unit_id"]] = record
+    state["des_artifacts"][unit["unit_id"]] = {
+        "gate_only": None,
+        "structured_repair": None,
+    }
+    state["current_operation"] = None
+    checkpoint.save(state)
+    append_event(
+        ledger_path,
+        {
+            "event": "CRASH_RECOVERED_NO_PROVIDER_REPLAY",
+            "run_id": RUN_ID,
+            "unit_id": unit["unit_id"],
+            "operation_id": current["operation_id"],
+            "disposition": disposition,
+            "primary_provider_reason": reason,
+            "observability_reason": obs,
+        },
+    )
+    return disposition

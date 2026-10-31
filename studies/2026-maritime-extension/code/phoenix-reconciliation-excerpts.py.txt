@@ -1,0 +1,166 @@
+# Source excerpts for inspection, NOT a standalone executable module.
+# Source: tools/r4_observability_reconciliation_v2.py
+# Whole-source SHA-256: e701736143c50257e755c4e34e1b98ee8b7ab949dc7087a886a3af13e5b0c8da
+# Dependencies and live launch/governance code intentionally not exported.
+
+@dataclass(frozen=True)
+class ReconciliationDiagnostic:
+    matched: bool
+    target_traces: int
+    observed_target_traces: int
+    missing_roots: int
+    missing_children: int
+    parent_mismatches: int
+    duplicate_target_traces: int
+    malformed_target_spans: int
+    unrelated_traces_ignored: int
+
+    def record(self) -> dict[str, int | bool]:
+        return {
+            "matched": self.matched,
+            "target_traces": self.target_traces,
+            "observed_target_traces": self.observed_target_traces,
+            "missing_roots": self.missing_roots,
+            "missing_children": self.missing_children,
+            "parent_mismatches": self.parent_mismatches,
+            "duplicate_target_traces": self.duplicate_target_traces,
+            "malformed_target_spans": self.malformed_target_spans,
+            "unrelated_traces_ignored": self.unrelated_traces_ignored,
+        }
+
+
+def target_trace_diagnostic(
+    records: list[Any], remote: list[dict[str, Any]]
+) -> ReconciliationDiagnostic:
+    """Match only requested traces and require exact local root/child identity.
+
+    Unrelated traces are not part of the reconciliation claim and therefore do
+    not invalidate it. Duplicate representations of a requested trace remain a
+    hard failure, as do malformed target spans and non-direct child parents.
+    """
+    targets = {
+        harness.normalize_otel_identifier(record.trace_id, 32): record
+        for record in records
+    }
+    if "" in targets or len(targets) != len(records):
+        return ReconciliationDiagnostic(
+            False, len(records), 0, len(records), 0, 0, 0, 0, 0
+        )
+    observed: dict[str, dict[str, Any]] = {}
+    duplicate_target_traces = 0
+    unrelated = 0
+    for item in remote:
+        if not isinstance(item, dict):
+            unrelated += 1
+            continue
+        trace_id = harness.normalize_otel_identifier(item.get("trace_id"), 32)
+        if trace_id not in targets:
+            unrelated += 1
+            continue
+        if trace_id in observed:
+            duplicate_target_traces += 1
+        else:
+            observed[trace_id] = item
+
+    missing_roots = missing_children = parent_mismatches = malformed = 0
+    for trace_id, record in targets.items():
+        item = observed.get(trace_id)
+        if item is None:
+            missing_roots += 1
+            continue
+        spans = item.get("spans")
+        if not isinstance(spans, list):
+            malformed += 1
+            continue
+        span_by_id: dict[str, dict[str, Any]] = {}
+        duplicate_span = False
+        for span in spans:
+            if not isinstance(span, dict):
+                malformed += 1
+                continue
+            span_id = harness.normalize_otel_identifier(span.get("span_id"), 16)
+            if not span_id:
+                malformed += 1
+                continue
+            if span_id in span_by_id:
+                duplicate_span = True
+            else:
+                span_by_id[span_id] = span
+        if duplicate_span:
+            malformed += 1
+        root_id = harness.normalize_otel_identifier(record.root_span_id, 16)
+        if not root_id or root_id not in span_by_id:
+            missing_roots += 1
+            continue
+        for child_id in record.child_spans.values():
+            normalized = harness.normalize_otel_identifier(child_id, 16)
+            child = span_by_id.get(normalized)
+            if child is None:
+                missing_children += 1
+            elif harness.normalize_otel_identifier(child.get("parent_id"), 16) != root_id:
+                parent_mismatches += 1
+
+    matched = not any(
+        (
+            duplicate_target_traces,
+            missing_roots,
+            missing_children,
+            parent_mismatches,
+            malformed,
+        )
+    )
+    return ReconciliationDiagnostic(
+        matched=matched,
+        target_traces=len(targets),
+        observed_target_traces=len(observed),
+        missing_roots=missing_roots,
+        missing_children=missing_children,
+        parent_mismatches=parent_mismatches,
+        duplicate_target_traces=duplicate_target_traces,
+        malformed_target_spans=malformed,
+        unrelated_traces_ignored=unrelated,
+    )
+
+
+class R4PhoenixTraceSink(base.R4PhoenixTraceSink):
+    """Target-scoped reconciliation with bounded eventual-consistency polling."""
+
+    MAX_POLLS = 5
+    BACKOFF_SECONDS = (0.5, 1.0, 2.0, 4.0)
+
+    def reconcile(
+        self, records: list[Any], *, annotate: bool, max_polls: int = MAX_POLLS
+    ) -> None:
+        if max_polls != self.MAX_POLLS:
+            raise RuntimeError("R4 v2 reconciliation poll ceiling drift")
+        if not records or len(records) > 1:
+            raise RuntimeError("R4 v2 reconciles exactly one unit-root family")
+        if not self.provider.force_flush(timeout_millis=30_000):
+            raise RuntimeError("R4 v2 OTLP batch flush failed")
+        self.export_batches += 1
+        diagnostic: ReconciliationDiagnostic | None = None
+        for attempt in range(max_polls):
+            remote = self.client.traces.get_traces(
+                project_identifier=self.project,
+                start_time=self.started,
+                sort="start_time",
+                order="desc",
+                include_spans=True,
+                limit=100,
+                timeout=10,
+            )
+            self.api_polls += 1
+            diagnostic = target_trace_diagnostic(records, remote)
+            if diagnostic.matched:
+                self.last_reconciliation_diagnostic = diagnostic.record()
+                if annotate:
+                    self.annotate(records)
+                return
+            if attempt + 1 < max_polls:
+                time.sleep(self.BACKOFF_SECONDS[attempt])
+        assert diagnostic is not None
+        self.last_reconciliation_diagnostic = diagnostic.record()
+        raise RuntimeError(
+            "R4 Phoenix target trace did not reconcile after five bounded polls: "
+            + str(diagnostic.record())
+        )

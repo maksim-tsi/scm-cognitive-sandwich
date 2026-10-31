@@ -1,0 +1,275 @@
+[
+  {
+    "path": "code/tools/evaluation_cohort/final_cases.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/tools/evaluation_cohort/author.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/tools/p5_interactive/providers.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/tools/p5_interactive/operational.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/tools/p5_interactive/source_text.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/tools/p4_world/world.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/stage2/core/solver.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/stage2/core/model.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/stage2/core/evaluator.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/tools/p5_interactive/provider_qwen.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/tools/p5_interactive/provider_mistral.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/tools/p5_interactive/provider_deepseek.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/tools/p5_interactive/__init__.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/tools/padua_pilot/transport.py",
+    "all_function_class_AST_equal": false,
+    "changed_symbols": [
+      "HttpTransport",
+      "_worker"
+    ],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/stage2/runner/workflow.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/stage2/runner/transport.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/stage2/runner/protocol.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/stage2/evidence_layer/runtime.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/stage2/evidence_layer/reason_predicates.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/stage2/evidence_layer/output_contract.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/stage2/evidence_layer/authority_closure.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/stage2/evidence_layer/input_checks.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/stage2/evidence_layer/conditional_instructions.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/stage2/evidence_layer/proposal_replay.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/stage2/core/episode.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/tools/p5_interactive/token_budget.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/tools/p5_interactive/build_token_counter.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/tools/p5_interactive/operational_reference.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/stage2/core/exact.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/tools/eval_op_v2/author.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/tools/eval_op_v2/analyze_r1.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/tools/eval_op_v2/collection_r1.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/tools/eval_op_v2/freeze.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/tools/p5_interactive/operational_check.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/tools/p5_interactive/operational_baseline.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/tools/p5_interactive/experiment.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/tools/p5_interactive/evaluation.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/tools/openai_extension/runtime.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/tools/openai_extension/adapter.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/tools/mistral_pilot/collect.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/tools/mistral_pilot/__main__.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/tools/eval_op_v2/ablation.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "reproduction/tests/test_original_openai_adapter.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "reproduction/generate_figures.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  },
+  {
+    "path": "code/tools/streetview/traceability.py",
+    "all_function_class_AST_equal": true,
+    "changed_symbols": [],
+    "basis": "original and exported top-level function/class AST; configuration/global paths are separately recorded in source-export.json"
+  }
+]

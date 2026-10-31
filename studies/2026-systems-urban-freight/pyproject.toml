@@ -1,0 +1,13 @@
+[tool.ruff]
+target-version = "py313"
+[tool.ruff.lint]
+# Match the legacy standard E4/E7/E9/F checks explicitly across Ruff versions.
+select = ["E4", "E7", "E9", "F"]
+[tool.ruff.lint.per-file-ignores]
+"code/**/*.py" = ["E402", "E701", "E702", "E741", "F401", "F811", "F841"]
+"reproduction/tests/test_original_openai_adapter.py" = ["E402"]
+"reproduction/reproduce.py" = ["E402"]
+[tool.mypy]
+python_version = "3.13"
+ignore_missing_imports = true
+follow_imports = "skip"

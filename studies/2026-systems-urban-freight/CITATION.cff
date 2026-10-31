@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "Cite this study separately and specify the source commit/package manifest."
+type: software
+version: 0.1.0-review
+title: "A Reproducible Research Methodology for LLM-Based Logistics Decision Support: Lessons from Urban Freight Experiments \u2014 research artifacts"
+authors:
+  - family-names: Ilin
+    given-names: Maksim
+    orcid: https://orcid.org/0009-0006-1955-4777
+  - family-names: Pavlyuk
+    given-names: Dmitry
+    orcid: https://orcid.org/0000-0003-3710-9678
+repository-code: https://github.com/maksim-tsi/scm-cognitive-sandwich
+abstract: "Systems manuscript; not accepted/published; package 0.1.0-review"

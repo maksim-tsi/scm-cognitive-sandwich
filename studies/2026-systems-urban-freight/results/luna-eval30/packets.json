@@ -1,0 +1,5302 @@
+[
+  {
+    "assignment_id": "EVAL-01",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "decision": {
+      "action": "UPDATE",
+      "evidence": [
+        "DOC-01-B-OPEN",
+        "DOC-01-D-FINISH"
+      ],
+      "missing_slots": [],
+      "parameters": {
+        "close_D_s": 4200,
+        "open_B_s": 1800
+      },
+      "plan": {
+        "routes": [
+          {
+            "nodes": [
+              0,
+              1,
+              2,
+              3,
+              0
+            ],
+            "vehicle": 0
+          },
+          {
+            "nodes": [
+              0,
+              4,
+              0
+            ],
+            "vehicle": 1
+          }
+        ],
+        "status": "FEASIBLE"
+      }
+    },
+    "episode": "EVAL-01",
+    "evaluation": {
+      "action_correctness": true,
+      "correct_justified_refusal": false,
+      "correct_numeric_plan": true,
+      "correct_proven_infeasibility": false,
+      "deferred_clarify": false,
+      "denominator": 1,
+      "distance_m": 18527,
+      "distance_regret_m": 2774,
+      "evidence_grounding": true,
+      "feasibility": true,
+      "independent_outcome_correct": true,
+      "invalid_release_provenance": false,
+      "optional_questions": 0,
+      "reference_outcome": "FEASIBLE_PLAN",
+      "unauthorized_questions": 0,
+      "unnecessary_questions": 0,
+      "unnecessary_refusal": false,
+      "useful_I2": true,
+      "useful_I3": true
+    },
+    "model_responses": 1,
+    "original_model_content_sha256": "35385fd1b6ef566fd8be49533b22b06cb3c6b30365dd2b9c3340afa0cb952c9d",
+    "questions": 0,
+    "replay": {
+      "I2": {
+        "admitted": true,
+        "proposal_sha256": "939e0650b0be893ba70bca30131a1ae352219346d591cab041747397d93ad7ab"
+      },
+      "I3": {
+        "admitted": true,
+        "proposal_sha256": "939e0650b0be893ba70bca30131a1ae352219346d591cab041747397d93ad7ab"
+      },
+      "action_correctness": true,
+      "common_errors": [],
+      "grounding": true,
+      "infeasibility_certificate": null,
+      "proposal_sha256": "939e0650b0be893ba70bca30131a1ae352219346d591cab041747397d93ad7ab",
+      "route_check": {
+        "distance_m": 18527,
+        "elapsed_vehicle_seconds": 4537,
+        "travel_seconds": 3337,
+        "valid": true,
+        "violations": []
+      },
+      "state_I2": {
+        "action": "UPDATE",
+        "evidence": [
+          "DOC-01-B-OPEN",
+          "DOC-01-D-FINISH"
+        ],
+        "missing_slots": [],
+        "parameters": {
+          "close_D_s": 4200,
+          "open_B_s": 1800
+        },
+        "plan": {
+          "routes": [
+            {
+              "nodes": [
+                0,
+                1,
+                2,
+                3,
+                0
+              ],
+              "vehicle": 0
+            },
+            {
+              "nodes": [
+                0,
+                4,
+                0
+              ],
+              "vehicle": 1
+            }
+          ],
+          "status": "FEASIBLE"
+        }
+      },
+      "state_I3": {
+        "action": "UPDATE",
+        "evidence": [
+          "DOC-01-B-OPEN",
+          "DOC-01-D-FINISH"
+        ],
+        "missing_slots": [],
+        "parameters": {
+          "close_D_s": 4200,
+          "open_B_s": 1800
+        },
+        "plan": {
+          "routes": [
+            {
+              "nodes": [
+                0,
+                1,
+                2,
+                3,
+                0
+              ],
+              "vehicle": 0
+            },
+            {
+              "nodes": [
+                0,
+                4,
+                0
+              ],
+              "vehicle": 1
+            }
+          ],
+          "status": "FEASIBLE"
+        }
+      },
+      "transcript_sha256": "5bbd8f6fae9794bd6d6d72dd6747f2eb6e80609453925e1fa64ce80f22af5d69"
+    },
+    "route": "openai",
+    "source_result_member_sha256": "ae1dc90dca03f6e8fea8dad66539fe8361eb8e33bd9afc5975000790f80ef65d",
+    "source_trace_member": "EVAL-01/trace.jsonl",
+    "source_trace_sha256": "5bbd8f6fae9794bd6d6d72dd6747f2eb6e80609453925e1fa64ce80f22af5d69",
+    "status": "completed",
+    "steps": [
+      {
+        "action": "FINAL",
+        "arguments": {
+          "action": "UPDATE",
+          "evidence": [
+            "DOC-01-B-OPEN",
+            "DOC-01-D-FINISH"
+          ],
+          "missing_slots": [],
+          "parameters": {
+            "close_D_s": 4200,
+            "open_B_s": 1800
+          },
+          "plan": {
+            "routes": [
+              {
+                "nodes": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  0
+                ],
+                "vehicle": 0
+              },
+              {
+                "nodes": [
+                  0,
+                  4,
+                  0
+                ],
+                "vehicle": 1
+              }
+            ],
+            "status": "FEASIBLE"
+          }
+        },
+        "questions_used": 0,
+        "response": {
+          "status": "SUBMITTED"
+        },
+        "tools_used": 0
+      }
+    ],
+    "tool_invocations": 0
+  },
+  {
+    "assignment_id": "EVAL-02",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "decision": {
+      "action": "UPDATE",
+      "evidence": [
+        "DOC-02-WEIGHBRIDGE",
+        "DOC-02-RACK-CERT"
+      ],
+      "missing_slots": [],
+      "parameters": {
+        "load_A_kg": 60,
+        "payload_0_kg": 80
+      },
+      "plan": {
+        "routes": [
+          {
+            "nodes": [
+              0,
+              2,
+              3,
+              0
+            ],
+            "vehicle": 0
+          },
+          {
+            "nodes": [
+              0,
+              1,
+              4,
+              0
+            ],
+            "vehicle": 1
+          }
+        ],
+        "status": "FEASIBLE"
+      }
+    },
+    "episode": "EVAL-02",
+    "evaluation": {
+      "action_correctness": true,
+      "correct_justified_refusal": false,
+      "correct_numeric_plan": false,
+      "correct_proven_infeasibility": false,
+      "deferred_clarify": false,
+      "denominator": 1,
+      "distance_m": null,
+      "distance_regret_m": null,
+      "evidence_grounding": true,
+      "feasibility": false,
+      "independent_outcome_correct": false,
+      "invalid_release_provenance": false,
+      "optional_questions": 0,
+      "reference_outcome": "FEASIBLE_PLAN",
+      "unauthorized_questions": 0,
+      "unnecessary_questions": 0,
+      "unnecessary_refusal": false,
+      "useful_I2": false,
+      "useful_I3": false
+    },
+    "model_responses": 3,
+    "original_model_content_sha256": "2138cbf79d136a2eb6b8936f23f91aecd54babd8a9b5b818fa928111bff880b5",
+    "questions": 2,
+    "replay": {
+      "I2": {
+        "admitted": false,
+        "proposal_sha256": "1083f9bee6e452bf99938d3bd95a1a70623404a86cce37ba4ac02fe4854fe150"
+      },
+      "I3": {
+        "admitted": false,
+        "proposal_sha256": "1083f9bee6e452bf99938d3bd95a1a70623404a86cce37ba4ac02fe4854fe150"
+      },
+      "action_correctness": true,
+      "common_errors": [
+        "route_not_feasible"
+      ],
+      "grounding": true,
+      "infeasibility_certificate": null,
+      "proposal_sha256": "1083f9bee6e452bf99938d3bd95a1a70623404a86cce37ba4ac02fe4854fe150",
+      "route_check": {
+        "distance_m": 10015,
+        "elapsed_vehicle_seconds": 3006,
+        "travel_seconds": 1806,
+        "valid": false,
+        "violations": [
+          "remaining_payload_exceeded:1:95>90"
+        ]
+      },
+      "state_I2": null,
+      "state_I3": null,
+      "transcript_sha256": "0993ca4addaee4aaa7c9ab19957c5bb684f51e44b766bd10df58613413008e32"
+    },
+    "route": "openai",
+    "source_result_member_sha256": "ae1dc90dca03f6e8fea8dad66539fe8361eb8e33bd9afc5975000790f80ef65d",
+    "source_trace_member": "EVAL-02/trace.jsonl",
+    "source_trace_sha256": "0993ca4addaee4aaa7c9ab19957c5bb684f51e44b766bd10df58613413008e32",
+    "status": "completed",
+    "steps": [
+      {
+        "action": "CALL_TOOL",
+        "arguments": {
+          "arguments": {
+            "slot": "load_A_kg"
+          },
+          "tool": "lookup_snapshot"
+        },
+        "questions_used": 0,
+        "response": {
+          "status": "PUBLIC_CHANNEL_UNAVAILABLE"
+        },
+        "tools_used": 1
+      },
+      {
+        "action": "ASK_USER",
+        "arguments": [
+          {
+            "entity": "BOOKING-GROUP-02",
+            "field": "load_A_kg",
+            "kind": "indispensable",
+            "owner": "dispatcher",
+            "scope": "PADUA-RUN-02",
+            "wording": "Please provide the certified warehouse-control record for load_A_kg, applicable to BOOKING-GROUP-02 / PADUA-RUN-02 at effective time 220, including its asserted value."
+          },
+          {
+            "entity": "BOOKING-GROUP-02",
+            "field": "payload_0_kg",
+            "kind": "indispensable",
+            "owner": "dispatcher",
+            "scope": "PADUA-RUN-02",
+            "wording": "Please provide the certified fleet-control record for payload_0_kg, applicable to BOOKING-GROUP-02 / PADUA-RUN-02 at effective time 220, including its asserted value."
+          }
+        ],
+        "questions_used": 2,
+        "response": [
+          {
+            "records": [
+              {
+                "assertion_kind": "certified_fact",
+                "authority": "confirmed",
+                "available_at": 180,
+                "channel": "user",
+                "effective_from": 210,
+                "effective_to": 260,
+                "entity": "BOOKING-GROUP-02",
+                "id": "DOC-02-WEIGHBRIDGE",
+                "issuer_role": "warehouse_control",
+                "owner": "dispatcher",
+                "precision": "confirmed",
+                "scope": "PADUA-RUN-02",
+                "slot": "load_A_kg",
+                "source_document": "DOC-02-WEIGHBRIDGE",
+                "supersedes": [],
+                "text": "Loading control: the sealed consignment’s certified gross mass is 0.06 tonnes, including pallets and packaging.",
+                "value": 60,
+                "verified": true
+              }
+            ],
+            "status": "RECORDS_RELEASED"
+          },
+          {
+            "records": [
+              {
+                "assertion_kind": "certified_fact",
+                "authority": "confirmed",
+                "available_at": 180,
+                "channel": "user",
+                "effective_from": 210,
+                "effective_to": 260,
+                "entity": "BOOKING-GROUP-02",
+                "id": "DOC-02-RACK-CERT",
+                "issuer_role": "fleet_control",
+                "owner": "dispatcher",
+                "precision": "confirmed",
+                "scope": "PADUA-RUN-02",
+                "slot": "payload_0_kg",
+                "source_document": "DOC-02-RACK-CERT",
+                "supersedes": [],
+                "text": "Fleet control: after fitted equipment the available payload is 80 kg. This is the usable cargo allowance, not the plate rating.",
+                "value": 80,
+                "verified": true
+              }
+            ],
+            "status": "RECORDS_RELEASED"
+          }
+        ],
+        "tools_used": 1
+      },
+      {
+        "action": "FINAL",
+        "arguments": {
+          "action": "UPDATE",
+          "evidence": [
+            "DOC-02-WEIGHBRIDGE",
+            "DOC-02-RACK-CERT"
+          ],
+          "missing_slots": [],
+          "parameters": {
+            "load_A_kg": 60,
+            "payload_0_kg": 80
+          },
+          "plan": {
+            "routes": [
+              {
+                "nodes": [
+                  0,
+                  2,
+                  3,
+                  0
+                ],
+                "vehicle": 0
+              },
+              {
+                "nodes": [
+                  0,
+                  1,
+                  4,
+                  0
+                ],
+                "vehicle": 1
+              }
+            ],
+            "status": "FEASIBLE"
+          }
+        },
+        "questions_used": 2,
+        "response": {
+          "status": "SUBMITTED"
+        },
+        "tools_used": 1
+      }
+    ],
+    "tool_invocations": 1
+  },
+  {
+    "assignment_id": "EVAL-03",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "decision": {
+      "action": "UPDATE",
+      "evidence": [
+        "DOC-03-LOADING-RELEASE",
+        "DOC-03-UNLOAD"
+      ],
+      "missing_slots": [],
+      "parameters": {
+        "load_C_kg": 55,
+        "service_D_s": 420
+      },
+      "plan": {
+        "routes": [
+          {
+            "nodes": [
+              0,
+              1,
+              2,
+              0
+            ],
+            "vehicle": 0
+          },
+          {
+            "nodes": [
+              0,
+              3,
+              4,
+              0
+            ],
+            "vehicle": 1
+          }
+        ],
+        "status": "FEASIBLE"
+      }
+    },
+    "episode": "EVAL-03",
+    "evaluation": {
+      "action_correctness": true,
+      "correct_justified_refusal": false,
+      "correct_numeric_plan": true,
+      "correct_proven_infeasibility": false,
+      "deferred_clarify": false,
+      "denominator": 1,
+      "distance_m": 17130,
+      "distance_regret_m": 1036,
+      "evidence_grounding": true,
+      "feasibility": true,
+      "independent_outcome_correct": true,
+      "invalid_release_provenance": false,
+      "optional_questions": 0,
+      "reference_outcome": "FEASIBLE_PLAN",
+      "unauthorized_questions": 0,
+      "unnecessary_questions": 0,
+      "unnecessary_refusal": false,
+      "useful_I2": true,
+      "useful_I3": true
+    },
+    "model_responses": 1,
+    "original_model_content_sha256": "e4e5d574dacb370549ded63619fbb48f5e1f0b493c532f5c8457bcfea6749a72",
+    "questions": 0,
+    "replay": {
+      "I2": {
+        "admitted": true,
+        "proposal_sha256": "7d0d8e856eb7c2d52163b255af2ab280ddac49172cda4d889d84cd1f6fbe94ef"
+      },
+      "I3": {
+        "admitted": true,
+        "proposal_sha256": "7d0d8e856eb7c2d52163b255af2ab280ddac49172cda4d889d84cd1f6fbe94ef"
+      },
+      "action_correctness": true,
+      "common_errors": [],
+      "grounding": true,
+      "infeasibility_certificate": null,
+      "proposal_sha256": "7d0d8e856eb7c2d52163b255af2ab280ddac49172cda4d889d84cd1f6fbe94ef",
+      "route_check": {
+        "distance_m": 17130,
+        "elapsed_vehicle_seconds": 4405,
+        "travel_seconds": 3085,
+        "valid": true,
+        "violations": []
+      },
+      "state_I2": {
+        "action": "UPDATE",
+        "evidence": [
+          "DOC-03-LOADING-RELEASE",
+          "DOC-03-UNLOAD"
+        ],
+        "missing_slots": [],
+        "parameters": {
+          "load_C_kg": 55,
+          "service_D_s": 420
+        },
+        "plan": {
+          "routes": [
+            {
+              "nodes": [
+                0,
+                1,
+                2,
+                0
+              ],
+              "vehicle": 0
+            },
+            {
+              "nodes": [
+                0,
+                3,
+                4,
+                0
+              ],
+              "vehicle": 1
+            }
+          ],
+          "status": "FEASIBLE"
+        }
+      },
+      "state_I3": {
+        "action": "UPDATE",
+        "evidence": [
+          "DOC-03-LOADING-RELEASE",
+          "DOC-03-UNLOAD"
+        ],
+        "missing_slots": [],
+        "parameters": {
+          "load_C_kg": 55,
+          "service_D_s": 420
+        },
+        "plan": {
+          "routes": [
+            {
+              "nodes": [
+                0,
+                1,
+                2,
+                0
+              ],
+              "vehicle": 0
+            },
+            {
+              "nodes": [
+                0,
+                3,
+                4,
+                0
+              ],
+              "vehicle": 1
+            }
+          ],
+          "status": "FEASIBLE"
+        }
+      },
+      "transcript_sha256": "11d29285fe3d25df7748c434383f529b9cc1bba20a04b97a69cffef6ed9f3c07"
+    },
+    "route": "openai",
+    "source_result_member_sha256": "ae1dc90dca03f6e8fea8dad66539fe8361eb8e33bd9afc5975000790f80ef65d",
+    "source_trace_member": "EVAL-03/trace.jsonl",
+    "source_trace_sha256": "11d29285fe3d25df7748c434383f529b9cc1bba20a04b97a69cffef6ed9f3c07",
+    "status": "completed",
+    "steps": [
+      {
+        "action": "FINAL",
+        "arguments": {
+          "action": "UPDATE",
+          "evidence": [
+            "DOC-03-LOADING-RELEASE",
+            "DOC-03-UNLOAD"
+          ],
+          "missing_slots": [],
+          "parameters": {
+            "load_C_kg": 55,
+            "service_D_s": 420
+          },
+          "plan": {
+            "routes": [
+              {
+                "nodes": [
+                  0,
+                  1,
+                  2,
+                  0
+                ],
+                "vehicle": 0
+              },
+              {
+                "nodes": [
+                  0,
+                  3,
+                  4,
+                  0
+                ],
+                "vehicle": 1
+              }
+            ],
+            "status": "FEASIBLE"
+          }
+        },
+        "questions_used": 0,
+        "response": {
+          "status": "SUBMITTED"
+        },
+        "tools_used": 0
+      }
+    ],
+    "tool_invocations": 0
+  },
+  {
+    "assignment_id": "EVAL-04",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "decision": {
+      "action": "UPDATE",
+      "evidence": [
+        "DOC-04-RENEWED",
+        "DOC-04-SERVICE"
+      ],
+      "missing_slots": [],
+      "parameters": {
+        "close_C_s": 4800,
+        "service_A_s": 600
+      },
+      "plan": {
+        "routes": [
+          {
+            "nodes": [
+              0,
+              1,
+              2,
+              3,
+              0
+            ],
+            "vehicle": 0
+          },
+          {
+            "nodes": [
+              0,
+              4,
+              0
+            ],
+            "vehicle": 1
+          }
+        ],
+        "status": "FEASIBLE"
+      }
+    },
+    "episode": "EVAL-04",
+    "evaluation": {
+      "action_correctness": true,
+      "correct_justified_refusal": false,
+      "correct_numeric_plan": true,
+      "correct_proven_infeasibility": false,
+      "deferred_clarify": false,
+      "denominator": 1,
+      "distance_m": 13242,
+      "distance_regret_m": 1565,
+      "evidence_grounding": true,
+      "feasibility": true,
+      "independent_outcome_correct": true,
+      "invalid_release_provenance": false,
+      "optional_questions": 0,
+      "reference_outcome": "FEASIBLE_PLAN",
+      "unauthorized_questions": 0,
+      "unnecessary_questions": 0,
+      "unnecessary_refusal": false,
+      "useful_I2": true,
+      "useful_I3": true
+    },
+    "model_responses": 2,
+    "original_model_content_sha256": "34f947b7c93289ee2b59764b1b528a42413132448fd6f76f2dd28cdc16463754",
+    "questions": 0,
+    "replay": {
+      "I2": {
+        "admitted": true,
+        "proposal_sha256": "ad399122522a2e489d1ffa17e63902e1df25ba6c344d34ef4914e9b26680e12b"
+      },
+      "I3": {
+        "admitted": true,
+        "proposal_sha256": "ad399122522a2e489d1ffa17e63902e1df25ba6c344d34ef4914e9b26680e12b"
+      },
+      "action_correctness": true,
+      "common_errors": [],
+      "grounding": true,
+      "infeasibility_certificate": null,
+      "proposal_sha256": "ad399122522a2e489d1ffa17e63902e1df25ba6c344d34ef4914e9b26680e12b",
+      "route_check": {
+        "distance_m": 13242,
+        "elapsed_vehicle_seconds": 3886,
+        "travel_seconds": 2386,
+        "valid": true,
+        "violations": []
+      },
+      "state_I2": {
+        "action": "UPDATE",
+        "evidence": [
+          "DOC-04-RENEWED",
+          "DOC-04-SERVICE"
+        ],
+        "missing_slots": [],
+        "parameters": {
+          "close_C_s": 4800,
+          "service_A_s": 600
+        },
+        "plan": {
+          "routes": [
+            {
+              "nodes": [
+                0,
+                1,
+                2,
+                3,
+                0
+              ],
+              "vehicle": 0
+            },
+            {
+              "nodes": [
+                0,
+                4,
+                0
+              ],
+              "vehicle": 1
+            }
+          ],
+          "status": "FEASIBLE"
+        }
+      },
+      "state_I3": {
+        "action": "UPDATE",
+        "evidence": [
+          "DOC-04-RENEWED",
+          "DOC-04-SERVICE"
+        ],
+        "missing_slots": [],
+        "parameters": {
+          "close_C_s": 4800,
+          "service_A_s": 600
+        },
+        "plan": {
+          "routes": [
+            {
+              "nodes": [
+                0,
+                1,
+                2,
+                3,
+                0
+              ],
+              "vehicle": 0
+            },
+            {
+              "nodes": [
+                0,
+                4,
+                0
+              ],
+              "vehicle": 1
+            }
+          ],
+          "status": "FEASIBLE"
+        }
+      },
+      "transcript_sha256": "d90f57722da976d7965bdd36fcdf60bc31dd6bae487b6d82e710d081dceffb21"
+    },
+    "route": "openai",
+    "source_result_member_sha256": "ae1dc90dca03f6e8fea8dad66539fe8361eb8e33bd9afc5975000790f80ef65d",
+    "source_trace_member": "EVAL-04/trace.jsonl",
+    "source_trace_sha256": "d90f57722da976d7965bdd36fcdf60bc31dd6bae487b6d82e710d081dceffb21",
+    "status": "completed",
+    "steps": [
+      {
+        "action": "CALL_TOOL",
+        "arguments": {
+          "arguments": {
+            "slot": "close_C_s"
+          },
+          "tool": "lookup_snapshot"
+        },
+        "questions_used": 0,
+        "response": {
+          "records": [
+            {
+              "assertion_kind": "booking_acceptance",
+              "authority": "confirmed",
+              "available_at": 180,
+              "channel": "tool",
+              "effective_from": 210,
+              "effective_to": 260,
+              "entity": "BOOKING-GROUP-04",
+              "id": "DOC-04-RENEWED",
+              "issuer_role": "receiving_manager",
+              "owner": "receiver",
+              "precision": "confirmed",
+              "scope": "PADUA-RUN-04",
+              "slot": "close_C_s",
+              "source_document": "DOC-04-RENEWED",
+              "supersedes": [],
+              "text": "Receiving desk: unloading must be finished by 09:20. This sheet covers the booking named in the header.",
+              "value": 4800,
+              "verified": true
+            }
+          ],
+          "status": "RECORDS_RELEASED"
+        },
+        "tools_used": 1
+      },
+      {
+        "action": "FINAL",
+        "arguments": {
+          "action": "UPDATE",
+          "evidence": [
+            "DOC-04-RENEWED",
+            "DOC-04-SERVICE"
+          ],
+          "missing_slots": [],
+          "parameters": {
+            "close_C_s": 4800,
+            "service_A_s": 600
+          },
+          "plan": {
+            "routes": [
+              {
+                "nodes": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  0
+                ],
+                "vehicle": 0
+              },
+              {
+                "nodes": [
+                  0,
+                  4,
+                  0
+                ],
+                "vehicle": 1
+              }
+            ],
+            "status": "FEASIBLE"
+          }
+        },
+        "questions_used": 0,
+        "response": {
+          "status": "SUBMITTED"
+        },
+        "tools_used": 1
+      }
+    ],
+    "tool_invocations": 1
+  },
+  {
+    "assignment_id": "EVAL-05",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "decision": {
+      "action": "UPDATE",
+      "evidence": [
+        "DOC-05-V3",
+        "DOC-05-SERVICE"
+      ],
+      "missing_slots": [],
+      "parameters": {
+        "load_D_kg": 40,
+        "service_B_s": 540
+      },
+      "plan": {
+        "routes": [
+          {
+            "nodes": [
+              0,
+              1,
+              2,
+              3,
+              0
+            ],
+            "vehicle": 0
+          },
+          {
+            "nodes": [
+              0,
+              4,
+              0
+            ],
+            "vehicle": 1
+          }
+        ],
+        "status": "FEASIBLE"
+      }
+    },
+    "episode": "EVAL-05",
+    "evaluation": {
+      "action_correctness": true,
+      "correct_justified_refusal": false,
+      "correct_numeric_plan": true,
+      "correct_proven_infeasibility": false,
+      "deferred_clarify": false,
+      "denominator": 1,
+      "distance_m": 12261,
+      "distance_regret_m": 1704,
+      "evidence_grounding": true,
+      "feasibility": true,
+      "independent_outcome_correct": true,
+      "invalid_release_provenance": false,
+      "optional_questions": 0,
+      "reference_outcome": "FEASIBLE_PLAN",
+      "unauthorized_questions": 0,
+      "unnecessary_questions": 0,
+      "unnecessary_refusal": false,
+      "useful_I2": true,
+      "useful_I3": true
+    },
+    "model_responses": 1,
+    "original_model_content_sha256": "b12184b5c2c8c4797b83d4e189d71ccf99814b88ab45d259673ed05cb7e02117",
+    "questions": 0,
+    "replay": {
+      "I2": {
+        "admitted": true,
+        "proposal_sha256": "ebee547035831acaeb3b1e51285e4fe83461f6233dfeadaf530314fa13841338"
+      },
+      "I3": {
+        "admitted": true,
+        "proposal_sha256": "ebee547035831acaeb3b1e51285e4fe83461f6233dfeadaf530314fa13841338"
+      },
+      "action_correctness": true,
+      "common_errors": [],
+      "grounding": true,
+      "infeasibility_certificate": null,
+      "proposal_sha256": "ebee547035831acaeb3b1e51285e4fe83461f6233dfeadaf530314fa13841338",
+      "route_check": {
+        "distance_m": 12261,
+        "elapsed_vehicle_seconds": 3650,
+        "travel_seconds": 2210,
+        "valid": true,
+        "violations": []
+      },
+      "state_I2": {
+        "action": "UPDATE",
+        "evidence": [
+          "DOC-05-V3",
+          "DOC-05-SERVICE"
+        ],
+        "missing_slots": [],
+        "parameters": {
+          "load_D_kg": 40,
+          "service_B_s": 540
+        },
+        "plan": {
+          "routes": [
+            {
+              "nodes": [
+                0,
+                1,
+                2,
+                3,
+                0
+              ],
+              "vehicle": 0
+            },
+            {
+              "nodes": [
+                0,
+                4,
+                0
+              ],
+              "vehicle": 1
+            }
+          ],
+          "status": "FEASIBLE"
+        }
+      },
+      "state_I3": {
+        "action": "UPDATE",
+        "evidence": [
+          "DOC-05-V3",
+          "DOC-05-SERVICE"
+        ],
+        "missing_slots": [],
+        "parameters": {
+          "load_D_kg": 40,
+          "service_B_s": 540
+        },
+        "plan": {
+          "routes": [
+            {
+              "nodes": [
+                0,
+                1,
+                2,
+                3,
+                0
+              ],
+              "vehicle": 0
+            },
+            {
+              "nodes": [
+                0,
+                4,
+                0
+              ],
+              "vehicle": 1
+            }
+          ],
+          "status": "FEASIBLE"
+        }
+      },
+      "transcript_sha256": "43768114f941259bb8af7a0764178420c787f333a9b0b80ee6e5d60457f4d3c5"
+    },
+    "route": "openai",
+    "source_result_member_sha256": "ae1dc90dca03f6e8fea8dad66539fe8361eb8e33bd9afc5975000790f80ef65d",
+    "source_trace_member": "EVAL-05/trace.jsonl",
+    "source_trace_sha256": "43768114f941259bb8af7a0764178420c787f333a9b0b80ee6e5d60457f4d3c5",
+    "status": "completed",
+    "steps": [
+      {
+        "action": "FINAL",
+        "arguments": {
+          "action": "UPDATE",
+          "evidence": [
+            "DOC-05-V3",
+            "DOC-05-SERVICE"
+          ],
+          "missing_slots": [],
+          "parameters": {
+            "load_D_kg": 40,
+            "service_B_s": 540
+          },
+          "plan": {
+            "routes": [
+              {
+                "nodes": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  0
+                ],
+                "vehicle": 0
+              },
+              {
+                "nodes": [
+                  0,
+                  4,
+                  0
+                ],
+                "vehicle": 1
+              }
+            ],
+            "status": "FEASIBLE"
+          }
+        },
+        "questions_used": 0,
+        "response": {
+          "status": "SUBMITTED"
+        },
+        "tools_used": 0
+      }
+    ],
+    "tool_invocations": 0
+  },
+  {
+    "assignment_id": "EVAL-06",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "decision": {
+      "action": "UPDATE",
+      "evidence": [
+        "DOC-06-TODAY",
+        "DOC-06-ACCEPT"
+      ],
+      "missing_slots": [],
+      "parameters": {
+        "close_A_s": 5400,
+        "load_B_kg": 45
+      },
+      "plan": {
+        "routes": [
+          {
+            "nodes": [
+              0,
+              1,
+              2,
+              3,
+              0
+            ],
+            "vehicle": 0
+          },
+          {
+            "nodes": [
+              0,
+              4,
+              0
+            ],
+            "vehicle": 1
+          }
+        ],
+        "status": "FEASIBLE"
+      }
+    },
+    "episode": "EVAL-06",
+    "evaluation": {
+      "action_correctness": true,
+      "correct_justified_refusal": false,
+      "correct_numeric_plan": true,
+      "correct_proven_infeasibility": false,
+      "deferred_clarify": false,
+      "denominator": 1,
+      "distance_m": 23179,
+      "distance_regret_m": 8400,
+      "evidence_grounding": true,
+      "feasibility": true,
+      "independent_outcome_correct": true,
+      "invalid_release_provenance": false,
+      "optional_questions": 0,
+      "reference_outcome": "FEASIBLE_PLAN",
+      "unauthorized_questions": 0,
+      "unnecessary_questions": 0,
+      "unnecessary_refusal": false,
+      "useful_I2": true,
+      "useful_I3": true
+    },
+    "model_responses": 1,
+    "original_model_content_sha256": "9d679bd40fa6a76f1d5ed5094c4adc1e3e84942dd923f1dc522dcf83e551d1c8",
+    "questions": 0,
+    "replay": {
+      "I2": {
+        "admitted": true,
+        "proposal_sha256": "ee3f84cac1c072535fd1af0118f31286e9ca6fbf6fdffc379b5daf936da710f8"
+      },
+      "I3": {
+        "admitted": true,
+        "proposal_sha256": "ee3f84cac1c072535fd1af0118f31286e9ca6fbf6fdffc379b5daf936da710f8"
+      },
+      "action_correctness": true,
+      "common_errors": [],
+      "grounding": true,
+      "infeasibility_certificate": null,
+      "proposal_sha256": "ee3f84cac1c072535fd1af0118f31286e9ca6fbf6fdffc379b5daf936da710f8",
+      "route_check": {
+        "distance_m": 23179,
+        "elapsed_vehicle_seconds": 5376,
+        "travel_seconds": 4176,
+        "valid": true,
+        "violations": []
+      },
+      "state_I2": {
+        "action": "UPDATE",
+        "evidence": [
+          "DOC-06-TODAY",
+          "DOC-06-ACCEPT"
+        ],
+        "missing_slots": [],
+        "parameters": {
+          "close_A_s": 5400,
+          "load_B_kg": 45
+        },
+        "plan": {
+          "routes": [
+            {
+              "nodes": [
+                0,
+                1,
+                2,
+                3,
+                0
+              ],
+              "vehicle": 0
+            },
+            {
+              "nodes": [
+                0,
+                4,
+                0
+              ],
+              "vehicle": 1
+            }
+          ],
+          "status": "FEASIBLE"
+        }
+      },
+      "state_I3": {
+        "action": "UPDATE",
+        "evidence": [
+          "DOC-06-TODAY",
+          "DOC-06-ACCEPT"
+        ],
+        "missing_slots": [],
+        "parameters": {
+          "close_A_s": 5400,
+          "load_B_kg": 45
+        },
+        "plan": {
+          "routes": [
+            {
+              "nodes": [
+                0,
+                1,
+                2,
+                3,
+                0
+              ],
+              "vehicle": 0
+            },
+            {
+              "nodes": [
+                0,
+                4,
+                0
+              ],
+              "vehicle": 1
+            }
+          ],
+          "status": "FEASIBLE"
+        }
+      },
+      "transcript_sha256": "aaf4a90558e4beb56d4b7bcacfbbbdbbb1a56376f5af7cb073851c5edca97b08"
+    },
+    "route": "openai",
+    "source_result_member_sha256": "ae1dc90dca03f6e8fea8dad66539fe8361eb8e33bd9afc5975000790f80ef65d",
+    "source_trace_member": "EVAL-06/trace.jsonl",
+    "source_trace_sha256": "aaf4a90558e4beb56d4b7bcacfbbbdbbb1a56376f5af7cb073851c5edca97b08",
+    "status": "completed",
+    "steps": [
+      {
+        "action": "FINAL",
+        "arguments": {
+          "action": "UPDATE",
+          "evidence": [
+            "DOC-06-TODAY",
+            "DOC-06-ACCEPT"
+          ],
+          "missing_slots": [],
+          "parameters": {
+            "close_A_s": 5400,
+            "load_B_kg": 45
+          },
+          "plan": {
+            "routes": [
+              {
+                "nodes": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  0
+                ],
+                "vehicle": 0
+              },
+              {
+                "nodes": [
+                  0,
+                  4,
+                  0
+                ],
+                "vehicle": 1
+              }
+            ],
+            "status": "FEASIBLE"
+          }
+        },
+        "questions_used": 0,
+        "response": {
+          "status": "SUBMITTED"
+        },
+        "tools_used": 0
+      }
+    ],
+    "tool_invocations": 0
+  },
+  {
+    "assignment_id": "EVAL-07",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "decision": {
+      "action": "INSUFFICIENT",
+      "evidence": [
+        "DOC-07-A-ACCEPT"
+      ],
+      "missing_slots": [
+        "close_D_s"
+      ],
+      "parameters": {},
+      "plan": null
+    },
+    "episode": "EVAL-07",
+    "evaluation": {
+      "action_correctness": null,
+      "correct_justified_refusal": true,
+      "correct_numeric_plan": false,
+      "correct_proven_infeasibility": false,
+      "deferred_clarify": false,
+      "denominator": 1,
+      "distance_m": null,
+      "distance_regret_m": null,
+      "evidence_grounding": null,
+      "feasibility": null,
+      "independent_outcome_correct": true,
+      "invalid_release_provenance": false,
+      "optional_questions": 0,
+      "reference_outcome": "INSUFFICIENT",
+      "unauthorized_questions": 0,
+      "unnecessary_questions": 0,
+      "unnecessary_refusal": false,
+      "useful_I2": true,
+      "useful_I3": true
+    },
+    "model_responses": 1,
+    "original_model_content_sha256": "77cec4a089f8b46c9227e3da42c5bf3673412c08b40c15047b03bb4b7cb816ac",
+    "questions": 0,
+    "replay": {
+      "I2": {
+        "admitted": true,
+        "proposal_sha256": "bff7aecf2f02f49de0fda97c843ce6cd2b41f56bc7e62467dbda4adc4dd0dfb7"
+      },
+      "I3": {
+        "admitted": true,
+        "proposal_sha256": "bff7aecf2f02f49de0fda97c843ce6cd2b41f56bc7e62467dbda4adc4dd0dfb7"
+      },
+      "action_correctness": null,
+      "common_errors": [],
+      "grounding": null,
+      "infeasibility_certificate": null,
+      "proposal_sha256": "bff7aecf2f02f49de0fda97c843ce6cd2b41f56bc7e62467dbda4adc4dd0dfb7",
+      "route_check": null,
+      "state_I2": null,
+      "state_I3": null,
+      "transcript_sha256": "2146c569df35600b1e4d33db49c3b48e9d5438944ceec1b84c837210ffb4113b"
+    },
+    "route": "openai",
+    "source_result_member_sha256": "ae1dc90dca03f6e8fea8dad66539fe8361eb8e33bd9afc5975000790f80ef65d",
+    "source_trace_member": "EVAL-07/trace.jsonl",
+    "source_trace_sha256": "2146c569df35600b1e4d33db49c3b48e9d5438944ceec1b84c837210ffb4113b",
+    "status": "completed",
+    "steps": [
+      {
+        "action": "FINAL",
+        "arguments": {
+          "action": "INSUFFICIENT",
+          "evidence": [
+            "DOC-07-A-ACCEPT"
+          ],
+          "missing_slots": [
+            "close_D_s"
+          ],
+          "parameters": {},
+          "plan": null
+        },
+        "questions_used": 0,
+        "response": {
+          "status": "SUBMITTED"
+        },
+        "tools_used": 0
+      }
+    ],
+    "tool_invocations": 0
+  },
+  {
+    "assignment_id": "EVAL-08",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "decision": {
+      "action": "INSUFFICIENT",
+      "evidence": [
+        "DOC-08-MASS-A",
+        "DOC-08-MASS-B"
+      ],
+      "missing_slots": [
+        "vehicle_capacities_kg"
+      ],
+      "parameters": {},
+      "plan": null
+    },
+    "episode": "EVAL-08",
+    "evaluation": {
+      "action_correctness": null,
+      "correct_justified_refusal": false,
+      "correct_numeric_plan": false,
+      "correct_proven_infeasibility": false,
+      "deferred_clarify": false,
+      "denominator": 1,
+      "distance_m": null,
+      "distance_regret_m": null,
+      "evidence_grounding": null,
+      "feasibility": null,
+      "independent_outcome_correct": false,
+      "invalid_release_provenance": false,
+      "optional_questions": 0,
+      "reference_outcome": "INFEASIBLE",
+      "unauthorized_questions": 0,
+      "unnecessary_questions": 0,
+      "unnecessary_refusal": false,
+      "useful_I2": false,
+      "useful_I3": false
+    },
+    "model_responses": 1,
+    "original_model_content_sha256": "fcc1247ae7eebfde0b315c705e40b172238d3e3849203aa14119339a48d68f27",
+    "questions": 0,
+    "replay": {
+      "I2": {
+        "admitted": false,
+        "proposal_sha256": "35accd93047765cd3bf53f00420e6c9f91a42e6aac1e611968f7b5f80ddf5bf3"
+      },
+      "I3": {
+        "admitted": false,
+        "proposal_sha256": "35accd93047765cd3bf53f00420e6c9f91a42e6aac1e611968f7b5f80ddf5bf3"
+      },
+      "action_correctness": null,
+      "common_errors": [
+        "missing_slot_closure",
+        "unexhausted_authoritative_path"
+      ],
+      "grounding": null,
+      "infeasibility_certificate": null,
+      "proposal_sha256": "35accd93047765cd3bf53f00420e6c9f91a42e6aac1e611968f7b5f80ddf5bf3",
+      "route_check": null,
+      "state_I2": null,
+      "state_I3": null,
+      "transcript_sha256": "f45b1873dc37a801ee22f99eb4e49eaffd4660d1b38df7706a79bc9ce67d8fa4"
+    },
+    "route": "openai",
+    "source_result_member_sha256": "ae1dc90dca03f6e8fea8dad66539fe8361eb8e33bd9afc5975000790f80ef65d",
+    "source_trace_member": "EVAL-08/trace.jsonl",
+    "source_trace_sha256": "f45b1873dc37a801ee22f99eb4e49eaffd4660d1b38df7706a79bc9ce67d8fa4",
+    "status": "completed",
+    "steps": [
+      {
+        "action": "FINAL",
+        "arguments": {
+          "action": "INSUFFICIENT",
+          "evidence": [
+            "DOC-08-MASS-A",
+            "DOC-08-MASS-B"
+          ],
+          "missing_slots": [
+            "vehicle_capacities_kg"
+          ],
+          "parameters": {},
+          "plan": null
+        },
+        "questions_used": 0,
+        "response": {
+          "status": "SUBMITTED"
+        },
+        "tools_used": 0
+      }
+    ],
+    "tool_invocations": 0
+  },
+  {
+    "assignment_id": "EVAL-09",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "decision": {
+      "action": "UPDATE",
+      "evidence": [
+        "DOC-09-SERVICE",
+        "DOC-09-FINISH"
+      ],
+      "missing_slots": [],
+      "parameters": {
+        "close_A_s": 660,
+        "service_A_s": 600
+      },
+      "plan": {
+        "routes": [
+          {
+            "nodes": [
+              0,
+              1,
+              2,
+              3,
+              0
+            ],
+            "vehicle": 0
+          },
+          {
+            "nodes": [
+              0,
+              4,
+              0
+            ],
+            "vehicle": 1
+          }
+        ],
+        "status": "FEASIBLE"
+      }
+    },
+    "episode": "EVAL-09",
+    "evaluation": {
+      "action_correctness": true,
+      "correct_justified_refusal": false,
+      "correct_numeric_plan": false,
+      "correct_proven_infeasibility": false,
+      "deferred_clarify": false,
+      "denominator": 1,
+      "distance_m": null,
+      "distance_regret_m": null,
+      "evidence_grounding": true,
+      "feasibility": false,
+      "independent_outcome_correct": false,
+      "invalid_release_provenance": false,
+      "optional_questions": 0,
+      "reference_outcome": "INFEASIBLE",
+      "unauthorized_questions": 0,
+      "unnecessary_questions": 0,
+      "unnecessary_refusal": false,
+      "useful_I2": false,
+      "useful_I3": false
+    },
+    "model_responses": 1,
+    "original_model_content_sha256": "74d1328d4b35d9f13dc292d81933c932d302f68d24e0ffa7eeb58295c58b22c5",
+    "questions": 0,
+    "replay": {
+      "I2": {
+        "admitted": false,
+        "proposal_sha256": "87a1fd935ae97fe6eaf4b9b856eb0257970b15957fbcf273b5829fe7f583ac1b"
+      },
+      "I3": {
+        "admitted": false,
+        "proposal_sha256": "87a1fd935ae97fe6eaf4b9b856eb0257970b15957fbcf273b5829fe7f583ac1b"
+      },
+      "action_correctness": true,
+      "common_errors": [
+        "route_not_feasible"
+      ],
+      "grounding": true,
+      "infeasibility_certificate": null,
+      "proposal_sha256": "87a1fd935ae97fe6eaf4b9b856eb0257970b15957fbcf273b5829fe7f583ac1b",
+      "route_check": {
+        "distance_m": 16820,
+        "elapsed_vehicle_seconds": 4531,
+        "travel_seconds": 3031,
+        "valid": false,
+        "violations": [
+          "finish_after_close:1"
+        ]
+      },
+      "state_I2": null,
+      "state_I3": null,
+      "transcript_sha256": "4037899d9740085e05b36c4d4221c7acff41387312614821cf483d2e96abd34b"
+    },
+    "route": "openai",
+    "source_result_member_sha256": "ae1dc90dca03f6e8fea8dad66539fe8361eb8e33bd9afc5975000790f80ef65d",
+    "source_trace_member": "EVAL-09/trace.jsonl",
+    "source_trace_sha256": "4037899d9740085e05b36c4d4221c7acff41387312614821cf483d2e96abd34b",
+    "status": "completed",
+    "steps": [
+      {
+        "action": "FINAL",
+        "arguments": {
+          "action": "UPDATE",
+          "evidence": [
+            "DOC-09-SERVICE",
+            "DOC-09-FINISH"
+          ],
+          "missing_slots": [],
+          "parameters": {
+            "close_A_s": 660,
+            "service_A_s": 600
+          },
+          "plan": {
+            "routes": [
+              {
+                "nodes": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  0
+                ],
+                "vehicle": 0
+              },
+              {
+                "nodes": [
+                  0,
+                  4,
+                  0
+                ],
+                "vehicle": 1
+              }
+            ],
+            "status": "FEASIBLE"
+          }
+        },
+        "questions_used": 0,
+        "response": {
+          "status": "SUBMITTED"
+        },
+        "tools_used": 0
+      }
+    ],
+    "tool_invocations": 0
+  },
+  {
+    "assignment_id": "EVAL-10",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "decision": {
+      "action": "UPDATE",
+      "evidence": [
+        "DOC-10-ALLOWANCE",
+        "DOC-10-WEIGHED"
+      ],
+      "missing_slots": [],
+      "parameters": {
+        "load_E_kg": 30,
+        "service_B_s": 360
+      },
+      "plan": {
+        "routes": [
+          {
+            "nodes": [
+              0,
+              1,
+              2,
+              3,
+              0
+            ],
+            "vehicle": 0
+          },
+          {
+            "nodes": [
+              0,
+              4,
+              5,
+              0
+            ],
+            "vehicle": 1
+          }
+        ],
+        "status": "FEASIBLE"
+      }
+    },
+    "episode": "EVAL-10",
+    "evaluation": {
+      "action_correctness": true,
+      "correct_justified_refusal": false,
+      "correct_numeric_plan": true,
+      "correct_proven_infeasibility": false,
+      "deferred_clarify": false,
+      "denominator": 1,
+      "distance_m": 20885,
+      "distance_regret_m": 3411,
+      "evidence_grounding": true,
+      "feasibility": true,
+      "independent_outcome_correct": true,
+      "invalid_release_provenance": false,
+      "optional_questions": 0,
+      "reference_outcome": "FEASIBLE_PLAN",
+      "unauthorized_questions": 0,
+      "unnecessary_questions": 0,
+      "unnecessary_refusal": false,
+      "useful_I2": true,
+      "useful_I3": true
+    },
+    "model_responses": 1,
+    "original_model_content_sha256": "a507fd1f3573aa6e4666ebeefe1dfa87d400cc238923f4441307c0102443dd9a",
+    "questions": 0,
+    "replay": {
+      "I2": {
+        "admitted": true,
+        "proposal_sha256": "f6b5e6ec7454df991bf440fd265b3ec051e4bc74ad081af0d8320b7940de0484"
+      },
+      "I3": {
+        "admitted": true,
+        "proposal_sha256": "f6b5e6ec7454df991bf440fd265b3ec051e4bc74ad081af0d8320b7940de0484"
+      },
+      "action_correctness": true,
+      "common_errors": [],
+      "grounding": true,
+      "infeasibility_certificate": null,
+      "proposal_sha256": "f6b5e6ec7454df991bf440fd265b3ec051e4bc74ad081af0d8320b7940de0484",
+      "route_check": {
+        "distance_m": 20885,
+        "elapsed_vehicle_seconds": 5323,
+        "travel_seconds": 3763,
+        "valid": true,
+        "violations": []
+      },
+      "state_I2": {
+        "action": "UPDATE",
+        "evidence": [
+          "DOC-10-ALLOWANCE",
+          "DOC-10-WEIGHED"
+        ],
+        "missing_slots": [],
+        "parameters": {
+          "load_E_kg": 30,
+          "service_B_s": 360
+        },
+        "plan": {
+          "routes": [
+            {
+              "nodes": [
+                0,
+                1,
+                2,
+                3,
+                0
+              ],
+              "vehicle": 0
+            },
+            {
+              "nodes": [
+                0,
+                4,
+                5,
+                0
+              ],
+              "vehicle": 1
+            }
+          ],
+          "status": "FEASIBLE"
+        }
+      },
+      "state_I3": {
+        "action": "UPDATE",
+        "evidence": [
+          "DOC-10-ALLOWANCE",
+          "DOC-10-WEIGHED"
+        ],
+        "missing_slots": [],
+        "parameters": {
+          "load_E_kg": 30,
+          "service_B_s": 360
+        },
+        "plan": {
+          "routes": [
+            {
+              "nodes": [
+                0,
+                1,
+                2,
+                3,
+                0
+              ],
+              "vehicle": 0
+            },
+            {
+              "nodes": [
+                0,
+                4,
+                5,
+                0
+              ],
+              "vehicle": 1
+            }
+          ],
+          "status": "FEASIBLE"
+        }
+      },
+      "transcript_sha256": "f04ad934b439a99d9cc49f365913719cd9731ff4dfb38f1be06bf2a8599ce976"
+    },
+    "route": "openai",
+    "source_result_member_sha256": "ae1dc90dca03f6e8fea8dad66539fe8361eb8e33bd9afc5975000790f80ef65d",
+    "source_trace_member": "EVAL-10/trace.jsonl",
+    "source_trace_sha256": "f04ad934b439a99d9cc49f365913719cd9731ff4dfb38f1be06bf2a8599ce976",
+    "status": "completed",
+    "steps": [
+      {
+        "action": "FINAL",
+        "arguments": {
+          "action": "UPDATE",
+          "evidence": [
+            "DOC-10-ALLOWANCE",
+            "DOC-10-WEIGHED"
+          ],
+          "missing_slots": [],
+          "parameters": {
+            "load_E_kg": 30,
+            "service_B_s": 360
+          },
+          "plan": {
+            "routes": [
+              {
+                "nodes": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  0
+                ],
+                "vehicle": 0
+              },
+              {
+                "nodes": [
+                  0,
+                  4,
+                  5,
+                  0
+                ],
+                "vehicle": 1
+              }
+            ],
+            "status": "FEASIBLE"
+          }
+        },
+        "questions_used": 0,
+        "response": {
+          "status": "SUBMITTED"
+        },
+        "tools_used": 0
+      }
+    ],
+    "tool_invocations": 0
+  },
+  {
+    "assignment_id": "EVAL-11",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "decision": {
+      "action": "UPDATE",
+      "evidence": [
+        "DOC-11-APPROACH",
+        "DOC-11-DEADLINE"
+      ],
+      "missing_slots": [],
+      "parameters": {
+        "close_D_s": 3600,
+        "travel_BD_s": 2400
+      },
+      "plan": {
+        "routes": [
+          {
+            "nodes": [
+              0,
+              1,
+              2,
+              0
+            ],
+            "vehicle": 0
+          },
+          {
+            "nodes": [
+              0,
+              4,
+              3,
+              0
+            ],
+            "vehicle": 1
+          }
+        ],
+        "status": "FEASIBLE"
+      }
+    },
+    "episode": "EVAL-11",
+    "evaluation": {
+      "action_correctness": true,
+      "correct_justified_refusal": false,
+      "correct_numeric_plan": true,
+      "correct_proven_infeasibility": false,
+      "deferred_clarify": false,
+      "denominator": 1,
+      "distance_m": 9428,
+      "distance_regret_m": 1925,
+      "evidence_grounding": true,
+      "feasibility": true,
+      "independent_outcome_correct": true,
+      "invalid_release_provenance": false,
+      "optional_questions": 0,
+      "reference_outcome": "FEASIBLE_PLAN",
+      "unauthorized_questions": 0,
+      "unnecessary_questions": 0,
+      "unnecessary_refusal": false,
+      "useful_I2": true,
+      "useful_I3": true
+    },
+    "model_responses": 2,
+    "original_model_content_sha256": "e6f933fa8c86aa7b0a5d7d96050480b1806cf6b07d345e837945196323cdb404",
+    "questions": 0,
+    "replay": {
+      "I2": {
+        "admitted": true,
+        "proposal_sha256": "2e309f524cf3b272192b2fcc677ae1e24270cb24df886ad109ec65563f9a6584"
+      },
+      "I3": {
+        "admitted": true,
+        "proposal_sha256": "2e309f524cf3b272192b2fcc677ae1e24270cb24df886ad109ec65563f9a6584"
+      },
+      "action_correctness": true,
+      "common_errors": [],
+      "grounding": true,
+      "infeasibility_certificate": null,
+      "proposal_sha256": "2e309f524cf3b272192b2fcc677ae1e24270cb24df886ad109ec65563f9a6584",
+      "route_check": {
+        "distance_m": 9428,
+        "elapsed_vehicle_seconds": 2899,
+        "travel_seconds": 1699,
+        "valid": true,
+        "violations": []
+      },
+      "state_I2": {
+        "action": "UPDATE",
+        "evidence": [
+          "DOC-11-APPROACH",
+          "DOC-11-DEADLINE"
+        ],
+        "missing_slots": [],
+        "parameters": {
+          "close_D_s": 3600,
+          "travel_BD_s": 2400
+        },
+        "plan": {
+          "routes": [
+            {
+              "nodes": [
+                0,
+                1,
+                2,
+                0
+              ],
+              "vehicle": 0
+            },
+            {
+              "nodes": [
+                0,
+                4,
+                3,
+                0
+              ],
+              "vehicle": 1
+            }
+          ],
+          "status": "FEASIBLE"
+        }
+      },
+      "state_I3": {
+        "action": "UPDATE",
+        "evidence": [
+          "DOC-11-APPROACH",
+          "DOC-11-DEADLINE"
+        ],
+        "missing_slots": [],
+        "parameters": {
+          "close_D_s": 3600,
+          "travel_BD_s": 2400
+        },
+        "plan": {
+          "routes": [
+            {
+              "nodes": [
+                0,
+                1,
+                2,
+                0
+              ],
+              "vehicle": 0
+            },
+            {
+              "nodes": [
+                0,
+                4,
+                3,
+                0
+              ],
+              "vehicle": 1
+            }
+          ],
+          "status": "FEASIBLE"
+        }
+      },
+      "transcript_sha256": "ac11f0dd7dd6633de08ee79fb0722758e528d328d2d2f102fc82da0385625a62"
+    },
+    "route": "openai",
+    "source_result_member_sha256": "ae1dc90dca03f6e8fea8dad66539fe8361eb8e33bd9afc5975000790f80ef65d",
+    "source_trace_member": "EVAL-11/trace.jsonl",
+    "source_trace_sha256": "ac11f0dd7dd6633de08ee79fb0722758e528d328d2d2f102fc82da0385625a62",
+    "status": "completed",
+    "steps": [
+      {
+        "action": "CALL_TOOL",
+        "arguments": {
+          "arguments": {
+            "slot": "travel_BD_s"
+          },
+          "tool": "lookup_snapshot"
+        },
+        "questions_used": 0,
+        "response": {
+          "records": [
+            {
+              "assertion_kind": "certified_fact",
+              "authority": "confirmed",
+              "available_at": 180,
+              "channel": "tool",
+              "effective_from": 210,
+              "effective_to": 260,
+              "entity": "BOOKING-GROUP-11",
+              "id": "DOC-11-APPROACH",
+              "issuer_role": "road_archive",
+              "owner": "road_archive",
+              "precision": "confirmed",
+              "scope": "PADUA-RUN-11",
+              "slot": "travel_BD_s",
+              "source_document": "DOC-11-APPROACH",
+              "supersedes": [],
+              "text": "Road archive: the directed approach travel time is 2400 seconds for the interval in the header. The reverse approach is a separate entry.",
+              "value": 2400,
+              "verified": true
+            }
+          ],
+          "status": "RECORDS_RELEASED"
+        },
+        "tools_used": 1
+      },
+      {
+        "action": "FINAL",
+        "arguments": {
+          "action": "UPDATE",
+          "evidence": [
+            "DOC-11-APPROACH",
+            "DOC-11-DEADLINE"
+          ],
+          "missing_slots": [],
+          "parameters": {
+            "close_D_s": 3600,
+            "travel_BD_s": 2400
+          },
+          "plan": {
+            "routes": [
+              {
+                "nodes": [
+                  0,
+                  1,
+                  2,
+                  0
+                ],
+                "vehicle": 0
+              },
+              {
+                "nodes": [
+                  0,
+                  4,
+                  3,
+                  0
+                ],
+                "vehicle": 1
+              }
+            ],
+            "status": "FEASIBLE"
+          }
+        },
+        "questions_used": 0,
+        "response": {
+          "status": "SUBMITTED"
+        },
+        "tools_used": 1
+      }
+    ],
+    "tool_invocations": 1
+  },
+  {
+    "assignment_id": "EVAL-12",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "decision": {
+      "action": "UPDATE",
+      "evidence": [
+        "DOC-12-WEIGHT",
+        "DOC-12-ALLOWANCE"
+      ],
+      "missing_slots": [],
+      "parameters": {
+        "load_D_kg": 50,
+        "service_C_s": 720
+      },
+      "plan": {
+        "routes": [
+          {
+            "nodes": [
+              0,
+              1,
+              2,
+              3,
+              0
+            ],
+            "vehicle": 0
+          },
+          {
+            "nodes": [
+              0,
+              4,
+              0
+            ],
+            "vehicle": 1
+          }
+        ],
+        "status": "FEASIBLE"
+      }
+    },
+    "episode": "EVAL-12",
+    "evaluation": {
+      "action_correctness": true,
+      "correct_justified_refusal": false,
+      "correct_numeric_plan": true,
+      "correct_proven_infeasibility": false,
+      "deferred_clarify": false,
+      "denominator": 1,
+      "distance_m": 20860,
+      "distance_regret_m": 8484,
+      "evidence_grounding": true,
+      "feasibility": true,
+      "independent_outcome_correct": true,
+      "invalid_release_provenance": false,
+      "optional_questions": 0,
+      "reference_outcome": "FEASIBLE_PLAN",
+      "unauthorized_questions": 0,
+      "unnecessary_questions": 0,
+      "unnecessary_refusal": false,
+      "useful_I2": true,
+      "useful_I3": true
+    },
+    "model_responses": 3,
+    "original_model_content_sha256": "f2193a67c34e135a5061f2c508334a3115447a27d1c550a67021f0c894564ac8",
+    "questions": 1,
+    "replay": {
+      "I2": {
+        "admitted": true,
+        "proposal_sha256": "279ae6f20c047ffb058fcdca021f204a058c4e37619832bf654c00c8bcfe90b8"
+      },
+      "I3": {
+        "admitted": true,
+        "proposal_sha256": "279ae6f20c047ffb058fcdca021f204a058c4e37619832bf654c00c8bcfe90b8"
+      },
+      "action_correctness": true,
+      "common_errors": [],
+      "grounding": true,
+      "infeasibility_certificate": null,
+      "proposal_sha256": "279ae6f20c047ffb058fcdca021f204a058c4e37619832bf654c00c8bcfe90b8",
+      "route_check": {
+        "distance_m": 20860,
+        "elapsed_vehicle_seconds": 5377,
+        "travel_seconds": 3757,
+        "valid": true,
+        "violations": []
+      },
+      "state_I2": {
+        "action": "UPDATE",
+        "evidence": [
+          "DOC-12-WEIGHT",
+          "DOC-12-ALLOWANCE"
+        ],
+        "missing_slots": [],
+        "parameters": {
+          "load_D_kg": 50,
+          "service_C_s": 720
+        },
+        "plan": {
+          "routes": [
+            {
+              "nodes": [
+                0,
+                1,
+                2,
+                3,
+                0
+              ],
+              "vehicle": 0
+            },
+            {
+              "nodes": [
+                0,
+                4,
+                0
+              ],
+              "vehicle": 1
+            }
+          ],
+          "status": "FEASIBLE"
+        }
+      },
+      "state_I3": {
+        "action": "UPDATE",
+        "evidence": [
+          "DOC-12-WEIGHT",
+          "DOC-12-ALLOWANCE"
+        ],
+        "missing_slots": [],
+        "parameters": {
+          "load_D_kg": 50,
+          "service_C_s": 720
+        },
+        "plan": {
+          "routes": [
+            {
+              "nodes": [
+                0,
+                1,
+                2,
+                3,
+                0
+              ],
+              "vehicle": 0
+            },
+            {
+              "nodes": [
+                0,
+                4,
+                0
+              ],
+              "vehicle": 1
+            }
+          ],
+          "status": "FEASIBLE"
+        }
+      },
+      "transcript_sha256": "8cec9159c1e3c7d8466dbe1bde2daadb5ea07d22e4d86198ca18a99d3d755a24"
+    },
+    "route": "openai",
+    "source_result_member_sha256": "ae1dc90dca03f6e8fea8dad66539fe8361eb8e33bd9afc5975000790f80ef65d",
+    "source_trace_member": "EVAL-12/trace.jsonl",
+    "source_trace_sha256": "8cec9159c1e3c7d8466dbe1bde2daadb5ea07d22e4d86198ca18a99d3d755a24",
+    "status": "completed",
+    "steps": [
+      {
+        "action": "CALL_TOOL",
+        "arguments": {
+          "arguments": {
+            "slot": "service_C_s"
+          },
+          "tool": "lookup_snapshot"
+        },
+        "questions_used": 0,
+        "response": {
+          "status": "PUBLIC_CHANNEL_UNAVAILABLE"
+        },
+        "tools_used": 1
+      },
+      {
+        "action": "ASK_USER",
+        "arguments": [
+          {
+            "entity": "BOOKING-GROUP-12",
+            "field": "service_C_s",
+            "kind": "indispensable",
+            "owner": "dispatcher",
+            "scope": "PADUA-RUN-12",
+            "wording": "Please provide the certified dispatcher planning allowance for service at C, in seconds, for BOOKING-GROUP-12 / PADUA-RUN-12."
+          }
+        ],
+        "questions_used": 1,
+        "response": [
+          {
+            "records": [
+              {
+                "assertion_kind": "certified_fact",
+                "authority": "confirmed",
+                "available_at": 180,
+                "channel": "user",
+                "effective_from": 210,
+                "effective_to": 260,
+                "entity": "BOOKING-GROUP-12",
+                "id": "DOC-12-ALLOWANCE",
+                "issuer_role": "dispatcher",
+                "owner": "dispatcher",
+                "precision": "confirmed",
+                "scope": "PADUA-RUN-12",
+                "slot": "service_C_s",
+                "source_document": "DOC-12-ALLOWANCE",
+                "supersedes": [],
+                "text": "Dispatch: reserve 12 minutes for service on this booked delivery. This is the planning allowance, including paperwork.",
+                "value": 720,
+                "verified": true
+              }
+            ],
+            "status": "RECORDS_RELEASED"
+          }
+        ],
+        "tools_used": 1
+      },
+      {
+        "action": "FINAL",
+        "arguments": {
+          "action": "UPDATE",
+          "evidence": [
+            "DOC-12-WEIGHT",
+            "DOC-12-ALLOWANCE"
+          ],
+          "missing_slots": [],
+          "parameters": {
+            "load_D_kg": 50,
+            "service_C_s": 720
+          },
+          "plan": {
+            "routes": [
+              {
+                "nodes": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  0
+                ],
+                "vehicle": 0
+              },
+              {
+                "nodes": [
+                  0,
+                  4,
+                  0
+                ],
+                "vehicle": 1
+              }
+            ],
+            "status": "FEASIBLE"
+          }
+        },
+        "questions_used": 1,
+        "response": {
+          "status": "SUBMITTED"
+        },
+        "tools_used": 1
+      }
+    ],
+    "tool_invocations": 1
+  },
+  {
+    "assignment_id": "EVAL-13",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "decision": {
+      "action": "INSUFFICIENT",
+      "evidence": [
+        "DOC-13-RECEIVER-ONE and DOC-13-RECEIVER-TWO are verified receiving-manager booking acceptances for the same entity, scope, and effective period, but specify conflicting close_A_s values (120 and 5400) and neither supersedes the other.",
+        "The receiver channel and user channel for close_A_s are publicly marked unavailable; the attempted user question was NOT_AUTHORIZED. The operative booking deadline therefore cannot be established through an accessible authoritative channel.",
+        "DOC-13-ALLOWANCE verifies service_B_s=480, but an unresolved indispensable slot prevents committing a complete plan."
+      ],
+      "missing_slots": [
+        "close_A_s"
+      ],
+      "parameters": {},
+      "plan": null
+    },
+    "episode": "EVAL-13",
+    "evaluation": {
+      "action_correctness": null,
+      "correct_justified_refusal": true,
+      "correct_numeric_plan": false,
+      "correct_proven_infeasibility": false,
+      "deferred_clarify": false,
+      "denominator": 1,
+      "distance_m": null,
+      "distance_regret_m": null,
+      "evidence_grounding": null,
+      "feasibility": null,
+      "independent_outcome_correct": true,
+      "invalid_release_provenance": false,
+      "optional_questions": 0,
+      "reference_outcome": "INSUFFICIENT",
+      "unauthorized_questions": 1,
+      "unnecessary_questions": 0,
+      "unnecessary_refusal": false,
+      "useful_I2": true,
+      "useful_I3": true
+    },
+    "model_responses": 2,
+    "original_model_content_sha256": "d66a36b78c4a665ef9927f274b081922a2479fdf02771347f331c77c1077dca5",
+    "questions": 1,
+    "replay": {
+      "I2": {
+        "admitted": true,
+        "proposal_sha256": "219236535dad579a2b97efc37ca02697ee68e98f7e1865a917d4e4dfa86d7c62"
+      },
+      "I3": {
+        "admitted": true,
+        "proposal_sha256": "219236535dad579a2b97efc37ca02697ee68e98f7e1865a917d4e4dfa86d7c62"
+      },
+      "action_correctness": null,
+      "common_errors": [],
+      "grounding": null,
+      "infeasibility_certificate": null,
+      "proposal_sha256": "219236535dad579a2b97efc37ca02697ee68e98f7e1865a917d4e4dfa86d7c62",
+      "route_check": null,
+      "state_I2": null,
+      "state_I3": null,
+      "transcript_sha256": "c89ac8ccd2b8049930eb9cef6c4a9b4af747c5fb43e62da398c3e2b85acf0d84"
+    },
+    "route": "openai",
+    "source_result_member_sha256": "ae1dc90dca03f6e8fea8dad66539fe8361eb8e33bd9afc5975000790f80ef65d",
+    "source_trace_member": "EVAL-13/trace.jsonl",
+    "source_trace_sha256": "c89ac8ccd2b8049930eb9cef6c4a9b4af747c5fb43e62da398c3e2b85acf0d84",
+    "status": "completed",
+    "steps": [
+      {
+        "action": "ASK_USER",
+        "arguments": [
+          {
+            "entity": "BOOKING-GROUP-13",
+            "field": "close_A_s",
+            "kind": "indispensable",
+            "owner": "receiver",
+            "scope": "PADUA-RUN-13",
+            "wording": "Which receiver booking sheet is the operative acceptance for PADUA-RUN-13, the 08:02 deadline (DOC-13-RECEIVER-ONE) or the 09:30 deadline (DOC-13-RECEIVER-TWO)? Please provide a verified receiving-manager confirmation identifying the applicable sheet or explicitly superseding one."
+          }
+        ],
+        "questions_used": 1,
+        "response": [
+          {
+            "status": "NOT_AUTHORIZED"
+          }
+        ],
+        "tools_used": 0
+      },
+      {
+        "action": "FINAL",
+        "arguments": {
+          "action": "INSUFFICIENT",
+          "evidence": [
+            "DOC-13-RECEIVER-ONE and DOC-13-RECEIVER-TWO are verified receiving-manager booking acceptances for the same entity, scope, and effective period, but specify conflicting close_A_s values (120 and 5400) and neither supersedes the other.",
+            "The receiver channel and user channel for close_A_s are publicly marked unavailable; the attempted user question was NOT_AUTHORIZED. The operative booking deadline therefore cannot be established through an accessible authoritative channel.",
+            "DOC-13-ALLOWANCE verifies service_B_s=480, but an unresolved indispensable slot prevents committing a complete plan."
+          ],
+          "missing_slots": [
+            "close_A_s"
+          ],
+          "parameters": {},
+          "plan": null
+        },
+        "questions_used": 1,
+        "response": {
+          "status": "SUBMITTED"
+        },
+        "tools_used": 0
+      }
+    ],
+    "tool_invocations": 0
+  },
+  {
+    "assignment_id": "EVAL-14",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "decision": {
+      "action": "RETAIN",
+      "evidence": [
+        "DOC-14-EXISTING-SERVICE",
+        "DOC-14-EXISTING-MASS"
+      ],
+      "missing_slots": [],
+      "parameters": {
+        "load_D_kg": 35,
+        "service_A_s": 300
+      },
+      "plan": {
+        "routes": [
+          {
+            "nodes": [
+              0,
+              1,
+              3,
+              2,
+              0
+            ],
+            "vehicle": 0
+          },
+          {
+            "nodes": [
+              0,
+              4,
+              0
+            ],
+            "vehicle": 1
+          }
+        ],
+        "status": "FEASIBLE"
+      }
+    },
+    "episode": "EVAL-14",
+    "evaluation": {
+      "action_correctness": true,
+      "correct_justified_refusal": false,
+      "correct_numeric_plan": true,
+      "correct_proven_infeasibility": false,
+      "deferred_clarify": false,
+      "denominator": 1,
+      "distance_m": 7140,
+      "distance_regret_m": 0,
+      "evidence_grounding": true,
+      "feasibility": true,
+      "independent_outcome_correct": true,
+      "invalid_release_provenance": false,
+      "optional_questions": 0,
+      "reference_outcome": "FEASIBLE_PLAN",
+      "unauthorized_questions": 0,
+      "unnecessary_questions": 0,
+      "unnecessary_refusal": false,
+      "useful_I2": true,
+      "useful_I3": true
+    },
+    "model_responses": 1,
+    "original_model_content_sha256": "5ff246ffeaf03460009c69180a6590652ef124afcf6b6429162adab76416c540",
+    "questions": 0,
+    "replay": {
+      "I2": {
+        "admitted": true,
+        "proposal_sha256": "e74c250e4a2f05f2147648d95dc8f03222390c8b933c382e209d2c06ac5b22a0"
+      },
+      "I3": {
+        "admitted": true,
+        "proposal_sha256": "e74c250e4a2f05f2147648d95dc8f03222390c8b933c382e209d2c06ac5b22a0"
+      },
+      "action_correctness": true,
+      "common_errors": [],
+      "grounding": true,
+      "infeasibility_certificate": null,
+      "proposal_sha256": "e74c250e4a2f05f2147648d95dc8f03222390c8b933c382e209d2c06ac5b22a0",
+      "route_check": {
+        "distance_m": 7140,
+        "elapsed_vehicle_seconds": 2488,
+        "travel_seconds": 1288,
+        "valid": true,
+        "violations": []
+      },
+      "state_I2": {
+        "action": "RETAIN",
+        "evidence": [
+          "DOC-14-EXISTING-SERVICE",
+          "DOC-14-EXISTING-MASS"
+        ],
+        "missing_slots": [],
+        "parameters": {
+          "load_D_kg": 35,
+          "service_A_s": 300
+        },
+        "plan": {
+          "routes": [
+            {
+              "nodes": [
+                0,
+                1,
+                3,
+                2,
+                0
+              ],
+              "vehicle": 0
+            },
+            {
+              "nodes": [
+                0,
+                4,
+                0
+              ],
+              "vehicle": 1
+            }
+          ],
+          "status": "FEASIBLE"
+        }
+      },
+      "state_I3": {
+        "action": "RETAIN",
+        "evidence": [
+          "DOC-14-EXISTING-SERVICE",
+          "DOC-14-EXISTING-MASS"
+        ],
+        "missing_slots": [],
+        "parameters": {
+          "load_D_kg": 35,
+          "service_A_s": 300
+        },
+        "plan": {
+          "routes": [
+            {
+              "nodes": [
+                0,
+                1,
+                3,
+                2,
+                0
+              ],
+              "vehicle": 0
+            },
+            {
+              "nodes": [
+                0,
+                4,
+                0
+              ],
+              "vehicle": 1
+            }
+          ],
+          "status": "FEASIBLE"
+        }
+      },
+      "transcript_sha256": "b83524ff2c3c0794275230d68bb3878c6d6b24bca8de4cd501b5c7f0bbf59bf9"
+    },
+    "route": "openai",
+    "source_result_member_sha256": "ae1dc90dca03f6e8fea8dad66539fe8361eb8e33bd9afc5975000790f80ef65d",
+    "source_trace_member": "EVAL-14/trace.jsonl",
+    "source_trace_sha256": "b83524ff2c3c0794275230d68bb3878c6d6b24bca8de4cd501b5c7f0bbf59bf9",
+    "status": "completed",
+    "steps": [
+      {
+        "action": "FINAL",
+        "arguments": {
+          "action": "RETAIN",
+          "evidence": [
+            "DOC-14-EXISTING-SERVICE",
+            "DOC-14-EXISTING-MASS"
+          ],
+          "missing_slots": [],
+          "parameters": {
+            "load_D_kg": 35,
+            "service_A_s": 300
+          },
+          "plan": {
+            "routes": [
+              {
+                "nodes": [
+                  0,
+                  1,
+                  3,
+                  2,
+                  0
+                ],
+                "vehicle": 0
+              },
+              {
+                "nodes": [
+                  0,
+                  4,
+                  0
+                ],
+                "vehicle": 1
+              }
+            ],
+            "status": "FEASIBLE"
+          }
+        },
+        "questions_used": 0,
+        "response": {
+          "status": "SUBMITTED"
+        },
+        "tools_used": 0
+      }
+    ],
+    "tool_invocations": 0
+  },
+  {
+    "assignment_id": "EVAL-15",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "decision": {
+      "action": "UPDATE",
+      "evidence": [
+        "DOC-15-GROSS-PALLET",
+        "DOC-15-UNLOADING"
+      ],
+      "missing_slots": [],
+      "parameters": {
+        "load_A_kg": 65,
+        "service_D_s": 660
+      },
+      "plan": {
+        "routes": [
+          {
+            "nodes": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "vehicle": 0
+          },
+          {
+            "nodes": [
+              0,
+              5,
+              0
+            ],
+            "vehicle": 1
+          }
+        ],
+        "status": "FEASIBLE"
+      }
+    },
+    "episode": "EVAL-15",
+    "evaluation": {
+      "action_correctness": true,
+      "correct_justified_refusal": false,
+      "correct_numeric_plan": false,
+      "correct_proven_infeasibility": false,
+      "deferred_clarify": false,
+      "denominator": 1,
+      "distance_m": null,
+      "distance_regret_m": null,
+      "evidence_grounding": true,
+      "feasibility": false,
+      "independent_outcome_correct": false,
+      "invalid_release_provenance": false,
+      "optional_questions": 0,
+      "reference_outcome": "FEASIBLE_PLAN",
+      "unauthorized_questions": 0,
+      "unnecessary_questions": 0,
+      "unnecessary_refusal": false,
+      "useful_I2": false,
+      "useful_I3": false
+    },
+    "model_responses": 1,
+    "original_model_content_sha256": "68df608bb67505320c3116144a4d79d752c4059ccb770cc0ae759f34396090d8",
+    "questions": 0,
+    "replay": {
+      "I2": {
+        "admitted": false,
+        "proposal_sha256": "fec0ca731b98b109be19eca21d5634ec379c491f7d09b15b82dddd1207441ff1"
+      },
+      "I3": {
+        "admitted": false,
+        "proposal_sha256": "fec0ca731b98b109be19eca21d5634ec379c491f7d09b15b82dddd1207441ff1"
+      },
+      "action_correctness": true,
+      "common_errors": [
+        "route_not_feasible"
+      ],
+      "grounding": true,
+      "infeasibility_certificate": null,
+      "proposal_sha256": "fec0ca731b98b109be19eca21d5634ec379c491f7d09b15b82dddd1207441ff1",
+      "route_check": {
+        "distance_m": 19499,
+        "elapsed_vehicle_seconds": 5372,
+        "travel_seconds": 3512,
+        "valid": false,
+        "violations": [
+          "remaining_payload_exceeded:0:150>100"
+        ]
+      },
+      "state_I2": null,
+      "state_I3": null,
+      "transcript_sha256": "cb9bb2dc44740b41a6378c9439388b17edb85ce84bd1ef495396cb300eecd130"
+    },
+    "route": "openai",
+    "source_result_member_sha256": "ae1dc90dca03f6e8fea8dad66539fe8361eb8e33bd9afc5975000790f80ef65d",
+    "source_trace_member": "EVAL-15/trace.jsonl",
+    "source_trace_sha256": "cb9bb2dc44740b41a6378c9439388b17edb85ce84bd1ef495396cb300eecd130",
+    "status": "completed",
+    "steps": [
+      {
+        "action": "FINAL",
+        "arguments": {
+          "action": "UPDATE",
+          "evidence": [
+            "DOC-15-GROSS-PALLET",
+            "DOC-15-UNLOADING"
+          ],
+          "missing_slots": [],
+          "parameters": {
+            "load_A_kg": 65,
+            "service_D_s": 660
+          },
+          "plan": {
+            "routes": [
+              {
+                "nodes": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  0
+                ],
+                "vehicle": 0
+              },
+              {
+                "nodes": [
+                  0,
+                  5,
+                  0
+                ],
+                "vehicle": 1
+              }
+            ],
+            "status": "FEASIBLE"
+          }
+        },
+        "questions_used": 0,
+        "response": {
+          "status": "SUBMITTED"
+        },
+        "tools_used": 0
+      }
+    ],
+    "tool_invocations": 0
+  },
+  {
+    "assignment_id": "EVAL-16",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "decision": {
+      "action": "UPDATE",
+      "evidence": [
+        "DOC-16-BAY-OPEN",
+        "DOC-16-C-COMPLETE"
+      ],
+      "missing_slots": [],
+      "parameters": {
+        "close_C_s": 4200,
+        "open_A_s": 2100
+      },
+      "plan": {
+        "routes": [
+          {
+            "nodes": [
+              0,
+              1,
+              2,
+              3,
+              0
+            ],
+            "vehicle": 0
+          },
+          {
+            "nodes": [
+              0,
+              4,
+              0
+            ],
+            "vehicle": 1
+          }
+        ],
+        "status": "FEASIBLE"
+      }
+    },
+    "episode": "EVAL-16",
+    "evaluation": {
+      "action_correctness": true,
+      "correct_justified_refusal": false,
+      "correct_numeric_plan": false,
+      "correct_proven_infeasibility": false,
+      "deferred_clarify": false,
+      "denominator": 1,
+      "distance_m": null,
+      "distance_regret_m": null,
+      "evidence_grounding": true,
+      "feasibility": false,
+      "independent_outcome_correct": false,
+      "invalid_release_provenance": false,
+      "optional_questions": 0,
+      "reference_outcome": "FEASIBLE_PLAN",
+      "unauthorized_questions": 0,
+      "unnecessary_questions": 0,
+      "unnecessary_refusal": false,
+      "useful_I2": false,
+      "useful_I3": false
+    },
+    "model_responses": 1,
+    "original_model_content_sha256": "5af7ddab930fbcd3597b31e4775afdb066c7f3704e4893046c8b1f0e4d7429d1",
+    "questions": 0,
+    "replay": {
+      "I2": {
+        "admitted": false,
+        "proposal_sha256": "0e0ff0d880b2b3e6dd63fd8490cda5bfb880985f1021305cec9102cf00b74725"
+      },
+      "I3": {
+        "admitted": false,
+        "proposal_sha256": "0e0ff0d880b2b3e6dd63fd8490cda5bfb880985f1021305cec9102cf00b74725"
+      },
+      "action_correctness": true,
+      "common_errors": [
+        "route_not_feasible"
+      ],
+      "grounding": true,
+      "infeasibility_certificate": null,
+      "proposal_sha256": "0e0ff0d880b2b3e6dd63fd8490cda5bfb880985f1021305cec9102cf00b74725",
+      "route_check": {
+        "distance_m": 13242,
+        "elapsed_vehicle_seconds": 5292,
+        "travel_seconds": 2386,
+        "valid": false,
+        "violations": [
+          "finish_after_close:3"
+        ]
+      },
+      "state_I2": null,
+      "state_I3": null,
+      "transcript_sha256": "2c33b57366aed11d67cd178ad9a8f6c343c1e582db9e6706d014d8e8949b895e"
+    },
+    "route": "openai",
+    "source_result_member_sha256": "ae1dc90dca03f6e8fea8dad66539fe8361eb8e33bd9afc5975000790f80ef65d",
+    "source_trace_member": "EVAL-16/trace.jsonl",
+    "source_trace_sha256": "2c33b57366aed11d67cd178ad9a8f6c343c1e582db9e6706d014d8e8949b895e",
+    "status": "completed",
+    "steps": [
+      {
+        "action": "FINAL",
+        "arguments": {
+          "action": "UPDATE",
+          "evidence": [
+            "DOC-16-BAY-OPEN",
+            "DOC-16-C-COMPLETE"
+          ],
+          "missing_slots": [],
+          "parameters": {
+            "close_C_s": 4200,
+            "open_A_s": 2100
+          },
+          "plan": {
+            "routes": [
+              {
+                "nodes": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  0
+                ],
+                "vehicle": 0
+              },
+              {
+                "nodes": [
+                  0,
+                  4,
+                  0
+                ],
+                "vehicle": 1
+              }
+            ],
+            "status": "FEASIBLE"
+          }
+        },
+        "questions_used": 0,
+        "response": {
+          "status": "SUBMITTED"
+        },
+        "tools_used": 0
+      }
+    ],
+    "tool_invocations": 0
+  },
+  {
+    "assignment_id": "EVAL-17",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "decision": {
+      "action": "INSUFFICIENT",
+      "evidence": [
+        "close_B_s: the only released candidate is DOC-17-DRIVER-PHOTO, issued by a driver and unverified; it does not meet the required receiving_manager booking_acceptance authority. The close_B_s channel is marked unavailable for both tool and user.",
+        "load_C_kg: DOC-17-MASS is verified and explicitly certifies 0.05 tonnes, i.e. 50 kg, but the required load_C_kg channel is marked unavailable for both tool and user, so the dispatcher cannot obtain the bound certified warehouse record through an accessible authoritative channel."
+      ],
+      "missing_slots": [
+        "close_B_s",
+        "load_C_kg"
+      ],
+      "parameters": {},
+      "plan": null
+    },
+    "episode": "EVAL-17",
+    "evaluation": {
+      "action_correctness": null,
+      "correct_justified_refusal": false,
+      "correct_numeric_plan": false,
+      "correct_proven_infeasibility": false,
+      "deferred_clarify": false,
+      "denominator": 1,
+      "distance_m": null,
+      "distance_regret_m": null,
+      "evidence_grounding": null,
+      "feasibility": null,
+      "independent_outcome_correct": false,
+      "invalid_release_provenance": false,
+      "optional_questions": 0,
+      "reference_outcome": "INSUFFICIENT",
+      "unauthorized_questions": 0,
+      "unnecessary_questions": 0,
+      "unnecessary_refusal": false,
+      "useful_I2": false,
+      "useful_I3": false
+    },
+    "model_responses": 1,
+    "original_model_content_sha256": "999736cd1f3cb0cb9c2c5213562c4fefc602809a85699898acca044296e6191d",
+    "questions": 0,
+    "replay": {
+      "I2": {
+        "admitted": false,
+        "proposal_sha256": "4d2574e349f454619c7b976c5ccb540c946cde067799444d00e2540c1f577b76"
+      },
+      "I3": {
+        "admitted": false,
+        "proposal_sha256": "4d2574e349f454619c7b976c5ccb540c946cde067799444d00e2540c1f577b76"
+      },
+      "action_correctness": null,
+      "common_errors": [
+        "missing_slot_closure"
+      ],
+      "grounding": null,
+      "infeasibility_certificate": null,
+      "proposal_sha256": "4d2574e349f454619c7b976c5ccb540c946cde067799444d00e2540c1f577b76",
+      "route_check": null,
+      "state_I2": null,
+      "state_I3": null,
+      "transcript_sha256": "bde9c6c4d412ddc61475f9fe0e691e96a98b444ec7679a07846757e43d9301e3"
+    },
+    "route": "openai",
+    "source_result_member_sha256": "ae1dc90dca03f6e8fea8dad66539fe8361eb8e33bd9afc5975000790f80ef65d",
+    "source_trace_member": "EVAL-17/trace.jsonl",
+    "source_trace_sha256": "bde9c6c4d412ddc61475f9fe0e691e96a98b444ec7679a07846757e43d9301e3",
+    "status": "completed",
+    "steps": [
+      {
+        "action": "FINAL",
+        "arguments": {
+          "action": "INSUFFICIENT",
+          "evidence": [
+            "close_B_s: the only released candidate is DOC-17-DRIVER-PHOTO, issued by a driver and unverified; it does not meet the required receiving_manager booking_acceptance authority. The close_B_s channel is marked unavailable for both tool and user.",
+            "load_C_kg: DOC-17-MASS is verified and explicitly certifies 0.05 tonnes, i.e. 50 kg, but the required load_C_kg channel is marked unavailable for both tool and user, so the dispatcher cannot obtain the bound certified warehouse record through an accessible authoritative channel."
+          ],
+          "missing_slots": [
+            "close_B_s",
+            "load_C_kg"
+          ],
+          "parameters": {},
+          "plan": null
+        },
+        "questions_used": 0,
+        "response": {
+          "status": "SUBMITTED"
+        },
+        "tools_used": 0
+      }
+    ],
+    "tool_invocations": 0
+  },
+  {
+    "assignment_id": "EVAL-18",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "decision": {
+      "action": "UPDATE",
+      "evidence": [
+        "DOC-18-THIS-SHIFT",
+        "DOC-18-B-OPEN"
+      ],
+      "missing_slots": [],
+      "parameters": {
+        "close_D_s": 5100,
+        "open_B_s": 900
+      },
+      "plan": {
+        "routes": [
+          {
+            "nodes": [
+              0,
+              1,
+              2,
+              3,
+              0
+            ],
+            "vehicle": 0
+          },
+          {
+            "nodes": [
+              0,
+              4,
+              0
+            ],
+            "vehicle": 1
+          }
+        ],
+        "status": "FEASIBLE"
+      }
+    },
+    "episode": "EVAL-18",
+    "evaluation": {
+      "action_correctness": true,
+      "correct_justified_refusal": false,
+      "correct_numeric_plan": true,
+      "correct_proven_infeasibility": false,
+      "deferred_clarify": false,
+      "denominator": 1,
+      "distance_m": 23179,
+      "distance_regret_m": 8400,
+      "evidence_grounding": true,
+      "feasibility": true,
+      "independent_outcome_correct": true,
+      "invalid_release_provenance": false,
+      "optional_questions": 0,
+      "reference_outcome": "FEASIBLE_PLAN",
+      "unauthorized_questions": 0,
+      "unnecessary_questions": 0,
+      "unnecessary_refusal": false,
+      "useful_I2": true,
+      "useful_I3": true
+    },
+    "model_responses": 2,
+    "original_model_content_sha256": "5d55d89b1ef00de2327845f83d90c61721370ef6fb41d02eb20b4ff57fb519a3",
+    "questions": 0,
+    "replay": {
+      "I2": {
+        "admitted": true,
+        "proposal_sha256": "9a05472d9e7591abf39184e78f8e9a9a5ca45a08cc7145ed81fea3c1855b5d54"
+      },
+      "I3": {
+        "admitted": true,
+        "proposal_sha256": "9a05472d9e7591abf39184e78f8e9a9a5ca45a08cc7145ed81fea3c1855b5d54"
+      },
+      "action_correctness": true,
+      "common_errors": [],
+      "grounding": true,
+      "infeasibility_certificate": null,
+      "proposal_sha256": "9a05472d9e7591abf39184e78f8e9a9a5ca45a08cc7145ed81fea3c1855b5d54",
+      "route_check": {
+        "distance_m": 23179,
+        "elapsed_vehicle_seconds": 5376,
+        "travel_seconds": 4176,
+        "valid": true,
+        "violations": []
+      },
+      "state_I2": {
+        "action": "UPDATE",
+        "evidence": [
+          "DOC-18-THIS-SHIFT",
+          "DOC-18-B-OPEN"
+        ],
+        "missing_slots": [],
+        "parameters": {
+          "close_D_s": 5100,
+          "open_B_s": 900
+        },
+        "plan": {
+          "routes": [
+            {
+              "nodes": [
+                0,
+                1,
+                2,
+                3,
+                0
+              ],
+              "vehicle": 0
+            },
+            {
+              "nodes": [
+                0,
+                4,
+                0
+              ],
+              "vehicle": 1
+            }
+          ],
+          "status": "FEASIBLE"
+        }
+      },
+      "state_I3": {
+        "action": "UPDATE",
+        "evidence": [
+          "DOC-18-THIS-SHIFT",
+          "DOC-18-B-OPEN"
+        ],
+        "missing_slots": [],
+        "parameters": {
+          "close_D_s": 5100,
+          "open_B_s": 900
+        },
+        "plan": {
+          "routes": [
+            {
+              "nodes": [
+                0,
+                1,
+                2,
+                3,
+                0
+              ],
+              "vehicle": 0
+            },
+            {
+              "nodes": [
+                0,
+                4,
+                0
+              ],
+              "vehicle": 1
+            }
+          ],
+          "status": "FEASIBLE"
+        }
+      },
+      "transcript_sha256": "9b46d8fffa5cb19ae6f4da2e29384a3a22339d1e80780ca8bfb0c6e64192eb45"
+    },
+    "route": "openai",
+    "source_result_member_sha256": "ae1dc90dca03f6e8fea8dad66539fe8361eb8e33bd9afc5975000790f80ef65d",
+    "source_trace_member": "EVAL-18/trace.jsonl",
+    "source_trace_sha256": "9b46d8fffa5cb19ae6f4da2e29384a3a22339d1e80780ca8bfb0c6e64192eb45",
+    "status": "completed",
+    "steps": [
+      {
+        "action": "CALL_TOOL",
+        "arguments": {
+          "arguments": {
+            "slot": "close_D_s"
+          },
+          "tool": "lookup_snapshot"
+        },
+        "questions_used": 0,
+        "response": {
+          "records": [
+            {
+              "assertion_kind": "booking_acceptance",
+              "authority": "confirmed",
+              "available_at": 180,
+              "channel": "tool",
+              "effective_from": 210,
+              "effective_to": 260,
+              "entity": "BOOKING-GROUP-18",
+              "id": "DOC-18-THIS-SHIFT",
+              "issuer_role": "receiving_manager",
+              "owner": "receiver",
+              "precision": "confirmed",
+              "scope": "PADUA-RUN-18",
+              "slot": "close_D_s",
+              "source_document": "DOC-18-THIS-SHIFT",
+              "supersedes": [],
+              "text": "Receiving desk: unloading must be finished by 09:25. This sheet covers the booking named in the header.",
+              "verified": true
+            }
+          ],
+          "status": "RECORDS_RELEASED"
+        },
+        "tools_used": 1
+      },
+      {
+        "action": "FINAL",
+        "arguments": {
+          "action": "UPDATE",
+          "evidence": [
+            "DOC-18-THIS-SHIFT",
+            "DOC-18-B-OPEN"
+          ],
+          "missing_slots": [],
+          "parameters": {
+            "close_D_s": 5100,
+            "open_B_s": 900
+          },
+          "plan": {
+            "routes": [
+              {
+                "nodes": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  0
+                ],
+                "vehicle": 0
+              },
+              {
+                "nodes": [
+                  0,
+                  4,
+                  0
+                ],
+                "vehicle": 1
+              }
+            ],
+            "status": "FEASIBLE"
+          }
+        },
+        "questions_used": 0,
+        "response": {
+          "status": "SUBMITTED"
+        },
+        "tools_used": 1
+      }
+    ],
+    "tool_invocations": 1
+  },
+  {
+    "assignment_id": "EVAL-19",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "decision": {
+      "action": "UPDATE",
+      "evidence": [
+        "DOC-19-WORKSHOP-RELEASE",
+        "DOC-19-C-WEIGHT"
+      ],
+      "missing_slots": [],
+      "parameters": {
+        "load_C_kg": 55,
+        "payload_1_kg": 75
+      },
+      "plan": {
+        "routes": [
+          {
+            "nodes": [
+              0,
+              1,
+              2,
+              3,
+              0
+            ],
+            "vehicle": 0
+          },
+          {
+            "nodes": [
+              0,
+              4,
+              0
+            ],
+            "vehicle": 1
+          }
+        ],
+        "status": "FEASIBLE"
+      }
+    },
+    "episode": "EVAL-19",
+    "evaluation": {
+      "action_correctness": true,
+      "correct_justified_refusal": false,
+      "correct_numeric_plan": false,
+      "correct_proven_infeasibility": false,
+      "deferred_clarify": false,
+      "denominator": 1,
+      "distance_m": null,
+      "distance_regret_m": null,
+      "evidence_grounding": true,
+      "feasibility": false,
+      "independent_outcome_correct": false,
+      "invalid_release_provenance": false,
+      "optional_questions": 0,
+      "reference_outcome": "FEASIBLE_PLAN",
+      "unauthorized_questions": 0,
+      "unnecessary_questions": 0,
+      "unnecessary_refusal": false,
+      "useful_I2": false,
+      "useful_I3": false
+    },
+    "model_responses": 2,
+    "original_model_content_sha256": "b37dca914630a40b956def5ab9d67f525c597ecefd1f9113c5016892c6daecb7",
+    "questions": 0,
+    "replay": {
+      "I2": {
+        "admitted": false,
+        "proposal_sha256": "04df5f92d4bc0608f9c02a747bf99253baab4c35b737926136bdbb7a48c6d93a"
+      },
+      "I3": {
+        "admitted": false,
+        "proposal_sha256": "04df5f92d4bc0608f9c02a747bf99253baab4c35b737926136bdbb7a48c6d93a"
+      },
+      "action_correctness": true,
+      "common_errors": [
+        "route_not_feasible"
+      ],
+      "grounding": true,
+      "infeasibility_certificate": null,
+      "proposal_sha256": "04df5f92d4bc0608f9c02a747bf99253baab4c35b737926136bdbb7a48c6d93a",
+      "route_check": {
+        "distance_m": 14808,
+        "elapsed_vehicle_seconds": 3868,
+        "travel_seconds": 2668,
+        "valid": false,
+        "violations": [
+          "remaining_payload_exceeded:0:105>100"
+        ]
+      },
+      "state_I2": null,
+      "state_I3": null,
+      "transcript_sha256": "56c81c77c909dcfe1c879b2331e3f838b2ad36140eca46428e13837f97ee7f6a"
+    },
+    "route": "openai",
+    "source_result_member_sha256": "ae1dc90dca03f6e8fea8dad66539fe8361eb8e33bd9afc5975000790f80ef65d",
+    "source_trace_member": "EVAL-19/trace.jsonl",
+    "source_trace_sha256": "56c81c77c909dcfe1c879b2331e3f838b2ad36140eca46428e13837f97ee7f6a",
+    "status": "completed",
+    "steps": [
+      {
+        "action": "CALL_TOOL",
+        "arguments": {
+          "arguments": {
+            "slot": "payload_1_kg"
+          },
+          "tool": "lookup_snapshot"
+        },
+        "questions_used": 0,
+        "response": {
+          "records": [
+            {
+              "assertion_kind": "certified_fact",
+              "authority": "confirmed",
+              "available_at": 190,
+              "channel": "tool",
+              "effective_from": 210,
+              "effective_to": 260,
+              "entity": "BOOKING-GROUP-19",
+              "id": "DOC-19-WORKSHOP-RELEASE",
+              "issuer_role": "fleet_control",
+              "owner": "dispatcher",
+              "precision": "confirmed",
+              "scope": "PADUA-RUN-19",
+              "slot": "payload_1_kg",
+              "source_document": "DOC-19-WORKSHOP-RELEASE",
+              "supersedes": [
+                "DOC-19-PLATE-COPY"
+              ],
+              "text": "Fleet control: after fitted equipment the available payload is 75 kg. This is the usable cargo allowance, not the plate rating.",
+              "verified": true
+            }
+          ],
+          "status": "RECORDS_RELEASED"
+        },
+        "tools_used": 1
+      },
+      {
+        "action": "FINAL",
+        "arguments": {
+          "action": "UPDATE",
+          "evidence": [
+            "DOC-19-WORKSHOP-RELEASE",
+            "DOC-19-C-WEIGHT"
+          ],
+          "missing_slots": [],
+          "parameters": {
+            "load_C_kg": 55,
+            "payload_1_kg": 75
+          },
+          "plan": {
+            "routes": [
+              {
+                "nodes": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  0
+                ],
+                "vehicle": 0
+              },
+              {
+                "nodes": [
+                  0,
+                  4,
+                  0
+                ],
+                "vehicle": 1
+              }
+            ],
+            "status": "FEASIBLE"
+          }
+        },
+        "questions_used": 0,
+        "response": {
+          "status": "SUBMITTED"
+        },
+        "tools_used": 1
+      }
+    ],
+    "tool_invocations": 1
+  },
+  {
+    "assignment_id": "EVAL-20",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "decision": {
+      "action": "INSUFFICIENT",
+      "evidence": [
+        "DOC-20-B-WEIGHT"
+      ],
+      "missing_slots": [
+        "close_C_s",
+        "load_B_kg"
+      ],
+      "parameters": {},
+      "plan": null
+    },
+    "episode": "EVAL-20",
+    "evaluation": {
+      "action_correctness": null,
+      "correct_justified_refusal": true,
+      "correct_numeric_plan": false,
+      "correct_proven_infeasibility": false,
+      "deferred_clarify": false,
+      "denominator": 1,
+      "distance_m": null,
+      "distance_regret_m": null,
+      "evidence_grounding": null,
+      "feasibility": null,
+      "independent_outcome_correct": true,
+      "invalid_release_provenance": false,
+      "optional_questions": 0,
+      "reference_outcome": "INSUFFICIENT",
+      "unauthorized_questions": 0,
+      "unnecessary_questions": 0,
+      "unnecessary_refusal": false,
+      "useful_I2": true,
+      "useful_I3": true
+    },
+    "model_responses": 1,
+    "original_model_content_sha256": "530a029fc82c83ed4c89bed1f8774d0452dafa2017395f408fcaa14c0514c8d3",
+    "questions": 0,
+    "replay": {
+      "I2": {
+        "admitted": true,
+        "proposal_sha256": "ec5ba5ee0a30f439a041fcaf385df58f41b74dadd6c0b47725afefdc2f648856"
+      },
+      "I3": {
+        "admitted": true,
+        "proposal_sha256": "ec5ba5ee0a30f439a041fcaf385df58f41b74dadd6c0b47725afefdc2f648856"
+      },
+      "action_correctness": null,
+      "common_errors": [],
+      "grounding": null,
+      "infeasibility_certificate": null,
+      "proposal_sha256": "ec5ba5ee0a30f439a041fcaf385df58f41b74dadd6c0b47725afefdc2f648856",
+      "route_check": null,
+      "state_I2": null,
+      "state_I3": null,
+      "transcript_sha256": "f8afed11f3a7c01eb65908e2b5d60b9d081e84325dee0b607cd42efd98a1f82b"
+    },
+    "route": "openai",
+    "source_result_member_sha256": "ae1dc90dca03f6e8fea8dad66539fe8361eb8e33bd9afc5975000790f80ef65d",
+    "source_trace_member": "EVAL-20/trace.jsonl",
+    "source_trace_sha256": "f8afed11f3a7c01eb65908e2b5d60b9d081e84325dee0b607cd42efd98a1f82b",
+    "status": "completed",
+    "steps": [
+      {
+        "action": "FINAL",
+        "arguments": {
+          "action": "INSUFFICIENT",
+          "evidence": [
+            "DOC-20-B-WEIGHT"
+          ],
+          "missing_slots": [
+            "close_C_s",
+            "load_B_kg"
+          ],
+          "parameters": {},
+          "plan": null
+        },
+        "questions_used": 0,
+        "response": {
+          "status": "SUBMITTED"
+        },
+        "tools_used": 0
+      }
+    ],
+    "tool_invocations": 0
+  },
+  {
+    "assignment_id": "EVAL-21",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "decision": {
+      "action": "INSUFFICIENT",
+      "evidence": [
+        "DOC-21-LATE-OPEN"
+      ],
+      "missing_slots": [
+        "service_C_s"
+      ],
+      "parameters": {},
+      "plan": null
+    },
+    "episode": "EVAL-21",
+    "evaluation": {
+      "action_correctness": null,
+      "correct_justified_refusal": false,
+      "correct_numeric_plan": false,
+      "correct_proven_infeasibility": false,
+      "deferred_clarify": false,
+      "denominator": 1,
+      "distance_m": null,
+      "distance_regret_m": null,
+      "evidence_grounding": null,
+      "feasibility": null,
+      "independent_outcome_correct": false,
+      "invalid_release_provenance": false,
+      "optional_questions": 0,
+      "reference_outcome": "FEASIBLE_PLAN",
+      "unauthorized_questions": 0,
+      "unnecessary_questions": 0,
+      "unnecessary_refusal": true,
+      "useful_I2": false,
+      "useful_I3": false
+    },
+    "model_responses": 1,
+    "original_model_content_sha256": "84d300f205e5f4dea75c2426472ef6ce6252a16374926485520dc5976887d8b0",
+    "questions": 0,
+    "replay": {
+      "I2": {
+        "admitted": false,
+        "proposal_sha256": "446c0217c5890b4947bc5c55b0a4145a8d7c065fec84ca92186c12e138f938a2"
+      },
+      "I3": {
+        "admitted": false,
+        "proposal_sha256": "446c0217c5890b4947bc5c55b0a4145a8d7c065fec84ca92186c12e138f938a2"
+      },
+      "action_correctness": null,
+      "common_errors": [
+        "unexhausted_authoritative_path"
+      ],
+      "grounding": null,
+      "infeasibility_certificate": null,
+      "proposal_sha256": "446c0217c5890b4947bc5c55b0a4145a8d7c065fec84ca92186c12e138f938a2",
+      "route_check": null,
+      "state_I2": null,
+      "state_I3": null,
+      "transcript_sha256": "8edf55f11c767a976aba5d3ab8910f5c0c51edd40a0f9c9ca2b8da8fc5cc27e5"
+    },
+    "route": "openai",
+    "source_result_member_sha256": "ae1dc90dca03f6e8fea8dad66539fe8361eb8e33bd9afc5975000790f80ef65d",
+    "source_trace_member": "EVAL-21/trace.jsonl",
+    "source_trace_sha256": "8edf55f11c767a976aba5d3ab8910f5c0c51edd40a0f9c9ca2b8da8fc5cc27e5",
+    "status": "completed",
+    "steps": [
+      {
+        "action": "FINAL",
+        "arguments": {
+          "action": "INSUFFICIENT",
+          "evidence": [
+            "DOC-21-LATE-OPEN"
+          ],
+          "missing_slots": [
+            "service_C_s"
+          ],
+          "parameters": {},
+          "plan": null
+        },
+        "questions_used": 0,
+        "response": {
+          "status": "SUBMITTED"
+        },
+        "tools_used": 0
+      }
+    ],
+    "tool_invocations": 0
+  },
+  {
+    "assignment_id": "EVAL-22",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "decision": {
+      "action": "INSUFFICIENT",
+      "evidence": [
+        "DOC-22-CERTIFIED-RELAY"
+      ],
+      "missing_slots": [
+        "payload_0_kg"
+      ],
+      "parameters": {},
+      "plan": null
+    },
+    "episode": "EVAL-22",
+    "evaluation": {
+      "action_correctness": null,
+      "correct_justified_refusal": false,
+      "correct_numeric_plan": false,
+      "correct_proven_infeasibility": false,
+      "deferred_clarify": false,
+      "denominator": 1,
+      "distance_m": null,
+      "distance_regret_m": null,
+      "evidence_grounding": null,
+      "feasibility": null,
+      "independent_outcome_correct": false,
+      "invalid_release_provenance": false,
+      "optional_questions": 0,
+      "reference_outcome": "FEASIBLE_PLAN",
+      "unauthorized_questions": 0,
+      "unnecessary_questions": 0,
+      "unnecessary_refusal": true,
+      "useful_I2": false,
+      "useful_I3": false
+    },
+    "model_responses": 4,
+    "original_model_content_sha256": "44c559db4b5c5c701dbd5f6defea7b663b3ac2483860166797b08d7c485b37ac",
+    "questions": 1,
+    "replay": {
+      "I2": {
+        "admitted": false,
+        "proposal_sha256": "56521e760b797febd99c5567a0ca26a450b802029fead72404c16cbc697ad2c6"
+      },
+      "I3": {
+        "admitted": false,
+        "proposal_sha256": "56521e760b797febd99c5567a0ca26a450b802029fead72404c16cbc697ad2c6"
+      },
+      "action_correctness": null,
+      "common_errors": [
+        "missing_slot_closure",
+        "unexhausted_authoritative_path"
+      ],
+      "grounding": null,
+      "infeasibility_certificate": null,
+      "proposal_sha256": "56521e760b797febd99c5567a0ca26a450b802029fead72404c16cbc697ad2c6",
+      "route_check": null,
+      "state_I2": null,
+      "state_I3": null,
+      "transcript_sha256": "ada9c31de71919eb1ea6f6d841e629a2631b43a79d0ef05a767d1c3019cf7e3e"
+    },
+    "route": "openai",
+    "source_result_member_sha256": "ae1dc90dca03f6e8fea8dad66539fe8361eb8e33bd9afc5975000790f80ef65d",
+    "source_trace_member": "EVAL-22/trace.jsonl",
+    "source_trace_sha256": "ada9c31de71919eb1ea6f6d841e629a2631b43a79d0ef05a767d1c3019cf7e3e",
+    "status": "completed",
+    "steps": [
+      {
+        "action": "CALL_TOOL",
+        "arguments": {
+          "arguments": {
+            "slot": "load_D_kg"
+          },
+          "tool": "lookup_snapshot"
+        },
+        "questions_used": 0,
+        "response": {
+          "status": "PUBLIC_CHANNEL_UNAVAILABLE"
+        },
+        "tools_used": 1
+      },
+      {
+        "action": "ASK_USER",
+        "arguments": [
+          {
+            "entity": "BOOKING-GROUP-22",
+            "field": "load_D_kg",
+            "kind": "indispensable",
+            "owner": "dispatcher",
+            "scope": "PADUA-RUN-22",
+            "wording": "Please provide the certified gross mass in kg for order D, as asserted by warehouse control for this booking."
+          }
+        ],
+        "questions_used": 1,
+        "response": [
+          {
+            "records": [
+              {
+                "assertion_kind": "certified_fact",
+                "authority": "confirmed",
+                "available_at": 180,
+                "channel": "user",
+                "effective_from": 210,
+                "effective_to": 260,
+                "entity": "BOOKING-GROUP-22",
+                "id": "DOC-22-CERTIFIED-RELAY",
+                "issuer_role": "warehouse_control",
+                "owner": "dispatcher",
+                "precision": "confirmed",
+                "scope": "PADUA-RUN-22",
+                "slot": "load_D_kg",
+                "source_document": "DOC-22-CERTIFIED-RELAY",
+                "supersedes": [],
+                "text": "Loading control: the sealed consignment’s certified gross mass is 0.07 tonnes, including pallets and packaging.",
+                "verified": true
+              }
+            ],
+            "status": "RECORDS_RELEASED"
+          }
+        ],
+        "tools_used": 1
+      },
+      {
+        "action": "CALL_TOOL",
+        "arguments": {
+          "arguments": {
+            "slot": "payload_0_kg"
+          },
+          "tool": "lookup_snapshot"
+        },
+        "questions_used": 1,
+        "response": {
+          "status": "PUBLIC_CHANNEL_UNAVAILABLE"
+        },
+        "tools_used": 2
+      },
+      {
+        "action": "FINAL",
+        "arguments": {
+          "action": "INSUFFICIENT",
+          "evidence": [
+            "DOC-22-CERTIFIED-RELAY"
+          ],
+          "missing_slots": [
+            "payload_0_kg"
+          ],
+          "parameters": {},
+          "plan": null
+        },
+        "questions_used": 1,
+        "response": {
+          "status": "SUBMITTED"
+        },
+        "tools_used": 2
+      }
+    ],
+    "tool_invocations": 2
+  },
+  {
+    "assignment_id": "EVAL-23",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "decision": {
+      "action": "UPDATE",
+      "evidence": [
+        "DOC-23-FINAL-RELEASE",
+        "DOC-23-C-OPEN"
+      ],
+      "missing_slots": [],
+      "parameters": {
+        "open_C_s": 1200,
+        "service_E_s": 600
+      },
+      "plan": {
+        "routes": [
+          {
+            "nodes": [
+              0,
+              4,
+              1,
+              0
+            ],
+            "vehicle": 0
+          },
+          {
+            "nodes": [
+              0,
+              5,
+              3,
+              2,
+              0
+            ],
+            "vehicle": 1
+          }
+        ],
+        "status": "FEASIBLE"
+      }
+    },
+    "episode": "EVAL-23",
+    "evaluation": {
+      "action_correctness": true,
+      "correct_justified_refusal": false,
+      "correct_numeric_plan": true,
+      "correct_proven_infeasibility": false,
+      "deferred_clarify": false,
+      "denominator": 1,
+      "distance_m": 8728,
+      "distance_regret_m": 0,
+      "evidence_grounding": true,
+      "feasibility": true,
+      "independent_outcome_correct": true,
+      "invalid_release_provenance": false,
+      "optional_questions": 0,
+      "reference_outcome": "FEASIBLE_PLAN",
+      "unauthorized_questions": 0,
+      "unnecessary_questions": 0,
+      "unnecessary_refusal": false,
+      "useful_I2": true,
+      "useful_I3": true
+    },
+    "model_responses": 4,
+    "original_model_content_sha256": "ba82d1278c1e5abefdebb1fa97c06d4f0c504c6228d9412ce6cb69e801ec2c43",
+    "questions": 1,
+    "replay": {
+      "I2": {
+        "admitted": true,
+        "proposal_sha256": "0a62e36d508bb73df8c265e6d9f92eedd450cfcc33dba9e9b0eb3e8c425150b3"
+      },
+      "I3": {
+        "admitted": true,
+        "proposal_sha256": "0a62e36d508bb73df8c265e6d9f92eedd450cfcc33dba9e9b0eb3e8c425150b3"
+      },
+      "action_correctness": true,
+      "common_errors": [],
+      "grounding": true,
+      "infeasibility_certificate": null,
+      "proposal_sha256": "0a62e36d508bb73df8c265e6d9f92eedd450cfcc33dba9e9b0eb3e8c425150b3",
+      "route_check": {
+        "distance_m": 8728,
+        "elapsed_vehicle_seconds": 3418,
+        "travel_seconds": 1574,
+        "valid": true,
+        "violations": []
+      },
+      "state_I2": {
+        "action": "UPDATE",
+        "evidence": [
+          "DOC-23-FINAL-RELEASE",
+          "DOC-23-C-OPEN"
+        ],
+        "missing_slots": [],
+        "parameters": {
+          "open_C_s": 1200,
+          "service_E_s": 600
+        },
+        "plan": {
+          "routes": [
+            {
+              "nodes": [
+                0,
+                4,
+                1,
+                0
+              ],
+              "vehicle": 0
+            },
+            {
+              "nodes": [
+                0,
+                5,
+                3,
+                2,
+                0
+              ],
+              "vehicle": 1
+            }
+          ],
+          "status": "FEASIBLE"
+        }
+      },
+      "state_I3": {
+        "action": "UPDATE",
+        "evidence": [
+          "DOC-23-FINAL-RELEASE",
+          "DOC-23-C-OPEN"
+        ],
+        "missing_slots": [],
+        "parameters": {
+          "open_C_s": 1200,
+          "service_E_s": 600
+        },
+        "plan": {
+          "routes": [
+            {
+              "nodes": [
+                0,
+                4,
+                1,
+                0
+              ],
+              "vehicle": 0
+            },
+            {
+              "nodes": [
+                0,
+                5,
+                3,
+                2,
+                0
+              ],
+              "vehicle": 1
+            }
+          ],
+          "status": "FEASIBLE"
+        }
+      },
+      "transcript_sha256": "a2c11601e62bf552aa45103dfadcf8e580970288dd5da98012c9853e8c91a62a"
+    },
+    "route": "openai",
+    "source_result_member_sha256": "ae1dc90dca03f6e8fea8dad66539fe8361eb8e33bd9afc5975000790f80ef65d",
+    "source_trace_member": "EVAL-23/trace.jsonl",
+    "source_trace_sha256": "a2c11601e62bf552aa45103dfadcf8e580970288dd5da98012c9853e8c91a62a",
+    "status": "completed",
+    "steps": [
+      {
+        "action": "CALL_TOOL",
+        "arguments": {
+          "arguments": {
+            "slot": "service_E_s"
+          },
+          "tool": "lookup_snapshot"
+        },
+        "questions_used": 0,
+        "response": {
+          "status": "PUBLIC_CHANNEL_UNAVAILABLE"
+        },
+        "tools_used": 1
+      },
+      {
+        "action": "ASK_USER",
+        "arguments": [
+          {
+            "entity": "BOOKING-GROUP-23",
+            "field": "service_E_s",
+            "kind": "indispensable",
+            "owner": "dispatcher",
+            "scope": "PADUA-RUN-23",
+            "wording": "For BOOKING-GROUP-23 / PADUA-RUN-23, what exact service allowance in seconds is authorized for stop E, including paperwork? Please provide the dispatcher-certified value and record reference."
+          }
+        ],
+        "questions_used": 1,
+        "response": [
+          {
+            "records": [
+              {
+                "assertion_kind": "certified_fact",
+                "authority": "confirmed",
+                "available_at": 190,
+                "channel": "user",
+                "effective_from": 210,
+                "effective_to": 260,
+                "entity": "BOOKING-GROUP-23",
+                "id": "DOC-23-FINAL-RELEASE",
+                "issuer_role": "dispatcher",
+                "owner": "dispatcher",
+                "precision": "confirmed",
+                "scope": "PADUA-RUN-23",
+                "slot": "service_E_s",
+                "source_document": "DOC-23-FINAL-RELEASE",
+                "supersedes": [
+                  "DOC-23-DESK-A",
+                  "DOC-23-DESK-B"
+                ],
+                "text": "Dispatch: reserve 10 minutes for service on this booked delivery. This is the planning allowance, including paperwork.",
+                "verified": true
+              }
+            ],
+            "status": "RECORDS_RELEASED"
+          }
+        ],
+        "tools_used": 1
+      },
+      {
+        "action": "CALL_TOOL",
+        "arguments": {
+          "arguments": {
+            "parameters": {
+              "open_C_s": 1200,
+              "service_E_s": 600
+            }
+          },
+          "tool": "plan_route"
+        },
+        "questions_used": 1,
+        "response": {
+          "route_check": {
+            "distance_m": 8728,
+            "elapsed_vehicle_seconds": 3418,
+            "travel_seconds": 1574,
+            "valid": true,
+            "violations": []
+          },
+          "solution": {
+            "distance_m": 8728,
+            "routes": [
+              {
+                "distance_m": 3641,
+                "nodes": [
+                  0,
+                  4,
+                  1,
+                  0
+                ],
+                "timetable": [
+                  {
+                    "node": 4,
+                    "service_finish_s": 667,
+                    "service_start_s": 367
+                  },
+                  {
+                    "node": 1,
+                    "service_finish_s": 1112,
+                    "service_start_s": 812
+                  }
+                ],
+                "travel_seconds": 657,
+                "vehicle": 0
+              },
+              {
+                "distance_m": 5087,
+                "nodes": [
+                  0,
+                  5,
+                  3,
+                  2,
+                  0
+                ],
+                "timetable": [
+                  {
+                    "node": 5,
+                    "service_finish_s": 791,
+                    "service_start_s": 191
+                  },
+                  {
+                    "node": 3,
+                    "service_finish_s": 1500,
+                    "service_start_s": 1200
+                  },
+                  {
+                    "node": 2,
+                    "service_finish_s": 1930,
+                    "service_start_s": 1630
+                  }
+                ],
+                "travel_seconds": 917,
+                "vehicle": 1
+              }
+            ],
+            "service_seconds": 1800,
+            "solver": {
+              "backend": "OR-Tools",
+              "time_limit_s": 0.05
+            },
+            "status": "FEASIBLE",
+            "travel_seconds": 1574
+          },
+          "status": "OK"
+        },
+        "tools_used": 2
+      },
+      {
+        "action": "FINAL",
+        "arguments": {
+          "action": "UPDATE",
+          "evidence": [
+            "DOC-23-FINAL-RELEASE",
+            "DOC-23-C-OPEN"
+          ],
+          "missing_slots": [],
+          "parameters": {
+            "open_C_s": 1200,
+            "service_E_s": 600
+          },
+          "plan": {
+            "routes": [
+              {
+                "nodes": [
+                  0,
+                  4,
+                  1,
+                  0
+                ],
+                "vehicle": 0
+              },
+              {
+                "nodes": [
+                  0,
+                  5,
+                  3,
+                  2,
+                  0
+                ],
+                "vehicle": 1
+              }
+            ],
+            "status": "FEASIBLE"
+          }
+        },
+        "questions_used": 1,
+        "response": {
+          "status": "SUBMITTED"
+        },
+        "tools_used": 2
+      }
+    ],
+    "tool_invocations": 2
+  },
+  {
+    "assignment_id": "EVAL-24",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "decision": {
+      "action": "INSUFFICIENT",
+      "evidence": [
+        "DOC-24-TOMORROW"
+      ],
+      "missing_slots": [
+        "close_A_s",
+        "load_D_kg"
+      ],
+      "parameters": {},
+      "plan": null
+    },
+    "episode": "EVAL-24",
+    "evaluation": {
+      "action_correctness": null,
+      "correct_justified_refusal": false,
+      "correct_numeric_plan": false,
+      "correct_proven_infeasibility": false,
+      "deferred_clarify": false,
+      "denominator": 1,
+      "distance_m": null,
+      "distance_regret_m": null,
+      "evidence_grounding": null,
+      "feasibility": null,
+      "independent_outcome_correct": false,
+      "invalid_release_provenance": false,
+      "optional_questions": 0,
+      "reference_outcome": "INSUFFICIENT",
+      "unauthorized_questions": 0,
+      "unnecessary_questions": 0,
+      "unnecessary_refusal": false,
+      "useful_I2": false,
+      "useful_I3": false
+    },
+    "model_responses": 1,
+    "original_model_content_sha256": "8615582d6740d4c8cf1e892899555007afe9f8fee3b5cd8410d0d0a0e0672639",
+    "questions": 0,
+    "replay": {
+      "I2": {
+        "admitted": false,
+        "proposal_sha256": "2deaa5ec5d2cae081fa35e5331f2df367c86fd38bb1e0840d07aa817e3f2f478"
+      },
+      "I3": {
+        "admitted": false,
+        "proposal_sha256": "2deaa5ec5d2cae081fa35e5331f2df367c86fd38bb1e0840d07aa817e3f2f478"
+      },
+      "action_correctness": null,
+      "common_errors": [
+        "missing_slot_closure",
+        "unexhausted_authoritative_path"
+      ],
+      "grounding": null,
+      "infeasibility_certificate": null,
+      "proposal_sha256": "2deaa5ec5d2cae081fa35e5331f2df367c86fd38bb1e0840d07aa817e3f2f478",
+      "route_check": null,
+      "state_I2": null,
+      "state_I3": null,
+      "transcript_sha256": "0334e47bfa9d4df029dbbce720a0dde3841f8d2ac5c57f2439b47a33d2f55a29"
+    },
+    "route": "openai",
+    "source_result_member_sha256": "ae1dc90dca03f6e8fea8dad66539fe8361eb8e33bd9afc5975000790f80ef65d",
+    "source_trace_member": "EVAL-24/trace.jsonl",
+    "source_trace_sha256": "0334e47bfa9d4df029dbbce720a0dde3841f8d2ac5c57f2439b47a33d2f55a29",
+    "status": "completed",
+    "steps": [
+      {
+        "action": "FINAL",
+        "arguments": {
+          "action": "INSUFFICIENT",
+          "evidence": [
+            "DOC-24-TOMORROW"
+          ],
+          "missing_slots": [
+            "close_A_s",
+            "load_D_kg"
+          ],
+          "parameters": {},
+          "plan": null
+        },
+        "questions_used": 0,
+        "response": {
+          "status": "SUBMITTED"
+        },
+        "tools_used": 0
+      }
+    ],
+    "tool_invocations": 0
+  },
+  {
+    "assignment_id": "EVAL-25",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "decision": {
+      "action": "UPDATE",
+      "evidence": [
+        "DOC-25-VAN-ZERO",
+        "DOC-25-VAN-ONE"
+      ],
+      "missing_slots": [],
+      "parameters": {
+        "payload_0_kg": 40,
+        "payload_1_kg": 40
+      },
+      "plan": {
+        "routes": [
+          {
+            "nodes": [
+              0,
+              1,
+              2,
+              0
+            ],
+            "vehicle": 0
+          },
+          {
+            "nodes": [
+              0,
+              3,
+              4,
+              0
+            ],
+            "vehicle": 1
+          }
+        ],
+        "status": "FEASIBLE"
+      }
+    },
+    "episode": "EVAL-25",
+    "evaluation": {
+      "action_correctness": true,
+      "correct_justified_refusal": false,
+      "correct_numeric_plan": false,
+      "correct_proven_infeasibility": false,
+      "deferred_clarify": false,
+      "denominator": 1,
+      "distance_m": null,
+      "distance_regret_m": null,
+      "evidence_grounding": true,
+      "feasibility": false,
+      "independent_outcome_correct": false,
+      "invalid_release_provenance": false,
+      "optional_questions": 0,
+      "reference_outcome": "INFEASIBLE",
+      "unauthorized_questions": 0,
+      "unnecessary_questions": 0,
+      "unnecessary_refusal": false,
+      "useful_I2": false,
+      "useful_I3": false
+    },
+    "model_responses": 1,
+    "original_model_content_sha256": "7fdccbf2e94975f7806c5c8aa2bdff72d1ef5ad09c3a24d3986b86358e8c4aed",
+    "questions": 0,
+    "replay": {
+      "I2": {
+        "admitted": false,
+        "proposal_sha256": "be8f82b9d3ced8f5ca77b91931fae218d5607c30871144ab9f2bcb703c195ad5"
+      },
+      "I3": {
+        "admitted": false,
+        "proposal_sha256": "be8f82b9d3ced8f5ca77b91931fae218d5607c30871144ab9f2bcb703c195ad5"
+      },
+      "action_correctness": true,
+      "common_errors": [
+        "route_not_feasible"
+      ],
+      "grounding": true,
+      "infeasibility_certificate": null,
+      "proposal_sha256": "be8f82b9d3ced8f5ca77b91931fae218d5607c30871144ab9f2bcb703c195ad5",
+      "route_check": {
+        "distance_m": 19089,
+        "elapsed_vehicle_seconds": 4639,
+        "travel_seconds": 3439,
+        "valid": false,
+        "violations": [
+          "remaining_payload_exceeded:0:50>40",
+          "remaining_payload_exceeded:1:60>40"
+        ]
+      },
+      "state_I2": null,
+      "state_I3": null,
+      "transcript_sha256": "4b4531cde7bed358830091fc7059911013071d0fc662ebcada74ca0f0d183ba0"
+    },
+    "route": "openai",
+    "source_result_member_sha256": "ae1dc90dca03f6e8fea8dad66539fe8361eb8e33bd9afc5975000790f80ef65d",
+    "source_trace_member": "EVAL-25/trace.jsonl",
+    "source_trace_sha256": "4b4531cde7bed358830091fc7059911013071d0fc662ebcada74ca0f0d183ba0",
+    "status": "completed",
+    "steps": [
+      {
+        "action": "FINAL",
+        "arguments": {
+          "action": "UPDATE",
+          "evidence": [
+            "DOC-25-VAN-ZERO",
+            "DOC-25-VAN-ONE"
+          ],
+          "missing_slots": [],
+          "parameters": {
+            "payload_0_kg": 40,
+            "payload_1_kg": 40
+          },
+          "plan": {
+            "routes": [
+              {
+                "nodes": [
+                  0,
+                  1,
+                  2,
+                  0
+                ],
+                "vehicle": 0
+              },
+              {
+                "nodes": [
+                  0,
+                  3,
+                  4,
+                  0
+                ],
+                "vehicle": 1
+              }
+            ],
+            "status": "FEASIBLE"
+          }
+        },
+        "questions_used": 0,
+        "response": {
+          "status": "SUBMITTED"
+        },
+        "tools_used": 0
+      }
+    ],
+    "tool_invocations": 0
+  },
+  {
+    "assignment_id": "EVAL-26",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "decision": {
+      "action": "INSUFFICIENT",
+      "evidence": [
+        "The released records DOC-26-D-ALLOWANCE and DOC-26-D-FINISH are effective from logical epoch 210, so they apply at target effective time 220. They establish service_D_s=1200 seconds and close_D_s=600 seconds.",
+        "The required receiver booking acceptance and dispatcher certified fact are verified and match their binding requirements.",
+        "The current routes cannot meet D's 600-second completion deadline: even the direct depot-to-D travel time is 88 seconds, and service at D takes 1200 seconds. The available records therefore establish a blocker, but do not establish that no permitted route can meet the deadline because the directed travel-time matrix and route alternatives must be assessed."
+      ],
+      "missing_slots": [
+        "feasible_route_under_close_D_s"
+      ],
+      "parameters": {},
+      "plan": null
+    },
+    "episode": "EVAL-26",
+    "evaluation": {
+      "action_correctness": null,
+      "correct_justified_refusal": false,
+      "correct_numeric_plan": false,
+      "correct_proven_infeasibility": false,
+      "deferred_clarify": false,
+      "denominator": 1,
+      "distance_m": null,
+      "distance_regret_m": null,
+      "evidence_grounding": null,
+      "feasibility": null,
+      "independent_outcome_correct": false,
+      "invalid_release_provenance": false,
+      "optional_questions": 0,
+      "reference_outcome": "INFEASIBLE",
+      "unauthorized_questions": 0,
+      "unnecessary_questions": 0,
+      "unnecessary_refusal": false,
+      "useful_I2": false,
+      "useful_I3": false
+    },
+    "model_responses": 3,
+    "original_model_content_sha256": "18567f9c424126f1406d01d94a70385811fb4046740bcc6eba2eb35dcc16b1ca",
+    "questions": 0,
+    "replay": {
+      "I2": {
+        "admitted": false,
+        "proposal_sha256": "48ae48709d3d3efd2fcf9d78a1b05f52c83c99dbbc587b5763d2ac649259dfb3"
+      },
+      "I3": {
+        "admitted": false,
+        "proposal_sha256": "48ae48709d3d3efd2fcf9d78a1b05f52c83c99dbbc587b5763d2ac649259dfb3"
+      },
+      "action_correctness": null,
+      "common_errors": [
+        "missing_slot_closure",
+        "unexhausted_authoritative_path"
+      ],
+      "grounding": null,
+      "infeasibility_certificate": null,
+      "proposal_sha256": "48ae48709d3d3efd2fcf9d78a1b05f52c83c99dbbc587b5763d2ac649259dfb3",
+      "route_check": null,
+      "state_I2": null,
+      "state_I3": null,
+      "transcript_sha256": "80bf695e144a9b60c2c62a1a63a6e794366465d338c8589e79b30c1e23f3169d"
+    },
+    "route": "openai",
+    "source_result_member_sha256": "ae1dc90dca03f6e8fea8dad66539fe8361eb8e33bd9afc5975000790f80ef65d",
+    "source_trace_member": "EVAL-26/trace.jsonl",
+    "source_trace_sha256": "80bf695e144a9b60c2c62a1a63a6e794366465d338c8589e79b30c1e23f3169d",
+    "status": "completed",
+    "steps": [
+      {
+        "action": "CALL_TOOL",
+        "arguments": {
+          "arguments": {
+            "slot": "service_D_s"
+          },
+          "tool": "lookup_snapshot"
+        },
+        "questions_used": 0,
+        "response": {
+          "status": "PUBLIC_CHANNEL_UNAVAILABLE"
+        },
+        "tools_used": 1
+      },
+      {
+        "action": "CALL_TOOL",
+        "arguments": {
+          "arguments": {
+            "slot": "close_D_s"
+          },
+          "tool": "lookup_snapshot"
+        },
+        "questions_used": 0,
+        "response": {
+          "status": "PUBLIC_CHANNEL_UNAVAILABLE"
+        },
+        "tools_used": 2
+      },
+      {
+        "action": "FINAL",
+        "arguments": {
+          "action": "INSUFFICIENT",
+          "evidence": [
+            "The released records DOC-26-D-ALLOWANCE and DOC-26-D-FINISH are effective from logical epoch 210, so they apply at target effective time 220. They establish service_D_s=1200 seconds and close_D_s=600 seconds.",
+            "The required receiver booking acceptance and dispatcher certified fact are verified and match their binding requirements.",
+            "The current routes cannot meet D's 600-second completion deadline: even the direct depot-to-D travel time is 88 seconds, and service at D takes 1200 seconds. The available records therefore establish a blocker, but do not establish that no permitted route can meet the deadline because the directed travel-time matrix and route alternatives must be assessed."
+          ],
+          "missing_slots": [
+            "feasible_route_under_close_D_s"
+          ],
+          "parameters": {},
+          "plan": null
+        },
+        "questions_used": 0,
+        "response": {
+          "status": "SUBMITTED"
+        },
+        "tools_used": 2
+      }
+    ],
+    "tool_invocations": 2
+  },
+  {
+    "assignment_id": "EVAL-27",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "decision": {
+      "action": "UPDATE",
+      "evidence": [
+        "DOC-27-THIS-CONSIGNMENT",
+        "DOC-27-C-MASS"
+      ],
+      "missing_slots": [],
+      "parameters": {
+        "load_C_kg": 45,
+        "service_B_s": 480
+      },
+      "plan": {
+        "routes": [
+          {
+            "nodes": [
+              0,
+              1,
+              2,
+              3,
+              0
+            ],
+            "vehicle": 0
+          },
+          {
+            "nodes": [
+              0,
+              4,
+              0
+            ],
+            "vehicle": 1
+          }
+        ],
+        "status": "FEASIBLE"
+      }
+    },
+    "episode": "EVAL-27",
+    "evaluation": {
+      "action_correctness": true,
+      "correct_justified_refusal": false,
+      "correct_numeric_plan": true,
+      "correct_proven_infeasibility": false,
+      "deferred_clarify": false,
+      "denominator": 1,
+      "distance_m": 18104,
+      "distance_regret_m": 2010,
+      "evidence_grounding": true,
+      "feasibility": true,
+      "independent_outcome_correct": true,
+      "invalid_release_provenance": false,
+      "optional_questions": 0,
+      "reference_outcome": "FEASIBLE_PLAN",
+      "unauthorized_questions": 0,
+      "unnecessary_questions": 0,
+      "unnecessary_refusal": false,
+      "useful_I2": true,
+      "useful_I3": true
+    },
+    "model_responses": 1,
+    "original_model_content_sha256": "5dd316d02499fd42384442e27d1fa89fb72e1bdbf1bd11bd60f3746c6572e2c2",
+    "questions": 0,
+    "replay": {
+      "I2": {
+        "admitted": true,
+        "proposal_sha256": "4637e0c040cdf1406ea099d0d480d9df9b65e4e6d49953d46a53cf2590f8fedd"
+      },
+      "I3": {
+        "admitted": true,
+        "proposal_sha256": "4637e0c040cdf1406ea099d0d480d9df9b65e4e6d49953d46a53cf2590f8fedd"
+      },
+      "action_correctness": true,
+      "common_errors": [],
+      "grounding": true,
+      "infeasibility_certificate": null,
+      "proposal_sha256": "4637e0c040cdf1406ea099d0d480d9df9b65e4e6d49953d46a53cf2590f8fedd",
+      "route_check": {
+        "distance_m": 18104,
+        "elapsed_vehicle_seconds": 4640,
+        "travel_seconds": 3260,
+        "valid": true,
+        "violations": []
+      },
+      "state_I2": {
+        "action": "UPDATE",
+        "evidence": [
+          "DOC-27-THIS-CONSIGNMENT",
+          "DOC-27-C-MASS"
+        ],
+        "missing_slots": [],
+        "parameters": {
+          "load_C_kg": 45,
+          "service_B_s": 480
+        },
+        "plan": {
+          "routes": [
+            {
+              "nodes": [
+                0,
+                1,
+                2,
+                3,
+                0
+              ],
+              "vehicle": 0
+            },
+            {
+              "nodes": [
+                0,
+                4,
+                0
+              ],
+              "vehicle": 1
+            }
+          ],
+          "status": "FEASIBLE"
+        }
+      },
+      "state_I3": {
+        "action": "UPDATE",
+        "evidence": [
+          "DOC-27-THIS-CONSIGNMENT",
+          "DOC-27-C-MASS"
+        ],
+        "missing_slots": [],
+        "parameters": {
+          "load_C_kg": 45,
+          "service_B_s": 480
+        },
+        "plan": {
+          "routes": [
+            {
+              "nodes": [
+                0,
+                1,
+                2,
+                3,
+                0
+              ],
+              "vehicle": 0
+            },
+            {
+              "nodes": [
+                0,
+                4,
+                0
+              ],
+              "vehicle": 1
+            }
+          ],
+          "status": "FEASIBLE"
+        }
+      },
+      "transcript_sha256": "5a4c1871d2efd72927f05d0af936a6fe6e9ce7228bb01e6bf1fd238f254a8ada"
+    },
+    "route": "openai",
+    "source_result_member_sha256": "ae1dc90dca03f6e8fea8dad66539fe8361eb8e33bd9afc5975000790f80ef65d",
+    "source_trace_member": "EVAL-27/trace.jsonl",
+    "source_trace_sha256": "5a4c1871d2efd72927f05d0af936a6fe6e9ce7228bb01e6bf1fd238f254a8ada",
+    "status": "completed",
+    "steps": [
+      {
+        "action": "FINAL",
+        "arguments": {
+          "action": "UPDATE",
+          "evidence": [
+            "DOC-27-THIS-CONSIGNMENT",
+            "DOC-27-C-MASS"
+          ],
+          "missing_slots": [],
+          "parameters": {
+            "load_C_kg": 45,
+            "service_B_s": 480
+          },
+          "plan": {
+            "routes": [
+              {
+                "nodes": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  0
+                ],
+                "vehicle": 0
+              },
+              {
+                "nodes": [
+                  0,
+                  4,
+                  0
+                ],
+                "vehicle": 1
+              }
+            ],
+            "status": "FEASIBLE"
+          }
+        },
+        "questions_used": 0,
+        "response": {
+          "status": "SUBMITTED"
+        },
+        "tools_used": 0
+      }
+    ],
+    "tool_invocations": 0
+  },
+  {
+    "assignment_id": "EVAL-28",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "decision": {
+      "action": "UPDATE",
+      "evidence": [
+        "DOC-28-CURRENT-ALLOWANCE",
+        "DOC-28-CURRENT-WEIGHT"
+      ],
+      "missing_slots": [],
+      "parameters": {
+        "load_E_kg": 35,
+        "service_C_s": 300
+      },
+      "plan": {
+        "routes": [
+          {
+            "nodes": [
+              0,
+              1,
+              4,
+              0
+            ],
+            "vehicle": 0
+          },
+          {
+            "nodes": [
+              0,
+              3,
+              5,
+              2,
+              0
+            ],
+            "vehicle": 1
+          }
+        ],
+        "status": "FEASIBLE"
+      }
+    },
+    "episode": "EVAL-28",
+    "evaluation": {
+      "action_correctness": false,
+      "correct_justified_refusal": false,
+      "correct_numeric_plan": false,
+      "correct_proven_infeasibility": false,
+      "deferred_clarify": false,
+      "denominator": 1,
+      "distance_m": 15974,
+      "distance_regret_m": 0,
+      "evidence_grounding": true,
+      "feasibility": true,
+      "independent_outcome_correct": false,
+      "invalid_release_provenance": false,
+      "optional_questions": 0,
+      "reference_outcome": "FEASIBLE_PLAN",
+      "unauthorized_questions": 0,
+      "unnecessary_questions": 0,
+      "unnecessary_refusal": false,
+      "useful_I2": false,
+      "useful_I3": false
+    },
+    "model_responses": 1,
+    "original_model_content_sha256": "d36ebcc7c64b11a1692bce58826ad53418cd295600b76eb9c83d00c737bd287b",
+    "questions": 0,
+    "replay": {
+      "I2": {
+        "admitted": false,
+        "proposal_sha256": "10abb52b21766c4eaa3c780b2e5a534dacd323b099e0e1bda411e0f4d505989f"
+      },
+      "I3": {
+        "admitted": false,
+        "proposal_sha256": "10abb52b21766c4eaa3c780b2e5a534dacd323b099e0e1bda411e0f4d505989f"
+      },
+      "action_correctness": false,
+      "common_errors": [
+        "incorrect_action_semantics"
+      ],
+      "grounding": true,
+      "infeasibility_certificate": null,
+      "proposal_sha256": "10abb52b21766c4eaa3c780b2e5a534dacd323b099e0e1bda411e0f4d505989f",
+      "route_check": {
+        "distance_m": 15974,
+        "elapsed_vehicle_seconds": 4378,
+        "travel_seconds": 2878,
+        "valid": true,
+        "violations": []
+      },
+      "state_I2": null,
+      "state_I3": null,
+      "transcript_sha256": "7c4d0701ad8d1ad03d0a8e3396895dd2d7d98b9abf7a28415034abc9bdbfc22c"
+    },
+    "route": "openai",
+    "source_result_member_sha256": "ae1dc90dca03f6e8fea8dad66539fe8361eb8e33bd9afc5975000790f80ef65d",
+    "source_trace_member": "EVAL-28/trace.jsonl",
+    "source_trace_sha256": "7c4d0701ad8d1ad03d0a8e3396895dd2d7d98b9abf7a28415034abc9bdbfc22c",
+    "status": "completed",
+    "steps": [
+      {
+        "action": "FINAL",
+        "arguments": {
+          "action": "UPDATE",
+          "evidence": [
+            "DOC-28-CURRENT-ALLOWANCE",
+            "DOC-28-CURRENT-WEIGHT"
+          ],
+          "missing_slots": [],
+          "parameters": {
+            "load_E_kg": 35,
+            "service_C_s": 300
+          },
+          "plan": {
+            "routes": [
+              {
+                "nodes": [
+                  0,
+                  1,
+                  4,
+                  0
+                ],
+                "vehicle": 0
+              },
+              {
+                "nodes": [
+                  0,
+                  3,
+                  5,
+                  2,
+                  0
+                ],
+                "vehicle": 1
+              }
+            ],
+            "status": "FEASIBLE"
+          }
+        },
+        "questions_used": 0,
+        "response": {
+          "status": "SUBMITTED"
+        },
+        "tools_used": 0
+      }
+    ],
+    "tool_invocations": 0
+  },
+  {
+    "assignment_id": "EVAL-29",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "decision": {
+      "action": "INSUFFICIENT",
+      "evidence": [
+        "DOC-29-LOAD_A_KG",
+        "DOC-29-VOLUME_A_L",
+        "DOC-29-LENGTH_A_MM",
+        "DOC-29-WIDTH_A_MM",
+        "DOC-29-HEIGHT_A_MM"
+      ],
+      "missing_slots": [
+        "load_A_kg",
+        "volume_A_l",
+        "length_A_mm",
+        "width_A_mm",
+        "height_A_mm"
+      ],
+      "parameters": {},
+      "plan": null
+    },
+    "episode": "EVAL-29",
+    "evaluation": {
+      "action_correctness": null,
+      "correct_justified_refusal": false,
+      "correct_numeric_plan": false,
+      "correct_proven_infeasibility": false,
+      "deferred_clarify": false,
+      "denominator": 1,
+      "distance_m": null,
+      "distance_regret_m": null,
+      "evidence_grounding": null,
+      "feasibility": null,
+      "independent_outcome_correct": false,
+      "invalid_release_provenance": false,
+      "optional_questions": 0,
+      "reference_outcome": "FEASIBLE_PLAN",
+      "unauthorized_questions": 0,
+      "unnecessary_questions": 0,
+      "unnecessary_refusal": true,
+      "useful_I2": false,
+      "useful_I3": false
+    },
+    "model_responses": 1,
+    "original_model_content_sha256": "f8eccc4484ef2624654d76088e28535d0c31eaef0edaa6a6c83d68dc899c71b8",
+    "questions": 0,
+    "replay": {
+      "I2": {
+        "admitted": false,
+        "proposal_sha256": "181e54d7ce8dc9e3d73eeaa2e411412c2bd68e86f73135aad776b237f4d7b726"
+      },
+      "I3": {
+        "admitted": false,
+        "proposal_sha256": "181e54d7ce8dc9e3d73eeaa2e411412c2bd68e86f73135aad776b237f4d7b726"
+      },
+      "action_correctness": null,
+      "common_errors": [
+        "missing_slot_closure",
+        "unexhausted_authoritative_path"
+      ],
+      "grounding": null,
+      "infeasibility_certificate": null,
+      "proposal_sha256": "181e54d7ce8dc9e3d73eeaa2e411412c2bd68e86f73135aad776b237f4d7b726",
+      "route_check": null,
+      "state_I2": null,
+      "state_I3": null,
+      "transcript_sha256": "e60d4b2da377d45c8f6adfd4c02f99a1d223f1ba7ec8ba0c707ccb33e072e0c1"
+    },
+    "route": "openai",
+    "source_result_member_sha256": "ae1dc90dca03f6e8fea8dad66539fe8361eb8e33bd9afc5975000790f80ef65d",
+    "source_trace_member": "EVAL-29/trace.jsonl",
+    "source_trace_sha256": "e60d4b2da377d45c8f6adfd4c02f99a1d223f1ba7ec8ba0c707ccb33e072e0c1",
+    "status": "completed",
+    "steps": [
+      {
+        "action": "FINAL",
+        "arguments": {
+          "action": "INSUFFICIENT",
+          "evidence": [
+            "DOC-29-LOAD_A_KG",
+            "DOC-29-VOLUME_A_L",
+            "DOC-29-LENGTH_A_MM",
+            "DOC-29-WIDTH_A_MM",
+            "DOC-29-HEIGHT_A_MM"
+          ],
+          "missing_slots": [
+            "load_A_kg",
+            "volume_A_l",
+            "length_A_mm",
+            "width_A_mm",
+            "height_A_mm"
+          ],
+          "parameters": {},
+          "plan": null
+        },
+        "questions_used": 0,
+        "response": {
+          "status": "SUBMITTED"
+        },
+        "tools_used": 0
+      }
+    ],
+    "tool_invocations": 0
+  },
+  {
+    "assignment_id": "EVAL-30",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "decision": {
+      "action": "UPDATE",
+      "evidence": [
+        "DOC-30-SERVICE",
+        "DOC-30-MASS",
+        "QUALITY-30-BATCH",
+        "QUALIFICATION-30-FLEET"
+      ],
+      "missing_slots": [],
+      "parameters": {
+        "load_C_kg": 25,
+        "service_A_s": 300
+      },
+      "plan": {
+        "routes": [
+          {
+            "nodes": [
+              0,
+              1,
+              2,
+              0
+            ],
+            "vehicle": 0
+          },
+          {
+            "nodes": [
+              0,
+              3,
+              4,
+              0
+            ],
+            "vehicle": 1
+          }
+        ],
+        "status": "FEASIBLE"
+      }
+    },
+    "episode": "EVAL-30",
+    "evaluation": {
+      "action_correctness": true,
+      "correct_justified_refusal": false,
+      "correct_numeric_plan": true,
+      "correct_proven_infeasibility": false,
+      "deferred_clarify": false,
+      "denominator": 1,
+      "distance_m": 19089,
+      "distance_regret_m": 0,
+      "evidence_grounding": true,
+      "feasibility": true,
+      "independent_outcome_correct": true,
+      "invalid_release_provenance": false,
+      "optional_questions": 0,
+      "reference_outcome": "FEASIBLE_PLAN",
+      "unauthorized_questions": 0,
+      "unnecessary_questions": 0,
+      "unnecessary_refusal": false,
+      "useful_I2": true,
+      "useful_I3": true
+    },
+    "model_responses": 2,
+    "original_model_content_sha256": "10d5bd81051a9a998e6b937e3bb2263335114d6efd4b9659a14bb4f533cdb5aa",
+    "questions": 0,
+    "replay": {
+      "I2": {
+        "admitted": true,
+        "proposal_sha256": "b3d2a3701d6ce7fb4c020c152769e65f27b99f8d4307fc108b6a2d734c601387"
+      },
+      "I3": {
+        "admitted": true,
+        "proposal_sha256": "b3d2a3701d6ce7fb4c020c152769e65f27b99f8d4307fc108b6a2d734c601387"
+      },
+      "action_correctness": true,
+      "common_errors": [],
+      "grounding": true,
+      "infeasibility_certificate": null,
+      "proposal_sha256": "b3d2a3701d6ce7fb4c020c152769e65f27b99f8d4307fc108b6a2d734c601387",
+      "route_check": {
+        "distance_m": 19089,
+        "elapsed_vehicle_seconds": 4639,
+        "travel_seconds": 3439,
+        "valid": true,
+        "violations": []
+      },
+      "state_I2": {
+        "action": "UPDATE",
+        "evidence": [
+          "DOC-30-SERVICE",
+          "DOC-30-MASS",
+          "QUALITY-30-BATCH",
+          "QUALIFICATION-30-FLEET"
+        ],
+        "missing_slots": [],
+        "parameters": {
+          "load_C_kg": 25,
+          "service_A_s": 300
+        },
+        "plan": {
+          "routes": [
+            {
+              "nodes": [
+                0,
+                1,
+                2,
+                0
+              ],
+              "vehicle": 0
+            },
+            {
+              "nodes": [
+                0,
+                3,
+                4,
+                0
+              ],
+              "vehicle": 1
+            }
+          ],
+          "status": "FEASIBLE"
+        }
+      },
+      "state_I3": {
+        "action": "UPDATE",
+        "evidence": [
+          "DOC-30-SERVICE",
+          "DOC-30-MASS",
+          "QUALITY-30-BATCH",
+          "QUALIFICATION-30-FLEET"
+        ],
+        "missing_slots": [],
+        "parameters": {
+          "load_C_kg": 25,
+          "service_A_s": 300
+        },
+        "plan": {
+          "routes": [
+            {
+              "nodes": [
+                0,
+                1,
+                2,
+                0
+              ],
+              "vehicle": 0
+            },
+            {
+              "nodes": [
+                0,
+                3,
+                4,
+                0
+              ],
+              "vehicle": 1
+            }
+          ],
+          "status": "FEASIBLE"
+        }
+      },
+      "transcript_sha256": "be61ed9b2f7b1f67c26e4ba12d79f48b104d2a59b83088195b2ac0f8e7b86487"
+    },
+    "route": "openai",
+    "source_result_member_sha256": "ae1dc90dca03f6e8fea8dad66539fe8361eb8e33bd9afc5975000790f80ef65d",
+    "source_trace_member": "EVAL-30/trace.jsonl",
+    "source_trace_sha256": "be61ed9b2f7b1f67c26e4ba12d79f48b104d2a59b83088195b2ac0f8e7b86487",
+    "status": "completed",
+    "steps": [
+      {
+        "action": "CALL_TOOL",
+        "arguments": {
+          "arguments": {
+            "slot": "service_A_s"
+          },
+          "tool": "lookup_snapshot"
+        },
+        "questions_used": 0,
+        "response": {
+          "status": "PUBLIC_CHANNEL_UNAVAILABLE"
+        },
+        "tools_used": 1
+      },
+      {
+        "action": "FINAL",
+        "arguments": {
+          "action": "UPDATE",
+          "evidence": [
+            "DOC-30-SERVICE",
+            "DOC-30-MASS",
+            "QUALITY-30-BATCH",
+            "QUALIFICATION-30-FLEET"
+          ],
+          "missing_slots": [],
+          "parameters": {
+            "load_C_kg": 25,
+            "service_A_s": 300
+          },
+          "plan": {
+            "routes": [
+              {
+                "nodes": [
+                  0,
+                  1,
+                  2,
+                  0
+                ],
+                "vehicle": 0
+              },
+              {
+                "nodes": [
+                  0,
+                  3,
+                  4,
+                  0
+                ],
+                "vehicle": 1
+              }
+            ],
+            "status": "FEASIBLE"
+          }
+        },
+        "questions_used": 0,
+        "response": {
+          "status": "SUBMITTED"
+        },
+        "tools_used": 1
+      }
+    ],
+    "tool_invocations": 1
+  }
+]

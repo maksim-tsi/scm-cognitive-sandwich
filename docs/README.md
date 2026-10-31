@@ -1,3 +1,7 @@
+> Research navigation: see [the root README](../README.md) and
+> [study packages](../studies/). This documentation tree describes the historical
+> maritime implementation unless a document explicitly states another scope.
+
 # Documentation Index
 
 This directory is the repository source of truth. Keep AGENTS concise and keep details here.

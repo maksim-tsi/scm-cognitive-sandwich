@@ -1,0 +1,2594 @@
+[
+  {
+    "poi_uuid": "0a26de47-78e8-4d8e-8050-26577765688f",
+    "name": "Prix",
+    "osm_elements": [
+      {
+        "type": "way",
+        "id": 30889143,
+        "center_distance_m": 75.0,
+        "tags": {
+          "highway": "trunk_link",
+          "motorcycle:conditional": "no @ (displacement <= 149 cc)",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 39363460,
+        "center_distance_m": 59.2,
+        "tags": {
+          "hgv": "delivery",
+          "highway": "secondary",
+          "name": "Via Montà"
+        }
+      },
+      {
+        "type": "way",
+        "id": 39363506,
+        "center_distance_m": 87.0,
+        "tags": {
+          "highway": "secondary",
+          "name": "Via Montà",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 54318101,
+        "center_distance_m": 101.0,
+        "tags": {
+          "highway": "path"
+        }
+      },
+      {
+        "type": "way",
+        "id": 54318129,
+        "center_distance_m": 66.9,
+        "tags": {
+          "highway": "path"
+        }
+      },
+      {
+        "type": "way",
+        "id": 61491578,
+        "center_distance_m": 59.0,
+        "tags": {
+          "highway": "trunk",
+          "motorcycle:conditional": "no @ (displacement <= 149 cc)",
+          "name": "Cavalcavia San Ignazio di Loyola",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 61491579,
+        "center_distance_m": 95.9,
+        "tags": {
+          "highway": "residential",
+          "name": "Via Paolo Emilio Botta",
+          "oneway": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 110186743,
+        "center_distance_m": 52.8,
+        "tags": {
+          "hgv": "delivery",
+          "highway": "secondary",
+          "name": "Via Montà",
+          "oneway": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 159237706,
+        "center_distance_m": 46.7,
+        "tags": {
+          "hgv": "delivery",
+          "highway": "secondary",
+          "name": "Via Montà"
+        }
+      },
+      {
+        "type": "way",
+        "id": 159238399,
+        "center_distance_m": 66.8,
+        "tags": {
+          "highway": "trunk",
+          "motorcycle:conditional": "no @ (displacement <= 149 cc)",
+          "name": "Cavalcavia San Ignazio di Loyola",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 159238400,
+        "center_distance_m": 77.3,
+        "tags": {
+          "highway": "trunk",
+          "motorcycle:conditional": "no @ (displacement <= 149 cc)",
+          "name": "Cavalcavia San Ignazio di Loyola",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 159238402,
+        "center_distance_m": 73.9,
+        "tags": {
+          "highway": "trunk",
+          "motorcycle:conditional": "no @ (displacement <= 149 cc)",
+          "name": "Cavalcavia San Ignazio di Loyola",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 245099636,
+        "center_distance_m": 72.9,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 245099639,
+        "center_distance_m": 25.3,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 675677122,
+        "center_distance_m": 84.0,
+        "tags": {
+          "highway": "secondary",
+          "name": "Via Montà",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 971996142,
+        "center_distance_m": 43.2,
+        "tags": {
+          "highway": "path"
+        }
+      },
+      {
+        "type": "way",
+        "id": 971999462,
+        "center_distance_m": 76.4,
+        "tags": {
+          "highway": "service",
+          "oneway": "no"
+        }
+      }
+    ],
+    "note": "Way-center distance is an index, not distance to road geometry; tags are unverified mapped data, not legal permission."
+  },
+  {
+    "poi_uuid": "cef0a2a1-3341-4278-b734-fc5457dfa81b",
+    "name": "Interspar Pontevigodarzere",
+    "osm_elements": [
+      {
+        "type": "node",
+        "id": 11528337702,
+        "center_distance_m": 70.5,
+        "tags": {
+          "access": "private",
+          "barrier": "gate"
+        }
+      },
+      {
+        "type": "way",
+        "id": 30891740,
+        "center_distance_m": 77.7,
+        "tags": {
+          "highway": "secondary_link",
+          "name": "Via del Plebiscito 1866",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 80503380,
+        "center_distance_m": 72.8,
+        "tags": {
+          "highway": "trunk_link",
+          "motorcycle:conditional": "no @ (displacement <= 149 cc)",
+          "name": "Via Boves",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 189235872,
+        "center_distance_m": 85.0,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 197944420,
+        "center_distance_m": 78.9,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 197944421,
+        "center_distance_m": 51.1,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 513320820,
+        "center_distance_m": 63.6,
+        "tags": {
+          "highway": "path"
+        }
+      },
+      {
+        "type": "way",
+        "id": 513328661,
+        "center_distance_m": 76.9,
+        "tags": {
+          "highway": "trunk_link",
+          "motorcycle:conditional": "no @ (displacement <= 149 cc)",
+          "name": "Via Boves",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 513328662,
+        "center_distance_m": 40.5,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 513328663,
+        "center_distance_m": 49.7,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 513328664,
+        "center_distance_m": 60.6,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 513328665,
+        "center_distance_m": 35.6,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 513328666,
+        "center_distance_m": 47.2,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 513328667,
+        "center_distance_m": 60.6,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 513328669,
+        "center_distance_m": 47.3,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 513328671,
+        "center_distance_m": 52.1,
+        "tags": {
+          "highway": "service",
+          "maxheight": "2.2",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 513328672,
+        "center_distance_m": 69.4,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 513328675,
+        "center_distance_m": 62.6,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 513328677,
+        "center_distance_m": 83.0,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 513328678,
+        "center_distance_m": 50.2,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 513328686,
+        "center_distance_m": 85.6,
+        "tags": {
+          "highway": "service",
+          "oneway": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 513328687,
+        "center_distance_m": 81.5,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 513376679,
+        "center_distance_m": 56.6,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 513376684,
+        "center_distance_m": 78.6,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 513376688,
+        "center_distance_m": 66.7,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 528960444,
+        "center_distance_m": 74.2,
+        "tags": {
+          "highway": "trunk_link",
+          "motorcycle:conditional": "no @ (displacement <= 149 cc)",
+          "name": "Via Boves",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 758205759,
+        "center_distance_m": 76.8,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 758205760,
+        "center_distance_m": 69.7,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 758205763,
+        "center_distance_m": 80.8,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 758205766,
+        "center_distance_m": 79.2,
+        "tags": {
+          "highway": "path"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1364348629,
+        "center_distance_m": 50.8,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1364348630,
+        "center_distance_m": 66.7,
+        "tags": {
+          "highway": "footway"
+        }
+      }
+    ],
+    "note": "Way-center distance is an index, not distance to road geometry; tags are unverified mapped data, not legal permission."
+  },
+  {
+    "poi_uuid": "ee71fa3e-82e5-46b9-9752-4a584a4c4255",
+    "name": "ALDI Italia",
+    "osm_elements": [
+      {
+        "type": "way",
+        "id": 22919494,
+        "center_distance_m": 99.2,
+        "tags": {
+          "highway": "residential",
+          "name": "Via Volfango Amedeo Mozart",
+          "oneway": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 23512373,
+        "center_distance_m": 38.1,
+        "tags": {
+          "highway": "residential",
+          "name": "Via Ottorino Respighi"
+        }
+      },
+      {
+        "type": "way",
+        "id": 30985075,
+        "center_distance_m": 70.3,
+        "tags": {
+          "highway": "tertiary",
+          "name": "Via Giovanni Battista Viotti",
+          "oneway": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 43178628,
+        "center_distance_m": 77.5,
+        "tags": {
+          "highway": "residential",
+          "name": "Via Luigi Mancinelli",
+          "oneway": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 58442626,
+        "center_distance_m": 59.5,
+        "tags": {
+          "highway": "residential",
+          "name": "Via Ottorino Respighi",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 215427701,
+        "center_distance_m": 87.8,
+        "tags": {
+          "highway": "secondary"
+        }
+      },
+      {
+        "type": "way",
+        "id": 215427704,
+        "center_distance_m": 84.2,
+        "tags": {
+          "highway": "path",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 215427706,
+        "center_distance_m": 57.3,
+        "tags": {
+          "highway": "path",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 215437336,
+        "center_distance_m": 59.1,
+        "tags": {
+          "highway": "path"
+        }
+      },
+      {
+        "type": "way",
+        "id": 267735465,
+        "center_distance_m": 59.3,
+        "tags": {
+          "highway": "path",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 758382630,
+        "center_distance_m": 84.0,
+        "tags": {
+          "highway": "path"
+        }
+      },
+      {
+        "type": "way",
+        "id": 758382632,
+        "center_distance_m": 74.3,
+        "tags": {
+          "highway": "path"
+        }
+      },
+      {
+        "type": "way",
+        "id": 758382633,
+        "center_distance_m": 43.7,
+        "tags": {
+          "highway": "path",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 758383477,
+        "center_distance_m": 79.8,
+        "tags": {
+          "highway": "path"
+        }
+      },
+      {
+        "type": "way",
+        "id": 837531888,
+        "center_distance_m": 59.0,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1376305271,
+        "center_distance_m": 40.9,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1376305272,
+        "center_distance_m": 21.0,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1376305273,
+        "center_distance_m": 35.9,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1376305274,
+        "center_distance_m": 44.9,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1376305282,
+        "center_distance_m": 71.8,
+        "tags": {
+          "highway": "path",
+          "oneway": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1376305283,
+        "center_distance_m": 41.7,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1376305284,
+        "center_distance_m": 13.1,
+        "tags": {
+          "highway": "service",
+          "oneway": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1376305285,
+        "center_distance_m": 23.9,
+        "tags": {
+          "highway": "service",
+          "oneway": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1376305286,
+        "center_distance_m": 41.0,
+        "tags": {
+          "highway": "service",
+          "oneway": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1376305287,
+        "center_distance_m": 32.9,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1376305288,
+        "center_distance_m": 92.9,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1376305289,
+        "center_distance_m": 55.1,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1376473974,
+        "center_distance_m": 10.6,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1376473976,
+        "center_distance_m": 25.2,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1376473977,
+        "center_distance_m": 14.4,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1376473980,
+        "center_distance_m": 78.8,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1376473981,
+        "center_distance_m": 49.3,
+        "tags": {
+          "highway": "service"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1376473982,
+        "center_distance_m": 49.6,
+        "tags": {
+          "highway": "footway"
+        }
+      }
+    ],
+    "note": "Way-center distance is an index, not distance to road geometry; tags are unverified mapped data, not legal permission."
+  },
+  {
+    "poi_uuid": "407d018c-7f6b-4ab1-976e-247e2df9faec",
+    "name": "Lidl Italia",
+    "osm_elements": [
+      {
+        "type": "node",
+        "id": 7082027729,
+        "center_distance_m": 53.7,
+        "tags": {
+          "access": "customers",
+          "barrier": "gate"
+        }
+      },
+      {
+        "type": "way",
+        "id": 28891060,
+        "center_distance_m": 56.0,
+        "tags": {
+          "highway": "unclassified",
+          "name": "Via Cardinale Callegari",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 30984702,
+        "center_distance_m": 81.7,
+        "tags": {
+          "highway": "secondary"
+        }
+      },
+      {
+        "type": "way",
+        "id": 31138528,
+        "center_distance_m": 101.9,
+        "tags": {
+          "highway": "residential",
+          "name": "Via del Bigolo"
+        }
+      },
+      {
+        "type": "way",
+        "id": 58442541,
+        "center_distance_m": 44.1,
+        "tags": {
+          "highway": "unclassified",
+          "name": "Via Cardinale Callegari",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 240482310,
+        "center_distance_m": 43.9,
+        "tags": {
+          "highway": "unclassified",
+          "name": "Via Cardinale Callegari",
+          "oneway": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 240482316,
+        "center_distance_m": 75.6,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 240482325,
+        "center_distance_m": 70.3,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 584850028,
+        "center_distance_m": 26.2,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 584850030,
+        "center_distance_m": 55.8,
+        "tags": {
+          "highway": "service",
+          "oneway": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 584850032,
+        "center_distance_m": 23.1,
+        "tags": {
+          "highway": "service",
+          "oneway": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 584850034,
+        "center_distance_m": 44.0,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 584850036,
+        "center_distance_m": 43.7,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 584850038,
+        "center_distance_m": 26.8,
+        "tags": {
+          "highway": "service"
+        }
+      },
+      {
+        "type": "way",
+        "id": 584850040,
+        "center_distance_m": 22.9,
+        "tags": {
+          "highway": "service",
+          "oneway": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 758326824,
+        "center_distance_m": 55.1,
+        "tags": {
+          "highway": "service"
+        }
+      },
+      {
+        "type": "way",
+        "id": 758328639,
+        "center_distance_m": 69.3,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 758328640,
+        "center_distance_m": 62.1,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 758328641,
+        "center_distance_m": 67.2,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 758328642,
+        "center_distance_m": 88.9,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 758328643,
+        "center_distance_m": 53.8,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1240754158,
+        "center_distance_m": 18.8,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1240754159,
+        "center_distance_m": 56.3,
+        "tags": {
+          "highway": "unclassified",
+          "name": "Via Cardinale Callegari",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1240754160,
+        "center_distance_m": 41.0,
+        "tags": {
+          "highway": "unclassified",
+          "name": "Via Cardinale Callegari",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1240754161,
+        "center_distance_m": 43.0,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1240754162,
+        "center_distance_m": 47.0,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1240754163,
+        "center_distance_m": 55.7,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1240754164,
+        "center_distance_m": 66.1,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1240754165,
+        "center_distance_m": 50.0,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1240754166,
+        "center_distance_m": 54.1,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1240754167,
+        "center_distance_m": 17.9,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1240754168,
+        "center_distance_m": 25.3,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1240754169,
+        "center_distance_m": 42.0,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1240754170,
+        "center_distance_m": 58.7,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1240754172,
+        "center_distance_m": 24.8,
+        "tags": {
+          "highway": "footway"
+        }
+      }
+    ],
+    "note": "Way-center distance is an index, not distance to road geometry; tags are unverified mapped data, not legal permission."
+  },
+  {
+    "poi_uuid": "fa6afb7d-8518-415a-89c4-85b6860ef1d8",
+    "name": "EUROSPAR Altichiero",
+    "osm_elements": [
+      {
+        "type": "node",
+        "id": 1242306799,
+        "center_distance_m": 76.4,
+        "tags": {
+          "barrier": "bollard"
+        }
+      },
+      {
+        "type": "way",
+        "id": 26832383,
+        "center_distance_m": 66.1,
+        "tags": {
+          "highway": "tertiary",
+          "name": "Via Altichiero"
+        }
+      },
+      {
+        "type": "way",
+        "id": 27066077,
+        "center_distance_m": 95.6,
+        "tags": {
+          "highway": "residential",
+          "name": "Via Lago Fimon"
+        }
+      },
+      {
+        "type": "way",
+        "id": 48648544,
+        "center_distance_m": 107.5,
+        "tags": {
+          "highway": "tertiary",
+          "name": "Via Altichiero"
+        }
+      },
+      {
+        "type": "way",
+        "id": 93263178,
+        "center_distance_m": 115.7,
+        "tags": {
+          "highway": "residential",
+          "name": "Via Altichiero"
+        }
+      },
+      {
+        "type": "way",
+        "id": 108248971,
+        "center_distance_m": 77.8,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 245048875,
+        "center_distance_m": 70.4,
+        "tags": {
+          "highway": "path"
+        }
+      },
+      {
+        "type": "way",
+        "id": 245048878,
+        "center_distance_m": 53.4,
+        "tags": {
+          "highway": "path"
+        }
+      },
+      {
+        "type": "way",
+        "id": 245048882,
+        "center_distance_m": 66.6,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 245048883,
+        "center_distance_m": 56.5,
+        "tags": {
+          "highway": "path"
+        }
+      },
+      {
+        "type": "way",
+        "id": 267010224,
+        "center_distance_m": 33.4,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 267010225,
+        "center_distance_m": 30.2,
+        "tags": {
+          "highway": "service"
+        }
+      },
+      {
+        "type": "way",
+        "id": 267010226,
+        "center_distance_m": 18.8,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 267010228,
+        "center_distance_m": 97.9,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 267010229,
+        "center_distance_m": 41.4,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 267010232,
+        "center_distance_m": 1.6,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 755998411,
+        "center_distance_m": 80.2,
+        "tags": {
+          "highway": "path"
+        }
+      }
+    ],
+    "note": "Way-center distance is an index, not distance to road geometry; tags are unverified mapped data, not legal permission."
+  },
+  {
+    "poi_uuid": "8d4b3790-a925-43f0-a369-ee77dc4076bf",
+    "name": "Komok",
+    "osm_elements": [
+      {
+        "type": "node",
+        "id": 11528337717,
+        "center_distance_m": 70.2,
+        "tags": {
+          "barrier": "bollard"
+        }
+      },
+      {
+        "type": "way",
+        "id": 23437340,
+        "center_distance_m": 74.0,
+        "tags": {
+          "highway": "residential",
+          "name": "Via Andrea Colotti"
+        }
+      },
+      {
+        "type": "way",
+        "id": 28733423,
+        "center_distance_m": 25.4,
+        "tags": {
+          "highway": "residential",
+          "name": "Via Ca' Magno",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 58845460,
+        "center_distance_m": 81.8,
+        "tags": {
+          "highway": "residential",
+          "name": "Via Aurelio Nicolodi"
+        }
+      },
+      {
+        "type": "way",
+        "id": 137000813,
+        "center_distance_m": 70.2,
+        "tags": {
+          "highway": "path"
+        }
+      },
+      {
+        "type": "way",
+        "id": 141512217,
+        "center_distance_m": 63.6,
+        "tags": {
+          "highway": "residential",
+          "name": "Via Andrea Colotti"
+        }
+      },
+      {
+        "type": "way",
+        "id": 141512218,
+        "center_distance_m": 98.3,
+        "tags": {
+          "highway": "residential",
+          "name": "Via Andrea Colotti",
+          "oneway": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 141512221,
+        "center_distance_m": 66.8,
+        "tags": {
+          "hgv": "no",
+          "highway": "unclassified",
+          "name": "Via Libero Benedetti",
+          "oneway": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 267630543,
+        "center_distance_m": 69.8,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 324220836,
+        "center_distance_m": 65.5,
+        "tags": {
+          "highway": "unclassified",
+          "name": "Via Libero Benedetti"
+        }
+      },
+      {
+        "type": "way",
+        "id": 324238115,
+        "center_distance_m": 73.2,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 777345332,
+        "center_distance_m": 78.4,
+        "tags": {
+          "highway": "residential",
+          "name": "Via Aurelio Nicolodi"
+        }
+      },
+      {
+        "type": "way",
+        "id": 777345333,
+        "center_distance_m": 55.8,
+        "tags": {
+          "highway": "residential",
+          "name": "Via Aurelio Nicolodi"
+        }
+      },
+      {
+        "type": "way",
+        "id": 837540921,
+        "center_distance_m": 63.4,
+        "tags": {
+          "highway": "path"
+        }
+      },
+      {
+        "type": "way",
+        "id": 837578720,
+        "center_distance_m": 19.1,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1240786866,
+        "center_distance_m": 47.3,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1240786867,
+        "center_distance_m": 59.7,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1549386586,
+        "center_distance_m": 65.1,
+        "tags": {
+          "highway": "footway"
+        }
+      }
+    ],
+    "note": "Way-center distance is an index, not distance to road geometry; tags are unverified mapped data, not legal permission."
+  },
+  {
+    "poi_uuid": "8a5f5233-9e7b-478f-bd1e-62801722936d",
+    "name": "Alimentari, Pane e Salumi Antonella e Katiuscia",
+    "osm_elements": [
+      {
+        "type": "way",
+        "id": 39362640,
+        "center_distance_m": 106.0,
+        "tags": {
+          "highway": "secondary",
+          "name": "Via Montà"
+        }
+      },
+      {
+        "type": "way",
+        "id": 39607127,
+        "center_distance_m": 112.8,
+        "tags": {
+          "highway": "residential",
+          "name": "Via Giovanni Miani"
+        }
+      },
+      {
+        "type": "way",
+        "id": 245102931,
+        "center_distance_m": 100.0,
+        "tags": {
+          "highway": "residential",
+          "name": "Via Ca' Rinaldini"
+        }
+      },
+      {
+        "type": "way",
+        "id": 566630233,
+        "center_distance_m": 9.1,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 566630235,
+        "center_distance_m": 30.8,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1334284439,
+        "center_distance_m": 50.5,
+        "tags": {
+          "highway": "path"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1334284440,
+        "center_distance_m": 75.5,
+        "tags": {
+          "highway": "path"
+        }
+      }
+    ],
+    "note": "Way-center distance is an index, not distance to road geometry; tags are unverified mapped data, not legal permission."
+  },
+  {
+    "poi_uuid": "5fd41848-bff2-462f-9816-df38299e1e74",
+    "name": "Ali Supermercati",
+    "osm_elements": [
+      {
+        "type": "node",
+        "id": 5806319656,
+        "center_distance_m": 59.8,
+        "tags": {
+          "barrier": "bollard"
+        }
+      },
+      {
+        "type": "way",
+        "id": 22699219,
+        "center_distance_m": 25.2,
+        "tags": {
+          "highway": "residential",
+          "name": "Via Giannantonio Selva"
+        }
+      },
+      {
+        "type": "way",
+        "id": 22700957,
+        "center_distance_m": 50.7,
+        "tags": {
+          "highway": "residential",
+          "name": "Via Ragusa"
+        }
+      },
+      {
+        "type": "way",
+        "id": 22700988,
+        "center_distance_m": 103.9,
+        "tags": {
+          "highway": "residential",
+          "name": "Via Dignano",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 23228880,
+        "center_distance_m": 44.3,
+        "tags": {
+          "highway": "residential",
+          "name": "Via Curzola"
+        }
+      },
+      {
+        "type": "way",
+        "id": 37279936,
+        "center_distance_m": 92.6,
+        "tags": {
+          "highway": "residential",
+          "name": "Via Raffaello Sanzio"
+        }
+      },
+      {
+        "type": "way",
+        "id": 188335383,
+        "center_distance_m": 67.2,
+        "tags": {
+          "highway": "pedestrian"
+        }
+      },
+      {
+        "type": "way",
+        "id": 613718124,
+        "center_distance_m": 61.3,
+        "tags": {
+          "highway": "footway"
+        }
+      }
+    ],
+    "note": "Way-center distance is an index, not distance to road geometry; tags are unverified mapped data, not legal permission."
+  },
+  {
+    "poi_uuid": "c45a0c5e-1cf4-452e-917e-494256a7270b",
+    "name": "Magazinul Romanesc Bacania cu Suflet",
+    "osm_elements": [
+      {
+        "type": "way",
+        "id": 22700867,
+        "center_distance_m": 112.2,
+        "tags": {
+          "highway": "residential",
+          "name": "Via Giovanni d'Alemagna",
+          "oneway": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 22700877,
+        "center_distance_m": 80.3,
+        "tags": {
+          "highway": "residential",
+          "name": "Via Domenico Morelli"
+        }
+      },
+      {
+        "type": "way",
+        "id": 22719161,
+        "center_distance_m": 81.3,
+        "tags": {
+          "highway": "residential",
+          "name": "Via Gasparo Colombina"
+        }
+      },
+      {
+        "type": "way",
+        "id": 22719319,
+        "center_distance_m": 67.5,
+        "tags": {
+          "highway": "footway",
+          "name": "Via Girolamo Forabosco"
+        }
+      },
+      {
+        "type": "way",
+        "id": 22719329,
+        "center_distance_m": 114.0,
+        "tags": {
+          "highway": "residential",
+          "name": "Via Filippo Parodi"
+        }
+      },
+      {
+        "type": "way",
+        "id": 58128261,
+        "center_distance_m": 36.6,
+        "tags": {
+          "highway": "footway",
+          "name": "Via Giovanni d'Alemagna"
+        }
+      },
+      {
+        "type": "way",
+        "id": 58128271,
+        "center_distance_m": 33.6,
+        "tags": {
+          "highway": "pedestrian",
+          "name": "Via Giovanni d'Alemagna"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1304924445,
+        "center_distance_m": 15.7,
+        "tags": {
+          "highway": "residential"
+        }
+      }
+    ],
+    "note": "Way-center distance is an index, not distance to road geometry; tags are unverified mapped data, not legal permission."
+  },
+  {
+    "poi_uuid": "6937e1ed-12f6-48e2-b2f7-fa9c092c0f58",
+    "name": "Alì",
+    "osm_elements": [
+      {
+        "type": "way",
+        "id": 24376134,
+        "center_distance_m": 90.5,
+        "tags": {
+          "highway": "tertiary",
+          "name": "Via Andrea Verrocchio"
+        }
+      },
+      {
+        "type": "way",
+        "id": 24376135,
+        "center_distance_m": 90.7,
+        "tags": {
+          "highway": "unclassified",
+          "name": "Via Andrea Verrocchio",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 49954079,
+        "center_distance_m": 77.6,
+        "tags": {
+          "highway": "residential",
+          "name": "Via Telemaco Signorini",
+          "vehicle": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 81131637,
+        "center_distance_m": 89.0,
+        "tags": {
+          "highway": "unclassified",
+          "name": "Via Telemaco Signorini",
+          "oneway": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 81131642,
+        "center_distance_m": 106.0,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 171066269,
+        "center_distance_m": 72.0,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 171066272,
+        "center_distance_m": 81.7,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 171066273,
+        "center_distance_m": 28.9,
+        "tags": {
+          "highway": "service"
+        }
+      },
+      {
+        "type": "way",
+        "id": 171066279,
+        "center_distance_m": 40.0,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 171066284,
+        "center_distance_m": 24.2,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 683234689,
+        "center_distance_m": 62.3,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 724165969,
+        "center_distance_m": 93.9,
+        "tags": {
+          "highway": "service",
+          "oneway": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 877608673,
+        "center_distance_m": 45.8,
+        "tags": {
+          "highway": "service"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1266053382,
+        "center_distance_m": 85.3,
+        "tags": {
+          "highway": "path"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1362727679,
+        "center_distance_m": 22.4,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1362727680,
+        "center_distance_m": 44.9,
+        "tags": {
+          "highway": "service",
+          "oneway": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1362727681,
+        "center_distance_m": 61.5,
+        "tags": {
+          "highway": "path"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1364480821,
+        "center_distance_m": 91.2,
+        "tags": {
+          "highway": "service"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1373398230,
+        "center_distance_m": 15.1,
+        "tags": {
+          "highway": "cycleway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1373398231,
+        "center_distance_m": 14.1,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1373398232,
+        "center_distance_m": 23.3,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1373398233,
+        "center_distance_m": 52.0,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1373398234,
+        "center_distance_m": 6.7,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1373398235,
+        "center_distance_m": 41.0,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1373398236,
+        "center_distance_m": 16.3,
+        "tags": {
+          "highway": "path"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1373398237,
+        "center_distance_m": 114.3,
+        "tags": {
+          "highway": "service",
+          "oneway": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1377178311,
+        "center_distance_m": 51.9,
+        "tags": {
+          "highway": "unclassified",
+          "motor_vehicle": "no",
+          "name": "Via Telemaco Signorini",
+          "oneway": "no",
+          "vehicle": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1377178312,
+        "center_distance_m": 38.3,
+        "tags": {
+          "highway": "unclassified",
+          "name": "Via Telemaco Signorini",
+          "oneway": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1377178313,
+        "center_distance_m": 107.4,
+        "tags": {
+          "highway": "unclassified",
+          "name": "Via Telemaco Signorini",
+          "oneway": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1377178315,
+        "center_distance_m": 79.8,
+        "tags": {
+          "highway": "residential",
+          "name": "Via Telemaco Signorini",
+          "vehicle": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1426063266,
+        "center_distance_m": 28.3,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1426063267,
+        "center_distance_m": 28.2,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1426063268,
+        "center_distance_m": 30.5,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1431529042,
+        "center_distance_m": 56.5,
+        "tags": {
+          "highway": "service"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1431533294,
+        "center_distance_m": 26.4,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1431537165,
+        "center_distance_m": 34.8,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1431537335,
+        "center_distance_m": 85.9,
+        "tags": {
+          "highway": "service"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1549386569,
+        "center_distance_m": 78.5,
+        "tags": {
+          "highway": "service"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1549386571,
+        "center_distance_m": 40.7,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1549386572,
+        "center_distance_m": 67.3,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1549386573,
+        "center_distance_m": 67.4,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1549386574,
+        "center_distance_m": 81.9,
+        "tags": {
+          "highway": "footway"
+        }
+      }
+    ],
+    "note": "Way-center distance is an index, not distance to road geometry; tags are unverified mapped data, not legal permission."
+  },
+  {
+    "poi_uuid": "2fadb7f2-b5b3-4723-8a71-ead1ff13427e",
+    "name": "Pam Padova San Carlo",
+    "osm_elements": [
+      {
+        "type": "node",
+        "id": 6633528647,
+        "center_distance_m": 73.9,
+        "tags": {
+          "barrier": "kerb"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6633528648,
+        "center_distance_m": 59.9,
+        "tags": {
+          "barrier": "kerb"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6633532514,
+        "center_distance_m": 59.4,
+        "tags": {
+          "barrier": "kerb"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6633532515,
+        "center_distance_m": 67.8,
+        "tags": {
+          "barrier": "kerb"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6633532534,
+        "center_distance_m": 78.3,
+        "tags": {
+          "barrier": "kerb"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6633532536,
+        "center_distance_m": 74.1,
+        "tags": {
+          "barrier": "kerb"
+        }
+      },
+      {
+        "type": "way",
+        "id": 23437293,
+        "center_distance_m": 92.0,
+        "tags": {
+          "highway": "residential",
+          "name": "Via Raffaele Lambruschini"
+        }
+      },
+      {
+        "type": "way",
+        "id": 23437295,
+        "center_distance_m": 109.8,
+        "tags": {
+          "highway": "residential",
+          "name": "Via Beato Giuseppe Cottolengo"
+        }
+      },
+      {
+        "type": "way",
+        "id": 23437302,
+        "center_distance_m": 96.6,
+        "tags": {
+          "highway": "service",
+          "oneway": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 58845812,
+        "center_distance_m": 102.0,
+        "tags": {
+          "highway": "unclassified",
+          "name": "Via Antonio Zanchi",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 58901823,
+        "center_distance_m": 14.3,
+        "tags": {
+          "highway": "footway",
+          "name": "Galleria San Carlo"
+        }
+      },
+      {
+        "type": "way",
+        "id": 705903523,
+        "center_distance_m": 58.2,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 705990181,
+        "center_distance_m": 67.3,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 705992207,
+        "center_distance_m": 97.6,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 705992208,
+        "center_distance_m": 65.4,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 705992209,
+        "center_distance_m": 59.5,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 705992210,
+        "center_distance_m": 76.2,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 705992211,
+        "center_distance_m": 74.5,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 705992212,
+        "center_distance_m": 63.4,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 705993164,
+        "center_distance_m": 97.7,
+        "tags": {
+          "highway": "service",
+          "oneway": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 705993165,
+        "center_distance_m": 97.0,
+        "tags": {
+          "highway": "service",
+          "oneway": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 705993166,
+        "center_distance_m": 80.6,
+        "tags": {
+          "highway": "service",
+          "oneway": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 705993167,
+        "center_distance_m": 89.9,
+        "tags": {
+          "highway": "service",
+          "oneway": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 705993168,
+        "center_distance_m": 83.7,
+        "tags": {
+          "highway": "service",
+          "oneway": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 706020552,
+        "center_distance_m": 75.3,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1276213406,
+        "center_distance_m": 61.9,
+        "tags": {
+          "highway": "tertiary",
+          "name": "Via Guido Reni",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1433533693,
+        "center_distance_m": 69.3,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1455552405,
+        "center_distance_m": 85.3,
+        "tags": {
+          "highway": "service",
+          "oneway": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1489443125,
+        "center_distance_m": 68.6,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1521255134,
+        "center_distance_m": 35.7,
+        "tags": {
+          "highway": "footway",
+          "name": "Galleria San Carlo"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1521255135,
+        "center_distance_m": 74.6,
+        "tags": {
+          "highway": "footway"
+        }
+      }
+    ],
+    "note": "Way-center distance is an index, not distance to road geometry; tags are unverified mapped data, not legal permission."
+  },
+  {
+    "poi_uuid": "d7d47f5a-c634-42cd-b83e-d9f5683afe4a",
+    "name": "Alìper",
+    "osm_elements": [
+      {
+        "type": "node",
+        "id": 1978077652,
+        "center_distance_m": 40.0,
+        "tags": {
+          "barrier": "gate"
+        }
+      },
+      {
+        "type": "node",
+        "id": 2730729649,
+        "center_distance_m": 50.3,
+        "tags": {
+          "barrier": "bollard"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7253202615,
+        "center_distance_m": 60.3,
+        "tags": {
+          "barrier": "bollard"
+        }
+      },
+      {
+        "type": "way",
+        "id": 23437321,
+        "center_distance_m": 105.6,
+        "tags": {
+          "highway": "unclassified",
+          "name": "Via Vittorio Saetta"
+        }
+      },
+      {
+        "type": "way",
+        "id": 23437331,
+        "center_distance_m": 39.6,
+        "tags": {
+          "highway": "service"
+        }
+      },
+      {
+        "type": "way",
+        "id": 48153764,
+        "center_distance_m": 42.8,
+        "tags": {
+          "highway": "unclassified",
+          "name": "Via Vittorio Saetta"
+        }
+      },
+      {
+        "type": "way",
+        "id": 48491045,
+        "center_distance_m": 87.5,
+        "tags": {
+          "highway": "residential",
+          "name": "Via Leonardo da Vinci"
+        }
+      },
+      {
+        "type": "way",
+        "id": 58442491,
+        "center_distance_m": 110.9,
+        "tags": {
+          "highway": "residential",
+          "name": "Via Tiziano Vecellio"
+        }
+      },
+      {
+        "type": "way",
+        "id": 58442500,
+        "center_distance_m": 101.4,
+        "tags": {
+          "highway": "residential",
+          "name": "Via Tiziano Vecellio"
+        }
+      },
+      {
+        "type": "way",
+        "id": 267630542,
+        "center_distance_m": 50.8,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 267635732,
+        "center_distance_m": 56.4,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 267635733,
+        "center_distance_m": 37.3,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 777319567,
+        "center_distance_m": 112.1,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 777319568,
+        "center_distance_m": 22.4,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 777319569,
+        "center_distance_m": 49.4,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 777319570,
+        "center_distance_m": 52.1,
+        "tags": {
+          "access": "customers",
+          "highway": "service",
+          "oneway": "no"
+        }
+      },
+      {
+        "type": "way",
+        "id": 777319571,
+        "center_distance_m": 41.9,
+        "tags": {
+          "highway": "unclassified",
+          "name": "Via Vittorio Saetta"
+        }
+      },
+      {
+        "type": "way",
+        "id": 777319572,
+        "center_distance_m": 40.3,
+        "tags": {
+          "access": "customers",
+          "highway": "service"
+        }
+      },
+      {
+        "type": "way",
+        "id": 777319573,
+        "center_distance_m": 39.4,
+        "tags": {
+          "access": "customers",
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 777319575,
+        "center_distance_m": 44.5,
+        "tags": {
+          "access": "customers",
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 777319578,
+        "center_distance_m": 50.9,
+        "tags": {
+          "access": "customers",
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 777321535,
+        "center_distance_m": 69.7,
+        "tags": {
+          "highway": "path"
+        }
+      },
+      {
+        "type": "way",
+        "id": 777321536,
+        "center_distance_m": 81.7,
+        "tags": {
+          "highway": "path"
+        }
+      },
+      {
+        "type": "way",
+        "id": 777321539,
+        "center_distance_m": 55.3,
+        "tags": {
+          "highway": "path"
+        }
+      },
+      {
+        "type": "way",
+        "id": 777321540,
+        "center_distance_m": 7.3,
+        "tags": {
+          "highway": "path"
+        }
+      },
+      {
+        "type": "way",
+        "id": 777321541,
+        "center_distance_m": 58.0,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 906615865,
+        "center_distance_m": 89.8,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 953272277,
+        "center_distance_m": 57.4,
+        "tags": {
+          "highway": "service",
+          "maxheight": "2.2",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 956295035,
+        "center_distance_m": 25.5,
+        "tags": {
+          "highway": "service"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1435906455,
+        "center_distance_m": 69.8,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1435906456,
+        "center_distance_m": 67.1,
+        "tags": {
+          "highway": "service"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1443253364,
+        "center_distance_m": 45.7,
+        "tags": {
+          "highway": "service",
+          "oneway": "yes"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1443253365,
+        "center_distance_m": 33.4,
+        "tags": {
+          "highway": "service"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1443253366,
+        "center_distance_m": 31.1,
+        "tags": {
+          "highway": "service"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1443253367,
+        "center_distance_m": 41.1,
+        "tags": {
+          "highway": "service"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1443253368,
+        "center_distance_m": 30.0,
+        "tags": {
+          "highway": "service"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1443253369,
+        "center_distance_m": 14.4,
+        "tags": {
+          "highway": "service"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1443253370,
+        "center_distance_m": 21.9,
+        "tags": {
+          "highway": "service"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1455552415,
+        "center_distance_m": 100.4,
+        "tags": {
+          "highway": "path"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1505923340,
+        "center_distance_m": 44.9,
+        "tags": {
+          "highway": "footway"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1505923341,
+        "center_distance_m": 53.3,
+        "tags": {
+          "highway": "footway"
+        }
+      }
+    ],
+    "note": "Way-center distance is an index, not distance to road geometry; tags are unverified mapped data, not legal permission."
+  }
+]

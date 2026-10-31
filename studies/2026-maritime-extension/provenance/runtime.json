@@ -1,0 +1,14 @@
+{
+  "highs": "1.13.1",
+  "interpreter_sha256": "0bc42377169d872ae088df13bac3b7ef70b633657cacb0d234caa2021049b99c",
+  "new_scientific_runs": 0,
+  "pyomo": "6.10.0",
+  "python": "3.13.11",
+  "scientific_code_semantics_changed": false,
+  "scm_configuration_hashes": {
+    "pyproject.toml": "28562a693282b6c1512ba91e76bc6ffdb8b6e474c7cd2e41fd3b35ea6df1e85f",
+    "uv.lock": "d918a4b6129df62d9849f176a680e7c3324ff49e04b837a0bba5f3e780d482be"
+  },
+  "source_sandbox_commit": "e8fc50efdc64b0668c852583897d9f51f120fde8",
+  "source_scm_commit": "c5b11102f89c67d3c5667cc8ac16e39ae47d86a6"
+}

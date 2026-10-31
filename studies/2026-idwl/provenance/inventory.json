@@ -1,0 +1,54 @@
+{
+  "snapshot_commit": "1be281e1ed80f3fc194181292115ecfc13176209",
+  "snapshot_date": "2026-05-31",
+  "relation_to_executed_paper": "pre-workshop repository anchor; exact executed runtime is not inferred from branch date",
+  "files": [
+    {
+      "historical_path": "data/scenarios_idwl_v1.csv",
+      "source_commit": "1be281e1ed80f3fc194181292115ecfc13176209",
+      "sha256": "b1bdf197a4b45cf8e5bcf5706b25209d0b02d991f92ea9fd1f9ed7e9ed49bac6",
+      "url": "https://github.com/maksim-tsi/scm-cognitive-sandwich/blob/1be281e1ed80f3fc194181292115ecfc13176209/data/scenarios_idwl_v1.csv"
+    },
+    {
+      "historical_path": "data/results_idwl_v1.csv",
+      "source_commit": "1be281e1ed80f3fc194181292115ecfc13176209",
+      "sha256": "50fd85295f144353b08f32701f709a91a6c2b435b45bb9fa05fe0768e664e65d",
+      "url": "https://github.com/maksim-tsi/scm-cognitive-sandwich/blob/1be281e1ed80f3fc194181292115ecfc13176209/data/results_idwl_v1.csv"
+    },
+    {
+      "historical_path": "data/results_variant_b_batch.csv",
+      "source_commit": "1be281e1ed80f3fc194181292115ecfc13176209",
+      "sha256": "f4aca2fc2fe662dd4dfd98d8239d439c186786483e263fa09860d3d7baa06286",
+      "url": "https://github.com/maksim-tsi/scm-cognitive-sandwich/blob/1be281e1ed80f3fc194181292115ecfc13176209/data/results_variant_b_batch.csv"
+    },
+    {
+      "historical_path": "src/agents/prompts.py",
+      "source_commit": "1be281e1ed80f3fc194181292115ecfc13176209",
+      "sha256": "0f553799c57905f7dce0a8875b1d923e4d74d652cec6ce345e4da042c5d85a52",
+      "url": "https://github.com/maksim-tsi/scm-cognitive-sandwich/blob/1be281e1ed80f3fc194181292115ecfc13176209/src/agents/prompts.py"
+    },
+    {
+      "historical_path": "src/solver/routing_model.py",
+      "source_commit": "1be281e1ed80f3fc194181292115ecfc13176209",
+      "sha256": "532e5e990c6d0c2ae2ae6bd063fb91647ff0b84f5f3a32f1410cc9797a181583",
+      "url": "https://github.com/maksim-tsi/scm-cognitive-sandwich/blob/1be281e1ed80f3fc194181292115ecfc13176209/src/solver/routing_model.py"
+    },
+    {
+      "historical_path": "scripts/generate_dataset.py",
+      "source_commit": "1be281e1ed80f3fc194181292115ecfc13176209",
+      "sha256": "63bdd4f413a80b1f0f5079108802d6fee0d575c83b34b1b11449fb209796cda5",
+      "url": "https://github.com/maksim-tsi/scm-cognitive-sandwich/blob/1be281e1ed80f3fc194181292115ecfc13176209/scripts/generate_dataset.py"
+    },
+    {
+      "historical_path": "docs/reports/final_empirical_evidence_idwl.md",
+      "source_commit": "1be281e1ed80f3fc194181292115ecfc13176209",
+      "sha256": "5fb5871da22c9c497ca964996836815335e930ae113eaf1ff8973c7bd4a38f10",
+      "url": "https://github.com/maksim-tsi/scm-cognitive-sandwich/blob/1be281e1ed80f3fc194181292115ecfc13176209/docs/reports/final_empirical_evidence_idwl.md"
+    }
+  ],
+  "row_counts": {
+    "data/scenarios_idwl_v1.csv": 100,
+    "data/results_idwl_v1.csv": 78,
+    "data/results_variant_b_batch.csv": 66
+  }
+}

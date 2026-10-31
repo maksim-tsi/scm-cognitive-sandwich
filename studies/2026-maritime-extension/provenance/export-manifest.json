@@ -1,0 +1,214 @@
+{
+  "accepted_scientific_tip": "ee085896959852330858b0e64d869aa875f9aae5",
+  "files": [
+    {
+      "path": "evidence/accepted-outcome.json",
+      "sha256": "f49eabc17dc177a43c758657f0388bb9001aada37b36db860e1c63ac14a8116f",
+      "source": "docs/stages/R4-v5-Phase-B/scientific-execution-outcome.json",
+      "source_sha256": "f84a9b367bd84b64df79edd126996ada4bf76fb062cb551841bbc2b6a3b72f61",
+      "transformation": "allowlisted projection"
+    },
+    {
+      "path": "evidence/accepted-metrics.json",
+      "sha256": "e83a59c67c51e7bc315b70da51f37e2c259f2f2f417c1199059f34294b19edc9",
+      "source": "paper/r4-v5-metrics-summary.json",
+      "source_sha256": "748f97784b70d81d11f0d674c7e5eb1dad4778667b84a379d16eb567ae7cca62",
+      "transformation": "allowlisted projection"
+    },
+    {
+      "path": "evidence/terminals.jsonl",
+      "sha256": "b46cd74e4cc966a3dbaacdb0be3e3ec3752f83813eb612fdfc06b875279aaa38",
+      "source": "accepted-local-evidence:output/terminals.jsonl",
+      "source_sha256": "b46cd74e4cc966a3dbaacdb0be3e3ec3752f83813eb612fdfc06b875279aaa38",
+      "transformation": "byte-identical; allowlist-schema audited"
+    },
+    {
+      "path": "evidence/des-replications.jsonl",
+      "sha256": "0ef336c160f887df5e6190ef868dac70f3a9642eabc37ee0116d2371de633b5f",
+      "source": "accepted-local-evidence:output/des-replications.jsonl",
+      "source_sha256": "0ef336c160f887df5e6190ef868dac70f3a9642eabc37ee0116d2371de633b5f",
+      "transformation": "byte-identical; allowlist-schema audited"
+    },
+    {
+      "path": "logs/operation-events.jsonl",
+      "sha256": "1fb8a02d3e0296d3a5cbf1b755a17442799c09e6430a19c077816319894f0f9c",
+      "source": "accepted-local-evidence:ledger.jsonl",
+      "source_sha256": "1fb8a02d3e0296d3a5cbf1b755a17442799c09e6430a19c077816319894f0f9c",
+      "transformation": "byte-identical; allowlist-schema audited"
+    },
+    {
+      "path": "evidence/analysis.json",
+      "sha256": "80ce8d1baefd42081582b64f733f1737357df9b400c372a2f55630fdfd8d984b",
+      "source": "accepted-local-evidence:output/analysis.json",
+      "source_sha256": "80ce8d1baefd42081582b64f733f1737357df9b400c372a2f55630fdfd8d984b",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/analysis.py",
+      "sha256": "ec3fde78a69997cd5227f985143c933388662b94851abf0e6016943dc514def0",
+      "source": "tools/r4_phase_b_v5_analysis.py",
+      "source_sha256": "ec3fde78a69997cd5227f985143c933388662b94851abf0e6016943dc514def0",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/sandbox/src/services/artifact_validator.py",
+      "sha256": "e5600b3359c71faf15f624018e2a23ff04e7fd1b784b42ab904befba3aebbd66",
+      "source": "sandbox@e8fc50efdc64b0668c852583897d9f51f120fde8:src/services/artifact_validator.py",
+      "source_sha256": "e5600b3359c71faf15f624018e2a23ff04e7fd1b784b42ab904befba3aebbd66",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/sandbox/src/services/allocation_reference.py",
+      "sha256": "6e78caa44983b551583734b39093a20ecb13b60f3f54e00fe26b789c56aa9fed",
+      "source": "sandbox@e8fc50efdc64b0668c852583897d9f51f120fde8:src/services/allocation_reference.py",
+      "source_sha256": "6e78caa44983b551583734b39093a20ecb13b60f3f54e00fe26b789c56aa9fed",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/sandbox/src/services/des_admission.py",
+      "sha256": "2c8a6b79d49e9b0bc38336876c3c58daeb2992255296c80a201cb8048ee5660a",
+      "source": "sandbox@e8fc50efdc64b0668c852583897d9f51f120fde8:src/services/des_admission.py",
+      "source_sha256": "2c8a6b79d49e9b0bc38336876c3c58daeb2992255296c80a201cb8048ee5660a",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/sandbox/src/services/r4_phase_a_des.py",
+      "sha256": "0da483d4a393f7bd270abf0e4d2cfc8f4269499ee5e74d493055717cab170505",
+      "source": "sandbox@e8fc50efdc64b0668c852583897d9f51f120fde8:src/services/r4_phase_a_des.py",
+      "source_sha256": "0da483d4a393f7bd270abf0e4d2cfc8f4269499ee5e74d493055717cab170505",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/sandbox/src/services/scenario_generator.py",
+      "sha256": "5ae9d184a7b211f88b4585b880e00cdf1b92590d7306a881b3bc02ba6a21b4a2",
+      "source": "sandbox@e8fc50efdc64b0668c852583897d9f51f120fde8:src/services/scenario_generator.py",
+      "source_sha256": "5ae9d184a7b211f88b4585b880e00cdf1b92590d7306a881b3bc02ba6a21b4a2",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/sandbox/pyproject.toml",
+      "sha256": "2810823a6371d78c8c5121064acdd805ba8705f7824ce7e54c3fef8d79da9bc9",
+      "source": "sandbox@e8fc50efdc64b0668c852583897d9f51f120fde8:pyproject.toml",
+      "source_sha256": "2810823a6371d78c8c5121064acdd805ba8705f7824ce7e54c3fef8d79da9bc9",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/controller-excerpts.py",
+      "sha256": "2e08d3fe3d7c9aaa55786432a997f40bb10940a8dc221cceb4763bb59e84a1aa",
+      "source": "tools/r4_phase_b_v5_pipeline.py",
+      "source_sha256": "b94d247b7fbc544313a510e4cb1abcf9b879420c6c245dfa7cfff43820e34fac",
+      "transformation": "verbatim named source excerpts: canonical, sha_bytes, atomic_json, append_event, ConditionTerminal, InvocationResult, missing_terminal, Controller, _whole_unit_missing, validate_des_rows, recover_interrupted_operation"
+    },
+    {
+      "path": "code/acceptance-adapter-excerpts.py",
+      "sha256": "58496e810485d01fef51d9a4a3de8be49ab9dde48c8ccb67a01bce340699fe1d",
+      "source": "tools/r4_phase_b_scientific.py",
+      "source_sha256": "5ecd2b48bc8d036c56452323ada424374e0a1b14c83ed1de046c18df60087dc1",
+      "transformation": "verbatim named source excerpts: PhaseBAuthorities"
+    },
+    {
+      "path": "code/direct-response-excerpts.py",
+      "sha256": "e9ebeeabf112f80fa9e49a1b87968ebfaec72fcc768b6585b8bbd819aacd0944",
+      "source": "tools/r4q_v6_direct.py",
+      "source_sha256": "feee88f57d6baf34fb9f8e1694ce6d714cf3199e1d5e6dcd54bb29ddb9040f12",
+      "transformation": "verbatim named source excerpts: DirectReply, DirectProviderError, classify_http, parse_response"
+    },
+    {
+      "path": "code/phoenix-reconciliation-excerpts.py",
+      "sha256": "c27887368a508c3918fe79e2c14f9992487ac324d4ecef1fdb313402282a343d",
+      "source": "tools/r4_observability_reconciliation_v2.py",
+      "source_sha256": "e701736143c50257e755c4e34e1b98ee8b7ab949dc7087a886a3af13e5b0c8da",
+      "transformation": "verbatim named source excerpts: ReconciliationDiagnostic, target_trace_diagnostic, R4PhoenixTraceSink"
+    },
+    {
+      "path": "provenance/runtime.json",
+      "sha256": "c35e59f930e2ebed6ec5a215577980747ded54771ee0170af3941fd69d9e32ba",
+      "source": "docs/stages/R4-v5/provider-free-runtime-bindings.json",
+      "source_sha256": "67612e7b93f7b359a01a9b09b4f213c31bf3974a2cf08e072641ed7933c6ee02",
+      "transformation": "allowlisted projection"
+    },
+    {
+      "path": "README.md",
+      "sha256": "0de95c242ddab3f388bbe875250f4fb59e9b7504e859ba626d58377882ccf296",
+      "source": "revision-2 editorial artifact",
+      "transformation": "editorial update only; accepted evidence unchanged"
+    },
+    {
+      "path": "paper/IEEEtran.bst",
+      "sha256": "314f0ece704568faf827011bac498650691b2b5ee06320720830e782416d5a5f",
+      "source": "revision-1 editorial/export artifact",
+      "transformation": "authored or copied for revision 1"
+    },
+    {
+      "path": "paper/IEEEtran.cls",
+      "sha256": "ceb35c4724fe01f4737e9526e076b9914c0cba6c30a81e3d3b7d98377f356c84",
+      "source": "revision-1 editorial/export artifact",
+      "transformation": "authored or copied for revision 1"
+    },
+    {
+      "path": "paper/figures/r5-architecture.pdf",
+      "sha256": "daa59fca7fe87b41e8261cccee9101e7557a3d75a063caa1d41d5274adccaaf4",
+      "source": "revision-1 editorial/export artifact",
+      "transformation": "authored or copied for revision 1"
+    },
+    {
+      "path": "paper/figures/r5-architecture.tex",
+      "sha256": "7a3e4b1745cb590b91b10c531100f1c0fd5ae79052b5d3004b5dad1cc7a56f35",
+      "source": "revision-1 editorial/export artifact",
+      "transformation": "authored or copied for revision 1"
+    },
+    {
+      "path": "paper/icecer-2026-paper-revised-v1.pdf",
+      "sha256": "9e7e9c9eddcef9735684ba561ac414668bb881d4bea87ba35167e2673b1af21d",
+      "source": "revision-1 editorial/export artifact",
+      "transformation": "authored or copied for revision 1"
+    },
+    {
+      "path": "paper/icecer-2026-paper-revised-v1.tex",
+      "sha256": "43a2b74f3e75e853ec92eadf4ce1933384aac4af05cc4248858cb7883a899de9",
+      "source": "revision-1 editorial/export artifact",
+      "transformation": "authored or copied for revision 1"
+    },
+    {
+      "path": "paper/manuscript.md",
+      "sha256": "7be9133c1a593e25675372baeb5241f9409ddcc658355f1f7430b4d021522173",
+      "source": "revision-2 editorial artifact",
+      "transformation": "editorial update only; accepted evidence unchanged"
+    },
+    {
+      "path": "paper/references.bib",
+      "sha256": "c079ebcf714284447cfeffb6ccce82b5b851d7bce52ded43948ea368ddeb33bd",
+      "source": "revision-2 editorial artifact",
+      "transformation": "editorial update only; accepted evidence unchanged"
+    },
+    {
+      "path": "paper/render-source.py",
+      "sha256": "dd50733a20da0035f318c9cd5179bdb9702401be1fe5832e2b0763dc6ab39a18",
+      "source": "revision-2 editorial artifact",
+      "transformation": "editorial update only; accepted evidence unchanged"
+    },
+    {
+      "path": "validate.py",
+      "sha256": "8ee7528aa83595b6ce315e32c8188c4580985b37a6dba8036b21af85e0cb73aa",
+      "source": "revision-1 editorial/export artifact",
+      "transformation": "authored or copied for revision 1"
+    },
+    {
+      "path": "paper/icecer-2026-paper-revised-v2.pdf",
+      "sha256": "c4c9695d1ae9e4c93507cf10a3f3827743ebd0286f9f2f7ee02f325973572349",
+      "source": "revision-2 editorial artifact",
+      "transformation": "editorial update only; accepted evidence unchanged"
+    },
+    {
+      "path": "paper/icecer-2026-paper-revised-v2.tex",
+      "sha256": "af846a32a4cc2f59b4f3d9a80690ffeaa5f6fcda755bea79176eac6c3855f3c1",
+      "source": "revision-2 editorial artifact",
+      "transformation": "editorial update only; accepted evidence unchanged"
+    }
+  ],
+  "revision_2_source_parent": "a4e0f846b979a9fd24e6dc131571075cecbebf7d",
+  "scope": "scientific evidence and code only; no raw provider content or orchestration instructions",
+  "source_research_checkpoint": "b35b3db4530bf4538d6a6c98c9fe7acbcc57ef88",
+  "source_scm_checkpoint": "c5b11102f89c67d3c5667cc8ac16e39ae47d86a6",
+  "version": "ICECER-2026-revision-2"
+}

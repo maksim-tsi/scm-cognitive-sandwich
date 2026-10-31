@@ -1,0 +1,56 @@
+{
+  "status": "researcher_authorized_final30_single_collection",
+  "scenarios": "research/evaluation/scenarios.json",
+  "references_evaluator_only": "research/evaluation/references.json",
+  "tools_available": true,
+  "user_answers_available": true,
+  "trajectories_per_scenario_per_model": 1,
+  "max_atomic_questions": 3,
+  "max_tool_attempts": 3,
+  "max_model_responses": 7,
+  "max_output_tokens": 2048,
+  "temperature": 0,
+  "concurrency": 1,
+  "automatic_retries": 0,
+  "replacement_trajectories": 0,
+  "max_wall_clock_hours": 8,
+  "max_total_generation_attempts": 630,
+  "order": "scenario blocks; rotate qwen/deepseek/mistral first position",
+  "routes": {
+    "qwen": {
+      "model": "qwen3.8-27b-ud-q4_k_m",
+      "profile": "json-only",
+      "generation_cap": 210,
+      "provider_spending_ceiling_usd": 0,
+      "seed": 20261027,
+      "top_p": 1,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    },
+    "deepseek": {
+      "model": "deepseek-flash",
+      "profile": "json-only",
+      "generation_cap": 210,
+      "spending_ceiling_usd": 3,
+      "metadata_drift": "continue_and_separate_observed_cohorts",
+      "thinking": {
+        "type": "disabled"
+      }
+    },
+    "mistral": {
+      "model": "mistral-small-2603",
+      "profile": "native-structured-no-unique-v1",
+      "generation_cap": 210,
+      "spending_ceiling_usd": 2.5,
+      "minimum_post_completion_gap_s": 15,
+      "random_seed": 20261027,
+      "reasoning_effort": "none"
+    }
+  },
+  "deterministic_baseline": "tools.p5_interactive.operational_baseline.OperationalBaseline",
+  "runner": "tools.p5_interactive.experiment.run_episode",
+  "paired_replay": "identical_original_transcript_and_proposal_I2_I3",
+  "controlled_proposals": "separate_diagnostic_not_model_population",
+  "historical_ledgers": "closed_do_not_resume_or_reset"
+}

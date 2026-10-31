@@ -1,0 +1,336 @@
+{
+  "archive_sha256": "9cef734a02545aa8cff8a6c93d602dd3e56fdbc5cc5a52b32437900d8c6b468a",
+  "source": "Stage 1 fixed 12 selected sites and frozen archived graph; no site changes",
+  "depot": {
+    "node_id": 243681421,
+    "lat": 45.4307377,
+    "lon": 11.8842797,
+    "status": "fixed synthetic anchor per task; not a verified depot/access point"
+  },
+  "screen": {
+    "directed": true,
+    "rule": "Stage 1 edge screen access=no/private/permit and highway motorway/motorway_link/busway, parsing list tags via ast.literal_eval",
+    "legal_truck_access_established": false
+  },
+  "distance": {
+    "directed_pairs": 156,
+    "shop_shop_n": 132,
+    "shop_shop_m": {
+      "min": 385.2,
+      "p10": 852.603,
+      "median": 2555.691,
+      "p90": 5053.808,
+      "max": 5979.5
+    },
+    "depot_link_n": 24,
+    "depot_links_m": {
+      "min": 476.4,
+      "p10": 881.514,
+      "median": 1975.298,
+      "p90": 3756.388,
+      "max": 4170.4
+    },
+    "pair_asymmetry_abs_m": {
+      "median": 98.435,
+      "p90": 596.902,
+      "max": 1075.9
+    },
+    "nearest_neighbor_spacing_m": {
+      "median": 483.346,
+      "min": 394.0,
+      "max": 1548.4
+    },
+    "sub_1km_spatial_components": [
+      [
+        "2fadb7f2-b5b3-4723-8a71-ead1ff13427e",
+        "407d018c-7f6b-4ab1-976e-247e2df9faec",
+        "5fd41848-bff2-462f-9816-df38299e1e74",
+        "6937e1ed-12f6-48e2-b2f7-fa9c092c0f58",
+        "8d4b3790-a925-43f0-a369-ee77dc4076bf",
+        "c45a0c5e-1cf4-452e-917e-494256a7270b",
+        "cef0a2a1-3341-4278-b734-fc5457dfa81b",
+        "d7d47f5a-c634-42cd-b83e-d9f5683afe4a",
+        "ee71fa3e-82e5-46b9-9752-4a584a4c4255"
+      ],
+      [
+        "0a26de47-78e8-4d8e-8050-26577765688f",
+        "8a5f5233-9e7b-478f-bd1e-62801722936d"
+      ],
+      [
+        "fa6afb7d-8518-415a-89c4-85b6860ef1d8"
+      ]
+    ],
+    "deadhead_to_service_scale_median_km": 1.975,
+    "shop_median_travel_minutes_by_speed_kmh": {
+      "15": 10.22,
+      "20": 7.67,
+      "25": 6.13
+    }
+  },
+  "alternatives": {
+    "od_n": 156,
+    "with_edge_ban_alt": 155,
+    "ratio_distribution": {
+      "p10": 1.005,
+      "median": 1.03,
+      "p90": 1.313,
+      "max": 13.5681
+    },
+    "ratio_le_1_5": 145,
+    "common_share_le_0_8": 155,
+    "both_screens": 145,
+    "method": "ban non-overlapping contiguous blocks of five shortest-path edges and retain shortest distinct path; alternatives are graph-length paths, not observed/temporal routes",
+    "common_edge_share_distribution": {
+      "p10": 0.182,
+      "median": 0.573,
+      "p90": 0.765,
+      "max": 0.7973
+    },
+    "screen_sensitivity": {
+      "ratio_at_most": {
+        "1.1": 115,
+        "1.25": 135,
+        "1.5": 145,
+        "2.0": 149
+      },
+      "common_share_at_most": {
+        "0.5": 57,
+        "0.6": 84,
+        "0.8": 155,
+        "1.0": 155
+      }
+    }
+  },
+  "overlap": {
+    "all_OD_pairwise_length_weighted_directed_edge_jaccard": {
+      "n": 12090,
+      "median": 0.0,
+      "p90": 0.097
+    },
+    "greedy_tours": [
+      {
+        "tour": 1,
+        "stops": [
+          "depot",
+          "ee71fa3e-82e5-46b9-9752-4a584a4c4255",
+          "407d018c-7f6b-4ab1-976e-247e2df9faec",
+          "8d4b3790-a925-43f0-a369-ee77dc4076bf",
+          "cef0a2a1-3341-4278-b734-fc5457dfa81b",
+          "fa6afb7d-8518-415a-89c4-85b6860ef1d8",
+          "0a26de47-78e8-4d8e-8050-26577765688f",
+          "depot"
+        ],
+        "segments": [
+          {
+            "from": "depot",
+            "to": "ee71fa3e-82e5-46b9-9752-4a584a4c4255",
+            "km": 1.861
+          },
+          {
+            "from": "ee71fa3e-82e5-46b9-9752-4a584a4c4255",
+            "to": "407d018c-7f6b-4ab1-976e-247e2df9faec",
+            "km": 1.049
+          },
+          {
+            "from": "407d018c-7f6b-4ab1-976e-247e2df9faec",
+            "to": "8d4b3790-a925-43f0-a369-ee77dc4076bf",
+            "km": 0.672
+          },
+          {
+            "from": "8d4b3790-a925-43f0-a369-ee77dc4076bf",
+            "to": "cef0a2a1-3341-4278-b734-fc5457dfa81b",
+            "km": 0.847
+          },
+          {
+            "from": "cef0a2a1-3341-4278-b734-fc5457dfa81b",
+            "to": "fa6afb7d-8518-415a-89c4-85b6860ef1d8",
+            "km": 3.881
+          },
+          {
+            "from": "fa6afb7d-8518-415a-89c4-85b6860ef1d8",
+            "to": "0a26de47-78e8-4d8e-8050-26577765688f",
+            "km": 4.66
+          },
+          {
+            "from": "0a26de47-78e8-4d8e-8050-26577765688f",
+            "to": "depot",
+            "km": 3.785
+          }
+        ],
+        "total_km": 16.755
+      },
+      {
+        "tour": 2,
+        "stops": [
+          "depot",
+          "c45a0c5e-1cf4-452e-917e-494256a7270b",
+          "5fd41848-bff2-462f-9816-df38299e1e74",
+          "d7d47f5a-c634-42cd-b83e-d9f5683afe4a",
+          "2fadb7f2-b5b3-4723-8a71-ead1ff13427e",
+          "6937e1ed-12f6-48e2-b2f7-fa9c092c0f58",
+          "8a5f5233-9e7b-478f-bd1e-62801722936d",
+          "depot"
+        ],
+        "segments": [
+          {
+            "from": "depot",
+            "to": "c45a0c5e-1cf4-452e-917e-494256a7270b",
+            "km": 0.485
+          },
+          {
+            "from": "c45a0c5e-1cf4-452e-917e-494256a7270b",
+            "to": "5fd41848-bff2-462f-9816-df38299e1e74",
+            "km": 0.828
+          },
+          {
+            "from": "5fd41848-bff2-462f-9816-df38299e1e74",
+            "to": "d7d47f5a-c634-42cd-b83e-d9f5683afe4a",
+            "km": 1.77
+          },
+          {
+            "from": "d7d47f5a-c634-42cd-b83e-d9f5683afe4a",
+            "to": "2fadb7f2-b5b3-4723-8a71-ead1ff13427e",
+            "km": 0.809
+          },
+          {
+            "from": "2fadb7f2-b5b3-4723-8a71-ead1ff13427e",
+            "to": "6937e1ed-12f6-48e2-b2f7-fa9c092c0f58",
+            "km": 1.973
+          },
+          {
+            "from": "6937e1ed-12f6-48e2-b2f7-fa9c092c0f58",
+            "to": "8a5f5233-9e7b-478f-bd1e-62801722936d",
+            "km": 5.98
+          },
+          {
+            "from": "8a5f5233-9e7b-478f-bd1e-62801722936d",
+            "to": "depot",
+            "km": 4.17
+          }
+        ],
+        "total_km": 16.015
+      }
+    ],
+    "tour_overlap": {
+      "shared_directed_km": 9.232,
+      "pairwise_jaccard": 0.393
+    }
+  },
+  "traffic_context": {
+    "evaluation_epochs": 777,
+    "local_time_zone": "UTC+02:00 fixed, matching the offline script's declared Padua local-time assumption",
+    "evaluation_periods": [
+      "06:30",
+      "07:00",
+      "08:00",
+      "09:00",
+      "10:00",
+      "11:00",
+      "12:00"
+    ],
+    "lags_hours": [
+      0,
+      1,
+      2
+    ],
+    "max_age_h_from_cutoff": 6,
+    "age_cutoff_definition": "cutoff = decision epoch - lag; newest row timestamp <= cutoff; observation age <=6h measured from cutoff, so maximum age from decision epoch is 6+lag hours",
+    "minimum_distinct_supported_pairs": 3,
+    "primary_lag_h": 1,
+    "selected_sensor_ids_n": 10,
+    "ordered_selected_sensor_pair_candidates_n": 90,
+    "development_pairs_with_any_row_n": 84,
+    "development_pair_row_count_filter": "none; any selected directed pair with at least one development row is baseline-eligible; archive count is not used to threshold rows",
+    "development_pair_history_rows_quantiles": {
+      "min": 1,
+      "p10": 9.3,
+      "median": 89.5,
+      "p90": 1380.8,
+      "max": 1751
+    },
+    "factor": "unweighted median across supported directed-pair ratios: latest eligible evaluation row mean / that pair's frozen development-period median row mean; clipped 0.5..2; neutral 1.0 when support<3",
+    "count_field_threshold_reused_from_stage1": false,
+    "stage1_ml_cost_calibration_reused": false,
+    "interpretation": "candidate Stage 2 scalar timing-context prototype only; not calibrated Stage 1 ML travel-time cost and not approved routing parameter",
+    "aggregation_by_lag": {
+      "0": {
+        "epoch_count": 259,
+        "fallback_rate": 0.0116,
+        "fallback_count": 3,
+        "factor_quantiles": {
+          "p10": 0.833,
+          "median": 0.96,
+          "p90": 1.046,
+          "min": 0.6981545736150696,
+          "max": 1.2120608381674176
+        },
+        "support_quantiles": {
+          "p10": 11.0,
+          "median": 19.0,
+          "p90": 27.0
+        }
+      },
+      "1": {
+        "epoch_count": 259,
+        "fallback_rate": 0.0154,
+        "fallback_count": 4,
+        "factor_quantiles": {
+          "p10": 0.807,
+          "median": 0.944,
+          "p90": 1.044,
+          "min": 0.6959355979619313,
+          "max": 1.2063341570281352
+        },
+        "support_quantiles": {
+          "p10": 10.0,
+          "median": 16.0,
+          "p90": 25.0
+        }
+      },
+      "2": {
+        "epoch_count": 259,
+        "fallback_rate": 0.0116,
+        "fallback_count": 3,
+        "factor_quantiles": {
+          "p10": 0.778,
+          "median": 0.92,
+          "p90": 1.032,
+          "min": 0.6805286987876238,
+          "max": 1.2063341570281352
+        },
+        "support_quantiles": {
+          "p10": 11.0,
+          "median": 16.0,
+          "p90": 22.0
+        }
+      }
+    },
+    "availability_lookahead_used": false,
+    "scalar_cannot_spatially_reroute": true
+  },
+  "archive_alignment_proxy": {
+    "directed_shop_OD_pairs": 132,
+    "pairs_with_any_endpoint_proxy": 104,
+    "aligned_edge_km_median": 0.196,
+    "aligned_share_median": 0.075,
+    "proxy_share_validation": {
+      "n": 132,
+      "definition": "full-precision proxy-aligned path-edge meters divided by full-precision modeled path meters, rounded to 4 decimals for CSV",
+      "all_in_unit_interval": true,
+      "max_share": 1.0
+    },
+    "interpretation": "selected sensors are proxy endpoints only; snap direction uncertain; no route or coverage is observed"
+  },
+  "claims": {
+    "observed": "archived hourly sensor transition rows and graph/site coordinates",
+    "derived": "snapped directed graph distances, paths, overlaps, edge-banned alternatives, fixed greedy references",
+    "assumed": "20 km/h baseline, integer travel seconds, scalar local context timing factor and synthetic depot",
+    "unknown": "entrances, current shop operation, road legality for delivery vehicles, measured delivery paths/times, sensor-to-modeled-path matching truth",
+    "negative_findings": [
+      "Scalar context factor cannot distinguish corridors or establish traffic-driven spatial diversion.",
+      "Proxy alignment is endpoint proximity only and does not measure route coverage or path travel.",
+      "The graph and access tags do not certify legal truck access.",
+      "Shared route geometry and edge-banned alternatives are model-derived; no actual delivery route observations exist."
+    ]
+  }
+}

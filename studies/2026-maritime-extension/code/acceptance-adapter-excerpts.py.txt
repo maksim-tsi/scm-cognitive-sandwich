@@ -1,0 +1,167 @@
+# Source excerpts for inspection, NOT a standalone executable module.
+# Source: tools/r4_phase_b_scientific.py
+# Whole-source SHA-256: 5ecd2b48bc8d036c56452323ada424374e0a1b14c83ed1de046c18df60087dc1
+# Dependencies and live launch/governance code intentionally not exported.
+
+class PhaseBAuthorities:
+    """R4 authority adapter with one strict reference per frozen incident."""
+
+    def __init__(self, base: Any) -> None:
+        self.base = base
+        self._references: dict[str, tuple[str, Any]] = {}
+        self._contexts: dict[int, tuple[Any, Any]] = {}
+        self.strict_reference_milp_solves = 0
+        self.des_admission_decisions = 0
+        self.diagnostic_shortfall_milp_solves = 0
+
+    def _problem_and_reference(
+        self, incident: dict[str, Any]
+    ) -> tuple[list[Any], list[Any], Any]:
+        incident_id = str(incident["incident_id"])
+        payload_hash = sha_bytes(canonical(incident).encode())
+        lots, options = self.base._problem(incident)
+        cached = self._references.get(incident_id)
+        if cached is None:
+            reference = self.base.strict_reference(lots, options)
+            self._references[incident_id] = (payload_hash, reference)
+            self.strict_reference_milp_solves += 1
+        else:
+            if cached[0] != payload_hash:
+                raise RuntimeError("incident identity maps to multiple frozen payloads")
+            reference = cached[1]
+        return lots, options, reference
+
+    def evaluate(
+        self, response: str, incident: dict[str, Any], condition: str, attempt: int
+    ) -> Any:
+        lots, options, reference = self._problem_and_reference(incident)
+        try:
+            artifact: object = json.loads(response)
+        except json.JSONDecodeError:
+            artifact = None
+        schema, semantic = self.base._shape(artifact, incident, condition, attempt)
+        allocations: list[Any] = []
+        shortfalls: list[Any] = []
+        if isinstance(artifact, dict) and not schema:
+            try:
+                allocations = [
+                    self.base.ArtifactAllocation(**item)
+                    for item in artifact["allocations"]
+                ]
+                shortfalls = [
+                    self.base.ArtifactShortfall(**item)
+                    for item in artifact["unallocated_by_lot"]
+                ]
+            except (KeyError, TypeError, ValueError):
+                schema.append("SCHEMA_TYPE_OR_DOMAIN")
+        if schema or semantic:
+            validation = self.base.ValidationResult(
+                False, False, tuple(schema + semantic), not semantic
+            )
+        else:
+            validation = self.base.evaluate_artifact(
+                lots, options, allocations, shortfalls
+            )
+        violations = list(dict.fromkeys([*schema, *semantic, *validation.violations]))
+        parity = not (validation.feasible and reference.status != "OPTIMAL")
+        if not parity:
+            violations.append("EVALUATOR_MILP_PARITY")
+        provisionally_admitted = bool(
+            validation.schema_valid
+            and validation.semantic_valid
+            and validation.feasible
+            and reference.status == "OPTIMAL"
+            and reference.total_cost is not None
+            and not reference.shortfall_by_lot
+            and parity
+        )
+        if (
+            not validation.schema_valid
+            or not validation.semantic_valid
+            or not validation.feasible
+        ):
+            des_reason = "EVALUATOR_REJECTED"
+        elif reference.status != "OPTIMAL" or reference.total_cost is None:
+            des_reason = "STRICT_REFERENCE_NOT_COST_VALID"
+        elif reference.shortfall_by_lot:
+            des_reason = "STRICT_REFERENCE_SHORTFALL"
+        elif not parity:
+            des_reason = "EVALUATOR_MILP_PARITY"
+        else:
+            des_reason = None
+        if not provisionally_admitted and not violations:
+            violations.append("DES_ADMISSION")
+        artifact_cost = None
+        if validation.feasible:
+            costs = {item.option_id: item.generalized_cost_per_teu for item in options}
+            artifact_cost = sum(
+                float(item.allocated_teu) * costs[item.option_id]
+                for item in allocations
+            )
+        trace_ids = tuple(
+            dict.fromkeys(
+                harness.VIOLATION_TRACE_IDS[item]
+                for item in violations
+                if item in harness.VIOLATION_TRACE_IDS
+            )
+        )
+        outcome = harness.AuthorityOutcome(
+            not schema,
+            not semantic,
+            validation.feasible,
+            tuple(violations),
+            trace_ids,
+            reference.status,
+            reference.total_cost,
+            artifact_cost,
+            parity,
+            provisionally_admitted,
+            des_reason,
+        )
+        self._contexts[id(outcome)] = (validation, reference)
+        return outcome
+
+    def terminal_admission(self, outcome: Any) -> bool:
+        try:
+            validation, reference = self._contexts[id(outcome)]
+        except KeyError as exc:
+            raise RuntimeError("terminal admission lacks evaluator context") from exc
+        decision = self.base.admit_to_des(validation, reference)
+        self.des_admission_decisions += 1
+        admitted = bool(decision.admitted and outcome.evaluator_milp_parity)
+        if admitted != bool(outcome.des_admitted):
+            raise RuntimeError("provisional and authoritative DES admission disagree")
+        return admitted
+
+    def reference_artifact(
+        self, incident: dict[str, Any], condition: str, attempt: int
+    ) -> str:
+        lots, _, reference = self._problem_and_reference(incident)
+        if reference.status == "OPTIMAL":
+            allocations = [
+                {
+                    "lot_id": lot,
+                    "option_id": option,
+                    "allocated_teu": amount,
+                }
+                for (lot, option), amount in sorted(reference.allocations.items())
+            ]
+            shortfalls = [
+                {"lot_id": lot.lot_id, "unallocated_teu": 0.0} for lot in lots
+            ]
+        else:
+            allocations = []
+            shortfalls = [
+                {"lot_id": lot.lot_id, "unallocated_teu": lot.declared_teu}
+                for lot in lots
+            ]
+        return canonical(
+            {
+                "artifact_id": f"{incident['incident_id']}-{condition}-{attempt}",
+                "incident_id": incident["incident_id"],
+                "allocations": allocations,
+                "unallocated_by_lot": shortfalls,
+                "condition": condition,
+                "attempt_index": attempt,
+            }
+        )

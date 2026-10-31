@@ -1,0 +1,24 @@
+{
+  "baseline": "84e7ba0f9957410891604dcfcf3dcf650b859634",
+  "selected_sites": [
+    "depot",
+    "ee71fa3e-82e5-46b9-9752-4a584a4c4255",
+    "407d018c-7f6b-4ab1-976e-247e2df9faec",
+    "0a26de47-78e8-4d8e-8050-26577765688f"
+  ],
+  "distance_rule": "select archived directed depot/A/B/C pair entries; round metres; retain supplied20km/h seconds",
+  "no_new_traffic_fit_or_download": true,
+  "real_operational_messages_available": false,
+  "sources": {
+    "evidence/stage2/geography/distance-matrix.csv": "e75e7a93cc5df38fe3b195e730ec1a7a0ac198f9a51816583ed30f1c9e674506",
+    "evidence/stage2/geography/summary.json": "d58054a038b116de66a3cc86487b06cb03690a0dddc8d33175e36291e5476106",
+    "evidence/stage2/geography/report.md": "9d9ae8fe65e6ac852ae6aa3af5c19e20b367a3e244dec23a8f38d63594756182",
+    "evidence/padua-data-qualification-2026-10-21.md": "c6195a6f55bcb296ed44bb216259784c88f471c403c1f74897f8bdc9e3e38d78",
+    "evidence/stage1/semantics/development-cases.json": "2f2b78116773ffb7aeca2cf35dbcf2872fbad10be0fb3e0daa03a5d9f0251301",
+    "research/p4/world/demos/demo-allowance.json": "6b2ed2e28306cc5a45b2eed6c97b4fd5e0425d5cbe0ca2ffa03b8910b6159884",
+    "research/p7/worlds.json": "df12e52916ada5d8a80f616786a5edccd80208dbf490c18b37c5d06b5e872b2b",
+    "research/p7/report.md": "ebd065dd7be785b824abf01875a09ae67fafcdc5f16b0fa0b57d685cf2815b3a",
+    "evidence/stage2/corpus/article-cases.json": "bca16d3733e812c8de5b54adf2be283b262bc49ddf758bc9f3a26af19f0e83ff"
+  },
+  "attribution": "Archived OSM-derived graph distances: OpenStreetMap contributors, ODbL. Candidate POI selection derives from prior Overture selection; source-specific licensing remains in original audit. New messages, fleet, cargo and deadlines are synthetic. Not a claim of legal truck access."
+}
