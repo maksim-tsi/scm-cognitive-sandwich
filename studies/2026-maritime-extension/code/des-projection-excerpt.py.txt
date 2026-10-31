@@ -1,0 +1,10 @@
+    def _prepare_des_artifact(
+        artifact: dict[str, Any] | None, condition: str, generation_id: int
+    ) -> dict[str, Any] | None:
+        if artifact is None:
+            return None
+        projected = json.loads(canonical(artifact))
+        projected["condition"] = condition
+        projected["generation_id"] = generation_id
+        return projected
+

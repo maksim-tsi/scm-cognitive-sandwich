@@ -1,0 +1,127 @@
+{
+  "files": [
+    {
+      "path": "prompts/initial-template.txt",
+      "sha256": "f36796332512a5056e5094fd95c5a097002de45ad26036ae05a05ea2110b59ff",
+      "source_repository": "ltx-wsc-cognitive-sandwich",
+      "source_commit": "34a0d0dd86bff63a532fc743b02a260f36378795",
+      "source_path": "docs/stages/R4Q/initial-prompt-template.txt",
+      "source_sha256": "f36796332512a5056e5094fd95c5a097002de45ad26036ae05a05ea2110b59ff",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "prompts/repair-template.txt",
+      "sha256": "f6a87521107c283623327bd829b45ebf946ff5112b6b66b9758d7ab288cc7748",
+      "source_repository": "ltx-wsc-cognitive-sandwich",
+      "source_commit": "34a0d0dd86bff63a532fc743b02a260f36378795",
+      "source_path": "docs/stages/R4Q/repair-prompt-template.txt",
+      "source_sha256": "f6a87521107c283623327bd829b45ebf946ff5112b6b66b9758d7ab288cc7748",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "data/phase-a-design-inputs.json",
+      "sha256": "fbbdca657fd37df90c7eb45e34f8886f9126dfeb371fdaa9783fe32e2fd27aa7",
+      "source_repository": "ltx-wsc-cognitive-sandwich",
+      "source_commit": "34a0d0dd86bff63a532fc743b02a260f36378795",
+      "source_path": "docs/stages/R4/phase-a-inputs.json",
+      "source_sha256": "fbbdca657fd37df90c7eb45e34f8886f9126dfeb371fdaa9783fe32e2fd27aa7",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/prompt-builder-excerpt.py.txt",
+      "sha256": "38fb4aa8793ba6c7e651d3bbdf6ecafa1cffab59243ed6872381312d65539a1e",
+      "source_repository": "ltx-wsc-cognitive-sandwich",
+      "source_commit": "34a0d0dd86bff63a532fc743b02a260f36378795",
+      "source_path": "tools/r4_phase_b_scientific.py",
+      "source_sha256": "5ecd2b48bc8d036c56452323ada424374e0a1b14c83ed1de046c18df60087dc1",
+      "transformation": "Verbatim function-body extraction for inspection only; no live imports/launchers. Unresolved dependencies are intentional, not standalone modules."
+    },
+    {
+      "path": "code/response-schema-excerpt.py.txt",
+      "sha256": "48c11f7c1d749e7735cefb373a75baf698c41b897cf69db6844c846a8b86e939",
+      "source_repository": "ltx-wsc-cognitive-sandwich",
+      "source_commit": "34a0d0dd86bff63a532fc743b02a260f36378795",
+      "source_path": "tools/r4q_provider_qualification.py",
+      "source_sha256": "bb2692cc824513bfd2a5575093b695056ecaaff854179171e342d4e8845f6522",
+      "transformation": "Verbatim function-body extraction for inspection only; no live imports/launchers. Unresolved dependencies are intentional, not standalone modules."
+    },
+    {
+      "path": "code/des-projection-excerpt.py.txt",
+      "sha256": "67ea6c84c2780873630af1233ebcae7e9b303ba4571aae020d1caaa2c6c56c74",
+      "source_repository": "ltx-wsc-cognitive-sandwich",
+      "source_commit": "34a0d0dd86bff63a532fc743b02a260f36378795",
+      "source_path": "tools/r4_phase_b_v5_pipeline.py",
+      "source_sha256": "b94d247b7fbc544313a510e4cb1abcf9b879420c6c245dfa7cfff43820e34fac",
+      "transformation": "Verbatim function-body extraction for inspection only; no live imports/launchers. Unresolved dependencies are intentional, not standalone modules."
+    },
+    {
+      "path": "code/population-identity-excerpt.py.txt",
+      "sha256": "ff69229d97de7e54611429a73fa9cee4ff47f38e29b34258737d3a4775a36a66",
+      "source_repository": "ltx-wsc-cognitive-sandwich",
+      "source_commit": "34a0d0dd86bff63a532fc743b02a260f36378795",
+      "source_path": "tools/r4_phase_b_v5_live.py",
+      "source_sha256": "d42812f1bd110e5e095aa3c10712c308b60e46539554d4e83f5e7e1b63af22aa",
+      "transformation": "Verbatim function-body extraction for inspection only; no live imports/launchers. Unresolved dependencies are intentional, not standalone modules."
+    },
+    {
+      "path": "examples/retained-des-allocations.json",
+      "sha256": "875f563c99a47adfb782e483d8b2a57026c160233886dca56ca8debb7999edad",
+      "source_repository": "ltx-wsc-cognitive-sandwich",
+      "source_commit": "34a0d0dd86bff63a532fc743b02a260f36378795",
+      "source_path": ".codex-local/r4-phase-b-v5-scientific/checkpoint.json",
+      "source_sha256": "44f774bf7df51b49c49ca48ba3ddb2c457f77e8f7ebdcd2945516f6bb896d905",
+      "transformation": "Allowlist saved allocation projections from checkpoint; exclude accounting, traces, IDs and live state. All 35 match original terminal records."
+    },
+    {
+      "path": "examples/recovered-canonical-responses.json",
+      "sha256": "2b41e3ae0726ac2cda8313c3c677fd6f4882b4f71f66a4403afde1439f981da1",
+      "source_repository": "ltx-wsc-cognitive-sandwich",
+      "source_commit": "34a0d0dd86bff63a532fc743b02a260f36378795",
+      "source_path": ".codex-local/r4-phase-b-v5-scientific/checkpoint.json",
+      "source_sha256": "44f774bf7df51b49c49ca48ba3ddb2c457f77e8f7ebdcd2945516f6bb896d905",
+      "transformation": "Reverse only documented DES metadata projection (remove generation_id; restore llm_only when repair_count=0); all original canonical hashes match terminals. Deduplicate to 27 retained responses. Raw serialized model text is not recovered."
+    },
+    {
+      "path": "provenance/historical-profile.json",
+      "sha256": "c8eafd6b1aaf21c4d7380e1e335c850fcca8ff45c9a380f9512ae5625bc30618",
+      "source_repository": "ltx-wsc-cognitive-sandwich",
+      "source_commit": "34a0d0dd86bff63a532fc743b02a260f36378795",
+      "source_path": "docs/stages/R4-v5-Phase-B/predispatch-manifest.json",
+      "source_sha256": "74c0602b32046d2a3851d2c0ff06bd125ce50a6637a210d423ff05791958d3bc",
+      "transformation": "Allowlist historical model/profile/bindings; remove credential-source wiring. No current endpoint or availability check."
+    },
+    {
+      "path": "development/forwarder/prompts-v0.1.json",
+      "sha256": "02a51b7719a79842932eb98e0e6bfd7c610a452ba38419448c623e572dc2f280",
+      "source_repository": "ltx-wsc-cognitive-sandwich",
+      "source_commit": "301ba9024f86767f6743f45454fda32e27522e90",
+      "source_path": "forwarder_p3/prompts-v0.1.json",
+      "source_sha256": "02a51b7719a79842932eb98e0e6bfd7c610a452ba38419448c623e572dc2f280",
+      "transformation": "byte-identical"
+    }
+  ],
+  "new_model_calls": 0,
+  "search_policy": "Existing source/code/checkpoints only. No scenario generator, subject inference or answer repair used.",
+  "development_index_sources": [
+    {
+      "path": "docs/stages/ICECER-FWD-P4-QUAL/continuation-terminal-review-2026-09-28.md",
+      "commit": "301ba9024f86767f6743f45454fda32e27522e90",
+      "sha256": "74ad694b364b400bf90944f49861ddfdac2712ccafae5a4b1c6cdd3f7b338a73"
+    },
+    {
+      "path": "docs/stages/ICECER-FWD-TWO-MODEL-SMOKE-20261002/terminal-summary.json",
+      "commit": "301ba9024f86767f6743f45454fda32e27522e90",
+      "sha256": "395fd033149cbaf4fb6e7185e5acc7b7eb5695ed911cf142cfe7eeb0a83dd5c1"
+    },
+    {
+      "path": "docs/stages/ICECER-FWD-AUTONOMOUS-EXEC-20261002/terminal-summary.json",
+      "commit": "301ba9024f86767f6743f45454fda32e27522e90",
+      "sha256": "0d11eda86f03a6e9fb6a0e168d63f729ce73bb21e75e596d7ad34b40e95fb3c2"
+    },
+    {
+      "path": "docs/stages/ICECER-FWD-INTERFACE-V04-OFFLINE-20261003/completion-manifest.json",
+      "commit": "301ba9024f86767f6743f45454fda32e27522e90",
+      "sha256": "5ee2b5b0419729899e9e7e9a390cc140b43a99262bf38ba6e48274dea369d93e"
+    }
+  ]
+}

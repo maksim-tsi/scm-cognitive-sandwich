@@ -1,0 +1,38 @@
+[
+  {
+    "source_path": "forwarder_p2/runner.py",
+    "source_commit": "301ba9024f86767f6743f45454fda32e27522e90",
+    "sha256": "170310d190d5706c636bcd8db3f40f0064fd7cc03da68cd6a15a1fa50d8a402c",
+    "export_decision": "source candidate; independent runner; no copy required for the historical summary package"
+  },
+  {
+    "source_path": "forwarder_p2/scorer.py",
+    "source_commit": "301ba9024f86767f6743f45454fda32e27522e90",
+    "sha256": "5832a35699f8ac4617a0f1915743a113f4a32fa08df8ce732172f29143036b37",
+    "export_decision": "future separate evaluation-source release; do not conflate with runtime authority"
+  },
+  {
+    "source_path": "forwarder_p3/controller.py",
+    "source_commit": "301ba9024f86767f6743f45454fda32e27522e90",
+    "sha256": "1d3fa520a8c40fcdf93cff83b10be859dd55a7176d1e6dcb46883ae798753063",
+    "export_decision": "development controller source; broader future package, not accepted 60-incident code"
+  },
+  {
+    "source_path": "forwarder_p3/adapter.py",
+    "source_commit": "301ba9024f86767f6743f45454fda32e27522e90",
+    "sha256": "5218b0b43f1e014ca6a0b59af66f29dc0708ed36334892918a2cb6e8e1178e70",
+    "export_decision": "development prompt adapter; candidate prompt file already exported"
+  },
+  {
+    "source_path": "forwarder_p3/m4_smoke_evaluate.py",
+    "source_commit": "301ba9024f86767f6743f45454fda32e27522e90",
+    "sha256": "ee71334d98a93e5caef499d5b195d30efb2cbfa1cc8a268b762d601fb069c4fb",
+    "export_decision": "development-only scoring; no new scoring is run"
+  },
+  {
+    "source_path": "tools/r4_phase_b_v5_pipeline.py",
+    "source_commit": "301ba9024f86767f6743f45454fda32e27522e90",
+    "sha256": "b94d247b7fbc544313a510e4cb1abcf9b879420c6c245dfa7cfff43820e34fac",
+    "export_decision": "existing scientific controller; publish selected inspection excerpts, not replace with regenerated code"
+  }
+]

@@ -27,3 +27,9 @@ No results are rescored. Raw historical traces are not copied into study exports
 The original launch interface is documented in
 [the legacy quick start](../../docs/legacy-maritime-quickstart.md).
 A final publication-specific release tag remains subject to author approval.
+
+## Preservation scope
+
+Historical code preservation is the accepted scope. No additional paper-section
+crosswalk or paper-to-runtime adjudication is required. Existing pinned code,
+retained tables and historical paths remain available as described above.

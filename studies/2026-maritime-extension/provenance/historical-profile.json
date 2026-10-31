@@ -1,0 +1,43 @@
+{
+  "status": "historical_executed_profile_not_current_availability",
+  "provider_contract": {
+    "route": "direct DeepSeek Responses API",
+    "model": "deepseek-v4-flash",
+    "temperature": 0,
+    "top_p": 1,
+    "max_output_tokens": 8196,
+    "reasoning": {
+      "effort": "none"
+    },
+    "native_json_schema": true,
+    "timeout_seconds": 180,
+    "first_dispatch_delay_seconds": 60,
+    "minimum_start_interval_seconds": 60,
+    "in_flight": 1,
+    "retries": 0,
+    "fallbacks": 0,
+    "ambiguous_replay": false
+  },
+  "source_population_binding": {
+    "identity_prefix": "R4-V5-SCIENTIFIC-INCIDENT-",
+    "incidents": 60,
+    "generations_per_incident": 1,
+    "generation_units": 60,
+    "strata": 4,
+    "incidents_per_stratum": 15,
+    "balanced_batches": 5,
+    "units_per_batch": 12,
+    "unit_set_sha256": "4d94fc7ff51bb6d0aff338a77d36a4958dd00e74ab4c4c8ba10c327f1e7dd708",
+    "batch_partition_sha256": "d693610a56dca34f179a20c149e042e7b2664c1b1fbe32319f4df92723b037d4"
+  },
+  "implementation_hashes": {
+    "tools/r4_phase_b_v5_live.py": "d42812f1bd110e5e095aa3c10712c308b60e46539554d4e83f5e7e1b63af22aa",
+    "tests/test_r4_phase_b_v5_live.py": "87f21e12f1240bf920978a5c181af642bb6bb9817c35da44d927c8ba3ca1f79f",
+    "tools/validate_r4_phase_b_v5_authority.py": "d697f993ccc076294e5751b59636e3553e7d3410b75e73ecf4c2891517285a90",
+    "tests/test_r4_phase_b_v5_authority.py": "38985ad92989cd9f4490cc049a4a8dcd8f835497a3162b8b03ddbed6cf3121a0",
+    "tools/r4_phase_b_v5_pipeline.py": "b94d247b7fbc544313a510e4cb1abcf9b879420c6c245dfa7cfff43820e34fac",
+    "tools/r4_v5_exact_path_qualification_v4.py": "63d364f79e7fa1f59144507cc88dcf0da065f5908984679255634656949fd5d9",
+    "tools/r4_v5_transport_diagnostic.py": "f94063596ac69bb6fc2ea6cf398cc857d53d85c6d7747bf8fde39353efc34595"
+  },
+  "input_binding_status": "Source design and identity mapper survive unchanged from launch, but the recorded scientific unit_set_sha256 has not been reconciled. Do not describe exported Phase-A design inputs as certified executed inputs."
+}

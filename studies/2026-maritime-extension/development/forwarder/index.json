@@ -1,0 +1,76 @@
+[
+  {
+    "id": "p4-qualification",
+    "date": "2026-09-28",
+    "kind": "development_not_publication_population",
+    "summary": {
+      "status": "STOP_for_researcher_disposition",
+      "cumulative_canaries": 10,
+      "development_smoke_sessions": 0,
+      "scientific_twenty_case_runs": 0,
+      "reported_budget_deviations": [
+        "one extra observability operation",
+        "one extra remote invocation"
+      ]
+    },
+    "interpretation": "Provider connectivity/format evidence and explicit budget deviations; no assistant-declared scientific PASS. No infrastructure identifiers exported.",
+    "source_repository": "ltx-wsc-cognitive-sandwich",
+    "source_commit": "301ba9024f86767f6743f45454fda32e27522e90",
+    "source_path": "docs/stages/ICECER-FWD-P4-QUAL/continuation-terminal-review-2026-09-28.md",
+    "source_sha256": "74ad694b364b400bf90944f49861ddfdac2712ccafae5a4b1c6cdd3f7b338a73"
+  },
+  {
+    "id": "two-model-smoke",
+    "date": "2026-10-02",
+    "kind": "development_not_publication_population",
+    "summary": {
+      "status": "STOPPED_SERIALIZED_INPUT_BOUND_SMOKE_INCOMPLETE",
+      "assigned": 25,
+      "attempted_sessions": 4,
+      "completed_terminals": 3,
+      "missing_terminals": 22,
+      "model_requests": 4,
+      "retries": 0,
+      "scientific_cases_opened": 0,
+      "stage_exit_accepted": false
+    },
+    "interpretation": "Incomplete development smoke, not a scientific twenty-case collection.",
+    "source_repository": "ltx-wsc-cognitive-sandwich",
+    "source_commit": "301ba9024f86767f6743f45454fda32e27522e90",
+    "source_path": "docs/stages/ICECER-FWD-TWO-MODEL-SMOKE-20261002/terminal-summary.json",
+    "source_sha256": "395fd033149cbaf4fb6e7185e5acc7b7eb5695ed911cf142cfe7eeb0a83dd5c1"
+  },
+  {
+    "id": "autonomous-development",
+    "date": "2026-10-02",
+    "kind": "development_not_publication_population",
+    "summary": {
+      "package_status": "DEVELOPMENT_SMOKE_TECHNICAL_PASS_QUALITY_GAPS",
+      "model_requests": 49,
+      "known_usage_requests": 49,
+      "full_canary_gate_passed": true,
+      "focused_tests": 75,
+      "aggregate_validation": "FAIL unchanged historical R3 missing arize-phoenix-client metadata"
+    },
+    "interpretation": "Technical development outcome with quality gaps; never pool with the 60-incident experiment.",
+    "source_repository": "ltx-wsc-cognitive-sandwich",
+    "source_commit": "301ba9024f86767f6743f45454fda32e27522e90",
+    "source_path": "docs/stages/ICECER-FWD-AUTONOMOUS-EXEC-20261002/terminal-summary.json",
+    "source_sha256": "0d11eda86f03a6e9fb6a0e168d63f729ce73bb21e75e596d7ad34b40e95fb3c2"
+  },
+  {
+    "id": "interface-v04-offline",
+    "date": "2026-10-03",
+    "kind": "development_not_publication_population",
+    "summary": {
+      "status": "READY_FOR_RESEARCHER_REVIEW",
+      "researcher_exit_accepted": false,
+      "scientific_freeze": false
+    },
+    "interpretation": "Offline interface qualification; not scientific execution or accuracy evidence.",
+    "source_repository": "ltx-wsc-cognitive-sandwich",
+    "source_commit": "301ba9024f86767f6743f45454fda32e27522e90",
+    "source_path": "docs/stages/ICECER-FWD-INTERFACE-V04-OFFLINE-20261003/completion-manifest.json",
+    "source_sha256": "5ee2b5b0419729899e9e7e9a390cc140b43a99262bf38ba6e48274dea369d93e"
+  }
+]

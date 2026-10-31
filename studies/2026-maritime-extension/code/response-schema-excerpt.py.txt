@@ -1,0 +1,30 @@
+def response_schema(incident: dict[str, Any], condition: str, attempt: int) -> dict[str, Any]:
+    lot_ids = [item["lot_id"] for item in incident["cargo_lots"]]
+    option_ids = [item["option_id"] for item in incident["transfer_options"]]
+    return {
+        "type": "object",
+        "properties": {
+            "artifact_id": {"type": "string", "minLength": 1},
+            "incident_id": {"type": "string", "const": incident["incident_id"]},
+            "allocations": {
+                "type": "array", "minItems": 0, "maxItems": len(lot_ids) * len(option_ids),
+                "items": {"type": "object", "properties": {
+                    "lot_id": {"type": "string", "enum": lot_ids},
+                    "option_id": {"type": "string", "enum": option_ids},
+                    "allocated_teu": {"type": "number", "minimum": 0},
+                }, "required": ["lot_id", "option_id", "allocated_teu"], "additionalProperties": False},
+            },
+            "unallocated_by_lot": {
+                "type": "array", "minItems": len(lot_ids), "maxItems": len(lot_ids),
+                "items": {"type": "object", "properties": {
+                    "lot_id": {"type": "string", "enum": lot_ids},
+                    "unallocated_teu": {"type": "number", "minimum": 0},
+                }, "required": ["lot_id", "unallocated_teu"], "additionalProperties": False},
+            },
+            "condition": {"type": "string", "const": condition},
+            "attempt_index": {"type": "integer", "const": attempt},
+        },
+        "required": ["artifact_id", "incident_id", "allocations", "unallocated_by_lot", "condition", "attempt_index"],
+        "additionalProperties": False,
+    }
+
