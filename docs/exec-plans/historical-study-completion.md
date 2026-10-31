@@ -14,3 +14,13 @@ Base: merged PR #4, 9affc9a20c0cc3233b99ccf2d709be61b7902c89.
 - Prepare study-specific release candidates and checksummed reproducible archives.
   No final release/tag or merge; do not alter Systems artifacts or other source repos.
 - Deliver a separate Draft PR with offline verification and explicit remaining limits.
+
+## Outcome
+
+Existing-source search and curation complete. IDWL preservation accepted without
+new paper/code mapping. Historical analysis reproduces exactly; 27 canonical
+responses recovered by original hashes. Executed input binding remains explicitly
+unreconciled. Later forwarder development indexed without infrastructure details.
+Three deterministic ZIPs and Draft releases prepared; uploaded hashes verified.
+Systems study byte identity preserved. Final publication/tagging and merge remain
+for separate author approval. See release-candidates/prepared-manifest.json.

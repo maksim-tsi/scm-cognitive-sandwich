@@ -1,0 +1,60 @@
+{
+  "source_commit": "01280d3e92447276d10212274ecfa6bfa2aa368a",
+  "status": "prepared_candidates_not_published_releases",
+  "files": [
+    {
+      "name": "idwl-2026-v1.zip",
+      "sha256": "0a798ff15dca8b78836217e05c5beb102879d5fb1216860bdded50e84ea2914b",
+      "bytes": 14487,
+      "proposed_tag": "idwl-2026-v1",
+      "publication_status": "Published antecedent; navigation/source-anchor package, preserved code at pinned public commit"
+    },
+    {
+      "name": "maritime-extension-2026-v1.zip",
+      "sha256": "434fbdf9518e3a5afd4fe20b78691b19a0655a88733a9b2aa980948c0aee205f",
+      "bytes": 13863869,
+      "proposed_tag": "maritime-extension-2026-v1",
+      "publication_status": "Unpublished research extension; retained-summary reproduction, execution gaps documented"
+    },
+    {
+      "name": "systems-urban-freight-2026-v1.zip",
+      "sha256": "4a2b46899c7604690a67985411cc6445dd9ee704b592a41a9f13ebb4c83aae5a",
+      "bytes": 4833772,
+      "proposed_tag": "systems-urban-freight-2026-v1",
+      "publication_status": "Systems manuscript, not accepted/published; results and I2/I3 replay offline"
+    }
+  ],
+  "draft_releases": [
+    {
+      "proposed_tag": "systems-urban-freight-2026-v1",
+      "url": "https://github.com/maksim-tsi/scm-cognitive-sandwich/releases/tag/untagged-df84a328a59a6a6fff9e",
+      "release_id": 430232455,
+      "draft": true
+    },
+    {
+      "proposed_tag": "maritime-extension-2026-v1",
+      "url": "https://github.com/maksim-tsi/scm-cognitive-sandwich/releases/tag/untagged-d8c171ae6ff26b37621e",
+      "release_id": 430232264,
+      "draft": true
+    },
+    {
+      "proposed_tag": "idwl-2026-v1",
+      "url": "https://github.com/maksim-tsi/scm-cognitive-sandwich/releases/tag/untagged-dbbc82cff0eafa5e9a1c",
+      "release_id": 430232163,
+      "draft": true
+    }
+  ],
+  "verification": {
+    "date": "2026-11-01",
+    "two_builds_byte_identical": true,
+    "archive_CRC_and_per_file_SHA256_verified": true,
+    "uploaded_asset_digests_equal_local": true,
+    "isolated_checks_private_user_path_attempts": 0,
+    "historical_analysis_equal": true,
+    "Systems_terminal_replays": 257,
+    "new_model_calls": 0,
+    "published_releases": 0,
+    "Git_tags_created": 0,
+    "scope": "IDWL navigation/source anchor; extension retained summaries with explicit gaps; Systems unchanged results/replay"
+  }
+}
