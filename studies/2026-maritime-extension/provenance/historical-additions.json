@@ -29,39 +29,39 @@
     },
     {
       "path": "code/prompt-builder-excerpt.py.txt",
-      "sha256": "38fb4aa8793ba6c7e651d3bbdf6ecafa1cffab59243ed6872381312d65539a1e",
+      "sha256": "7c49a987c1f62ed05ec2428df850a97b8a6ac1f4fbf5e2ded52696f8151470f3",
       "source_repository": "ltx-wsc-cognitive-sandwich",
       "source_commit": "34a0d0dd86bff63a532fc743b02a260f36378795",
       "source_path": "tools/r4_phase_b_scientific.py",
       "source_sha256": "5ecd2b48bc8d036c56452323ada424374e0a1b14c83ed1de046c18df60087dc1",
-      "transformation": "Verbatim function-body extraction for inspection only; no live imports/launchers. Unresolved dependencies are intentional, not standalone modules."
+      "transformation": "Verbatim function-body extraction for inspection only; no live imports/launchers. Unresolved dependencies are intentional, not standalone modules. Outer trailing separator blank line omitted."
     },
     {
       "path": "code/response-schema-excerpt.py.txt",
-      "sha256": "48c11f7c1d749e7735cefb373a75baf698c41b897cf69db6844c846a8b86e939",
+      "sha256": "7ea8894667a11aa0f3b243a4f0f3bf869590d0dd46fe2470a7f4a02099348eb6",
       "source_repository": "ltx-wsc-cognitive-sandwich",
       "source_commit": "34a0d0dd86bff63a532fc743b02a260f36378795",
       "source_path": "tools/r4q_provider_qualification.py",
       "source_sha256": "bb2692cc824513bfd2a5575093b695056ecaaff854179171e342d4e8845f6522",
-      "transformation": "Verbatim function-body extraction for inspection only; no live imports/launchers. Unresolved dependencies are intentional, not standalone modules."
+      "transformation": "Verbatim function-body extraction for inspection only; no live imports/launchers. Unresolved dependencies are intentional, not standalone modules. Outer trailing separator blank line omitted."
     },
     {
       "path": "code/des-projection-excerpt.py.txt",
-      "sha256": "67ea6c84c2780873630af1233ebcae7e9b303ba4571aae020d1caaa2c6c56c74",
+      "sha256": "4404af803ca5969b57d7b75a6b58db2e8aad57d8358421406eea3b753f8d011e",
       "source_repository": "ltx-wsc-cognitive-sandwich",
       "source_commit": "34a0d0dd86bff63a532fc743b02a260f36378795",
       "source_path": "tools/r4_phase_b_v5_pipeline.py",
       "source_sha256": "b94d247b7fbc544313a510e4cb1abcf9b879420c6c245dfa7cfff43820e34fac",
-      "transformation": "Verbatim function-body extraction for inspection only; no live imports/launchers. Unresolved dependencies are intentional, not standalone modules."
+      "transformation": "Verbatim function-body extraction for inspection only; no live imports/launchers. Unresolved dependencies are intentional, not standalone modules. Outer trailing separator blank line omitted."
     },
     {
       "path": "code/population-identity-excerpt.py.txt",
-      "sha256": "ff69229d97de7e54611429a73fa9cee4ff47f38e29b34258737d3a4775a36a66",
+      "sha256": "f63f90c3ed7614b3919df036e6b9cb7183bd333b3ee141e3a1c2bf78ae1a7dae",
       "source_repository": "ltx-wsc-cognitive-sandwich",
       "source_commit": "34a0d0dd86bff63a532fc743b02a260f36378795",
       "source_path": "tools/r4_phase_b_v5_live.py",
       "source_sha256": "d42812f1bd110e5e095aa3c10712c308b60e46539554d4e83f5e7e1b63af22aa",
-      "transformation": "Verbatim function-body extraction for inspection only; no live imports/launchers. Unresolved dependencies are intentional, not standalone modules."
+      "transformation": "Verbatim function-body extraction for inspection only; no live imports/launchers. Unresolved dependencies are intentional, not standalone modules. Outer trailing separator blank line omitted."
     },
     {
       "path": "examples/retained-des-allocations.json",

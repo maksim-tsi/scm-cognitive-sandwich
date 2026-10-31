@@ -7,4 +7,3 @@
         projected["condition"] = condition
         projected["generation_id"] = generation_id
         return projected
-

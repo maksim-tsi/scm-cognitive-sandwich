@@ -27,4 +27,3 @@ def response_schema(incident: dict[str, Any], condition: str, attempt: int) -> d
         "required": ["artifact_id", "incident_id", "allocations", "unallocated_by_lot", "condition", "attempt_index"],
         "additionalProperties": False,
     }
-

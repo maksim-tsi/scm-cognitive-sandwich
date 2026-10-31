@@ -28,4 +28,3 @@ def build_prompt(
         raise RuntimeError("unresolved Phase-B prompt token")
     schema = legacy.response_schema(incident, condition, attempt)
     return prompt, schema
-

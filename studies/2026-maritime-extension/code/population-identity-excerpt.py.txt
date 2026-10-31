@@ -31,4 +31,3 @@ def scientific_population() -> list[dict[str, Any]]:
     if len(strata) != 4 or set(strata.values()) != {15}:
         raise RuntimeError("scientific population is not four-stratum balanced")
     return units
-
