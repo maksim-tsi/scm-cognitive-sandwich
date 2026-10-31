@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "Cite this study separately and specify the source commit/package manifest."
+type: software
+version: 0.1.0-review
+title: "Cognitive Sandwich Architecture for LLM Agents in Logistics \u2014 research artifacts"
+authors:
+  - family-names: Ilin
+    given-names: Maksim
+    orcid: https://orcid.org/0009-0006-1955-4777
+  - family-names: Pavlyuk
+    given-names: Dmitry
+    orcid: https://orcid.org/0000-0003-3710-9678
+repository-code: https://github.com/maksim-tsi/scm-cognitive-sandwich
+abstract: "IDWL 2026 published antecedent; source snapshot not a new publication"
+preferred-citation:
+  type: conference-paper
+  title: "Cognitive Sandwich Architecture for LLM Agents in Logistics"
+  year: 2026
+  doi: 10.25673/123541
+  authors:
+    - family-names: Ilin
+      given-names: Maksim
+      orcid: https://orcid.org/0009-0006-1955-4777
+    - family-names: Pavlyuk
+      given-names: Dmitry
+      orcid: https://orcid.org/0000-0003-3710-9678

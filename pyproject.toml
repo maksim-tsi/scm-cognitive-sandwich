@@ -45,3 +45,7 @@ mypy_path = ["src"]
 python_version = "3.13"
 namespace_packages = false
 ignore_missing_imports = true
+
+# Legacy tests and study tests use separate dependency environments/namespaces.
+[tool.pytest.ini_options]
+testpaths = ["tests"]

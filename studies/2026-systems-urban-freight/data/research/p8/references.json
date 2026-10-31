@@ -1,0 +1,626 @@
+[
+  {
+    "world": "P8-01",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "parameters": {
+      "service_A_s": 900
+    },
+    "missing_slots": [],
+    "reference_kind": "corrected_source_first_reference_not_external_domain_validated",
+    "source_ids": [
+      "ALLOW-A"
+    ],
+    "inspected_source_ids": [
+      "ALLOW-A"
+    ],
+    "derivation": "independent source eligibility/supersession then exhaustive route enumeration",
+    "outcome": "FEASIBLE_PLAN",
+    "oracle": {
+      "status": "FEASIBLE",
+      "routes": [
+        {
+          "vehicle": 0,
+          "nodes": [
+            0,
+            2,
+            1,
+            3,
+            0
+          ],
+          "timetable": [
+            {
+              "node": 2,
+              "service_start_s": 394,
+              "service_finish_s": 694
+            },
+            {
+              "node": 1,
+              "service_start_s": 852,
+              "service_finish_s": 1752
+            },
+            {
+              "node": 3,
+              "service_start_s": 2576,
+              "service_finish_s": 2876
+            }
+          ]
+        }
+      ],
+      "distance_m": 11422
+    }
+  },
+  {
+    "world": "P8-02",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "parameters": {
+      "load_B_kg": 70
+    },
+    "missing_slots": [],
+    "reference_kind": "corrected_source_first_reference_not_external_domain_validated",
+    "source_ids": [
+      "MAN-B"
+    ],
+    "inspected_source_ids": [
+      "MAN-B"
+    ],
+    "derivation": "independent source eligibility/supersession then exhaustive route enumeration",
+    "outcome": "FEASIBLE_PLAN",
+    "oracle": {
+      "status": "FEASIBLE",
+      "routes": [
+        {
+          "vehicle": 0,
+          "nodes": [
+            0,
+            3,
+            1,
+            0
+          ],
+          "timetable": [
+            {
+              "node": 3,
+              "service_start_s": 665,
+              "service_finish_s": 965
+            },
+            {
+              "node": 1,
+              "service_start_s": 1762,
+              "service_finish_s": 2062
+            }
+          ]
+        },
+        {
+          "vehicle": 1,
+          "nodes": [
+            0,
+            2,
+            0
+          ],
+          "timetable": [
+            {
+              "node": 2,
+              "service_start_s": 394,
+              "service_finish_s": 694
+            }
+          ]
+        }
+      ],
+      "distance_m": 13977
+    }
+  },
+  {
+    "world": "P8-03",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "parameters": {
+      "service_A_s": 300
+    },
+    "missing_slots": [],
+    "reference_kind": "corrected_source_first_reference_not_external_domain_validated",
+    "source_ids": [
+      "SIGNED-A"
+    ],
+    "inspected_source_ids": [
+      "SIGNED-A"
+    ],
+    "derivation": "independent source eligibility/supersession then exhaustive route enumeration",
+    "outcome": "FEASIBLE_PLAN",
+    "oracle": {
+      "status": "FEASIBLE",
+      "routes": [
+        {
+          "vehicle": 0,
+          "nodes": [
+            0,
+            3,
+            1,
+            2,
+            0
+          ],
+          "timetable": [
+            {
+              "node": 3,
+              "service_start_s": 665,
+              "service_finish_s": 965
+            },
+            {
+              "node": 1,
+              "service_start_s": 1762,
+              "service_finish_s": 2062
+            },
+            {
+              "node": 2,
+              "service_start_s": 2251,
+              "service_finish_s": 2551
+            }
+          ]
+        }
+      ],
+      "distance_m": 10925
+    }
+  },
+  {
+    "world": "P8-04",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "parameters": {
+      "load_B_kg": 60
+    },
+    "missing_slots": [],
+    "reference_kind": "corrected_source_first_reference_not_external_domain_validated",
+    "source_ids": [
+      "MAN-RESOLVE"
+    ],
+    "inspected_source_ids": [
+      "MAN-NEW",
+      "MAN-OLD",
+      "MAN-RESOLVE"
+    ],
+    "derivation": "independent source eligibility/supersession then exhaustive route enumeration",
+    "outcome": "FEASIBLE_PLAN",
+    "oracle": {
+      "status": "FEASIBLE",
+      "routes": [
+        {
+          "vehicle": 0,
+          "nodes": [
+            0,
+            1,
+            2,
+            0
+          ],
+          "timetable": [
+            {
+              "node": 1,
+              "service_start_s": 335,
+              "service_finish_s": 635
+            },
+            {
+              "node": 2,
+              "service_start_s": 824,
+              "service_finish_s": 1124
+            }
+          ]
+        },
+        {
+          "vehicle": 1,
+          "nodes": [
+            0,
+            3,
+            0
+          ],
+          "timetable": [
+            {
+              "node": 3,
+              "service_start_s": 665,
+              "service_finish_s": 965
+            }
+          ]
+        }
+      ],
+      "distance_m": 12143
+    }
+  },
+  {
+    "world": "P8-05",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "parameters": {},
+    "missing_slots": [
+      "close_A_s"
+    ],
+    "reference_kind": "corrected_source_first_reference_not_external_domain_validated",
+    "source_ids": [],
+    "inspected_source_ids": [
+      "RCV-OLD"
+    ],
+    "derivation": "independent source eligibility/supersession then exhaustive route enumeration",
+    "outcome": "INSUFFICIENT",
+    "oracle": null,
+    "conflict_branches": []
+  },
+  {
+    "world": "P8-06",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "parameters": {
+      "service_A_s": 1080
+    },
+    "missing_slots": [],
+    "reference_kind": "corrected_source_first_reference_not_external_domain_validated",
+    "source_ids": [
+      "PLAN-A"
+    ],
+    "inspected_source_ids": [
+      "EST-A",
+      "PLAN-A"
+    ],
+    "derivation": "independent source eligibility/supersession then exhaustive route enumeration",
+    "outcome": "FEASIBLE_PLAN",
+    "oracle": {
+      "status": "FEASIBLE",
+      "routes": [
+        {
+          "vehicle": 0,
+          "nodes": [
+            0,
+            3,
+            1,
+            2,
+            0
+          ],
+          "timetable": [
+            {
+              "node": 3,
+              "service_start_s": 665,
+              "service_finish_s": 965
+            },
+            {
+              "node": 1,
+              "service_start_s": 1762,
+              "service_finish_s": 2842
+            },
+            {
+              "node": 2,
+              "service_start_s": 3031,
+              "service_finish_s": 3331
+            }
+          ]
+        }
+      ],
+      "distance_m": 10925
+    }
+  },
+  {
+    "world": "P8-07",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "parameters": {},
+    "missing_slots": [
+      "close_A_s"
+    ],
+    "reference_kind": "corrected_source_first_reference_not_external_domain_validated",
+    "source_ids": [],
+    "inspected_source_ids": [],
+    "derivation": "independent source eligibility/supersession then exhaustive route enumeration",
+    "outcome": "INSUFFICIENT",
+    "oracle": null,
+    "conflict_branches": []
+  },
+  {
+    "world": "P8-08",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "parameters": {
+      "load_B_kg": 140
+    },
+    "missing_slots": [],
+    "reference_kind": "corrected_source_first_reference_not_external_domain_validated",
+    "source_ids": [
+      "LOAD-B"
+    ],
+    "inspected_source_ids": [
+      "LOAD-B"
+    ],
+    "derivation": "independent source eligibility/supersession then exhaustive route enumeration",
+    "outcome": "INFEASIBLE",
+    "oracle": {
+      "status": "NO_FEASIBLE_SOLUTION",
+      "routes": [],
+      "distance_m": null
+    }
+  },
+  {
+    "world": "P8-09",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "parameters": {
+      "close_A_s": 600
+    },
+    "missing_slots": [],
+    "reference_kind": "corrected_source_first_reference_not_external_domain_validated",
+    "source_ids": [
+      "RCV-TIGHT"
+    ],
+    "inspected_source_ids": [
+      "RCV-TIGHT"
+    ],
+    "derivation": "independent source eligibility/supersession then exhaustive route enumeration",
+    "outcome": "INFEASIBLE",
+    "oracle": {
+      "status": "NO_FEASIBLE_SOLUTION",
+      "routes": [],
+      "distance_m": null
+    }
+  },
+  {
+    "world": "P8-10",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "parameters": {
+      "service_A_s": 300
+    },
+    "missing_slots": [],
+    "reference_kind": "corrected_source_first_reference_not_external_domain_validated",
+    "source_ids": [
+      "KEEP-A"
+    ],
+    "inspected_source_ids": [
+      "KEEP-A"
+    ],
+    "derivation": "independent source eligibility/supersession then exhaustive route enumeration",
+    "outcome": "FEASIBLE_PLAN",
+    "oracle": {
+      "status": "FEASIBLE",
+      "routes": [
+        {
+          "vehicle": 0,
+          "nodes": [
+            0,
+            3,
+            1,
+            2,
+            0
+          ],
+          "timetable": [
+            {
+              "node": 3,
+              "service_start_s": 665,
+              "service_finish_s": 965
+            },
+            {
+              "node": 1,
+              "service_start_s": 1762,
+              "service_finish_s": 2062
+            },
+            {
+              "node": 2,
+              "service_start_s": 2251,
+              "service_finish_s": 2551
+            }
+          ]
+        }
+      ],
+      "distance_m": 10925
+    }
+  },
+  {
+    "world": "P8-11",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "parameters": {
+      "travel_A_B_s": 1800
+    },
+    "missing_slots": [],
+    "reference_kind": "corrected_source_first_reference_not_external_domain_validated",
+    "source_ids": [
+      "ROAD-01"
+    ],
+    "inspected_source_ids": [
+      "ROAD-01"
+    ],
+    "derivation": "independent source eligibility/supersession then exhaustive route enumeration",
+    "outcome": "FEASIBLE_PLAN",
+    "oracle": {
+      "status": "FEASIBLE",
+      "routes": [
+        {
+          "vehicle": 0,
+          "nodes": [
+            0,
+            2,
+            1,
+            3,
+            0
+          ],
+          "timetable": [
+            {
+              "node": 2,
+              "service_start_s": 394,
+              "service_finish_s": 694
+            },
+            {
+              "node": 1,
+              "service_start_s": 852,
+              "service_finish_s": 1152
+            },
+            {
+              "node": 3,
+              "service_start_s": 1976,
+              "service_finish_s": 2276
+            }
+          ]
+        }
+      ],
+      "distance_m": 11422
+    }
+  },
+  {
+    "world": "P8-12",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "parameters": {
+      "load_B_kg": 70,
+      "payload_1_kg": 75
+    },
+    "missing_slots": [],
+    "reference_kind": "corrected_source_first_reference_not_external_domain_validated",
+    "source_ids": [
+      "MASS-B",
+      "VAN-1"
+    ],
+    "inspected_source_ids": [
+      "AMBIG-B",
+      "MASS-B",
+      "VAN-1"
+    ],
+    "derivation": "independent source eligibility/supersession then exhaustive route enumeration",
+    "outcome": "FEASIBLE_PLAN",
+    "oracle": {
+      "status": "FEASIBLE",
+      "routes": [
+        {
+          "vehicle": 0,
+          "nodes": [
+            0,
+            3,
+            1,
+            0
+          ],
+          "timetable": [
+            {
+              "node": 3,
+              "service_start_s": 665,
+              "service_finish_s": 965
+            },
+            {
+              "node": 1,
+              "service_start_s": 1762,
+              "service_finish_s": 2062
+            }
+          ]
+        },
+        {
+          "vehicle": 1,
+          "nodes": [
+            0,
+            2,
+            0
+          ],
+          "timetable": [
+            {
+              "node": 2,
+              "service_start_s": 394,
+              "service_finish_s": 694
+            }
+          ]
+        }
+      ],
+      "distance_m": 13977
+    }
+  },
+  {
+    "world": "P8-13",
+    "condition": {
+      "tools": true,
+      "user_answers": true
+    },
+    "parameters": {},
+    "missing_slots": [
+      "close_A_s"
+    ],
+    "reference_kind": "corrected_source_first_reference_not_external_domain_validated",
+    "source_ids": [],
+    "inspected_source_ids": [
+      "RCV-X",
+      "RCV-Y"
+    ],
+    "derivation": "independent source eligibility/supersession then exhaustive route enumeration",
+    "outcome": "INSUFFICIENT",
+    "oracle": null,
+    "conflict_branches": [
+      {
+        "parameters": {
+          "close_A_s": 600
+        },
+        "hypothesis_source_ids": [
+          "RCV-X"
+        ],
+        "outcome": "INFEASIBLE",
+        "oracle": {
+          "status": "NO_FEASIBLE_SOLUTION",
+          "routes": [],
+          "distance_m": null
+        }
+      },
+      {
+        "parameters": {
+          "close_A_s": 2700
+        },
+        "hypothesis_source_ids": [
+          "RCV-Y"
+        ],
+        "outcome": "FEASIBLE_PLAN",
+        "oracle": {
+          "status": "FEASIBLE",
+          "routes": [
+            {
+              "vehicle": 0,
+              "nodes": [
+                0,
+                3,
+                1,
+                2,
+                0
+              ],
+              "timetable": [
+                {
+                  "node": 3,
+                  "service_start_s": 665,
+                  "service_finish_s": 965
+                },
+                {
+                  "node": 1,
+                  "service_start_s": 1762,
+                  "service_finish_s": 2062
+                },
+                {
+                  "node": 2,
+                  "service_start_s": 2251,
+                  "service_finish_s": 2551
+                }
+              ]
+            }
+          ],
+          "distance_m": 10925
+        }
+      }
+    ]
+  }
+]

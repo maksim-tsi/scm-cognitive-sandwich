@@ -1,0 +1,153 @@
+{
+  "files": [
+    {
+      "path": "code/acceptance-adapter-excerpts.py.txt",
+      "sha256": "58496e810485d01fef51d9a4a3de8be49ab9dde48c8ccb67a01bce340699fe1d",
+      "source_commit": "cf1308557d071614533bac9197e8aff968737fa8",
+      "source_path": "supplementary/icecer-2026/code/acceptance-adapter-excerpts.py",
+      "source_sha256": "58496e810485d01fef51d9a4a3de8be49ab9dde48c8ccb67a01bce340699fe1d",
+      "transformation": "byte-identical curated historical supplement; paper drafts and technical event logs excluded; inspection excerpt renamed .py.txt, content unchanged"
+    },
+    {
+      "path": "code/analysis.py",
+      "sha256": "ec3fde78a69997cd5227f985143c933388662b94851abf0e6016943dc514def0",
+      "source_commit": "cf1308557d071614533bac9197e8aff968737fa8",
+      "source_path": "supplementary/icecer-2026/code/analysis.py",
+      "source_sha256": "ec3fde78a69997cd5227f985143c933388662b94851abf0e6016943dc514def0",
+      "transformation": "byte-identical curated historical supplement; paper drafts and technical event logs excluded"
+    },
+    {
+      "path": "code/controller-excerpts.py.txt",
+      "sha256": "2e08d3fe3d7c9aaa55786432a997f40bb10940a8dc221cceb4763bb59e84a1aa",
+      "source_commit": "cf1308557d071614533bac9197e8aff968737fa8",
+      "source_path": "supplementary/icecer-2026/code/controller-excerpts.py",
+      "source_sha256": "2e08d3fe3d7c9aaa55786432a997f40bb10940a8dc221cceb4763bb59e84a1aa",
+      "transformation": "byte-identical curated historical supplement; paper drafts and technical event logs excluded; inspection excerpt renamed .py.txt, content unchanged"
+    },
+    {
+      "path": "code/direct-response-excerpts.py.txt",
+      "sha256": "e9ebeeabf112f80fa9e49a1b87968ebfaec72fcc768b6585b8bbd819aacd0944",
+      "source_commit": "cf1308557d071614533bac9197e8aff968737fa8",
+      "source_path": "supplementary/icecer-2026/code/direct-response-excerpts.py",
+      "source_sha256": "e9ebeeabf112f80fa9e49a1b87968ebfaec72fcc768b6585b8bbd819aacd0944",
+      "transformation": "byte-identical curated historical supplement; paper drafts and technical event logs excluded; inspection excerpt renamed .py.txt, content unchanged"
+    },
+    {
+      "path": "code/phoenix-reconciliation-excerpts.py.txt",
+      "sha256": "c27887368a508c3918fe79e2c14f9992487ac324d4ecef1fdb313402282a343d",
+      "source_commit": "cf1308557d071614533bac9197e8aff968737fa8",
+      "source_path": "supplementary/icecer-2026/code/phoenix-reconciliation-excerpts.py",
+      "source_sha256": "c27887368a508c3918fe79e2c14f9992487ac324d4ecef1fdb313402282a343d",
+      "transformation": "byte-identical curated historical supplement; paper drafts and technical event logs excluded; inspection excerpt renamed .py.txt, content unchanged"
+    },
+    {
+      "path": "code/sandbox/pyproject.toml",
+      "sha256": "2810823a6371d78c8c5121064acdd805ba8705f7824ce7e54c3fef8d79da9bc9",
+      "source_commit": "cf1308557d071614533bac9197e8aff968737fa8",
+      "source_path": "supplementary/icecer-2026/code/sandbox/pyproject.toml",
+      "source_sha256": "2810823a6371d78c8c5121064acdd805ba8705f7824ce7e54c3fef8d79da9bc9",
+      "transformation": "byte-identical curated historical supplement; paper drafts and technical event logs excluded"
+    },
+    {
+      "path": "code/sandbox/src/services/allocation_reference.py",
+      "sha256": "6e78caa44983b551583734b39093a20ecb13b60f3f54e00fe26b789c56aa9fed",
+      "source_commit": "cf1308557d071614533bac9197e8aff968737fa8",
+      "source_path": "supplementary/icecer-2026/code/sandbox/src/services/allocation_reference.py",
+      "source_sha256": "6e78caa44983b551583734b39093a20ecb13b60f3f54e00fe26b789c56aa9fed",
+      "transformation": "byte-identical curated historical supplement; paper drafts and technical event logs excluded"
+    },
+    {
+      "path": "code/sandbox/src/services/artifact_validator.py",
+      "sha256": "e5600b3359c71faf15f624018e2a23ff04e7fd1b784b42ab904befba3aebbd66",
+      "source_commit": "cf1308557d071614533bac9197e8aff968737fa8",
+      "source_path": "supplementary/icecer-2026/code/sandbox/src/services/artifact_validator.py",
+      "source_sha256": "e5600b3359c71faf15f624018e2a23ff04e7fd1b784b42ab904befba3aebbd66",
+      "transformation": "byte-identical curated historical supplement; paper drafts and technical event logs excluded"
+    },
+    {
+      "path": "code/sandbox/src/services/des_admission.py",
+      "sha256": "2c8a6b79d49e9b0bc38336876c3c58daeb2992255296c80a201cb8048ee5660a",
+      "source_commit": "cf1308557d071614533bac9197e8aff968737fa8",
+      "source_path": "supplementary/icecer-2026/code/sandbox/src/services/des_admission.py",
+      "source_sha256": "2c8a6b79d49e9b0bc38336876c3c58daeb2992255296c80a201cb8048ee5660a",
+      "transformation": "byte-identical curated historical supplement; paper drafts and technical event logs excluded"
+    },
+    {
+      "path": "code/sandbox/src/services/r4_phase_a_des.py",
+      "sha256": "0da483d4a393f7bd270abf0e4d2cfc8f4269499ee5e74d493055717cab170505",
+      "source_commit": "cf1308557d071614533bac9197e8aff968737fa8",
+      "source_path": "supplementary/icecer-2026/code/sandbox/src/services/r4_phase_a_des.py",
+      "source_sha256": "0da483d4a393f7bd270abf0e4d2cfc8f4269499ee5e74d493055717cab170505",
+      "transformation": "byte-identical curated historical supplement; paper drafts and technical event logs excluded"
+    },
+    {
+      "path": "code/sandbox/src/services/scenario_generator.py",
+      "sha256": "5ae9d184a7b211f88b4585b880e00cdf1b92590d7306a881b3bc02ba6a21b4a2",
+      "source_commit": "cf1308557d071614533bac9197e8aff968737fa8",
+      "source_path": "supplementary/icecer-2026/code/sandbox/src/services/scenario_generator.py",
+      "source_sha256": "5ae9d184a7b211f88b4585b880e00cdf1b92590d7306a881b3bc02ba6a21b4a2",
+      "transformation": "byte-identical curated historical supplement; paper drafts and technical event logs excluded"
+    },
+    {
+      "path": "evidence/accepted-metrics.json",
+      "sha256": "e83a59c67c51e7bc315b70da51f37e2c259f2f2f417c1199059f34294b19edc9",
+      "source_commit": "cf1308557d071614533bac9197e8aff968737fa8",
+      "source_path": "supplementary/icecer-2026/evidence/accepted-metrics.json",
+      "source_sha256": "e83a59c67c51e7bc315b70da51f37e2c259f2f2f417c1199059f34294b19edc9",
+      "transformation": "byte-identical curated historical supplement; paper drafts and technical event logs excluded"
+    },
+    {
+      "path": "evidence/accepted-outcome.json",
+      "sha256": "f49eabc17dc177a43c758657f0388bb9001aada37b36db860e1c63ac14a8116f",
+      "source_commit": "cf1308557d071614533bac9197e8aff968737fa8",
+      "source_path": "supplementary/icecer-2026/evidence/accepted-outcome.json",
+      "source_sha256": "f49eabc17dc177a43c758657f0388bb9001aada37b36db860e1c63ac14a8116f",
+      "transformation": "byte-identical curated historical supplement; paper drafts and technical event logs excluded"
+    },
+    {
+      "path": "evidence/analysis.json",
+      "sha256": "80ce8d1baefd42081582b64f733f1737357df9b400c372a2f55630fdfd8d984b",
+      "source_commit": "cf1308557d071614533bac9197e8aff968737fa8",
+      "source_path": "supplementary/icecer-2026/evidence/analysis.json",
+      "source_sha256": "80ce8d1baefd42081582b64f733f1737357df9b400c372a2f55630fdfd8d984b",
+      "transformation": "byte-identical curated historical supplement; paper drafts and technical event logs excluded"
+    },
+    {
+      "path": "evidence/des-replications.jsonl",
+      "sha256": "0ef336c160f887df5e6190ef868dac70f3a9642eabc37ee0116d2371de633b5f",
+      "source_commit": "cf1308557d071614533bac9197e8aff968737fa8",
+      "source_path": "supplementary/icecer-2026/evidence/des-replications.jsonl",
+      "source_sha256": "0ef336c160f887df5e6190ef868dac70f3a9642eabc37ee0116d2371de633b5f",
+      "transformation": "byte-identical curated historical supplement; paper drafts and technical event logs excluded"
+    },
+    {
+      "path": "evidence/terminals.jsonl",
+      "sha256": "b46cd74e4cc966a3dbaacdb0be3e3ec3752f83813eb612fdfc06b875279aaa38",
+      "source_commit": "cf1308557d071614533bac9197e8aff968737fa8",
+      "source_path": "supplementary/icecer-2026/evidence/terminals.jsonl",
+      "source_sha256": "b46cd74e4cc966a3dbaacdb0be3e3ec3752f83813eb612fdfc06b875279aaa38",
+      "transformation": "byte-identical curated historical supplement; paper drafts and technical event logs excluded"
+    },
+    {
+      "path": "provenance/export-manifest.json",
+      "sha256": "469ae95ec35273f2ae2df59d866769f93a3ebb7662282aadb0f77a73f5e5cc65",
+      "source_commit": "cf1308557d071614533bac9197e8aff968737fa8",
+      "source_path": "supplementary/icecer-2026/provenance/export-manifest.json",
+      "source_sha256": "469ae95ec35273f2ae2df59d866769f93a3ebb7662282aadb0f77a73f5e5cc65",
+      "transformation": "byte-identical curated historical supplement; paper drafts and technical event logs excluded"
+    },
+    {
+      "path": "provenance/runtime.json",
+      "sha256": "c35e59f930e2ebed6ec5a215577980747ded54771ee0170af3941fd69d9e32ba",
+      "source_commit": "cf1308557d071614533bac9197e8aff968737fa8",
+      "source_path": "supplementary/icecer-2026/provenance/runtime.json",
+      "source_sha256": "c35e59f930e2ebed6ec5a215577980747ded54771ee0170af3941fd69d9e32ba",
+      "transformation": "byte-identical curated historical supplement; paper drafts and technical event logs excluded"
+    }
+  ],
+  "not_exported": [
+    "paper/ (unpublished private manuscript)",
+    "logs/ (technical event markers, not required for public results)",
+    "validate.py (expected excluded materials)"
+  ]
+}

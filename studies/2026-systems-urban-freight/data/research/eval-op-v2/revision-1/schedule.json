@@ -1,0 +1,442 @@
+[
+  {
+    "route": "dint",
+    "assignment_id": "OPV2-01-C"
+  },
+  {
+    "route": "dint",
+    "assignment_id": "OPV2-01-E"
+  },
+  {
+    "route": "qwen",
+    "assignment_id": "OPV2-01-C"
+  },
+  {
+    "route": "qwen",
+    "assignment_id": "OPV2-01-E"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "OPV2-01-C"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "OPV2-01-E"
+  },
+  {
+    "route": "mistral",
+    "assignment_id": "OPV2-01-E"
+  },
+  {
+    "route": "mistral",
+    "assignment_id": "OPV2-01-C"
+  },
+  {
+    "route": "openai",
+    "assignment_id": "OPV2-01-E"
+  },
+  {
+    "route": "openai",
+    "assignment_id": "OPV2-01-C"
+  },
+  {
+    "route": "dint",
+    "assignment_id": "OPV2-02-E"
+  },
+  {
+    "route": "dint",
+    "assignment_id": "OPV2-02-C"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "OPV2-02-E"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "OPV2-02-C"
+  },
+  {
+    "route": "mistral",
+    "assignment_id": "OPV2-02-C"
+  },
+  {
+    "route": "mistral",
+    "assignment_id": "OPV2-02-E"
+  },
+  {
+    "route": "openai",
+    "assignment_id": "OPV2-02-C"
+  },
+  {
+    "route": "openai",
+    "assignment_id": "OPV2-02-E"
+  },
+  {
+    "route": "qwen",
+    "assignment_id": "OPV2-02-E"
+  },
+  {
+    "route": "qwen",
+    "assignment_id": "OPV2-02-C"
+  },
+  {
+    "route": "dint",
+    "assignment_id": "OPV2-03-C"
+  },
+  {
+    "route": "dint",
+    "assignment_id": "OPV2-03-E"
+  },
+  {
+    "route": "mistral",
+    "assignment_id": "OPV2-03-E"
+  },
+  {
+    "route": "mistral",
+    "assignment_id": "OPV2-03-C"
+  },
+  {
+    "route": "openai",
+    "assignment_id": "OPV2-03-E"
+  },
+  {
+    "route": "openai",
+    "assignment_id": "OPV2-03-C"
+  },
+  {
+    "route": "qwen",
+    "assignment_id": "OPV2-03-C"
+  },
+  {
+    "route": "qwen",
+    "assignment_id": "OPV2-03-E"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "OPV2-03-C"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "OPV2-03-E"
+  },
+  {
+    "route": "dint",
+    "assignment_id": "OPV2-04-E"
+  },
+  {
+    "route": "dint",
+    "assignment_id": "OPV2-04-C"
+  },
+  {
+    "route": "openai",
+    "assignment_id": "OPV2-04-C"
+  },
+  {
+    "route": "openai",
+    "assignment_id": "OPV2-04-E"
+  },
+  {
+    "route": "qwen",
+    "assignment_id": "OPV2-04-E"
+  },
+  {
+    "route": "qwen",
+    "assignment_id": "OPV2-04-C"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "OPV2-04-E"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "OPV2-04-C"
+  },
+  {
+    "route": "mistral",
+    "assignment_id": "OPV2-04-C"
+  },
+  {
+    "route": "mistral",
+    "assignment_id": "OPV2-04-E"
+  },
+  {
+    "route": "dint",
+    "assignment_id": "OPV2-05-E"
+  },
+  {
+    "route": "qwen",
+    "assignment_id": "OPV2-05-E"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "OPV2-05-E"
+  },
+  {
+    "route": "mistral",
+    "assignment_id": "OPV2-05-E"
+  },
+  {
+    "route": "openai",
+    "assignment_id": "OPV2-05-E"
+  },
+  {
+    "route": "dint",
+    "assignment_id": "OPV2-06-E"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "OPV2-06-E"
+  },
+  {
+    "route": "mistral",
+    "assignment_id": "OPV2-06-E"
+  },
+  {
+    "route": "openai",
+    "assignment_id": "OPV2-06-E"
+  },
+  {
+    "route": "qwen",
+    "assignment_id": "OPV2-06-E"
+  },
+  {
+    "route": "dint",
+    "assignment_id": "OPV2-07-E"
+  },
+  {
+    "route": "mistral",
+    "assignment_id": "OPV2-07-E"
+  },
+  {
+    "route": "openai",
+    "assignment_id": "OPV2-07-E"
+  },
+  {
+    "route": "qwen",
+    "assignment_id": "OPV2-07-E"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "OPV2-07-E"
+  },
+  {
+    "route": "dint",
+    "assignment_id": "OPV2-08-E"
+  },
+  {
+    "route": "dint",
+    "assignment_id": "OPV2-08-C"
+  },
+  {
+    "route": "openai",
+    "assignment_id": "OPV2-08-C"
+  },
+  {
+    "route": "openai",
+    "assignment_id": "OPV2-08-E"
+  },
+  {
+    "route": "qwen",
+    "assignment_id": "OPV2-08-E"
+  },
+  {
+    "route": "qwen",
+    "assignment_id": "OPV2-08-C"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "OPV2-08-E"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "OPV2-08-C"
+  },
+  {
+    "route": "mistral",
+    "assignment_id": "OPV2-08-C"
+  },
+  {
+    "route": "mistral",
+    "assignment_id": "OPV2-08-E"
+  },
+  {
+    "route": "dint",
+    "assignment_id": "OPV2-09-E"
+  },
+  {
+    "route": "qwen",
+    "assignment_id": "OPV2-09-E"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "OPV2-09-E"
+  },
+  {
+    "route": "mistral",
+    "assignment_id": "OPV2-09-E"
+  },
+  {
+    "route": "openai",
+    "assignment_id": "OPV2-09-E"
+  },
+  {
+    "route": "dint",
+    "assignment_id": "OPV2-10-E"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "OPV2-10-E"
+  },
+  {
+    "route": "mistral",
+    "assignment_id": "OPV2-10-E"
+  },
+  {
+    "route": "openai",
+    "assignment_id": "OPV2-10-E"
+  },
+  {
+    "route": "qwen",
+    "assignment_id": "OPV2-10-E"
+  },
+  {
+    "route": "dint",
+    "assignment_id": "OPV2-11-E"
+  },
+  {
+    "route": "mistral",
+    "assignment_id": "OPV2-11-E"
+  },
+  {
+    "route": "openai",
+    "assignment_id": "OPV2-11-E"
+  },
+  {
+    "route": "qwen",
+    "assignment_id": "OPV2-11-E"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "OPV2-11-E"
+  },
+  {
+    "route": "dint",
+    "assignment_id": "OPV2-12-E"
+  },
+  {
+    "route": "openai",
+    "assignment_id": "OPV2-12-E"
+  },
+  {
+    "route": "qwen",
+    "assignment_id": "OPV2-12-E"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "OPV2-12-E"
+  },
+  {
+    "route": "mistral",
+    "assignment_id": "OPV2-12-E"
+  },
+  {
+    "route": "dint",
+    "assignment_id": "OPV2-13-C"
+  },
+  {
+    "route": "dint",
+    "assignment_id": "OPV2-13-E"
+  },
+  {
+    "route": "qwen",
+    "assignment_id": "OPV2-13-C"
+  },
+  {
+    "route": "qwen",
+    "assignment_id": "OPV2-13-E"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "OPV2-13-C"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "OPV2-13-E"
+  },
+  {
+    "route": "mistral",
+    "assignment_id": "OPV2-13-E"
+  },
+  {
+    "route": "mistral",
+    "assignment_id": "OPV2-13-C"
+  },
+  {
+    "route": "openai",
+    "assignment_id": "OPV2-13-E"
+  },
+  {
+    "route": "openai",
+    "assignment_id": "OPV2-13-C"
+  },
+  {
+    "route": "dint",
+    "assignment_id": "OPV2-14-E"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "OPV2-14-E"
+  },
+  {
+    "route": "mistral",
+    "assignment_id": "OPV2-14-E"
+  },
+  {
+    "route": "openai",
+    "assignment_id": "OPV2-14-E"
+  },
+  {
+    "route": "qwen",
+    "assignment_id": "OPV2-14-E"
+  },
+  {
+    "route": "dint",
+    "assignment_id": "OPV2-15-E"
+  },
+  {
+    "route": "mistral",
+    "assignment_id": "OPV2-15-E"
+  },
+  {
+    "route": "openai",
+    "assignment_id": "OPV2-15-E"
+  },
+  {
+    "route": "qwen",
+    "assignment_id": "OPV2-15-E"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "OPV2-15-E"
+  },
+  {
+    "route": "dint",
+    "assignment_id": "OPV2-16-E"
+  },
+  {
+    "route": "openai",
+    "assignment_id": "OPV2-16-E"
+  },
+  {
+    "route": "qwen",
+    "assignment_id": "OPV2-16-E"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "OPV2-16-E"
+  },
+  {
+    "route": "mistral",
+    "assignment_id": "OPV2-16-E"
+  }
+]

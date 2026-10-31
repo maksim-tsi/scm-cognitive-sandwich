@@ -1,0 +1,58 @@
+{
+  "analysis_contract": {
+    "bootstrap_resamples": 10000,
+    "bootstrap_seed": 202604,
+    "bounds_unit": "incident_cluster",
+    "sign_flip_permutations": 100000,
+    "sign_flip_seed": 202605
+  },
+  "contract_version": "R4-DEEPSEEK-DIRECT-v5",
+  "denominators": {
+    "attempted_incidents": 60,
+    "frozen_incidents": 60,
+    "generated_initial_artifacts": 59,
+    "validation_outcomes_recorded": 177
+  },
+  "h2_exploratory": {
+    "cluster_bootstrap_95_ci": [
+      0.0847457627118644,
+      0.2711864406779661
+    ],
+    "cluster_level_worst_case_bounds": [
+      0.15,
+      0.18333333333333332
+    ],
+    "estimand": "structured_repair - llm_only",
+    "incident_clusters_analyzable": 59,
+    "incident_clusters_expected": 60,
+    "incident_clusters_missing": 1,
+    "mean_difference": 0.1694915254237288,
+    "missing_pairs_by_reason": {
+      "ATTRIBUTED_PROVIDER_RESPONSE+PHOENIX_RECONCILIATION_FAILURE_AFTER_CRASH+PROVIDER_OR_INFRASTRUCTURE_MISSING": 1
+    },
+    "paired_sign_flip_p_value": 0.001989980100198998,
+    "status": "ESTIMATED"
+  },
+  "primary": {
+    "cluster_bootstrap_95_ci": [
+      -0.1016949152542373,
+      0.13559322033898305
+    ],
+    "cluster_level_worst_case_bounds": [
+      0.0,
+      0.03333333333333333
+    ],
+    "estimand": "structured_repair - gate_only",
+    "incident_clusters_analyzable": 59,
+    "incident_clusters_expected": 60,
+    "incident_clusters_missing": 1,
+    "mean_difference": 0.01694915254237288,
+    "missing_pairs_by_reason": {
+      "ATTRIBUTED_PROVIDER_RESPONSE+PHOENIX_RECONCILIATION_FAILURE_AFTER_CRASH+PROVIDER_OR_INFRASTRUCTURE_MISSING": 1
+    },
+    "paired_sign_flip_p_value": 1.0,
+    "status": "ESTIMATED"
+  },
+  "schema_version": "1.0",
+  "status": "ANALYZED"
+}

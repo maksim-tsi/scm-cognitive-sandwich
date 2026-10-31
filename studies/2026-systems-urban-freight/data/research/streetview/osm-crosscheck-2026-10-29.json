@@ -1,0 +1,4603 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-29T19:42:20Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "node",
+      "id": 1242306799,
+      "lat": 45.4479323,
+      "lon": 11.8714304,
+      "tags": {
+        "barrier": "bollard",
+        "description": "traffic sign pole in the middle of the foot-cycleway"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1978077652,
+      "lat": 45.4260233,
+      "lon": 11.89428,
+      "tags": {
+        "barrier": "gate"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2730729649,
+      "lat": 45.4268233,
+      "lon": 11.8944772,
+      "tags": {
+        "barrier": "bollard",
+        "bicycle": "yes",
+        "bollard": "fixed",
+        "foot": "yes",
+        "material": "concrete"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5806319656,
+      "lat": 45.424863,
+      "lon": 11.878017,
+      "tags": {
+        "barrier": "bollard",
+        "bollard": "fixed",
+        "material": "metal",
+        "maxwidth": "1.5"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6633528647,
+      "lat": 45.4300935,
+      "lon": 11.8886118,
+      "tags": {
+        "barrier": "kerb",
+        "kerb": "flush",
+        "tactile_paving": "primitive"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6633528648,
+      "lat": 45.4300519,
+      "lon": 11.8887866,
+      "tags": {
+        "barrier": "kerb",
+        "incline": "yes",
+        "kerb": "raised",
+        "kerb:height": "0.04 m",
+        "tactile_paving": "primitive"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6633532514,
+      "lat": 45.4302615,
+      "lon": 11.8896421,
+      "tags": {
+        "barrier": "kerb",
+        "kerb": "flush",
+        "tactile_paving": "primitive"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6633532515,
+      "lat": 45.4303321,
+      "lon": 11.8896797,
+      "tags": {
+        "barrier": "kerb",
+        "kerb": "raised",
+        "kerb:height": "0.15 m",
+        "tactile_paving": "primitive"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6633532534,
+      "lat": 45.4300799,
+      "lon": 11.890306,
+      "tags": {
+        "barrier": "kerb",
+        "incline": "yes",
+        "kerb": "lowered",
+        "kerb:height": "0.02 m",
+        "tactile_paving": "primitive"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6633532536,
+      "lat": 45.4300997,
+      "lon": 11.8902272,
+      "tags": {
+        "barrier": "kerb",
+        "incline": "yes",
+        "kerb": "lowered",
+        "kerb:height": "0.01 m",
+        "tactile_paving": "primitive"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7082027729,
+      "lat": 45.4302798,
+      "lon": 11.8994736,
+      "tags": {
+        "access": "customers",
+        "barrier": "gate"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7253202615,
+      "lat": 45.4269106,
+      "lon": 11.8945077,
+      "tags": {
+        "barrier": "bollard",
+        "bicycle": "yes",
+        "bollard": "fixed",
+        "foot": "yes",
+        "material": "concrete"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11528337702,
+      "lat": 45.4367702,
+      "lon": 11.8942063,
+      "tags": {
+        "access": "private",
+        "barrier": "gate"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11528337717,
+      "lat": 45.4329715,
+      "lon": 11.8960067,
+      "tags": {
+        "barrier": "bollard",
+        "bicycle": "yes",
+        "bollard": "removable",
+        "foot": "yes",
+        "material": "concrete",
+        "maxwidth": "2",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 22699219,
+      "center": {
+        "lat": 45.4245556,
+        "lon": 11.8775383
+      },
+      "tags": {
+        "highway": "residential",
+        "name": "Via Giannantonio Selva",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 22699293,
+      "center": {
+        "lat": 45.4257991,
+        "lon": 11.8778089
+      },
+      "tags": {
+        "highway": "residential",
+        "maxspeed": "40",
+        "name": "Via Cattaro",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 22700867,
+      "center": {
+        "lat": 45.4268266,
+        "lon": 11.8847522
+      },
+      "tags": {
+        "highway": "residential",
+        "lanes": "2",
+        "lit": "yes",
+        "name": "Via Giovanni d'Alemagna",
+        "oneway": "no",
+        "sidewalk": "both",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 22700877,
+      "center": {
+        "lat": 45.4270944,
+        "lon": 11.8826103
+      },
+      "tags": {
+        "highway": "residential",
+        "name": "Via Domenico Morelli",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 22700918,
+      "center": {
+        "lat": 45.4255387,
+        "lon": 11.8784086
+      },
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lanes": "1",
+        "name": "Via Michelangelo Buonarroti",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 22700957,
+      "center": {
+        "lat": 45.4251388,
+        "lon": 11.8771156
+      },
+      "tags": {
+        "highway": "residential",
+        "name": "Via Ragusa",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 22700988,
+      "center": {
+        "lat": 45.4250574,
+        "lon": 11.876063
+      },
+      "tags": {
+        "highway": "residential",
+        "lane_markings": "no",
+        "lanes": "1",
+        "maxspeed": "40",
+        "name": "Via Dignano",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 22719161,
+      "center": {
+        "lat": 45.4267344,
+        "lon": 11.884042
+      },
+      "tags": {
+        "highway": "residential",
+        "name": "Via Gasparo Colombina",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 22719313,
+      "center": {
+        "lat": 45.4286851,
+        "lon": 11.8830519
+      },
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lit": "yes",
+        "name": "Via Enrico Chiaradia",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 22719315,
+      "center": {
+        "lat": 45.428722,
+        "lon": 11.8835062
+      },
+      "tags": {
+        "highway": "residential",
+        "name": "Via Girolamo Forabosco",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 22719319,
+      "center": {
+        "lat": 45.427767,
+        "lon": 11.8828892
+      },
+      "tags": {
+        "highway": "footway",
+        "name": "Via Girolamo Forabosco"
+      }
+    },
+    {
+      "type": "way",
+      "id": 22719329,
+      "center": {
+        "lat": 45.4283608,
+        "lon": 11.8839773
+      },
+      "tags": {
+        "highway": "residential",
+        "name": "Via Filippo Parodi",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 22919494,
+      "center": {
+        "lat": 45.4254236,
+        "lon": 11.89886
+      },
+      "tags": {
+        "highway": "residential",
+        "lane_markings": "no",
+        "name": "Via Volfango Amedeo Mozart",
+        "oneway": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 23228880,
+      "center": {
+        "lat": 45.4244331,
+        "lon": 11.876868
+      },
+      "tags": {
+        "highway": "residential",
+        "name": "Via Curzola",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 23437293,
+      "center": {
+        "lat": 45.4305497,
+        "lon": 11.8897286
+      },
+      "tags": {
+        "highway": "residential",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "name": "Via Raffaele Lambruschini",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 23437295,
+      "center": {
+        "lat": 45.4304995,
+        "lon": 11.8903357
+      },
+      "tags": {
+        "highway": "residential",
+        "name": "Via Beato Giuseppe Cottolengo"
+      }
+    },
+    {
+      "type": "way",
+      "id": 23437302,
+      "center": {
+        "lat": 45.429599,
+        "lon": 11.8906365
+      },
+      "tags": {
+        "highway": "service",
+        "oneway": "no",
+        "service": "parking_aisle",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 23437321,
+      "center": {
+        "lat": 45.4254616,
+        "lon": 11.8940193
+      },
+      "tags": {
+        "cycleway:both": "separate",
+        "highway": "unclassified",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "40",
+        "name": "Via Vittorio Saetta",
+        "sidewalk:both": "separate",
+        "source:maxspeed": "sign",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 23437331,
+      "center": {
+        "lat": 45.4260418,
+        "lon": 11.89421
+      },
+      "tags": {
+        "foot": "yes",
+        "highway": "service",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 23437336,
+      "center": {
+        "lat": 45.4338311,
+        "lon": 11.8934099
+      },
+      "tags": {
+        "highway": "residential",
+        "lanes": "2",
+        "lit": "yes",
+        "name": "Via Elena Valmarana",
+        "oneway": "no",
+        "sidewalk": "both",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 23437340,
+      "center": {
+        "lat": 45.4330518,
+        "lon": 11.895082
+      },
+      "tags": {
+        "highway": "residential",
+        "name": "Via Andrea Colotti",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 23512373,
+      "center": {
+        "lat": 45.4246826,
+        "lon": 11.8990788
+      },
+      "tags": {
+        "highway": "residential",
+        "lanes": "2",
+        "lit": "yes",
+        "name": "Via Ottorino Respighi",
+        "sidewalk": "no",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 24376134,
+      "center": {
+        "lat": 45.443324,
+        "lon": 11.8892526
+      },
+      "tags": {
+        "highway": "tertiary",
+        "junction": "roundabout",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "name": "Via Andrea Verrocchio",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 24376135,
+      "center": {
+        "lat": 45.4434756,
+        "lon": 11.8893757
+      },
+      "tags": {
+        "highway": "unclassified",
+        "name": "Via Andrea Verrocchio",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 26832383,
+      "center": {
+        "lat": 45.4481916,
+        "lon": 11.8713012
+      },
+      "tags": {
+        "highway": "tertiary",
+        "junction": "roundabout",
+        "name": "Via Altichiero",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 27066077,
+      "center": {
+        "lat": 45.4480955,
+        "lon": 11.8731616
+      },
+      "tags": {
+        "highway": "residential",
+        "name": "Via Lago Fimon"
+      }
+    },
+    {
+      "type": "way",
+      "id": 28733349,
+      "center": {
+        "lat": 45.4319067,
+        "lon": 11.8956621
+      },
+      "tags": {
+        "highway": "unclassified",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "name": "Via Libero Benedetti",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 28733423,
+      "center": {
+        "lat": 45.4335902,
+        "lon": 11.8953678
+      },
+      "tags": {
+        "highway": "residential",
+        "name": "Via Ca' Magno",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 28891060,
+      "center": {
+        "lat": 45.4301904,
+        "lon": 11.899233
+      },
+      "tags": {
+        "ascent": "1.5",
+        "highway": "unclassified",
+        "name": "Via Cardinale Callegari",
+        "oneway": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 30889143,
+      "center": {
+        "lat": 45.4207946,
+        "lon": 11.8568405
+      },
+      "tags": {
+        "bicycle": "no",
+        "highway": "trunk_link",
+        "motorcycle:conditional": "no @ (displacement <= 149 cc)",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 30891740,
+      "center": {
+        "lat": 45.4371824,
+        "lon": 11.8942135
+      },
+      "tags": {
+        "destination": "Pronto Soccorso;Ospedale;Fiera;Stazione;Stadio;Sant'Antonio;Guardia di Finanza;Parco delle Farfalle",
+        "highway": "secondary_link",
+        "lanes": "1",
+        "name": "Via del Plebiscito 1866",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 30984572,
+      "center": {
+        "lat": 45.4277493,
+        "lon": 11.8997954
+      },
+      "tags": {
+        "hazmat": "no",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Via del Plebiscito 1866",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 30984581,
+      "center": {
+        "lat": 45.4232125,
+        "lon": 11.9007487
+      },
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Via del Plebiscito 1866",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 30984678,
+      "center": {
+        "lat": 45.4277247,
+        "lon": 11.8995864
+      },
+      "tags": {
+        "hazmat": "no",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Via del Plebiscito 1866",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 30984702,
+      "center": {
+        "lat": 45.4302671,
+        "lon": 11.8988959
+      },
+      "tags": {
+        "highway": "secondary",
+        "junction": "roundabout",
+        "lit": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 30985075,
+      "center": {
+        "lat": 45.4251541,
+        "lon": 11.8989676
+      },
+      "tags": {
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "name": "Via Giovanni Battista Viotti",
+        "oneway": "no",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 30985458,
+      "center": {
+        "lat": 45.4322754,
+        "lon": 11.9037274
+      },
+      "tags": {
+        "highway": "unclassified",
+        "name": "Via del Bigolo",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 31138528,
+      "center": {
+        "lat": 45.4289845,
+        "lon": 11.9002269
+      },
+      "tags": {
+        "highway": "residential",
+        "name": "Via del Bigolo"
+      }
+    },
+    {
+      "type": "way",
+      "id": 31293237,
+      "center": {
+        "lat": 45.4499638,
+        "lon": 11.8732076
+      },
+      "tags": {
+        "highway": "tertiary",
+        "name": "Via Querini",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 33240874,
+      "center": {
+        "lat": 45.4497343,
+        "lon": 11.8687187
+      },
+      "tags": {
+        "highway": "tertiary",
+        "name": "Via Altichiero",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 37279936,
+      "center": {
+        "lat": 45.4238879,
+        "lon": 11.8770179
+      },
+      "tags": {
+        "highway": "residential",
+        "name": "Via Raffaello Sanzio",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 39362640,
+      "center": {
+        "lat": 45.424176,
+        "lon": 11.852862
+      },
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "name": "Via Montà",
+        "old_ref": "SP12",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 39363460,
+      "center": {
+        "lat": 45.4216603,
+        "lon": 11.8573167
+      },
+      "tags": {
+        "hgv": "delivery",
+        "highway": "secondary",
+        "lanes": "2",
+        "maxspeed": "30",
+        "name": "Via Montà",
+        "old_ref": "SP12",
+        "source:maxspeed": "sign",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 39363506,
+      "center": {
+        "lat": 45.4218557,
+        "lon": 11.8570783
+      },
+      "tags": {
+        "highway": "secondary",
+        "lanes": "1",
+        "name": "Via Montà",
+        "old_ref": "SP12",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 39607127,
+      "center": {
+        "lat": 45.4241188,
+        "lon": 11.8549938
+      },
+      "tags": {
+        "highway": "residential",
+        "name": "Via Giovanni Miani"
+      }
+    },
+    {
+      "type": "way",
+      "id": 39607132,
+      "center": {
+        "lat": 45.4246799,
+        "lon": 11.854869
+      },
+      "tags": {
+        "highway": "residential",
+        "name": "Via Alvise Cadamosto"
+      }
+    },
+    {
+      "type": "way",
+      "id": 39607168,
+      "center": {
+        "lat": 45.4250296,
+        "lon": 11.8546466
+      },
+      "tags": {
+        "highway": "residential",
+        "name": "Via Francesco Antonio Pigafetta"
+      }
+    },
+    {
+      "type": "way",
+      "id": 43178628,
+      "center": {
+        "lat": 45.4246824,
+        "lon": 11.8985751
+      },
+      "tags": {
+        "highway": "residential",
+        "lanes": "2",
+        "lit": "yes",
+        "name": "Via Luigi Mancinelli",
+        "oneway": "no",
+        "sidewalk": "no",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 48153764,
+      "center": {
+        "lat": 45.426759,
+        "lon": 11.894368
+      },
+      "tags": {
+        "highway": "unclassified",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "40",
+        "name": "Via Vittorio Saetta",
+        "parking:left": "street_side",
+        "parking:left:orientation": "perpendicular",
+        "parking:right": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 48491045,
+      "center": {
+        "lat": 45.4264123,
+        "lon": 11.8932755
+      },
+      "tags": {
+        "highway": "residential",
+        "lit": "yes",
+        "name": "Via Leonardo da Vinci",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 48648544,
+      "center": {
+        "lat": 45.4475345,
+        "lon": 11.8716602
+      },
+      "tags": {
+        "highway": "tertiary",
+        "name": "Via Altichiero",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 49954079,
+      "center": {
+        "lat": 45.4423,
+        "lon": 11.8904588
+      },
+      "tags": {
+        "highway": "residential",
+        "junction": "roundabout",
+        "name": "Via Telemaco Signorini",
+        "psv": "yes",
+        "surface": "asphalt",
+        "vehicle": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 54318101,
+      "center": {
+        "lat": 45.4204742,
+        "lon": 11.85845
+      },
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "path",
+        "lit": "yes",
+        "segregated": "no",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "width": "3"
+      }
+    },
+    {
+      "type": "way",
+      "id": 54318129,
+      "center": {
+        "lat": 45.4216531,
+        "lon": 11.8571096
+      },
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "path",
+        "lit": "yes",
+        "segregated": "yes",
+        "surface": "paved",
+        "width": "3.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 58128205,
+      "center": {
+        "lat": 45.4283841,
+        "lon": 11.8843694
+      },
+      "tags": {
+        "highway": "residential",
+        "name": "Via Alessandro Magnasco",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 58128261,
+      "center": {
+        "lat": 45.4272672,
+        "lon": 11.8839934
+      },
+      "tags": {
+        "highway": "footway",
+        "name": "Via Giovanni d'Alemagna"
+      }
+    },
+    {
+      "type": "way",
+      "id": 58128271,
+      "center": {
+        "lat": 45.4272307,
+        "lon": 11.8839261
+      },
+      "tags": {
+        "area": "yes",
+        "highway": "pedestrian",
+        "name": "Via Giovanni d'Alemagna"
+      }
+    },
+    {
+      "type": "way",
+      "id": 58442491,
+      "center": {
+        "lat": 45.4263135,
+        "lon": 11.8958063
+      },
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "name": "Via Tiziano Vecellio",
+        "sidewalk:both": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 58442500,
+      "center": {
+        "lat": 45.4258974,
+        "lon": 11.8954963
+      },
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "name": "Via Tiziano Vecellio",
+        "sidewalk:both": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 58442541,
+      "center": {
+        "lat": 45.4300394,
+        "lon": 11.8992575
+      },
+      "tags": {
+        "highway": "unclassified",
+        "name": "Via Cardinale Callegari",
+        "oneway": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 58442626,
+      "center": {
+        "lat": 45.424607,
+        "lon": 11.8988134
+      },
+      "tags": {
+        "highway": "residential",
+        "lanes": "1",
+        "lit": "yes",
+        "name": "Via Ottorino Respighi",
+        "oneway": "yes",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 58845445,
+      "center": {
+        "lat": 45.4342771,
+        "lon": 11.8931814
+      },
+      "tags": {
+        "highway": "residential",
+        "name": "Via Ca' Magno",
+        "oneway": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 58845460,
+      "center": {
+        "lat": 45.4342227,
+        "lon": 11.8952286
+      },
+      "tags": {
+        "highway": "residential",
+        "junction": "roundabout",
+        "name": "Via Aurelio Nicolodi",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 58845812,
+      "center": {
+        "lat": 45.4300168,
+        "lon": 11.8906681
+      },
+      "tags": {
+        "highway": "unclassified",
+        "name": "Via Antonio Zanchi",
+        "oneway": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 58901823,
+      "center": {
+        "lat": 45.4298519,
+        "lon": 11.8893098
+      },
+      "tags": {
+        "highway": "footway",
+        "name": "Galleria San Carlo",
+        "tunnel": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 61491578,
+      "center": {
+        "lat": 45.4211825,
+        "lon": 11.8568779
+      },
+      "tags": {
+        "bicycle": "no",
+        "embankment": "yes",
+        "highway": "trunk",
+        "lanes": "2",
+        "maxspeed": "90",
+        "motorcycle:conditional": "no @ (displacement <= 149 cc)",
+        "name": "Cavalcavia San Ignazio di Loyola",
+        "old_ref": "SS47racc",
+        "oneway": "yes",
+        "ref": "SR47",
+        "reg_ref": "SR47",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 61491579,
+      "center": {
+        "lat": 45.4220268,
+        "lon": 11.8578392
+      },
+      "tags": {
+        "highway": "residential",
+        "name": "Via Paolo Emilio Botta",
+        "oneway": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 80503380,
+      "center": {
+        "lat": 45.4375318,
+        "lon": 11.893402
+      },
+      "tags": {
+        "bicycle": "no",
+        "destination": "Venezia;Treviso;Venezia;Castelfranco",
+        "destination:ref": "A4;SR515;SR11;SR308",
+        "highway": "trunk_link",
+        "lanes": "1",
+        "motorcycle:conditional": "no @ (displacement <= 149 cc)",
+        "name": "Via Boves",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 81131637,
+      "center": {
+        "lat": 45.4423745,
+        "lon": 11.8910361
+      },
+      "tags": {
+        "highway": "unclassified",
+        "lanes": "2",
+        "name": "Via Telemaco Signorini",
+        "oneway": "no",
+        "service": "parking_aisle",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 81131642,
+      "center": {
+        "lat": 45.4422582,
+        "lon": 11.891176
+      },
+      "tags": {
+        "highway": "service",
+        "oneway": "yes",
+        "service": "parking_aisle",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 93263178,
+      "center": {
+        "lat": 45.4476834,
+        "lon": 11.8710703
+      },
+      "tags": {
+        "highway": "residential",
+        "name": "Via Altichiero"
+      }
+    },
+    {
+      "type": "way",
+      "id": 108248971,
+      "center": {
+        "lat": 45.4480737,
+        "lon": 11.8712273
+      },
+      "tags": {
+        "bicycle": "dismount",
+        "foot": "official",
+        "highway": "footway",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 110186743,
+      "center": {
+        "lat": 45.4211109,
+        "lon": 11.8582993
+      },
+      "tags": {
+        "hgv": "delivery",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Via Montà",
+        "old_ref": "SP12",
+        "oneway": "no",
+        "sidewalk": "no",
+        "smoothness": "good",
+        "source:maxspeed": "sign",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 137000813,
+      "center": {
+        "lat": 45.4329683,
+        "lon": 11.8959958
+      },
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "footway": "crossing",
+        "highway": "path",
+        "lit": "yes",
+        "path": "crossing",
+        "segregated": "yes",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 141512217,
+      "center": {
+        "lat": 45.4330188,
+        "lon": 11.895945
+      },
+      "tags": {
+        "highway": "residential",
+        "name": "Via Andrea Colotti"
+      }
+    },
+    {
+      "type": "way",
+      "id": 141512218,
+      "center": {
+        "lat": 45.4329864,
+        "lon": 11.8966431
+      },
+      "tags": {
+        "highway": "residential",
+        "lanes": "2",
+        "lit": "yes",
+        "name": "Via Andrea Colotti",
+        "oneway": "no",
+        "sidewalk": "both",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 141512221,
+      "center": {
+        "lat": 45.4338617,
+        "lon": 11.8964296
+      },
+      "tags": {
+        "hgv": "no",
+        "highway": "unclassified",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Via Libero Benedetti",
+        "oneway": "no",
+        "sidewalk:left": "yes",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "sign",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 159237706,
+      "center": {
+        "lat": 45.4215787,
+        "lon": 11.8574581
+      },
+      "tags": {
+        "hgv": "delivery",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "name": "Via Montà",
+        "old_ref": "SP12",
+        "source:maxspeed": "sign",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 159238399,
+      "center": {
+        "lat": 45.4216924,
+        "lon": 11.8571951
+      },
+      "tags": {
+        "bicycle": "no",
+        "bridge": "yes",
+        "highway": "trunk",
+        "lanes": "2",
+        "layer": "1",
+        "maxspeed": "90",
+        "motorcycle:conditional": "no @ (displacement <= 149 cc)",
+        "name": "Cavalcavia San Ignazio di Loyola",
+        "old_ref": "SS47racc",
+        "oneway": "yes",
+        "ref": "SR47",
+        "reg_ref": "SR47",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 159238400,
+      "center": {
+        "lat": 45.4217498,
+        "lon": 11.8570716
+      },
+      "tags": {
+        "bicycle": "no",
+        "bridge": "yes",
+        "highway": "trunk",
+        "lanes": "2",
+        "layer": "1",
+        "maxspeed": "90",
+        "motorcycle:conditional": "no @ (displacement <= 149 cc)",
+        "name": "Cavalcavia San Ignazio di Loyola",
+        "old_ref": "SS47racc",
+        "oneway": "yes",
+        "ref": "SR47",
+        "reg_ref": "SR47",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 159238401,
+      "center": {
+        "lat": 45.4225823,
+        "lon": 11.8577398
+      },
+      "tags": {
+        "bicycle": "no",
+        "embankment": "yes",
+        "highway": "trunk",
+        "lanes": "2",
+        "maxspeed": "90",
+        "motorcycle:conditional": "no @ (displacement <= 149 cc)",
+        "name": "Cavalcavia San Ignazio di Loyola",
+        "old_ref": "SS47racc",
+        "oneway": "yes",
+        "ref": "SR47",
+        "reg_ref": "SR47",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 159238402,
+      "center": {
+        "lat": 45.4211063,
+        "lon": 11.8566925
+      },
+      "tags": {
+        "bicycle": "no",
+        "embankment": "yes",
+        "highway": "trunk",
+        "lanes": "2",
+        "maxspeed": "90",
+        "motorcycle:conditional": "no @ (displacement <= 149 cc)",
+        "name": "Cavalcavia San Ignazio di Loyola",
+        "old_ref": "SS47racc",
+        "oneway": "yes",
+        "ref": "SR47",
+        "reg_ref": "SR47",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 159577403,
+      "center": {
+        "lat": 45.4467363,
+        "lon": 11.871673
+      },
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "path",
+        "segregated": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 171066269,
+      "center": {
+        "lat": 45.442361,
+        "lon": 11.8900894
+      },
+      "tags": {
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 171066272,
+      "center": {
+        "lat": 45.4434786,
+        "lon": 11.8895267
+      },
+      "tags": {
+        "highway": "footway",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 171066273,
+      "center": {
+        "lat": 45.4430446,
+        "lon": 11.8899461
+      },
+      "tags": {
+        "highway": "service",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 171066279,
+      "center": {
+        "lat": 45.4426858,
+        "lon": 11.8905814
+      },
+      "tags": {
+        "highway": "footway",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 171066284,
+      "center": {
+        "lat": 45.4427896,
+        "lon": 11.8901864
+      },
+      "tags": {
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 188335383,
+      "center": {
+        "lat": 45.4247678,
+        "lon": 11.8781419
+      },
+      "tags": {
+        "area": "yes",
+        "highway": "pedestrian",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 189235872,
+      "center": {
+        "lat": 45.4370071,
+        "lon": 11.8922486
+      },
+      "tags": {
+        "highway": "service",
+        "lanes": "1",
+        "lit": "yes",
+        "oneway": "yes",
+        "sidewalk": "no",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 197944420,
+      "center": {
+        "lat": 45.4369743,
+        "lon": 11.8943191
+      },
+      "tags": {
+        "highway": "service",
+        "lanes": "2",
+        "oneway": "yes",
+        "sidewalk": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 197944421,
+      "center": {
+        "lat": 45.4364597,
+        "lon": 11.8935875
+      },
+      "tags": {
+        "highway": "service",
+        "lanes": "1",
+        "lit": "yes",
+        "oneway": "yes",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 215427701,
+      "center": {
+        "lat": 45.4251304,
+        "lon": 11.9004898
+      },
+      "tags": {
+        "highway": "secondary",
+        "junction": "roundabout",
+        "lanes": "2",
+        "lit": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 215427704,
+      "center": {
+        "lat": 45.4253165,
+        "lon": 11.9001542
+      },
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "path",
+        "oneway": "yes",
+        "segregated": "no",
+        "surface": "asphalt",
+        "width": "4"
+      }
+    },
+    {
+      "type": "way",
+      "id": 215427706,
+      "center": {
+        "lat": 45.4249134,
+        "lon": 11.9002194
+      },
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "path",
+        "oneway": "yes",
+        "segregated": "no",
+        "surface": "asphalt",
+        "width": "4"
+      }
+    },
+    {
+      "type": "way",
+      "id": 215437336,
+      "center": {
+        "lat": 45.4251165,
+        "lon": 11.9000018
+      },
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "path",
+        "path": "crossing",
+        "segregated": "yes",
+        "surface": "asphalt",
+        "width": "4"
+      }
+    },
+    {
+      "type": "way",
+      "id": 240482310,
+      "center": {
+        "lat": 45.4300899,
+        "lon": 11.9001669
+      },
+      "tags": {
+        "highway": "unclassified",
+        "name": "Via Cardinale Callegari",
+        "oneway": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 240482316,
+      "center": {
+        "lat": 45.4292003,
+        "lon": 11.8993889
+      },
+      "tags": {
+        "highway": "footway",
+        "surface": "asphalt",
+        "width": "2.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 240482325,
+      "center": {
+        "lat": 45.4294282,
+        "lon": 11.8990506
+      },
+      "tags": {
+        "highway": "footway",
+        "surface": "paved"
+      }
+    },
+    {
+      "type": "way",
+      "id": 245048875,
+      "center": {
+        "lat": 45.4479705,
+        "lon": 11.8714854
+      },
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "path",
+        "lit": "yes",
+        "path": "crossing",
+        "segregated": "yes",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 245048878,
+      "center": {
+        "lat": 45.4483218,
+        "lon": 11.8714019
+      },
+      "tags": {
+        "bicycle": "designated",
+        "description": "looks like a foot-cycle way, baìu no signs",
+        "foot": "designated",
+        "highway": "path",
+        "lit": "yes",
+        "segregated": "no",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "width": "3"
+      }
+    },
+    {
+      "type": "way",
+      "id": 245048882,
+      "center": {
+        "lat": 45.4483151,
+        "lon": 11.8712303
+      },
+      "tags": {
+        "bicycle": "permissive",
+        "foot": "designated",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "width": "2.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 245048883,
+      "center": {
+        "lat": 45.4481507,
+        "lon": 11.8714835
+      },
+      "tags": {
+        "bicycle": "designated",
+        "description": "looks like a foot-cycle way, baìu no signs",
+        "foot": "designated",
+        "highway": "path",
+        "lit": "yes",
+        "segregated": "no",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "width": "3"
+      }
+    },
+    {
+      "type": "way",
+      "id": 245048884,
+      "center": {
+        "lat": 45.4498208,
+        "lon": 11.8729571
+      },
+      "tags": {
+        "bicycle": "designated",
+        "foot": "no",
+        "highway": "cycleway",
+        "lit": "yes",
+        "surface": "asphalt",
+        "width": "3"
+      }
+    },
+    {
+      "type": "way",
+      "id": 245099636,
+      "center": {
+        "lat": 45.4209666,
+        "lon": 11.8585132
+      },
+      "tags": {
+        "bicycle": "dismount",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "sand"
+      }
+    },
+    {
+      "type": "way",
+      "id": 245099638,
+      "center": {
+        "lat": 45.4224445,
+        "lon": 11.8556273
+      },
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "path",
+        "lit": "yes",
+        "segregated": "yes",
+        "surface": "asphalt",
+        "width": "4"
+      }
+    },
+    {
+      "type": "way",
+      "id": 245099639,
+      "center": {
+        "lat": 45.421362,
+        "lon": 11.8578187
+      },
+      "tags": {
+        "bicycle": "dismount",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "sand"
+      }
+    },
+    {
+      "type": "way",
+      "id": 245102931,
+      "center": {
+        "lat": 45.4227042,
+        "lon": 11.8532817
+      },
+      "tags": {
+        "highway": "residential",
+        "name": "Via Ca' Rinaldini"
+      }
+    },
+    {
+      "type": "way",
+      "id": 267010224,
+      "center": {
+        "lat": 45.4482525,
+        "lon": 11.8717474
+      },
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "oneway": "yes",
+        "service": "parking_aisle"
+      }
+    },
+    {
+      "type": "way",
+      "id": 267010225,
+      "center": {
+        "lat": 45.4484848,
+        "lon": 11.8716712
+      },
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "service": "parking_aisle"
+      }
+    },
+    {
+      "type": "way",
+      "id": 267010226,
+      "center": {
+        "lat": 45.4483485,
+        "lon": 11.8718746
+      },
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "oneway": "yes",
+        "service": "parking_aisle"
+      }
+    },
+    {
+      "type": "way",
+      "id": 267010228,
+      "center": {
+        "lat": 45.4484444,
+        "lon": 11.8708043
+      },
+      "tags": {
+        "highway": "footway",
+        "surface": "asphalt",
+        "width": "2"
+      }
+    },
+    {
+      "type": "way",
+      "id": 267010229,
+      "center": {
+        "lat": 45.4482507,
+        "lon": 11.8716181
+      },
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "oneway": "yes",
+        "service": "parking_aisle"
+      }
+    },
+    {
+      "type": "way",
+      "id": 267010232,
+      "center": {
+        "lat": 45.4484576,
+        "lon": 11.8720755
+      },
+      "tags": {
+        "highway": "service",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 267630542,
+      "center": {
+        "lat": 45.4268308,
+        "lon": 11.8944327
+      },
+      "tags": {
+        "highway": "footway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 267630543,
+      "center": {
+        "lat": 45.4329455,
+        "lon": 11.8958551
+      },
+      "tags": {
+        "bicycle": "dismount",
+        "footway": "crossing",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 267635732,
+      "center": {
+        "lat": 45.4259067,
+        "lon": 11.8941144
+      },
+      "tags": {
+        "footway": "crossing",
+        "highway": "footway",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 267635733,
+      "center": {
+        "lat": 45.4262182,
+        "lon": 11.8939699
+      },
+      "tags": {
+        "highway": "footway",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 267735465,
+      "center": {
+        "lat": 45.4252103,
+        "lon": 11.89946
+      },
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "path",
+        "oneway": "yes",
+        "segregated": "yes",
+        "surface": "paved",
+        "width": "4"
+      }
+    },
+    {
+      "type": "way",
+      "id": 324220836,
+      "center": {
+        "lat": 45.4329854,
+        "lon": 11.8958587
+      },
+      "tags": {
+        "highway": "unclassified",
+        "name": "Via Libero Benedetti"
+      }
+    },
+    {
+      "type": "way",
+      "id": 324220837,
+      "center": {
+        "lat": 45.4319256,
+        "lon": 11.8958081
+      },
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "path",
+        "segregated": "yes",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 324238115,
+      "center": {
+        "lat": 45.433873,
+        "lon": 11.896515
+      },
+      "tags": {
+        "bicycle": "permissive",
+        "highway": "footway",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 513320820,
+      "center": {
+        "lat": 45.4364284,
+        "lon": 11.8928186
+      },
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "path",
+        "lit": "yes",
+        "segregated": "yes",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "width": "3"
+      }
+    },
+    {
+      "type": "way",
+      "id": 513328661,
+      "center": {
+        "lat": 45.4375641,
+        "lon": 11.8931792
+      },
+      "tags": {
+        "bicycle": "no",
+        "destination:lanes:forward": "Venezia;Treviso;Venezia;Castelfranco|Pronto Soccorso;Ospedale;Fiera;Stazione;Stadio;Sant'Antonio;Guardia di Finanza;Parco delle Farfalle",
+        "destination:ref:lanes:forward": "A4;SR515;SR11;SR308|",
+        "highway": "trunk_link",
+        "lanes": "2",
+        "motorcycle:conditional": "no @ (displacement <= 149 cc)",
+        "name": "Via Boves",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 513328662,
+      "center": {
+        "lat": 45.4372321,
+        "lon": 11.8931901
+      },
+      "tags": {
+        "highway": "footway",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "width": "3"
+      }
+    },
+    {
+      "type": "way",
+      "id": 513328663,
+      "center": {
+        "lat": 45.4372409,
+        "lon": 11.8929453
+      },
+      "tags": {
+        "highway": "footway",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "width": "3"
+      }
+    },
+    {
+      "type": "way",
+      "id": 513328664,
+      "center": {
+        "lat": 45.4368929,
+        "lon": 11.892545
+      },
+      "tags": {
+        "highway": "footway",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "width": "3"
+      }
+    },
+    {
+      "type": "way",
+      "id": 513328665,
+      "center": {
+        "lat": 45.4369184,
+        "lon": 11.8928675
+      },
+      "tags": {
+        "bicycle": "no",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "asphalt",
+        "width": "2"
+      }
+    },
+    {
+      "type": "way",
+      "id": 513328666,
+      "center": {
+        "lat": 45.4370193,
+        "lon": 11.8927505
+      },
+      "tags": {
+        "highway": "service",
+        "lanes": "2",
+        "lit": "yes",
+        "oneway": "yes",
+        "service": "parking_aisle",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 513328667,
+      "center": {
+        "lat": 45.4370725,
+        "lon": 11.8925945
+      },
+      "tags": {
+        "highway": "service",
+        "lanes": "2",
+        "lit": "yes",
+        "oneway": "yes",
+        "service": "parking_aisle",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 513328669,
+      "center": {
+        "lat": 45.4364787,
+        "lon": 11.8931147
+      },
+      "tags": {
+        "bicycle": "no",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "asphalt",
+        "width": "2"
+      }
+    },
+    {
+      "type": "way",
+      "id": 513328671,
+      "center": {
+        "lat": 45.4372908,
+        "lon": 11.8936388
+      },
+      "tags": {
+        "highway": "service",
+        "lanes": "1",
+        "maxheight": "2.2",
+        "oneway": "yes",
+        "sidewalk": "no",
+        "source:maxheight": "sign",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 513328672,
+      "center": {
+        "lat": 45.4374714,
+        "lon": 11.8930387
+      },
+      "tags": {
+        "highway": "service",
+        "incline": "up",
+        "lanes": "2",
+        "oneway": "yes",
+        "sidewalk": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 513328675,
+      "center": {
+        "lat": 45.4374164,
+        "lon": 11.8930813
+      },
+      "tags": {
+        "highway": "service",
+        "incline": "down",
+        "lanes": "1",
+        "oneway": "yes",
+        "sidewalk": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 513328677,
+      "center": {
+        "lat": 45.4374445,
+        "lon": 11.8926258
+      },
+      "tags": {
+        "highway": "service",
+        "lanes": "2",
+        "oneway": "yes",
+        "sidewalk": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 513328678,
+      "center": {
+        "lat": 45.4373218,
+        "lon": 11.8931916
+      },
+      "tags": {
+        "highway": "service",
+        "lanes": "1",
+        "oneway": "yes",
+        "sidewalk": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 513328686,
+      "center": {
+        "lat": 45.4366981,
+        "lon": 11.8943825
+      },
+      "tags": {
+        "highway": "service",
+        "oneway": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 513328687,
+      "center": {
+        "lat": 45.4368453,
+        "lon": 11.8943604
+      },
+      "tags": {
+        "highway": "service",
+        "oneway": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 513376679,
+      "center": {
+        "lat": 45.4364972,
+        "lon": 11.8928405
+      },
+      "tags": {
+        "highway": "service",
+        "incline": "down",
+        "lanes": "1",
+        "lit": "yes",
+        "oneway": "yes",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 513376684,
+      "center": {
+        "lat": 45.4367314,
+        "lon": 11.8923366
+      },
+      "tags": {
+        "highway": "service",
+        "lanes": "2",
+        "lit": "yes",
+        "oneway": "yes",
+        "sidewalk": "no",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 513376688,
+      "center": {
+        "lat": 45.4366382,
+        "lon": 11.8925383
+      },
+      "tags": {
+        "highway": "service",
+        "lanes": "2",
+        "lit": "yes",
+        "oneway": "yes",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 528960444,
+      "center": {
+        "lat": 45.4374239,
+        "lon": 11.8938681
+      },
+      "tags": {
+        "bicycle": "no",
+        "embankment": "yes",
+        "highway": "trunk_link",
+        "lanes": "1",
+        "layer": "1",
+        "motorcycle:conditional": "no @ (displacement <= 149 cc)",
+        "name": "Via Boves",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 566630233,
+      "center": {
+        "lat": 45.4234339,
+        "lon": 11.8538609
+      },
+      "tags": {
+        "bicycle": "dismount",
+        "footway": "crossing",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 566630235,
+      "center": {
+        "lat": 45.4236317,
+        "lon": 11.8534809
+      },
+      "tags": {
+        "bicycle": "dismount",
+        "footway": "crossing",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 584850028,
+      "center": {
+        "lat": 45.429981,
+        "lon": 11.9000015
+      },
+      "tags": {
+        "highway": "service",
+        "oneway": "yes",
+        "service": "parking_aisle",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 584850030,
+      "center": {
+        "lat": 45.4299635,
+        "lon": 11.9004292
+      },
+      "tags": {
+        "highway": "service",
+        "lanes": "2",
+        "oneway": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 584850032,
+      "center": {
+        "lat": 45.4298512,
+        "lon": 11.8994449
+      },
+      "tags": {
+        "highway": "service",
+        "lanes": "2",
+        "oneway": "no",
+        "service": "parking_aisle",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 584850034,
+      "center": {
+        "lat": 45.4295224,
+        "lon": 11.8993933
+      },
+      "tags": {
+        "highway": "service",
+        "oneway": "yes",
+        "service": "parking_aisle",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 584850036,
+      "center": {
+        "lat": 45.4294524,
+        "lon": 11.8996087
+      },
+      "tags": {
+        "highway": "service",
+        "oneway": "yes",
+        "service": "parking_aisle",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 584850038,
+      "center": {
+        "lat": 45.4300566,
+        "lon": 11.8996043
+      },
+      "tags": {
+        "highway": "service",
+        "service": "parking_aisle",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 584850040,
+      "center": {
+        "lat": 45.4297769,
+        "lon": 11.8994588
+      },
+      "tags": {
+        "highway": "service",
+        "lanes": "2",
+        "oneway": "no",
+        "service": "parking_aisle",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 613718124,
+      "center": {
+        "lat": 45.4249004,
+        "lon": 11.8780188
+      },
+      "tags": {
+        "bicycle": "dismount",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 675677122,
+      "center": {
+        "lat": 45.4218046,
+        "lon": 11.8570359
+      },
+      "tags": {
+        "highway": "secondary",
+        "lanes": "1",
+        "name": "Via Montà",
+        "old_ref": "SP12",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 683234689,
+      "center": {
+        "lat": 45.4434332,
+        "lon": 11.8898196
+      },
+      "tags": {
+        "highway": "service",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 705903523,
+      "center": {
+        "lat": 45.4298267,
+        "lon": 11.8886858
+      },
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 705990181,
+      "center": {
+        "lat": 45.4300742,
+        "lon": 11.888695
+      },
+      "tags": {
+        "crossing": "uncontrolled",
+        "crossing_ref": "zebra",
+        "footway": "crossing",
+        "highway": "footway",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 705992207,
+      "center": {
+        "lat": 45.4299929,
+        "lon": 11.89062
+      },
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "smoothness": "intermediate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 705992208,
+      "center": {
+        "lat": 45.430335,
+        "lon": 11.8893327
+      },
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "smoothness": "bad",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 705992209,
+      "center": {
+        "lat": 45.4302069,
+        "lon": 11.8898175
+      },
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "smoothness": "intermediate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 705992210,
+      "center": {
+        "lat": 45.4300898,
+        "lon": 11.8902666
+      },
+      "tags": {
+        "crossing": "uncontrolled",
+        "footway": "crossing",
+        "highway": "footway",
+        "smoothness": "bad",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 705992211,
+      "center": {
+        "lat": 45.4303891,
+        "lon": 11.8891309
+      },
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "smoothness": "intermediate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 705992212,
+      "center": {
+        "lat": 45.4302953,
+        "lon": 11.8896607
+      },
+      "tags": {
+        "crossing": "uncontrolled",
+        "crossing_ref": "zebra",
+        "footway": "crossing",
+        "highway": "footway",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 705993164,
+      "center": {
+        "lat": 45.4293454,
+        "lon": 11.8905287
+      },
+      "tags": {
+        "highway": "service",
+        "oneway": "no",
+        "service": "parking_aisle",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 705993165,
+      "center": {
+        "lat": 45.4294897,
+        "lon": 11.8906039
+      },
+      "tags": {
+        "highway": "service",
+        "oneway": "no",
+        "service": "parking_aisle",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 705993166,
+      "center": {
+        "lat": 45.4296068,
+        "lon": 11.8904302
+      },
+      "tags": {
+        "highway": "service",
+        "oneway": "no",
+        "service": "parking_aisle",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 705993167,
+      "center": {
+        "lat": 45.4298052,
+        "lon": 11.8905668
+      },
+      "tags": {
+        "highway": "service",
+        "oneway": "no",
+        "service": "parking_aisle",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 705993168,
+      "center": {
+        "lat": 45.4297948,
+        "lon": 11.8904887
+      },
+      "tags": {
+        "highway": "service",
+        "oneway": "no",
+        "service": "parking_aisle",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 706020552,
+      "center": {
+        "lat": 45.4300758,
+        "lon": 11.8902642
+      },
+      "tags": {
+        "highway": "service",
+        "oneway": "yes",
+        "service": "parking_aisle",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 724165969,
+      "center": {
+        "lat": 45.4424115,
+        "lon": 11.8911831
+      },
+      "tags": {
+        "highway": "service",
+        "oneway": "no",
+        "service": "parking_aisle",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 755998411,
+      "center": {
+        "lat": 45.448262,
+        "lon": 11.8710698
+      },
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "path",
+        "segregated": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 758205759,
+      "center": {
+        "lat": 45.4361997,
+        "lon": 11.8935009
+      },
+      "tags": {
+        "highway": "footway",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "width": "2.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 758205760,
+      "center": {
+        "lat": 45.4362686,
+        "lon": 11.8935224
+      },
+      "tags": {
+        "footway": "crossing",
+        "highway": "footway",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "width": "2.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 758205763,
+      "center": {
+        "lat": 45.4365395,
+        "lon": 11.8924056
+      },
+      "tags": {
+        "bicycle": "no",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "asphalt",
+        "width": "2"
+      }
+    },
+    {
+      "type": "way",
+      "id": 758205766,
+      "center": {
+        "lat": 45.4371163,
+        "lon": 11.8923651
+      },
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "path",
+        "lit": "yes",
+        "segregated": "yes",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "width": "3"
+      }
+    },
+    {
+      "type": "way",
+      "id": 758326824,
+      "center": {
+        "lat": 45.4302947,
+        "lon": 11.8994788
+      },
+      "tags": {
+        "highway": "service"
+      }
+    },
+    {
+      "type": "way",
+      "id": 758328639,
+      "center": {
+        "lat": 45.4303642,
+        "lon": 11.8992733
+      },
+      "tags": {
+        "highway": "footway",
+        "surface": "paved"
+      }
+    },
+    {
+      "type": "way",
+      "id": 758328640,
+      "center": {
+        "lat": 45.4302197,
+        "lon": 11.899165
+      },
+      "tags": {
+        "bicycle": "dismount",
+        "footway": "crossing",
+        "highway": "footway",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 758328641,
+      "center": {
+        "lat": 45.4300961,
+        "lon": 11.8989647
+      },
+      "tags": {
+        "bicycle": "dismount",
+        "footway": "crossing",
+        "highway": "footway",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 758328642,
+      "center": {
+        "lat": 45.4301494,
+        "lon": 11.8986959
+      },
+      "tags": {
+        "highway": "footway",
+        "surface": "paved"
+      }
+    },
+    {
+      "type": "way",
+      "id": 758328643,
+      "center": {
+        "lat": 45.4301026,
+        "lon": 11.8991673
+      },
+      "tags": {
+        "bicycle": "dismount",
+        "footway": "crossing",
+        "highway": "footway",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 758382630,
+      "center": {
+        "lat": 45.4252291,
+        "lon": 11.8988247
+      },
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "path",
+        "oneway:bicycle": "yes",
+        "path": "crossing",
+        "segregated": "no",
+        "surface": "asphalt",
+        "width": "4"
+      }
+    },
+    {
+      "type": "way",
+      "id": 758382632,
+      "center": {
+        "lat": 45.4251043,
+        "lon": 11.8988295
+      },
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "path",
+        "oneway:bicycle": "yes",
+        "path": "crossing",
+        "segregated": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 758382633,
+      "center": {
+        "lat": 45.4250689,
+        "lon": 11.899464
+      },
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "path",
+        "oneway": "yes",
+        "segregated": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 758383477,
+      "center": {
+        "lat": 45.4247912,
+        "lon": 11.9005736
+      },
+      "tags": {
+        "bicycle": "designated",
+        "crossing": "uncontrolled",
+        "crossing:island": "yes",
+        "crossing:markings": "zebra",
+        "cycleway:surface": "asphalt",
+        "foot": "designated",
+        "footway:surface": "asphalt",
+        "highway": "path",
+        "path": "crossing",
+        "segregated": "yes",
+        "surface": "asphalt",
+        "width": "4"
+      }
+    },
+    {
+      "type": "way",
+      "id": 777319567,
+      "center": {
+        "lat": 45.4262523,
+        "lon": 11.8929697
+      },
+      "tags": {
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 777319568,
+      "center": {
+        "lat": 45.4262283,
+        "lon": 11.8941951
+      },
+      "tags": {
+        "footway": "crossing",
+        "highway": "footway",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 777319569,
+      "center": {
+        "lat": 45.4261336,
+        "lon": 11.8938617
+      },
+      "tags": {
+        "footway": "crossing",
+        "highway": "footway",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 777319570,
+      "center": {
+        "lat": 45.4259232,
+        "lon": 11.8945733
+      },
+      "tags": {
+        "access": "customers",
+        "highway": "service",
+        "lanes": "1",
+        "lit": "yes",
+        "oneway": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 777319571,
+      "center": {
+        "lat": 45.4260778,
+        "lon": 11.8940623
+      },
+      "tags": {
+        "highway": "unclassified",
+        "junction": "roundabout",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "40",
+        "name": "Via Vittorio Saetta",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 777319572,
+      "center": {
+        "lat": 45.4260148,
+        "lon": 11.8943265
+      },
+      "tags": {
+        "access": "customers",
+        "foot": "yes",
+        "highway": "service",
+        "lit": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 777319573,
+      "center": {
+        "lat": 45.4260209,
+        "lon": 11.8944195
+      },
+      "tags": {
+        "access": "customers",
+        "highway": "service",
+        "lanes": "1",
+        "lit": "yes",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 777319575,
+      "center": {
+        "lat": 45.4260256,
+        "lon": 11.8946699
+      },
+      "tags": {
+        "access": "customers",
+        "highway": "service",
+        "incline": "up",
+        "lanes": "1",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 777319578,
+      "center": {
+        "lat": 45.4266482,
+        "lon": 11.8949132
+      },
+      "tags": {
+        "access": "customers",
+        "highway": "service",
+        "incline": "down",
+        "lanes": "1",
+        "oneway": "yes",
+        "surface": "concrete"
+      }
+    },
+    {
+      "type": "way",
+      "id": 777321535,
+      "center": {
+        "lat": 45.4269929,
+        "lon": 11.8945387
+      },
+      "tags": {
+        "bicycle": "designated",
+        "cycleway:surface": "paving_stones",
+        "foot": "designated",
+        "footway:surface": "paving_stones",
+        "highway": "path",
+        "segregated": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 777321536,
+      "center": {
+        "lat": 45.4270978,
+        "lon": 11.894577
+      },
+      "tags": {
+        "bicycle": "designated",
+        "cycleway:surface": "paving_stones",
+        "foot": "designated",
+        "footway:surface": "paving_stones",
+        "highway": "path",
+        "path": "crossing",
+        "segregated": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 777321539,
+      "center": {
+        "lat": 45.426867,
+        "lon": 11.8944925
+      },
+      "tags": {
+        "bicycle": "designated",
+        "cycleway:surface": "paving_stones",
+        "foot": "designated",
+        "footway:surface": "paving_stones",
+        "highway": "path",
+        "path": "crossing",
+        "segregated": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 777321540,
+      "center": {
+        "lat": 45.4264309,
+        "lon": 11.8943426
+      },
+      "tags": {
+        "bicycle": "designated",
+        "cycleway:surface": "paving_stones",
+        "foot": "designated",
+        "footway:surface": "paving_stones",
+        "highway": "path",
+        "segregated": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 777321541,
+      "center": {
+        "lat": 45.4268926,
+        "lon": 11.894477
+      },
+      "tags": {
+        "highway": "service",
+        "lanes": "1",
+        "oneway": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 777345332,
+      "center": {
+        "lat": 45.4342147,
+        "lon": 11.8953088
+      },
+      "tags": {
+        "highway": "residential",
+        "junction": "roundabout",
+        "name": "Via Aurelio Nicolodi",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 777345333,
+      "center": {
+        "lat": 45.4339265,
+        "lon": 11.8951999
+      },
+      "tags": {
+        "highway": "residential",
+        "name": "Via Aurelio Nicolodi",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 837531888,
+      "center": {
+        "lat": 45.4247442,
+        "lon": 11.8988167
+      },
+      "tags": {
+        "bicycle": "dismount",
+        "footway": "crossing",
+        "highway": "footway",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 837540921,
+      "center": {
+        "lat": 45.4330414,
+        "lon": 11.8960211
+      },
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "footway": "crossing",
+        "highway": "path",
+        "lit": "yes",
+        "path": "crossing",
+        "segregated": "yes",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 837578720,
+      "center": {
+        "lat": 45.4334143,
+        "lon": 11.8958129
+      },
+      "tags": {
+        "bicycle": "dismount",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 877608673,
+      "center": {
+        "lat": 45.4433042,
+        "lon": 11.8899286
+      },
+      "tags": {
+        "highway": "service"
+      }
+    },
+    {
+      "type": "way",
+      "id": 906615865,
+      "center": {
+        "lat": 45.4265175,
+        "lon": 11.8932628
+      },
+      "tags": {
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 953272277,
+      "center": {
+        "lat": 45.4268794,
+        "lon": 11.8945494
+      },
+      "tags": {
+        "covered": "yes",
+        "highway": "service",
+        "lanes": "1",
+        "maxheight": "2.2",
+        "oneway": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 956295035,
+      "center": {
+        "lat": 45.4263375,
+        "lon": 11.8947138
+      },
+      "tags": {
+        "highway": "service",
+        "layer": "1",
+        "surface": "concrete"
+      }
+    },
+    {
+      "type": "way",
+      "id": 971996142,
+      "center": {
+        "lat": 45.4215063,
+        "lon": 11.8573407
+      },
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "path",
+        "lit": "yes",
+        "path": "crossing",
+        "segregated": "yes",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 971999462,
+      "center": {
+        "lat": 45.4206516,
+        "lon": 11.8582621
+      },
+      "tags": {
+        "highway": "service",
+        "lanes": "2",
+        "oneway": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1240754158,
+      "center": {
+        "lat": 45.4299987,
+        "lon": 11.8996788
+      },
+      "tags": {
+        "bicycle": "dismount",
+        "footway": "crossing",
+        "highway": "footway",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1240754159,
+      "center": {
+        "lat": 45.4302549,
+        "lon": 11.899337
+      },
+      "tags": {
+        "ascent": "1.5",
+        "highway": "unclassified",
+        "name": "Via Cardinale Callegari",
+        "oneway": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1240754160,
+      "center": {
+        "lat": 45.4301754,
+        "lon": 11.8995384
+      },
+      "tags": {
+        "ascent": "1.5",
+        "highway": "unclassified",
+        "name": "Via Cardinale Callegari",
+        "oneway": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1240754161,
+      "center": {
+        "lat": 45.4298422,
+        "lon": 11.8991902
+      },
+      "tags": {
+        "highway": "footway",
+        "surface": "asphalt",
+        "width": "2.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1240754162,
+      "center": {
+        "lat": 45.42959,
+        "lon": 11.8992499
+      },
+      "tags": {
+        "highway": "footway",
+        "surface": "asphalt",
+        "width": "1.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1240754163,
+      "center": {
+        "lat": 45.4299594,
+        "lon": 11.9004287
+      },
+      "tags": {
+        "highway": "footway",
+        "surface": "asphalt",
+        "width": "2.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1240754164,
+      "center": {
+        "lat": 45.4296854,
+        "lon": 11.9005567
+      },
+      "tags": {
+        "highway": "footway",
+        "surface": "asphalt",
+        "width": "2.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1240754165,
+      "center": {
+        "lat": 45.4298469,
+        "lon": 11.9003786
+      },
+      "tags": {
+        "highway": "service",
+        "oneway": "yes",
+        "service": "parking_aisle",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1240754166,
+      "center": {
+        "lat": 45.4298379,
+        "lon": 11.9004307
+      },
+      "tags": {
+        "highway": "service",
+        "oneway": "yes",
+        "service": "parking_aisle",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1240754167,
+      "center": {
+        "lat": 45.4298688,
+        "lon": 11.8999631
+      },
+      "tags": {
+        "highway": "service",
+        "oneway": "yes",
+        "service": "parking_aisle",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1240754168,
+      "center": {
+        "lat": 45.4298849,
+        "lon": 11.8994248
+      },
+      "tags": {
+        "bicycle": "dismount",
+        "footway": "crossing",
+        "highway": "footway",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1240754169,
+      "center": {
+        "lat": 45.4295152,
+        "lon": 11.899453
+      },
+      "tags": {
+        "highway": "service",
+        "oneway": "yes",
+        "service": "parking_aisle",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1240754170,
+      "center": {
+        "lat": 45.4293809,
+        "lon": 11.8993554
+      },
+      "tags": {
+        "highway": "service",
+        "oneway": "yes",
+        "service": "parking_aisle",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1240754172,
+      "center": {
+        "lat": 45.4300551,
+        "lon": 11.8997887
+      },
+      "tags": {
+        "highway": "footway",
+        "surface": "asphalt",
+        "width": "2.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1240786866,
+      "center": {
+        "lat": 45.4337795,
+        "lon": 11.8962102
+      },
+      "tags": {
+        "bicycle": "dismount",
+        "footway": "crossing",
+        "highway": "footway",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1240786867,
+      "center": {
+        "lat": 45.433026,
+        "lon": 11.8957411
+      },
+      "tags": {
+        "bicycle": "dismount",
+        "footway": "crossing",
+        "highway": "footway",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1266053382,
+      "center": {
+        "lat": 45.4429014,
+        "lon": 11.8913907
+      },
+      "tags": {
+        "highway": "path",
+        "surface": "ground"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1276213406,
+      "center": {
+        "lat": 45.4298452,
+        "lon": 11.8886413
+      },
+      "tags": {
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "name": "Via Guido Reni",
+        "old_ref": "SS307",
+        "oneway": "yes",
+        "parking:both": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1304924445,
+      "center": {
+        "lat": 45.427394,
+        "lon": 11.8833543
+      },
+      "tags": {
+        "highway": "residential",
+        "junction": "roundabout",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1304924446,
+      "center": {
+        "lat": 45.4278613,
+        "lon": 11.8820797
+      },
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lanes": "2",
+        "lit": "yes",
+        "name": "Via Giovanni d'Alemagna",
+        "oneway": "no",
+        "sidewalk": "both",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1334284439,
+      "center": {
+        "lat": 45.4236986,
+        "lon": 11.8532472
+      },
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "path",
+        "lit": "yes",
+        "segregated": "yes",
+        "surface": "asphalt",
+        "width": "4"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1334284440,
+      "center": {
+        "lat": 45.4230283,
+        "lon": 11.8545109
+      },
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "path",
+        "lit": "yes",
+        "path": "crossing",
+        "segregated": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1362727679,
+      "center": {
+        "lat": 45.4431034,
+        "lon": 11.8900715
+      },
+      "tags": {
+        "highway": "service",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1362727680,
+      "center": {
+        "lat": 45.4431709,
+        "lon": 11.8897948
+      },
+      "tags": {
+        "highway": "service",
+        "oneway": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1362727681,
+      "center": {
+        "lat": 45.4431393,
+        "lon": 11.8895511
+      },
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "path",
+        "lit": "yes",
+        "path": "crossing",
+        "segregated": "yes",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1364348629,
+      "center": {
+        "lat": 45.4373362,
+        "lon": 11.8933299
+      },
+      "tags": {
+        "footway": "crossing",
+        "highway": "footway",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "width": "3"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1364348630,
+      "center": {
+        "lat": 45.437466,
+        "lon": 11.8931414
+      },
+      "tags": {
+        "highway": "footway",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "width": "3"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1364480821,
+      "center": {
+        "lat": 45.4423732,
+        "lon": 11.8895392
+      },
+      "tags": {
+        "highway": "service",
+        "service": "parking_aisle",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1373398230,
+      "center": {
+        "lat": 45.4429549,
+        "lon": 11.8901211
+      },
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "cycleway",
+        "segregated": "yes",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "width": "5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1373398231,
+      "center": {
+        "lat": 45.4429303,
+        "lon": 11.8904671
+      },
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1373398232,
+      "center": {
+        "lat": 45.4427848,
+        "lon": 11.8903697
+      },
+      "tags": {
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1373398233,
+      "center": {
+        "lat": 45.4431253,
+        "lon": 11.8896712
+      },
+      "tags": {
+        "bicycle": "dismount",
+        "footway": "crossing",
+        "highway": "footway",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1373398234,
+      "center": {
+        "lat": 45.4429408,
+        "lon": 11.8902594
+      },
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1373398235,
+      "center": {
+        "lat": 45.4427754,
+        "lon": 11.8907339
+      },
+      "tags": {
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1373398236,
+      "center": {
+        "lat": 45.442851,
+        "lon": 11.8903736
+      },
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "path",
+        "segregated": "yes",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1373398237,
+      "center": {
+        "lat": 45.4424626,
+        "lon": 11.8890538
+      },
+      "tags": {
+        "highway": "service",
+        "oneway": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1376305271,
+      "center": {
+        "lat": 45.4249794,
+        "lon": 11.8998747
+      },
+      "tags": {
+        "footway": "crossing",
+        "highway": "footway",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1376305272,
+      "center": {
+        "lat": 45.4248147,
+        "lon": 11.8997577
+      },
+      "tags": {
+        "footway": "crossing",
+        "highway": "footway",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1376305273,
+      "center": {
+        "lat": 45.4249104,
+        "lon": 11.8998903
+      },
+      "tags": {
+        "highway": "footway",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1376305274,
+      "center": {
+        "lat": 45.4250277,
+        "lon": 11.8998631
+      },
+      "tags": {
+        "highway": "footway",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1376305282,
+      "center": {
+        "lat": 45.4245271,
+        "lon": 11.9004558
+      },
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "path",
+        "incline": "0%",
+        "oneway": "no",
+        "segregated": "no",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wheelchair": "yes",
+        "width": "3"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1376305283,
+      "center": {
+        "lat": 45.4244644,
+        "lon": 11.9
+      },
+      "tags": {
+        "highway": "service",
+        "oneway": "yes",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1376305284,
+      "center": {
+        "lat": 45.4246778,
+        "lon": 11.899398
+      },
+      "tags": {
+        "highway": "service",
+        "oneway": "no",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1376305285,
+      "center": {
+        "lat": 45.4248956,
+        "lon": 11.8995329
+      },
+      "tags": {
+        "highway": "service",
+        "lanes": "2",
+        "oneway": "no",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1376305286,
+      "center": {
+        "lat": 45.4250507,
+        "lon": 11.8995857
+      },
+      "tags": {
+        "highway": "service",
+        "lanes": "2",
+        "oneway": "no",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1376305287,
+      "center": {
+        "lat": 45.4248959,
+        "lon": 11.8998574
+      },
+      "tags": {
+        "highway": "service",
+        "oneway": "yes",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1376305288,
+      "center": {
+        "lat": 45.4238766,
+        "lon": 11.8998824
+      },
+      "tags": {
+        "bicycle": "permissive",
+        "highway": "footway",
+        "smoothness": "good",
+        "surface": "paving_stones",
+        "width": "3"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1376305289,
+      "center": {
+        "lat": 45.4241863,
+        "lon": 11.8995624
+      },
+      "tags": {
+        "bicycle": "permissive",
+        "highway": "footway",
+        "smoothness": "good",
+        "surface": "paving_stones",
+        "width": "3"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1376473974,
+      "center": {
+        "lat": 45.4247667,
+        "lon": 11.899503
+      },
+      "tags": {
+        "highway": "footway",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1376473976,
+      "center": {
+        "lat": 45.4248922,
+        "lon": 11.8994433
+      },
+      "tags": {
+        "bicycle": "permissive",
+        "highway": "footway",
+        "smoothness": "good",
+        "surface": "paving_stones",
+        "width": "2"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1376473977,
+      "center": {
+        "lat": 45.4246844,
+        "lon": 11.8993823
+      },
+      "tags": {
+        "bicycle": "dismount",
+        "footway": "crossing",
+        "highway": "footway",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1376473980,
+      "center": {
+        "lat": 45.4242917,
+        "lon": 11.9004068
+      },
+      "tags": {
+        "bicycle": "dismount",
+        "highway": "footway",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1376473981,
+      "center": {
+        "lat": 45.4245797,
+        "lon": 11.9001785
+      },
+      "tags": {
+        "highway": "service",
+        "service": "parking_aisle",
+        "smoothness": "good",
+        "surface": "paved"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1376473982,
+      "center": {
+        "lat": 45.424746,
+        "lon": 11.9001934
+      },
+      "tags": {
+        "footway": "crossing",
+        "highway": "footway",
+        "smoothness": "good",
+        "surface": "paved"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1377178311,
+      "center": {
+        "lat": 45.4425294,
+        "lon": 11.8902014
+      },
+      "tags": {
+        "bicycle": "yes",
+        "busway": "yes",
+        "foot": "no",
+        "highway": "unclassified",
+        "horse": "no",
+        "motor_vehicle": "no",
+        "name": "Via Telemaco Signorini",
+        "oneway": "no",
+        "psv": "yes",
+        "surface": "asphalt",
+        "vehicle": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1377178312,
+      "center": {
+        "lat": 45.4426765,
+        "lon": 11.890104
+      },
+      "tags": {
+        "highway": "unclassified",
+        "lanes": "2",
+        "name": "Via Telemaco Signorini",
+        "oneway": "no",
+        "service": "parking_aisle",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1377178313,
+      "center": {
+        "lat": 45.442747,
+        "lon": 11.8889793
+      },
+      "tags": {
+        "highway": "unclassified",
+        "lanes": "2",
+        "name": "Via Telemaco Signorini",
+        "oneway": "no",
+        "service": "parking_aisle",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1377178315,
+      "center": {
+        "lat": 45.442273,
+        "lon": 11.8902492
+      },
+      "tags": {
+        "highway": "residential",
+        "junction": "roundabout",
+        "name": "Via Telemaco Signorini",
+        "psv": "yes",
+        "surface": "asphalt",
+        "vehicle": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1426063266,
+      "center": {
+        "lat": 45.443128,
+        "lon": 11.890004
+      },
+      "tags": {
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1426063267,
+      "center": {
+        "lat": 45.4431771,
+        "lon": 11.8900636
+      },
+      "tags": {
+        "footway": "crossing",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1426063268,
+      "center": {
+        "lat": 45.4430726,
+        "lon": 11.8899366
+      },
+      "tags": {
+        "footway": "crossing",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1431529042,
+      "center": {
+        "lat": 45.4425808,
+        "lon": 11.8907362
+      },
+      "tags": {
+        "highway": "service",
+        "service": "parking_aisle"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1431533294,
+      "center": {
+        "lat": 45.4428852,
+        "lon": 11.8906108
+      },
+      "tags": {
+        "highway": "service",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1431537165,
+      "center": {
+        "lat": 45.4428987,
+        "lon": 11.8898825
+      },
+      "tags": {
+        "bicycle": "dismount",
+        "foot": "designated",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "asphalt",
+        "width": "2"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1431537335,
+      "center": {
+        "lat": 45.4431534,
+        "lon": 11.8913806
+      },
+      "tags": {
+        "highway": "service",
+        "service": "parking_aisle"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1433533693,
+      "center": {
+        "lat": 45.4301714,
+        "lon": 11.8887673
+      },
+      "tags": {
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1435906455,
+      "center": {
+        "lat": 45.4266684,
+        "lon": 11.8951802
+      },
+      "tags": {
+        "highway": "service",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1435906456,
+      "center": {
+        "lat": 45.4265148,
+        "lon": 11.8952261
+      },
+      "tags": {
+        "highway": "service",
+        "service": "parking_aisle",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1443253364,
+      "center": {
+        "lat": 45.4263071,
+        "lon": 11.8949679
+      },
+      "tags": {
+        "highway": "service",
+        "layer": "1",
+        "oneway": "yes",
+        "service": "parking_aisle",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1443253365,
+      "center": {
+        "lat": 45.4264177,
+        "lon": 11.8948139
+      },
+      "tags": {
+        "highway": "service",
+        "layer": "1",
+        "service": "parking_aisle",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1443253366,
+      "center": {
+        "lat": 45.4262731,
+        "lon": 11.8947619
+      },
+      "tags": {
+        "highway": "service",
+        "layer": "1",
+        "service": "parking_aisle",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1443253367,
+      "center": {
+        "lat": 45.4265535,
+        "lon": 11.894851
+      },
+      "tags": {
+        "highway": "service",
+        "layer": "1",
+        "service": "parking_aisle",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1443253368,
+      "center": {
+        "lat": 45.4266099,
+        "lon": 11.8945804
+      },
+      "tags": {
+        "highway": "service",
+        "layer": "1",
+        "service": "parking_aisle",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1443253369,
+      "center": {
+        "lat": 45.4264636,
+        "lon": 11.894526
+      },
+      "tags": {
+        "highway": "service",
+        "layer": "1",
+        "service": "parking_aisle",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1443253370,
+      "center": {
+        "lat": 45.426179,
+        "lon": 11.8944298
+      },
+      "tags": {
+        "highway": "service",
+        "layer": "1",
+        "service": "parking_aisle",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1455552405,
+      "center": {
+        "lat": 45.4291648,
+        "lon": 11.8901254
+      },
+      "tags": {
+        "highway": "service",
+        "oneway": "no",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1455552415,
+      "center": {
+        "lat": 45.4254926,
+        "lon": 11.8941121
+      },
+      "tags": {
+        "bicycle": "designated",
+        "cycleway:surface": "paving_stones",
+        "foot": "designated",
+        "footway:surface": "paving_stones",
+        "highway": "path",
+        "segregated": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1489443125,
+      "center": {
+        "lat": 45.429623,
+        "lon": 11.8902786
+      },
+      "tags": {
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1505923340,
+      "center": {
+        "lat": 45.4267736,
+        "lon": 11.8943057
+      },
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1505923341,
+      "center": {
+        "lat": 45.4268515,
+        "lon": 11.894325
+      },
+      "tags": {
+        "footway": "crossing",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1521255134,
+      "center": {
+        "lat": 45.4296911,
+        "lon": 11.8898691
+      },
+      "tags": {
+        "highway": "footway",
+        "name": "Galleria San Carlo"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1521255135,
+      "center": {
+        "lat": 45.4299525,
+        "lon": 11.8885117
+      },
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1539791046,
+      "center": {
+        "lat": 45.4329692,
+        "lon": 11.890075
+      },
+      "tags": {
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "name": "Via Guido Reni",
+        "old_name": "Strada Pontevigodarzere",
+        "old_ref": "SS307",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1549386569,
+      "center": {
+        "lat": 45.4425303,
+        "lon": 11.8895469
+      },
+      "tags": {
+        "highway": "service",
+        "service": "parking_aisle",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1549386571,
+      "center": {
+        "lat": 45.4426323,
+        "lon": 11.8901961
+      },
+      "tags": {
+        "bicycle": "dismount",
+        "footway": "crossing",
+        "highway": "footway",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1549386572,
+      "center": {
+        "lat": 45.442395,
+        "lon": 11.8904667
+      },
+      "tags": {
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1549386573,
+      "center": {
+        "lat": 45.4425023,
+        "lon": 11.8908193
+      },
+      "tags": {
+        "bicycle": "dismount",
+        "footway": "crossing",
+        "highway": "footway",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1549386574,
+      "center": {
+        "lat": 45.4423442,
+        "lon": 11.8908109
+      },
+      "tags": {
+        "bicycle": "dismount",
+        "footway": "crossing",
+        "highway": "footway",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1549386586,
+      "center": {
+        "lat": 45.4340005,
+        "lon": 11.8962414
+      },
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wheelchair": "yes",
+        "width": "2"
+      }
+    }
+  ]
+}

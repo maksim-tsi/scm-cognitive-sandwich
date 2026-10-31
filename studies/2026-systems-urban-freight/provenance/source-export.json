@@ -1,0 +1,935 @@
+{
+  "schema_version": 1,
+  "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+  "scope": "Systems manuscript, not published journal article",
+  "files": [
+    {
+      "path": "code/tools/evaluation_cohort/final_cases.py",
+      "sha256": "88429bb4e436cf53c7192d4035a0f6ba9fe28baabd6c7b185b511ded31f8e86b",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "tools/evaluation_cohort/final_cases.py",
+      "source_sha256": "88429bb4e436cf53c7192d4035a0f6ba9fe28baabd6c7b185b511ded31f8e86b",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/tools/evaluation_cohort/author.py",
+      "sha256": "f7606c7437e8f78442f1cf73702ab346ad141ea29f60c1abaa472c40ff39e461",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "tools/evaluation_cohort/author.py",
+      "source_sha256": "3ad3f023d8acb6d90adff1b3735e79b2efd11830c3b25bc75a3ad5ee5f6ccb0b",
+      "transformation": "Redact private paths/host; relocate data root; disable credential discovery/live worker where applicable. Scientific checks unchanged."
+    },
+    {
+      "path": "code/tools/p5_interactive/providers.py",
+      "sha256": "88465329bbfec0201599ab9c5d8cd18b58b5e764c1f6b57b5ffb239db864c9fa",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "tools/p5_interactive/providers.py",
+      "source_sha256": "ba31988f38c7de9796e78e3c0afc16d3830ddf4bf7e6bb415ccae444e5b9961a",
+      "transformation": "Redact private paths/host; relocate data root; disable credential discovery/live worker where applicable. Scientific checks unchanged."
+    },
+    {
+      "path": "code/tools/p5_interactive/operational.py",
+      "sha256": "4b01a292fdab6df8eb76680755bc0782e64439fa7b7ec027161003cca81a9d89",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "tools/p5_interactive/operational.py",
+      "source_sha256": "4b01a292fdab6df8eb76680755bc0782e64439fa7b7ec027161003cca81a9d89",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/tools/p5_interactive/source_text.py",
+      "sha256": "00b6839993df6f70bae3dbebd25bffca055100f0d04773867d7e82ffd9ce5ef8",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "tools/p5_interactive/source_text.py",
+      "source_sha256": "00b6839993df6f70bae3dbebd25bffca055100f0d04773867d7e82ffd9ce5ef8",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/tools/p4_world/world.py",
+      "sha256": "eb702b3f067c0de608c03c99eb610b9ac0db62cab4296978fc07b9853747bd36",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "tools/p4_world/world.py",
+      "source_sha256": "52d7d9c81f9fc172a7f55c661e202588ae4f75daa2541b10d5071bc2a367a3cc",
+      "transformation": "Redact private paths/host; relocate data root; disable credential discovery/live worker where applicable. Scientific checks unchanged."
+    },
+    {
+      "path": "code/stage2/core/solver.py",
+      "sha256": "0bd1368980aab301f4ef6e4ac86fee60350b74d470c3c0d06868c6602830b2de",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "implementation/padua_evidence_v1/stage2/core/solver.py",
+      "source_sha256": "0bd1368980aab301f4ef6e4ac86fee60350b74d470c3c0d06868c6602830b2de",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/stage2/core/model.py",
+      "sha256": "6c4729ba48048a82a67ab104620070c3a8221c2dd951571f2cf9a6a56ec59951",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "implementation/padua_evidence_v1/stage2/core/model.py",
+      "source_sha256": "6c4729ba48048a82a67ab104620070c3a8221c2dd951571f2cf9a6a56ec59951",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/stage2/core/evaluator.py",
+      "sha256": "6df036aaf1b091694f567b56afa808094310a02b7d16746ef7ce4141f7e826a4",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "implementation/padua_evidence_v1/stage2/core/evaluator.py",
+      "source_sha256": "6df036aaf1b091694f567b56afa808094310a02b7d16746ef7ce4141f7e826a4",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/tools/p5_interactive/provider_qwen.py",
+      "sha256": "e24251ce75c9cc22b5469fcdbeacfad3aa953b2468c0be2bfa5d4845ec745d76",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "tools/p5_interactive/provider_qwen.py",
+      "source_sha256": "e24251ce75c9cc22b5469fcdbeacfad3aa953b2468c0be2bfa5d4845ec745d76",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/tools/p5_interactive/provider_mistral.py",
+      "sha256": "6b461c0969150b5fb26b92d46443f7a53be3298ff9fc2c0d0f9a01e22309ef2e",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "tools/p5_interactive/provider_mistral.py",
+      "source_sha256": "6b461c0969150b5fb26b92d46443f7a53be3298ff9fc2c0d0f9a01e22309ef2e",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/tools/p5_interactive/provider_deepseek.py",
+      "sha256": "8ada3e8535f2fbd4a6cf919b98e5bafbe44d00916e494f37eb05a9dca65ea72a",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "tools/p5_interactive/provider_deepseek.py",
+      "source_sha256": "8ada3e8535f2fbd4a6cf919b98e5bafbe44d00916e494f37eb05a9dca65ea72a",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/tools/p5_interactive/__init__.py",
+      "sha256": "aa25ee251dab5d6332246b5a5a6420b2b1e14177a1c26cafdfd85c4a965d6335",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "tools/p5_interactive/__init__.py",
+      "source_sha256": "aa25ee251dab5d6332246b5a5a6420b2b1e14177a1c26cafdfd85c4a965d6335",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/tools/padua_pilot/transport.py",
+      "sha256": "ee8a3be8d2e2102023de997ebbaa3b8d51a3718e57c4d54c5c18c773c1be8fef",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "tools/padua_pilot/transport.py",
+      "source_sha256": "c4c331334a7de073dbe09fdf986d634e42f4225ad697cbc9286e1557645dff77",
+      "transformation": "Disable live HTTP worker and replace private hostname with reserved qwen.example.invalid; preserve scientific/offline code. Network semantics intentionally unavailable, not a qualified live profile change."
+    },
+    {
+      "path": "code/stage2/runner/workflow.py",
+      "sha256": "d7aa4e13912e12e8e9f5e60cd98254ad576c724817a4b20b407e094899d64f60",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "implementation/padua_evidence_v1/stage2/runner/workflow.py",
+      "source_sha256": "d7aa4e13912e12e8e9f5e60cd98254ad576c724817a4b20b407e094899d64f60",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/stage2/runner/transport.py",
+      "sha256": "d85874e8349ac70e5c3e2d4524c4dfabd76c59108c4a86820807847d7ae82d8c",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "implementation/padua_evidence_v1/stage2/runner/transport.py",
+      "source_sha256": "d85874e8349ac70e5c3e2d4524c4dfabd76c59108c4a86820807847d7ae82d8c",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/stage2/runner/protocol.py",
+      "sha256": "409a39e7841684c10af147a3e6f005fd6b7e5cfc608bd9a7409ab021104e3d95",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "implementation/padua_evidence_v1/stage2/runner/protocol.py",
+      "source_sha256": "409a39e7841684c10af147a3e6f005fd6b7e5cfc608bd9a7409ab021104e3d95",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/stage2/evidence_layer/runtime.py",
+      "sha256": "3f6b010948cea4894c681d0b10d2d79d2bdf12970aa29187748a26e552461129",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "implementation/padua_evidence_v1/stage2/evidence_layer/runtime.py",
+      "source_sha256": "3f6b010948cea4894c681d0b10d2d79d2bdf12970aa29187748a26e552461129",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/stage2/evidence_layer/reason_predicates.py",
+      "sha256": "0204c3932664e138bd234ab6733bbf878c2411499987e07d6d85f2b19396f32e",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "implementation/padua_evidence_v1/stage2/evidence_layer/reason_predicates.py",
+      "source_sha256": "0204c3932664e138bd234ab6733bbf878c2411499987e07d6d85f2b19396f32e",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/stage2/evidence_layer/output_contract.py",
+      "sha256": "e8bd6e4b148090f709935cfe508631d12d2d7ba298586e0f66f62bff08065ff9",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "implementation/padua_evidence_v1/stage2/evidence_layer/output_contract.py",
+      "source_sha256": "e8bd6e4b148090f709935cfe508631d12d2d7ba298586e0f66f62bff08065ff9",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/stage2/evidence_layer/authority_closure.py",
+      "sha256": "17964c33949161d9d3e87394efa234fdc873f20d4eb9a1f3121ab40739bf62ec",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "implementation/padua_evidence_v1/stage2/evidence_layer/authority_closure.py",
+      "source_sha256": "17964c33949161d9d3e87394efa234fdc873f20d4eb9a1f3121ab40739bf62ec",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/stage2/evidence_layer/input_checks.py",
+      "sha256": "462f7007febcfe8bcff7c14e69442e6dd037792b9ff786d0880a505e0086d244",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "implementation/padua_evidence_v1/stage2/evidence_layer/input_checks.py",
+      "source_sha256": "462f7007febcfe8bcff7c14e69442e6dd037792b9ff786d0880a505e0086d244",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/stage2/evidence_layer/conditional_instructions.py",
+      "sha256": "58d91ae659d5532b4af3ede9e29b798de44defbe318fa47f5f6db0e77d828133",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "implementation/padua_evidence_v1/stage2/evidence_layer/conditional_instructions.py",
+      "source_sha256": "58d91ae659d5532b4af3ede9e29b798de44defbe318fa47f5f6db0e77d828133",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/stage2/evidence_layer/proposal_replay.py",
+      "sha256": "1db33b7649ed65ac2481b2439b5bf71c49087e45b11c4e7faf6fe42a4da28cca",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "implementation/padua_evidence_v1/stage2/evidence_layer/proposal_replay.py",
+      "source_sha256": "1db33b7649ed65ac2481b2439b5bf71c49087e45b11c4e7faf6fe42a4da28cca",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/stage2/core/episode.py",
+      "sha256": "300240202e334d85616ad49de52ce48ee9103973c541480d6143815cd2011501",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "implementation/padua_evidence_v1/stage2/core/episode.py",
+      "source_sha256": "300240202e334d85616ad49de52ce48ee9103973c541480d6143815cd2011501",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/tools/p5_interactive/token_budget.py",
+      "sha256": "8246d545320e9f6dbebd7510b3b30485a1bf23193eb7ae2f16e797ce7621c184",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "tools/p5_interactive/token_budget.py",
+      "source_sha256": "8246d545320e9f6dbebd7510b3b30485a1bf23193eb7ae2f16e797ce7621c184",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/tools/p5_interactive/build_token_counter.py",
+      "sha256": "af0dd080ac9c11e2ccd92ddc58b751d1d365891ccf2a647954176ee64379a463",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "tools/p5_interactive/build_token_counter.py",
+      "source_sha256": "883d55778ca4f5084f41939e80258ac9e6c1bca5c0c24eeeae229f7f77be4447",
+      "transformation": "Redact private paths/host; relocate data root; disable credential discovery/live worker where applicable. Scientific checks unchanged."
+    },
+    {
+      "path": "code/tools/p5_interactive/operational_reference.py",
+      "sha256": "8ecd375f9c0ddcc67d82a4244fe23ca161d07d85b2510c8ef4bbccb4caece46e",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "tools/p5_interactive/operational_reference.py",
+      "source_sha256": "8ecd375f9c0ddcc67d82a4244fe23ca161d07d85b2510c8ef4bbccb4caece46e",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/stage2/core/exact.py",
+      "sha256": "3925c60c7c7cf29b3b8007810f1ce5b16b4a2ef0a8c622700b6a23bed2cde2c8",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "implementation/padua_evidence_v1/stage2/core/exact.py",
+      "source_sha256": "3925c60c7c7cf29b3b8007810f1ce5b16b4a2ef0a8c622700b6a23bed2cde2c8",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/tools/eval_op_v2/author.py",
+      "sha256": "e29aff9555dc027684862a9ea931f910d4430a27ca279d3e195609e775f804b6",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "tools/eval_op_v2/author.py",
+      "source_sha256": "8617a4342fff087553d19ec1235e01ed446526af88de95fc042305aa21ab95fc",
+      "transformation": "Redact private paths/host; relocate data root; disable credential discovery/live worker where applicable. Scientific checks unchanged."
+    },
+    {
+      "path": "code/tools/eval_op_v2/analyze_r1.py",
+      "sha256": "f4baf1e5627754998d86b84c48012666055d03e5f89da1ceda0dbcaf1fdd695f",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "tools/eval_op_v2/analyze_r1.py",
+      "source_sha256": "f4baf1e5627754998d86b84c48012666055d03e5f89da1ceda0dbcaf1fdd695f",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/tools/eval_op_v2/collection_r1.py",
+      "sha256": "46e1e3b349b089d669a042999324560ca6c969de4cbf4daffb046223d40cd1df",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "tools/eval_op_v2/collection_r1.py",
+      "source_sha256": "46e1e3b349b089d669a042999324560ca6c969de4cbf4daffb046223d40cd1df",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/tools/eval_op_v2/freeze.py",
+      "sha256": "6c49321d3f4af0aef96d306ab906e915eb3de1ba19bda80a370c546bb57c2cb9",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "tools/eval_op_v2/freeze.py",
+      "source_sha256": "ecfed864f6dcd4db1121acffb4247ace2fe020558ff1ce5bd885d234220403f3",
+      "transformation": "Redact private paths/host; relocate data root; disable credential discovery/live worker where applicable. Scientific checks unchanged."
+    },
+    {
+      "path": "code/tools/p5_interactive/operational_check.py",
+      "sha256": "279350d91503fb1c72a5e84d67e31b3cba5dc34ac1932b598cb1c8d78588ecaa",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "tools/p5_interactive/operational_check.py",
+      "source_sha256": "556dc855b114964f799fb902501135b3d78ed65b95b6bff08b3ac2d1be3ec1b5",
+      "transformation": "Redact private paths/host; relocate data root; disable credential discovery/live worker where applicable. Scientific checks unchanged."
+    },
+    {
+      "path": "code/tools/p5_interactive/operational_baseline.py",
+      "sha256": "5500abe24f0e8372824f83303b81d4090eafbb9b896eb596657a680573a4c182",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "tools/p5_interactive/operational_baseline.py",
+      "source_sha256": "5500abe24f0e8372824f83303b81d4090eafbb9b896eb596657a680573a4c182",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/tools/p5_interactive/experiment.py",
+      "sha256": "57dc595a839b12f1b2b1d6f7ca3d71f26b18e3d8eb06d065ac7b3a85ee86f1a0",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "tools/p5_interactive/experiment.py",
+      "source_sha256": "57dc595a839b12f1b2b1d6f7ca3d71f26b18e3d8eb06d065ac7b3a85ee86f1a0",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/tools/p5_interactive/evaluation.py",
+      "sha256": "d000be9e3670fb9acddc9f9662c7b23516496fae229172a17522ac00d1a59c6c",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "tools/p5_interactive/evaluation.py",
+      "source_sha256": "d000be9e3670fb9acddc9f9662c7b23516496fae229172a17522ac00d1a59c6c",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/tools/openai_extension/runtime.py",
+      "sha256": "6422da924429ba0b593ef3781232fa6e91e0fe58aa6a4060a75d45b60514a9e9",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "tools/openai_extension/runtime.py",
+      "source_sha256": "6422da924429ba0b593ef3781232fa6e91e0fe58aa6a4060a75d45b60514a9e9",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/tools/openai_extension/adapter.py",
+      "sha256": "303990e475a6a811641f68656c175a2c4f5c37b1f170d28c4a32f729b10a1851",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "tools/openai_extension/adapter.py",
+      "source_sha256": "303990e475a6a811641f68656c175a2c4f5c37b1f170d28c4a32f729b10a1851",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/tools/mistral_pilot/collect.py",
+      "sha256": "cd045c912f7493d250bf1fecfba38a9aa982f9c067d01156861b171fd7968588",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "tools/mistral_pilot/collect.py",
+      "source_sha256": "cd045c912f7493d250bf1fecfba38a9aa982f9c067d01156861b171fd7968588",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/tools/mistral_pilot/__main__.py",
+      "sha256": "9c0a48995ad6d042a23f045cc13b6c77880b25e726a6fe7254d7d21bc4a45515",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "tools/mistral_pilot/__main__.py",
+      "source_sha256": "d551e61c3e3e1ff93045c3ed040bf69205ed5af8c8603ea42f439204118fd93f",
+      "transformation": "Redact private paths/host; relocate data root; disable credential discovery/live worker where applicable. Scientific checks unchanged."
+    },
+    {
+      "path": "code/tools/eval_op_v2/ablation.py",
+      "sha256": "028bbaed7afddda08c8a7cfb7225570b0f1f304263afb5b8322e4f81e8087476",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "tools/eval_op_v2/ablation.py",
+      "source_sha256": "6ce8450d0dc8486f4efc8c245d21c437119d47aef27b61c5a55e03f94424dade",
+      "transformation": "Redact private paths/host; relocate data root; disable credential discovery/live worker where applicable. Scientific checks unchanged."
+    },
+    {
+      "path": "data/evidence/stage1/geography/selected-sites.csv",
+      "sha256": "5a130ebde94901078472a74ad87e566c8025261a742d2b418d7684d80e68612c",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "evidence/stage1/geography/selected-sites.csv",
+      "source_sha256": "5a130ebde94901078472a74ad87e566c8025261a742d2b418d7684d80e68612c",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "data/evidence/stage2/geography/distance-matrix.csv",
+      "sha256": "e75e7a93cc5df38fe3b195e730ec1a7a0ac198f9a51816583ed30f1c9e674506",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "evidence/stage2/geography/distance-matrix.csv",
+      "source_sha256": "e75e7a93cc5df38fe3b195e730ec1a7a0ac198f9a51816583ed30f1c9e674506",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "data/evidence/stage2/geography/summary.json",
+      "sha256": "d58054a038b116de66a3cc86487b06cb03690a0dddc8d33175e36291e5476106",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "evidence/stage2/geography/summary.json",
+      "source_sha256": "d58054a038b116de66a3cc86487b06cb03690a0dddc8d33175e36291e5476106",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "data/research/eval-op-v2/manifest.json",
+      "sha256": "adefb4c48fafae070d96f3238b849f1ec782b3978a86d1d27f9cc3fbc74539cf",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/eval-op-v2/manifest.json",
+      "source_sha256": "adefb4c48fafae070d96f3238b849f1ec782b3978a86d1d27f9cc3fbc74539cf",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "data/research/eval-op-v2/qualification.json",
+      "sha256": "bc328b693e58b4c773a09099e7738c2fb8f1fbbc384250a83e50a59124f84b91",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/eval-op-v2/qualification.json",
+      "source_sha256": "bc328b693e58b4c773a09099e7738c2fb8f1fbbc384250a83e50a59124f84b91",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "data/research/eval-op-v2/references.json",
+      "sha256": "8955e38c8b43031e1acb489e02b0f1bf2ee697bf86ec8cf5d323369441a3556b",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/eval-op-v2/references.json",
+      "source_sha256": "8955e38c8b43031e1acb489e02b0f1bf2ee697bf86ec8cf5d323369441a3556b",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "data/research/eval-op-v2/revision-1/assignments.json",
+      "sha256": "feb1f3af253d82e633fd2c7f7de525d4b611267749a364dd17b8eccfd949eac7",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/eval-op-v2/revision-1/assignments.json",
+      "source_sha256": "feb1f3af253d82e633fd2c7f7de525d4b611267749a364dd17b8eccfd949eac7",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "data/research/eval-op-v2/revision-1/pairs.json",
+      "sha256": "5bd591c23d0a6f07633625daf78bbbbb513d6e1a80f64ea7825181069ac71d70",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/eval-op-v2/revision-1/pairs.json",
+      "source_sha256": "5bd591c23d0a6f07633625daf78bbbbb513d6e1a80f64ea7825181069ac71d70",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "data/research/eval-op-v2/revision-1/qualification.json",
+      "sha256": "5101b5c571b693120bd88be45c66144e51141e616b33c97cacac240d8fd8239a",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/eval-op-v2/revision-1/qualification.json",
+      "source_sha256": "5101b5c571b693120bd88be45c66144e51141e616b33c97cacac240d8fd8239a",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "data/research/eval-op-v2/revision-1/references.json",
+      "sha256": "002fe49b5d8a60315bfa93fc885e8527c46e463ea05bcd6724cd84248a64f61b",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/eval-op-v2/revision-1/references.json",
+      "source_sha256": "002fe49b5d8a60315bfa93fc885e8527c46e463ea05bcd6724cd84248a64f61b",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "data/research/eval-op-v2/revision-1/schedule.json",
+      "sha256": "6c7a343dc901e9be72720be2b8f8678a37bc2a087d6ad2fce5302234df5a3ff0",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/eval-op-v2/revision-1/schedule.json",
+      "source_sha256": "6c7a343dc901e9be72720be2b8f8678a37bc2a087d6ad2fce5302234df5a3ff0",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "data/research/eval-op-v2/scenarios.json",
+      "sha256": "e02b893f85ca9a84f3cf13625a099e897ed8d0036583ff68d767b20707b91ad7",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/eval-op-v2/scenarios.json",
+      "source_sha256": "e02b893f85ca9a84f3cf13625a099e897ed8d0036583ff68d767b20707b91ad7",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "data/research/evaluation/collection-config.json",
+      "sha256": "c5fa13512996ceca44532f8ccc62a0a0eb45a8d6c1a0d679af54aa466027a366",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/evaluation/collection-config.json",
+      "source_sha256": "c5fa13512996ceca44532f8ccc62a0a0eb45a8d6c1a0d679af54aa466027a366",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "data/research/evaluation/references.json",
+      "sha256": "abb0413400a1a724fe02a5dedd6bb4033d2313ceaaaae99224890496312bc27f",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/evaluation/references.json",
+      "source_sha256": "abb0413400a1a724fe02a5dedd6bb4033d2313ceaaaae99224890496312bc27f",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "data/research/evaluation/scenarios.json",
+      "sha256": "43e20fa3e6efd60d47902c7ab24f94b3338cb988be7441db25eee0810d18f01e",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/evaluation/scenarios.json",
+      "source_sha256": "43e20fa3e6efd60d47902c7ab24f94b3338cb988be7441db25eee0810d18f01e",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "data/research/evaluation/source-map.json",
+      "sha256": "10e2103518d3606fdd7f29fc328140ef7563e63e9758df6fe6fc29bafa9b168e",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/evaluation/source-map.json",
+      "source_sha256": "10e2103518d3606fdd7f29fc328140ef7563e63e9758df6fe6fc29bafa9b168e",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "data/research/p8/references.json",
+      "sha256": "2da184b4d5d655e1ac7f5459782222ba44e186890afe67e988f46624b8021df8",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/p8/references.json",
+      "source_sha256": "2da184b4d5d655e1ac7f5459782222ba44e186890afe67e988f46624b8021df8",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "data/research/p8/review-subset.json",
+      "sha256": "75851adc71612dd6ddb605ec88144e70190d9ec7b27ca4810b321f38e100cc94",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/p8/review-subset.json",
+      "source_sha256": "75851adc71612dd6ddb605ec88144e70190d9ec7b27ca4810b321f38e100cc94",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "data/research/p8/scenarios.json",
+      "sha256": "62f774420e878cd0e6dc82375e3350221cd185d087bc845fb247c114fb164433",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/p8/scenarios.json",
+      "source_sha256": "62f774420e878cd0e6dc82375e3350221cd185d087bc845fb247c114fb164433",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "data/research/p8/source-map.json",
+      "sha256": "099c293370e46935e81add7c22939d7b5baca6788ffd5c00027c6b68c2e8c04c",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/p8/source-map.json",
+      "source_sha256": "099c293370e46935e81add7c22939d7b5baca6788ffd5c00027c6b68c2e8c04c",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "data/research/streetview/osm-crosscheck-2026-10-29.json",
+      "sha256": "d7a8d4ffca9ca49ebf3748636e12467906e05c1e8626940804e583ec7e74f37a",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/streetview/osm-crosscheck-2026-10-29.json",
+      "source_sha256": "d7a8d4ffca9ca49ebf3748636e12467906e05c1e8626940804e583ec7e74f37a",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "data/research/streetview/osm-site-index.json",
+      "sha256": "79d5fe30f5f8237e1a5851bf4f75a175c000caa215f4d94123c3020c772d9996",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/streetview/osm-site-index.json",
+      "source_sha256": "79d5fe30f5f8237e1a5851bf4f75a175c000caa215f4d94123c3020c772d9996",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "data/research/streetview/poi-scenario-map.json",
+      "sha256": "77aabaee533a7c4f327e82d6ae0ccff34df184ef83787f28daa54af3d6f40078",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/streetview/poi-scenario-map.json",
+      "source_sha256": "77aabaee533a7c4f327e82d6ae0ccff34df184ef83787f28daa54af3d6f40078",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "data/research/streetview/provisional-site-assessments.json",
+      "sha256": "0acc48114c019d7559e6ed736ce5f58225ae39cbd822383137a2f958121d8a0b",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/streetview/provisional-site-assessments.json",
+      "source_sha256": "0acc48114c019d7559e6ed736ce5f58225ae39cbd822383137a2f958121d8a0b",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "data/research/streetview/screenshot-inventory.json",
+      "sha256": "61fba451da0c25a9d62cbfb5b6676f920c1c24ccff31c79fc2160518ebe831d3",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/streetview/screenshot-inventory.json",
+      "source_sha256": "61fba451da0c25a9d62cbfb5b6676f920c1c24ccff31c79fc2160518ebe831d3",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "data/research/streetview/second-pass-observations.json",
+      "sha256": "18cf9800f74aedde90086f5a5407abcf8c3bdb1c57292023e25f5cb79cc7c259",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/streetview/second-pass-observations.json",
+      "source_sha256": "18cf9800f74aedde90086f5a5407abcf8c3bdb1c57292023e25f5cb79cc7c259",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "data/research/streetview/site-assessments.json",
+      "sha256": "6a27420759eb381180a3da311f1e0a0511d5038ffc52e7ffb9affe6b7608a0f4",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/streetview/site-assessments.json",
+      "source_sha256": "6a27420759eb381180a3da311f1e0a0511d5038ffc52e7ffb9affe6b7608a0f4",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "docs/research/evaluation/study.md",
+      "sha256": "73e86c8232aeb1b3c834e2cc7b8db410728fe4e60ade5a54b1d8e3bc4d3848e4",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/evaluation/study.md",
+      "source_sha256": "041dad9df758911277f31732fcd6a63e92ec0fdf1da701b3235490fccb34a494",
+      "transformation": "byte-identical; resolve relocated links; label omitted source artifacts explicitly. No scientific claim changed."
+    },
+    {
+      "path": "docs/research/evaluation/report.md",
+      "sha256": "b4c9f2ef467bd2a1ef675db012191e7020b6738614899fa4517a9a71d1eb8c82",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/evaluation/report.md",
+      "source_sha256": "08ec3d24ee9a811b7664766624bf2be638e12de086596b1498c82c3c4f3d30b4",
+      "transformation": "byte-identical; resolve relocated links; label omitted source artifacts explicitly. No scientific claim changed."
+    },
+    {
+      "path": "docs/research/eval-op-v2/revision-1/protocol.md",
+      "sha256": "0f71dc3edc15d8af94e73e8963cff5807790b65e0a0c0ba3a7ae5330dae95371",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/eval-op-v2/revision-1/protocol.md",
+      "source_sha256": "0f71dc3edc15d8af94e73e8963cff5807790b65e0a0c0ba3a7ae5330dae95371",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "docs/research/eval-op-v2/protocol.md",
+      "sha256": "62fd97cebcc4f67d87211e78bd7c8af01bc142933d01bd30f90d08f6d0669b8b",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/eval-op-v2/protocol.md",
+      "source_sha256": "62fd97cebcc4f67d87211e78bd7c8af01bc142933d01bd30f90d08f6d0669b8b",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "docs/research/streetview/method.md",
+      "sha256": "d951dae04235969e854770a5e8215d7e399f5529b664d56ca32c1047a2166336",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/streetview/method.md",
+      "source_sha256": "d951dae04235969e854770a5e8215d7e399f5529b664d56ca32c1047a2166336",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "docs/research/streetview/report.md",
+      "sha256": "5de17aea732f272fb996e4d272470fd753f0fa63c7fd49c8eeb279267a853137",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/streetview/report.md",
+      "source_sha256": "11cbf58843db12b65fac40b88021a42de1f198fff59ee60986f98eaa249c90d5",
+      "transformation": "byte-identical; resolve relocated links; label omitted source artifacts explicitly. No scientific claim changed."
+    },
+    {
+      "path": "docs/research/streetview/scientific-implications.md",
+      "sha256": "0b719a06077ed4a762df0b555a35ce9ab3a776f2027f06cc25e84cd3cb2eb839",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/streetview/scientific-implications.md",
+      "source_sha256": "0b719a06077ed4a762df0b555a35ce9ab3a776f2027f06cc25e84cd3cb2eb839",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "docs/research/luna-eval30-report-2026-10-29.md",
+      "sha256": "0eacbf16b91fdc0d7d08e3afc12a59b36d1080bc8e889fd1603159addf0fc548",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/luna-eval30-report-2026-10-29.md",
+      "source_sha256": "76c916b6ae5c99500e179edce4efb5d4d7371a9f3dbea28c8ff4a4e5a9eb8012",
+      "transformation": "byte-identical; resolve relocated links; label omitted source artifacts explicitly. No scientific claim changed."
+    },
+    {
+      "path": "docs/research/eval-op-v2-r1-scientific-report-2026-10-30.md",
+      "sha256": "954f1e3b12d133072074419de08cce5c205e6144ba6a1300957f8d05134fda58",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/eval-op-v2-r1-scientific-report-2026-10-30.md",
+      "source_sha256": "4ff9234edf98f3ce2001e20e8193247738fa374c37e7b43080cb5fc469a41f05",
+      "transformation": "byte-identical; resolve relocated links; label omitted source artifacts explicitly. No scientific claim changed."
+    },
+    {
+      "path": "docs/research/luna-development-qualification-2026-10-29.md",
+      "sha256": "728fb8a94ad0f33746878b96dbc56b3994ff18e503a908dc676106c371bf9d58",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "research/luna-development-qualification-2026-10-29.md",
+      "source_sha256": "728fb8a94ad0f33746878b96dbc56b3994ff18e503a908dc676106c371bf9d58",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "results/eval30/packets.json",
+      "sha256": "bcf3f9c29983977db81bb084bffaec1648fe9e8303518b70f1842bb14cd59b5a",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "evidence/evaluation-30/live/captures.tar.gz!results.json",
+      "source_sha256": "d84c41036962527c0b94b69bb59bc3751491af94de0d910dbd748879d171b6c9",
+      "transformation": "Allowlist scientific result fields; compact action/evidence steps from per-assignment trace; omit HTTP, IDs, timing, phase messages and technical traces. Original decision, gates, evaluation and released evidence unchanged.",
+      "archive_sha256": "b672e562c77aece5596cdbef58fc373b585b8af9d1d80eaa57800941e05e6894",
+      "archive_path": "evidence/evaluation-30/live/captures.tar.gz"
+    },
+    {
+      "path": "results/eval30/analysis.json",
+      "sha256": "91e655c3d0993e5786f3f34bdb85eb0065d5a514c644f083e1247c7148f14839",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "evidence/evaluation-30/live/analysis.json",
+      "source_sha256": "85d4b1dab63db04ced6b2ec80a043d10bfb3ba8406238a3c0ed7c0c01c487dec",
+      "transformation": "Remove wire identifiers/local paths only; scientific summaries and values unchanged."
+    },
+    {
+      "path": "results/luna-eval30/packets.json",
+      "sha256": "241c5b6d7e1d737720dd46989ee3a1c4610dd97800acc71711d775f323c659e1",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "evidence/luna-eval30/captures.tar.gz!results.json",
+      "source_sha256": "ae1dc90dca03f6e8fea8dad66539fe8361eb8e33bd9afc5975000790f80ef65d",
+      "transformation": "Allowlist scientific result fields; compact action/evidence steps from per-assignment trace; omit HTTP, IDs, timing, phase messages and technical traces. Original decision, gates, evaluation and released evidence unchanged.",
+      "archive_sha256": "16a9f3489c6d2a95b63ac91ca5bef3e545652e4b577ed0a527944de101d08a35",
+      "archive_path": "evidence/luna-eval30/captures.tar.gz"
+    },
+    {
+      "path": "results/luna-eval30/analysis.json",
+      "sha256": "b04776e4986501b7677c554e0102676cb7c419fb2c9a0a7404ce1e8f2fbd393a",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "evidence/luna-eval30/analysis.json",
+      "source_sha256": "fc09a1a9dbda396086eda26622420a6778dcf6fbabc5c51f38999476de1b3c0b",
+      "transformation": "Remove wire identifiers/local paths only; scientific summaries and values unchanged."
+    },
+    {
+      "path": "results/r1/packets.json",
+      "sha256": "3872e28953bb541b788128386b9907e96274c774b9889f11b6e40aa3e8a21d30",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "evidence/eval-op-v2-r1/captures.tar.gz!collection/results.json",
+      "source_sha256": "e8caf35f8e5c0f7f19e0591fbc43d4e1c66a8abea4d929533e967eff724cd3a9",
+      "transformation": "Allowlist scientific result fields; compact action/evidence steps from per-assignment trace; omit HTTP, IDs, timing, phase messages and technical traces. Original decision, gates, evaluation and released evidence unchanged.",
+      "archive_sha256": "c5d2e877c04e18ff23f99f0f1478c8f7274c6462128a6bc4d0992fdc31951479",
+      "archive_path": "evidence/eval-op-v2-r1/captures.tar.gz"
+    },
+    {
+      "path": "results/r1/analysis.json",
+      "sha256": "6bd2c1dc74ae50d7e1a1cedc2bc80f06f9f25e938f3f0f7f3bece86ce18caa9c",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "evidence/eval-op-v2-r1/analysis.json",
+      "source_sha256": "6bd2c1dc74ae50d7e1a1cedc2bc80f06f9f25e938f3f0f7f3bece86ce18caa9c",
+      "transformation": "Remove wire identifiers/local paths only; scientific summaries and values unchanged."
+    },
+    {
+      "path": "results/r1/accounting.json",
+      "sha256": "1a7fe563e76b42feec08bf401d01364ac25af6266d749e1ba72b8029036e9637",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "evidence/eval-op-v2-r1/accounting.json",
+      "source_sha256": "1a7fe563e76b42feec08bf401d01364ac25af6266d749e1ba72b8029036e9637",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "code/tools/p5_interactive/token_accounting.cpp",
+      "sha256": "1f4e1d11450e970810ee9ea83e7a1a858e87b4d0cacae3557e57eae0f3aba8cc",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "tools/p5_interactive/token_accounting.cpp",
+      "source_sha256": "1f4e1d11450e970810ee9ea83e7a1a858e87b4d0cacae3557e57eae0f3aba8cc",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "reproduction/tests/test_original_openai_adapter.py",
+      "sha256": "0adce62124aa39c22395ee4d20e2d2c519d100565ca18b3be583d48243c699c7",
+      "source_repository": "ltx-mdpi-optimizing-urban-freight-2026",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "tools/openai_extension/test_adapter.py",
+      "source_sha256": "0adce62124aa39c22395ee4d20e2d2c519d100565ca18b3be583d48243c699c7",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "prompts/eval30-initial-messages.json",
+      "sha256": "de3b7e12b493064d00c05ecf8ded317da0ac4a9816211ae5770edac6c234006b",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": [
+        "research/evaluation/scenarios.json",
+        "tools/p5_interactive/operational.py"
+      ],
+      "transformation": "Original public_messages(), tools=True/user_answers=True; equal provider-independent initial content. No labels/references in messages; Luna uses same EVAL30 messages."
+    },
+    {
+      "path": "prompts/r1-initial-messages.json",
+      "sha256": "c3f1b499f708d911cde27e9511c29b0ab62721d3d6359a667699ab52f96b6a5e",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": [
+        "research/eval-op-v2/revision-1/assignments.json",
+        "tools/p5_interactive/operational.py"
+      ],
+      "transformation": "Original public_messages(), tools=True/user_answers=True; equal provider-independent initial content. No labels/references in messages; Luna uses same EVAL30 messages."
+    },
+    {
+      "path": "prompts/system.txt",
+      "sha256": "e46236686429c88992a68b99f38bd7edb4eaa3b841a906b5546272b360a55840",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "tools/p5_interactive/operational.py",
+      "transformation": "Extract literal SYSTEM / SCHEMA; unchanged canonical protocol. Scenario-specific instructions remain in initial-messages files."
+    },
+    {
+      "path": "prompts/action-schema.json",
+      "sha256": "d7a0002d522c5187ec42c1b0261afae680bb375167d0e4290f11f07957142962",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "tools/p5_interactive/operational.py",
+      "transformation": "Extract literal SYSTEM / SCHEMA; unchanged canonical protocol. Scenario-specific instructions remain in initial-messages files."
+    },
+    {
+      "path": "examples/eval30.json",
+      "sha256": "1a7f20080aab712ff66fa40768d7a094de3230fac96dbc224a1b4f8d7587649d",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "evidence/evaluation-30/live/captures.tar.gz",
+      "source_sha256": "b672e562c77aece5596cdbef58fc373b585b8af9d1d80eaa57800941e05e6894",
+      "transformation": "First occurrence of provider/action/correctness stratum; omit deterministic arms; extract original final text only, never commentary/reasoning/headers. Illustrative, not a statistical subsample."
+    },
+    {
+      "path": "examples/luna-eval30.json",
+      "sha256": "87c67d09c5933a0441e0d2a3dfaf974342d15b8932b83b4814f43f23db6e8c4a",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "evidence/luna-eval30/captures.tar.gz",
+      "source_sha256": "16a9f3489c6d2a95b63ac91ca5bef3e545652e4b577ed0a527944de101d08a35",
+      "transformation": "First occurrence of provider/action/correctness stratum; omit deterministic arms; extract original final text only, never commentary/reasoning/headers. Illustrative, not a statistical subsample."
+    },
+    {
+      "path": "examples/r1.json",
+      "sha256": "1040cfc9b96de5ccf82e39c8666227192b8a4de0baafed53346956e550653096",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "evidence/eval-op-v2-r1/captures.tar.gz",
+      "source_sha256": "c5d2e877c04e18ff23f99f0f1478c8f7274c6462128a6bc4d0992fdc31951479",
+      "transformation": "First occurrence of provider/action/correctness stratum; omit deterministic arms; extract original final text only, never commentary/reasoning/headers. Illustrative, not a statistical subsample."
+    },
+    {
+      "path": "results/controlled-diagnostic/packets.json",
+      "sha256": "187992ed1d6cc68c67c5dfbae513430986f26073e82077a529efc942ecc2cad0",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "evidence/evaluation-30/offline/controlled-proposals.json",
+      "source_sha256": "59996da583b7554103448518edc7456441a0cbda24b9e73d215a407cf99da03c",
+      "transformation": "Compact action/evidence steps and original scripted proposals; preserve original pre-FINAL gate timing. Separate diagnostic, not natural model trajectories."
+    },
+    {
+      "path": "reproduction/generate_figures.py",
+      "sha256": "71eef4232e432d145f134fb6d5f3009a8765db08a198f22d77dcebf578b358b6",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "manuscript/urban-freight-article/figures/generate.py",
+      "source_sha256": "3cef7024a1680bb911b248e838b8f4042e45eedda83850f24ae4a0ffb889af3b",
+      "transformation": "Only ROOT and input path/SHA map changed to public artifact locations. Plot/table algorithms unchanged."
+    },
+    {
+      "path": "code/tools/streetview/traceability.py",
+      "sha256": "b60b84c20c9b8311a5da32ab060007df072ef984388d9bb3b6b71a4573ed8aa8",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "tools/streetview/traceability.py",
+      "source_sha256": "b60b84c20c9b8311a5da32ab060007df072ef984388d9bb3b6b71a4573ed8aa8",
+      "transformation": "byte-identical"
+    },
+    {
+      "path": "data/evidence/stage2/geography/report.md",
+      "sha256": "9d9ae8fe65e6ac852ae6aa3af5c19e20b367a3e244dec23a8f38d63594756182",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "evidence/stage2/geography/report.md",
+      "source_sha256": "9d9ae8fe65e6ac852ae6aa3af5c19e20b367a3e244dec23a8f38d63594756182",
+      "transformation": "byte-identical historical derivation report; traffic prototype diagnostics are not evaluated EVAL30/R1 travel inputs"
+    },
+    {
+      "path": "provenance/freeze-records.json",
+      "sha256": "dee7c6505b4d0e62302711759932081c1d50aa7233d93b334e3e95e066a968d6",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_paths": [
+        {
+          "path": "evidence/eval-op-v2-r1/scientific-freeze.json",
+          "sha256": "bf5558e2e8aa88b18aa4eb1f3a460fc2b27f1ca4d21d9ef571a975bc530a71c1"
+        },
+        {
+          "path": "evidence/evaluation-30/pre-inference-freeze.json",
+          "sha256": "da8a919f7d688aeec19874de29bb3b93f9a6a48d895a1a27a42f49e43c136b29"
+        }
+      ],
+      "transformation": "Allowlist scientific freeze fields and source hash inventory; omit internal chat identifiers and infrastructure diagnostics"
+    },
+    {
+      "path": "results/generated/r1-table.tex",
+      "sha256": "caeb25900004a130f6ec4f5f7f3d3bc425695fdd7d4c392e5869aff9bd3e0b1b",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "manuscript/urban-freight-article/generated/r1-table.tex",
+      "source_sha256": "caeb25900004a130f6ec4f5f7f3d3bc425695fdd7d4c392e5869aff9bd3e0b1b",
+      "transformation": "byte-identical regenerated result"
+    },
+    {
+      "path": "results/generated/eval30-table.tex",
+      "sha256": "3efcdf40c53675b3f098741d5da893903e8e1b2cbc33441a0189abd371b757a4",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "manuscript/urban-freight-article/generated/eval30-table.tex",
+      "source_sha256": "3efcdf40c53675b3f098741d5da893903e8e1b2cbc33441a0189abd371b757a4",
+      "transformation": "byte-identical regenerated result"
+    },
+    {
+      "path": "results/generated/paired-outcomes.pdf",
+      "sha256": "43de0432388e7d46c6ef4a197c4f8b69c2227de7ade5c2140ae81df2563d4b4e",
+      "source_commit": "7bd0b106cfa71a96f7c51f6b9860bc148963b113",
+      "source_path": "manuscript/urban-freight-article/figures/paired-outcomes.pdf",
+      "source_sha256": "43de0432388e7d46c6ef4a197c4f8b69c2227de7ade5c2140ae81df2563d4b4e",
+      "transformation": "byte-identical regenerated result"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+# Source excerpts for inspection, NOT a standalone executable module.
+# Source: tools/r4q_v6_direct.py
+# Whole-source SHA-256: feee88f57d6baf34fb9f8e1694ce6d714cf3199e1d5e6dcd54bb29ddb9040f12
+# Dependencies and live launch/governance code intentionally not exported.
+
+@dataclass(frozen=True)
+class DirectReply:
+    text: str
+    response_id_sha256: str
+    response_sha256: str
+    exact_model: str
+    status: str
+    input_tokens: int
+    output_tokens: int
+    conservative_cost_usd: float
+    reasoning_present: bool
+    latency_ms: float
+
+
+class DirectProviderError(RuntimeError):
+    def __init__(self, category: str, *, ambiguous: bool, status: int | None = None):
+        super().__init__(category)
+        self.category = category
+        self.ambiguous = ambiguous
+        self.status = status
+
+    def record(self) -> dict[str, Any]:
+        return {"category": self.category, "ambiguous": self.ambiguous, "http_status": self.status}
+
+
+def classify_http(status: int) -> str:
+    return {
+        400: "WIRE_CONTRACT_INCOMPATIBILITY",
+        401: "AUTHENTICATION",
+        402: "INSUFFICIENT_BALANCE",
+        422: "WIRE_CONTRACT_INCOMPATIBILITY",
+        429: "DIRECT_ROUTE_CAPACITY",
+        500: "PROVIDER_INFRASTRUCTURE",
+        503: "PROVIDER_INFRASTRUCTURE",
+    }.get(status, "PROVIDER_HTTP_FAILURE")
+
+
+def parse_response(payload: Any, latency_ms: float) -> DirectReply:
+    if not isinstance(payload, dict):
+        raise DirectProviderError("INVALID_RESPONSE", ambiguous=True)
+    response_id = payload.get("id")
+    if not isinstance(response_id, str) or not response_id:
+        raise DirectProviderError("UNATTRIBUTED_RESPONSE", ambiguous=True)
+    if payload.get("status") != "completed" or payload.get("error") not in (None, {}):
+        raise DirectProviderError("INCOMPLETE_RESPONSE", ambiguous=False)
+    if payload.get("model") != MODEL_ID:
+        raise DirectProviderError("MODEL_MISMATCH", ambiguous=False)
+    output = payload.get("output")
+    if not isinstance(output, list) or any(
+        isinstance(item, dict) and item.get("type") == "reasoning" for item in output
+    ):
+        raise DirectProviderError("REASONING_OR_OUTPUT_SHAPE", ambiguous=False)
+    messages = [item for item in output if isinstance(item, dict) and item.get("type") == "message"]
+    if len(messages) != 1 or len(messages[0].get("content", [])) != 1:
+        raise DirectProviderError("OUTPUT_ARTIFACT_COUNT", ambiguous=False)
+    content = messages[0]["content"][0]
+    if not isinstance(content, dict) or content.get("type") != "output_text" or not isinstance(content.get("text"), str):
+        raise DirectProviderError("OUTPUT_TEXT_SHAPE", ambiguous=False)
+    usage = payload.get("usage")
+    if not isinstance(usage, dict):
+        raise DirectProviderError("USAGE_MISSING", ambiguous=False)
+    input_tokens, output_tokens = usage.get("input_tokens"), usage.get("output_tokens")
+    if type(input_tokens) is not int or type(output_tokens) is not int or min(input_tokens, output_tokens) < 0:
+        raise DirectProviderError("USAGE_INVALID", ambiguous=False)
+    cost = input_tokens * INPUT_RATE + output_tokens * OUTPUT_RATE
+    if not math.isfinite(cost) or cost < 0 or cost > MAX_OPERATION_EXPOSURE_USD:
+        raise DirectProviderError("COST_BOUND", ambiguous=False)
+    text = content["text"]
+    return DirectReply(
+        text=text,
+        response_id_sha256=sha_bytes(response_id.encode()),
+        response_sha256=sha_bytes(canonical(payload).encode()),
+        exact_model=MODEL_ID,
+        status="completed",
+        input_tokens=input_tokens,
+        output_tokens=output_tokens,
+        conservative_cost_usd=cost,
+        reasoning_present=False,
+        latency_ms=latency_ms,
+    )

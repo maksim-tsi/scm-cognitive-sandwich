@@ -1,0 +1,111 @@
+{
+  "analysis": {
+    "bootstrap_resamples": 10000,
+    "h2_exploratory": {
+      "cluster_bootstrap_95_ci": [
+        0.0847457627118644,
+        0.2711864406779661
+      ],
+      "cluster_level_worst_case_bounds": [
+        0.15,
+        0.18333333333333332
+      ],
+      "estimand": "structured_repair - llm_only",
+      "incident_clusters_analyzable": 59,
+      "incident_clusters_missing": 1,
+      "mean_difference": 0.1694915254237288,
+      "paired_sign_flip_p_value": 0.001989980100198998
+    },
+    "primary": {
+      "cluster_bootstrap_95_ci": [
+        -0.1016949152542373,
+        0.13559322033898305
+      ],
+      "cluster_level_worst_case_bounds": [
+        0.0,
+        0.03333333333333333
+      ],
+      "estimand": "structured_repair - gate_only",
+      "incident_clusters_analyzable": 59,
+      "incident_clusters_missing": 1,
+      "mean_difference": 0.01694915254237288,
+      "paired_sign_flip_p_value": 1.0
+    },
+    "sign_flip_permutations": 100000,
+    "status": "ANALYZED"
+  },
+  "condition_outcomes": {
+    "gate_only": {
+      "accepted": 17,
+      "des_admitted": 17,
+      "fail_closed_validation": 42,
+      "provider_or_infrastructure_missing": 1
+    },
+    "llm_only": {
+      "accepted": 8,
+      "des_admitted": 0,
+      "fail_closed_validation": 51,
+      "provider_or_infrastructure_missing": 1
+    },
+    "structured_repair": {
+      "accepted": 18,
+      "des_admitted": 18,
+      "fail_closed_validation": 41,
+      "provider_or_infrastructure_missing": 1
+    }
+  },
+  "cost_and_budget": {
+    "cumulative_conservative_exposure_usd": 0.66564124,
+    "hard_ceiling_usd": 10.0,
+    "historical_conservative_exposure_usd": 0.07135436,
+    "new_conservative_cost_usd": 0.59428688,
+    "within_ceiling": true
+  },
+  "des": {
+    "duplicate_rows": 0,
+    "jointly_admitted_pairs": 11,
+    "replications_per_condition_variant": 100,
+    "rows": 15400,
+    "status": "VALIDATED",
+    "unique_key_fields": [
+      "incident_id",
+      "generation_id",
+      "condition",
+      "variant_id",
+      "replication_id"
+    ],
+    "variants": 7
+  },
+  "durable_provider_accounting": {
+    "dispatch_intents": 344,
+    "http_requests_started": 344,
+    "provider_acceptance_confirmed": 344,
+    "provider_acceptance_unknown": 0,
+    "provider_not_accepted": 0,
+    "responses_attributed": 344,
+    "systemic_stops": 0,
+    "usage_cost_records": 344,
+    "validation_outcomes": 344
+  },
+  "observability_accounting": {
+    "maximum_phoenix_polls_conservative": 1715,
+    "missing_reason": "PHOENIX_RECONCILIATION_FAILURE_AFTER_CRASH",
+    "otlp_exports": 343,
+    "phoenix_reconciliations": 343,
+    "provider_operations_replayed": 0,
+    "raw_network_requests_conservative": 2461,
+    "recovery_disposition": "LOCAL_OR_RECONCILIATION_ONLY",
+    "terminal_annotations": 59
+  },
+  "population": {
+    "attempted_incidents": 60,
+    "completed_balanced_batches": 5,
+    "frozen_incidents": 60,
+    "generated_initial_artifacts": 59,
+    "jointly_des_admitted_pairs": 11,
+    "observability_missing_incidents": 1,
+    "terminal_incidents": 60,
+    "validation_outcomes_recorded": 177
+  },
+  "status": "ANALYZED_DEGRADED_OBSERVABILITY"
+}

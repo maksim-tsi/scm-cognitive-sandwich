@@ -1,0 +1,2562 @@
+[
+  {
+    "id": "P8-01",
+    "interface": "operational-v1",
+    "title": "Three deliveries; early receiving deadline",
+    "instruction": "A needs a revised unloading allowance. B must be finished by 08:35; choose a feasible order for all three deliveries.",
+    "epoch": 100,
+    "effective_time": 100,
+    "public": {
+      "scope": "RUN-P8",
+      "entity": "MANIFEST-P8",
+      "clock": "seconds since 08:00 Europe/Rome on a synthetic service day",
+      "current_parameters": {
+        "service_A_s": 300
+      },
+      "current_routes": [
+        {
+          "vehicle": 0,
+          "nodes": [
+            0,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "vehicle": 1,
+          "nodes": [
+            0,
+            3,
+            0
+          ]
+        }
+      ],
+      "bindings": {
+        "service_A_s": {
+          "path": [
+            "orders",
+            0,
+            "service_s"
+          ],
+          "owner": "dispatcher",
+          "unit": "seconds"
+        }
+      },
+      "required_slots": [
+        "service_A_s"
+      ],
+      "optional_slots": [
+        "driver_preference"
+      ],
+      "channels": {
+        "service_A_s": {
+          "user": "unknown",
+          "tool": "unavailable"
+        }
+      },
+      "authority_policy": {
+        "dispatcher": "manifest loads, vehicle payload and planning service allowances; cannot override receiver windows or authenticate unknown records",
+        "receiver": "signed receiving restrictions only",
+        "road_archive": "released road travel estimates only"
+      },
+      "snapshot_provenance": "all unbound routing inputs are explicitly synthetic dispatch/receiver assumptions, not observed Padua deliveries",
+      "site_mapping": {
+        "DEPOT": "depot",
+        "A": "ee71fa3e-82e5-46b9-9752-4a584a4c4255",
+        "B": "407d018c-7f6b-4ab1-976e-247e2df9faec",
+        "C": "0a26de47-78e8-4d8e-8050-26577765688f"
+      }
+    },
+    "routing": {
+      "depot": 0,
+      "distance_m": [
+        [
+          0,
+          1861,
+          2186,
+          3689
+        ],
+        [
+          1915,
+          0,
+          1049,
+          4573
+        ],
+        [
+          1759,
+          878,
+          0,
+          5050
+        ],
+        [
+          3785,
+          4428,
+          5054,
+          0
+        ]
+      ],
+      "time_s": [
+        [
+          0,
+          335,
+          394,
+          665
+        ],
+        [
+          345,
+          0,
+          189,
+          824
+        ],
+        [
+          317,
+          158,
+          0,
+          909
+        ],
+        [
+          682,
+          797,
+          910,
+          0
+        ]
+      ],
+      "vehicle_capacities_kg": [
+        100,
+        80
+      ],
+      "shift_start_s": 0,
+      "shift_end_s": 14400,
+      "orders": [
+        {
+          "node": 1,
+          "demand_kg": 40,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 7200
+        },
+        {
+          "node": 2,
+          "demand_kg": 30,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 2100
+        },
+        {
+          "node": 3,
+          "demand_kg": 20,
+          "service_s": 300,
+          "open_s": 1200,
+          "close_s": 7200
+        }
+      ]
+    },
+    "records": [
+      {
+        "id": "ALLOW-A",
+        "slot": "service_A_s",
+        "value": 900,
+        "text": "Please allow fifteen minutes for A on this run. This is the dispatch planning allowance.",
+        "channel": "user",
+        "owner": "dispatcher",
+        "verified": true,
+        "authority": "confirmed",
+        "available_at": 0,
+        "effective_from": 0,
+        "effective_to": 200,
+        "scope": "RUN-P8",
+        "entity": "MANIFEST-P8",
+        "precision": "confirmed",
+        "supersedes": [],
+        "provenance": "naturalistic synthetic document ALLOW-A"
+      }
+    ],
+    "facts": [],
+    "source_classes": {
+      "distance_m": "deterministic derivation from archived Stage2 graph distances, rounded to metres",
+      "time_s": "synthetic constant-speed20km/h proxy, except explicitly patched directed arc",
+      "messages": "naturalistic synthetic; not real operator correspondence",
+      "loads_windows_fleet": "synthetic assumptions; clock bounds are completion deadlines",
+      "unknowns": "declared missing facts and unresolved source conflicts"
+    }
+  },
+  {
+    "id": "P8-02",
+    "interface": "operational-v1",
+    "title": "Load change requires vehicle allocation",
+    "instruction": "Confirm the amended B manifest and allocate A 60kg, B and C 20kg to 100kg and 80kg vehicles.",
+    "epoch": 100,
+    "effective_time": 100,
+    "public": {
+      "scope": "RUN-P8",
+      "entity": "MANIFEST-P8",
+      "clock": "seconds since 08:00 Europe/Rome on a synthetic service day",
+      "current_parameters": {
+        "load_B_kg": 30
+      },
+      "current_routes": [
+        {
+          "vehicle": 0,
+          "nodes": [
+            0,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "vehicle": 1,
+          "nodes": [
+            0,
+            3,
+            0
+          ]
+        }
+      ],
+      "bindings": {
+        "load_B_kg": {
+          "path": [
+            "orders",
+            1,
+            "demand_kg"
+          ],
+          "owner": "dispatcher",
+          "unit": "kg"
+        }
+      },
+      "required_slots": [
+        "load_B_kg"
+      ],
+      "optional_slots": [
+        "driver_preference"
+      ],
+      "channels": {
+        "load_B_kg": {
+          "user": "unknown",
+          "tool": "unavailable"
+        }
+      },
+      "authority_policy": {
+        "dispatcher": "manifest loads, vehicle payload and planning service allowances; cannot override receiver windows or authenticate unknown records",
+        "receiver": "signed receiving restrictions only",
+        "road_archive": "released road travel estimates only"
+      },
+      "snapshot_provenance": "all unbound routing inputs are explicitly synthetic dispatch/receiver assumptions, not observed Padua deliveries",
+      "site_mapping": {
+        "DEPOT": "depot",
+        "A": "ee71fa3e-82e5-46b9-9752-4a584a4c4255",
+        "B": "407d018c-7f6b-4ab1-976e-247e2df9faec",
+        "C": "0a26de47-78e8-4d8e-8050-26577765688f"
+      }
+    },
+    "routing": {
+      "depot": 0,
+      "distance_m": [
+        [
+          0,
+          1861,
+          2186,
+          3689
+        ],
+        [
+          1915,
+          0,
+          1049,
+          4573
+        ],
+        [
+          1759,
+          878,
+          0,
+          5050
+        ],
+        [
+          3785,
+          4428,
+          5054,
+          0
+        ]
+      ],
+      "time_s": [
+        [
+          0,
+          335,
+          394,
+          665
+        ],
+        [
+          345,
+          0,
+          189,
+          824
+        ],
+        [
+          317,
+          158,
+          0,
+          909
+        ],
+        [
+          682,
+          797,
+          910,
+          0
+        ]
+      ],
+      "vehicle_capacities_kg": [
+        100,
+        80
+      ],
+      "shift_start_s": 0,
+      "shift_end_s": 14400,
+      "orders": [
+        {
+          "node": 1,
+          "demand_kg": 60,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        },
+        {
+          "node": 2,
+          "demand_kg": 30,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        },
+        {
+          "node": 3,
+          "demand_kg": 20,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        }
+      ]
+    },
+    "records": [
+      {
+        "id": "MAN-B",
+        "slot": "load_B_kg",
+        "value": 70,
+        "text": "B is 70kg for this booking, not 30kg. Split whole deliveries between the two vans; no split delivery.",
+        "channel": "user",
+        "owner": "dispatcher",
+        "verified": true,
+        "authority": "confirmed",
+        "available_at": 0,
+        "effective_from": 0,
+        "effective_to": 200,
+        "scope": "RUN-P8",
+        "entity": "MANIFEST-P8",
+        "precision": "confirmed",
+        "supersedes": [],
+        "provenance": "naturalistic synthetic document MAN-B"
+      }
+    ],
+    "facts": [],
+    "source_classes": {
+      "distance_m": "deterministic derivation from archived Stage2 graph distances, rounded to metres",
+      "time_s": "synthetic constant-speed20km/h proxy, except explicitly patched directed arc",
+      "messages": "naturalistic synthetic; not real operator correspondence",
+      "loads_windows_fleet": "synthetic assumptions; clock bounds are completion deadlines",
+      "unknowns": "declared missing facts and unresolved source conflicts"
+    }
+  },
+  {
+    "id": "P8-03",
+    "interface": "operational-v1",
+    "title": "Alternative complete delivery tours",
+    "instruction": "All information is confirmed. Choose a feasible tour; report its distance. More than one feasible route is acceptable; shortest distance is a secondary diagnostic.",
+    "epoch": 100,
+    "effective_time": 100,
+    "public": {
+      "scope": "RUN-P8",
+      "entity": "MANIFEST-P8",
+      "clock": "seconds since 08:00 Europe/Rome on a synthetic service day",
+      "current_parameters": {
+        "service_A_s": 300
+      },
+      "current_routes": [
+        {
+          "vehicle": 0,
+          "nodes": [
+            0,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "vehicle": 1,
+          "nodes": [
+            0,
+            3,
+            0
+          ]
+        }
+      ],
+      "bindings": {
+        "service_A_s": {
+          "path": [
+            "orders",
+            0,
+            "service_s"
+          ],
+          "owner": "dispatcher",
+          "unit": "seconds"
+        }
+      },
+      "required_slots": [
+        "service_A_s"
+      ],
+      "optional_slots": [
+        "driver_preference"
+      ],
+      "channels": {
+        "service_A_s": {
+          "user": "unknown",
+          "tool": "unavailable"
+        }
+      },
+      "authority_policy": {
+        "dispatcher": "manifest loads, vehicle payload and planning service allowances; cannot override receiver windows or authenticate unknown records",
+        "receiver": "signed receiving restrictions only",
+        "road_archive": "released road travel estimates only"
+      },
+      "snapshot_provenance": "all unbound routing inputs are explicitly synthetic dispatch/receiver assumptions, not observed Padua deliveries",
+      "site_mapping": {
+        "DEPOT": "depot",
+        "A": "ee71fa3e-82e5-46b9-9752-4a584a4c4255",
+        "B": "407d018c-7f6b-4ab1-976e-247e2df9faec",
+        "C": "0a26de47-78e8-4d8e-8050-26577765688f"
+      }
+    },
+    "routing": {
+      "depot": 0,
+      "distance_m": [
+        [
+          0,
+          1861,
+          2186,
+          3689
+        ],
+        [
+          1915,
+          0,
+          1049,
+          4573
+        ],
+        [
+          1759,
+          878,
+          0,
+          5050
+        ],
+        [
+          3785,
+          4428,
+          5054,
+          0
+        ]
+      ],
+      "time_s": [
+        [
+          0,
+          335,
+          394,
+          665
+        ],
+        [
+          345,
+          0,
+          189,
+          824
+        ],
+        [
+          317,
+          158,
+          0,
+          909
+        ],
+        [
+          682,
+          797,
+          910,
+          0
+        ]
+      ],
+      "vehicle_capacities_kg": [
+        100,
+        80
+      ],
+      "shift_start_s": 0,
+      "shift_end_s": 14400,
+      "orders": [
+        {
+          "node": 1,
+          "demand_kg": 40,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        },
+        {
+          "node": 2,
+          "demand_kg": 30,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        },
+        {
+          "node": 3,
+          "demand_kg": 20,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        }
+      ]
+    },
+    "records": [
+      {
+        "id": "SIGNED-A",
+        "slot": "service_A_s",
+        "value": 300,
+        "text": "The agreed five-minute allowance at A remains unchanged.",
+        "channel": "public",
+        "owner": "dispatcher",
+        "verified": true,
+        "authority": "confirmed",
+        "available_at": 0,
+        "effective_from": 0,
+        "effective_to": 200,
+        "scope": "RUN-P8",
+        "entity": "MANIFEST-P8",
+        "precision": "confirmed",
+        "supersedes": [],
+        "provenance": "naturalistic synthetic document SIGNED-A"
+      }
+    ],
+    "facts": [],
+    "source_classes": {
+      "distance_m": "deterministic derivation from archived Stage2 graph distances, rounded to metres",
+      "time_s": "synthetic constant-speed20km/h proxy, except explicitly patched directed arc",
+      "messages": "naturalistic synthetic; not real operator correspondence",
+      "loads_windows_fleet": "synthetic assumptions; clock bounds are completion deadlines",
+      "unknowns": "declared missing facts and unresolved source conflicts"
+    }
+  },
+  {
+    "id": "P8-04",
+    "interface": "operational-v1",
+    "title": "Two dispatch manifests require authoritative supersession",
+    "instruction": "Two authenticated warehouse manifest revisions disagree on the mass of booking B. Neither has precedence. The dispatcher can retrieve the final warehouse release, not choose or invent a mass; resolve it before committing a plan.",
+    "epoch": 100,
+    "effective_time": 100,
+    "public": {
+      "scope": "RUN-P8",
+      "entity": "MANIFEST-P8",
+      "clock": "seconds since 08:00 Europe/Rome on a synthetic service day",
+      "current_parameters": {
+        "load_B_kg": 30
+      },
+      "current_routes": [
+        {
+          "vehicle": 0,
+          "nodes": [
+            0,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "vehicle": 1,
+          "nodes": [
+            0,
+            3,
+            0
+          ]
+        }
+      ],
+      "bindings": {
+        "load_B_kg": {
+          "path": [
+            "orders",
+            1,
+            "demand_kg"
+          ],
+          "owner": "dispatcher",
+          "unit": "kg",
+          "permitted_issuer_roles": [
+            "warehouse_loading_controller"
+          ],
+          "required_assertion_kind": "certified_consignment_mass"
+        }
+      },
+      "required_slots": [
+        "load_B_kg"
+      ],
+      "optional_slots": [
+        "driver_preference"
+      ],
+      "channels": {
+        "load_B_kg": {
+          "user": "unknown",
+          "tool": "unavailable"
+        }
+      },
+      "authority_policy": {
+        "dispatcher": "Read-only relay of authenticated booking mass from warehouse loading control and available payload from fleet control; may set planning service allowances, not physical masses/payload ratings or receiver permissions.",
+        "receiver": "signed receiving restrictions only",
+        "road_archive": "released road travel estimates only"
+      },
+      "snapshot_provenance": "all unbound routing inputs are explicitly synthetic dispatch/receiver assumptions, not observed Padua deliveries",
+      "site_mapping": {
+        "DEPOT": "depot",
+        "A": "ee71fa3e-82e5-46b9-9752-4a584a4c4255",
+        "B": "407d018c-7f6b-4ab1-976e-247e2df9faec",
+        "C": "0a26de47-78e8-4d8e-8050-26577765688f"
+      }
+    },
+    "routing": {
+      "depot": 0,
+      "distance_m": [
+        [
+          0,
+          1861,
+          2186,
+          3689
+        ],
+        [
+          1915,
+          0,
+          1049,
+          4573
+        ],
+        [
+          1759,
+          878,
+          0,
+          5050
+        ],
+        [
+          3785,
+          4428,
+          5054,
+          0
+        ]
+      ],
+      "time_s": [
+        [
+          0,
+          335,
+          394,
+          665
+        ],
+        [
+          345,
+          0,
+          189,
+          824
+        ],
+        [
+          317,
+          158,
+          0,
+          909
+        ],
+        [
+          682,
+          797,
+          910,
+          0
+        ]
+      ],
+      "vehicle_capacities_kg": [
+        100,
+        80
+      ],
+      "shift_start_s": 0,
+      "shift_end_s": 14400,
+      "orders": [
+        {
+          "node": 1,
+          "demand_kg": 40,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        },
+        {
+          "node": 2,
+          "demand_kg": 30,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        },
+        {
+          "node": 3,
+          "demand_kg": 20,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        }
+      ]
+    },
+    "records": [
+      {
+        "id": "MAN-OLD",
+        "slot": "load_B_kg",
+        "value": 30,
+        "text": "Warehouse loading control revision1 records booking B as30kg.",
+        "channel": "public",
+        "owner": "dispatcher",
+        "verified": true,
+        "authority": "confirmed",
+        "available_at": 0,
+        "effective_from": 0,
+        "effective_to": 200,
+        "scope": "RUN-P8",
+        "entity": "MANIFEST-P8",
+        "precision": "confirmed",
+        "supersedes": [],
+        "provenance": "Synthetic authenticated warehouse_loading_controller record WAREHOUSE-MAN-OLD-RUN-P8; dispatcher relays it without assigning a new physical value.",
+        "issuer_role": "warehouse_loading_controller",
+        "dispatcher_role": "read_only_relay",
+        "source_document": "WAREHOUSE-MAN-OLD-RUN-P8",
+        "assertion_kind": "certified_consignment_mass"
+      },
+      {
+        "id": "MAN-NEW",
+        "slot": "load_B_kg",
+        "value": 60,
+        "text": "Warehouse loading control revision2 records booking B as60kg; no precedence or authenticated supersession link is supplied.",
+        "channel": "public",
+        "owner": "dispatcher",
+        "verified": true,
+        "authority": "confirmed",
+        "available_at": 0,
+        "effective_from": 0,
+        "effective_to": 200,
+        "scope": "RUN-P8",
+        "entity": "MANIFEST-P8",
+        "precision": "confirmed",
+        "supersedes": [],
+        "provenance": "Synthetic authenticated warehouse_loading_controller record WAREHOUSE-MAN-NEW-RUN-P8; dispatcher relays it without assigning a new physical value.",
+        "issuer_role": "warehouse_loading_controller",
+        "dispatcher_role": "read_only_relay",
+        "source_document": "WAREHOUSE-MAN-NEW-RUN-P8",
+        "assertion_kind": "certified_consignment_mass"
+      },
+      {
+        "id": "MAN-RESOLVE",
+        "slot": "load_B_kg",
+        "value": 60,
+        "text": "Final authenticated warehouse release for booking B certifies60kg and explicitly supersedes MAN-OLD and MAN-NEW. The dispatcher relays this release.",
+        "channel": "user",
+        "owner": "dispatcher",
+        "verified": true,
+        "authority": "confirmed",
+        "available_at": 0,
+        "effective_from": 0,
+        "effective_to": 200,
+        "scope": "RUN-P8",
+        "entity": "MANIFEST-P8",
+        "precision": "confirmed",
+        "supersedes": [
+          "MAN-OLD",
+          "MAN-NEW"
+        ],
+        "provenance": "Synthetic authenticated final warehouse release WAREHOUSE-FINAL-B-RUN-P8, relayed read-only by the dispatcher.",
+        "issuer_role": "warehouse_loading_controller",
+        "dispatcher_role": "read_only_relay",
+        "source_document": "WAREHOUSE-FINAL-B-RUN-P8",
+        "assertion_kind": "certified_consignment_mass"
+      }
+    ],
+    "facts": [],
+    "source_classes": {
+      "distance_m": "deterministic derivation from archived Stage2 graph distances, rounded to metres",
+      "time_s": "synthetic constant-speed20km/h proxy, except explicitly patched directed arc",
+      "messages": "naturalistic synthetic; not real operator correspondence",
+      "loads_windows_fleet": "synthetic assumptions; clock bounds are completion deadlines",
+      "unknowns": "declared missing facts and unresolved source conflicts"
+    }
+  },
+  {
+    "id": "P8-05",
+    "interface": "operational-v1",
+    "title": "Expired permission and future unreleased replacement",
+    "instruction": "A requires a currently applicable signed receiving deadline. The old permission has expired; the replacement is not released. Dispatch cannot create receiver permission. Site A requires a positive signed acceptance for this exact booking, carrying its finish deadline. No default access is permitted; the public current deadline is only a provisional planning value. An early feasible route does not substitute for acceptance.",
+    "epoch": 100,
+    "effective_time": 100,
+    "public": {
+      "scope": "RUN-P8",
+      "entity": "MANIFEST-P8",
+      "clock": "seconds since 08:00 Europe/Rome on a synthetic service day",
+      "current_parameters": {
+        "close_A_s": 10800
+      },
+      "current_routes": [
+        {
+          "vehicle": 0,
+          "nodes": [
+            0,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "vehicle": 1,
+          "nodes": [
+            0,
+            3,
+            0
+          ]
+        }
+      ],
+      "bindings": {
+        "close_A_s": {
+          "path": [
+            "orders",
+            0,
+            "close_s"
+          ],
+          "owner": "receiver",
+          "unit": "seconds",
+          "permitted_issuer_roles": [
+            "receiver_receiving_manager"
+          ],
+          "required_assertion_kind": "booking_specific_signed_acceptance"
+        }
+      },
+      "required_slots": [
+        "close_A_s"
+      ],
+      "optional_slots": [
+        "driver_preference"
+      ],
+      "channels": {
+        "close_A_s": {
+          "user": "unavailable",
+          "tool": "unavailable"
+        }
+      },
+      "authority_policy": {
+        "dispatcher": "manifest loads, vehicle payload and planning service allowances; cannot override receiver windows or authenticate unknown records",
+        "receiver": "A requires a positive booking-specific signed acceptance from its receiving manager; ordinary opening hours or an early feasible route do not authorize access.",
+        "road_archive": "released road travel estimates only"
+      },
+      "snapshot_provenance": "all unbound routing inputs are explicitly synthetic dispatch/receiver assumptions, not observed Padua deliveries",
+      "site_mapping": {
+        "DEPOT": "depot",
+        "A": "ee71fa3e-82e5-46b9-9752-4a584a4c4255",
+        "B": "407d018c-7f6b-4ab1-976e-247e2df9faec",
+        "C": "0a26de47-78e8-4d8e-8050-26577765688f"
+      },
+      "receiver_permission": {
+        "required": true,
+        "kind": "booking_specific_signed_acceptance",
+        "issuer_role": "receiver_receiving_manager",
+        "site": "A",
+        "scope": "RUN-P8",
+        "default_access_allowed": false,
+        "public_current_deadline_is_permission": false,
+        "deadline_slot": "close_A_s"
+      }
+    },
+    "routing": {
+      "depot": 0,
+      "distance_m": [
+        [
+          0,
+          1861,
+          2186,
+          3689
+        ],
+        [
+          1915,
+          0,
+          1049,
+          4573
+        ],
+        [
+          1759,
+          878,
+          0,
+          5050
+        ],
+        [
+          3785,
+          4428,
+          5054,
+          0
+        ]
+      ],
+      "time_s": [
+        [
+          0,
+          335,
+          394,
+          665
+        ],
+        [
+          345,
+          0,
+          189,
+          824
+        ],
+        [
+          317,
+          158,
+          0,
+          909
+        ],
+        [
+          682,
+          797,
+          910,
+          0
+        ]
+      ],
+      "vehicle_capacities_kg": [
+        100,
+        80
+      ],
+      "shift_start_s": 0,
+      "shift_end_s": 14400,
+      "orders": [
+        {
+          "node": 1,
+          "demand_kg": 40,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        },
+        {
+          "node": 2,
+          "demand_kg": 30,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        },
+        {
+          "node": 3,
+          "demand_kg": 20,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        }
+      ]
+    },
+    "records": [
+      {
+        "id": "RCV-OLD",
+        "slot": "close_A_s",
+        "value": 10800,
+        "text": "The earlier receiver permission ended before this run.",
+        "channel": "public",
+        "owner": "receiver",
+        "verified": true,
+        "authority": "confirmed",
+        "available_at": 0,
+        "effective_from": 0,
+        "effective_to": 90,
+        "scope": "RUN-P8",
+        "entity": "MANIFEST-P8",
+        "precision": "confirmed",
+        "supersedes": [],
+        "provenance": "Synthetic booking-specific receiver acceptance SYNTHETIC-SIGNED-ACCEPTANCE-RCV-OLD",
+        "issuer_role": "receiver_receiving_manager",
+        "source_document": "SYNTHETIC-SIGNED-ACCEPTANCE-RCV-OLD",
+        "assertion_kind": "booking_specific_signed_acceptance"
+      },
+      {
+        "id": "RCV-FUTURE",
+        "slot": "close_A_s",
+        "value": 7200,
+        "text": "The new signed window must not be shown before release.",
+        "channel": "public",
+        "owner": "receiver",
+        "verified": true,
+        "authority": "confirmed",
+        "available_at": 110,
+        "effective_from": 0,
+        "effective_to": 200,
+        "scope": "RUN-P8",
+        "entity": "MANIFEST-P8",
+        "precision": "confirmed",
+        "supersedes": [],
+        "provenance": "Synthetic booking-specific receiver acceptance SYNTHETIC-SIGNED-ACCEPTANCE-RCV-FUTURE",
+        "issuer_role": "receiver_receiving_manager",
+        "source_document": "SYNTHETIC-SIGNED-ACCEPTANCE-RCV-FUTURE",
+        "assertion_kind": "booking_specific_signed_acceptance"
+      }
+    ],
+    "facts": [],
+    "source_classes": {
+      "distance_m": "deterministic derivation from archived Stage2 graph distances, rounded to metres",
+      "time_s": "synthetic constant-speed20km/h proxy, except explicitly patched directed arc",
+      "messages": "naturalistic synthetic; not real operator correspondence",
+      "loads_windows_fleet": "synthetic assumptions; clock bounds are completion deadlines",
+      "unknowns": "declared missing facts and unresolved source conflicts"
+    }
+  },
+  {
+    "id": "P8-06",
+    "interface": "operational-v1",
+    "title": "Approximate unloading estimate versus confirmed allowance",
+    "instruction": "The estimate is approximate. Obtain a definite planning allowance before using it as a hard service duration. Do not silently round an estimate into a commitment.",
+    "epoch": 100,
+    "effective_time": 100,
+    "public": {
+      "scope": "RUN-P8",
+      "entity": "MANIFEST-P8",
+      "clock": "seconds since 08:00 Europe/Rome on a synthetic service day",
+      "current_parameters": {
+        "service_A_s": 300
+      },
+      "current_routes": [
+        {
+          "vehicle": 0,
+          "nodes": [
+            0,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "vehicle": 1,
+          "nodes": [
+            0,
+            3,
+            0
+          ]
+        }
+      ],
+      "bindings": {
+        "service_A_s": {
+          "path": [
+            "orders",
+            0,
+            "service_s"
+          ],
+          "owner": "dispatcher",
+          "unit": "seconds"
+        }
+      },
+      "required_slots": [
+        "service_A_s"
+      ],
+      "optional_slots": [
+        "driver_preference"
+      ],
+      "channels": {
+        "service_A_s": {
+          "user": "unknown",
+          "tool": "unavailable"
+        }
+      },
+      "authority_policy": {
+        "dispatcher": "manifest loads, vehicle payload and planning service allowances; cannot override receiver windows or authenticate unknown records",
+        "receiver": "signed receiving restrictions only",
+        "road_archive": "released road travel estimates only"
+      },
+      "snapshot_provenance": "all unbound routing inputs are explicitly synthetic dispatch/receiver assumptions, not observed Padua deliveries",
+      "site_mapping": {
+        "DEPOT": "depot",
+        "A": "ee71fa3e-82e5-46b9-9752-4a584a4c4255",
+        "B": "407d018c-7f6b-4ab1-976e-247e2df9faec",
+        "C": "0a26de47-78e8-4d8e-8050-26577765688f"
+      }
+    },
+    "routing": {
+      "depot": 0,
+      "distance_m": [
+        [
+          0,
+          1861,
+          2186,
+          3689
+        ],
+        [
+          1915,
+          0,
+          1049,
+          4573
+        ],
+        [
+          1759,
+          878,
+          0,
+          5050
+        ],
+        [
+          3785,
+          4428,
+          5054,
+          0
+        ]
+      ],
+      "time_s": [
+        [
+          0,
+          335,
+          394,
+          665
+        ],
+        [
+          345,
+          0,
+          189,
+          824
+        ],
+        [
+          317,
+          158,
+          0,
+          909
+        ],
+        [
+          682,
+          797,
+          910,
+          0
+        ]
+      ],
+      "vehicle_capacities_kg": [
+        100,
+        80
+      ],
+      "shift_start_s": 0,
+      "shift_end_s": 14400,
+      "orders": [
+        {
+          "node": 1,
+          "demand_kg": 40,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        },
+        {
+          "node": 2,
+          "demand_kg": 30,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        },
+        {
+          "node": 3,
+          "demand_kg": 20,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        }
+      ]
+    },
+    "records": [
+      {
+        "id": "EST-A",
+        "slot": "service_A_s",
+        "value": 900,
+        "text": "Unloading A should take about fifteen minutes.",
+        "channel": "public",
+        "owner": "dispatcher",
+        "verified": true,
+        "authority": "confirmed",
+        "available_at": 0,
+        "effective_from": 0,
+        "effective_to": 200,
+        "scope": "RUN-P8",
+        "entity": "MANIFEST-P8",
+        "precision": "approximate",
+        "supersedes": [],
+        "provenance": "naturalistic synthetic document EST-A"
+      },
+      {
+        "id": "PLAN-A",
+        "slot": "service_A_s",
+        "value": 1080,
+        "text": "Use eighteen minutes as the booked planning allowance for A.",
+        "channel": "user",
+        "owner": "dispatcher",
+        "verified": true,
+        "authority": "confirmed",
+        "available_at": 0,
+        "effective_from": 0,
+        "effective_to": 200,
+        "scope": "RUN-P8",
+        "entity": "MANIFEST-P8",
+        "precision": "confirmed",
+        "supersedes": [],
+        "provenance": "naturalistic synthetic document PLAN-A"
+      }
+    ],
+    "facts": [],
+    "source_classes": {
+      "distance_m": "deterministic derivation from archived Stage2 graph distances, rounded to metres",
+      "time_s": "synthetic constant-speed20km/h proxy, except explicitly patched directed arc",
+      "messages": "naturalistic synthetic; not real operator correspondence",
+      "loads_windows_fleet": "synthetic assumptions; clock bounds are completion deadlines",
+      "unknowns": "declared missing facts and unresolved source conflicts"
+    }
+  },
+  {
+    "id": "P8-07",
+    "interface": "operational-v1",
+    "title": "Missing indispensable receiver window",
+    "instruction": "A has no signed receiving deadline for this booking. The simulated dispatcher cannot provide receiver permission. Do not infer an impossible route from missing permission. Site A requires a positive signed acceptance for this exact booking, carrying its finish deadline. No default access is permitted; the public current deadline is only a provisional planning value. An early feasible route does not substitute for acceptance.",
+    "epoch": 100,
+    "effective_time": 100,
+    "public": {
+      "scope": "RUN-P8",
+      "entity": "MANIFEST-P8",
+      "clock": "seconds since 08:00 Europe/Rome on a synthetic service day",
+      "current_parameters": {
+        "close_A_s": 10800
+      },
+      "current_routes": [
+        {
+          "vehicle": 0,
+          "nodes": [
+            0,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "vehicle": 1,
+          "nodes": [
+            0,
+            3,
+            0
+          ]
+        }
+      ],
+      "bindings": {
+        "close_A_s": {
+          "path": [
+            "orders",
+            0,
+            "close_s"
+          ],
+          "owner": "receiver",
+          "unit": "seconds",
+          "permitted_issuer_roles": [
+            "receiver_receiving_manager"
+          ],
+          "required_assertion_kind": "booking_specific_signed_acceptance"
+        }
+      },
+      "required_slots": [
+        "close_A_s"
+      ],
+      "optional_slots": [
+        "driver_preference"
+      ],
+      "channels": {
+        "close_A_s": {
+          "user": "unavailable",
+          "tool": "unavailable"
+        }
+      },
+      "authority_policy": {
+        "dispatcher": "manifest loads, vehicle payload and planning service allowances; cannot override receiver windows or authenticate unknown records",
+        "receiver": "A requires a positive booking-specific signed acceptance from its receiving manager; ordinary opening hours or an early feasible route do not authorize access.",
+        "road_archive": "released road travel estimates only"
+      },
+      "snapshot_provenance": "all unbound routing inputs are explicitly synthetic dispatch/receiver assumptions, not observed Padua deliveries",
+      "site_mapping": {
+        "DEPOT": "depot",
+        "A": "ee71fa3e-82e5-46b9-9752-4a584a4c4255",
+        "B": "407d018c-7f6b-4ab1-976e-247e2df9faec",
+        "C": "0a26de47-78e8-4d8e-8050-26577765688f"
+      },
+      "receiver_permission": {
+        "required": true,
+        "kind": "booking_specific_signed_acceptance",
+        "issuer_role": "receiver_receiving_manager",
+        "site": "A",
+        "scope": "RUN-P8",
+        "default_access_allowed": false,
+        "public_current_deadline_is_permission": false,
+        "deadline_slot": "close_A_s"
+      }
+    },
+    "routing": {
+      "depot": 0,
+      "distance_m": [
+        [
+          0,
+          1861,
+          2186,
+          3689
+        ],
+        [
+          1915,
+          0,
+          1049,
+          4573
+        ],
+        [
+          1759,
+          878,
+          0,
+          5050
+        ],
+        [
+          3785,
+          4428,
+          5054,
+          0
+        ]
+      ],
+      "time_s": [
+        [
+          0,
+          335,
+          394,
+          665
+        ],
+        [
+          345,
+          0,
+          189,
+          824
+        ],
+        [
+          317,
+          158,
+          0,
+          909
+        ],
+        [
+          682,
+          797,
+          910,
+          0
+        ]
+      ],
+      "vehicle_capacities_kg": [
+        100,
+        80
+      ],
+      "shift_start_s": 0,
+      "shift_end_s": 14400,
+      "orders": [
+        {
+          "node": 1,
+          "demand_kg": 40,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        },
+        {
+          "node": 2,
+          "demand_kg": 30,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        },
+        {
+          "node": 3,
+          "demand_kg": 20,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        }
+      ]
+    },
+    "records": [],
+    "facts": [],
+    "source_classes": {
+      "distance_m": "deterministic derivation from archived Stage2 graph distances, rounded to metres",
+      "time_s": "synthetic constant-speed20km/h proxy, except explicitly patched directed arc",
+      "messages": "naturalistic synthetic; not real operator correspondence",
+      "loads_windows_fleet": "synthetic assumptions; clock bounds are completion deadlines",
+      "unknowns": "declared missing facts and unresolved source conflicts"
+    }
+  },
+  {
+    "id": "P8-08",
+    "interface": "operational-v1",
+    "title": "Proven aggregate payload infeasibility",
+    "instruction": "A 40kg, B 140kg and C 20kg are all mandatory, with vehicle payloads 100kg and 80kg. No split delivery, replenishment or extra vehicles are allowed. Distinguish proven capacity infeasibility from missing data.",
+    "epoch": 100,
+    "effective_time": 100,
+    "public": {
+      "scope": "RUN-P8",
+      "entity": "MANIFEST-P8",
+      "clock": "seconds since 08:00 Europe/Rome on a synthetic service day",
+      "current_parameters": {
+        "load_B_kg": 30
+      },
+      "current_routes": [
+        {
+          "vehicle": 0,
+          "nodes": [
+            0,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "vehicle": 1,
+          "nodes": [
+            0,
+            3,
+            0
+          ]
+        }
+      ],
+      "bindings": {
+        "load_B_kg": {
+          "path": [
+            "orders",
+            1,
+            "demand_kg"
+          ],
+          "owner": "dispatcher",
+          "unit": "kg"
+        }
+      },
+      "required_slots": [
+        "load_B_kg"
+      ],
+      "optional_slots": [
+        "driver_preference"
+      ],
+      "channels": {
+        "load_B_kg": {
+          "user": "unknown",
+          "tool": "unavailable"
+        }
+      },
+      "authority_policy": {
+        "dispatcher": "manifest loads, vehicle payload and planning service allowances; cannot override receiver windows or authenticate unknown records",
+        "receiver": "signed receiving restrictions only",
+        "road_archive": "released road travel estimates only"
+      },
+      "snapshot_provenance": "all unbound routing inputs are explicitly synthetic dispatch/receiver assumptions, not observed Padua deliveries",
+      "site_mapping": {
+        "DEPOT": "depot",
+        "A": "ee71fa3e-82e5-46b9-9752-4a584a4c4255",
+        "B": "407d018c-7f6b-4ab1-976e-247e2df9faec",
+        "C": "0a26de47-78e8-4d8e-8050-26577765688f"
+      }
+    },
+    "routing": {
+      "depot": 0,
+      "distance_m": [
+        [
+          0,
+          1861,
+          2186,
+          3689
+        ],
+        [
+          1915,
+          0,
+          1049,
+          4573
+        ],
+        [
+          1759,
+          878,
+          0,
+          5050
+        ],
+        [
+          3785,
+          4428,
+          5054,
+          0
+        ]
+      ],
+      "time_s": [
+        [
+          0,
+          335,
+          394,
+          665
+        ],
+        [
+          345,
+          0,
+          189,
+          824
+        ],
+        [
+          317,
+          158,
+          0,
+          909
+        ],
+        [
+          682,
+          797,
+          910,
+          0
+        ]
+      ],
+      "vehicle_capacities_kg": [
+        100,
+        80
+      ],
+      "shift_start_s": 0,
+      "shift_end_s": 14400,
+      "orders": [
+        {
+          "node": 1,
+          "demand_kg": 40,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        },
+        {
+          "node": 2,
+          "demand_kg": 30,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        },
+        {
+          "node": 3,
+          "demand_kg": 20,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        }
+      ]
+    },
+    "records": [
+      {
+        "id": "LOAD-B",
+        "slot": "load_B_kg",
+        "value": 140,
+        "text": "B must receive the whole 140kg consignment on this run.",
+        "channel": "public",
+        "owner": "dispatcher",
+        "verified": true,
+        "authority": "confirmed",
+        "available_at": 0,
+        "effective_from": 0,
+        "effective_to": 200,
+        "scope": "RUN-P8",
+        "entity": "MANIFEST-P8",
+        "precision": "confirmed",
+        "supersedes": [],
+        "provenance": "naturalistic synthetic document LOAD-B"
+      }
+    ],
+    "facts": [],
+    "source_classes": {
+      "distance_m": "deterministic derivation from archived Stage2 graph distances, rounded to metres",
+      "time_s": "synthetic constant-speed20km/h proxy, except explicitly patched directed arc",
+      "messages": "naturalistic synthetic; not real operator correspondence",
+      "loads_windows_fleet": "synthetic assumptions; clock bounds are completion deadlines",
+      "unknowns": "declared missing facts and unresolved source conflicts"
+    }
+  },
+  {
+    "id": "P8-09",
+    "interface": "operational-v1",
+    "title": "Proven receiving-window infeasibility",
+    "instruction": "A requires ten minutes of service in addition to travel; all vehicles depart at 08:00. Decide whether any permitted plan can meet the signed deadline.",
+    "epoch": 100,
+    "effective_time": 100,
+    "public": {
+      "scope": "RUN-P8",
+      "entity": "MANIFEST-P8",
+      "clock": "seconds since 08:00 Europe/Rome on a synthetic service day",
+      "current_parameters": {
+        "close_A_s": 10800
+      },
+      "current_routes": [
+        {
+          "vehicle": 0,
+          "nodes": [
+            0,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "vehicle": 1,
+          "nodes": [
+            0,
+            3,
+            0
+          ]
+        }
+      ],
+      "bindings": {
+        "close_A_s": {
+          "path": [
+            "orders",
+            0,
+            "close_s"
+          ],
+          "owner": "receiver",
+          "unit": "seconds"
+        }
+      },
+      "required_slots": [
+        "close_A_s"
+      ],
+      "optional_slots": [
+        "driver_preference"
+      ],
+      "channels": {
+        "close_A_s": {
+          "user": "unavailable",
+          "tool": "unavailable"
+        }
+      },
+      "authority_policy": {
+        "dispatcher": "manifest loads, vehicle payload and planning service allowances; cannot override receiver windows or authenticate unknown records",
+        "receiver": "signed receiving restrictions only",
+        "road_archive": "released road travel estimates only"
+      },
+      "snapshot_provenance": "all unbound routing inputs are explicitly synthetic dispatch/receiver assumptions, not observed Padua deliveries",
+      "site_mapping": {
+        "DEPOT": "depot",
+        "A": "ee71fa3e-82e5-46b9-9752-4a584a4c4255",
+        "B": "407d018c-7f6b-4ab1-976e-247e2df9faec",
+        "C": "0a26de47-78e8-4d8e-8050-26577765688f"
+      }
+    },
+    "routing": {
+      "depot": 0,
+      "distance_m": [
+        [
+          0,
+          1861,
+          2186,
+          3689
+        ],
+        [
+          1915,
+          0,
+          1049,
+          4573
+        ],
+        [
+          1759,
+          878,
+          0,
+          5050
+        ],
+        [
+          3785,
+          4428,
+          5054,
+          0
+        ]
+      ],
+      "time_s": [
+        [
+          0,
+          335,
+          394,
+          665
+        ],
+        [
+          345,
+          0,
+          189,
+          824
+        ],
+        [
+          317,
+          158,
+          0,
+          909
+        ],
+        [
+          682,
+          797,
+          910,
+          0
+        ]
+      ],
+      "vehicle_capacities_kg": [
+        100,
+        80
+      ],
+      "shift_start_s": 0,
+      "shift_end_s": 14400,
+      "orders": [
+        {
+          "node": 1,
+          "demand_kg": 40,
+          "service_s": 600,
+          "open_s": 0,
+          "close_s": 10800
+        },
+        {
+          "node": 2,
+          "demand_kg": 30,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        },
+        {
+          "node": 3,
+          "demand_kg": 20,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        }
+      ]
+    },
+    "records": [
+      {
+        "id": "RCV-TIGHT",
+        "slot": "close_A_s",
+        "value": 600,
+        "text": "A must be fully unloaded by 08:10. This signed receiver deadline applies to the booked run.",
+        "channel": "public",
+        "owner": "receiver",
+        "verified": true,
+        "authority": "confirmed",
+        "available_at": 0,
+        "effective_from": 0,
+        "effective_to": 200,
+        "scope": "RUN-P8",
+        "entity": "MANIFEST-P8",
+        "precision": "confirmed",
+        "supersedes": [],
+        "provenance": "naturalistic synthetic document RCV-TIGHT"
+      }
+    ],
+    "facts": [],
+    "source_classes": {
+      "distance_m": "deterministic derivation from archived Stage2 graph distances, rounded to metres",
+      "time_s": "synthetic constant-speed20km/h proxy, except explicitly patched directed arc",
+      "messages": "naturalistic synthetic; not real operator correspondence",
+      "loads_windows_fleet": "synthetic assumptions; clock bounds are completion deadlines",
+      "unknowns": "declared missing facts and unresolved source conflicts"
+    }
+  },
+  {
+    "id": "P8-10",
+    "interface": "operational-v1",
+    "title": "Optional driver preference is not a planning blocker",
+    "instruction": "The driver has not stated a preferred visiting order. This preference is optional: the mandatory windows, payloads and allowance are all known. Produce a feasible plan without treating preference as indispensable.",
+    "epoch": 100,
+    "effective_time": 100,
+    "public": {
+      "scope": "RUN-P8",
+      "entity": "MANIFEST-P8",
+      "clock": "seconds since 08:00 Europe/Rome on a synthetic service day",
+      "current_parameters": {
+        "service_A_s": 300
+      },
+      "current_routes": [
+        {
+          "vehicle": 0,
+          "nodes": [
+            0,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "vehicle": 1,
+          "nodes": [
+            0,
+            3,
+            0
+          ]
+        }
+      ],
+      "bindings": {
+        "service_A_s": {
+          "path": [
+            "orders",
+            0,
+            "service_s"
+          ],
+          "owner": "dispatcher",
+          "unit": "seconds"
+        }
+      },
+      "required_slots": [
+        "service_A_s"
+      ],
+      "optional_slots": [
+        "driver_preference"
+      ],
+      "channels": {
+        "service_A_s": {
+          "user": "unknown",
+          "tool": "unavailable"
+        }
+      },
+      "authority_policy": {
+        "dispatcher": "manifest loads, vehicle payload and planning service allowances; cannot override receiver windows or authenticate unknown records",
+        "receiver": "signed receiving restrictions only",
+        "road_archive": "released road travel estimates only"
+      },
+      "snapshot_provenance": "all unbound routing inputs are explicitly synthetic dispatch/receiver assumptions, not observed Padua deliveries",
+      "site_mapping": {
+        "DEPOT": "depot",
+        "A": "ee71fa3e-82e5-46b9-9752-4a584a4c4255",
+        "B": "407d018c-7f6b-4ab1-976e-247e2df9faec",
+        "C": "0a26de47-78e8-4d8e-8050-26577765688f"
+      }
+    },
+    "routing": {
+      "depot": 0,
+      "distance_m": [
+        [
+          0,
+          1861,
+          2186,
+          3689
+        ],
+        [
+          1915,
+          0,
+          1049,
+          4573
+        ],
+        [
+          1759,
+          878,
+          0,
+          5050
+        ],
+        [
+          3785,
+          4428,
+          5054,
+          0
+        ]
+      ],
+      "time_s": [
+        [
+          0,
+          335,
+          394,
+          665
+        ],
+        [
+          345,
+          0,
+          189,
+          824
+        ],
+        [
+          317,
+          158,
+          0,
+          909
+        ],
+        [
+          682,
+          797,
+          910,
+          0
+        ]
+      ],
+      "vehicle_capacities_kg": [
+        100,
+        80
+      ],
+      "shift_start_s": 0,
+      "shift_end_s": 14400,
+      "orders": [
+        {
+          "node": 1,
+          "demand_kg": 40,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        },
+        {
+          "node": 2,
+          "demand_kg": 30,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        },
+        {
+          "node": 3,
+          "demand_kg": 20,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        }
+      ]
+    },
+    "records": [
+      {
+        "id": "KEEP-A",
+        "slot": "service_A_s",
+        "value": 300,
+        "text": "Keep the confirmed five-minute service allowance at A.",
+        "channel": "public",
+        "owner": "dispatcher",
+        "verified": true,
+        "authority": "confirmed",
+        "available_at": 0,
+        "effective_from": 0,
+        "effective_to": 200,
+        "scope": "RUN-P8",
+        "entity": "MANIFEST-P8",
+        "precision": "confirmed",
+        "supersedes": [],
+        "provenance": "naturalistic synthetic document KEEP-A"
+      }
+    ],
+    "facts": [],
+    "source_classes": {
+      "distance_m": "deterministic derivation from archived Stage2 graph distances, rounded to metres",
+      "time_s": "synthetic constant-speed20km/h proxy, except explicitly patched directed arc",
+      "messages": "naturalistic synthetic; not real operator correspondence",
+      "loads_windows_fleet": "synthetic assumptions; clock bounds are completion deadlines",
+      "unknowns": "declared missing facts and unresolved source conflicts"
+    }
+  },
+  {
+    "id": "P8-11",
+    "interface": "operational-v1",
+    "title": "Tool-only directed delay invalidates the old optimal tour",
+    "instruction": "B must be finished by08:45. A released road-archive estimate revises the A-to-B leg; dispatch cannot supply this tool-only fact. Choose a feasible delivery order using the updated directed matrix. The detour is a synthetic stress assumption, not measured traffic.",
+    "epoch": 100,
+    "effective_time": 100,
+    "public": {
+      "scope": "RUN-P8",
+      "entity": "MANIFEST-P8",
+      "clock": "seconds since 08:00 Europe/Rome on a synthetic service day",
+      "current_parameters": {
+        "travel_A_B_s": 189
+      },
+      "current_routes": [
+        {
+          "vehicle": 0,
+          "nodes": [
+            0,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "vehicle": 1,
+          "nodes": [
+            0,
+            3,
+            0
+          ]
+        }
+      ],
+      "bindings": {
+        "travel_A_B_s": {
+          "path": [
+            "time_s",
+            1,
+            2
+          ],
+          "owner": "road_archive",
+          "unit": "seconds"
+        }
+      },
+      "required_slots": [
+        "travel_A_B_s"
+      ],
+      "optional_slots": [
+        "driver_preference"
+      ],
+      "channels": {
+        "travel_A_B_s": {
+          "user": "unavailable",
+          "tool": "unknown"
+        }
+      },
+      "authority_policy": {
+        "dispatcher": "manifest loads, vehicle payload and planning service allowances; cannot override receiver windows or authenticate unknown records",
+        "receiver": "signed receiving restrictions only",
+        "road_archive": "released road travel estimates only"
+      },
+      "snapshot_provenance": "all unbound routing inputs are explicitly synthetic dispatch/receiver assumptions, not observed Padua deliveries",
+      "site_mapping": {
+        "DEPOT": "depot",
+        "A": "ee71fa3e-82e5-46b9-9752-4a584a4c4255",
+        "B": "407d018c-7f6b-4ab1-976e-247e2df9faec",
+        "C": "0a26de47-78e8-4d8e-8050-26577765688f"
+      }
+    },
+    "routing": {
+      "depot": 0,
+      "distance_m": [
+        [
+          0,
+          1861,
+          2186,
+          3689
+        ],
+        [
+          1915,
+          0,
+          1049,
+          4573
+        ],
+        [
+          1759,
+          878,
+          0,
+          5050
+        ],
+        [
+          3785,
+          4428,
+          5054,
+          0
+        ]
+      ],
+      "time_s": [
+        [
+          0,
+          335,
+          394,
+          665
+        ],
+        [
+          345,
+          0,
+          189,
+          824
+        ],
+        [
+          317,
+          158,
+          0,
+          909
+        ],
+        [
+          682,
+          797,
+          910,
+          0
+        ]
+      ],
+      "vehicle_capacities_kg": [
+        100,
+        80
+      ],
+      "shift_start_s": 0,
+      "shift_end_s": 14400,
+      "orders": [
+        {
+          "node": 1,
+          "demand_kg": 40,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        },
+        {
+          "node": 2,
+          "demand_kg": 30,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 2700
+        },
+        {
+          "node": 3,
+          "demand_kg": 20,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        }
+      ]
+    },
+    "records": [
+      {
+        "id": "ROAD-01",
+        "slot": "travel_A_B_s",
+        "value": 1800,
+        "text": "The released planning estimate for the directed A-to-B leg is thirty minutes. Other directed legs retain the snapshot values.",
+        "channel": "tool",
+        "owner": "road_archive",
+        "verified": true,
+        "authority": "confirmed",
+        "available_at": 0,
+        "effective_from": 0,
+        "effective_to": 200,
+        "scope": "RUN-P8",
+        "entity": "MANIFEST-P8",
+        "precision": "confirmed",
+        "supersedes": [],
+        "provenance": "naturalistic synthetic document ROAD-01"
+      }
+    ],
+    "facts": [],
+    "source_classes": {
+      "distance_m": "deterministic derivation from archived Stage2 graph distances, rounded to metres",
+      "time_s": "synthetic constant-speed20km/h proxy, except explicitly patched directed arc",
+      "messages": "naturalistic synthetic; not real operator correspondence",
+      "loads_windows_fleet": "synthetic assumptions; clock bounds are completion deadlines",
+      "unknowns": "declared missing facts and unresolved source conflicts"
+    }
+  },
+  {
+    "id": "P8-12",
+    "interface": "operational-v1",
+    "title": "Ambiguous manifest plus payload confirmation",
+    "instruction": "Confirm booking B mass from authenticated warehouse loading control and van1 available payload from fleet control. The dispatcher can relay both records but cannot assign these physical values. Then allocate all three deliveries.",
+    "epoch": 100,
+    "effective_time": 100,
+    "public": {
+      "scope": "RUN-P8",
+      "entity": "MANIFEST-P8",
+      "clock": "seconds since 08:00 Europe/Rome on a synthetic service day",
+      "current_parameters": {
+        "load_B_kg": 30,
+        "payload_1_kg": 100
+      },
+      "current_routes": [
+        {
+          "vehicle": 0,
+          "nodes": [
+            0,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "vehicle": 1,
+          "nodes": [
+            0,
+            3,
+            0
+          ]
+        }
+      ],
+      "bindings": {
+        "load_B_kg": {
+          "path": [
+            "orders",
+            1,
+            "demand_kg"
+          ],
+          "owner": "dispatcher",
+          "unit": "kg",
+          "permitted_issuer_roles": [
+            "warehouse_loading_controller"
+          ],
+          "required_assertion_kind": "certified_consignment_mass"
+        },
+        "payload_1_kg": {
+          "path": [
+            "vehicle_capacities_kg",
+            0
+          ],
+          "owner": "dispatcher",
+          "unit": "kg",
+          "permitted_issuer_roles": [
+            "fleet_controller"
+          ],
+          "required_assertion_kind": "certified_available_payload"
+        }
+      },
+      "required_slots": [
+        "load_B_kg",
+        "payload_1_kg"
+      ],
+      "optional_slots": [
+        "driver_preference"
+      ],
+      "channels": {
+        "load_B_kg": {
+          "user": "unknown",
+          "tool": "unavailable"
+        },
+        "payload_1_kg": {
+          "user": "unknown",
+          "tool": "unavailable"
+        }
+      },
+      "authority_policy": {
+        "dispatcher": "Read-only relay of authenticated booking mass from warehouse loading control and available payload from fleet control; may set planning service allowances, not physical masses/payload ratings or receiver permissions.",
+        "receiver": "signed receiving restrictions only",
+        "road_archive": "released road travel estimates only"
+      },
+      "snapshot_provenance": "all unbound routing inputs are explicitly synthetic dispatch/receiver assumptions, not observed Padua deliveries",
+      "site_mapping": {
+        "DEPOT": "depot",
+        "A": "ee71fa3e-82e5-46b9-9752-4a584a4c4255",
+        "B": "407d018c-7f6b-4ab1-976e-247e2df9faec",
+        "C": "0a26de47-78e8-4d8e-8050-26577765688f"
+      }
+    },
+    "routing": {
+      "depot": 0,
+      "distance_m": [
+        [
+          0,
+          1861,
+          2186,
+          3689
+        ],
+        [
+          1915,
+          0,
+          1049,
+          4573
+        ],
+        [
+          1759,
+          878,
+          0,
+          5050
+        ],
+        [
+          3785,
+          4428,
+          5054,
+          0
+        ]
+      ],
+      "time_s": [
+        [
+          0,
+          335,
+          394,
+          665
+        ],
+        [
+          345,
+          0,
+          189,
+          824
+        ],
+        [
+          317,
+          158,
+          0,
+          909
+        ],
+        [
+          682,
+          797,
+          910,
+          0
+        ]
+      ],
+      "vehicle_capacities_kg": [
+        100,
+        80
+      ],
+      "shift_start_s": 0,
+      "shift_end_s": 14400,
+      "orders": [
+        {
+          "node": 1,
+          "demand_kg": 40,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        },
+        {
+          "node": 2,
+          "demand_kg": 30,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        },
+        {
+          "node": 3,
+          "demand_kg": 20,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        }
+      ]
+    },
+    "records": [
+      {
+        "id": "AMBIG-B",
+        "slot": "load_B_kg",
+        "value": null,
+        "text": "The packing note says two units for B; unit mass and consignment weight are not specified.",
+        "channel": "public",
+        "owner": "dispatcher",
+        "verified": true,
+        "authority": "confirmed",
+        "available_at": 0,
+        "effective_from": 0,
+        "effective_to": 200,
+        "scope": "RUN-P8",
+        "entity": "MANIFEST-P8",
+        "precision": "ambiguous",
+        "supersedes": [],
+        "provenance": "Synthetic authenticated packing note; the clerk cannot certify consignment mass.",
+        "issuer_role": "warehouse_packing_clerk",
+        "dispatcher_role": "read_only_relay",
+        "source_document": "PACKING-NOTE-B-RUN-P8",
+        "assertion_kind": "packing_note_quantity_only"
+      },
+      {
+        "id": "MASS-B",
+        "slot": "load_B_kg",
+        "value": 70,
+        "text": "Warehouse loading control certifies the total consignment mass of the two booked B units as70kg for RUN-P8.",
+        "channel": "user",
+        "owner": "dispatcher",
+        "verified": true,
+        "authority": "confirmed",
+        "available_at": 0,
+        "effective_from": 0,
+        "effective_to": 200,
+        "scope": "RUN-P8",
+        "entity": "MANIFEST-P8",
+        "precision": "confirmed",
+        "supersedes": [],
+        "provenance": "Synthetic authenticated warehouse_loading_controller record WAREHOUSE-MASS-B-RUN-P8; dispatcher relays it without assigning a new physical value.",
+        "issuer_role": "warehouse_loading_controller",
+        "dispatcher_role": "read_only_relay",
+        "source_document": "WAREHOUSE-MASS-B-RUN-P8",
+        "assertion_kind": "certified_consignment_mass"
+      },
+      {
+        "id": "VAN-1",
+        "slot": "payload_1_kg",
+        "value": 75,
+        "text": "Fleet control certifies van1 available payload for RUN-P8 as75kg after carried equipment. This is an available payload record, not a dispatch-selected allowance.",
+        "channel": "user",
+        "owner": "dispatcher",
+        "verified": true,
+        "authority": "confirmed",
+        "available_at": 0,
+        "effective_from": 0,
+        "effective_to": 200,
+        "scope": "RUN-P8",
+        "entity": "MANIFEST-P8",
+        "precision": "confirmed",
+        "supersedes": [],
+        "provenance": "Synthetic authenticated fleet_controller record FLEET-VAN1-RUN-P8; dispatcher relays it without assigning a new physical value.",
+        "issuer_role": "fleet_controller",
+        "dispatcher_role": "read_only_relay",
+        "source_document": "FLEET-VAN1-RUN-P8",
+        "assertion_kind": "certified_available_payload"
+      }
+    ],
+    "facts": [],
+    "source_classes": {
+      "distance_m": "deterministic derivation from archived Stage2 graph distances, rounded to metres",
+      "time_s": "synthetic constant-speed20km/h proxy, except explicitly patched directed arc",
+      "messages": "naturalistic synthetic; not real operator correspondence",
+      "loads_windows_fleet": "synthetic assumptions; clock bounds are completion deadlines",
+      "unknowns": "declared missing facts and unresolved source conflicts"
+    }
+  },
+  {
+    "id": "P8-13",
+    "interface": "operational-v1",
+    "title": "Conflicting signed receiver deadlines",
+    "instruction": "Two authenticated receiver sheets are competing replacements for the same booking deadline:08:10 or08:45. Neither has authenticated precedence. They are alternative active worlds, not simultaneously intersected bounds. The dispatcher cannot authenticate a supersession or override either sheet.",
+    "epoch": 100,
+    "effective_time": 100,
+    "public": {
+      "scope": "RUN-P8",
+      "entity": "MANIFEST-P8",
+      "clock": "seconds since 08:00 Europe/Rome on a synthetic service day",
+      "current_parameters": {
+        "close_A_s": 10800
+      },
+      "current_routes": [
+        {
+          "vehicle": 0,
+          "nodes": [
+            0,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "vehicle": 1,
+          "nodes": [
+            0,
+            3,
+            0
+          ]
+        }
+      ],
+      "bindings": {
+        "close_A_s": {
+          "path": [
+            "orders",
+            0,
+            "close_s"
+          ],
+          "owner": "receiver",
+          "unit": "seconds"
+        }
+      },
+      "required_slots": [
+        "close_A_s"
+      ],
+      "optional_slots": [
+        "driver_preference"
+      ],
+      "channels": {
+        "close_A_s": {
+          "user": "unavailable",
+          "tool": "unavailable"
+        }
+      },
+      "authority_policy": {
+        "dispatcher": "manifest loads, vehicle payload and planning service allowances; cannot override receiver windows or authenticate unknown records",
+        "receiver": "signed receiving restrictions only",
+        "road_archive": "released road travel estimates only"
+      },
+      "snapshot_provenance": "all unbound routing inputs are explicitly synthetic dispatch/receiver assumptions, not observed Padua deliveries",
+      "site_mapping": {
+        "DEPOT": "depot",
+        "A": "ee71fa3e-82e5-46b9-9752-4a584a4c4255",
+        "B": "407d018c-7f6b-4ab1-976e-247e2df9faec",
+        "C": "0a26de47-78e8-4d8e-8050-26577765688f"
+      }
+    },
+    "routing": {
+      "depot": 0,
+      "distance_m": [
+        [
+          0,
+          1861,
+          2186,
+          3689
+        ],
+        [
+          1915,
+          0,
+          1049,
+          4573
+        ],
+        [
+          1759,
+          878,
+          0,
+          5050
+        ],
+        [
+          3785,
+          4428,
+          5054,
+          0
+        ]
+      ],
+      "time_s": [
+        [
+          0,
+          335,
+          394,
+          665
+        ],
+        [
+          345,
+          0,
+          189,
+          824
+        ],
+        [
+          317,
+          158,
+          0,
+          909
+        ],
+        [
+          682,
+          797,
+          910,
+          0
+        ]
+      ],
+      "vehicle_capacities_kg": [
+        100,
+        80
+      ],
+      "shift_start_s": 0,
+      "shift_end_s": 14400,
+      "orders": [
+        {
+          "node": 1,
+          "demand_kg": 40,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        },
+        {
+          "node": 2,
+          "demand_kg": 30,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        },
+        {
+          "node": 3,
+          "demand_kg": 20,
+          "service_s": 300,
+          "open_s": 0,
+          "close_s": 10800
+        }
+      ]
+    },
+    "records": [
+      {
+        "id": "RCV-X",
+        "slot": "close_A_s",
+        "value": 600,
+        "text": "The signed booking sheet requires departure from A by08:10.",
+        "channel": "public",
+        "owner": "receiver",
+        "verified": true,
+        "authority": "confirmed",
+        "available_at": 0,
+        "effective_from": 0,
+        "effective_to": 200,
+        "scope": "RUN-P8",
+        "entity": "MANIFEST-P8",
+        "precision": "confirmed",
+        "supersedes": [],
+        "provenance": "naturalistic synthetic document RCV-X"
+      },
+      {
+        "id": "RCV-Y",
+        "slot": "close_A_s",
+        "value": 2700,
+        "text": "A signed replacement sheet says 08:45 but contains no authenticated supersession link.",
+        "channel": "public",
+        "owner": "receiver",
+        "verified": true,
+        "authority": "confirmed",
+        "available_at": 0,
+        "effective_from": 0,
+        "effective_to": 200,
+        "scope": "RUN-P8",
+        "entity": "MANIFEST-P8",
+        "precision": "confirmed",
+        "supersedes": [],
+        "provenance": "naturalistic synthetic document RCV-Y"
+      }
+    ],
+    "facts": [],
+    "source_classes": {
+      "distance_m": "deterministic derivation from archived Stage2 graph distances, rounded to metres",
+      "time_s": "synthetic constant-speed20km/h proxy, except explicitly patched directed arc",
+      "messages": "naturalistic synthetic; not real operator correspondence",
+      "loads_windows_fleet": "synthetic assumptions; clock bounds are completion deadlines",
+      "unknowns": "declared missing facts and unresolved source conflicts"
+    }
+  }
+]

@@ -211,3 +211,13 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Publication packages use isolated environments; raw provider evidence stays private.
+.venv-systems/
+studies/**/.venv*/
+studies/**/captures/
+studies/**/raw-traces/
+studies/**/*.bin
+studies/**/*.sqlite
+studies/**/*.sqlite-*
+studies/**/*.tar.gz

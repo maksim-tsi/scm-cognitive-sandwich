@@ -1,0 +1,82 @@
+{
+  "condition_outcomes": {
+    "gate_only": {
+      "accepted": 17,
+      "des_admitted": 17,
+      "fail_closed_validation": 42,
+      "provider_or_infrastructure_missing": 1
+    },
+    "llm_only": {
+      "accepted": 8,
+      "des_admitted": 0,
+      "fail_closed_validation": 51,
+      "provider_or_infrastructure_missing": 1
+    },
+    "structured_repair": {
+      "accepted": 18,
+      "des_admitted": 18,
+      "fail_closed_validation": 41,
+      "provider_or_infrastructure_missing": 1
+    }
+  },
+  "confirmatory_h1": {
+    "claim_status": "NOT_SUPPORTED",
+    "cluster_bootstrap_95_ci": [
+      -0.1016949152542373,
+      0.13559322033898305
+    ],
+    "cluster_level_worst_case_bounds": [
+      0.0,
+      0.03333333333333333
+    ],
+    "estimand": "structured_repair - gate_only",
+    "mean_difference": 0.01694915254237288,
+    "metric_id": "M-PRIMARY-STRUCTURED-VS-GATE",
+    "paired_sign_flip_p_value": 1.0
+  },
+  "denominators": {
+    "analyzable_incident_clusters": 59,
+    "attributed_provider_operations": 344,
+    "des_rows": 15400,
+    "jointly_des_admitted_pairs": 11,
+    "observability_missing_incidents": 1,
+    "terminal_incidents": 60
+  },
+  "des": {
+    "duplicate_rows": 0,
+    "operational_performance_claim_authorized": false,
+    "replications_per_condition_variant": 100,
+    "status": "VALIDATED_BOUNDED_SUBSET",
+    "variants": 7
+  },
+  "exploratory_h2": {
+    "claim_status": "EXPLORATORY_SUPPORT_ONLY",
+    "cluster_bootstrap_95_ci": [
+      0.0847457627118644,
+      0.2711864406779661
+    ],
+    "cluster_level_worst_case_bounds": [
+      0.15,
+      0.18333333333333332
+    ],
+    "estimand": "structured_repair - llm_only",
+    "mean_difference": 0.1694915254237288,
+    "metric_id": "M-H2-STRUCTURED-VS-LLM",
+    "paired_sign_flip_p_value": 0.001989980100198998
+  },
+  "interpretation": {
+    "prohibited_claims": [
+      "superior localized feedback",
+      "optimality",
+      "real-time operation",
+      "state-of-the-art performance",
+      "complete elimination of infeasibility",
+      "calibrated digital twin"
+    ],
+    "strongest_contribution": "typed, auditable, fail-closed LLM-MILP-DES architecture with explicit validation, authoritative feasibility decisions, observability, non-replayable accounting, and bounded failure handling",
+    "testbed_label": "literature-parameterized stochastic testbed"
+  },
+  "schema_version": "1.0",
+  "status": "ACCEPTED_R4_V5_EVIDENCE_ONLY",
+  "summary_id": "R5-ACCEPTED-R4-V5-METRICS-001"
+}

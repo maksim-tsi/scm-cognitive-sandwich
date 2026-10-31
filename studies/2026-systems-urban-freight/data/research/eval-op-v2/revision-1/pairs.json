@@ -1,0 +1,272 @@
+[
+  {
+    "pair_id": "OPV2-01",
+    "control": "OPV2-01-C",
+    "enriched": "OPV2-01-E",
+    "permitted_world_diff": [
+      "public.site_evidence"
+    ],
+    "permitted_public_packet_diff": [
+      "public.site_evidence"
+    ],
+    "reference_sha256": "729a3611b789713718a92388e2391da1b1a7fcb1721d7406ca3f4377e19d5f90",
+    "observations": [
+      {
+        "site": "A",
+        "poi_uuid": "ee71fa3e-82e5-46b9-9752-4a584a4c4255",
+        "source_kind": "historical_ai_assisted_visual_observation",
+        "source_file": "Screenshot 2026-10-29 at 20.36.32.png",
+        "source_sha256": "a93ebee3746278559693b18a6bacd60edb0a7d6b08875414645a9dbacb94a9f2",
+        "panorama_date": "2024-08",
+        "observation": "ALDI sign and parking; customer entrance barrier bears 2.10 m sign.",
+        "qualification": "Map target is not camera or confirmed receiving entrance; current identity and permission are unverified."
+      },
+      {
+        "site": "B",
+        "poi_uuid": "0a26de47-78e8-4d8e-8050-26577765688f",
+        "source_kind": "historical_ai_assisted_visual_observation",
+        "source_file": "Screenshot 2026-10-29 at 20.33.17.png",
+        "source_sha256": "1ef6c8adccfc37da1fc7af1e369e7d8162c21a66e06eff03c456f8790c4f3117",
+        "panorama_date": "2023-04",
+        "observation": "Prix sign and customer frontage; truck partly visible at right.",
+        "qualification": "Map target is not camera or confirmed receiving entrance; current identity and permission are unverified."
+      },
+      {
+        "site": "C",
+        "poi_uuid": "5fd41848-bff2-462f-9816-df38299e1e74",
+        "source_kind": "historical_ai_assisted_visual_observation",
+        "source_file": "Screenshot 2026-10-29 at 20.42.42.png",
+        "source_sha256": "bd6549d96c28120f8598d5a7f3a368669064af5aebf5735daf740964f801ecf7",
+        "panorama_date": "2023-05",
+        "observation": "Alì sign, store frontage, marked parking and cars.",
+        "qualification": "Map target is not camera or confirmed receiving entrance; current identity and permission are unverified."
+      }
+    ],
+    "control_first": true
+  },
+  {
+    "pair_id": "OPV2-02",
+    "control": "OPV2-02-C",
+    "enriched": "OPV2-02-E",
+    "permitted_world_diff": [
+      "public.site_evidence"
+    ],
+    "permitted_public_packet_diff": [
+      "public.site_evidence"
+    ],
+    "reference_sha256": "e720d70dd945b177c6d66b03990d0ba5520344173672bd06bfbac4de20016c30",
+    "observations": [
+      {
+        "site": "A",
+        "poi_uuid": "407d018c-7f6b-4ab1-976e-247e2df9faec",
+        "source_kind": "historical_ai_assisted_visual_observation",
+        "source_file": "Screenshot 2026-10-29 at 20.38.13.png",
+        "source_sha256": "9ec4925b92ceda6dc67c5c7e1f79c6cb3288d51bbe1f592c9c86d2abaf3deefb",
+        "panorama_date": "2023-04",
+        "observation": "Lidl side wall, parking and recessed opening at left.",
+        "qualification": "Map target is not camera or confirmed receiving entrance; current identity and permission are unverified. Function of the opening is unverified."
+      },
+      {
+        "site": "B",
+        "poi_uuid": "fa6afb7d-8518-415a-89c4-85b6860ef1d8",
+        "source_kind": "historical_ai_assisted_visual_observation",
+        "source_file": "Screenshot 2026-10-29 at 20.38.38.png",
+        "source_sha256": "5ff866bd61077af0ede5f452a4b25f7ac2fc483892f9efcc6b7ef10c9a757572",
+        "panorama_date": "2026-08",
+        "observation": "EUROSPAR frontage, bicycles and access lane.",
+        "qualification": "Map target is not camera or confirmed receiving entrance; current identity and permission are unverified."
+      },
+      {
+        "site": "C",
+        "poi_uuid": "6937e1ed-12f6-48e2-b2f7-fa9c092c0f58",
+        "source_kind": "historical_ai_assisted_visual_observation",
+        "source_file": "Screenshot 2026-10-29 at 20.44.19.png",
+        "source_sha256": "eca1a7ab2c7be2f9ec1901e6c0a5233465f989c9d2abe064ee3baad4b2c8241f",
+        "panorama_date": "2024-08",
+        "observation": "Pontevigodarzere storefront, car park and pedestrian path.",
+        "qualification": "Map target is not camera or confirmed receiving entrance; current identity and permission are unverified."
+      }
+    ],
+    "control_first": false
+  },
+  {
+    "pair_id": "OPV2-03",
+    "control": "OPV2-03-C",
+    "enriched": "OPV2-03-E",
+    "permitted_world_diff": [
+      "public.site_evidence"
+    ],
+    "permitted_public_packet_diff": [
+      "public.site_evidence"
+    ],
+    "reference_sha256": "920df3175a89581365359c80fd2f090bf557e1002622828fd4bbef4b02a52a98",
+    "observations": [
+      {
+        "site": "A",
+        "poi_uuid": "8d4b3790-a925-43f0-a369-ee77dc4076bf",
+        "source_kind": "historical_ai_assisted_visual_observation",
+        "source_file": "Screenshot 2026-10-29 at 20.40.04.png",
+        "source_sha256": "b25bd36be45c1e9ba566ebb244ed4852ba75631741364b5672e0fdbc53eec4de",
+        "panorama_date": "2022-11",
+        "observation": "Vaillant Training Centre signage and parked vehicles at target area.",
+        "qualification": "Map target is not camera or confirmed receiving entrance; current identity and permission are unverified."
+      },
+      {
+        "site": "B",
+        "poi_uuid": "ee71fa3e-82e5-46b9-9752-4a584a4c4255",
+        "source_kind": "historical_ai_assisted_visual_observation",
+        "source_file": "Screenshot 2026-10-29 at 20.36.32.png",
+        "source_sha256": "a93ebee3746278559693b18a6bacd60edb0a7d6b08875414645a9dbacb94a9f2",
+        "panorama_date": "2024-08",
+        "observation": "ALDI sign and parking; customer entrance barrier bears 2.10 m sign.",
+        "qualification": "Map target is not camera or confirmed receiving entrance; current identity and permission are unverified."
+      },
+      {
+        "site": "C",
+        "poi_uuid": "2fadb7f2-b5b3-4723-8a71-ead1ff13427e",
+        "source_kind": "historical_ai_assisted_visual_observation",
+        "source_file": "Screenshot 2026-10-29 at 20.46.28.png",
+        "source_sha256": "7bd628e705e84fd9786da29f6e84ffa43a4bdde43ce6a6fe7b003f1ac8a71f16",
+        "panorama_date": "2022-11",
+        "observation": "Pam sign and descending entrance marked customer parking.",
+        "qualification": "Map target is not camera or confirmed receiving entrance; current identity and permission are unverified."
+      }
+    ],
+    "control_first": true
+  },
+  {
+    "pair_id": "OPV2-04",
+    "control": "OPV2-04-C",
+    "enriched": "OPV2-04-E",
+    "permitted_world_diff": [
+      "public.site_evidence"
+    ],
+    "permitted_public_packet_diff": [
+      "public.site_evidence"
+    ],
+    "reference_sha256": "a954f8a81d45b206727d24795ecc9d0877685a48f95eec19b6063476e55b7134",
+    "observations": [
+      {
+        "site": "A",
+        "poi_uuid": "8a5f5233-9e7b-478f-bd1e-62801722936d",
+        "source_kind": "historical_ai_assisted_visual_observation",
+        "source_file": "Screenshot 2026-10-29 at 20.41.13.png",
+        "source_sha256": "c758d07ece4e58591c5d1445525fac94766c93a3c3233487e7a51bc5f4ddd0d8",
+        "panorama_date": "2026-09",
+        "observation": "Shuttered frontage, canopy, paved verge and curb; no readable Alimentari sign.",
+        "qualification": "Map target is not camera or confirmed receiving entrance; current identity and permission are unverified."
+      },
+      {
+        "site": "B",
+        "poi_uuid": "0a26de47-78e8-4d8e-8050-26577765688f",
+        "source_kind": "historical_ai_assisted_visual_observation",
+        "source_file": "Screenshot 2026-10-29 at 20.33.17.png",
+        "source_sha256": "1ef6c8adccfc37da1fc7af1e369e7d8162c21a66e06eff03c456f8790c4f3117",
+        "panorama_date": "2023-04",
+        "observation": "Prix sign and customer frontage; truck partly visible at right.",
+        "qualification": "Map target is not camera or confirmed receiving entrance; current identity and permission are unverified."
+      },
+      {
+        "site": "C",
+        "poi_uuid": "c45a0c5e-1cf4-452e-917e-494256a7270b",
+        "source_kind": "historical_ai_assisted_visual_observation",
+        "source_file": "Screenshot 2026-10-29 at 20.43.36.png",
+        "source_sha256": "7db194151805d01cb1afe5482f35e2189bbcafac1d2b5ab935e45fc4d4213e1c",
+        "panorama_date": "2023-06",
+        "observation": "Corner ground-floor frontage partly obscured by trees and junction signs.",
+        "qualification": "Map target is not camera or confirmed receiving entrance; current identity and permission are unverified."
+      }
+    ],
+    "control_first": false
+  },
+  {
+    "pair_id": "OPV2-08",
+    "control": "OPV2-08-C",
+    "enriched": "OPV2-08-E",
+    "permitted_world_diff": [
+      "public.site_evidence"
+    ],
+    "permitted_public_packet_diff": [
+      "public.site_evidence"
+    ],
+    "reference_sha256": "a2bbfd20dd77b750f0177cfad0adff4b151997c2310aa48ab93adbd56968269f",
+    "observations": [
+      {
+        "site": "A",
+        "poi_uuid": "0a26de47-78e8-4d8e-8050-26577765688f",
+        "source_kind": "historical_ai_assisted_visual_observation",
+        "source_file": "Screenshot 2026-10-29 at 20.33.17.png",
+        "source_sha256": "1ef6c8adccfc37da1fc7af1e369e7d8162c21a66e06eff03c456f8790c4f3117",
+        "panorama_date": "2023-04",
+        "observation": "Prix sign and customer frontage; truck partly visible at right.",
+        "qualification": "Map target is not camera or confirmed receiving entrance; current identity and permission are unverified."
+      },
+      {
+        "site": "B",
+        "poi_uuid": "407d018c-7f6b-4ab1-976e-247e2df9faec",
+        "source_kind": "historical_ai_assisted_visual_observation",
+        "source_file": "Screenshot 2026-10-29 at 20.37.43.png",
+        "source_sha256": "060bd1442c9ebb254bea1c5180d20e59b6ee1a15ab85cc69f8c7965f0050c741",
+        "panorama_date": "2019-03",
+        "observation": "Lidl signs, customer parking and frontage.",
+        "qualification": "Map target is not camera or confirmed receiving entrance; current identity and permission are unverified."
+      },
+      {
+        "site": "C",
+        "poi_uuid": "8a5f5233-9e7b-478f-bd1e-62801722936d",
+        "source_kind": "historical_ai_assisted_visual_observation",
+        "source_file": "Screenshot 2026-10-29 at 20.41.13.png",
+        "source_sha256": "c758d07ece4e58591c5d1445525fac94766c93a3c3233487e7a51bc5f4ddd0d8",
+        "panorama_date": "2026-09",
+        "observation": "Shuttered frontage, canopy, paved verge and curb; no readable Alimentari sign.",
+        "qualification": "Map target is not camera or confirmed receiving entrance; current identity and permission are unverified."
+      }
+    ],
+    "control_first": false
+  },
+  {
+    "pair_id": "OPV2-13",
+    "control": "OPV2-13-C",
+    "enriched": "OPV2-13-E",
+    "permitted_world_diff": [
+      "public.site_evidence"
+    ],
+    "permitted_public_packet_diff": [
+      "public.site_evidence"
+    ],
+    "reference_sha256": "a9a7cebc862f9c27583a7ad1f30cba8d1252562b63b33d763b647ff27d460acf",
+    "observations": [
+      {
+        "site": "A",
+        "poi_uuid": "c45a0c5e-1cf4-452e-917e-494256a7270b",
+        "source_kind": "historical_ai_assisted_visual_observation",
+        "source_file": "Screenshot 2026-10-29 at 20.43.36.png",
+        "source_sha256": "7db194151805d01cb1afe5482f35e2189bbcafac1d2b5ab935e45fc4d4213e1c",
+        "panorama_date": "2023-06",
+        "observation": "Corner ground-floor frontage partly obscured by trees and junction signs.",
+        "qualification": "Map target is not camera or confirmed receiving entrance; current identity and permission are unverified."
+      },
+      {
+        "site": "B",
+        "poi_uuid": "407d018c-7f6b-4ab1-976e-247e2df9faec",
+        "source_kind": "historical_ai_assisted_visual_observation",
+        "source_file": "Screenshot 2026-10-29 at 20.37.43.png",
+        "source_sha256": "060bd1442c9ebb254bea1c5180d20e59b6ee1a15ab85cc69f8c7965f0050c741",
+        "panorama_date": "2019-03",
+        "observation": "Lidl signs, customer parking and frontage.",
+        "qualification": "Map target is not camera or confirmed receiving entrance; current identity and permission are unverified."
+      },
+      {
+        "site": "C",
+        "poi_uuid": "ee71fa3e-82e5-46b9-9752-4a584a4c4255",
+        "source_kind": "historical_ai_assisted_visual_observation",
+        "source_file": "Screenshot 2026-10-29 at 20.36.32.png",
+        "source_sha256": "a93ebee3746278559693b18a6bacd60edb0a7d6b08875414645a9dbacb94a9f2",
+        "panorama_date": "2024-08",
+        "observation": "ALDI sign and parking; customer entrance barrier bears 2.10 m sign.",
+        "qualification": "Map target is not camera or confirmed receiving entrance; current identity and permission are unverified."
+      }
+    ],
+    "control_first": true
+  }
+]

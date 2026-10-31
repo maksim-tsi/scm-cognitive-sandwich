@@ -1,133 +1,61 @@
-# SCM Cognitive Sandwich
+# Cognitive Sandwich research artifacts
 
-This repository implements an Artifact-Centric "Sandwich" agent for maritime disruption rerouting.
+## Latest study: evidence-aware verification in urban freight
 
-The loop is deterministic where it must be and adaptive where it helps:
-1. Upstream LLM translates disruption text into a strict routing JSON artifact.
-2. OR solver validates feasibility against port capacities.
-3. Downstream LLM repairs the artifact using solver feedback when infeasible.
+The latest research package supports **A Reproducible Research Methodology for
+LLM-Based Logistics Decision Support: Lessons from Urban Freight Experiments**,
+by Maksim Ilin and Dmitry Pavlyuk. **Status: manuscript prepared for Systems;
+not a published or accepted journal article.**
 
-## Core Components
+Start with [the Systems study](studies/2026-systems-urban-freight/README.md).
+It contains authored synthetic scenarios and references, source-qualified textual
+site observations, prompts, controller/verifier/provider code, recorded outcomes,
+selected final responses and offline reproduction instructions.
 
-- `src/agents/`: LangGraph nodes, routing logic, prompts, and typed state.
-- `src/solver/`: Pyomo feasibility checker plus deterministic IIS-style conflict payload generation.
-- `src/clients/`: External API clients (for example maritime port sandbox).
-- `src/memory/`: YAAM artifact facade, YAAM consolidation client, and checkpointer factory.
-- `src/core/`: Cross-cutting services such as observability bootstrap.
-- `scripts/run_baseline.py`: Main runnable baseline scenario.
+Two independently runnable levels require **no LLM API, HomeLab or private LTX**:
+reproduction of reported numerical results and deterministic I2/I3 replay of the
+original proposals and acquired evidence. New LLM collection is a separate level,
+not executed by reproduction and not expected to reproduce identical generations.
 
-## Quick Start
-
-### 1) Create environment
-
-```bash
-uv venv --python /usr/local/bin/python3.13
-uv lock
-uv sync --extra dev
+```sh
+python3.13 -m venv .venv-systems
+.venv-systems/bin/python -m pip install -r studies/2026-systems-urban-freight/reproduction/requirements-lock.txt
+.venv-systems/bin/python studies/2026-systems-urban-freight/reproduction/reproduce.py --output /tmp/systems-reproduction
 ```
 
-### 2) Configure environment variables
+Dependency installation may use a package index. The reproduction command blocks
+network connections and uses only this checkout. See study instructions for tests,
+reference provenance, licensing and the independent clean-copy verification record.
 
-Create `.env` in repository root. Recommended observability block:
+## Research development and publication-specific entry points
 
-```bash
-# --- OBSERVABILITY (Arize Phoenix) ---
-PHOENIX_COLLECTOR_ENDPOINT=http://192.168.107.172:6006/v1/traces
-PHOENIX_PROJECT_NAME=scm-cognitive-sandwich-idwl
-OTEL_RESOURCE_ATTRIBUTES=openinference.project.name=scm-cognitive-sandwich-idwl,service.name=scm-cognitive-sandwich-idwl
-```
+| Research phase | Scope and evidence | Publication status | Entry point |
+| --- | --- | --- | --- |
+| IDWL 2026, pre-workshop source anchor 31 May | Four-port maritime implementation; 100 generated inputs, 78 main result rows and a separate 66-run Variant B batch | Published antecedent, DOI [10.25673/123541](https://doi.org/10.25673/123541) | [IDWL](studies/2026-idwl/README.md) |
+| Maritime extension, August–September 2026, subsequent development separate | 60 incidents; paired repair/verification analysis and retained simulation output | Research extension; associated manuscript not claimed accepted or published | [Maritime extension](studies/2026-maritime-extension/README.md) |
+| Urban freight, October 2026 | EVAL30; separately collected Luna extension; EVAL-OP-V2-R1 with 16 enriched assignments and six matched controls per arm | Systems manuscript | [Systems package](studies/2026-systems-urban-freight/README.md) |
 
-Environment variables quick reference:
+These are different experiments. Their results and denominators are not pooled.
+Study directories contain separate citation records and source/export manifests.
+Final publication releases/tags require author approval; none is created by this PR.
 
-| Variable | Required | Example / Notes |
-| --- | --- | --- |
-| `PHOENIX_COLLECTOR_ENDPOINT` | Yes (for tracing) | `http://192.168.107.172:6006/v1/traces` |
-| `PHOENIX_PROJECT_NAME` | Yes (for tracing) | `scm-cognitive-sandwich-idwl` |
-| `OTEL_RESOURCE_ATTRIBUTES` | Yes (for stable Phoenix routing) | `openinference.project.name=scm-cognitive-sandwich-idwl,service.name=scm-cognitive-sandwich-idwl` |
-| `OTEL_SERVICE_NAME` | Optional | If unset, defaults to project name in startup code |
-| `SANDBOX_API_URL` | Optional | Defaults to local sandbox URL when unset |
-| `REDIS_URL` | Optional | Enables Redis-backed LangGraph checkpointer |
-| `GOOGLE_API_KEY` | One LLM key required | Use local secret value; do not commit |
-| `MISTRAL_API_KEY` | One LLM key required | Use local secret value; do not commit |
-| `GROQ_API_KEY` | One LLM key required | Use local secret value; do not commit |
-| `OPENROUTER_API_KEY` | Required (Variant B) | OpenRouter API key for Exec Plan 2 |
-| `LLM_MODEL` | Required (Variant B) | Example: `x-ai/grok-4.1-fast` |
-| `OPENROUTER_BASE_URL` | Optional | Example: `https://openrouter.ai/api/v1` |
+## Historical code and compatibility
 
-Safe copy/paste starter block (placeholder-only for secrets):
+Root `src/`, `scripts/`, `data/`, `tests/` and `docs/` retain their historical paths.
+The [legacy quick start](docs/legacy-maritime-quickstart.md) and
+[architecture documentation](docs/architecture/index.md) describe the maritime
+implementation. Its YAAM/sandbox requirements do not govern new study packages.
+See [AGENTS.md](AGENTS.md) for scope-specific maintenance instructions.
 
-```bash
-PHOENIX_COLLECTOR_ENDPOINT=http://192.168.107.172:6006/v1/traces
-PHOENIX_PROJECT_NAME=scm-cognitive-sandwich-idwl
-OTEL_RESOURCE_ATTRIBUTES=openinference.project.name=scm-cognitive-sandwich-idwl,service.name=scm-cognitive-sandwich-idwl
+## Data, rights and citation
 
-# Optional integration endpoints
-# SANDBOX_API_URL=http://192.168.107.172:8001
-# REDIS_URL=redis://192.168.107.172:6379/0
+The original Padua dataset is a third-party source: [Cappi et al., archived
+record](https://doi.org/10.5281/zenodo.22111450). This repository does not claim
+its collection or redistribute it as author-generated observations.
+The Systems package distinguishes authored synthetic premises from geographical
+inputs and historical visual interpretations. No Google Street View images are
+included in that package. Original requests, full technical traces, secrets and
+private manuscript/editorial materials are excluded from new study exports.
 
-# LLM credentials (set locally; never commit real values)
-# GOOGLE_API_KEY=<set-locally>
-# MISTRAL_API_KEY=<set-locally>
-# GROQ_API_KEY=<set-locally>
-
-# OpenRouter (Variant B / Exec Plan 2)
-# OPENROUTER_API_KEY=<set-locally>
-# LLM_MODEL=x-ai/grok-4.1-fast
-# OPENROUTER_BASE_URL=https://openrouter.ai/api/v1
-```
-
-Important:
-- Do not define `OTEL_RESOURCE_ATTRIBUTES` twice in `.env`.
-- If duplicated, the last assignment wins and may cause confusing attribution behavior.
-- Legacy `project.name=...` is still accepted by this repo and normalized to `openinference.project.name` during startup.
-
-### 3) Run baseline
-
-```bash
-python scripts/run_baseline.py --thread-id baseline-session
-```
-
-The runner prints tracing env diagnostics before tracing initialization, then streams node-level updates and final routing output.
-
-## Observability Notes (Phoenix + OpenTelemetry)
-
-Tracing setup lives in `src/core/observability.py` and currently:
-- Loads env vars early from `.env`.
-- Resolves project name from resource attributes first, then `PHOENIX_PROJECT_NAME`.
-- Normalizes `project.name` into `openinference.project.name` for Phoenix routing.
-- Builds an explicit `TracerProvider(resource=...)` before instrumenting LangChain.
-- Optionally instruments HTTPX when `opentelemetry-instrumentation-httpx` is installed.
-
-### Verify trace routing quickly
-
-```bash
-# Phoenix projects (CLI)
-export PHOENIX_HOST="${PHOENIX_COLLECTOR_ENDPOINT%/v1/traces}"
-npx @arizeai/phoenix-cli projects --format raw --no-progress
-
-# Recent traces in target project (CLI)
-export PHOENIX_PROJECT="scm-cognitive-sandwich-idwl"
-npx @arizeai/phoenix-cli traces --limit 5 --last-n-minutes 15 --format raw --no-progress
-
-# Projects via Phoenix API (curl)
-curl -sS "${PHOENIX_HOST}/v1/projects" | jq '.data | map(.name)'
-```
-
-## Test and Quality Commands
-
-```bash
-./.venv/bin/ruff check .
-./.venv/bin/python -m mypy src
-./.venv/bin/python -m pytest -q
-```
-
-## Documentation Map
-
-- `docs/architecture/index.md`: system boundaries, LangGraph flow, memory and tracing integration.
-- `docs/domain/sandwich-loop.md`: domain model, constraints, IIS loop semantics.
-- `docs/decisions/`: architecture and implementation ADRs.
-- `docs/exec-plans/`: active execution plans and maintenance logs.
-
-## License
-
-MIT.
+Use the citation record for the study you actually use. See each study's rights
+notice; the root MIT license does not replace third-party data licenses.

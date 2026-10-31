@@ -1,0 +1,3436 @@
+[
+  {
+    "poi_uuid": "0a26de47-78e8-4d8e-8050-26577765688f",
+    "name": "Prix",
+    "category": "supermarket",
+    "scenarios": [
+      {
+        "scenario_id": "EVAL-01",
+        "site_label": "A",
+        "instruction": "Coordinate the four booked drops; receiving schedules and outbound loading are binding.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 1,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-06",
+        "site_label": "D",
+        "instruction": "Allocate today’s outbound consignments; the desk packet contains records from two runs.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 35,
+            "node": 4,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-09",
+        "site_label": "C",
+        "instruction": "Serve the early unloading appointment and every other mandatory delivery.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 3,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-12",
+        "site_label": "B",
+        "instruction": "Plan unloading and payload allocation using the released booking records.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 2,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-13",
+        "site_label": "A",
+        "instruction": "Dispatch needs the operative booking deadline; the receiver has sent two replacement sheets.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 1,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "close_A_s": {
+            "owner": "receiver",
+            "path": [
+              "orders",
+              0,
+              "close_s"
+            ],
+            "permitted_issuer_roles": [
+              "receiving_manager"
+            ],
+            "required_assertion_kind": "booking_acceptance",
+            "unit": "seconds"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-18",
+        "site_label": "D",
+        "instruction": "Complete this run’s four appointments using the receiving desk and archive.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 35,
+            "node": 4,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "close_D_s": {
+            "owner": "receiver",
+            "path": [
+              "orders",
+              3,
+              "close_s"
+            ],
+            "permitted_issuer_roles": [
+              "receiving_manager"
+            ],
+            "required_assertion_kind": "booking_acceptance",
+            "unit": "seconds"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-21",
+        "site_label": "C",
+        "instruction": "Plan four deliveries, allowing waiting at the opening time; vans must return before shift end.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 3,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "service_C_s": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              2,
+              "service_s"
+            ],
+            "permitted_issuer_roles": [
+              "dispatcher"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "seconds"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-24",
+        "site_label": "B",
+        "instruction": "A booking approval is listed in the document index; dispatch this run only with applicable permission.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 2,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-25",
+        "site_label": "A",
+        "instruction": "Deliver all indivisible consignments using the two available vehicles; no extra departures.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 1,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-28",
+        "site_label": "E",
+        "instruction": "Review the current five-stop plan. A rough coffee-break estimate is a nonbinding driver preference.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 35,
+            "node": 5,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "load_E_kg": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              4,
+              "demand_kg"
+            ],
+            "permitted_issuer_roles": [
+              "warehouse_control"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "kg"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-30",
+        "site_label": "A",
+        "instruction": "Allocate the two medicine and two chilled-food consignments to qualified carrier vehicles and complete all four deliveries under the applicable batch transport instructions.",
+        "modeled_orders": [
+          {
+            "allowed_vehicles": [
+              0
+            ],
+            "close_s": 7200,
+            "demand_kg": 20,
+            "node": 1,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "service_A_s": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              0,
+              "service_s"
+            ],
+            "permitted_issuer_roles": [
+              "warehouse_control"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "seconds"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      }
+    ],
+    "candidate_screenshots": [
+      "Screenshot 2026-10-29 at 20.33.17.png",
+      "Screenshot 2026-10-29 at 20.33.31.png",
+      "Screenshot 2026-10-29 at 20.33.58.png"
+    ],
+    "evidence_status": "assistant second pass; no independent expert validation",
+    "potential_enrichment": "Before use as a new premise, verify delivery entrance, route, vehicle dimensions, permissions and handling; specific issue: Unverified rear access, vehicle clearance and receiving permission.",
+    "visual_assessment": "conditionally_plausible",
+    "visual_evidence": "Prix frontage, public street and signed parking entrance; a truck is partly visible beside the building. Its purpose and any receiving entrance are not discernible.",
+    "supporting_screenshots": [
+      "Screenshot 2026-10-29 at 20.33.17.png",
+      "Screenshot 2026-10-29 at 20.33.58.png"
+    ],
+    "evidence_gaps": "Unverified rear access, vehicle clearance and receiving permission.",
+    "osm_crosscheck_ref": "osm-site-index.json#0a26de47-78e8-4d8e-8050-26577765688f",
+    "direct_visual_observations": [
+      {
+        "filename": "Screenshot 2026-10-29 at 20.33.17.png",
+        "panorama_date": "2023-04",
+        "observation": "Prix sign and customer frontage; truck partly visible at right."
+      },
+      {
+        "filename": "Screenshot 2026-10-29 at 20.33.31.png",
+        "panorama_date": "2023-04",
+        "observation": "Prix sign, customer frontage and cars in forecourt."
+      },
+      {
+        "filename": "Screenshot 2026-10-29 at 20.33.58.png",
+        "panorama_date": "2026-09",
+        "observation": "Prix building, public street, parking entry and direction signs."
+      }
+    ],
+    "scenario_assumption_status": "Scenario orders, bindings and routing are modeled data, not verified real-world delivery access."
+  },
+  {
+    "poi_uuid": "cef0a2a1-3341-4278-b734-fc5457dfa81b",
+    "name": "Interspar Pontevigodarzere",
+    "category": "supermarket",
+    "scenarios": [
+      {
+        "scenario_id": "EVAL-01",
+        "site_label": "B",
+        "instruction": "Coordinate the four booked drops; receiving schedules and outbound loading are binding.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 2,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "open_B_s": {
+            "owner": "receiver",
+            "path": [
+              "orders",
+              1,
+              "open_s"
+            ],
+            "permitted_issuer_roles": [
+              "receiving_manager"
+            ],
+            "required_assertion_kind": "booking_acceptance",
+            "unit": "seconds"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-02",
+        "site_label": "A",
+        "instruction": "Allocate the sealed consignments after the refrigerated rack has been fitted.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 1,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "load_A_kg": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              0,
+              "demand_kg"
+            ],
+            "permitted_issuer_roles": [
+              "warehouse_control"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "kg"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-07",
+        "site_label": "D",
+        "instruction": "Both appointment-only receiving bays require individual booking acceptance before dispatch.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 35,
+            "node": 4,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "close_D_s": {
+            "owner": "receiver",
+            "path": [
+              "orders",
+              3,
+              "close_s"
+            ],
+            "permitted_issuer_roles": [
+              "receiving_manager"
+            ],
+            "required_assertion_kind": "booking_acceptance",
+            "unit": "seconds"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-10",
+        "site_label": "C",
+        "instruction": "Plan all five deliveries. The driver’s preferred visiting order is optional.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 3,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-13",
+        "site_label": "B",
+        "instruction": "Dispatch needs the operative booking deadline; the receiver has sent two replacement sheets.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 2,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "service_B_s": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              1,
+              "service_s"
+            ],
+            "permitted_issuer_roles": [
+              "dispatcher"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "seconds"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-14",
+        "site_label": "A",
+        "instruction": "Review the existing four-stop plan and preserve it when it remains supported and feasible.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 1,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "service_A_s": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              0,
+              "service_s"
+            ],
+            "permitted_issuer_roles": [
+              "dispatcher"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "seconds"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-19",
+        "site_label": "D",
+        "instruction": "Allocate deliveries after the workshop equipment change; read the fleet releases.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 35,
+            "node": 4,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-22",
+        "site_label": "C",
+        "instruction": "The packing desk lists quantities; obtain authoritative loaded mass for vehicle assignment.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 3,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-25",
+        "site_label": "B",
+        "instruction": "Deliver all indivisible consignments using the two available vehicles; no extra departures.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 2,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-26",
+        "site_label": "A",
+        "instruction": "Complete all four mandatory deliveries and respect the receiver completion deadline.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 1,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-30",
+        "site_label": "B",
+        "instruction": "Allocate the two medicine and two chilled-food consignments to qualified carrier vehicles and complete all four deliveries under the applicable batch transport instructions.",
+        "modeled_orders": [
+          {
+            "allowed_vehicles": [
+              0
+            ],
+            "close_s": 7200,
+            "demand_kg": 15,
+            "node": 2,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      }
+    ],
+    "candidate_screenshots": [
+      "Screenshot 2026-10-29 at 20.34.21.png",
+      "Screenshot 2026-10-29 at 20.34.38.png",
+      "Screenshot 2026-10-29 at 20.35.02.png",
+      "Screenshot 2026-10-29 at 20.35.24.png",
+      "Screenshot 2026-10-29 at 20.35.50.png"
+    ],
+    "evidence_status": "assistant second pass; no independent expert validation",
+    "potential_enrichment": "Before use as a new premise, verify delivery entrance, route, vehicle dimensions, permissions and handling; specific issue: Lane direction and actual delivery access require authoritative confirmation.",
+    "visual_assessment": "conditionally_plausible",
+    "visual_evidence": "Interspar frontage and parking/approach shown; lane no-entry and a height sign at a parking ramp are visible. A receiving door is not identifiable.",
+    "supporting_screenshots": [
+      "Screenshot 2026-10-29 at 20.34.38.png",
+      "Screenshot 2026-10-29 at 20.35.02.png"
+    ],
+    "evidence_gaps": "Lane direction and actual delivery access require authoritative confirmation.",
+    "osm_crosscheck_ref": "osm-site-index.json#cef0a2a1-3341-4278-b734-fc5457dfa81b",
+    "direct_visual_observations": [
+      {
+        "filename": "Screenshot 2026-10-29 at 20.34.21.png",
+        "panorama_date": "2022-11",
+        "observation": "INTERSPAR sign and customer parking with cars and small truck."
+      },
+      {
+        "filename": "Screenshot 2026-10-29 at 20.34.38.png",
+        "panorama_date": "2024-08",
+        "observation": "INTERSPAR frontage, parking and descending adjacent ramp with sign."
+      },
+      {
+        "filename": "Screenshot 2026-10-29 at 20.35.02.png",
+        "panorama_date": "2024-08",
+        "observation": "INTERSPAR and McDonald signs, vans and no-entry sign at drive."
+      },
+      {
+        "filename": "Screenshot 2026-10-29 at 20.35.24.png",
+        "panorama_date": "2024-08",
+        "observation": "McDonald drive-through menu and side wall of complex."
+      },
+      {
+        "filename": "Screenshot 2026-10-29 at 20.35.50.png",
+        "panorama_date": "2024-08",
+        "observation": "Curved driveway, side wall and descending ramp."
+      }
+    ],
+    "scenario_assumption_status": "Scenario orders, bindings and routing are modeled data, not verified real-world delivery access."
+  },
+  {
+    "poi_uuid": "ee71fa3e-82e5-46b9-9752-4a584a4c4255",
+    "name": "ALDI Italia",
+    "category": "supermarket",
+    "scenarios": [
+      {
+        "scenario_id": "EVAL-02",
+        "site_label": "B",
+        "instruction": "Allocate the sealed consignments after the refrigerated rack has been fitted.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 2,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-03",
+        "site_label": "A",
+        "instruction": "Use the dispatch packet to allocate all consignments; a packing note accompanies the release.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 1,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-08",
+        "site_label": "D",
+        "instruction": "Deliver all sealed consignments in one departure per vehicle; no replenishment or split consignments.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 35,
+            "node": 4,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-11",
+        "site_label": "C",
+        "instruction": "Select a delivery order with the archived approach time and receiving deadline.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 3,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-14",
+        "site_label": "B",
+        "instruction": "Review the existing four-stop plan and preserve it when it remains supported and feasible.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 2,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-15",
+        "site_label": "A",
+        "instruction": "Allocate the sealed pallets and confirm enough unloading time for all five stops.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 1,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "load_A_kg": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              0,
+              "demand_kg"
+            ],
+            "permitted_issuer_roles": [
+              "warehouse_control"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "kg"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-20",
+        "site_label": "D",
+        "instruction": "Reconcile the consignment mass and the appointment-only receiving consent.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 35,
+            "node": 4,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-23",
+        "site_label": "C",
+        "instruction": "Resolve the run-specific unloading allowance before committing the five-stop plan.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 3,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "open_C_s": {
+            "owner": "receiver",
+            "path": [
+              "orders",
+              2,
+              "open_s"
+            ],
+            "permitted_issuer_roles": [
+              "receiving_manager"
+            ],
+            "required_assertion_kind": "booking_acceptance",
+            "unit": "seconds"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-26",
+        "site_label": "B",
+        "instruction": "Complete all four mandatory deliveries and respect the receiver completion deadline.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 2,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-27",
+        "site_label": "A",
+        "instruction": "Plan this manifest’s deliveries using booking-specific service records.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 1,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      }
+    ],
+    "candidate_screenshots": [
+      "Screenshot 2026-10-29 at 20.36.32.png",
+      "Screenshot 2026-10-29 at 20.36.50.png",
+      "Screenshot 2026-10-29 at 20.37.05.png",
+      "Screenshot 2026-10-29 at 20.37.24.png"
+    ],
+    "evidence_status": "assistant second pass; no independent expert validation",
+    "potential_enrichment": "Before use as a new premise, verify delivery entrance, route, vehicle dimensions, permissions and handling; specific issue: Verify specific service entrance, manoeuvre and restrictions.",
+    "visual_assessment": "potentially_constrained",
+    "visual_evidence": "ALDI sign and car-park approach; an entrance barrier displays 2.10 m. This constrains that entrance for taller vehicles; another service entrance is not ruled out.",
+    "supporting_screenshots": [
+      "Screenshot 2026-10-29 at 20.36.32.png",
+      "Screenshot 2026-10-29 at 20.37.24.png"
+    ],
+    "evidence_gaps": "Verify specific service entrance, manoeuvre and restrictions.",
+    "osm_crosscheck_ref": "osm-site-index.json#ee71fa3e-82e5-46b9-9752-4a584a4c4255",
+    "direct_visual_observations": [
+      {
+        "filename": "Screenshot 2026-10-29 at 20.36.32.png",
+        "panorama_date": "2024-08",
+        "observation": "ALDI sign and parking; customer entrance barrier bears 2.10 m sign."
+      },
+      {
+        "filename": "Screenshot 2026-10-29 at 20.36.50.png",
+        "panorama_date": "2026-08",
+        "observation": "ALDI sign, customer frontage and parking across road."
+      },
+      {
+        "filename": "Screenshot 2026-10-29 at 20.37.05.png",
+        "panorama_date": "2026-08",
+        "observation": "Long building side, marked parking and road."
+      },
+      {
+        "filename": "Screenshot 2026-10-29 at 20.37.24.png",
+        "panorama_date": "2026-08",
+        "observation": "Building side, driveway, directional sign and parking."
+      }
+    ],
+    "scenario_assumption_status": "Scenario orders, bindings and routing are modeled data, not verified real-world delivery access."
+  },
+  {
+    "poi_uuid": "407d018c-7f6b-4ab1-976e-247e2df9faec",
+    "name": "Lidl Italia",
+    "category": "supermarket",
+    "scenarios": [
+      {
+        "scenario_id": "EVAL-03",
+        "site_label": "B",
+        "instruction": "Use the dispatch packet to allocate all consignments; a packing note accompanies the release.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 2,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-04",
+        "site_label": "A",
+        "instruction": "Complete the four appointments on the booked run using available receiving records.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 1,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "service_A_s": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              0,
+              "service_s"
+            ],
+            "permitted_issuer_roles": [
+              "dispatcher"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "seconds"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-09",
+        "site_label": "D",
+        "instruction": "Serve the early unloading appointment and every other mandatory delivery.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 35,
+            "node": 4,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-12",
+        "site_label": "C",
+        "instruction": "Plan unloading and payload allocation using the released booking records.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 3,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "service_C_s": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              2,
+              "service_s"
+            ],
+            "permitted_issuer_roles": [
+              "dispatcher"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "seconds"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-15",
+        "site_label": "B",
+        "instruction": "Allocate the sealed pallets and confirm enough unloading time for all five stops.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 2,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-16",
+        "site_label": "A",
+        "instruction": "Coordinate the four booked receiving windows, including a delayed opening.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 1,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "open_A_s": {
+            "owner": "receiver",
+            "path": [
+              "orders",
+              0,
+              "open_s"
+            ],
+            "permitted_issuer_roles": [
+              "receiving_manager"
+            ],
+            "required_assertion_kind": "booking_acceptance",
+            "unit": "seconds"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-21",
+        "site_label": "D",
+        "instruction": "Plan four deliveries, allowing waiting at the opening time; vans must return before shift end.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 35,
+            "node": 4,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-24",
+        "site_label": "C",
+        "instruction": "A booking approval is listed in the document index; dispatch this run only with applicable permission.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 3,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-27",
+        "site_label": "B",
+        "instruction": "Plan this manifest’s deliveries using booking-specific service records.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 2,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "service_B_s": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              1,
+              "service_s"
+            ],
+            "permitted_issuer_roles": [
+              "dispatcher"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "seconds"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-28",
+        "site_label": "A",
+        "instruction": "Review the current five-stop plan. A rough coffee-break estimate is a nonbinding driver preference.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 1,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-29",
+        "site_label": "A",
+        "instruction": "Allocate the four sealed consignments to the Italian carrier vehicles and plan all booked deliveries using the original shipping documents and carrier specifications.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 1,
+            "open_s": 0,
+            "service_s": 300,
+            "upright_dimensions_mm": [
+              1000,
+              900,
+              900
+            ],
+            "volume_l": 500
+          }
+        ],
+        "site_order_bindings": {
+          "height_A_mm": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              0,
+              "upright_dimensions_mm",
+              2
+            ],
+            "permitted_issuer_roles": [
+              "warehouse_control"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "mm"
+          },
+          "length_A_mm": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              0,
+              "upright_dimensions_mm",
+              0
+            ],
+            "permitted_issuer_roles": [
+              "warehouse_control"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "mm"
+          },
+          "load_A_kg": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              0,
+              "demand_kg"
+            ],
+            "permitted_issuer_roles": [
+              "warehouse_control"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "kg"
+          },
+          "volume_A_l": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              0,
+              "volume_l"
+            ],
+            "permitted_issuer_roles": [
+              "warehouse_control"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "litres"
+          },
+          "width_A_mm": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              0,
+              "upright_dimensions_mm",
+              1
+            ],
+            "permitted_issuer_roles": [
+              "warehouse_control"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "mm"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      }
+    ],
+    "candidate_screenshots": [
+      "Screenshot 2026-10-29 at 20.37.43.png",
+      "Screenshot 2026-10-29 at 20.38.13.png"
+    ],
+    "evidence_status": "assistant second pass; no independent expert validation",
+    "potential_enrichment": "Before use as a new premise, verify delivery entrance, route, vehicle dimensions, permissions and handling; specific issue: Confirm delivery entrance, truck approach and restrictions.",
+    "visual_assessment": "conditionally_plausible",
+    "visual_evidence": "Lidl storefront and paved approach; a recessed side opening with protective markings is visible, potentially a service area, but its purpose and access cannot be confirmed.",
+    "supporting_screenshots": [
+      "Screenshot 2026-10-29 at 20.37.43.png",
+      "Screenshot 2026-10-29 at 20.38.13.png"
+    ],
+    "evidence_gaps": "Confirm delivery entrance, truck approach and restrictions.",
+    "osm_crosscheck_ref": "osm-site-index.json#407d018c-7f6b-4ab1-976e-247e2df9faec",
+    "direct_visual_observations": [
+      {
+        "filename": "Screenshot 2026-10-29 at 20.37.43.png",
+        "panorama_date": "2019-03",
+        "observation": "Lidl signs, customer parking and frontage."
+      },
+      {
+        "filename": "Screenshot 2026-10-29 at 20.38.13.png",
+        "panorama_date": "2023-04",
+        "observation": "Lidl side wall, parking and recessed opening at left."
+      }
+    ],
+    "scenario_assumption_status": "Scenario orders, bindings and routing are modeled data, not verified real-world delivery access."
+  },
+  {
+    "poi_uuid": "fa6afb7d-8518-415a-89c4-85b6860ef1d8",
+    "name": "EUROSPAR Altichiero",
+    "category": "supermarket",
+    "scenarios": [
+      {
+        "scenario_id": "EVAL-01",
+        "site_label": "C",
+        "instruction": "Coordinate the four booked drops; receiving schedules and outbound loading are binding.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 3,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-04",
+        "site_label": "B",
+        "instruction": "Complete the four appointments on the booked run using available receiving records.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 2,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-05",
+        "site_label": "A",
+        "instruction": "Reconcile the loading release and assign the deliveries to the two vans.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 1,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-10",
+        "site_label": "D",
+        "instruction": "Plan all five deliveries. The driver’s preferred visiting order is optional.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 35,
+            "node": 4,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-13",
+        "site_label": "C",
+        "instruction": "Dispatch needs the operative booking deadline; the receiver has sent two replacement sheets.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 3,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-16",
+        "site_label": "B",
+        "instruction": "Coordinate the four booked receiving windows, including a delayed opening.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 2,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-17",
+        "site_label": "A",
+        "instruction": "The locked receiving bay requires positive booking-specific signed permission.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 1,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-22",
+        "site_label": "D",
+        "instruction": "The packing desk lists quantities; obtain authoritative loaded mass for vehicle assignment.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 35,
+            "node": 4,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "load_D_kg": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              3,
+              "demand_kg"
+            ],
+            "permitted_issuer_roles": [
+              "warehouse_control"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "kg"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-25",
+        "site_label": "C",
+        "instruction": "Deliver all indivisible consignments using the two available vehicles; no extra departures.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 3,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-28",
+        "site_label": "B",
+        "instruction": "Review the current five-stop plan. A rough coffee-break estimate is a nonbinding driver preference.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 2,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-29",
+        "site_label": "B",
+        "instruction": "Allocate the four sealed consignments to the Italian carrier vehicles and plan all booked deliveries using the original shipping documents and carrier specifications.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 35,
+            "node": 2,
+            "open_s": 0,
+            "service_s": 300,
+            "volume_l": 650
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-30",
+        "site_label": "C",
+        "instruction": "Allocate the two medicine and two chilled-food consignments to qualified carrier vehicles and complete all four deliveries under the applicable batch transport instructions.",
+        "modeled_orders": [
+          {
+            "allowed_vehicles": [
+              1
+            ],
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 3,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "load_C_kg": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              2,
+              "demand_kg"
+            ],
+            "permitted_issuer_roles": [
+              "warehouse_control"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "kg"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      }
+    ],
+    "candidate_screenshots": [
+      "Screenshot 2026-10-29 at 20.38.38.png",
+      "Screenshot 2026-10-29 at 20.39.03.png",
+      "Screenshot 2026-10-29 at 20.39.35.png"
+    ],
+    "evidence_status": "assistant second pass; no independent expert validation",
+    "potential_enrichment": "Before use as a new premise, verify delivery entrance, route, vehicle dimensions, permissions and handling; specific issue: Verify which doorway serves this retailer and whether vehicle may use street.",
+    "visual_assessment": "conditionally_plausible",
+    "visual_evidence": "EUROSPAR storefront, side street and a truck by a nearby opening are visible. Its relationship to the store and unloading activity are unverified.",
+    "supporting_screenshots": [
+      "Screenshot 2026-10-29 at 20.38.38.png",
+      "Screenshot 2026-10-29 at 20.39.35.png"
+    ],
+    "evidence_gaps": "Verify which doorway serves this retailer and whether vehicle may use street.",
+    "osm_crosscheck_ref": "osm-site-index.json#fa6afb7d-8518-415a-89c4-85b6860ef1d8",
+    "direct_visual_observations": [
+      {
+        "filename": "Screenshot 2026-10-29 at 20.38.38.png",
+        "panorama_date": "2026-08",
+        "observation": "EUROSPAR frontage, bicycles and access lane."
+      },
+      {
+        "filename": "Screenshot 2026-10-29 at 20.39.03.png",
+        "panorama_date": "2026-08",
+        "observation": "Building side, sidewalk, double doors and lane."
+      },
+      {
+        "filename": "Screenshot 2026-10-29 at 20.39.35.png",
+        "panorama_date": "2026-08",
+        "observation": "Box truck alongside shuttered openings across street."
+      }
+    ],
+    "scenario_assumption_status": "Scenario orders, bindings and routing are modeled data, not verified real-world delivery access."
+  },
+  {
+    "poi_uuid": "8d4b3790-a925-43f0-a369-ee77dc4076bf",
+    "name": "Komok",
+    "category": "grocery_store",
+    "scenarios": [
+      {
+        "scenario_id": "EVAL-02",
+        "site_label": "C",
+        "instruction": "Allocate the sealed consignments after the refrigerated rack has been fitted.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 3,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-05",
+        "site_label": "B",
+        "instruction": "Reconcile the loading release and assign the deliveries to the two vans.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 2,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "service_B_s": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              1,
+              "service_s"
+            ],
+            "permitted_issuer_roles": [
+              "dispatcher"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "seconds"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-06",
+        "site_label": "A",
+        "instruction": "Allocate today’s outbound consignments; the desk packet contains records from two runs.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 1,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "close_A_s": {
+            "owner": "receiver",
+            "path": [
+              "orders",
+              0,
+              "close_s"
+            ],
+            "permitted_issuer_roles": [
+              "receiving_manager"
+            ],
+            "required_assertion_kind": "booking_acceptance",
+            "unit": "seconds"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-11",
+        "site_label": "D",
+        "instruction": "Select a delivery order with the archived approach time and receiving deadline.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 35,
+            "node": 4,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "close_D_s": {
+            "owner": "receiver",
+            "path": [
+              "orders",
+              3,
+              "close_s"
+            ],
+            "permitted_issuer_roles": [
+              "receiving_manager"
+            ],
+            "required_assertion_kind": "booking_acceptance",
+            "unit": "seconds"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-14",
+        "site_label": "C",
+        "instruction": "Review the existing four-stop plan and preserve it when it remains supported and feasible.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 3,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-17",
+        "site_label": "B",
+        "instruction": "The locked receiving bay requires positive booking-specific signed permission.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 2,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "close_B_s": {
+            "owner": "receiver",
+            "path": [
+              "orders",
+              1,
+              "close_s"
+            ],
+            "permitted_issuer_roles": [
+              "receiving_manager"
+            ],
+            "required_assertion_kind": "booking_acceptance",
+            "unit": "seconds"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-18",
+        "site_label": "A",
+        "instruction": "Complete this run’s four appointments using the receiving desk and archive.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 1,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-23",
+        "site_label": "D",
+        "instruction": "Resolve the run-specific unloading allowance before committing the five-stop plan.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 35,
+            "node": 4,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-26",
+        "site_label": "C",
+        "instruction": "Complete all four mandatory deliveries and respect the receiver completion deadline.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 3,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      }
+    ],
+    "candidate_screenshots": [
+      "Screenshot 2026-10-29 at 20.40.04.png",
+      "Screenshot 2026-10-29 at 20.40.18.png"
+    ],
+    "evidence_status": "assistant second pass; no independent expert validation",
+    "potential_enrichment": "Before use as a new premise, verify delivery entrance, route, vehicle dimensions, permissions and handling; specific issue: Komok identity and exact frontage unverified; receiving entrance, route, vehicle access and operational permissions unverified.",
+    "visual_assessment": "insufficient_visual_evidence",
+    "visual_evidence": "November 2022 views show Vaillant signage, not a confirmed Komok storefront; the map target alone does not identify the pictured business as Komok.",
+    "supporting_screenshots": [
+      "Screenshot 2026-10-29 at 20.40.04.png",
+      "Screenshot 2026-10-29 at 20.40.18.png"
+    ],
+    "evidence_gaps": "Komok identity and exact frontage unverified; receiving entrance, route, vehicle access and operational permissions unverified.",
+    "osm_crosscheck_ref": "osm-site-index.json#8d4b3790-a925-43f0-a369-ee77dc4076bf",
+    "direct_visual_observations": [
+      {
+        "filename": "Screenshot 2026-10-29 at 20.40.04.png",
+        "panorama_date": "2022-11",
+        "observation": "Vaillant Training Centre signage and parked vehicles at target area."
+      },
+      {
+        "filename": "Screenshot 2026-10-29 at 20.40.18.png",
+        "panorama_date": "2022-11",
+        "observation": "Vaillant signage and parked cars and vans at target area."
+      }
+    ],
+    "scenario_assumption_status": "Scenario orders, bindings and routing are modeled data, not verified real-world delivery access."
+  },
+  {
+    "poi_uuid": "8a5f5233-9e7b-478f-bd1e-62801722936d",
+    "name": "Alimentari, Pane e Salumi Antonella e Katiuscia",
+    "category": "grocery_store",
+    "scenarios": [
+      {
+        "scenario_id": "EVAL-03",
+        "site_label": "C",
+        "instruction": "Use the dispatch packet to allocate all consignments; a packing note accompanies the release.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 3,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "load_C_kg": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              2,
+              "demand_kg"
+            ],
+            "permitted_issuer_roles": [
+              "warehouse_control"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "kg"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-06",
+        "site_label": "B",
+        "instruction": "Allocate today’s outbound consignments; the desk packet contains records from two runs.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 2,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "load_B_kg": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              1,
+              "demand_kg"
+            ],
+            "permitted_issuer_roles": [
+              "warehouse_control"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "kg"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-07",
+        "site_label": "A",
+        "instruction": "Both appointment-only receiving bays require individual booking acceptance before dispatch.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 1,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "close_A_s": {
+            "owner": "receiver",
+            "path": [
+              "orders",
+              0,
+              "close_s"
+            ],
+            "permitted_issuer_roles": [
+              "receiving_manager"
+            ],
+            "required_assertion_kind": "booking_acceptance",
+            "unit": "seconds"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-10",
+        "site_label": "E",
+        "instruction": "Plan all five deliveries. The driver’s preferred visiting order is optional.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 35,
+            "node": 5,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "load_E_kg": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              4,
+              "demand_kg"
+            ],
+            "permitted_issuer_roles": [
+              "warehouse_control"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "kg"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-12",
+        "site_label": "D",
+        "instruction": "Plan unloading and payload allocation using the released booking records.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 35,
+            "node": 4,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "load_D_kg": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              3,
+              "demand_kg"
+            ],
+            "permitted_issuer_roles": [
+              "warehouse_control"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "kg"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-15",
+        "site_label": "C",
+        "instruction": "Allocate the sealed pallets and confirm enough unloading time for all five stops.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 3,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-18",
+        "site_label": "B",
+        "instruction": "Complete this run’s four appointments using the receiving desk and archive.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 2,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "open_B_s": {
+            "owner": "receiver",
+            "path": [
+              "orders",
+              1,
+              "open_s"
+            ],
+            "permitted_issuer_roles": [
+              "receiving_manager"
+            ],
+            "required_assertion_kind": "booking_acceptance",
+            "unit": "seconds"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-19",
+        "site_label": "A",
+        "instruction": "Allocate deliveries after the workshop equipment change; read the fleet releases.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 1,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-24",
+        "site_label": "D",
+        "instruction": "A booking approval is listed in the document index; dispatch this run only with applicable permission.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 35,
+            "node": 4,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "load_D_kg": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              3,
+              "demand_kg"
+            ],
+            "permitted_issuer_roles": [
+              "warehouse_control"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "kg"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-27",
+        "site_label": "C",
+        "instruction": "Plan this manifest’s deliveries using booking-specific service records.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 3,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "load_C_kg": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              2,
+              "demand_kg"
+            ],
+            "permitted_issuer_roles": [
+              "warehouse_control"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "kg"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      }
+    ],
+    "candidate_screenshots": [
+      "Screenshot 2026-10-29 at 20.41.13.png",
+      "Screenshot 2026-10-29 at 20.42.13.png"
+    ],
+    "evidence_status": "assistant second pass; no independent expert validation",
+    "potential_enrichment": "Before use as a new premise, verify delivery entrance, route, vehicle dimensions, permissions and handling; specific issue: Confirm business identity, loading point, curb permission and vehicle size; shutters do not prove closure.",
+    "visual_assessment": "potentially_constrained",
+    "visual_evidence": "Shuttered frontage with canopy and narrow roadside apron; other view shows pavement and bollards. Identity and receiving door are unconfirmed; shutters do not establish closure.",
+    "supporting_screenshots": [
+      "Screenshot 2026-10-29 at 20.41.13.png",
+      "Screenshot 2026-10-29 at 20.42.13.png"
+    ],
+    "evidence_gaps": "Confirm business identity, loading point, curb permission and vehicle size; shutters do not prove closure.",
+    "osm_crosscheck_ref": "osm-site-index.json#8a5f5233-9e7b-478f-bd1e-62801722936d",
+    "direct_visual_observations": [
+      {
+        "filename": "Screenshot 2026-10-29 at 20.41.13.png",
+        "panorama_date": "2026-09",
+        "observation": "Shuttered frontage, canopy, paved verge and curb; no readable Alimentari sign."
+      },
+      {
+        "filename": "Screenshot 2026-10-29 at 20.42.13.png",
+        "panorama_date": "2026-09",
+        "observation": "Shuttered frontage, awnings, pavement, curb and bollards; POI frontage association uncertain."
+      }
+    ],
+    "scenario_assumption_status": "Scenario orders, bindings and routing are modeled data, not verified real-world delivery access."
+  },
+  {
+    "poi_uuid": "5fd41848-bff2-462f-9816-df38299e1e74",
+    "name": "Ali Supermercati",
+    "category": "supermarket",
+    "scenarios": [
+      {
+        "scenario_id": "EVAL-01",
+        "site_label": "D",
+        "instruction": "Coordinate the four booked drops; receiving schedules and outbound loading are binding.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 35,
+            "node": 4,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "close_D_s": {
+            "owner": "receiver",
+            "path": [
+              "orders",
+              3,
+              "close_s"
+            ],
+            "permitted_issuer_roles": [
+              "receiving_manager"
+            ],
+            "required_assertion_kind": "booking_acceptance",
+            "unit": "seconds"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-04",
+        "site_label": "C",
+        "instruction": "Complete the four appointments on the booked run using available receiving records.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 3,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "close_C_s": {
+            "owner": "receiver",
+            "path": [
+              "orders",
+              2,
+              "close_s"
+            ],
+            "permitted_issuer_roles": [
+              "receiving_manager"
+            ],
+            "required_assertion_kind": "booking_acceptance",
+            "unit": "seconds"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-07",
+        "site_label": "B",
+        "instruction": "Both appointment-only receiving bays require individual booking acceptance before dispatch.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 2,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-08",
+        "site_label": "A",
+        "instruction": "Deliver all sealed consignments in one departure per vehicle; no replenishment or split consignments.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 70,
+            "node": 1,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "load_A_kg": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              0,
+              "demand_kg"
+            ],
+            "permitted_issuer_roles": [
+              "warehouse_control"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "kg"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-13",
+        "site_label": "D",
+        "instruction": "Dispatch needs the operative booking deadline; the receiver has sent two replacement sheets.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 35,
+            "node": 4,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-16",
+        "site_label": "C",
+        "instruction": "Coordinate the four booked receiving windows, including a delayed opening.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 3,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "close_C_s": {
+            "owner": "receiver",
+            "path": [
+              "orders",
+              2,
+              "close_s"
+            ],
+            "permitted_issuer_roles": [
+              "receiving_manager"
+            ],
+            "required_assertion_kind": "booking_acceptance",
+            "unit": "seconds"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-19",
+        "site_label": "B",
+        "instruction": "Allocate deliveries after the workshop equipment change; read the fleet releases.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 2,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-20",
+        "site_label": "A",
+        "instruction": "Reconcile the consignment mass and the appointment-only receiving consent.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 1,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-23",
+        "site_label": "E",
+        "instruction": "Resolve the run-specific unloading allowance before committing the five-stop plan.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 35,
+            "node": 5,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "service_E_s": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              4,
+              "service_s"
+            ],
+            "permitted_issuer_roles": [
+              "dispatcher"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "seconds"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-25",
+        "site_label": "D",
+        "instruction": "Deliver all indivisible consignments using the two available vehicles; no extra departures.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 35,
+            "node": 4,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-28",
+        "site_label": "C",
+        "instruction": "Review the current five-stop plan. A rough coffee-break estimate is a nonbinding driver preference.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 3,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "service_C_s": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              2,
+              "service_s"
+            ],
+            "permitted_issuer_roles": [
+              "dispatcher"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "seconds"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-29",
+        "site_label": "C",
+        "instruction": "Allocate the four sealed consignments to the Italian carrier vehicles and plan all booked deliveries using the original shipping documents and carrier specifications.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 30,
+            "node": 3,
+            "open_s": 0,
+            "service_s": 300,
+            "volume_l": 600
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-30",
+        "site_label": "D",
+        "instruction": "Allocate the two medicine and two chilled-food consignments to qualified carrier vehicles and complete all four deliveries under the applicable batch transport instructions.",
+        "modeled_orders": [
+          {
+            "allowed_vehicles": [
+              1
+            ],
+            "close_s": 7200,
+            "demand_kg": 30,
+            "node": 4,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      }
+    ],
+    "candidate_screenshots": [
+      "Screenshot 2026-10-29 at 20.42.42.png",
+      "Screenshot 2026-10-29 at 20.42.56.png",
+      "Screenshot 2026-10-29 at 20.43.09.png"
+    ],
+    "evidence_status": "assistant second pass; no independent expert validation",
+    "potential_enrichment": "Before use as a new premise, verify delivery entrance, route, vehicle dimensions, permissions and handling; specific issue: Verify delivery route, manoeuvre and receiving entrance.",
+    "visual_assessment": "conditionally_plausible",
+    "visual_evidence": "Alì sign, parking and public street visible; a dead-end sign applies to a pictured side street. Receiving entrance and vehicle manoeuvre remain unconfirmed.",
+    "supporting_screenshots": [
+      "Screenshot 2026-10-29 at 20.42.42.png",
+      "Screenshot 2026-10-29 at 20.42.56.png"
+    ],
+    "evidence_gaps": "Verify delivery route, manoeuvre and receiving entrance.",
+    "osm_crosscheck_ref": "osm-site-index.json#5fd41848-bff2-462f-9816-df38299e1e74",
+    "direct_visual_observations": [
+      {
+        "filename": "Screenshot 2026-10-29 at 20.42.42.png",
+        "panorama_date": "2023-05",
+        "observation": "Alì sign, store frontage, marked parking and cars."
+      },
+      {
+        "filename": "Screenshot 2026-10-29 at 20.42.56.png",
+        "panorama_date": "2023-05",
+        "observation": "Alì sign and parking at corner with dead-end sign."
+      },
+      {
+        "filename": "Screenshot 2026-10-29 at 20.43.09.png",
+        "panorama_date": "2023-05",
+        "observation": "Parking and garage doors on side of residential building."
+      }
+    ],
+    "scenario_assumption_status": "Scenario orders, bindings and routing are modeled data, not verified real-world delivery access."
+  },
+  {
+    "poi_uuid": "c45a0c5e-1cf4-452e-917e-494256a7270b",
+    "name": "Magazinul Romanesc Bacania cu Suflet",
+    "category": "grocery_store",
+    "scenarios": [
+      {
+        "scenario_id": "EVAL-02",
+        "site_label": "D",
+        "instruction": "Allocate the sealed consignments after the refrigerated rack has been fitted.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 35,
+            "node": 4,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-05",
+        "site_label": "C",
+        "instruction": "Reconcile the loading release and assign the deliveries to the two vans.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 3,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-08",
+        "site_label": "B",
+        "instruction": "Deliver all sealed consignments in one departure per vehicle; no replenishment or split consignments.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 60,
+            "node": 2,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "load_B_kg": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              1,
+              "demand_kg"
+            ],
+            "permitted_issuer_roles": [
+              "warehouse_control"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "kg"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-09",
+        "site_label": "A",
+        "instruction": "Serve the early unloading appointment and every other mandatory delivery.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 1,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "close_A_s": {
+            "owner": "receiver",
+            "path": [
+              "orders",
+              0,
+              "close_s"
+            ],
+            "permitted_issuer_roles": [
+              "receiving_manager"
+            ],
+            "required_assertion_kind": "booking_acceptance",
+            "unit": "seconds"
+          },
+          "service_A_s": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              0,
+              "service_s"
+            ],
+            "permitted_issuer_roles": [
+              "dispatcher"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "seconds"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-14",
+        "site_label": "D",
+        "instruction": "Review the existing four-stop plan and preserve it when it remains supported and feasible.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 35,
+            "node": 4,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "load_D_kg": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              3,
+              "demand_kg"
+            ],
+            "permitted_issuer_roles": [
+              "warehouse_control"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "kg"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-17",
+        "site_label": "C",
+        "instruction": "The locked receiving bay requires positive booking-specific signed permission.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 3,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "load_C_kg": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              2,
+              "demand_kg"
+            ],
+            "permitted_issuer_roles": [
+              "warehouse_control"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "kg"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-20",
+        "site_label": "B",
+        "instruction": "Reconcile the consignment mass and the appointment-only receiving consent.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 2,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "load_B_kg": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              1,
+              "demand_kg"
+            ],
+            "permitted_issuer_roles": [
+              "warehouse_control"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "kg"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-21",
+        "site_label": "A",
+        "instruction": "Plan four deliveries, allowing waiting at the opening time; vans must return before shift end.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 1,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "open_A_s": {
+            "owner": "receiver",
+            "path": [
+              "orders",
+              0,
+              "open_s"
+            ],
+            "permitted_issuer_roles": [
+              "receiving_manager"
+            ],
+            "required_assertion_kind": "booking_acceptance",
+            "unit": "seconds"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-26",
+        "site_label": "D",
+        "instruction": "Complete all four mandatory deliveries and respect the receiver completion deadline.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 35,
+            "node": 4,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "close_D_s": {
+            "owner": "receiver",
+            "path": [
+              "orders",
+              3,
+              "close_s"
+            ],
+            "permitted_issuer_roles": [
+              "receiving_manager"
+            ],
+            "required_assertion_kind": "booking_acceptance",
+            "unit": "seconds"
+          },
+          "service_D_s": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              3,
+              "service_s"
+            ],
+            "permitted_issuer_roles": [
+              "dispatcher"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "seconds"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      }
+    ],
+    "candidate_screenshots": [
+      "Screenshot 2026-10-29 at 20.43.36.png",
+      "Screenshot 2026-10-29 at 20.43.44.png",
+      "Screenshot 2026-10-29 at 20.43.57.png"
+    ],
+    "evidence_status": "assistant second pass; no independent expert validation",
+    "potential_enrichment": "Before use as a new premise, verify delivery entrance, route, vehicle dimensions, permissions and handling; specific issue: Verify identity, curb access and receiving position.",
+    "visual_assessment": "insufficient_visual_evidence",
+    "visual_evidence": "A corner mini-market and access road are visible in 2022; exact named business identity and receiving entrance are not resolved.",
+    "supporting_screenshots": [
+      "Screenshot 2026-10-29 at 20.43.44.png",
+      "Screenshot 2026-10-29 at 20.43.57.png"
+    ],
+    "evidence_gaps": "Verify identity, curb access and receiving position.",
+    "osm_crosscheck_ref": "osm-site-index.json#c45a0c5e-1cf4-452e-917e-494256a7270b",
+    "direct_visual_observations": [
+      {
+        "filename": "Screenshot 2026-10-29 at 20.43.36.png",
+        "panorama_date": "2023-06",
+        "observation": "Corner ground-floor frontage partly obscured by trees and junction signs."
+      },
+      {
+        "filename": "Screenshot 2026-10-29 at 20.43.44.png",
+        "panorama_date": "2022-11",
+        "observation": "Ground-floor mini-market frontage under residential building and pedestrian crossing."
+      },
+      {
+        "filename": "Screenshot 2026-10-29 at 20.43.57.png",
+        "panorama_date": "2022-11",
+        "observation": "Building side with garage-like doors, parked vehicles and crossing."
+      }
+    ],
+    "scenario_assumption_status": "Scenario orders, bindings and routing are modeled data, not verified real-world delivery access."
+  },
+  {
+    "poi_uuid": "6937e1ed-12f6-48e2-b2f7-fa9c092c0f58",
+    "name": "Alì",
+    "category": "supermarket",
+    "scenarios": [
+      {
+        "scenario_id": "EVAL-03",
+        "site_label": "D",
+        "instruction": "Use the dispatch packet to allocate all consignments; a packing note accompanies the release.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 35,
+            "node": 4,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "service_D_s": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              3,
+              "service_s"
+            ],
+            "permitted_issuer_roles": [
+              "dispatcher"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "seconds"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-06",
+        "site_label": "C",
+        "instruction": "Allocate today’s outbound consignments; the desk packet contains records from two runs.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 3,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-09",
+        "site_label": "B",
+        "instruction": "Serve the early unloading appointment and every other mandatory delivery.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 2,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-10",
+        "site_label": "A",
+        "instruction": "Plan all five deliveries. The driver’s preferred visiting order is optional.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 1,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-15",
+        "site_label": "D",
+        "instruction": "Allocate the sealed pallets and confirm enough unloading time for all five stops.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 35,
+            "node": 4,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "service_D_s": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              3,
+              "service_s"
+            ],
+            "permitted_issuer_roles": [
+              "dispatcher"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "seconds"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-18",
+        "site_label": "C",
+        "instruction": "Complete this run’s four appointments using the receiving desk and archive.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 3,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-21",
+        "site_label": "B",
+        "instruction": "Plan four deliveries, allowing waiting at the opening time; vans must return before shift end.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 2,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-22",
+        "site_label": "A",
+        "instruction": "The packing desk lists quantities; obtain authoritative loaded mass for vehicle assignment.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 1,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-27",
+        "site_label": "D",
+        "instruction": "Plan this manifest’s deliveries using booking-specific service records.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 35,
+            "node": 4,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      }
+    ],
+    "candidate_screenshots": [
+      "Screenshot 2026-10-29 at 20.44.19.png",
+      "Screenshot 2026-10-29 at 20.44.36.png",
+      "Screenshot 2026-10-29 at 20.45.00.png",
+      "Screenshot 2026-10-29 at 20.45.25.png"
+    ],
+    "evidence_status": "assistant second pass; no independent expert validation",
+    "potential_enrichment": "Before use as a new premise, verify delivery entrance, route, vehicle dimensions, permissions and handling; specific issue: Confirm service entrance and authorised truck movement.",
+    "visual_assessment": "conditionally_plausible",
+    "visual_evidence": "Alì signs, customer parking and entrance circulation are visible; the receiving area is not identified. Guardrail separates one road view from parking.",
+    "supporting_screenshots": [
+      "Screenshot 2026-10-29 at 20.44.36.png",
+      "Screenshot 2026-10-29 at 20.45.00.png"
+    ],
+    "evidence_gaps": "Confirm service entrance and authorised truck movement.",
+    "osm_crosscheck_ref": "osm-site-index.json#6937e1ed-12f6-48e2-b2f7-fa9c092c0f58",
+    "direct_visual_observations": [
+      {
+        "filename": "Screenshot 2026-10-29 at 20.44.19.png",
+        "panorama_date": "2024-08",
+        "observation": "Pontevigodarzere storefront, car park and pedestrian path."
+      },
+      {
+        "filename": "Screenshot 2026-10-29 at 20.44.36.png",
+        "panorama_date": "2024-08",
+        "observation": "Alì frontage and parking entrance with raised barrier."
+      },
+      {
+        "filename": "Screenshot 2026-10-29 at 20.45.00.png",
+        "panorama_date": "2026-08",
+        "observation": "Parking area, road guardrail and rear or side of building."
+      },
+      {
+        "filename": "Screenshot 2026-10-29 at 20.45.25.png",
+        "panorama_date": "2024-08",
+        "observation": "Alì customer exit, bollards, curb and nearby roundabout."
+      }
+    ],
+    "scenario_assumption_status": "Scenario orders, bindings and routing are modeled data, not verified real-world delivery access."
+  },
+  {
+    "poi_uuid": "2fadb7f2-b5b3-4723-8a71-ead1ff13427e",
+    "name": "Pam Padova San Carlo",
+    "category": "supermarket",
+    "scenarios": [
+      {
+        "scenario_id": "EVAL-04",
+        "site_label": "D",
+        "instruction": "Complete the four appointments on the booked run using available receiving records.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 35,
+            "node": 4,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-07",
+        "site_label": "C",
+        "instruction": "Both appointment-only receiving bays require individual booking acceptance before dispatch.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 3,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-10",
+        "site_label": "B",
+        "instruction": "Plan all five deliveries. The driver’s preferred visiting order is optional.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 2,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "service_B_s": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              1,
+              "service_s"
+            ],
+            "permitted_issuer_roles": [
+              "dispatcher"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "seconds"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-11",
+        "site_label": "A",
+        "instruction": "Select a delivery order with the archived approach time and receiving deadline.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 1,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-16",
+        "site_label": "D",
+        "instruction": "Coordinate the four booked receiving windows, including a delayed opening.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 35,
+            "node": 4,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-19",
+        "site_label": "C",
+        "instruction": "Allocate deliveries after the workshop equipment change; read the fleet releases.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 3,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "load_C_kg": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              2,
+              "demand_kg"
+            ],
+            "permitted_issuer_roles": [
+              "warehouse_control"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "kg"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-22",
+        "site_label": "B",
+        "instruction": "The packing desk lists quantities; obtain authoritative loaded mass for vehicle assignment.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 2,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-23",
+        "site_label": "A",
+        "instruction": "Resolve the run-specific unloading allowance before committing the five-stop plan.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 1,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-28",
+        "site_label": "D",
+        "instruction": "Review the current five-stop plan. A rough coffee-break estimate is a nonbinding driver preference.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 35,
+            "node": 4,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-29",
+        "site_label": "D",
+        "instruction": "Allocate the four sealed consignments to the Italian carrier vehicles and plan all booked deliveries using the original shipping documents and carrier specifications.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 8,
+            "node": 4,
+            "open_s": 0,
+            "service_s": 300,
+            "volume_l": 500
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      }
+    ],
+    "candidate_screenshots": [
+      "Screenshot 2026-10-29 at 20.46.28.png",
+      "Screenshot 2026-10-29 at 20.46.41.png",
+      "Screenshot 2026-10-29 at 20.47.03.png",
+      "Screenshot 2026-10-29 at 20.47.42.png",
+      "Screenshot 2026-10-29 at 20.48.02.png",
+      "Screenshot 2026-10-29 at 20.48.22.png"
+    ],
+    "evidence_status": "assistant second pass; no independent expert validation",
+    "potential_enrichment": "Before use as a new premise, verify delivery entrance, route, vehicle dimensions, permissions and handling; specific issue: Verify current retailer identity, delivery entrance and vehicle restrictions; customer parking is not proven freight access.",
+    "visual_assessment": "potentially_constrained",
+    "visual_evidence": "2022 views show Pam advertising and a customer parking ramp with clearance signs; later images show different businesses on adjacent frontages. Freight entrance and present identity remain unverified.",
+    "supporting_screenshots": [
+      "Screenshot 2026-10-29 at 20.46.28.png",
+      "Screenshot 2026-10-29 at 20.48.02.png"
+    ],
+    "evidence_gaps": "Verify current retailer identity, delivery entrance and vehicle restrictions; customer parking is not proven freight access.",
+    "osm_crosscheck_ref": "osm-site-index.json#2fadb7f2-b5b3-4723-8a71-ead1ff13427e",
+    "direct_visual_observations": [
+      {
+        "filename": "Screenshot 2026-10-29 at 20.46.28.png",
+        "panorama_date": "2022-11",
+        "observation": "Pam sign and descending entrance marked customer parking."
+      },
+      {
+        "filename": "Screenshot 2026-10-29 at 20.46.41.png",
+        "panorama_date": "2022-11",
+        "observation": "Pam sign, pedestrian approach and marked parking spaces."
+      },
+      {
+        "filename": "Screenshot 2026-10-29 at 20.47.03.png",
+        "panorama_date": "2022-11",
+        "observation": "OVS frontage and pedestrian path in same complex."
+      },
+      {
+        "filename": "Screenshot 2026-10-29 at 20.47.42.png",
+        "panorama_date": "2024-08",
+        "observation": "Complex frontage, roadway, tram tracks and parking signs."
+      },
+      {
+        "filename": "Screenshot 2026-10-29 at 20.48.02.png",
+        "panorama_date": "2026-08",
+        "observation": "Complex facade, tram crossing and pedestrians."
+      },
+      {
+        "filename": "Screenshot 2026-10-29 at 20.48.22.png",
+        "panorama_date": "2026-09",
+        "observation": "Intesa Sanpaolo sign and gated opening at complex side."
+      }
+    ],
+    "scenario_assumption_status": "Scenario orders, bindings and routing are modeled data, not verified real-world delivery access."
+  },
+  {
+    "poi_uuid": "d7d47f5a-c634-42cd-b83e-d9f5683afe4a",
+    "name": "Alìper",
+    "category": "grocery_store",
+    "scenarios": [
+      {
+        "scenario_id": "EVAL-05",
+        "site_label": "D",
+        "instruction": "Reconcile the loading release and assign the deliveries to the two vans.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 35,
+            "node": 4,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "load_D_kg": {
+            "owner": "dispatcher",
+            "path": [
+              "orders",
+              3,
+              "demand_kg"
+            ],
+            "permitted_issuer_roles": [
+              "warehouse_control"
+            ],
+            "required_assertion_kind": "certified_fact",
+            "unit": "kg"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-08",
+        "site_label": "C",
+        "instruction": "Deliver all sealed consignments in one departure per vehicle; no replenishment or split consignments.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 3,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-11",
+        "site_label": "B",
+        "instruction": "Select a delivery order with the archived approach time and receiving deadline.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 2,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-12",
+        "site_label": "A",
+        "instruction": "Plan unloading and payload allocation using the released booking records.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 1,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-15",
+        "site_label": "E",
+        "instruction": "Allocate the sealed pallets and confirm enough unloading time for all five stops.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 35,
+            "node": 5,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-17",
+        "site_label": "D",
+        "instruction": "The locked receiving bay requires positive booking-specific signed permission.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 35,
+            "node": 4,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-20",
+        "site_label": "C",
+        "instruction": "Reconcile the consignment mass and the appointment-only receiving consent.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 3,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "close_C_s": {
+            "owner": "receiver",
+            "path": [
+              "orders",
+              2,
+              "close_s"
+            ],
+            "permitted_issuer_roles": [
+              "receiving_manager"
+            ],
+            "required_assertion_kind": "booking_acceptance",
+            "unit": "seconds"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-23",
+        "site_label": "B",
+        "instruction": "Resolve the run-specific unloading allowance before committing the five-stop plan.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 2,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {},
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      },
+      {
+        "scenario_id": "EVAL-24",
+        "site_label": "A",
+        "instruction": "A booking approval is listed in the document index; dispatch this run only with applicable permission.",
+        "modeled_orders": [
+          {
+            "close_s": 7200,
+            "demand_kg": 25,
+            "node": 1,
+            "open_s": 0,
+            "service_s": 300
+          }
+        ],
+        "site_order_bindings": {
+          "close_A_s": {
+            "owner": "receiver",
+            "path": [
+              "orders",
+              0,
+              "close_s"
+            ],
+            "permitted_issuer_roles": [
+              "receiving_manager"
+            ],
+            "required_assertion_kind": "booking_acceptance",
+            "unit": "seconds"
+          }
+        },
+        "snapshot_provenance": "unbound loads/windows/fleet are disclosed synthetic assumptions; distances archived OSM-derived; times20km/h proxy",
+        "note": "Mapping identifies a modeled site, not proof that its specific route or vehicle is physically accessible."
+      }
+    ],
+    "candidate_screenshots": [
+      "Screenshot 2026-10-29 at 20.48.44.png",
+      "Screenshot 2026-10-29 at 20.48.54.png",
+      "Screenshot 2026-10-29 at 20.49.56.png",
+      "Screenshot 2026-10-29 at 20.50.04.png"
+    ],
+    "evidence_status": "assistant second pass; no independent expert validation",
+    "potential_enrichment": "Before use as a new premise, verify delivery entrance, route, vehicle dimensions, permissions and handling; specific issue: Verify gate operation, authorised service access and receiving location.",
+    "visual_assessment": "potentially_constrained",
+    "visual_evidence": "Alìper frontage and customer parking ramp with height signs plus gated rear/side area are visible. None establishes the actual freight entry.",
+    "supporting_screenshots": [
+      "Screenshot 2026-10-29 at 20.48.54.png",
+      "Screenshot 2026-10-29 at 20.49.56.png"
+    ],
+    "evidence_gaps": "Verify gate operation, authorised service access and receiving location.",
+    "osm_crosscheck_ref": "osm-site-index.json#d7d47f5a-c634-42cd-b83e-d9f5683afe4a",
+    "direct_visual_observations": [
+      {
+        "filename": "Screenshot 2026-10-29 at 20.48.44.png",
+        "panorama_date": "2026-09",
+        "observation": "Alìper sign and frontage along street."
+      },
+      {
+        "filename": "Screenshot 2026-10-29 at 20.48.54.png",
+        "panorama_date": "2026-09",
+        "observation": "Alìper sign and parking entrance with circular restriction signs."
+      },
+      {
+        "filename": "Screenshot 2026-10-29 at 20.49.56.png",
+        "panorama_date": "2026-09",
+        "observation": "Side/rear wall, gate, paved lane and green door."
+      },
+      {
+        "filename": "Screenshot 2026-10-29 at 20.50.04.png",
+        "panorama_date": "2026-09",
+        "observation": "Side wall, green door, gated parking and direction sign."
+      }
+    ],
+    "scenario_assumption_status": "Scenario orders, bindings and routing are modeled data, not verified real-world delivery access."
+  }
+]

@@ -1,0 +1,371 @@
+[
+  {
+    "filename": "Screenshot 2026-10-29 at 20.33.17.png",
+    "sha256": "1ef6c8adccfc37da1fc7af1e369e7d8162c21a66e06eff03c456f8790c4f3117",
+    "panorama_date": "2023-04",
+    "candidate_poi_uuid": "0a26de47-78e8-4d8e-8050-26577765688f",
+    "candidate_name": "Prix",
+    "visible_observation": "Prix sign and customer frontage; truck partly visible at right.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.33.31.png",
+    "sha256": "316c1d67923bb5037038d87bbee1d1b8b36829fa1293853fbdaf3f7a5fa229d4",
+    "panorama_date": "2023-04",
+    "candidate_poi_uuid": "0a26de47-78e8-4d8e-8050-26577765688f",
+    "candidate_name": "Prix",
+    "visible_observation": "Prix sign, customer frontage and cars in forecourt.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.33.58.png",
+    "sha256": "c180d1d615a463b7742d50e9ee2a93a46d0a7a8e9c4c876e4d10786a4f82af96",
+    "panorama_date": "2026-09",
+    "candidate_poi_uuid": "0a26de47-78e8-4d8e-8050-26577765688f",
+    "candidate_name": "Prix",
+    "visible_observation": "Prix building, public street, parking entry and direction signs.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.34.21.png",
+    "sha256": "a3f6ad019517c0f2d79b3dc809b6c6eea6044b2f54840fb5d32d5ca64a90314b",
+    "panorama_date": "2022-11",
+    "candidate_poi_uuid": "cef0a2a1-3341-4278-b734-fc5457dfa81b",
+    "candidate_name": "Interspar Pontevigodarzere",
+    "visible_observation": "INTERSPAR sign and customer parking with cars and small truck.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.34.38.png",
+    "sha256": "309fe6aebda07f2151f9af15fdc2be093345a2002f8a39f98fbe82274a6200ad",
+    "panorama_date": "2024-08",
+    "candidate_poi_uuid": "cef0a2a1-3341-4278-b734-fc5457dfa81b",
+    "candidate_name": "Interspar Pontevigodarzere",
+    "visible_observation": "INTERSPAR frontage, parking and descending adjacent ramp with sign.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.35.02.png",
+    "sha256": "9d2fb0db42a30d6d35c4525d99661707d0a86ee435db8897e34276e58e27885d",
+    "panorama_date": "2024-08",
+    "candidate_poi_uuid": "cef0a2a1-3341-4278-b734-fc5457dfa81b",
+    "candidate_name": "Interspar Pontevigodarzere",
+    "visible_observation": "INTERSPAR and McDonald signs, vans and no-entry sign at drive.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.35.24.png",
+    "sha256": "f31c15a74689d7df1b3f057781d1ead7a33db0b07871370c70660e7b6448e1bb",
+    "panorama_date": "2024-08",
+    "candidate_poi_uuid": "cef0a2a1-3341-4278-b734-fc5457dfa81b",
+    "candidate_name": "Interspar Pontevigodarzere",
+    "visible_observation": "McDonald drive-through menu and side wall of complex.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.35.50.png",
+    "sha256": "8b351941f3f7b04e3845834bb1cd9d901484d44d84265bf9fbc293aa3ccaa746",
+    "panorama_date": "2024-08",
+    "candidate_poi_uuid": "cef0a2a1-3341-4278-b734-fc5457dfa81b",
+    "candidate_name": "Interspar Pontevigodarzere",
+    "visible_observation": "Curved driveway, side wall and descending ramp.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.36.32.png",
+    "sha256": "a93ebee3746278559693b18a6bacd60edb0a7d6b08875414645a9dbacb94a9f2",
+    "panorama_date": "2024-08",
+    "candidate_poi_uuid": "ee71fa3e-82e5-46b9-9752-4a584a4c4255",
+    "candidate_name": "ALDI Italia",
+    "visible_observation": "ALDI sign and parking; customer entrance barrier bears 2.10 m sign.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.36.50.png",
+    "sha256": "cfcae9253274d1a6a84a0881ff89b31c551d5e723de796dcb4646c41c8423f96",
+    "panorama_date": "2026-08",
+    "candidate_poi_uuid": "ee71fa3e-82e5-46b9-9752-4a584a4c4255",
+    "candidate_name": "ALDI Italia",
+    "visible_observation": "ALDI sign, customer frontage and parking across road.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.37.05.png",
+    "sha256": "a23426df3b16b749bcc915d9d79bd61ab1173b8665a28b4cc0645e31dc5f3671",
+    "panorama_date": "2026-08",
+    "candidate_poi_uuid": "ee71fa3e-82e5-46b9-9752-4a584a4c4255",
+    "candidate_name": "ALDI Italia",
+    "visible_observation": "Long building side, marked parking and road.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.37.24.png",
+    "sha256": "cced1b73e60a42ea1b91db44d27f9898daba2be344780fd3dd504d74d5e37471",
+    "panorama_date": "2026-08",
+    "candidate_poi_uuid": "ee71fa3e-82e5-46b9-9752-4a584a4c4255",
+    "candidate_name": "ALDI Italia",
+    "visible_observation": "Building side, driveway, directional sign and parking.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.37.43.png",
+    "sha256": "060bd1442c9ebb254bea1c5180d20e59b6ee1a15ab85cc69f8c7965f0050c741",
+    "panorama_date": "2019-03",
+    "candidate_poi_uuid": "407d018c-7f6b-4ab1-976e-247e2df9faec",
+    "candidate_name": "Lidl Italia",
+    "visible_observation": "Lidl signs, customer parking and frontage.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.38.13.png",
+    "sha256": "9ec4925b92ceda6dc67c5c7e1f79c6cb3288d51bbe1f592c9c86d2abaf3deefb",
+    "panorama_date": "2023-04",
+    "candidate_poi_uuid": "407d018c-7f6b-4ab1-976e-247e2df9faec",
+    "candidate_name": "Lidl Italia",
+    "visible_observation": "Lidl side wall, parking and recessed opening at left.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.38.38.png",
+    "sha256": "5ff866bd61077af0ede5f452a4b25f7ac2fc483892f9efcc6b7ef10c9a757572",
+    "panorama_date": "2026-08",
+    "candidate_poi_uuid": "fa6afb7d-8518-415a-89c4-85b6860ef1d8",
+    "candidate_name": "EUROSPAR Altichiero",
+    "visible_observation": "EUROSPAR frontage, bicycles and access lane.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.39.03.png",
+    "sha256": "e92cd0187f8b4fc9bde54c2570119f5071440443d73c559063918363e7d143ed",
+    "panorama_date": "2026-08",
+    "candidate_poi_uuid": "fa6afb7d-8518-415a-89c4-85b6860ef1d8",
+    "candidate_name": "EUROSPAR Altichiero",
+    "visible_observation": "Building side, sidewalk, double doors and lane.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.39.35.png",
+    "sha256": "427af1b8835c5b86aef3a0d7733269cec6a04e3b6b55448e427875ba99df640b",
+    "panorama_date": "2026-08",
+    "candidate_poi_uuid": "fa6afb7d-8518-415a-89c4-85b6860ef1d8",
+    "candidate_name": "EUROSPAR Altichiero",
+    "visible_observation": "Box truck alongside shuttered openings across street.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.40.04.png",
+    "sha256": "b25bd36be45c1e9ba566ebb244ed4852ba75631741364b5672e0fdbc53eec4de",
+    "panorama_date": "2022-11",
+    "candidate_poi_uuid": "8d4b3790-a925-43f0-a369-ee77dc4076bf",
+    "candidate_name": "Komok",
+    "visible_observation": "Vaillant Training Centre signage and parked vehicles at target area.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.40.18.png",
+    "sha256": "096ae800c2653f56e69feecc3ebc5ab41e99873a76b7be927a75fff08503a820",
+    "panorama_date": "2022-11",
+    "candidate_poi_uuid": "8d4b3790-a925-43f0-a369-ee77dc4076bf",
+    "candidate_name": "Komok",
+    "visible_observation": "Vaillant signage and parked cars and vans at target area.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.41.13.png",
+    "sha256": "c758d07ece4e58591c5d1445525fac94766c93a3c3233487e7a51bc5f4ddd0d8",
+    "panorama_date": "2026-09",
+    "candidate_poi_uuid": "8a5f5233-9e7b-478f-bd1e-62801722936d",
+    "candidate_name": "Alimentari, Pane e Salumi Antonella e Katiuscia",
+    "visible_observation": "Shuttered frontage, canopy, paved verge and curb; no readable Alimentari sign.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.42.13.png",
+    "sha256": "c7fd8bd966a03e8d67be7b925e718bed8f57c0b85618297c1898e074b99a750e",
+    "panorama_date": "2026-09",
+    "candidate_poi_uuid": "8a5f5233-9e7b-478f-bd1e-62801722936d",
+    "candidate_name": "Alimentari, Pane e Salumi Antonella e Katiuscia",
+    "visible_observation": "Shuttered frontage, awnings, pavement, curb and bollards; POI frontage association uncertain.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.42.42.png",
+    "sha256": "bd6549d96c28120f8598d5a7f3a368669064af5aebf5735daf740964f801ecf7",
+    "panorama_date": "2023-05",
+    "candidate_poi_uuid": "5fd41848-bff2-462f-9816-df38299e1e74",
+    "candidate_name": "Ali Supermercati",
+    "visible_observation": "Alì sign, store frontage, marked parking and cars.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.42.56.png",
+    "sha256": "0811b6d2c449ba9c138beab66e86b02186818f3ebedb5826a8c2046ddb110cad",
+    "panorama_date": "2023-05",
+    "candidate_poi_uuid": "5fd41848-bff2-462f-9816-df38299e1e74",
+    "candidate_name": "Ali Supermercati",
+    "visible_observation": "Alì sign and parking at corner with dead-end sign.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.43.09.png",
+    "sha256": "f5b0686620a5ea1fec2b251e29555a08ceb76dae950c49b9400f4f0e99cb4eff",
+    "panorama_date": "2023-05",
+    "candidate_poi_uuid": "5fd41848-bff2-462f-9816-df38299e1e74",
+    "candidate_name": "Ali Supermercati",
+    "visible_observation": "Parking and garage doors on side of residential building.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.43.36.png",
+    "sha256": "7db194151805d01cb1afe5482f35e2189bbcafac1d2b5ab935e45fc4d4213e1c",
+    "panorama_date": "2023-06",
+    "candidate_poi_uuid": "c45a0c5e-1cf4-452e-917e-494256a7270b",
+    "candidate_name": "Magazinul Romanesc Bacania cu Suflet",
+    "visible_observation": "Corner ground-floor frontage partly obscured by trees and junction signs.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.43.44.png",
+    "sha256": "567bb1fab0d9f87ab40acb133ef780b57b9edd807203d4fadf98fab4e09c4df4",
+    "panorama_date": "2022-11",
+    "candidate_poi_uuid": "c45a0c5e-1cf4-452e-917e-494256a7270b",
+    "candidate_name": "Magazinul Romanesc Bacania cu Suflet",
+    "visible_observation": "Ground-floor mini-market frontage under residential building and pedestrian crossing.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.43.57.png",
+    "sha256": "66a0ea7e70dd97c0e6889bf92438c761769b4114ab9f59aae8037b34f1ef36b5",
+    "panorama_date": "2022-11",
+    "candidate_poi_uuid": "c45a0c5e-1cf4-452e-917e-494256a7270b",
+    "candidate_name": "Magazinul Romanesc Bacania cu Suflet",
+    "visible_observation": "Building side with garage-like doors, parked vehicles and crossing.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.44.19.png",
+    "sha256": "eca1a7ab2c7be2f9ec1901e6c0a5233465f989c9d2abe064ee3baad4b2c8241f",
+    "panorama_date": "2024-08",
+    "candidate_poi_uuid": "6937e1ed-12f6-48e2-b2f7-fa9c092c0f58",
+    "candidate_name": "Alì",
+    "visible_observation": "Pontevigodarzere storefront, car park and pedestrian path.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.44.36.png",
+    "sha256": "36c46974361aed459fe642644864827d5db4097ad55dfc30b08ce1d65b39b4c5",
+    "panorama_date": "2024-08",
+    "candidate_poi_uuid": "6937e1ed-12f6-48e2-b2f7-fa9c092c0f58",
+    "candidate_name": "Alì",
+    "visible_observation": "Alì frontage and parking entrance with raised barrier.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.45.00.png",
+    "sha256": "77ee96fba482b73db4afcc7948ff16af9c6e3c761044d9100016ef63d7c77b92",
+    "panorama_date": "2026-08",
+    "candidate_poi_uuid": "6937e1ed-12f6-48e2-b2f7-fa9c092c0f58",
+    "candidate_name": "Alì",
+    "visible_observation": "Parking area, road guardrail and rear or side of building.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.45.25.png",
+    "sha256": "d20086f1eb5a7a1faceb70f4282fa7381b8051e7684bb6652016293f62ddc181",
+    "panorama_date": "2024-08",
+    "candidate_poi_uuid": "6937e1ed-12f6-48e2-b2f7-fa9c092c0f58",
+    "candidate_name": "Alì",
+    "visible_observation": "Alì customer exit, bollards, curb and nearby roundabout.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.46.28.png",
+    "sha256": "7bd628e705e84fd9786da29f6e84ffa43a4bdde43ce6a6fe7b003f1ac8a71f16",
+    "panorama_date": "2022-11",
+    "candidate_poi_uuid": "2fadb7f2-b5b3-4723-8a71-ead1ff13427e",
+    "candidate_name": "Pam Padova San Carlo",
+    "visible_observation": "Pam sign and descending entrance marked customer parking.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.46.41.png",
+    "sha256": "ec258e08c376eccd1d8afc061fc0eb4bbae655721cdcf74da969001521b16ae4",
+    "panorama_date": "2022-11",
+    "candidate_poi_uuid": "2fadb7f2-b5b3-4723-8a71-ead1ff13427e",
+    "candidate_name": "Pam Padova San Carlo",
+    "visible_observation": "Pam sign, pedestrian approach and marked parking spaces.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.47.03.png",
+    "sha256": "77e64a543f9b572fd18c28b74920b0b770514d7cbdd78445760733f0beb6d6eb",
+    "panorama_date": "2022-11",
+    "candidate_poi_uuid": "2fadb7f2-b5b3-4723-8a71-ead1ff13427e",
+    "candidate_name": "Pam Padova San Carlo",
+    "visible_observation": "OVS frontage and pedestrian path in same complex.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.47.42.png",
+    "sha256": "a930acb7b4294f3412fbdcfc657b51ec3f0d8d096c1bcdc36184726d23ac9784",
+    "panorama_date": "2024-08",
+    "candidate_poi_uuid": "2fadb7f2-b5b3-4723-8a71-ead1ff13427e",
+    "candidate_name": "Pam Padova San Carlo",
+    "visible_observation": "Complex frontage, roadway, tram tracks and parking signs.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.48.02.png",
+    "sha256": "305150b260d3b8a9fe536451e79094d2facc68a3063fd2ca273aee11b0255860",
+    "panorama_date": "2026-08",
+    "candidate_poi_uuid": "2fadb7f2-b5b3-4723-8a71-ead1ff13427e",
+    "candidate_name": "Pam Padova San Carlo",
+    "visible_observation": "Complex facade, tram crossing and pedestrians.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.48.22.png",
+    "sha256": "e13bcc3420ebf86c9a3e722d0f22edb908be869741d36651f558832c8293572b",
+    "panorama_date": "2026-09",
+    "candidate_poi_uuid": "2fadb7f2-b5b3-4723-8a71-ead1ff13427e",
+    "candidate_name": "Pam Padova San Carlo",
+    "visible_observation": "Intesa Sanpaolo sign and gated opening at complex side.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.48.44.png",
+    "sha256": "06199d56613507238aa738c4e1da6b5e886fe087dd2e5de6e430c5e96904d4df",
+    "panorama_date": "2026-09",
+    "candidate_poi_uuid": "d7d47f5a-c634-42cd-b83e-d9f5683afe4a",
+    "candidate_name": "Alìper",
+    "visible_observation": "Alìper sign and frontage along street.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.48.54.png",
+    "sha256": "2eed77a563f7c71bf17976e3924594988d7ced70cd9fe3c3bebc5048b8092009",
+    "panorama_date": "2026-09",
+    "candidate_poi_uuid": "d7d47f5a-c634-42cd-b83e-d9f5683afe4a",
+    "candidate_name": "Alìper",
+    "visible_observation": "Alìper sign and parking entrance with circular restriction signs.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.49.56.png",
+    "sha256": "7cae832eabbd4ed1ed40ab9b677f3b120c6286e05b1690452afd379c2380746e",
+    "panorama_date": "2026-09",
+    "candidate_poi_uuid": "d7d47f5a-c634-42cd-b83e-d9f5683afe4a",
+    "candidate_name": "Alìper",
+    "visible_observation": "Side/rear wall, gate, paved lane and green door.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  },
+  {
+    "filename": "Screenshot 2026-10-29 at 20.50.04.png",
+    "sha256": "92d4b1d949a8781b5e88bec0999f7d462bf76c0b44b9d234557cb0c86c9c8972",
+    "panorama_date": "2026-09",
+    "candidate_poi_uuid": "d7d47f5a-c634-42cd-b83e-d9f5683afe4a",
+    "candidate_name": "Alìper",
+    "visible_observation": "Side wall, green door, gated parking and direction sign.",
+    "map_target_status": "OCR/search target confirmed; camera location and association of every depicted facade remain unverified"
+  }
+]

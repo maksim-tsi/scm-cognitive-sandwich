@@ -1,0 +1,220 @@
+{
+  "network": "disabled",
+  "collections": {
+    "eval30": {
+      "assigned": 120,
+      "terminal_replays": 119,
+      "nonterminal_statuses": [
+        {
+          "route": "mistral",
+          "assignment": "EVAL-29",
+          "status": "prompt_budget_exceeded"
+        }
+      ],
+      "summaries": {
+        "qwen": {
+          "correct": 12,
+          "denominator": 30,
+          "useful_I2": 12,
+          "useful_I3": 12
+        },
+        "deepseek": {
+          "correct": 10,
+          "denominator": 30,
+          "useful_I2": 10,
+          "useful_I3": 10
+        },
+        "mistral": {
+          "correct": 2,
+          "denominator": 30,
+          "useful_I2": 2,
+          "useful_I3": 2
+        },
+        "deterministic": {
+          "correct": 30,
+          "denominator": 30,
+          "useful_I2": 30,
+          "useful_I3": 30
+        }
+      }
+    },
+    "luna-eval30": {
+      "assigned": 30,
+      "terminal_replays": 30,
+      "nonterminal_statuses": [],
+      "summaries": {
+        "openai": {
+          "correct": 16,
+          "denominator": 30,
+          "useful_I2": 16,
+          "useful_I3": 16
+        }
+      }
+    },
+    "r1": {
+      "assigned": 110,
+      "terminal_replays": 108,
+      "nonterminal_statuses": [
+        {
+          "route": "deepseek",
+          "assignment": "OPV2-08-C",
+          "status": "invalid_model_event"
+        },
+        {
+          "route": "openai",
+          "assignment": "OPV2-14-E",
+          "status": "model_output_failure"
+        }
+      ],
+      "summaries": {
+        "qwen": {
+          "correct": 7,
+          "denominator": 16,
+          "useful_I2": 7,
+          "useful_I3": 7,
+          "paired_difference": -0.3333333333333333
+        },
+        "deepseek": {
+          "correct": 6,
+          "denominator": 16,
+          "useful_I2": 6,
+          "useful_I3": 6,
+          "paired_difference": 0.0
+        },
+        "mistral": {
+          "correct": 4,
+          "denominator": 16,
+          "useful_I2": 4,
+          "useful_I3": 4,
+          "paired_difference": 0.0
+        },
+        "openai": {
+          "correct": 5,
+          "denominator": 16,
+          "useful_I2": 5,
+          "useful_I3": 5,
+          "paired_difference": 0.0
+        },
+        "dint": {
+          "correct": 16,
+          "denominator": 16,
+          "useful_I2": 16,
+          "useful_I3": 16,
+          "paired_difference": 0.0
+        }
+      }
+    }
+  },
+  "terminal_replays": 257,
+  "separate_scripted_controls_replayed": 87,
+  "visual_metadata": {
+    "POIs": 12,
+    "screenshots_not_distributed": 41,
+    "classification_counts": {
+      "conditionally_plausible": 6,
+      "potentially_constrained": 4,
+      "insufficient_visual_evidence": 2
+    }
+  },
+  "summary_rows": [
+    {
+      "collection": "eval30",
+      "route": "qwen",
+      "correct": 12,
+      "denominator": 30,
+      "useful_I2": 12,
+      "useful_I3": 12
+    },
+    {
+      "collection": "eval30",
+      "route": "deepseek",
+      "correct": 10,
+      "denominator": 30,
+      "useful_I2": 10,
+      "useful_I3": 10
+    },
+    {
+      "collection": "eval30",
+      "route": "mistral",
+      "correct": 2,
+      "denominator": 30,
+      "useful_I2": 2,
+      "useful_I3": 2
+    },
+    {
+      "collection": "eval30",
+      "route": "deterministic",
+      "correct": 30,
+      "denominator": 30,
+      "useful_I2": 30,
+      "useful_I3": 30
+    },
+    {
+      "collection": "luna-eval30",
+      "route": "openai",
+      "correct": 16,
+      "denominator": 30,
+      "useful_I2": 16,
+      "useful_I3": 16
+    },
+    {
+      "collection": "r1",
+      "route": "qwen",
+      "correct": 7,
+      "denominator": 16,
+      "useful_I2": 7,
+      "useful_I3": 7,
+      "paired_difference": -0.3333333333333333
+    },
+    {
+      "collection": "r1",
+      "route": "deepseek",
+      "correct": 6,
+      "denominator": 16,
+      "useful_I2": 6,
+      "useful_I3": 6,
+      "paired_difference": 0.0
+    },
+    {
+      "collection": "r1",
+      "route": "mistral",
+      "correct": 4,
+      "denominator": 16,
+      "useful_I2": 4,
+      "useful_I3": 4,
+      "paired_difference": 0.0
+    },
+    {
+      "collection": "r1",
+      "route": "openai",
+      "correct": 5,
+      "denominator": 16,
+      "useful_I2": 5,
+      "useful_I3": 5,
+      "paired_difference": 0.0
+    },
+    {
+      "collection": "r1",
+      "route": "dint",
+      "correct": 16,
+      "denominator": 16,
+      "useful_I2": 16,
+      "useful_I3": 16,
+      "paired_difference": 0.0
+    }
+  ],
+  "qualification_context": {
+    "date": "2026-11-01",
+    "python": "3.13.11",
+    "dependencies": {
+      "ortools": "9.15.6755",
+      "jsonschema": "4.26.0",
+      "matplotlib": "3.11.2",
+      "pytest": "9.1.1"
+    },
+    "new_model_requests": 0,
+    "new_DES_runs": 0,
+    "source_user_paths_attempted_in_isolated_check": 0,
+    "review_type": "automated independent-process offline verification, not external human/domain validation"
+  }
+}

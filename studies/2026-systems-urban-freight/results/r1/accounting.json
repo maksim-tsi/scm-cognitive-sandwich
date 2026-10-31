@@ -1,0 +1,58 @@
+{
+  "scientific_requests": 150,
+  "reserved_paid_usd": 1.19,
+  "estimated_or_upper_paid_usd": 0.06800395,
+  "actual_billed_usd": null,
+  "actual_billing_status": "unavailable; estimates and reservations are not invoices",
+  "providers": [
+    {
+      "provider": "qwen",
+      "calls": 31,
+      "input_tokens": 82962,
+      "output_tokens": 3015,
+      "reservation_usd": 0,
+      "usage_estimate_usd": 0,
+      "estimate_basis": "no external-provider charge"
+    },
+    {
+      "provider": "deepseek",
+      "calls": 35,
+      "input_tokens": 94975,
+      "output_tokens": 2652,
+      "cached_input_tokens": 61184,
+      "reservation_usd": 0.35,
+      "usage_estimate_usd": 0.0316749,
+      "estimate_basis": "peak rates, all input as cache misses; upper estimate"
+    },
+    {
+      "provider": "mistral",
+      "calls": 61,
+      "input_tokens": 182372,
+      "output_tokens": 6281,
+      "reservation_usd": 0.61,
+      "usage_estimate_usd": 0.0311244,
+      "estimate_basis": "standard rates, no cache discounts; upper estimate"
+    },
+    {
+      "provider": "openai",
+      "calls": 23,
+      "input_tokens": 56233,
+      "output_tokens": 1905,
+      "cached_input_tokens": 23590,
+      "cache_write_tokens": 30078,
+      "reservation_usd": 0.23,
+      "usage_estimate_usd": 0.00520465,
+      "estimate_basis": "standard rates and reported cache/write usage"
+    }
+  ],
+  "reference_rates_per_million_usd": {
+    "deepseek_peak_input": 0.3,
+    "deepseek_peak_output": 1.2,
+    "mistral_input": 0.15,
+    "mistral_output": 0.6,
+    "openai_input": 0.1,
+    "openai_cached": 0.01,
+    "openai_cache_write": 0.125,
+    "openai_output": 0.5
+  }
+}

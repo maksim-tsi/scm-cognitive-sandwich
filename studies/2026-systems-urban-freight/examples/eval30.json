@@ -1,0 +1,218 @@
+[
+  {
+    "route": "qwen",
+    "assignment_id": "EVAL-01",
+    "selection_stratum": [
+      "qwen",
+      "UPDATE",
+      true
+    ],
+    "original_final_text": "{\"action\":\"FINAL\",\"decision\":{\"action\":\"UPDATE\",\"parameters\":{\"close_D_s\":4200,\"open_B_s\":1800},\"plan\":{\"status\":\"FEASIBLE\",\"routes\":[{\"nodes\":[0,1,2,3,0],\"vehicle\":0},{\"nodes\":[0,4,0],\"vehicle\":1}]},\"evidence\":[\"DOC-01-B-OPEN\",\"DOC-01-D-FINISH\"],\"missing_slots\":[]}}",
+    "text_sha256": "e63601ac0dd068eb3e918e845219a0a58002934967f185ef8770b0560ef87393",
+    "source_response_sha256": "233b603a0eb1aba98fddcd160de1faa1928c5846b57c5dbb4bee0965c0590ff8"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "EVAL-01",
+    "selection_stratum": [
+      "deepseek",
+      "UPDATE",
+      true
+    ],
+    "original_final_text": "{\"action\":\"FINAL\",\"decision\":{\"action\":\"UPDATE\",\"parameters\":{\"open_B_s\":1800,\"close_D_s\":4200},\"plan\":{\"status\":\"FEASIBLE\",\"routes\":[{\"vehicle\":0,\"nodes\":[0,1,2,3,0]},{\"vehicle\":1,\"nodes\":[0,4,0]}]},\"evidence\":[\"DOC-01-B-OPEN\",\"DOC-01-D-FINISH\"],\"missing_slots\":[]}}",
+    "text_sha256": "35385fd1b6ef566fd8be49533b22b06cb3c6b30365dd2b9c3340afa0cb952c9d",
+    "source_response_sha256": "11e9308d7f59228270f8fb8eebbeb9e7746d12d11045cad07ac5368708ee47a9"
+  },
+  {
+    "route": "mistral",
+    "assignment_id": "EVAL-01",
+    "selection_stratum": [
+      "mistral",
+      "INSUFFICIENT",
+      false
+    ],
+    "original_final_text": "{\"action\": \"FINAL\", \"decision\": {\"action\": \"INSUFFICIENT\", \"evidence\": [\"Receiving-desk booking acceptance for open_B_s (node B) is indispensable but unavailable through accessible authoritative channels.\", \"Receiving-desk booking acceptance for close_D_s (node D) is indispensable but unavailable through accessible authoritative channels.\"], \"missing_slots\": [\"open_B_s\", \"close_D_s\"], \"parameters\": {}, \"plan\": null}}",
+    "text_sha256": "ef148216dfa07e304918b554b1b1538d5671dc8237043ed93f894120883c62d3",
+    "source_response_sha256": "94c691aa8fcdc7dc7b9e317c669b210127b89041e0a9827fcd4bcf791c385181"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "EVAL-02",
+    "selection_stratum": [
+      "deepseek",
+      "UPDATE",
+      false
+    ],
+    "original_final_text": "{\"action\":\"FINAL\",\"decision\":{\"action\":\"UPDATE\",\"parameters\":{\"load_A_kg\":25,\"payload_0_kg\":100},\"plan\":{\"status\":\"FEASIBLE\",\"routes\":[{\"vehicle\":0,\"nodes\":[0,1,2,3,0]},{\"vehicle\":1,\"nodes\":[0,4,0]}]},\"evidence\":[\"DOC-02-WEIGHBRIDGE\",\"DOC-02-RACK-CERT\"],\"missing_slots\":[]}}",
+    "text_sha256": "6d0a60b5e455f9185fab825cd45f764ed19c56f3556a83b4d47f97fcddf5f2c7",
+    "source_response_sha256": "0df0572c400408b4fc98f74bee97e0ad3e1d6a7385bfcdfbbfb9211001e2d0dd"
+  },
+  {
+    "route": "qwen",
+    "assignment_id": "EVAL-02",
+    "selection_stratum": [
+      "qwen",
+      "UPDATE",
+      false
+    ],
+    "original_final_text": "{\"action\":\"FINAL\",\"decision\":{\"action\":\"UPDATE\",\"evidence\":[\"DOC-02-WEIGHBRIDGE\",\"DOC-02-RACK-CERT\"],\"missing_slots\":[],\"parameters\":{\"load_A_kg\":60,\"payload_0_kg\":80},\"plan\":{\"routes\":[{\"nodes\":[0,1,2,3,0],\"vehicle\":0},{\"nodes\":[0,4,0],\"vehicle\":1}],\"status\":\"FEASIBLE\"}}}",
+    "text_sha256": "6a2ee6966a6682c10d92571f09196247225bee2a352df6eb017b5a39ffd7356b",
+    "source_response_sha256": "52f4412b48a5df872d0d2ce0fbbfa6456d85b050147daebcaf1eee5ffb4406b5"
+  },
+  {
+    "route": "qwen",
+    "assignment_id": "EVAL-03",
+    "selection_stratum": [
+      "qwen",
+      "INSUFFICIENT",
+      false
+    ],
+    "original_final_text": "{\n  \"action\": \"FINAL\",\n  \"decision\": {\n    \"action\": \"INSUFFICIENT\",\n    \"parameters\": {},\n    \"plan\": null,\n    \"evidence\": [\n      \"DOC-03-LOADING-RELEASE\",\n      \"DOC-03-PACKER-NOTE\",\n      \"DOC-03-UNLOAD\"\n    ],\n    \"missing_slots\": [\n      \"load_C_kg\",\n      \"service_D_s\"\n    ]\n  }\n}",
+    "text_sha256": "1fb87625ccd6e0a1e737a767c6617033533fbf3bf679707ffc288a0df7a04a1f",
+    "source_response_sha256": "1321eda3277cdd7ca343f5ec1d6593b79e1e480bf267529322952e72bcbc5254"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "EVAL-07",
+    "selection_stratum": [
+      "deepseek",
+      "INSUFFICIENT",
+      true
+    ],
+    "original_final_text": "{\"action\":\"FINAL\",\"decision\":{\"action\":\"INSUFFICIENT\",\"parameters\":{},\"plan\":null,\"evidence\":[\"DOC-07-A-ACCEPT\",\"DOC-07-D-UNSIGNED\"],\"missing_slots\":[\"close_D_s\"]}}",
+    "text_sha256": "06c640191657f430a5360e731ba47d076a9cf8fc9dc4b1f4c54d5fac9e9f332f",
+    "source_response_sha256": "7177ad967cf52af145e768d07e46534147482671bc53db09e08e7a488c316e4d"
+  },
+  {
+    "route": "mistral",
+    "assignment_id": "EVAL-08",
+    "selection_stratum": [
+      "mistral",
+      "UPDATE",
+      false
+    ],
+    "original_final_text": "{\"action\": \"FINAL\", \"decision\": {\"action\": \"UPDATE\", \"evidence\": [\"DOC-08-MASS-A: certified gross mass 70 kg including packaging\", \"DOC-08-MASS-B: certified gross mass 60 kg including packaging\"], \"missing_slots\": [], \"parameters\": {\"load_A_kg\": 70, \"load_B_kg\": 60, \"shift_end_s\": 10800, \"shift_start_s\": 0}, \"plan\": {\"routes\": [{\"nodes\": [0, 1, 2, 0], \"vehicle\": 0}, {\"nodes\": [0, 3, 4, 0], \"vehicle\": 1}], \"status\": \"FEASIBLE\"}} }",
+    "text_sha256": "fc34774abc2ec729ba7307a91c6594e37419615b1bcf7cf1564772709e7a22d7",
+    "source_response_sha256": "f57a6440089f56eb1b2f003e25be169eeb414a3582b9e0ce35675391077a50bb"
+  },
+  {
+    "route": "mistral",
+    "assignment_id": "EVAL-09",
+    "selection_stratum": [
+      "mistral",
+      "INFEASIBLE",
+      false
+    ],
+    "original_final_text": "{\"action\": \"FINAL\", \"decision\": {\"action\": \"INFEASIBLE\", \"evidence\": [\"Verified service_A_s=600 (DOC-09-SERVICE) supersedes current_parameters service_A_s=300\", \"Verified close_A_s=660 (DOC-09-FINISH) supersedes current_parameters close_A_s=7200\", \"Routing window for node 1 (A) closes at 660 s, but earliest arrival via any route ≥ 86 s (depot→1) plus service 600 s would finish at 686 s > 660 s\", \"Vehicle 0 route [0,1,2,3,0] cannot serve node 1 within its close window\", \"Vehicle 1 route [0,4,0] is feasible but does not include early unloading at A\"], \"missing_slots\": [], \"parameters\": {\"close_A_s\": 660, \"service_A_s\": 600}, \"plan\": null}}",
+    "text_sha256": "26e1db69cb38f7b14736f24f862fe07106e216399f4663a7103f401f605d872e",
+    "source_response_sha256": "acc2748252c13f39db74f1c288b297703caca33d368a190cc7097a1ced2d45e7"
+  },
+  {
+    "route": "qwen",
+    "assignment_id": "EVAL-13",
+    "selection_stratum": [
+      "qwen",
+      "INSUFFICIENT",
+      true
+    ],
+    "original_final_text": "{\n  \"action\": \"FINAL\",\n  \"decision\": {\n    \"action\": \"INSUFFICIENT\",\n    \"parameters\": {},\n    \"plan\": null,\n    \"evidence\": [\n      \"DOC-13-RECEIVER-ONE\",\n      \"DOC-13-RECEIVER-TWO\",\n      \"DOC-13-ALLOWANCE\"\n    ],\n    \"missing_slots\": [\n      \"close_A_s\"\n    ]\n  }\n}",
+    "text_sha256": "69aada5cb57ca87710f84992da611681438d66361aea0d60f437b0f8d37d947b",
+    "source_response_sha256": "a3d3895e707617ef602aede3be386f1e8c46b16c5bf44140254b7007364ef8c6"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "EVAL-13",
+    "selection_stratum": [
+      "deepseek",
+      "CLARIFY",
+      false
+    ],
+    "original_final_text": "{\"action\":\"FINAL\",\"decision\":{\"action\":\"CLARIFY\",\"parameters\":{},\"plan\":null,\"evidence\":[\"DOC-13-RECEIVER-ONE\",\"DOC-13-RECEIVER-TWO\",\"DOC-13-ALLOWANCE\"],\"missing_slots\":[\"close_A_s\",\"service_B_s\"]}}",
+    "text_sha256": "2ad8a9961e4c6e2da4637c8c2c72c66a38a4dd7b363039ac3aac0bf6dbcea9aa",
+    "source_response_sha256": "6eb1d9d959277c7d753f62caa14bb171102202358c53568592682eaef7fdbf8d"
+  },
+  {
+    "route": "mistral",
+    "assignment_id": "EVAL-13",
+    "selection_stratum": [
+      "mistral",
+      "INSUFFICIENT",
+      true
+    ],
+    "original_final_text": "{\"action\": \"FINAL\", \"decision\": {\"action\": \"INSUFFICIENT\", \"evidence\": [\"Receiver has not provided an authoritative operative booking deadline for close_A_s despite two conflicting sheets (DOC-13-RECEIVER-ONE and DOC-13-RECEIVER-TWO).\", \"Dispatcher cannot invent or override receiver booking acceptance per policy.\"], \"missing_slots\": [\"close_A_s\"], \"parameters\": {}, \"plan\": null}}",
+    "text_sha256": "fa4d1b95b320aa3f3d9a6cb364db925e6f30ca28850d99db6580c3151f54ac6d",
+    "source_response_sha256": "11c16049a77bc32a18444f13306ff45e78a1f8c0b51fc79a0c966850a583fd3e"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "EVAL-14",
+    "selection_stratum": [
+      "deepseek",
+      "RETAIN",
+      true
+    ],
+    "original_final_text": "{\"action\":\"FINAL\",\"decision\":{\"action\":\"RETAIN\",\"parameters\":{\"service_A_s\":300,\"load_D_kg\":35},\"plan\":{\"status\":\"FEASIBLE\",\"routes\":[{\"vehicle\":0,\"nodes\":[0,1,3,2,0]},{\"vehicle\":1,\"nodes\":[0,4,0]}]},\"evidence\":[\"DOC-14-EXISTING-SERVICE\",\"DOC-14-EXISTING-MASS\"],\"missing_slots\":[]}}",
+    "text_sha256": "5ff246ffeaf03460009c69180a6590652ef124afcf6b6429162adab76416c540",
+    "source_response_sha256": "55431cc87151051a675f0f7e2fecf849c0f308ef4cb447c7de48e1a9561dc265"
+  },
+  {
+    "route": "mistral",
+    "assignment_id": "EVAL-14",
+    "selection_stratum": [
+      "mistral",
+      "RETAIN",
+      false
+    ],
+    "original_final_text": "{\"action\": \"FINAL\", \"decision\": {\"action\": \"RETAIN\", \"evidence\": [\"DOC-14-EXISTING-SERVICE (dispatcher, certified_fact): service_A_s = 300 seconds\", \"DOC-14-EXISTING-MASS (warehouse_control, certified_fact): load_D_kg = 35 kg\", \"Routing snapshot (OSM-derived, 20 km/h proxy): feasible 4-stop plan with vehicles 0 and 1, nodes [0,1,3,2,0] and [0,4,0], total distance 8.3 km, total time 1,334 s ≤ 7,200 s close_s\"], \"missing_slots\": [], \"parameters\": {\"load_D_kg\": 35, \"service_A_s\": 300}, \"plan\": {\"routes\": [{\"nodes\": [0, 1, 3, 2, 0], \"vehicle\": 0}, {\"nodes\": [0, 4, 0], \"vehicle\": 1}], \"status\": \"FEASIBLE\"}}}",
+    "text_sha256": "be06a91ab4edcaf5fc3128b601617ff5f095de86b5d2d1df5e18942a1d668f17",
+    "source_response_sha256": "eacb56f7e2206d848e56bc762b4c1f845ee16c742355241bddcf266cf6673ee0"
+  },
+  {
+    "route": "qwen",
+    "assignment_id": "EVAL-14",
+    "selection_stratum": [
+      "qwen",
+      "RETAIN",
+      true
+    ],
+    "original_final_text": "{\n  \"action\": \"FINAL\",\n  \"decision\": {\n    \"action\": \"RETAIN\",\n    \"parameters\": {\n      \"service_A_s\": 300,\n      \"load_D_kg\": 35\n    },\n    \"plan\": {\n      \"status\": \"FEASIBLE\",\n      \"routes\": [\n        {\n          \"vehicle\": 0,\n          \"nodes\": [\n            0,\n            1,\n            3,\n            2,\n            0\n          ]\n        },\n        {\n          \"vehicle\": 1,\n          \"nodes\": [\n            0,\n            4,\n            0\n          ]\n        }\n      ]\n    },\n    \"evidence\": [\n      \"DOC-14-EXISTING-SERVICE\",\n      \"DOC-14-EXISTING-MASS\"\n    ],\n    \"missing_slots\": []\n  }\n}",
+    "text_sha256": "0b1bc41168ac0e257d67103d559a550cbc35b877b3a283b6d845302d084cd053",
+    "source_response_sha256": "a034098c48cd58e4abbe5781ec9950a91e6a01f11ee6ca9d7de472abb2cf8013"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "EVAL-21",
+    "selection_stratum": [
+      "deepseek",
+      "INSUFFICIENT",
+      false
+    ],
+    "original_final_text": "{\"action\":\"FINAL\",\"decision\":{\"action\":\"INSUFFICIENT\",\"parameters\":{},\"plan\":null,\"evidence\":[\"DOC-21-LATE-OPEN\",\"DOC-21-C-ALLOWANCE\"],\"missing_slots\":[\"open_A_s\",\"service_C_s\"]}}",
+    "text_sha256": "84a53454a92b9b3f2ad09818c87bbc562798d4111fc9681e2780676b1f29fba3",
+    "source_response_sha256": "15ddc6b9b3ecdb96d08d07df2756ba2bda596279bdbf45b62a9ace36b8075bef"
+  },
+  {
+    "route": "qwen",
+    "assignment_id": "EVAL-30",
+    "selection_stratum": [
+      "qwen",
+      "RETAIN",
+      false
+    ],
+    "original_final_text": "{\"action\":\"FINAL\",\"decision\":{\"action\":\"RETAIN\",\"parameters\":{\"load_C_kg\":25,\"service_A_s\":300},\"plan\":{\"status\":\"FEASIBLE\",\"routes\":[{\"vehicle\":0,\"nodes\":[0,1,2,0]},{\"vehicle\":1,\"nodes\":[0,3,4,0]}]},\"evidence\":[\"DOC-30-SERVICE\",\"DOC-30-MASS\",\"QUALITY-30-BATCH\",\"QUALIFICATION-30-FLEET\"],\"missing_slots\":[]}}",
+    "text_sha256": "49e3483223b95a2e49d3c021005b6435bc4a404cbd9d438888b2a2f8ab114459",
+    "source_response_sha256": "fe25a246617966c0c8c150436d216cce39929ee55a88bdf008590788a3695bd0"
+  },
+  {
+    "route": "deepseek",
+    "assignment_id": "EVAL-30",
+    "selection_stratum": [
+      "deepseek",
+      "RETAIN",
+      false
+    ],
+    "original_final_text": "{\"action\":\"FINAL\",\"decision\":{\"action\":\"RETAIN\",\"parameters\":{\"service_A_s\":300,\"load_C_kg\":25},\"plan\":{\"status\":\"FEASIBLE\",\"routes\":[{\"vehicle\":0,\"nodes\":[0,1,2,0]},{\"vehicle\":1,\"nodes\":[0,3,4,0]}]},\"evidence\":[\"DOC-30-SERVICE\",\"DOC-30-MASS\",\"QUALITY-30-BATCH\",\"QUALIFICATION-30-FLEET\"],\"missing_slots\":[]}}",
+    "text_sha256": "a182581f3ab07203b191750e0177f64ae8426a0c0a517365f7b6813873b02224",
+    "source_response_sha256": "2ca7af78bb8ab16b6d3d9f8d01cb4b63418a4b9cf401bf7660d824797dc156dd"
+  }
+]
