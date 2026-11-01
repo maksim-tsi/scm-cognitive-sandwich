@@ -1,0 +1,30 @@
+def canonical(value: Any) -> str:
+    return json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
+
+
+def build_prompt(
+    incident: dict[str, Any], condition: str, attempt: int, violations: list[str]
+) -> tuple[str, dict[str, Any]]:
+    role = "initial_generation" if condition == "llm_only" else "structured_repair"
+    template = (
+        INITIAL_TEMPLATE if role == "initial_generation" else REPAIR_TEMPLATE
+    ).read_text(encoding="utf-8")
+    prompt = template.replace("{{INCIDENT_JSON}}", canonical(incident))
+    prompt = prompt.replace("{{CONDITION}}", condition).replace(
+        "{{ATTEMPT_INDEX}}", str(attempt)
+    )
+    if role != "initial_generation":
+        feedback = (
+            GENERIC_FEEDBACK
+            if condition == "gate_only"
+            else {
+                "status": "REJECTED",
+                "message": "Repair the localized deterministic violations.",
+                "violations": violations,
+            }
+        )
+        prompt = prompt.replace("{{FEEDBACK_JSON}}", canonical(feedback))
+    if "{{" in prompt or "}}" in prompt:
+        raise RuntimeError("unresolved Phase-B prompt token")
+    schema = legacy.response_schema(incident, condition, attempt)
+    return prompt, schema

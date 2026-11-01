@@ -1,0 +1,14 @@
+Repair one typed cargo-allocation artifact for a bounded, synthetic port-disruption incident.
+Return only the corrected JSON object required by the supplied strict JSON Schema. Do not add Markdown, prose, or undeclared fields.
+Use only identifiers present in INCIDENT_JSON. Apply the localized deterministic feedback in FEEDBACK_JSON; do not claim that feasibility is proven.
+Allocate nonnegative TEU only to eligible options. Preserve each lot's declared demand using allocations plus explicit unallocated_teu.
+Set condition and attempt_index exactly as supplied.
+
+INCIDENT_JSON:
+{{INCIDENT_JSON}}
+
+FEEDBACK_JSON:
+{{FEEDBACK_JSON}}
+
+CONDITION: {{CONDITION}}
+ATTEMPT_INDEX: {{ATTEMPT_INDEX}}

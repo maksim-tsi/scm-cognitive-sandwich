@@ -1,0 +1,2532 @@
+[
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-001-GEN-001",
+    "condition": "structured_repair",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 76.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-001-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-001-OPTION-1"
+        },
+        {
+          "allocated_teu": 76.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-001-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-001-OPTION-2"
+        },
+        {
+          "allocated_teu": 75.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-001-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-001-OPTION-3"
+        },
+        {
+          "allocated_teu": 75.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-001-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-001-OPTION-1"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-001-ARTIFACT-1",
+      "attempt_index": 1,
+      "condition": "structured_repair",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-001",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-001-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-001-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-001-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-001-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "692ca006e9c4431bada0ac8669c5cc4c5c3fc6bfaf43ef57e21d06f430aba4e2"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-006-GEN-001",
+    "condition": "gate_only",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 28.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-006-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-006-OPTION-1"
+        },
+        {
+          "allocated_teu": 28.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-006-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-006-OPTION-2"
+        },
+        {
+          "allocated_teu": 28.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-006-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-006-OPTION-3"
+        },
+        {
+          "allocated_teu": 28.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-006-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-006-OPTION-1"
+        },
+        {
+          "allocated_teu": 28.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-006-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-006-OPTION-2"
+        },
+        {
+          "allocated_teu": 28.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-006-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-006-OPTION-3"
+        },
+        {
+          "allocated_teu": 28.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-006-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-006-OPTION-1"
+        },
+        {
+          "allocated_teu": 28.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-006-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-006-OPTION-2"
+        },
+        {
+          "allocated_teu": 28.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-006-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-006-OPTION-3"
+        },
+        {
+          "allocated_teu": 27.666666666666668,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-006-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-006-OPTION-1"
+        },
+        {
+          "allocated_teu": 27.666666666666668,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-006-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-006-OPTION-2"
+        },
+        {
+          "allocated_teu": 27.666666666666668,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-006-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-006-OPTION-3"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-006-ARTIFACT-2",
+      "attempt_index": 2,
+      "condition": "gate_only",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-006",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-006-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-006-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-006-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-006-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "1e45d47878f61132aa9f7584526204b4f13916a633d32b931ed4a3adf9fb94e8"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-010-GEN-001",
+    "condition": "gate_only",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 59.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-010-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-010-OPTION-1"
+        },
+        {
+          "allocated_teu": 59.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-010-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-010-OPTION-2"
+        },
+        {
+          "allocated_teu": 59.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-010-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-010-OPTION-3"
+        },
+        {
+          "allocated_teu": 59.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-010-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-010-OPTION-1"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-010-ARTIFACT-1",
+      "attempt_index": 0,
+      "condition": "gate_only",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-010",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-010-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-010-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-010-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-010-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "8658cf0c1a42dc6451197e94e6c8076d3aed4f5b1463d4f7c8ecdb8a25067b91"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-010-GEN-001",
+    "condition": "structured_repair",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 59.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-010-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-010-OPTION-1"
+        },
+        {
+          "allocated_teu": 59.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-010-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-010-OPTION-2"
+        },
+        {
+          "allocated_teu": 59.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-010-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-010-OPTION-3"
+        },
+        {
+          "allocated_teu": 59.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-010-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-010-OPTION-1"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-010-ARTIFACT-1",
+      "attempt_index": 0,
+      "condition": "structured_repair",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-010",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-010-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-010-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-010-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-010-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "8658cf0c1a42dc6451197e94e6c8076d3aed4f5b1463d4f7c8ecdb8a25067b91"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-011-GEN-001",
+    "condition": "gate_only",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 28.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-011-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-011-OPTION-1"
+        },
+        {
+          "allocated_teu": 28.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-011-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-011-OPTION-2"
+        },
+        {
+          "allocated_teu": 28.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-011-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-011-OPTION-3"
+        },
+        {
+          "allocated_teu": 28.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-011-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-011-OPTION-1"
+        },
+        {
+          "allocated_teu": 28.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-011-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-011-OPTION-2"
+        },
+        {
+          "allocated_teu": 28.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-011-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-011-OPTION-3"
+        },
+        {
+          "allocated_teu": 28.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-011-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-011-OPTION-1"
+        },
+        {
+          "allocated_teu": 28.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-011-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-011-OPTION-2"
+        },
+        {
+          "allocated_teu": 28.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-011-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-011-OPTION-3"
+        },
+        {
+          "allocated_teu": 28.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-011-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-011-OPTION-1"
+        },
+        {
+          "allocated_teu": 28.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-011-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-011-OPTION-2"
+        },
+        {
+          "allocated_teu": 28.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-011-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-011-OPTION-3"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-011-ARTIFACT-1",
+      "attempt_index": 0,
+      "condition": "gate_only",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-011",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-011-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-011-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-011-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-011-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "49239ffb977f88b9e31318a079690ce9d4bf59d5601fa9a6e8b3f0fba892a4c9"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-011-GEN-001",
+    "condition": "structured_repair",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 28.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-011-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-011-OPTION-1"
+        },
+        {
+          "allocated_teu": 28.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-011-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-011-OPTION-2"
+        },
+        {
+          "allocated_teu": 28.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-011-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-011-OPTION-3"
+        },
+        {
+          "allocated_teu": 28.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-011-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-011-OPTION-1"
+        },
+        {
+          "allocated_teu": 28.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-011-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-011-OPTION-2"
+        },
+        {
+          "allocated_teu": 28.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-011-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-011-OPTION-3"
+        },
+        {
+          "allocated_teu": 28.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-011-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-011-OPTION-1"
+        },
+        {
+          "allocated_teu": 28.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-011-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-011-OPTION-2"
+        },
+        {
+          "allocated_teu": 28.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-011-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-011-OPTION-3"
+        },
+        {
+          "allocated_teu": 28.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-011-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-011-OPTION-1"
+        },
+        {
+          "allocated_teu": 28.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-011-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-011-OPTION-2"
+        },
+        {
+          "allocated_teu": 28.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-011-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-011-OPTION-3"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-011-ARTIFACT-1",
+      "attempt_index": 0,
+      "condition": "structured_repair",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-011",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-011-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-011-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-011-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-011-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "49239ffb977f88b9e31318a079690ce9d4bf59d5601fa9a6e8b3f0fba892a4c9"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-012-GEN-001",
+    "condition": "gate_only",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 62.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-012-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-012-OPTION-1"
+        },
+        {
+          "allocated_teu": 62.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-012-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-012-OPTION-2"
+        },
+        {
+          "allocated_teu": 61.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-012-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-012-OPTION-3"
+        },
+        {
+          "allocated_teu": 61.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-012-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-012-OPTION-1"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-012-ARTIFACT-1",
+      "attempt_index": 1,
+      "condition": "gate_only",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-012",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-012-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-012-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-012-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-012-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "136025ebf4abaf53094984b77bab79fce1f6c97741ff6c497c22b495714e21c0"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-013-GEN-001",
+    "condition": "gate_only",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 71.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-013-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-013-OPTION-1"
+        },
+        {
+          "allocated_teu": 70.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-013-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-013-OPTION-2"
+        },
+        {
+          "allocated_teu": 70.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-013-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-013-OPTION-3"
+        },
+        {
+          "allocated_teu": 70.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-013-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-013-OPTION-1"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-013-ARTIFACT-1",
+      "attempt_index": 0,
+      "condition": "gate_only",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-013",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-013-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-013-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-013-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-013-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "f2df6fb687478ae68461478b8291e4883c3c93148f60d7f5644c633cb954cfa7"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-013-GEN-001",
+    "condition": "structured_repair",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 71.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-013-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-013-OPTION-1"
+        },
+        {
+          "allocated_teu": 70.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-013-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-013-OPTION-2"
+        },
+        {
+          "allocated_teu": 70.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-013-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-013-OPTION-3"
+        },
+        {
+          "allocated_teu": 70.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-013-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-013-OPTION-1"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-013-ARTIFACT-1",
+      "attempt_index": 0,
+      "condition": "structured_repair",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-013",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-013-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-013-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-013-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-013-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "f2df6fb687478ae68461478b8291e4883c3c93148f60d7f5644c633cb954cfa7"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-014-GEN-001",
+    "condition": "gate_only",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 29.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-014-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-014-OPTION-1"
+        },
+        {
+          "allocated_teu": 29.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-014-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-014-OPTION-2"
+        },
+        {
+          "allocated_teu": 29.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-014-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-014-OPTION-3"
+        },
+        {
+          "allocated_teu": 29.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-014-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-014-OPTION-1"
+        },
+        {
+          "allocated_teu": 29.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-014-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-014-OPTION-2"
+        },
+        {
+          "allocated_teu": 29.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-014-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-014-OPTION-3"
+        },
+        {
+          "allocated_teu": 29.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-014-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-014-OPTION-1"
+        },
+        {
+          "allocated_teu": 29.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-014-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-014-OPTION-2"
+        },
+        {
+          "allocated_teu": 29.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-014-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-014-OPTION-3"
+        },
+        {
+          "allocated_teu": 29.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-014-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-014-OPTION-1"
+        },
+        {
+          "allocated_teu": 29.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-014-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-014-OPTION-2"
+        },
+        {
+          "allocated_teu": 29.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-014-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-014-OPTION-3"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-014-ARTIFACT-2",
+      "attempt_index": 2,
+      "condition": "gate_only",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-014",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-014-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-014-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-014-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-014-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "9ff95dede5b3c9e05be83e4a655b296a9ded9d87a73d2d54d4317e4f5dc866ef"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-015-GEN-001",
+    "condition": "gate_only",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 64.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-015-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-015-OPTION-1"
+        },
+        {
+          "allocated_teu": 64.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-015-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-015-OPTION-2"
+        },
+        {
+          "allocated_teu": 63.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-015-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-015-OPTION-3"
+        },
+        {
+          "allocated_teu": 63.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-015-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-015-OPTION-1"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-015-ARTIFACT-3",
+      "attempt_index": 3,
+      "condition": "gate_only",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-015",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-015-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-015-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-015-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-015-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "81f015642cd3efd6ead15651096b0a84409322e5ca0d235927c2b8d5b0d64f66"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-022-GEN-001",
+    "condition": "gate_only",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 16.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-022-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-022-OPTION-1"
+        },
+        {
+          "allocated_teu": 16.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-022-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-022-OPTION-2"
+        },
+        {
+          "allocated_teu": 16.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-022-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-022-OPTION-3"
+        },
+        {
+          "allocated_teu": 16.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-022-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-022-OPTION-1"
+        },
+        {
+          "allocated_teu": 16.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-022-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-022-OPTION-2"
+        },
+        {
+          "allocated_teu": 16.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-022-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-022-OPTION-3"
+        },
+        {
+          "allocated_teu": 15.666666666666666,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-022-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-022-OPTION-1"
+        },
+        {
+          "allocated_teu": 15.666666666666666,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-022-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-022-OPTION-2"
+        },
+        {
+          "allocated_teu": 15.666666666666666,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-022-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-022-OPTION-3"
+        },
+        {
+          "allocated_teu": 15.666666666666666,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-022-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-022-OPTION-1"
+        },
+        {
+          "allocated_teu": 15.666666666666666,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-022-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-022-OPTION-2"
+        },
+        {
+          "allocated_teu": 15.666666666666666,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-022-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-022-OPTION-3"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-022-ARTIFACT-1",
+      "attempt_index": 0,
+      "condition": "gate_only",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-022",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-022-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-022-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-022-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-022-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "bc43a97a11f9883b1b0bf60f9b42862f775044c31c7903a34371bcef79b79f2d"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-022-GEN-001",
+    "condition": "structured_repair",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 16.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-022-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-022-OPTION-1"
+        },
+        {
+          "allocated_teu": 16.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-022-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-022-OPTION-2"
+        },
+        {
+          "allocated_teu": 16.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-022-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-022-OPTION-3"
+        },
+        {
+          "allocated_teu": 16.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-022-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-022-OPTION-1"
+        },
+        {
+          "allocated_teu": 16.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-022-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-022-OPTION-2"
+        },
+        {
+          "allocated_teu": 16.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-022-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-022-OPTION-3"
+        },
+        {
+          "allocated_teu": 15.666666666666666,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-022-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-022-OPTION-1"
+        },
+        {
+          "allocated_teu": 15.666666666666666,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-022-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-022-OPTION-2"
+        },
+        {
+          "allocated_teu": 15.666666666666666,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-022-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-022-OPTION-3"
+        },
+        {
+          "allocated_teu": 15.666666666666666,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-022-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-022-OPTION-1"
+        },
+        {
+          "allocated_teu": 15.666666666666666,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-022-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-022-OPTION-2"
+        },
+        {
+          "allocated_teu": 15.666666666666666,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-022-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-022-OPTION-3"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-022-ARTIFACT-1",
+      "attempt_index": 0,
+      "condition": "structured_repair",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-022",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-022-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-022-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-022-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-022-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "bc43a97a11f9883b1b0bf60f9b42862f775044c31c7903a34371bcef79b79f2d"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-024-GEN-001",
+    "condition": "structured_repair",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 30.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-024-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-024-OPTION-1"
+        },
+        {
+          "allocated_teu": 29.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-024-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-024-OPTION-2"
+        },
+        {
+          "allocated_teu": 30.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-024-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-024-OPTION-3"
+        },
+        {
+          "allocated_teu": 30.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-024-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-024-OPTION-1"
+        },
+        {
+          "allocated_teu": 29.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-024-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-024-OPTION-2"
+        },
+        {
+          "allocated_teu": 30.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-024-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-024-OPTION-3"
+        },
+        {
+          "allocated_teu": 30.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-024-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-024-OPTION-1"
+        },
+        {
+          "allocated_teu": 29.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-024-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-024-OPTION-2"
+        },
+        {
+          "allocated_teu": 30.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-024-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-024-OPTION-3"
+        },
+        {
+          "allocated_teu": 30.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-024-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-024-OPTION-1"
+        },
+        {
+          "allocated_teu": 29.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-024-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-024-OPTION-2"
+        },
+        {
+          "allocated_teu": 30.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-024-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-024-OPTION-3"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-024-ARTIFACT-1",
+      "attempt_index": 1,
+      "condition": "structured_repair",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-024",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-024-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-024-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-024-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-024-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "9735b2cd5c43744051539ea567f2fa870ac32e52954d0f889b92f6ed90181ccc"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-027-GEN-001",
+    "condition": "gate_only",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 30.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-027-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-027-OPTION-1"
+        },
+        {
+          "allocated_teu": 30.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-027-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-027-OPTION-2"
+        },
+        {
+          "allocated_teu": 30.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-027-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-027-OPTION-3"
+        },
+        {
+          "allocated_teu": 30.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-027-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-027-OPTION-1"
+        },
+        {
+          "allocated_teu": 30.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-027-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-027-OPTION-2"
+        },
+        {
+          "allocated_teu": 30.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-027-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-027-OPTION-3"
+        },
+        {
+          "allocated_teu": 30.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-027-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-027-OPTION-1"
+        },
+        {
+          "allocated_teu": 30.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-027-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-027-OPTION-2"
+        },
+        {
+          "allocated_teu": 30.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-027-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-027-OPTION-3"
+        },
+        {
+          "allocated_teu": 29.666666666666668,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-027-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-027-OPTION-1"
+        },
+        {
+          "allocated_teu": 29.666666666666668,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-027-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-027-OPTION-2"
+        },
+        {
+          "allocated_teu": 29.666666666666668,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-027-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-027-OPTION-3"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-027-ARTIFACT-1",
+      "attempt_index": 1,
+      "condition": "gate_only",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-027",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-027-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-027-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-027-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-027-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "1783259300b2de5e6dfba78b5cb2c421865f98ace0c67544ffd3547f6076db3d"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-030-GEN-001",
+    "condition": "gate_only",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 69.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-030-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-030-OPTION-1"
+        },
+        {
+          "allocated_teu": 36.551324,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-030-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-030-OPTION-1"
+        },
+        {
+          "allocated_teu": 32.448676,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-030-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-030-OPTION-2"
+        },
+        {
+          "allocated_teu": 69.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-030-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-030-OPTION-2"
+        },
+        {
+          "allocated_teu": 69.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-030-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-030-OPTION-3"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-030-ARTIFACT-1",
+      "attempt_index": 0,
+      "condition": "gate_only",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-030",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-030-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-030-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-030-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-030-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "95315092cc3842fe07ff4f2d87104fda427c10c9b23a28790f858ade292a67cc"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-030-GEN-001",
+    "condition": "structured_repair",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 69.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-030-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-030-OPTION-1"
+        },
+        {
+          "allocated_teu": 36.551324,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-030-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-030-OPTION-1"
+        },
+        {
+          "allocated_teu": 32.448676,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-030-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-030-OPTION-2"
+        },
+        {
+          "allocated_teu": 69.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-030-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-030-OPTION-2"
+        },
+        {
+          "allocated_teu": 69.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-030-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-030-OPTION-3"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-030-ARTIFACT-1",
+      "attempt_index": 0,
+      "condition": "structured_repair",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-030",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-030-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-030-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-030-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-030-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "95315092cc3842fe07ff4f2d87104fda427c10c9b23a28790f858ade292a67cc"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-031-GEN-001",
+    "condition": "gate_only",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 31.333333,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-031-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-031-OPTION-1"
+        },
+        {
+          "allocated_teu": 31.333333,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-031-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-031-OPTION-2"
+        },
+        {
+          "allocated_teu": 31.333334,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-031-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-031-OPTION-3"
+        },
+        {
+          "allocated_teu": 31.333333,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-031-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-031-OPTION-1"
+        },
+        {
+          "allocated_teu": 31.333333,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-031-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-031-OPTION-2"
+        },
+        {
+          "allocated_teu": 31.333334,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-031-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-031-OPTION-3"
+        },
+        {
+          "allocated_teu": 31.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-031-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-031-OPTION-1"
+        },
+        {
+          "allocated_teu": 31.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-031-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-031-OPTION-2"
+        },
+        {
+          "allocated_teu": 31.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-031-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-031-OPTION-3"
+        },
+        {
+          "allocated_teu": 31.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-031-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-031-OPTION-1"
+        },
+        {
+          "allocated_teu": 31.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-031-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-031-OPTION-2"
+        },
+        {
+          "allocated_teu": 31.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-031-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-031-OPTION-3"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-031-ARTIFACT-1",
+      "attempt_index": 0,
+      "condition": "gate_only",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-031",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-031-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-031-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-031-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-031-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "bd73b77f5a2c54d73fb7c9c0a95a23fbbfc9baf7545fb1fe8fee5ecc856abecf"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-031-GEN-001",
+    "condition": "structured_repair",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 31.333333,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-031-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-031-OPTION-1"
+        },
+        {
+          "allocated_teu": 31.333333,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-031-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-031-OPTION-2"
+        },
+        {
+          "allocated_teu": 31.333334,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-031-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-031-OPTION-3"
+        },
+        {
+          "allocated_teu": 31.333333,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-031-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-031-OPTION-1"
+        },
+        {
+          "allocated_teu": 31.333333,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-031-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-031-OPTION-2"
+        },
+        {
+          "allocated_teu": 31.333334,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-031-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-031-OPTION-3"
+        },
+        {
+          "allocated_teu": 31.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-031-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-031-OPTION-1"
+        },
+        {
+          "allocated_teu": 31.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-031-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-031-OPTION-2"
+        },
+        {
+          "allocated_teu": 31.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-031-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-031-OPTION-3"
+        },
+        {
+          "allocated_teu": 31.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-031-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-031-OPTION-1"
+        },
+        {
+          "allocated_teu": 31.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-031-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-031-OPTION-2"
+        },
+        {
+          "allocated_teu": 31.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-031-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-031-OPTION-3"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-031-ARTIFACT-1",
+      "attempt_index": 0,
+      "condition": "structured_repair",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-031",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-031-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-031-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-031-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-031-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "bd73b77f5a2c54d73fb7c9c0a95a23fbbfc9baf7545fb1fe8fee5ecc856abecf"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-032-GEN-001",
+    "condition": "gate_only",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 100.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-032-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-032-OPTION-1"
+        },
+        {
+          "allocated_teu": 100.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-032-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-032-OPTION-2"
+        },
+        {
+          "allocated_teu": 100.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-032-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-032-OPTION-3"
+        },
+        {
+          "allocated_teu": 100.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-032-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-032-OPTION-1"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-032-ARTIFACT-1",
+      "attempt_index": 1,
+      "condition": "gate_only",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-032",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-032-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-032-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-032-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-032-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "b34d0225650a5206a317b7588f06c8f2ecd140019ac562d9e209e5cf3d783068"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-032-GEN-001",
+    "condition": "structured_repair",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 100.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-032-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-032-OPTION-1"
+        },
+        {
+          "allocated_teu": 100.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-032-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-032-OPTION-2"
+        },
+        {
+          "allocated_teu": 100.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-032-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-032-OPTION-3"
+        },
+        {
+          "allocated_teu": 100.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-032-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-032-OPTION-1"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-032",
+      "attempt_index": 2,
+      "condition": "structured_repair",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-032",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-032-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-032-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-032-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-032-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "9cad7604fc85ba13be8f55038b202fe53ca6e998d5443d871663b4f15b464712"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-035-GEN-001",
+    "condition": "gate_only",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 129.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-035-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-035-OPTION-1"
+        },
+        {
+          "allocated_teu": 129.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-035-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-035-OPTION-2"
+        },
+        {
+          "allocated_teu": 129.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-035-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-035-OPTION-3"
+        },
+        {
+          "allocated_teu": 129.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-035-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-035-OPTION-1"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-035-ARTIFACT-3",
+      "attempt_index": 3,
+      "condition": "gate_only",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-035",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-035-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-035-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-035-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-035-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "76a42d1c429ca18abe0095b8fddd3c848f9bba90a760bae073bd9482e9e845f5"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-035-GEN-001",
+    "condition": "structured_repair",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 129.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-035-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-035-OPTION-1"
+        },
+        {
+          "allocated_teu": 129.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-035-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-035-OPTION-2"
+        },
+        {
+          "allocated_teu": 129.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-035-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-035-OPTION-3"
+        },
+        {
+          "allocated_teu": 129.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-035-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-035-OPTION-1"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-035-ARTIFACT-1",
+      "attempt_index": 1,
+      "condition": "structured_repair",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-035",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-035-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-035-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-035-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-035-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "cdbf146b84a36529953327ae5df7acac72b0c897749bd990db87915957ce848d"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-036-GEN-001",
+    "condition": "structured_repair",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 95.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-036-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-036-OPTION-1"
+        },
+        {
+          "allocated_teu": 95.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-036-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-036-OPTION-1"
+        },
+        {
+          "allocated_teu": 32.541112,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-036-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-036-OPTION-1"
+        },
+        {
+          "allocated_teu": 62.458888,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-036-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-036-OPTION-2"
+        },
+        {
+          "allocated_teu": 0.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-036-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-036-OPTION-1"
+        },
+        {
+          "allocated_teu": 95.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-036-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-036-OPTION-2"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-036-ARTIFACT-1",
+      "attempt_index": 1,
+      "condition": "structured_repair",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-036",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-036-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-036-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-036-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-036-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "fd3c65b74fe318afd176eee26d07e7737c189e30bb9af4b9341fe4fbb06d1e32"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-039-GEN-001",
+    "condition": "structured_repair",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 112.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-039-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-039-OPTION-1"
+        },
+        {
+          "allocated_teu": 111.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-039-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-039-OPTION-2"
+        },
+        {
+          "allocated_teu": 111.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-039-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-039-OPTION-3"
+        },
+        {
+          "allocated_teu": 111.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-039-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-039-OPTION-1"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-039-ARTIFACT-3",
+      "attempt_index": 3,
+      "condition": "structured_repair",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-039",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-039-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-039-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-039-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-039-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "b06f22cd8765e39b76b85dcadeb5e988f0a3832fbff899d63bf31964583a69cd"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-042-GEN-001",
+    "condition": "structured_repair",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 132.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-042-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-042-OPTION-1"
+        },
+        {
+          "allocated_teu": 132.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-042-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-042-OPTION-2"
+        },
+        {
+          "allocated_teu": 132.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-042-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-042-OPTION-3"
+        },
+        {
+          "allocated_teu": 132.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-042-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-042-OPTION-1"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-042-ARTIFACT-1",
+      "attempt_index": 1,
+      "condition": "structured_repair",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-042",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-042-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-042-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-042-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-042-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "bdb85f67bb67633b88023e7ca8b035bf7966404542d7f9d4b9ac1e7ed31ff47e"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-045-GEN-001",
+    "condition": "gate_only",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 34.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-045-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-045-OPTION-1"
+        },
+        {
+          "allocated_teu": 34.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-045-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-045-OPTION-2"
+        },
+        {
+          "allocated_teu": 34.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-045-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-045-OPTION-3"
+        },
+        {
+          "allocated_teu": 34.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-045-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-045-OPTION-1"
+        },
+        {
+          "allocated_teu": 34.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-045-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-045-OPTION-2"
+        },
+        {
+          "allocated_teu": 33.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-045-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-045-OPTION-3"
+        },
+        {
+          "allocated_teu": 34.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-045-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-045-OPTION-1"
+        },
+        {
+          "allocated_teu": 34.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-045-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-045-OPTION-2"
+        },
+        {
+          "allocated_teu": 33.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-045-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-045-OPTION-3"
+        },
+        {
+          "allocated_teu": 34.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-045-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-045-OPTION-1"
+        },
+        {
+          "allocated_teu": 34.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-045-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-045-OPTION-2"
+        },
+        {
+          "allocated_teu": 33.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-045-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-045-OPTION-3"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-045-ARTIFACT-1",
+      "attempt_index": 0,
+      "condition": "gate_only",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-045",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-045-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-045-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-045-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-045-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "9edc7352108c4a3a7f8e28a673f67215de2dd2b80f687bd19b3a62146b3ddf31"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-045-GEN-001",
+    "condition": "structured_repair",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 34.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-045-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-045-OPTION-1"
+        },
+        {
+          "allocated_teu": 34.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-045-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-045-OPTION-2"
+        },
+        {
+          "allocated_teu": 34.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-045-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-045-OPTION-3"
+        },
+        {
+          "allocated_teu": 34.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-045-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-045-OPTION-1"
+        },
+        {
+          "allocated_teu": 34.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-045-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-045-OPTION-2"
+        },
+        {
+          "allocated_teu": 33.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-045-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-045-OPTION-3"
+        },
+        {
+          "allocated_teu": 34.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-045-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-045-OPTION-1"
+        },
+        {
+          "allocated_teu": 34.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-045-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-045-OPTION-2"
+        },
+        {
+          "allocated_teu": 33.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-045-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-045-OPTION-3"
+        },
+        {
+          "allocated_teu": 34.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-045-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-045-OPTION-1"
+        },
+        {
+          "allocated_teu": 34.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-045-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-045-OPTION-2"
+        },
+        {
+          "allocated_teu": 33.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-045-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-045-OPTION-3"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-045-ARTIFACT-1",
+      "attempt_index": 0,
+      "condition": "structured_repair",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-045",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-045-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-045-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-045-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-045-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "9edc7352108c4a3a7f8e28a673f67215de2dd2b80f687bd19b3a62146b3ddf31"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-049-GEN-001",
+    "condition": "structured_repair",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 43.333333333333336,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-049-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-049-OPTION-1"
+        },
+        {
+          "allocated_teu": 43.333333333333336,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-049-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-049-OPTION-2"
+        },
+        {
+          "allocated_teu": 43.333333333333336,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-049-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-049-OPTION-3"
+        },
+        {
+          "allocated_teu": 43.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-049-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-049-OPTION-1"
+        },
+        {
+          "allocated_teu": 43.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-049-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-049-OPTION-2"
+        },
+        {
+          "allocated_teu": 43.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-049-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-049-OPTION-3"
+        },
+        {
+          "allocated_teu": 43.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-049-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-049-OPTION-1"
+        },
+        {
+          "allocated_teu": 43.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-049-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-049-OPTION-2"
+        },
+        {
+          "allocated_teu": 43.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-049-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-049-OPTION-3"
+        },
+        {
+          "allocated_teu": 43.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-049-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-049-OPTION-1"
+        },
+        {
+          "allocated_teu": 43.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-049-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-049-OPTION-2"
+        },
+        {
+          "allocated_teu": 43.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-049-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-049-OPTION-3"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-049",
+      "attempt_index": 2,
+      "condition": "structured_repair",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-049",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-049-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-049-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-049-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-049-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "e116a57d0680feec273e76af84f293e93f572e5d71a1982007acb62056983682"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-050-GEN-001",
+    "condition": "structured_repair",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 95.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-050-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-050-OPTION-1"
+        },
+        {
+          "allocated_teu": 95.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-050-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-050-OPTION-2"
+        },
+        {
+          "allocated_teu": 95.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-050-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-050-OPTION-3"
+        },
+        {
+          "allocated_teu": 47.247269,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-050-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-050-OPTION-1"
+        },
+        {
+          "allocated_teu": 0.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-050-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-050-OPTION-2"
+        },
+        {
+          "allocated_teu": 46.752731,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-050-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-050-OPTION-3"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-050",
+      "attempt_index": 1,
+      "condition": "structured_repair",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-050",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-050-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-050-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-050-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-050-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "41848bb622f48a1745d85b06dc2af216c831e8b335e220ae1c9611d1bc287f43"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-051-GEN-001",
+    "condition": "gate_only",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 33.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-051-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-051-OPTION-1"
+        },
+        {
+          "allocated_teu": 33.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-051-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-051-OPTION-2"
+        },
+        {
+          "allocated_teu": 33.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-051-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-051-OPTION-3"
+        },
+        {
+          "allocated_teu": 33.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-051-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-051-OPTION-1"
+        },
+        {
+          "allocated_teu": 33.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-051-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-051-OPTION-2"
+        },
+        {
+          "allocated_teu": 33.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-051-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-051-OPTION-3"
+        },
+        {
+          "allocated_teu": 33.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-051-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-051-OPTION-1"
+        },
+        {
+          "allocated_teu": 33.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-051-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-051-OPTION-2"
+        },
+        {
+          "allocated_teu": 33.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-051-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-051-OPTION-3"
+        },
+        {
+          "allocated_teu": 33.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-051-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-051-OPTION-1"
+        },
+        {
+          "allocated_teu": 33.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-051-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-051-OPTION-2"
+        },
+        {
+          "allocated_teu": 33.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-051-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-051-OPTION-3"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-051-ARTIFACT-1",
+      "attempt_index": 1,
+      "condition": "gate_only",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-051",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-051-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-051-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-051-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-051-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "2e706bbdb1911d97e3fce5016db738769b52448975e501cc9f04ef417b338c3b"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-054-GEN-001",
+    "condition": "gate_only",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 113.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-054-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-054-OPTION-1"
+        },
+        {
+          "allocated_teu": 63.865556,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-054-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-054-OPTION-1"
+        },
+        {
+          "allocated_teu": 48.134444,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-054-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-054-OPTION-2"
+        },
+        {
+          "allocated_teu": 0.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-054-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-054-OPTION-1"
+        },
+        {
+          "allocated_teu": 112.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-054-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-054-OPTION-2"
+        },
+        {
+          "allocated_teu": 0.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-054-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-054-OPTION-1"
+        },
+        {
+          "allocated_teu": 0.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-054-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-054-OPTION-2"
+        },
+        {
+          "allocated_teu": 112.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-054-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-054-OPTION-3"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-054-ARTIFACT-0",
+      "attempt_index": 0,
+      "condition": "gate_only",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-054",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-054-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-054-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-054-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-054-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "9c4b3ee3822f226527a1f507ce4d124ecd477b0ebb0bbd5960c4526629136cda"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-054-GEN-001",
+    "condition": "structured_repair",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 113.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-054-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-054-OPTION-1"
+        },
+        {
+          "allocated_teu": 63.865556,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-054-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-054-OPTION-1"
+        },
+        {
+          "allocated_teu": 48.134444,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-054-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-054-OPTION-2"
+        },
+        {
+          "allocated_teu": 0.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-054-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-054-OPTION-1"
+        },
+        {
+          "allocated_teu": 112.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-054-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-054-OPTION-2"
+        },
+        {
+          "allocated_teu": 0.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-054-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-054-OPTION-1"
+        },
+        {
+          "allocated_teu": 0.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-054-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-054-OPTION-2"
+        },
+        {
+          "allocated_teu": 112.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-054-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-054-OPTION-3"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-054-ARTIFACT-0",
+      "attempt_index": 0,
+      "condition": "structured_repair",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-054",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-054-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-054-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-054-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-054-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "9c4b3ee3822f226527a1f507ce4d124ecd477b0ebb0bbd5960c4526629136cda"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-059-GEN-001",
+    "condition": "gate_only",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 37.333333333333336,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-059-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-059-OPTION-1"
+        },
+        {
+          "allocated_teu": 37.333333333333336,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-059-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-059-OPTION-2"
+        },
+        {
+          "allocated_teu": 37.333333333333336,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-059-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-059-OPTION-3"
+        },
+        {
+          "allocated_teu": 37.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-059-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-059-OPTION-1"
+        },
+        {
+          "allocated_teu": 37.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-059-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-059-OPTION-2"
+        },
+        {
+          "allocated_teu": 37.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-059-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-059-OPTION-3"
+        },
+        {
+          "allocated_teu": 37.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-059-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-059-OPTION-1"
+        },
+        {
+          "allocated_teu": 37.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-059-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-059-OPTION-2"
+        },
+        {
+          "allocated_teu": 37.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-059-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-059-OPTION-3"
+        },
+        {
+          "allocated_teu": 37.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-059-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-059-OPTION-1"
+        },
+        {
+          "allocated_teu": 37.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-059-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-059-OPTION-2"
+        },
+        {
+          "allocated_teu": 37.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-059-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-059-OPTION-3"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-059-ARTIFACT-1",
+      "attempt_index": 1,
+      "condition": "gate_only",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-059",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-059-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-059-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-059-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-059-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "75f2cfec13ed557389b36e311c2950a585bf1d2656e9731efdfea631f458bd7f"
+  },
+  {
+    "unit_id": "R4-V5-SCIENTIFIC-INCIDENT-059-GEN-001",
+    "condition": "structured_repair",
+    "stored_DES_projection": {
+      "allocations": [
+        {
+          "allocated_teu": 37.333333333333336,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-059-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-059-OPTION-1"
+        },
+        {
+          "allocated_teu": 37.333333333333336,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-059-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-059-OPTION-2"
+        },
+        {
+          "allocated_teu": 37.333333333333336,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-059-LOT-1",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-059-OPTION-3"
+        },
+        {
+          "allocated_teu": 37.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-059-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-059-OPTION-1"
+        },
+        {
+          "allocated_teu": 37.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-059-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-059-OPTION-2"
+        },
+        {
+          "allocated_teu": 37.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-059-LOT-2",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-059-OPTION-3"
+        },
+        {
+          "allocated_teu": 37.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-059-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-059-OPTION-1"
+        },
+        {
+          "allocated_teu": 37.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-059-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-059-OPTION-2"
+        },
+        {
+          "allocated_teu": 37.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-059-LOT-3",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-059-OPTION-3"
+        },
+        {
+          "allocated_teu": 37.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-059-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-059-OPTION-1"
+        },
+        {
+          "allocated_teu": 37.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-059-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-059-OPTION-2"
+        },
+        {
+          "allocated_teu": 37.0,
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-059-LOT-4",
+          "option_id": "R4-V5-SCIENTIFIC-INCIDENT-059-OPTION-3"
+        }
+      ],
+      "artifact_id": "R4-V5-SCIENTIFIC-INCIDENT-059-ARTIFACT-1",
+      "attempt_index": 1,
+      "condition": "structured_repair",
+      "generation_id": 1,
+      "incident_id": "R4-V5-SCIENTIFIC-INCIDENT-059",
+      "unallocated_by_lot": [
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-059-LOT-1",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-059-LOT-2",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-059-LOT-3",
+          "unallocated_teu": 0.0
+        },
+        {
+          "lot_id": "R4-V5-SCIENTIFIC-INCIDENT-059-LOT-4",
+          "unallocated_teu": 0.0
+        }
+      ]
+    },
+    "original_parsed_response_sha256": "8652699dfed4197f2951110aa25e4ea717cb57d99cc95cdd5a3d46f1bd2e33ae"
+  }
+]
